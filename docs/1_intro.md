@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # About Simulately
 
-![Simulately Teaser](/img/teaser.jpg)
+![Simulately Teaser, by Stable Diffusion XL](/img/teaser.jpg)
+
+> Teaser created by [Stable Diffusion XL](https://stability.ai/stable-diffusion).
 
 **Simulately** is a project where we gather useful information of **physics simulator** for cutting-edge robot learning research. It includes but is not limited to:
 
@@ -14,16 +16,6 @@ sidebar_position: 1
 - [Contribute](./contribute) provides instructions on contributing to this project
 
 # Acknowledgement
-
-This website is powered by:
-
-- [Cloudflare](https://cloudflare.com/)
-- [Docusaurus](https://docusaurus.io/)
-
-This project and the website are maintained by:
-
-- [Haoran Geng](https://geng-haoran.github.io/)
-- [Yuyang Li](https://yuyangli.com/)
 
 This project is inspired by:
 
