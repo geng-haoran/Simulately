@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Simulately',
+  title: '🦾 Simulately',
   tagline: 'Handy information and resources for physics simulators for robotic learning research.',
   favicon: 'img/logo.png',
 
@@ -74,7 +74,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Information',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -88,28 +88,19 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'BIGAI',
+                href: 'https://www.bigai.ai/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'PKU EPIC Lab',
+                href: 'https://pku-epic.github.io/',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'PKU CoRe Lab',
+                href: 'https://pku.ai/',
               },
             ],
           },
@@ -126,6 +117,19 @@ const config = {
               },
             ],
           },
+          {
+            title: 'About Us',
+            items: [
+              {
+                label: 'GitHub',
+                to: 'https://github.com/geng-haoran/Simulator-Summary',
+              },
+              {
+                label: 'E-Mail',
+                href: 'mailto:contact@simulately.io',
+              },
+            ],
+          }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Simulately, Inc. Built with Docusaurus.`,
       },

@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Start Right, Right Now',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Different simulators provide various features and performances. Among the choices, Simulately helps you quickly obtain information about them and choose the correct one.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Snippets and Experiences',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        We share snippets and expericences in development and research. You may find what you need to add new features to or solve problems.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Follow the Advancements',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        We keep track of the updates of simulators, as well as the latest advancements in related fields.
       </>
     ),
   },
