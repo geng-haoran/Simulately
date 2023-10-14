@@ -1,3 +1,8 @@
+<h2 align="center">
+  <b>Robotics Simulator Cheatsheet</b>
+
+</h2>
+
 ## TODO
 
 - differentiable simulator
@@ -57,4 +62,10 @@ What's more, we collect some related resources for robotics simulation developme
 ## Credit
 
 repo: [awesome-isaac-gym](https://github.com/wangcongrobot/awesome-isaac-gym)
+
+## Acknowledgement
+
+This repo is designed by:
+
+[Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/)
 
