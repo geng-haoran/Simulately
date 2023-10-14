@@ -122,7 +122,7 @@ const config = {
             items: [
               {
                 label: 'Editors\'s Words',
-                href: '/blog/long-blog-post',
+                href: '/blog/editors-words',
               },
               {
                 label: 'GitHub',
