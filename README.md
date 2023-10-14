@@ -1,27 +1,32 @@
-<h2 align="center">
-  <b>Robotics Simulator Cheatsheet</b>
+# Simulately
 
-</h2>
+A universal summarization of physics simulators for robotic learning research.
 
-## TODO
+## To-Dos for the First Release
 
-- differentiable simulator
+- [] Website deployment with Docusaurus
+- [] Include more simulators
+    - [] Differentiable simulation
+    - [] Soft body simulation
+- [] Complete the details for simulator
+    - [] Double check: whether need physX version number/correct?
+    - [] Double check: whether need physX version number/correct?
+- [] Include some snippets as initialization
+- [] Include some FAQs as initialization
+- [] Include more related work
+- [] Contribution instructions
 
-- soft body simulator
+> Things below will be moved to sub-pages after deploying Docusaurus.
 
-- more papers
+## About Simulately
 
-- simulator details
+**Simulately** is a project where we gather useful information of **physics simulator** for cutting-edge robot learning research. It includes but is not limited to:
 
-- Double check: whether need physX version number/correct?
-
-# Simulator Cheatsheet
-
-A universal summarization of current robotics simulators
-
-In this repo, we will summarize the cutting-edge `physics simulators` and related works for `robot learning` systems (and automonous driving if possible). 
-
-What's more, we collect some related resources for robotics simulation development. In the section of `Notice for Simulation Development`, we summarize some common problems and errors for simulation development. We strongly recommended to read them before development and also when meet some errors.
+- Summary and comparisons of [Simulators](/simulators) for robotic learning research
+- [Handy Snippets](/snippets) that you can use by simply copy-and-paste
+- [FAQs in Dev](/faq) may help you solve the problems occurred in development
+- [Related work](/related-work) presents latest advancements in robotic learning research
+- [Contribute](/contribute) provides instructions on contributing to this project
 
 ## Simulators
 
@@ -59,13 +64,18 @@ What's more, we collect some related resources for robotics simulation developme
 ## Notice for Simulator Development
 
 
-## Credit
-
-repo: [awesome-isaac-gym](https://github.com/wangcongrobot/awesome-isaac-gym)
-
 ## Acknowledgement
 
-This repo is designed by:
+Project website powered by:
 
-[Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/)
+- [Cloudflare](https://cloudflare.com/)
+- [Docusaurus](https://docusaurus.io/)
 
+Repo maintained by:
+
+- [Haoran Geng](https://geng-haoran.github.io/)
+- [Yuyang Li](https://yuyangli.com/)
+
+Project inspired by:
+
+- [awesome-isaac-gym](https://github.com/wangcongrobot/awesome-isaac-gym)
