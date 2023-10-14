@@ -1,0 +1,8 @@
+{
+  "label": "Details",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Get more details of the mentioned simulators."
+  }
+}
