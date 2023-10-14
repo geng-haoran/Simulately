@@ -1,17 +1,11 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+haoran-geng:
+  name: Haoran Geng
+  title: Senior student, Peking University
+  url: https://geng-haoran.github.io/
+  image_url: https://avatars.githubusercontent.com/u/71596067?v=4
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+yuyang-li:
+  name: Yuyang Li
+  title: Senior student, Tsinghua University
+  url: https://yuyangli.com/
+  image_url: https://assets.yuyangli.com/Avatars/yuyangli-cropped.jpg
