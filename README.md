@@ -4,17 +4,17 @@ A universal summarization of physics simulators for robotic learning research.
 
 ## To-Dos for the First Release
 
-- [] Website deployment with Docusaurus
-- [] Include more simulators
-    - [] Differentiable simulation
-    - [] Soft body simulation
-- [] Complete the details for simulator
-    - [] Double check: whether need physX version number/correct?
-    - [] Double check: whether need physX version number/correct?
-- [] Include some snippets as initialization
-- [] Include some FAQs as initialization
-- [] Include more related work
-- [] Contribution instructions
+- [ ] Website deployment with Docusaurus
+- [ ] Include more simulators
+    - [ ] Differentiable simulation
+    - [ ] Soft body simulation
+- [ ] Complete the details for simulator
+    - [ ] Double check: whether need physX version number/correct?
+    - [ ] Double check: whether need physX version number/correct?
+- [ ] Include some snippets as initialization
+- [ ] Include some FAQs as initialization
+- [ ] Include more related work
+- [ ] Contribution instructions
 
 > Things below will be moved to sub-pages after deploying Docusaurus.
 
