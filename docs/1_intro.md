@@ -11,7 +11,7 @@ sidebar_position: 1
 - Summary and comparisons of [Simulators](./category/simulators) for robotic learning research
 - [Snippets and FAQs](./category/snippets-and-faqs) help you add features and solve problems in development
 - [Related work](./category/related-work) presents latest advancements in robotic learning research
-- [Contribute](./category/contribute) provides instructions on contributing to this project
+- [Contribute](./contribute) provides instructions on contributing to this project
 
 # Acknowledgement
 
