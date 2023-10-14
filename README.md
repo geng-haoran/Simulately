@@ -9,7 +9,7 @@ more papers
 simulator details
 
 
-# Simulator-Summary
+# Simulator Cheatsheet
 
 A universal summarization of current robotics simulators
 
@@ -19,14 +19,14 @@ What's more, we collect some related resources for robotics simulation developme
 
 ## Simulators
 
-|    Simulator     |# Physics Engine| # Rendering | # Sensor | # Parallel Simulation |
-|:----------------:|:--------------:|:-----------:|:--------:|:---------------------:|
-|     Isaac Sim    |                |        3    |     2    |       5               |
-| Isaac Gym        |                |        3    |     2    |       5               |
-|      Pybullet    |                |        3    |     2    |       5               |
-|    SAPIEN        |                |        1    |     1    |       5               |
-|      Remote      |                |        1    |     1    |       5               |
-|      Blender     |                |        1    |     1    |       5               |
+|    Simulator     |# Physics Engine| # Rendering | # Sensor |# Parallelization|
+|:----------------:|:--------------:|:-----------:|:--------:|:---------------:|
+|     Isaac Sim    |                |        3    |     2    |       5         |
+| Isaac Gym        |                |        3    |     2    |       5         |
+|      Pybullet    |                |        3    |     2    |       5         |
+|    SAPIEN        |                |        1    |     1    |       5         |
+|      MuJoCo      |                |        1    |     1    |       5         |
+|      Blender     |                |        1    |     1    |       5         |
 
 ## Robot Learning Works with Simulators
 
@@ -43,4 +43,14 @@ What's more, we collect some related resources for robotics simulation developme
 
 - [ICRA2023] [GenDexGrasp: Generalizable Dexterous Grasping](https://sites.google.com/view/gendexgrasp/): IsaacGym; RGB-D PointCloud
 
+
+## Robotic Manipulation Benchmark
+
+
 ## Notice for Simulator Development
+
+
+## Credit
+
+repo: [awesome-isaac-gym](https://github.com/wangcongrobot/awesome-isaac-gym)
+
