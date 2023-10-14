@@ -5,6 +5,8 @@ A universal summarization of physics simulators for robotic learning research.
 ## To-Dos for the First Release
 
 - [ ] Website deployment with Docusaurus
+  - [ ] Setup automatic compile and deployment pipeline
+  - [ ] Use [Dify](https://cloud.dify.ai) to add an AI assistant for Q&A
 - [ ] Include more simulators
     - [ ] Differentiable simulation
     - [ ] Soft body simulation
@@ -79,3 +81,4 @@ Repo maintained by:
 Project inspired by:
 
 - [awesome-isaac-gym](https://github.com/wangcongrobot/awesome-isaac-gym)
+- [THU Wiki](https://thu.wiki/)
