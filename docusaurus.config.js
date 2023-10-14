@@ -109,7 +109,7 @@ const config = {
             items: [
               {
                 label: 'Docusaurus',
-                to: 'https://docusaurus.io/',
+                href: 'https://docusaurus.io/',
               },
               {
                 label: 'Cloudflare',
@@ -121,8 +121,12 @@ const config = {
             title: 'About Us',
             items: [
               {
+                label: 'Editors\'s Words',
+                href: '/blog/long-blog-post',
+              },
+              {
                 label: 'GitHub',
-                to: 'https://github.com/geng-haoran/Simulator-Summary',
+                href: 'https://github.com/geng-haoran/Simulator-Summary',
               },
               {
                 label: 'E-Mail',
