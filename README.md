@@ -1,32 +1,36 @@
 ## TODO
 
-differentiable simulator
+- differentiable simulator
 
-soft body simulator
+- soft body simulator
 
-more papers
+- more papers
 
-simulator details
+- simulator details
 
+- Double check: whether need physX version number/correct?
 
 # Simulator Cheatsheet
 
 A universal summarization of current robotics simulators
 
-In this repo, we will summarize the cutting-edge `physics(?) simulators` and related works for `robot learning` systems (and automonous driving if possible). 
+In this repo, we will summarize the cutting-edge `physics simulators` and related works for `robot learning` systems (and automonous driving if possible). 
 
 What's more, we collect some related resources for robotics simulation development. In the section of `Notice for Simulation Development`, we summarize some common problems and errors for simulation development. We strongly recommended to read them before development and also when meet some errors.
 
 ## Simulators
 
-|    Simulator     |# Physics Engine| # Rendering | # Sensor |# Parallelization|
-|:----------------:|:--------------:|:-----------:|:--------:|:---------------:|
-|     Isaac Sim    |                |        3    |     2    |       5         |
-| Isaac Gym        |                |        3    |     2    |       5         |
-|      Pybullet    |                |        3    |     2    |       5         |
-|    SAPIEN        |                |        1    |     1    |       5         |
-|      MuJoCo      |                |        1    |     1    |       5         |
-|      Blender     |                |        1    |     1    |       5         |
+|    Simulator     |# Physics Engine| # Rendering | # Sensor |# Parallelization|# Interface|
+|:----------------:|:--------------:|:-----------:|:--------:|:---------------:|:---------:|
+|     Isaac Sim    |                |             |          |                 |           |
+|     Isaac Gym    | PhysX 5, Flex  |   Vulkan    |          |                 |           |
+|      SAPIEN      | PhysX 4, Warp  |             |          |                 |           |
+|      Pybullet    |                |             |          |                 |           |
+|      MuJoCo      |                |             |          |                 |           |
+|      Blender     |                |             |          |                 |           |
+|      AI2-THOR    |                |             |          |                 |           |
+|      RLBench     |                |             |          |                 |           |
+|      Blender     |                |             |          |                 |           |
 
 ## Robot Learning Works with Simulators
 
