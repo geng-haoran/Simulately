@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 <h2 align="center">
   <b>SAPIEN: A SimulAted Part-based Interactive ENvironment</b>
 
