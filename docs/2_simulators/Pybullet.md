@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 <h2 align="center">
   <b>Bullet Real-Time Physics Simulation</b>
 
