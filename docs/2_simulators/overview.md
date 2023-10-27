@@ -13,6 +13,7 @@ Here is a table including a brief summary for physics simulators:
 | SAPIEN  |PhysX 4, Warp|Vulkan+RayTracing*| RGBD; |Rigid;Soft;Fluid      | ✔ |CPU;   | ✔ |
 | Pybullet|Bullet       |                  |       |Rigid                 | ✘ |       | ✔ |
 | MuJoCo  | MuJoCo      |    OpenGL        |       |Rigid;Soft;Cloth      | ✘ |       | ✔ |
+|CoppeliaSim|MuJoCo;Bullet;ODE;Newton;Vortex|    OpenGL        |       |Rigid;Soft;Cloth      | ✘ |       | ✔ |
 
 <!-- | Blender |             |                  |       |                      | ✘ |       | ✔ |
 | AI2-THOR|             |                  |       |                      | ✘ |       | ✔ |
