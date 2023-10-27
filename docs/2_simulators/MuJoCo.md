@@ -3,7 +3,7 @@ sidebar_position: 5
 ---
 
 <h2 align="center">
-  <b>MuJoCo</b>
+  <b>MuJoCo: Multi-Joint dynamics with Contact</b>
 
 <div align="center">
     <a href="https://mujoco.org/" target="_blank"><img src="https://img.shields.io/badge/Website-MuJoCo-red"></img></a>
@@ -18,3 +18,8 @@ sidebar_position: 5
 
 > MuJoCo is a free and open source physics engine that aims to facilitate research and development in robotics, biomechanics, graphics and animation, and other areas where fast and accurate simulation is needed.
 
+## Official Materials
+- [Website](https://mujoco.org/)
+- [Document](https://mujoco.readthedocs.io/en/stable/overview.html)
+- [Paper](https://ieeexplore.ieee.org/document/6386109)
+- [Source Code](https://github.com/google-deepmind/mujoco)
