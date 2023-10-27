@@ -17,5 +17,3 @@ sidebar_position: 4
 </h2>
 
 > SAPIEN simulator provides physical simulation for robots, rigidbody, and articulated objects. It powers reinforcement learning and robotics with its pure Python interface. It also provides multiple rendering modalities, including depth map, normal map, optical flow, active light, and ray tracing.
-
-this is a sapien doc
