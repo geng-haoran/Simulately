@@ -17,6 +17,8 @@ sidebar_position: 2
 > NVIDIA Isaac Sim™ is an extensible robotics simulator that gives you a faster, better way to design, test, and train AI-based robots. It’s powered by Omniverse™ to deliver scalable, photorealistic, and physically accurate virtual environments for building high-fidelity simulations.
 
 
-# Isaac Sim
-
-NVIDIA Isaac Sim, is a scalable robotics simulation application and synthetic data-generation tool powered by Omniverse. It powers photorealistic, physically accurate virtual environments. This gives you a better, faster way to develop, test, and manage AI-based robots.
+## Official Materials
+- [Website](https://developer.nvidia.com/isaac-sim)
+- [Document](https://docs.omniverse.nvidia.com/isaacsim/latest/overview.html)
+- [Forum](https://forums.developer.nvidia.com/c/agx-autonomous-machines/isaac/isaac-sim/321)
+- 

@@ -15,3 +15,8 @@ sidebar_position: 6
 </h2>
 
 >PyBullet: physics simulation for games, visual effects, robotics and reinforcement learning.
+
+## Official Materials
+- [Website](https://pybullet.org/wordpress/)
+- [Document](https://pybullet.org/wordpress/index.php/forum-2/)
+- [Source Code](https://github.com/bulletphysics/bullet3)

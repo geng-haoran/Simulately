@@ -17,3 +17,15 @@ sidebar_position: 4
 </h2>
 
 > SAPIEN simulator provides physical simulation for robots, rigidbody, and articulated objects. It powers reinforcement learning and robotics with its pure Python interface. It also provides multiple rendering modalities, including depth map, normal map, optical flow, active light, and ray tracing.
+
+## Official Materials
+- [Website](https://sapien.ucsd.edu/)
+- [Document](https://sapien.ucsd.edu/docs/2.0/index.html)
+- [Paper](https://arxiv.org/abs/2003.08515)
+- [Source Code](https://github.com/haosulab/SAPIEN)
+
+
+## Related Materials
+
+## Related Projects
+- CVPR2023: [GAPartNet: Cross-Category Domain-Generalizable Object Perception and Manipulation via Generalizable and Actionable Parts](https://github.com/PKU-EPIC/GAPartNet): SAPIEN; RGB-D PointCloud
