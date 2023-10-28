@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 <h2 align="center">
-  <b>Isaac Sim</b>
+  <b>Isaac Sim: Robotics Simulation and Synthetic Data</b>
 
 <div align="center">
     <a href="https://developer.nvidia.com/isaac-sim" target="_blank"><img src="https://img.shields.io/badge/Website-IsaacSim-red"></img></a>

@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 
 <h2 align="center">
-  <b>Isaac Gym</b>
+  <b>Isaac Gym: High Performance GPU-Based Physics Simulation For Robot Learning</b>
 
 <div align="center">
     <a href="https://developer.nvidia.com/isaac-gym" target="_blank"><img src="https://img.shields.io/badge/Website-IsaacGym-red"></img></a>
