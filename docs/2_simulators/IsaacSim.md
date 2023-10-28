@@ -21,4 +21,10 @@ sidebar_position: 2
 - [Website](https://developer.nvidia.com/isaac-sim)
 - [Document](https://docs.omniverse.nvidia.com/isaacsim/latest/overview.html)
 - [Forum](https://forums.developer.nvidia.com/c/agx-autonomous-machines/isaac/isaac-sim/321)
-- 
+
+
+## Related Materials
+
+## Related Projects
+- ICCV2023: [ARNOLD: A Benchmark for Language-Grounded Task Learning With Continuous States in Realistic 3D Scenes](https://arnold-benchmark.github.io/): IsaacSim; RGB-D PointCloud
+
