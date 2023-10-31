@@ -26,8 +26,11 @@ sidebar_position: 3
 
 ## Related Projects
 - ICCV2023: [UniDexGrasp++: Improving Dexterous Grasping Policy Learning via Geometry-aware Curriculum and Iterative Generalist-Specialist Learning](https://pku-epic.github.io/UniDexGrasp++/): IsaacGym; RGB-D PointCloud
+- CORL2023: [Dynamic Handover: Throw and Catch with Bimanual Hands](https://binghao-huang.github.io/dynamic_handover/): IsaacGym; RGB
+- CORL2023: [Sequential Dexterity: Chaining Dexterous Policies for Long-Horizon Manipulation](https://sequential-dexterity.github.io/): IsaacGym; RGB-D PointCloud
 - CVPR2023: [UniDexGrasp: Universal Robotic Dexterous Grasping via Learning Diverse Proposal Generation and Goal-Conditioned Policy](https://pku-epic.github.io/UniDexGrasp/): IsaacGym; RGB-D PointCloud
 - CVPR2023: [PartManip: Learning Cross-Category Generalizable Part Manipulation Policy from Point Cloud Observations](https://github.com/PKU-EPIC/PartManip): Isaac Gym; RGB-D PointCloud
 - ICRA2023: [GenDexGrasp: Generalizable Dexterous Grasping](https://sites.google.com/view/gendexgrasp/): IsaacGym; RGB-D PointCloud
 - ICRA2023: [RLAfford: End-to-End Affordance Learning for Robotic Manipulation](https://sites.google.com/view/rlafford/): IsaacGym; RGB-D PointCloud
+- NIPS2022: [Towards Human-Level Bimanual Dexterous Manipulation with Reinforcement Learning](https://bi-dexhands.ai/): IsaacGym; RGB-D; PointCloud
 
