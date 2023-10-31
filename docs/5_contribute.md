@@ -35,3 +35,4 @@ TBD.
 - [Haoran Geng](https://geng-haoran.github.io/), since Sep, 2023.
 - [Yuyang Li](https://yuyangli.com/), since Sep, 2023.
 - [Ran Gong](https://nikepupu.github.io/), since Oct, 2023.
+- [Yuanpei Chen](https://cypypccpy.github.io/), since Oct, 2023.
