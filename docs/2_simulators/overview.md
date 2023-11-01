@@ -6,14 +6,15 @@ sidebar_position: 1
 
 Here is a table including a brief summary for physics simulators:
 
-|Simulator|Physics Engine|Rendering|Sensor(CHECK)|Dynamics|Parallelization|Vectorization|OpenSource|
-|:-------:|:-----------:|:---------:|:------:|:--------:|:---------------:|:-----------:|:--------:|
-|IsaacSim |PhysX 5      |Rasterization; RayTracing; PathTracing| RGBD; |Rigid;Soft;Cloth;Fluid| ✔ |CPU;GPU| ✘ |
-|IsaacGym |PhysX 5, Flex|Rasterization;                 | RGBD; Force; |Rigid                 | ✔ |CPU;GPU| ✘ |
-| SAPIEN  |PhysX 4, Warp|Rasterization; RayTracing⭐️;| RGBD;           |Rigid;Soft;Fluid      | ✔ |CPU;   | ✔ |
-| Pybullet|Bullet       |Rasterization;| RGBD;                         |Rigid(CHECK)          | ✘ |       | ✔ |
-| MuJoCo  |MuJoCo       |Rasterization;| RGBD;                         |Rigid;Soft;Cloth      | ✘ |       | ✔ |
-|CoppeliaSim|MuJoCo; Bullet; ODE; Newton; Vortex|Rasterization; RayTracing🔶;|RGBD;|Rigid;Soft;Cloth| ✘ |       | ✔ |
+|Simulator|Physics Engine|Rendering|Sensor(CHECK)|Dynamics|Parallelization|Vectorization|OpenSource|ROS|
+|:-------:|:-----------:|:---------:|:------:|:--------:|:---------------:|:-----------:|:--------:|:---:|
+|IsaacSim |PhysX 5      |Rasterization; RayTracing; PathTracing| RGBD; |Rigid;Soft;Cloth;Fluid| ✔ |CPU;GPU| ✘ | ✔ |
+|IsaacGym |PhysX 5, Flex|Rasterization;                 | RGBD; Force; |Rigid                 | ✔ |CPU;GPU| ✘ | ✘ |
+| SAPIEN  |PhysX 4, Warp|Rasterization; RayTracing⭐️;| RGBD;           |Rigid;Soft;Fluid      | ✔ |CPU;   | ✔ | ✘ |
+| Pybullet|Bullet       |Rasterization;| RGBD;                         |Rigid(CHECK)          | ✘ |       | ✔ |   |
+| MuJoCo  |MuJoCo       |Rasterization;| RGBD;                         |Rigid;Soft;Cloth      | ✘ |       | ✔ |   |
+|CoppeliaSim|MuJoCo; Bullet; ODE; Newton; Vortex|Rasterization; RayTracing🔶;|RGBD;|Rigid;Soft;Cloth| ✘ | | ✔ |   |
+|Gazebo|MuJoCo; Bullet; ODE; Newton; Vortex|Rasterization; RayTracing🔶;|RGBD;|Rigid;Soft;Cloth| ✘ |      | ✔ |   |
 
 <!-- | Blender |             |                  |       |                      | ✘ |       | ✔ |
 | AI2-THOR|             |                  |       |                      | ✘ |       | ✔ |
