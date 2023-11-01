@@ -14,6 +14,7 @@ sidebar_position: 2
 </div>
 </h2>
 
+![IsaacSim](../../src/imgs/IsaacSim.jpg)
 > NVIDIA Isaac Sim™ is an extensible robotics simulator that gives you a faster, better way to design, test, and train AI-based robots. It’s powered by Omniverse™ to deliver scalable, photorealistic, and physically accurate virtual environments for building high-fidelity simulations.
 
 
