@@ -16,7 +16,7 @@ sidebar_position: 4
 </div>
 </h2>
 
-![SAPIEN](/img/simulators/SAPIEN.jpg)
+![SAPIEN](/img/simulators/sapien.jpg)
 > SAPIEN simulator provides physical simulation for robots, rigidbody, and articulated objepowers reinforcement learning and robotics with its pure Python interface. It also provides multiple rendering modalities, including depth map, normal map, optical flow, active light, and ray tracing.
 
 ## Official Materials
