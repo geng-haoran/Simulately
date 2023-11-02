@@ -14,7 +14,7 @@ sidebar_position: 3
 </div>
 </h2>
 
-![IsaacGym](../../src/imgs/IsaacGym.jpg)
+![IsaacGym](/img/simulators/IsaacGym.jpg)
 > NVIDIA’s physics simulation environment for reinforcement learning research.
 
 ## Official Materials
