@@ -14,7 +14,7 @@ Here is a table including a brief summary for physics simulators:
 | Pybullet|Bullet       |Rasterization;| RGBD;                         |Rigid(CHECK)          | ✘ |       | ✔ |   |
 | MuJoCo  |MuJoCo       |Rasterization;| RGBD;                         |Rigid;Soft;Cloth      | ✘ |       | ✔ |   |
 |CoppeliaSim|MuJoCo; Bullet; ODE; Newton; Vortex|Rasterization; RayTracing🔶;|RGBD;|Rigid;Soft;Cloth| ✘ | | ✔ |   |
-|Gazebo|MuJoCo; Bullet; ODE; Newton; Vortex|Rasterization; RayTracing🔶;|RGBD;|Rigid;Soft;Cloth| ✘ |      | ✔ |   |
+|Gazebo|MuJoCo; Bullet; ODE; Newton; Vortex|Rasterization; |RGBD;|Rigid;Soft;Cloth| ✘ |      | ✔ |   |
 
 <!-- | Blender |             |                  |       |                      | ✘ |       | ✔ |
 | AI2-THOR|             |                  |       |                      | ✘ |       | ✔ |
