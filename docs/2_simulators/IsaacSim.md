@@ -28,9 +28,13 @@ sidebar_position: 2
 ## Related Materials
 - [USD documentation](https://openusd.org/release/index.html)
 
+
 ## Related Projects
+- CORL2022: [BEHAVIOR-1K: A Benchmark for Embodied AI with
+1,000 Everyday Activities and Realistic Simulation](https://behavior.stanford.edu/omnigibson/)
 - ICCV2023: [ARNOLD: A Benchmark for Language-Grounded Task Learning With Continuous States in Realistic 3D Scenes](https://arnold-benchmark.github.io/): IsaacSim; RGB-D PointCloud
 - RAL2023: [ORBIT: A Unified Simulation Framework for Interactive Robot Learning Environments](https://isaac-orbit.github.io/):IsaacSim; RL
 - RAL2023: [LEMMA: Learning Language-Conditioned Multi-Robot Manipulation](https://lemma-benchmark.github.io/):IsaacSim; RGB-D PointCloud
+- JMLR2023: [skrl: Modular and Flexible Library for Reinforcement Learning](https://skrl.readthedocs.io/en/latest/): IsaacSim; RL
 
 
