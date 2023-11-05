@@ -26,6 +26,7 @@ sidebar_position: 2
 
 
 ## Related Materials
+- [USD documentation](https://openusd.org/release/index.html)
 
 ## Related Projects
 - ICCV2023: [ARNOLD: A Benchmark for Language-Grounded Task Learning With Continuous States in Realistic 3D Scenes](https://arnold-benchmark.github.io/): IsaacSim; RGB-D PointCloud
