@@ -36,5 +36,5 @@ sidebar_position: 2
 - RAL2023: [ORBIT: A Unified Simulation Framework for Interactive Robot Learning Environments](https://isaac-orbit.github.io/):IsaacSim; RL
 - RAL2023: [LEMMA: Learning Language-Conditioned Multi-Robot Manipulation](https://lemma-benchmark.github.io/):IsaacSim; RGB-D PointCloud
 - JMLR2023: [skrl: Modular and Flexible Library for Reinforcement Learning](https://skrl.readthedocs.io/en/latest/): IsaacSim; RL
-- Arxiv [CuRobo: Parallelized Collision-Free Minimum-Jerk Robot Motion Generation](https://curobo.org/)
+- Arxiv [CuRobo: Parallelized Collision-Free Minimum-Jerk Robot Motion Generation](https://curobo.org/): IsaacSim; GPU accelerated Motion Planning.
 
