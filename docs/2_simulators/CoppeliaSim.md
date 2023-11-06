@@ -26,7 +26,13 @@ sidebar_position: 4
 - [Source Code](https://github.com/CoppeliaRobotics/CoppeliaSimLib)
 
 ## Related Materials
+- [Tutorials](https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm)
+
 
 ## Related Projects
 - CoRL2022: [Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation](https://peract.github.io/)
+- Neurips 2022: [VLMbench:  A Compositional Benchmark for Vision-and-Language Manipulation](https://sites.google.com/ucsc.edu/vlmbench/home)
+- CVPR 2022: [Coarse-to-Fine Q-attention: Efficient Learning for Visual Robotic Manipulation via Discretisation](https://sites.google.com/view/c2f-q-attention)
+- RAL 2022: [Q-attention: Enabling efficient learning for vision-based robotic manipulation](https://sites.google.com/view/q-attention)
 - RAL2020: [RLBench: The Robot Learning Benchmark & Learning Environment](https://sites.google.com/view/rlbench)
+- Arxiv 2019: [PyRep: Bringing V-REP to Deep Robot Learning](https://github.com/stepjam/PyRep)
