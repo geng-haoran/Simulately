@@ -15,7 +15,7 @@ sidebar_position: 6
 </h2>
 
 
-![PyBullet](/img/simulators/Pybullet.jpg)
+![PyBullet](imgs/Pybullet.jpg)
 >PyBullet: physics simulation for games, visual effects, robotics and reinforcement learning.
 
 ## Official Materials
