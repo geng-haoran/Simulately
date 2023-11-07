@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Load Environment
 > How to load a ground, objects, robots into a SAPIEN env. Some code are borrowed from SAPIEN Doc
 

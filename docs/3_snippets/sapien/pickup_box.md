@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 7
 ---
 
-# Move the Box(Official)
+# [Example] Move the Box(Official)
 
 <p align="center">
   <img src="https://sapien.ucsd.edu/docs/latest/_images/screw.gif" alt="Move the Box(Official)" width="500"/>
