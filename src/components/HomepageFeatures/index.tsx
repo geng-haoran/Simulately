@@ -14,28 +14,25 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Simulately was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Simulately was designed to be easily used to boost your resarch in the scope of simulation and beyond. We only focus on what matters in research.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'All in One',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Simulately lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        We gather relative information, materials, related work, and even snippets and FAQs all in one website.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Scalable',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Simulately can
-        be extended while reusing the same header and footer.
+        Didn't find what you get? Simulately is scalable via collaboration via GitHub. You can also contribute to the website by adding your expertise and experiences.
       </>
     ),
   },
