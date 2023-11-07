@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: Contribute
 ---
 
@@ -32,7 +32,7 @@ TBD.
 
 ## List of Contributors
 
-> The list is in alphabetical order by the contributors' last names.
-
-- [Haoran Geng](https://geng-haoran.github.io/), since Oct, 2023.
-- [Yuyang Li](https://yuyangli.com/), since Oct, 2023.
+- [Haoran Geng](https://geng-haoran.github.io/), since Sep, 2023.
+- [Yuyang Li](https://yuyangli.com/), since Sep, 2023.
+- [Ran Gong](https://nikepupu.github.io/), since Oct, 2023.
+- [Yuanpei Chen](https://cypypccpy.github.io/), since Oct, 2023.

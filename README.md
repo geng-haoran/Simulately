@@ -16,3 +16,10 @@
 - [ ] Include more related work
 - [ ] Contribution instructions
 
+## TODO
+
+- haoran: sapien, Related work&benchmark, other simulators
+- yuyang: isaacsim, blender, website
+- steven: isaacsim, CoppeliaSim
+- yuanpei: isaacgym, benchmarks
+  
