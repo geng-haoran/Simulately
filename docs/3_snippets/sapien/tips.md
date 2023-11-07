@@ -1,3 +1,7 @@
+---
+sidebar_position: 0
+---
+
 # Tips for using SAPIEN
 > Tips for building up a SAPIEN environment
 

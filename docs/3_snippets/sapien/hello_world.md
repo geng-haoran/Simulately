@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Hello World(Official)
+# [Example] Hello World(Official)
 
 <p align="center">
   <img src="https://sapien.ucsd.edu/docs/latest/_images/hello_world.png" alt="Move the Box(Official)" width="500"/>

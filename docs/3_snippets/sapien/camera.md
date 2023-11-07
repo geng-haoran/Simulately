@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Camera Sensors
 
 ### Create a camera
