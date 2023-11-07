@@ -16,7 +16,7 @@ sidebar_position: 5
 </div>
 </h2>
 
-![MuJoCo](/img/simulators/MuJoCo.jpg)
+![MuJoCo](imgs/MuJoCo.jpg)
 > MuJoCo is a free and open source physics engine that aims to facilitate research and development in robotics, biomechanics, graphics and animation, and other areas where fast and accurate simulation is needed.
 
 ## Official Materials

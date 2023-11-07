@@ -16,7 +16,7 @@ sidebar_position: 4
 </div>
 </h2>
 
-![SAPIEN](/img/simulators/sapien.jpg)
+![SAPIEN](imgs/sapien.jpg)
 > SAPIEN simulator provides physical simulation for robots, rigidbody, and articulated objepowers reinforcement learning and robotics with its pure Python interface. It also provides multiple rendering modalities, including depth map, normal map, optical flow, active light, and ray tracing.
 
 ## Official Materials
@@ -30,7 +30,7 @@ sidebar_position: 4
 
 ### ManiSkill1&2
 ManiSkill2 embraces a heterogeneous collection of out-of-the-box task families for 20 manipulation skills. Distinct types of manipulation tasks are covered: stationary/mobile-base, single/dual-arm, rigid/soft-body.
-  ![ManiSkill](/img/simulators/maniskill.jpg)
+  ![ManiSkill](imgs/maniskill.jpg)
   - [Website](https://maniskill2.github.io/)
   - [Doc](https://haosulab.github.io/ManiSkill2/)
   - [Code](https://github.com/haosulab/ManiSkill2)
