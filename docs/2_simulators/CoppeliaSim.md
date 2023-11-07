@@ -16,7 +16,7 @@ sidebar_position: 4
 </div>
 </h2>
 
-![CoppeliaSim](/img/simulators/CoppeliaSim.jpg)
+![CoppeliaSim](imgs/CoppeliaSim.jpg)
 > The robotics simulator CoppeliaSim (formerly V-REP), with integrated development environment, is based on a distributed control architecture: each object/model can be individually controlled via an embedded script, a plugin, a ROS node, a remote API client, or a custom solution. This makes CoppeliaSim very versatile and ideal for multi-robot applications. Controllers can be written in C/C++, Python, Java, Lua, Matlab or Octave. CoppeliaSim is used for fast algorithm development, factory automation simulations, fast prototyping and verification, robotics related education, remote monitoring, safety double-checking, as digital twin, and much more.
 
 ## Official Materials
@@ -27,7 +27,7 @@ sidebar_position: 4
 
 ## Related Materials
 - [Tutorials](https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm)
-
+- [RL bench Tutorials](https://github.com/stepjam/RLBench/blob/master/tutorials/simple_task.md)
 
 ## Related Projects
 - CoRL2022: [Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation](https://peract.github.io/)
