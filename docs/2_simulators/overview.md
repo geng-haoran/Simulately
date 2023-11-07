@@ -8,7 +8,7 @@ Here is a table including a brief summary for physics simulators:
 
 |Simulator|Physics Engine|Rendering|Sensor(CHECK)|Dynamics|Parallelization|Vectorization|OpenSource|ROS|
 |:-------:|:-----------:|:---------:|:------:|:--------:|:---------------:|:-----------:|:--------:|:---:|
-|IsaacSim |PhysX 5      |Rasterization; RayTracing; PathTracing| RGBD; |Rigid;Soft;Cloth;Fluid| ✔ |CPU;GPU| ✘ | ✔ |
+|IsaacSim |PhysX 5      |Rasterization; RayTracing; PathTracing| RGBD; |Rigid;Soft;Cloth;Fluid| ✔ |GPU⭐️| ✘ | ✔ |
 |IsaacGym |PhysX 5, Flex|Rasterization;                 | RGBD; Force; |Rigid                 | ✔ |CPU;GPU| ✘ | ✘ |
 | SAPIEN  |PhysX 4, Warp|Rasterization; RayTracing⭐️;| RGBD;           |Rigid;Soft;Fluid      | ✔ |CPU;   | ✔ | ✘ |
 | Pybullet|Bullet       |Rasterization;| RGBD;                         |Rigid(CHECK)          | ✘ |       | ✔ |   |
@@ -20,6 +20,7 @@ Here is a table including a brief summary for physics simulators:
 | AI2-THOR|             |                  |       |                      | ✘ |       | ✔ |
 | RLBench |             |                  |       |                      | ✘ |       | ✔ |
 | Habitat |             |                  |       |                      | ✘ |       | ✔ | -->
+⭐️: GPU only, RTX series is required.
 
 ⭐️: RayTracing is currently not available in parallel gym-like envs.
 
