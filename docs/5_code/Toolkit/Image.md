@@ -1,2 +1,2 @@
-# Image Processing
+# Image
 
