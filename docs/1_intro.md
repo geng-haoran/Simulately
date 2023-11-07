@@ -19,7 +19,9 @@ sidebar_position: 1
 
 # Acknowledgement
 
-This project is inspired or helped by these projects:
+**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), and [Yuanpei Chen](https://cypypccpy.github.io/).
+
+Simulately is inspired or helped by these projects:
 
 - [awesome-isaac-gym](https://github.com/wangcongrobot/awesome-isaac-gym)
 - [THU Wiki](https://thu.wiki/)
