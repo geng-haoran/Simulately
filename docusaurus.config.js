@@ -70,18 +70,10 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Information',
-          },
+          { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Information' },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/geng-haoran/Simulator-Summary',
-            label: 'GitHub',
-            position: 'right',
-          },
+          {to: '/related', label: 'Related Work', position: 'left'},
+          { href: 'https://github.com/geng-haoran/Simulator-Summary', label: 'GitHub', position: 'right' },
         ],
       },
       footer: {
@@ -92,7 +84,7 @@ const config = {
             items: [
               {
                 label: 'BIGAI',
-                href: 'https://www.bigai.ai/',
+                href: 'http://eng.bigai.ai/',
               },
               {
                 label: 'PKU EPIC Lab',
@@ -142,6 +134,8 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+  plugins: ['@docusaurus/plugin-ideal-image'],
 };
 
 module.exports = config;
