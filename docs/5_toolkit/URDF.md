@@ -1,2 +1,2 @@
-# URDF Processing
+# URDF
 
