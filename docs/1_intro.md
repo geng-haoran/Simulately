@@ -13,7 +13,6 @@ sidebar_position: 1
 - Summary and comparisons of [simulators](./category/simulators) for robotic learning research
 - [Snippets](./category/snippets) that help you add features and solve problems in development
 - [Related work](/related) that represents the latest advancements in the field
-<!-- - [Related work](./category/related-work) that represents the latest advancements in the field -->
 - A collection of useful and powerful [toolkits](./category/toolkits) that boosts your research
 - Guides on how you can [contribute](./contribute) to Simulately
 
