@@ -1,4 +1,4 @@
-# Mesh Processing
+# Mesh
 > **Toolkits for mesh processing**
 
 ### Basic Processing Code with `trimesh`

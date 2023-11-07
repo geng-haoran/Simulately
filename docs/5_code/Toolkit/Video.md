@@ -1,4 +1,4 @@
-# Video Generation and Processing
+# Video
 > **Toolkits for video generation and processing**
 
 ### Generate a video from a set of images
