@@ -7,7 +7,7 @@ sidebar_position: 0
 
 ### Rotation Convention
 - SAPIEN use `WXYZ` quaternion convention!
-  
+
 ### Stiffness and Damping
 - Robot Stiffness and damping are important. For motion planing, we need a high stiffness and damping value. 
     ```python
