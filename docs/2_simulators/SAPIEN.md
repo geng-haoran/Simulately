@@ -39,3 +39,4 @@ ManiSkill2 embraces a heterogeneous collection of out-of-the-box task families f
 
 ## Related Projects
 - CVPR2023: [GAPartNet: Cross-Category Domain-Generalizable Object Perception and Manipulation via Generalizable and Actionable Parts](https://github.com/PKU-EPIC/GAPartNet): SAPIEN; RGB-D PointCloud
+- IROS2022(RA-L): [Maniskill: Generalizable manipulation skill benchmark with large-scale demonstrations](https://shen-hhao.github.io/Category_Level_Manipulation/): SAPIEN; PointCloud
