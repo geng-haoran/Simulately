@@ -11,10 +11,10 @@ Here is a table including a brief summary for physics simulators:
 |IsaacSim |PhysX 5      |Rasterization; RayTracing; PathTracing              | RGBD;        |Rigid;Soft;Cloth;Fluid| ✔ |GPU🟡                   | ✘ | ✔ |
 |IsaacGym |PhysX 5, Flex|Rasterization;                                      | RGBD; Force; |Rigid                 | ✔ |CPU;GPU                 | ✘ | ✘ |
 | SAPIEN  |PhysX 4, Warp|Rasterization; RayTracing⭐️;                        | RGBD; Force; |Rigid;Soft;Fluid      | ✔ |CPU;                    | ✔ | ✘ |
-| Pybullet|Bullet       |Rasterization;                                      | RGBD;        |Rigid(CHECK)          | ✘ |                        | ✔ | ✘ |
-| MuJoCo  |MuJoCo       |Rasterization;                                      | RGBD;        |Rigid;Soft;Cloth      | ✘ |                        | ✔ | ✘ |
-|CoppeliaSim|MuJoCo; Bullet; ODE; Newton; Vortex|Rasterization; RayTracing🔶;| RGBD;        |Rigid;Soft;Cloth      | ✘ |                        | ✔ |   |
-|Gazebo   |Bullet; ODE; DART; Simbody|Rasterization;                         | RGBD;        |Rigid;Soft;Cloth      | ✘ |                        | ✔ | ✔ |
+| Pybullet|Bullet       |Rasterization;                                      | RGBD;        |Rigid;Soft;Cloth      | ✘ |CPU;                    | ✔ | ✘ |
+| MuJoCo  |MuJoCo       |Rasterization;                                      | RGBD;        |Rigid;Soft;Cloth      | ✘ |CPU;                    | ✔ | ✘ |
+|CoppeliaSim|MuJoCo; Bullet; ODE; Newton; Vortex|Rasterization; RayTracing🔶;| RGBD;        |Rigid;Soft;Cloth      | ✘ |CPU;                    | ✔ |   |
+|Gazebo   |Bullet; ODE; DART; Simbody|Rasterization;                         | RGBD;        |Rigid;Soft;Cloth      | ✘ |CPU;                    | ✔ | ✔ |
 
 <!-- | Blender |             |                  |       |                      | ✘ |       | ✔ |
 | AI2-THOR|             |                  |       |                      | ✘ |       | ✔ |
