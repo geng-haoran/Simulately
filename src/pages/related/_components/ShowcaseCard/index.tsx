@@ -68,7 +68,8 @@ function ShowcaseCard({ user }: { user: Paper }) {
   return (
     <li key={user.title} className="card shadow--md">
       <div className={clsx('card__image', styles.showcaseCardImage)}>
-        <Image img={image} alt={user.title} loading='lazy' about={user.title} decoding='async' />
+        {/* Vertically fill */}
+        <Image img={image} alt={user.title} loading='lazy' about={user.title} decoding='async' style={{ objectFit: 'cover', height: '100%' }} />
       </div>
 
       <div className="card__body">
