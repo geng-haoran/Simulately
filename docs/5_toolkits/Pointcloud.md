@@ -37,6 +37,46 @@ def visualize_point_cloud(data):
     o3d.visualization.draw_geometries([point_cloud])
 ```
 
+
+### Save Point Cloud to .PLY files
+Write a point cloud to .PLY file. Supports N\*3 and N\*6 point clouds, numpy array and torch tensor.
+```python
+import numpy as np
+import open3d as o3d
+import torch
+
+def convert_to_ply(points, filename):
+    """
+    Convert a point cloud (NumPy array or PyTorch tensor) to a PLY file using Open3D.
+    
+    :param points: NumPy array or PyTorch tensor of shape (N, 3) or (N, 6) 
+                   where N is the number of points.
+    :param filename: Name of the output PLY file.
+    """
+
+    # Convert PyTorch tensor to NumPy array if necessary
+    if isinstance(points, torch.Tensor):
+        points = points.cpu().numpy()
+
+    # Create an Open3D PointCloud object
+    pcd = o3d.geometry.PointCloud()
+
+    # Set the points. Assuming the first 3 columns are x, y, z coordinates
+    pcd.points = o3d.utility.Vector3dVector(points[:, :3])
+
+    # If the points array has 6 columns, assume the last 3 are RGB values
+    if points.shape[1] == 6:
+        # Normalize color values to [0, 1] if they are not already
+        colors = points[:, 3:6]
+        if colors.max() > 1.0:
+            colors = colors / 255.0
+        pcd.colors = o3d.utility.Vector3dVector(colors)
+
+    # Write to a PLY file
+    o3d.io.write_point_cloud(filename, pcd)
+    print(f"Point cloud saved to '{filename}'.")
+```
+
 ### Save Point Cloud to .OBJ files
 Write a point cloud to .OBJ file. Supports N\*3 and N\*6 point clouds, but only save the xyz value to .OBJ file.
 ```python
