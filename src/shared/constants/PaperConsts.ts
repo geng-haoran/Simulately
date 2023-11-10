@@ -3,16 +3,80 @@ import { Tag } from '@site/src/shared/dto/Tag';
 
 export type PaperTagType =
     | 'isaacgym'
-    // For open-source sites, a link to the source code is required.
-    // The source should be the *website's* source, not the project's source!
     | 'isaacsim'
     | 'sapien'
     | 'pybullet'
-    | 'mujoco';
+    | 'mujoco'
+    | 'articulated'
+    | 'manipulation'
+    | 'dexterousgrasping';
 
 export const PaperTags: { [type in PaperTagType]: Tag } = {
-    isaacgym: {
+    "isaacgym": {
+        label: translate({ message: 'IsaacSim' }),
+        description: translate({
+            message: 
+                'Related Work',
+            id: 'showcase.tag.isaacgym.description',
+        }),
+        color: '#e9669e',
+    },
+    "isaacsim": {
+        label: translate({ message: 'IsaacSim' }),
+        description: translate({
+            message: 
+                'Related Work',
+            id: 'showcase.tag.isaacgym.description',
+        }),
+        color: '#e9669e',
+    },
+    "sapien": {
+        label: translate({ message: 'SAPIEN' }),
+        description: translate({
+            message: 
+                'Related Work',
+            id: 'showcase.tag.isaacgym.description',
+        }),
+        color: '#e9669e',
+    },
+    "pybullet": {
+        label: translate({ message: 'PyBullet' }),
+        description: translate({
+            message: 
+                'Related Work',
+            id: 'showcase.tag.isaacgym.description',
+        }),
+        color: '#e9669e',
+    },
+    "mujoco": {
         label: translate({ message: 'Isaac Gym' }),
+        description: translate({
+            message: 
+                'Related Work',
+            id: 'showcase.tag.isaacgym.description',
+        }),
+        color: '#e9669e',
+    },
+    "articulated": {
+        label: translate({ message: 'Articulated Object' }),
+        description: translate({
+            message: 
+                'Related Work',
+            id: 'showcase.tag.isaacgym.description',
+        }),
+        color: '#e9669e',
+    },
+    "manipulation": {
+        label: translate({ message: 'Manipulation' }),
+        description: translate({
+            message: 
+                'Related Work',
+            id: 'showcase.tag.isaacgym.description',
+        }),
+        color: '#e9669e',
+    },
+    "dexterousgrasping": {
+        label: translate({ message: 'Dexterous Grasping' }),
         description: translate({
             message: 
                 'Related Work',
