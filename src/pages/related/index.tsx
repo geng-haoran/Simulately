@@ -108,40 +108,40 @@ function useFilteredUsers() {
   );
 }
 
-function ShowcaseHeader() {
+function AddMyWorkButton() {
   return (
     <section className="margin-top--lg margin-bottom--lg text--center">
       <Heading as="h1">{TITLE}</Heading>
       <p>{DESCRIPTION}</p>
       <Link className="button button--primary" to={SUBMIT_URL}>
         <Translate id="showcase.header.button">
-          🙏 Please add your site
+          Add my work here!
         </Translate>
       </Link>
     </section>
   );
 }
 
-function useSiteCountPlural() {
+function usePaperCountPlural() {
   const {selectMessage} = usePluralForm();
-  return (sitesCount: number) =>
+  return (papersCount: number) =>
     selectMessage(
-      sitesCount,
+      papersCount,
       translate(
         {
           id: 'showcase.filters.resultCount',
           description:
-            'Pluralized label for the number of sites found on the showcase. Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
-          message: '1 site|{sitesCount} sites',
+            'Pluralized label for the number of papers found on the showcase. Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
+          message: '1 paper|{papersCount} papers',
         },
-        {sitesCount},
+        {papersCount: papersCount},
       ),
     );
 }
 
 function ShowcaseFilters() {
   const filteredUsers = useFilteredUsers();
-  const siteCountPlural = useSiteCountPlural();
+  const siteCountPlural = usePaperCountPlural();
   return (
     <section className="container margin-top--l margin-bottom--lg">
       <div className={clsx('margin-bottom--sm', styles.filterCheckbox)}>
@@ -257,7 +257,7 @@ function ShowcaseCards() {
     <section className="margin-top--lg margin-bottom--xl">
       {filteredUsers.length === sortedPapers.length ? (
         <>
-          <div className={styles.showcaseFavorite}>
+          {/* <div className={styles.showcaseFavorite}>
             <div className="container">
               <div
                 className={clsx(
@@ -270,7 +270,6 @@ function ShowcaseCards() {
                     Isaac-Gym Papers
                   </Translate>
                   <span className={clsx(styles.countPapers,)}>
-                    {isaacgymUsers.length}
                   </span>
                 </Heading>
                 <SearchBar />
@@ -286,12 +285,11 @@ function ShowcaseCards() {
                 ))}
               </ul>
             </div>
-          </div>
+          </div> */}
           <div className="container margin-top--lg">
             <Heading as="h2" className={styles.showcaseHeader} id='all-papers'>
               <Translate id="showcase.usersList.allUsers">All papers</Translate>
               <span className={clsx(styles.countPapers,)}>
-                {otherUsers.length}
               </span>
             </Heading>
             <ul className={clsx('clean-list', styles.showcaseList)}>
@@ -325,7 +323,7 @@ export default function Showcase(): JSX.Element {
   return (
     <Layout title={TITLE} description={DESCRIPTION}>
       <main className="margin-vert--lg">
-        {/* <ShowcaseHeader /> */}
+        {/* <AddMyWorkButton /> */}
         <ShowcaseFilters />
         <ShowcaseCards />
       </main>
