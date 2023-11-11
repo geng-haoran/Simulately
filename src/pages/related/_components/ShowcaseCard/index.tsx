@@ -79,16 +79,6 @@ function ShowcaseCard({ user }: { user: Paper }) {
               {user.title}
             </Link>
           </Heading>
-
-          {user.tags.includes('favorite') && (
-            <FavoriteIcon svgClass={styles.svgIconFavorite} size="small" />
-          )}
-
-          {user.source && (
-            <Link href={user.source} className={clsx('button button--secondary button--sm', styles.showcaseCardSrcBtn)}>
-              <Translate id="showcase.card.sourceLink">source</Translate>
-            </Link>
-          )}
         </div>
 
         <p className={styles.showcaseCardBody}>{user.description}</p>

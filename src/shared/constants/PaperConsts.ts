@@ -13,7 +13,7 @@ export type PaperTagType =
 
 export const PaperTags: { [type in PaperTagType]: Tag } = {
     "isaacgym": {
-        label: translate({ message: 'IsaacSim' }),
+        label: translate({ message: 'IsaacGym' }),
         description: translate({
             message: 
                 'Related Work',
@@ -26,7 +26,7 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         description: translate({
             message: 
                 'Related Work',
-            id: 'showcase.tag.isaacgym.description',
+            id: 'showcase.tag.isaacsim.description',
         }),
         color: '#e9669e',
     },
@@ -35,7 +35,7 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         description: translate({
             message: 
                 'Related Work',
-            id: 'showcase.tag.isaacgym.description',
+            id: 'showcase.tag.sapien.description',
         }),
         color: '#e9669e',
     },
@@ -44,7 +44,7 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         description: translate({
             message: 
                 'Related Work',
-            id: 'showcase.tag.isaacgym.description',
+            id: 'showcase.tag.pybullet.description',
         }),
         color: '#e9669e',
     },
@@ -53,7 +53,7 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         description: translate({
             message: 
                 'Related Work',
-            id: 'showcase.tag.isaacgym.description',
+            id: 'showcase.tag.mujoco.description',
         }),
         color: '#e9669e',
     },
@@ -62,7 +62,7 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         description: translate({
             message: 
                 'Related Work',
-            id: 'showcase.tag.isaacgym.description',
+            id: 'showcase.tag.articulated.description',
         }),
         color: '#e9669e',
     },
@@ -71,7 +71,7 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         description: translate({
             message: 
                 'Related Work',
-            id: 'showcase.tag.isaacgym.description',
+            id: 'showcase.tag.manipulation.description',
         }),
         color: '#e9669e',
     },
@@ -80,7 +80,7 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         description: translate({
             message: 
                 'Related Work',
-            id: 'showcase.tag.isaacgym.description',
+            id: 'showcase.tag.dexterousgrasping.description',
         }),
         color: '#e9669e',
     }
