@@ -15,8 +15,9 @@ Here is a table including a brief summary for physics simulators:
 | MuJoCo  |MuJoCo       |Rasterization;                                      | RGBD;        |Rigid;Soft;Cloth      | ✘ |CPU;                    | ✔ | ✘ |
 |CoppeliaSim|MuJoCo; Bullet; ODE; Newton; Vortex|Rasterization; RayTracing🔶;| RGBD;        |Rigid;Soft;Cloth      | ✘ |CPU;                    | ✔ |   |
 |Gazebo   |Bullet; ODE; DART; Simbody|Rasterization;                         | RGBD;        |Rigid;Soft;Cloth      | ✘ |CPU;                    | ✔ | ✔ |
+|Blender  |Bullet       |Rasterization; PathTracing;                         | RGBD;        |Rigid;Soft;Cloth;Fluid| ✘ |CPU;                    | ✔ | ✔ |
 
-<!-- | Blender |             |                  |       |                      | ✘ |       | ✔ |
+<!--
 | AI2-THOR|             |                  |       |                      | ✘ |       | ✔ |
 | RLBench |             |                  |       |                      | ✘ |       | ✔ |
 | Habitat |             |                  |       |                      | ✘ |       | ✔ | -->
