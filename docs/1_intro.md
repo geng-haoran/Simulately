@@ -18,7 +18,7 @@ sidebar_position: 1
 
 # Acknowledgement
 
-**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), and [Yuanpei Chen](https://cypypccpy.github.io/).
+**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), and [Wensi Ai](https://wensi-ai.github.io).
 
 Simulately is inspired or helped by these projects:
 
