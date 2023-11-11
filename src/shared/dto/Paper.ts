@@ -5,6 +5,5 @@ export type Paper = {
     description: string;
     preview: string | null; // null = use our serverless screenshot service
     website: string;
-    source: string | null;
     tags: PaperTagType[];
 };

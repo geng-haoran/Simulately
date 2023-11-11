@@ -28,7 +28,7 @@ const TITLE = translate({message: 'Related Work'});
 const DESCRIPTION = translate({
   message: 'List of work powered by simulators.',
 });
-const SUBMIT_URL = 'https://github.com/facebook/docusaurus/discussions/7826';
+const SUBMIT_URL = 'https://github.com/geng-haoran/Simulately/discussions/2';
 
 type UserState = {
   scrollTopPosition: number;
@@ -168,21 +168,6 @@ function ShowcaseFilters() {
                   tag={tag}
                   id={id}
                   label={label}
-                  icon={
-                    tag === 'isaacgym' ? (
-                      <FavoriteIcon svgClass={styles.svgIconFavoriteXs} />
-                    ) : (
-                      <span
-                        style={{
-                          backgroundColor: color,
-                          width: 10,
-                          height: 10,
-                          borderRadius: '50%',
-                          marginLeft: 8,
-                        }}
-                      />
-                    )
-                  }
                 />
               </ShowcaseTooltip>
             </li>
@@ -257,35 +242,6 @@ function ShowcaseCards() {
     <section className="margin-top--lg margin-bottom--xl">
       {filteredUsers.length === sortedPapers.length ? (
         <>
-          {/* <div className={styles.showcaseFavorite}>
-            <div className="container">
-              <div
-                className={clsx(
-                  'margin-bottom--md',
-                  styles.showcaseFavoriteHeader,
-                )}>
-                <Heading as="h2" id='isaacgym-papers'>
-                  <FavoriteIcon svgClass={styles.svgIconFavorite} />
-                  <Translate id="showcase.isaacgymsList.title">
-                    Isaac-Gym Papers
-                  </Translate>
-                  <span className={clsx(styles.countPapers,)}>
-                  </span>
-                </Heading>
-                <SearchBar />
-              </div>
-              <ul
-                className={clsx(
-                  'container',
-                  'clean-list',
-                  styles.showcaseList,
-                )}>
-                {isaacgymUsers.map((user) => (
-                  <ShowcaseCard key={user.title} user={user} />
-                ))}
-              </ul>
-            </div>
-          </div> */}
           <div className="container margin-top--lg">
             <Heading as="h2" className={styles.showcaseHeader} id='all-papers'>
               <Translate id="showcase.usersList.allUsers">All papers</Translate>
@@ -323,7 +279,7 @@ export default function Showcase(): JSX.Element {
   return (
     <Layout title={TITLE} description={DESCRIPTION}>
       <main className="margin-vert--lg">
-        {/* <AddMyWorkButton /> */}
+        <AddMyWorkButton />
         <ShowcaseFilters />
         <ShowcaseCards />
       </main>
