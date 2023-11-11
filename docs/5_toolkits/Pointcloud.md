@@ -40,42 +40,57 @@ def visualize_point_cloud(data):
 
 ### Save Point Cloud to .PLY files
 Write a point cloud to .PLY file. Supports N\*3 and N\*6 point clouds, numpy array and torch tensor.
-```python
-import numpy as np
-import open3d as o3d
-import torch
+- A method using Open3D
+    ```python
+    import numpy as np
+    import open3d as o3d
+    import torch
 
-def convert_to_ply(points, filename):
-    """
-    Convert a point cloud (NumPy array or PyTorch tensor) to a PLY file using Open3D.
-    
-    :param points: NumPy array or PyTorch tensor of shape (N, 3) or (N, 6) 
-                   where N is the number of points.
-    :param filename: Name of the output PLY file.
-    """
+    def convert_to_ply(points, filename):
+        """
+        Convert a point cloud (NumPy array or PyTorch tensor) to a PLY file using Open3D.
+        
+        :param points: NumPy array or PyTorch tensor of shape (N, 3) or (N, 6) 
+                    where N is the number of points.
+        :param filename: Name of the output PLY file.
+        """
 
-    # Convert PyTorch tensor to NumPy array if necessary
-    if isinstance(points, torch.Tensor):
-        points = points.cpu().numpy()
+        # Convert PyTorch tensor to NumPy array if necessary
+        if isinstance(points, torch.Tensor):
+            points = points.cpu().numpy()
 
-    # Create an Open3D PointCloud object
-    pcd = o3d.geometry.PointCloud()
+        # Create an Open3D PointCloud object
+        pcd = o3d.geometry.PointCloud()
 
-    # Set the points. Assuming the first 3 columns are x, y, z coordinates
-    pcd.points = o3d.utility.Vector3dVector(points[:, :3])
+        # Set the points. Assuming the first 3 columns are x, y, z coordinates
+        pcd.points = o3d.utility.Vector3dVector(points[:, :3])
 
-    # If the points array has 6 columns, assume the last 3 are RGB values
-    if points.shape[1] == 6:
-        # Normalize color values to [0, 1] if they are not already
-        colors = points[:, 3:6]
-        if colors.max() > 1.0:
-            colors = colors / 255.0
-        pcd.colors = o3d.utility.Vector3dVector(colors)
+        # If the points array has 6 columns, assume the last 3 are RGB values
+        if points.shape[1] == 6:
+            # Normalize color values to [0, 1] if they are not already
+            colors = points[:, 3:6]
+            if colors.max() > 1.0:
+                colors = colors / 255.0
+            pcd.colors = o3d.utility.Vector3dVector(colors)
 
-    # Write to a PLY file
-    o3d.io.write_point_cloud(filename, pcd)
-    print(f"Point cloud saved to '{filename}'.")
-```
+        # Write to a PLY file
+        o3d.io.write_point_cloud(filename, pcd)
+        print(f"Point cloud saved to '{filename}'.")
+    ```
+- A method without using Open3D
+    ```python
+    def save_point_cloud_to_ply(points, colors, save_path='your_path_to_save.ply'):
+        '''
+        Save point cloud to ply file
+        '''
+        PLY_HEAD = f"ply\nformat ascii 1.0\nelement vertex {len(points)}\nproperty float x\nproperty float y\nproperty float z\nproperty uchar red\nproperty uchar green\nproperty uchar blue\nend_header\n"
+        file_sting = PLY_HEAD
+        for i in range(len(points)):
+            file_sting += f'{points[i][0]} {points[i][1]} {points[i][2]} {int(colors[i][0])} {int(colors[i][1])} {int(colors[i][2])}\n'
+        f = open(save_path, 'w')
+        f.write(file_sting)
+        f.close()
+    ```
 
 ### Save Point Cloud to .OBJ files
 Write a point cloud to .OBJ file. Supports N\*3 and N\*6 point clouds, but only save the xyz value to .OBJ file.
