@@ -39,6 +39,7 @@ Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and 
 - ICCV2023: [UniDexGrasp++: Improving Dexterous Grasping Policy Learning via Geometry-aware Curriculum and Iterative Generalist-Specialist Learning](https://pku-epic.github.io/UniDexGrasp++/): IsaacGym; RGB-D PointCloud
 - CoRL2023: [Dynamic Handover: Throw and Catch with Bimanual Hands](https://binghao-huang.github.io/dynamic_handover/): IsaacGym; RGB
 - CoRL2023: [Sequential Dexterity: Chaining Dexterous Policies for Long-Horizon Manipulation](https://sequential-dexterity.github.io/): IsaacGym; RGB-D; PointCloud
+- CORL2023: [Curiosity-Driven Learning of Joint Locomotion and Manipulation Tasks](https://openreview.net/forum?id=QG_ERxtDAP-&referrer=%5Bthe%20profile%20of%20Clemens%20Schwarke%5D(%2Fprofile%3Fid%3D~Clemens_Schwarke1)): IsaacGym; RL
 - CoRL2023: [General In-Hand Object Rotation with Vision and Touch](https://haozhi.io/rotateit/): IsaacGym; RGB-D
 - CVPR2023: [UniDexGrasp: Universal Robotic Dexterous Grasping via Learning Diverse Proposal Generation and Goal-Conditioned Policy](https://pku-epic.github.io/UniDexGrasp/): IsaacGym; RGB-D PointCloud
 - CVPR2023: [PartManip: Learning Cross-Category Generalizable Part Manipulation Policy from Point Cloud Observations](https://github.com/PKU-EPIC/PartManip): Isaac Gym; RGB-D PointCloud
