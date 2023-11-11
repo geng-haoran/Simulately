@@ -2,58 +2,49 @@ import { translate } from '@docusaurus/Translate';
 import { Tag } from '@site/src/shared/dto/Tag';
 
 export type PaperTagType =
-    | 'isaacgym'
-    | 'isaacsim'
-    | 'sapien'
-    | 'pybullet'
-    | 'mujoco'
+| 'dataset'
+    | 'rl'
+    | 'affordance'
+    | 'rgbd_pc'
     | 'articulated'
     | 'manipulation'
-    | 'dexterousgrasping';
+    | 'dexterousgrasping'
+    | 'mobilemanip';
 
-export const PaperTags: { [type in PaperTagType]: Tag } = {
-    "isaacgym": {
-        label: translate({ message: 'IsaacGym' }),
+    export const PaperTags: { [type in PaperTagType]: Tag } = {
+    "dataset": {
+        label: translate({ message: 'Dataset' }),
         description: translate({
             message: 
-                'Related Work',
-            id: 'showcase.tag.isaacgym.description',
+                'Releasing a dataset',
+            id: 'showcase.tag.dataset.description',
         }),
         color: '#e9669e',
     },
-    "isaacsim": {
-        label: translate({ message: 'IsaacSim' }),
+    "rl": {
+        label: translate({ message: 'Reinforcement Learning' }),
         description: translate({
             message: 
-                'Related Work',
-            id: 'showcase.tag.isaacsim.description',
+                'Learning with RL',
+            id: 'showcase.tag.rl.description',
         }),
         color: '#e9669e',
     },
-    "sapien": {
-        label: translate({ message: 'SAPIEN' }),
+    "affordance": {
+        label: translate({ message: 'Affordance' }),
         description: translate({
             message: 
-                'Related Work',
-            id: 'showcase.tag.sapien.description',
+                'The secret ingredient from J J Gibson',
+            id: 'showcase.tag.affordance.description',
         }),
         color: '#e9669e',
     },
-    "pybullet": {
-        label: translate({ message: 'PyBullet' }),
+    "rgbd_pc": {
+        label: translate({ message: 'RGB-D Point CLoud' }),
         description: translate({
             message: 
-                'Related Work',
-            id: 'showcase.tag.pybullet.description',
-        }),
-        color: '#e9669e',
-    },
-    "mujoco": {
-        label: translate({ message: 'Isaac Gym' }),
-        description: translate({
-            message: 
-                'Related Work',
-            id: 'showcase.tag.mujoco.description',
+                'Perceiving RGB-D poing clouds',
+            id: 'showcase.tag.rgbd_pc.description',
         }),
         color: '#e9669e',
     },
@@ -61,7 +52,7 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         label: translate({ message: 'Articulated Object' }),
         description: translate({
             message: 
-                'Related Work',
+                'Interacting with articulated objects',
             id: 'showcase.tag.articulated.description',
         }),
         color: '#e9669e',
@@ -70,7 +61,7 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         label: translate({ message: 'Manipulation' }),
         description: translate({
             message: 
-                'Related Work',
+                'Robot manipulation',
             id: 'showcase.tag.manipulation.description',
         }),
         color: '#e9669e',
@@ -79,8 +70,17 @@ export const PaperTags: { [type in PaperTagType]: Tag } = {
         label: translate({ message: 'Dexterous Grasping' }),
         description: translate({
             message: 
-                'Related Work',
+                'Grasping with dexterity',
             id: 'showcase.tag.dexterousgrasping.description',
+        }),
+        color: '#e9669e',
+    },
+    "mobilemanip": {
+        label: translate({ message: 'Mobile Manipulator' }),
+        description: translate({
+            message: 
+                'Mobile manipulators',
+            id: 'showcase.tag.mobilemanip.description',
         }),
         color: '#e9669e',
     }

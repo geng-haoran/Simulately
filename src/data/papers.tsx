@@ -11,7 +11,7 @@ const PAPERS: Paper[] = [
     preview: "https://arnold-benchmark.github.io/assets/teaser.png",
     website: 'https://pku-epic.github.io/UniDexGrasp/',
     source: 'https://pku-epic.github.io/UniDexGrasp/',
-    tags: ['isaacgym'],
+    tags: ['rl', 'rgbd_pc'],
   },
   {
     title: 'GAPartNet: Cross-Category Domain-Generalizable Object Perception and Manipulation via Generalizable and Actionable Parts',
@@ -19,7 +19,7 @@ const PAPERS: Paper[] = [
     preview: "https://pku-epic.github.io/GAPartNet/images/teaser.png",
     website: 'https://github.com/PKU-EPIC/GAPartNet',
     source: 'https://github.com/PKU-EPIC/GAPartNet',
-    tags: ['sapien', 'articulated'],
+    tags: ['rl', 'articulated', 'rgbd_pc'],
   },
   {
     title: 'UniDexGrasp++: Improving Dexterous Grasping Policy Learning via Geometry-aware Curriculum and Iterative Generalist-Specialist Learning',
@@ -27,7 +27,7 @@ const PAPERS: Paper[] = [
     preview: null,
     website: 'https://pku-epic.github.io/UniDexGrasp++/',
     source: 'https://pku-epic.github.io/UniDexGrasp++/',
-    tags: ['isaacgym', 'dexterousgrasping'],
+    tags: ['rl', 'dexterousgrasping', 'rgbd_pc'],
   },
   {
     title: 'GenDexGrasp: Generalizable Dexterous Grasping',
@@ -35,7 +35,7 @@ const PAPERS: Paper[] = [
     preview: null,
     website: 'https://sites.google.com/view/gendexgrasp/',
     source: 'https://sites.google.com/view/gendexgrasp/',
-    tags: ['isaacgym', 'dexterousgrasping'],
+    tags: ['rl', 'dexterousgrasping', 'rgbd_pc'],
   },
   {
     title: 'ARNOLD: A Benchmark for Language-Grounded Task Learning With Continuous States in Realistic 3D Scenes',
@@ -43,7 +43,7 @@ const PAPERS: Paper[] = [
     preview: null,
     website: 'https://arnold-benchmark.github.io/',
     source: 'https://arnold-benchmark.github.io/',
-    tags: ['isaacsim', 'manipulation'],
+    tags: ['manipulation', 'rgbd_pc'],
   },
   {
     title: 'RLAfford: End-to-End Affordance Learning for Robotic Manipulation',
@@ -51,7 +51,7 @@ const PAPERS: Paper[] = [
     preview: null,
     website: 'https://sites.google.com/view/rlafford/',
     source: 'https://sites.google.com/view/rlafford/',
-    tags: ['isaacgym', 'manipulation', 'articulated'],
+    tags: ['rl', 'manipulation', 'articulated', 'rgbd_pc', 'affordance'],
   },
   {
     title: 'PartManip: Learning Cross-Category Generalizable Part Manipulation Policy from Point Cloud Observations',
@@ -59,7 +59,7 @@ const PAPERS: Paper[] = [
     preview: "https://pku-epic.github.io/PartManip/images/teaser_img.png",
     website: 'https://github.com/PKU-EPIC/PartManip',
     source: 'https://github.com/PKU-EPIC/PartManip',
-    tags: ['isaacsim', 'dexterousgrasping', 'articulated'],
+    tags: ['rl', 'dexterousgrasping', 'articulated'],
   },
   {
     title: 'Grasp Multiple Objects with One Hand',
@@ -67,7 +67,7 @@ const PAPERS: Paper[] = [
     preview: "https://multigrasp.github.io/static/images/teaser/Teaser.png",
     website: 'https://multigrasp.github.io/',
     source: 'https://multigrasp.github.io/',
-    tags: ['isaacsim', 'dexterousgrasping'],
+    tags: ['rgbd_pc', 'rl', 'dexterousgrasping', 'rgbd_pc'],
   }
 ];
 
@@ -77,7 +77,7 @@ function sortPapers() {
   result = sortBy(result, (paper) => paper.title.toLowerCase());
   
   // Sort by favorite tag, favorites first
-  result = sortBy(result, (paper) => !paper.tags.includes('isaacgym'));
+  result = sortBy(result, (paper) => !paper.tags.includes('rl'));
   return result;
 }
 
