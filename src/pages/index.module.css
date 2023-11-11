@@ -21,3 +21,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.indexCtasGitHubButtonWrapper {
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+}
