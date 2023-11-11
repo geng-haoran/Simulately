@@ -28,6 +28,7 @@ sidebar_position: 4
 ## Related Materials
 - [Tutorials](https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm)
 - [RL bench Tutorials](https://github.com/stepjam/RLBench/blob/master/tutorials/simple_task.md)
+- [PyRep examples](https://github.com/stepjam/PyRep/tree/master/examples)
 
 ## Related Projects
 - CoRL2022: [Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation](https://peract.github.io/)

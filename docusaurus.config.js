@@ -73,7 +73,7 @@ const config = {
           { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Information' },
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/related', label: 'Related Work', position: 'left'},
-          { href: 'https://github.com/geng-haoran/Simulator-Summary', label: 'GitHub', position: 'right' },
+          { href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right' },
         ],
       },
       footer: {
@@ -118,7 +118,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/geng-haoran/Simulator-Summary',
+                href: 'https://github.com/geng-haoran/Simulately',
               },
               {
                 label: 'E-Mail',

@@ -168,21 +168,6 @@ function ShowcaseFilters() {
                   tag={tag}
                   id={id}
                   label={label}
-                  icon={
-                    tag === 'isaacgym' ? (
-                      <FavoriteIcon svgClass={styles.svgIconFavoriteXs} />
-                    ) : (
-                      <span
-                        style={{
-                          backgroundColor: color,
-                          width: 10,
-                          height: 10,
-                          borderRadius: '50%',
-                          marginLeft: 8,
-                        }}
-                      />
-                    )
-                  }
                 />
               </ShowcaseTooltip>
             </li>

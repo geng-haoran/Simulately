@@ -24,3 +24,14 @@ sidebar_position: 5
 - [Document](https://mujoco.readthedocs.io/en/stable/overview.html)
 - [Paper](https://ieeexplore.ieee.org/document/6386109)
 - [Source Code](https://github.com/google-deepmind/mujoco)
+- [Tutorials (colab)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/tutorial.ipynb)
+
+## Related Benchmark
+
+## Related Materials
+- [mujoco-py](https://github.com/openai/mujoco-py): mujoco-py allows using MuJoCo from Python 3. mujoco-py does not support versions of MuJoCo after 2.1.0. New users should depend on the [official MuJoCo Python bindings](https://github.com/deepmind/mujoco/blob/main/python/README.md).
+
+## Related Projects
+- ICML2022: [CtrlFormer: Learning Transferable State Representation for Visual Control via Transformer](https://github.com/YaoMarkMu/CtrlFormer_robotic)
+- NeurIPS2021: [Offline Reinforcement Learning as One Big Sequence Modeling Problem](https://github.com/JannerM/trajectory-transformer)
+- NeurIPS2021: [Decision Transformer: Reinforcement Learning via Sequence Modeling](https://github.com/kzl/decision-transformer)

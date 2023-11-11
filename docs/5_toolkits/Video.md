@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Video
 > **Toolkits for video generation and processing**
 
