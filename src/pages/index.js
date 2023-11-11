@@ -12,8 +12,17 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <span className={styles.indexCtasGitHubButtonWrapper}>
+          <iframe
+            className={styles.indexCtasGitHubButton}
+            src="https://ghbtns.com/github-btn.html?user=geng-haoran&amp;repo=Simulately&amp;type=star&amp;count=true&amp;size=large"
+            width={70}
+            height={30}
+            title="GitHub Stars"
+          />
+        </span>
+        <h1 className="hero__title">Welcome to {siteConfig.title}</h1>
+        <p className="hero__subtitle">🦾{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"

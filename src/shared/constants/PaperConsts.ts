@@ -40,7 +40,7 @@ export type PaperTagType =
         color: '#e9669e',
     },
     "rgbd_pc": {
-        label: translate({ message: 'RGB-D Point CLoud' }),
+        label: translate({ message: 'RGB-D Point Cloud' }),
         description: translate({
             message: 
                 'Perceiving RGB-D poing clouds',

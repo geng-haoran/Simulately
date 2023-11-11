@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '🦾 Simulately',
+  title: 'Simulately',
   tagline: 'Handy information and resources for physics simulators for robotic learning research.',
   favicon: 'img/logo.png',
 
@@ -73,7 +73,7 @@ const config = {
           { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Information' },
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/related', label: 'Related Work', position: 'left'},
-          { href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right' },
+          { href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right' }
         ],
       },
       footer: {
@@ -127,7 +127,7 @@ const config = {
             ],
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Simulately, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Simulately. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

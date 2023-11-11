@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Didn't find what you get? Simulately is scalable via collaboration via GitHub. You can also contribute to the website by adding your expertise and experiences.
+        Didn't find what you want? Simulately is scalable via collaboration on GitHub. You can also contribute to the website by adding your expertise and experiences.
       </>
     ),
   },
