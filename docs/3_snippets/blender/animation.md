@@ -1,4 +1,4 @@
-# Cameras
+# Animation
 
 This page provides code snippets of animation. 
 The code here is based on character animation with data in AMASS format, but it can be generalized to any articualted objects (like robots) and any data format.
