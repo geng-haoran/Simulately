@@ -38,6 +38,15 @@ def visualize_point_cloud(data):
 ```
 
 
+### Read Point Cloud from .PLY files
+```python
+import open3d as o3d
+def read_pcs_from_ply(path):
+    pcd = o3d.io.read_point_cloud(path)
+    return np.array(pcd.points), np.array(pcd.colors)
+```
+
+
 ### Save Point Cloud to .PLY files
 Write a point cloud to .PLY file. Supports N\*3 and N\*6 point clouds, numpy array and torch tensor.
 - A method using Open3D
@@ -165,3 +174,72 @@ Sample a point cloud to a fixed number of points. Supports N\*3 point clouds, nu
 
     return sampled_points_ids
   ```
+
+### RGBD to Point Cloud
+Here we provide both step-by-step method and a one-line method to convert RGBD images to point clouds. The step-by-step method is more readable and easier to understand, while the one-line method is more efficient.
+
+- Method using Numpy
+    ```python
+    import numpy as np
+
+    def rgbd_to_point_cloud(rgb_image, depth_image, camera_intrinsics):
+        # Assuming depth_image and rgb_image are numpy arrays of the same size
+        # camera_intrinsics is a 3x3 matrix [fx, 0, cx; 0, fy, cy; 0, 0, 1]
+
+        points = []
+        colors = []
+
+        height, width = depth_image.shape
+        fx, fy = camera_intrinsics[0, 0], camera_intrinsics[1, 1]
+        cx, cy = camera_intrinsics[0, 2], camera_intrinsics[1, 2]
+
+        for v in range(height):
+            for u in range(width):
+                color = rgb_image[v, u]
+                z = depth_image[v, u]
+
+                if z == 0:  # Ignore invalid depth; Add your condition here
+                    continue
+
+                x = (u - cx) * z / fx
+                y = (v - cy) * z / fy
+
+                points.append([x, y, z])
+                colors.append(color)
+
+        return np.array(points), np.array(colors)
+
+    # Usage
+    # point_cloud, point_colors = rgbd_to_point_cloud(rgb_image, depth_image, camera_intrinsics)
+    ```
+- Method using Open3D
+    ```python
+    import open3d as o3d
+    import numpy as np
+
+    def rgbd_to_point_cloud(rgb_image_np, depth_image_np, camera_intrinsics):
+        # Load RGB and Depth images
+        # For this example, let's assume you have RGB and Depth images as numpy arrays
+        # rgb_image_np = <your RGB image as numpy array>
+        # depth_image_np = <your Depth image as numpy array>
+
+        # Convert numpy arrays to Open3D images
+        rgb_image_o3d = o3d.geometry.Image(rgb_image_np)
+        depth_image_o3d = o3d.geometry.Image(depth_image_np)
+
+        # Create an RGBD image from the RGB and Depth images
+        rgbd_image = o3d.geometry.RGBDImage.create_from_color_and_depth(rgb_image_o3d, depth_image_o3d)
+
+        # Define camera intrinsic parameters
+        fx, fy = camera_intrinsics[0, 0], camera_intrinsics[1, 1]
+        cx, cy = camera_intrinsics[0, 2], camera_intrinsics[1, 2]
+        intrinsic = o3d.camera.PinholeCameraIntrinsic(width=640, height=480, fx=fx, fy=fy, cx=cx, cy=cy)
+
+        # Convert the RGBD image to a point cloud
+        point_cloud = o3d.geometry.PointCloud.create_from_rgbd_image(rgbd_image, intrinsic)
+
+        # Optionally visualize the point cloud
+        # o3d.visualization.draw_geometries([point_cloud])
+
+        return np.array(point_cloud.points), np.array(point_cloud.colors)
+    ```
