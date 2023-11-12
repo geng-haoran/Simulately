@@ -95,7 +95,7 @@ const config = {
                 href: 'https://pku.ai/',
               },
               {
-                label: 'VCLA',
+                label: 'UCLA VCLA',
                 href: 'https://vcla.stat.ucla.edu/',
               },
             ],

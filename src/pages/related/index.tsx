@@ -26,7 +26,7 @@ import styles from './styles.module.css';
 
 const TITLE = translate({message: 'Related Work'});
 const DESCRIPTION = translate({
-  message: 'List of work powered by simulators.',
+  message: 'Use the filters below to find what you are interested!',
 });
 const SUBMIT_URL = 'https://github.com/geng-haoran/Simulately/discussions/2';
 
