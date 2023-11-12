@@ -101,3 +101,67 @@ def write_obj(points, file_name):
             f.write(f"v {point[0]} {point[1]} {point[2]}\n")
         print("OBJ file created successfully!")
 ```
+
+### Point Cloud Sampling
+Sample a point cloud to a fixed number of points. Supports N\*3 point clouds, numpy array and torch tensor. Return the corresponding indices of sampled point cloud.
+
+- Random Sampling
+  ```python
+  def sample_point_cloud(point_cloud, num_samples):
+    if isinstance(point_cloud, np.ndarray):
+        # For numpy array
+        indices = np.random.choice(point_cloud.shape[0], num_samples, replace=False)
+        sampled_points = point_cloud[indices, :]
+    elif isinstance(point_cloud, torch.Tensor):
+        # For PyTorch tensor
+        indices = torch.randperm(point_cloud.size(0))[:num_samples]
+        sampled_points = point_cloud[indices, :]
+    else:
+        raise TypeError("Input must be either a numpy array or a torch tensor")
+
+    return indices
+  ```
+
+- Farthest Point Sampling(FPS)
+
+  ```python
+    def farthest_point_sample(xyz, npoint, use_cuda=True):
+    """
+    Modified to support both numpy array and torch tensor.
+
+    Input:
+        xyz: pointcloud data, [B, N, 3], can be either numpy array or tensor
+        npoint: number of samples
+    Return:
+        centroids: sampled pointcloud index, [B, npoint]
+    """
+    # Convert numpy array to PyTorch tensor if necessary
+    if isinstance(xyz, np.ndarray):
+        xyz = torch.from_numpy(xyz)
+
+    # Ensure the tensor is on the correct device
+    device = torch.device("cuda" if use_cuda and torch.cuda.is_available() else "cpu")
+    xyz = xyz.to(device)
+
+    B, N, C = xyz.shape
+
+    if use_cuda and torch.cuda.is_available():
+        print('Use pointnet2_cuda!')
+        from pointnet2_ops.pointnet2_utils import furthest_point_sample as fps_cuda
+        sampled_points_ids = fps_cuda(xyz, npoint)
+    else:
+        centroids = torch.zeros(B, npoint, dtype=torch.long).to(device)
+        distance = torch.ones(B, N).to(device) * 1e10
+        farthest = torch.randint(0, N, (B, ), dtype=torch.long).to(device)
+        batch_indices = torch.arange(B, dtype=torch.long).to(device)
+        for i in range(npoint):
+            centroids[:, i] = farthest
+            centroid = xyz[batch_indices, farthest, :].view(B, 1, 3)
+            dist = torch.sum((xyz - centroid)**2, -1)
+            mask = dist < distance
+            distance[mask] = dist[mask]
+            farthest = torch.max(distance, -1)[1]
+        sampled_points_ids = centroids
+
+    return sampled_points_ids
+  ```
