@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Simulately',
-  tagline: 'Handy information and resources for physics simulators for robotic learning research.',
+  tagline: 'Handy information and resources for physics simulators for robot learning research.',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
