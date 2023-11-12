@@ -94,6 +94,10 @@ const config = {
                 label: 'PKU CoRe Lab',
                 href: 'https://pku.ai/',
               },
+              {
+                label: 'VCLA',
+                href: 'https://vcla.stat.ucla.edu/',
+              },
             ],
           },
           {

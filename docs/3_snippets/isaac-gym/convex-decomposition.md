@@ -20,4 +20,4 @@ object_asset_options.default_dof_drive_mode = gymapi.DOF_MODE_NONE
 
 Convex decomposition visualization:
 
-![collision_mesh](/img/isaacgym_img/collision_mesh.png)
+![collision_mesh](imgs/isaacgym/collision_mesh.png)

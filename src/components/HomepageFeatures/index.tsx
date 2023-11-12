@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/EZ.svg').default,
     description: (
       <>
         Simulately was designed to be easily used to boost your resarch in the scope of simulation and beyond. We only focus on what matters in research.
@@ -20,7 +20,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'All in One',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/AIO.svg').default,
     description: (
       <>
         We gather relative information, materials, related work, and even snippets and FAQs all in one website.
@@ -29,7 +29,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Scalable',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/Scalable.svg').default,
     description: (
       <>
         Didn't find what you want? Simulately is scalable via collaboration on GitHub. You can also contribute to the website by adding your expertise and experiences.
