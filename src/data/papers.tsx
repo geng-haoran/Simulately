@@ -280,6 +280,22 @@ const PAPERS: Paper[] = [
     source: 'https://sites.google.com/view/accelerated-gpu-simulation/home',
     tags: ['rl'],
   },
+  {
+    title: 'On Pre-Training for Visuo-Motor Control: Revisiting a Learning-from-Scratch Baseline',
+    description: 'ICML2021; RGB.',
+    preview: "https://arxiv.org/abs/2212.05749",
+    website: 'https://arxiv.org/abs/2212.05749',
+    source: 'https://arxiv.org/abs/2212.05749',
+    tags: ['rl', 'rgb'],
+  },
+  {
+    title: 'AnyTeleop: A General Vision-Based Dexterous Robot Arm-Hand Teleoperation System',
+    description: 'RSS2023.',
+    preview: "http://anyteleop.com/",
+    website: 'http://anyteleop.com/',
+    source: 'http://anyteleop.com/',
+    tags: ['rl'],
+  },
   //////////////////////////////////////////
   //           Isaac Gym (Yuanpei)        //
   //////////////////////////////////////////
