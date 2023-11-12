@@ -40,7 +40,7 @@ torch_cam_tensor = gymtorch.wrap_tensor(camera_tensor)
 
 Image visualization:
 
-![point_cloud_image](/img/isaacgym_img/point_cloud_image.png)
+![point_cloud_image](imgs/isaacgym/point_cloud_image.png)
 
 For intrinsic, Some advanced uses such as deprojecting depth images to 3D point clouds require complete knowledge of the projection terms used to create the output images. To aid in this, Isaac Gym provides access to the projection and view matrix used to render a camera's view:
 
@@ -101,4 +101,4 @@ def sample_points(self, points, sample_num=1000, sample_mathed='furthest'):
 
 Down-sampled point cloud visualization:
 
-![point_cloud_open3d](/img/isaacgym_img/point_cloud_open3d.png)
+![point_cloud_open3d](imgs/isaacgym/point_cloud_open3d.png)

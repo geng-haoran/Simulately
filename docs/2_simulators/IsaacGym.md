@@ -30,7 +30,7 @@ sidebar_position: 3
 
 ### Bi-DexHands
 Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and reinforcement learning algorithms. Reaching human-level sophistication of hand dexterity and bimanual coordination remains an open challenge for modern robotics researchers. To better help the community study this problem, Bi-DexHands are developed with the following key features:
-  ![ManiSkill](/img/isaacgym_img/quick_demo3.gif)
+  ![ManiSkill](imgs/isaacgym/quick_demo3.gif)
   - [Website](https://bi-dexhands.ai)
   - [Code](https://github.com/PKU-MARL/DexterousHands)
   - [Paper](https://arxiv.org/abs/2206.08686)
