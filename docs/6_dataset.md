@@ -15,7 +15,7 @@ title: Dataset
 ### Articulated Objects
 - [PartNet Moblity](https://sapien.ucsd.edu/browse): SAPIEN releases PartNet-Mobility dataset, which is a collection of 2K articulated objects with motion annotations and rendernig material. The dataset powers research for generalizable computer vision and manipulation. [Download](https://sapien.ucsd.edu/downloads); [Paper](https://arxiv.org/abs/2003.08515)
 
-- [AKB48](https://liuliu66.github.io/articulationobjects/index.html): This is a realistic and physics-rich object repository for articulation analysis. It enables various robotic vision and interaction tasks that require detailed part-level understanding. More categories and download link will be released soon. [Download](https://liuliu66.github.io/articulationobjects/download.html)[Paper](https://arxiv.org/abs/2202.08432)
+- [AKB48](https://liuliu66.github.io/articulationobjects/index.html): This is a realistic and physics-rich object repository for articulation analysis. It enables various robotic vision and interaction tasks that require detailed part-level understanding. More categories and download link will be released soon. [Download](https://liuliu66.github.io/articulationobjects/download.html); [Paper](https://arxiv.org/abs/2202.08432)
 
 - [GAPartNet](https://pku-epic.github.io/GAPartNet/) ((Merge and Provide more annotation from PartNet Mobility and AKB48)): By identifying and defining 9 GAPart classes (lids, handles, etc.) in 27 object categories, we construct a large-scale part-centric interactive dataset, GAPartNet, where we provide rich, part-level annotations (semantics, poses). [Download](https://forms.gle/3qzv8z5vP2BT5ARN7); [Paper](https://arxiv.org/abs/2211.05272); [Code](https://github.com/PKU-EPIC/GAPartNet)
 
