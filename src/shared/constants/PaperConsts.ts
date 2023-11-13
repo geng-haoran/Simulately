@@ -50,7 +50,7 @@ export type PaperTagType =
         color: '#e9669e',
     },
     "rgb": {
-        label: translate({ message: 'RGB-D Point Cloud' }),
+        label: translate({ message: 'RGB' }),
         description: translate({
             message: 
                 'Perceiving RGB images',
