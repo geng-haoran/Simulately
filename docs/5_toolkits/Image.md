@@ -50,7 +50,6 @@ sidebar_position: 1
 
 ### Image Segmentation
 - [Segment Anything Model (SAM)](https://segment-anything.com/): SAM is a promptable segmentation system with zero-shot generalization to unfamiliar objects and images, without the need for additional training. [Code](https://github.com/facebookresearch/segment-anything); [Paper](https://arxiv.org/abs/2304.02643)
-  
 
 ### Open-Vocabulary Image Detection
 - [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO): Open-Set Detection. Detect everything with language! [Code](https://github.com/IDEA-Research/GroundingDINO); [Paper](https://arxiv.org/abs/2303.05499)
