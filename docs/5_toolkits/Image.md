@@ -47,12 +47,17 @@ sidebar_position: 1
     resized_image = cv2.resize(image, (new_width, new_height))
   ```
 
+### Image Feature Extraction
+- [DINO](https://github.com/facebookresearch/dino): Self-Supervised Vision Transformers with DINO. [Code](https://github.com/facebookresearch/dino); [Paper](https://arxiv.org/abs/2104.14294)
+- [DINO v2](https://dinov2.metademolab.com/): DINOv2: Learning Robust Visual Features without Supervision. [Code](https://github.com/facebookresearch/dinov2); [Paper](https://arxiv.org/abs/2304.07193)
 
 ### Image Segmentation
 - [Segment Anything Model (SAM)](https://segment-anything.com/): SAM is a promptable segmentation system with zero-shot generalization to unfamiliar objects and images, without the need for additional training. [Code](https://github.com/facebookresearch/segment-anything); [Paper](https://arxiv.org/abs/2304.02643)
+- [Segmentation Models.pytorch](https://github.com/qubvel/segmentation_models.pytorch): The main features of this library are: (1) High level API (just two lines to create a neural network) (2) 9 models architectures for binary and multi class segmentation (including legendary Unet) (3) 124 available encoders (and 500+ encoders from timm) (4) All encoders have pre-trained weights for faster and better convergence (5) Popular metrics and losses for training routines. [Code](https://github.com/qubvel/segmentation_models.pytorch)
 
 ### Open-Vocabulary Image Detection
-- [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO): Open-Set Detection. Detect everything with language! [Code](https://github.com/IDEA-Research/GroundingDINO); [Paper](https://arxiv.org/abs/2303.05499)
+- [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO): Open-Set Detection. Detect everything with language! [Code](https://github.com/IDEA-Research/GroundingDINO); [Paper](https://arxiv.org/abs/2303.05499);
+- [Awesome Open Vocabulary Object Detection](https://github.com/witnessai/Awesome-Open-Vocabulary-Object-Detection): A summary of open-vocabulary object detection papers. [Code](https://github.com/witnessai/Awesome-Open-Vocabulary-Object-Detection)
 
 ### Open-Vocabulary Image Segmentation
 - [GroundedSAM](https://github.com/IDEA-Research/Grounded-Segment-Anything):  A very interesting demo by combining Grounding DINO and Segment Anything which aims to detect and segment anything with text inputs! And we will continue to improve it and create more interesting demos based on this foundation.
