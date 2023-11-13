@@ -77,7 +77,7 @@ const PAPERS: Paper[] = [
   },
   {
     title: 'Curiosity-Driven Learning of Joint Locomotion and Manipulation Tasks',
-    description: 'CORL2023.',
+    description: 'CoRL2023.',
     preview: null,
     website: 'https://openreview.net/forum?id=QG_ERxtDAP-&referrer=%5Bthe%20profile%20of%20Clemens%20Schwarke%5D(%2Fprofile%3Fid%3D~Clemens_Schwarke1',
     tags: ['rl'],
@@ -256,6 +256,20 @@ const PAPERS: Paper[] = [
     preview: null,
     website: 'http://anyteleop.com/',
     tags: ['rl'],
+  },
+  {
+    title: 'BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation',
+    description: 'CoRL2023.',
+    preview: null,
+    website: 'http://anyteleop.com/',
+    tags: ['rl', 'rgb', 'mobilemanip'],
+  },
+  {
+    title: 'ORBIT: A Unified Simulation Framework for Interactive Robot Learning Environments',
+    description: 'RAL2023.',
+    preview: null,
+    website: 'http://anyteleop.com/',
+    tags: ['rl', 'manipulation'],
   }
 ];
 
