@@ -20,4 +20,4 @@ title: Dataset
 - [GAPartNet](https://pku-epic.github.io/GAPartNet/) ((Merge and Provide more annotation from PartNet Mobility and AKB48)): By identifying and defining 9 GAPart classes (lids, handles, etc.) in 27 object categories, we construct a large-scale part-centric interactive dataset, GAPartNet, where we provide rich, part-level annotations (semantics, poses). [Download](https://forms.gle/3qzv8z5vP2BT5ARN7); [Paper](https://arxiv.org/abs/2211.05272); [Code](https://github.com/PKU-EPIC/GAPartNet)
 
 ### Demonstrations
-- [RT-X](https://robotics-transformer-x.github.io/) (Real-world Dataset): Open X-Embodiment: Robotic Learning Datasets and RT-X Models. [Download](https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit#gid=0)
+- [RT-X](https://robotics-transformer-x.github.io/) (Real-world Dataset): Open X-Embodiment: Robotic Learning Datasets and RT-X Models. [Download](https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit#gid=0); [Paper](https://arxiv.org/abs/2310.08864); [Code](https://github.com/google-deepmind/open_x_embodiment) 
