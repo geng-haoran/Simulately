@@ -9,7 +9,8 @@ export type PaperTagType =
     | 'articulated'
     | 'manipulation'
     | 'dexterousgrasping'
-    | 'mobilemanip';
+    | 'mobilemanip'
+    | 'rgb';
 
     export const PaperTags: { [type in PaperTagType]: Tag } = {
     "dataset": {
@@ -45,6 +46,15 @@ export type PaperTagType =
             message: 
                 'Perceiving RGB-D poing clouds',
             id: 'showcase.tag.rgbd_pc.description',
+        }),
+        color: '#e9669e',
+    },
+    "rgb": {
+        label: translate({ message: 'RGB-D Point Cloud' }),
+        description: translate({
+            message: 
+                'Perceiving RGB images',
+            id: 'showcase.tag.rgb.description',
         }),
         color: '#e9669e',
     },
