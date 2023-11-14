@@ -8,6 +8,7 @@ sidebar_position: 8
 <div align="center">
     <a href="https://www.blender.org/" target="_blank"><img src="https://img.shields.io/badge/Website-Blender-red"></img></a>
     &nbsp;
+    <a href="https://github.com/blender/blender" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple" alt="Paper arXiv"></img></a>
     &nbsp;
     <a href="https://www.blender.org/community/" target="_blank"><img src="https://img.shields.io/badge/Forum-Community-yellow" alt="Forum"></img></a>
 </div>
@@ -32,6 +33,7 @@ sidebar_position: 8
 
 ## Official Materials
 - [Website](https://www.blender.org/)
+- [Source Code](https://github.com/blender/blender)
 - [Forum](https://devtalk.blender.org/)
 - [Community](https://www.blender.org/community)
 - [Docs](https://docs.blender.org/)
