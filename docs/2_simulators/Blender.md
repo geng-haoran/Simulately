@@ -46,3 +46,5 @@ sidebar_position: 8
 ## Related Projects
 - CPVR 2023: [A New Benchmark: On the Utility of Synthetic Data with Blender for Bare Supervised Learning and Downstream Domain Adaptation](https://huitangtang.github.io/On_the_Utility_of_Synthetic_Data/): Blender
 - ALR 2023: [Simulating dual-arm robot motions to avoid collision by rigid body dynamics for laboratory bench work](https://link.springer.com/article/10.1007/s10015-022-00823-1); Blender
+- CVPR 2017: [CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning](https://cs.stanford.edu/people/jcjohns/clevr/): Blender
+- Preprint: [Objaverse-XL: A Universe of 10M+ 3D Objects](https://objaverse.allenai.org/): Blender
