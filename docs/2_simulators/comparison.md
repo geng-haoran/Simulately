@@ -17,12 +17,6 @@ Here is a table including a brief summary for physics simulators:
 |Gazebo   |Bullet; ODE; DART; Simbody|Rasterization;                         | RGBD;        |Rigid;Soft;Cloth      | ✘ |CPU;                    | ✔ |
 |Blender  |Bullet       |Rasterization; PathTracing;                         | RGBD;        |Rigid;Soft;Cloth;Fluid| ✘ |CPU;                    | ✔ |
 
-<!--
-| AI2-THOR|             |                  |       |                      | ✘ |       | ✔ |
-| RLBench |             |                  |       |                      | ✘ |       | ✔ |
-| Habitat |             |                  |       |                      | ✘ |       | ✔ | -->
-❗️: ROS2 Support.
-
 🟡: GPU only, RTX series is required.
 
 ⭐️: RayTracing is currently not available in parallel gym-like envs.
