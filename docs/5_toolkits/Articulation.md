@@ -1,11 +1,10 @@
 ---
 sidebar_position: 4
 ---
-# URDF
-> URDF (Unified Robot Description Format) is a popular XML format used in robotics for describing the structure and properties of a robot.
+# Articulation
+> Articulated objects and robots are always described using XML files.  URDF(Unified Robot Description Format) is the most popular one used in robotics for describing the structure and properties of a robot. Here we provide code for articulation parsing, calculation and so on.
 
-
-### Query a Link
+### Query a Link from URDF file
 To query a link in a URDF file, we provide code using urdfpy and xml parser.
 - urdfpy
     ```python
@@ -38,7 +37,7 @@ To query a link in a URDF file, we provide code using urdfpy and xml parser.
     else:
         print("Link not found")
     ```
-### Query a Joint
+### Query a Joint from URDF file
 To query a joint in a URDF file, we provide code using urdfpy and xml parser.
 - urdfpy
   ```python
