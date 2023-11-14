@@ -25,8 +25,11 @@ Here is a table including a brief summary for physics simulators:
 
 
 # Rendering
-
+### Comparison of Rendering Speed
+pending...
+### Comparison of Rendering Performance
+pending...
 # Parallelization
-
+pending...
 # Popularity
-
+pending...
