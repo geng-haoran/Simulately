@@ -22,3 +22,10 @@ Here is a table including a brief summary for physics simulators:
 ⭐️: RayTracing is currently not available in parallel gym-like envs.
 
 🔶: Supported but Limited: CoppeliaSim has built-in functionality for simulating ray-tracing effects to a certain extent. For example, it can perform ray-casting operations, which are useful for sensor simulations and collision detections. However, this is not the same as full-fledged ray tracing for photorealistic rendering.
+
+
+# Rendering
+
+# Parallelization
+
+# Vectorization
