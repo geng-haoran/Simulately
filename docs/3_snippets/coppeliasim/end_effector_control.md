@@ -1,6 +1,5 @@
-
-
-# [End effector control](https://github.com/stepjam/PyRep/blob/master/examples/example_panda_end_effector_control.py)
+# End Effector Control
+[link](https://github.com/stepjam/PyRep/blob/master/examples/example_panda_end_effector_control.py)
 
 ```python
 """
