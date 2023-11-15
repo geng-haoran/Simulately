@@ -63,11 +63,12 @@ const config = {
     {
       // Searching
       algolia: {
-        appId: 'YOUR_APP_ID',
-        apiKey: 'YOUR_SEARCH_API_KEY',
-        indexName: 'YOUR_INDEX_NAME',
+        appId: '81A7HEMAGK',
+        apiKey: '2a221cb07c75db7a7e90235932fab59e',
+        indexName: 'simulately',
         contextualSearch: true,
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        insights: true,
+        debug: false,
         externalUrlRegex: 'external\\.com|domain\\.com',
         replaceSearchResultPathname: {
           from: '/docs/', // or as RegExp: /\/docs\//
@@ -89,7 +90,8 @@ const config = {
           { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Information' },
           { to: '/blog', label: 'Blog', position: 'left'},
           { to: '/related', label: 'Related Work', position: 'left'},
-          { href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right' }
+          { href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right' },
+          { href: 'https://chat.openai.com/g/g-cjN7iYpRZ-simulately', label: 'Ask GPT', position: 'right' }
         ],
       },
       footer: {
@@ -138,7 +140,7 @@ const config = {
               },
               {
                 label: 'E-Mail',
-                href: 'mailto:contact@simulately.wiki',
+                href: 'mailto:ghr@stu.pku.edu.cn',
               },
             ],
           }
