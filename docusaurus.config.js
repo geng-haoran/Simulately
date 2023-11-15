@@ -60,7 +60,24 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
+      // Searching
+      algolia: {
+        appId: '81A7HEMAGK',
+        apiKey: '2a221cb07c75db7a7e90235932fab59e',
+        indexName: 'simulately',
+        contextualSearch: true,
+        insights: true,
+        debug: false,
+        externalUrlRegex: 'external\\.com|domain\\.com',
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+  
+        searchParameters: {},
+        searchPagePath: 'search',
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -71,10 +88,10 @@ const config = {
         },
         items: [
           { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Information' },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/related', label: 'Related Work', position: 'left'},
-          // {to: '/gpt', label: 'Simulately GPT', position: 'left'},
-          { href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right' }
+          { to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/related', label: 'Related Work', position: 'left'},
+          { href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right' },
+          { href: 'https://chat.openai.com/g/g-cjN7iYpRZ-simulately', label: 'Ask GPT', position: 'right' }
         ],
       },
       footer: {
@@ -127,7 +144,7 @@ const config = {
               },
               {
                 label: 'E-Mail',
-                href: 'mailto:contact@simulately.wiki',
+                href: 'mailto:ghr@stu.pku.edu.cn',
               },
             ],
           }
@@ -138,7 +155,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    }),
+    },
 
   plugins: ['@docusaurus/plugin-ideal-image'],
 };
