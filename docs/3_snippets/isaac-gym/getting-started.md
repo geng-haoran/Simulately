@@ -2,8 +2,8 @@
 sidebar_position: 0
 ---
 
-# Programming Overview
-Welcome to the programming overview for using IsaacGym. In this guide, we'll walk through the process of initializing the simulator, loading a groud, creating single or multiple environments and loading actors with IsaacGym API. The provided code snippets are adapted from the IsaacGym Docs to help you get started quickly.
+# Getting Started
+Welcome to the Getting Started for using IsaacGym. In this guide, we will walk through the process of initializing the simulator, loading a groud, creating single or multiple environments and loading actors with IsaacGym API. The provided code snippets are adapted from the IsaacGym Docs to help you get started quickly.
 
 ## Initial the Simulator
 
@@ -81,7 +81,7 @@ env = gym.create_env(sim, env_lower, env_upper, 1)
 Loading an asset file creates a `GymAsset` object that includes the definiton of all the bodies, collision shapes, visual attachments, joints, and degrees of freedom (DOFs). Soft bodies and particles are also supported with some formats.
 
 Assume we have already placed a MJCF nvidia-ant model at `./assets/mjcf/nv_ant.xml`, which raw text can be copy from: 
-<details> <summary>raw text of nv_ant.xml</summary>
+<details> <summary>Raw text of nv_ant.xml</summary>
 
 ```html
 <mujoco model="ant">
@@ -305,3 +305,7 @@ while not gym.query_viewer_has_closed(viewer):
     # sync_frame_time throttle down the simulation rate to real time
     gym.sync_frame_time(sim)
 ```
+
+## Control the Robot
+
+*Pending...*
