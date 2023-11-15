@@ -102,7 +102,7 @@ const config = {
             items: [
               {
                 label: 'BIGAI',
-                href: 'http://eng.bigai.ai/',
+                href: 'http://www.bigai.ai/',
               },
               {
                 label: 'PKU EPIC Lab',
