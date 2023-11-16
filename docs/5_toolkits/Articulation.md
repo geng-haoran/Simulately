@@ -74,7 +74,7 @@ To query a joint in a URDF file, we provide code using urdfpy and xml parser.
 
 ### Merging URDF Geometries to OBJ
 To merge URDF geometries to an OBJ file, we provide code using xml parser. This code still needs testing.
-    ```python
+```python
     import xml.etree.ElementTree as ET
     import trimesh
     import numpy as np
@@ -116,4 +116,4 @@ To merge URDF geometries to an OBJ file, we provide code using xml parser. This 
 
     # Export the scene to an OBJ file
     scene.export('output.obj')
-    ```
+```
