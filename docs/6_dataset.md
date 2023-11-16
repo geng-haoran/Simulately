@@ -3,7 +3,7 @@ sidebar_position: 6
 title: Dataset
 ---
 
-# 3D Dataset for Robotics
+# Dataset for Robotics
 
 ### Object Shapes
 - [**ShapeNet**](https://shapenet.org/): ShapeNet is an ongoing effort to establish a richly-annotated, large-scale dataset of 3D shapes. We provide researchers around the world with this data to enable research in computer graphics, computer vision, robotics, and other related disciplines. [[Download]](https://shapenet.org/login/) [[Paper]](https://arxiv.org/abs/1512.03012)
