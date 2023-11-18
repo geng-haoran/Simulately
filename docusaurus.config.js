@@ -64,14 +64,15 @@ const config = {
       // Searching
       algolia: {
         appId: '81A7HEMAGK',
-        apiKey: '2a221cb07c75db7a7e90235932fab59e',
+        apiKey: '4ccc5de403c4daaf21222ef95de6ea74',
         indexName: 'simulately',
         contextualSearch: true,
+        debug: false,
         searchParameters: {},
         searchPagePath: 'search'
       },
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+
+      image: 'img/social.png',
       navbar: {
         title: 'Simulately',
         logo: {
