@@ -68,7 +68,7 @@ const config = {
         indexName: 'simulately',
         contextualSearch: true,
         searchParameters: {},
-        searchPagePath: 'search',
+        searchPagePath: 'search'
       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
