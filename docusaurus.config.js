@@ -67,14 +67,6 @@ const config = {
         apiKey: '2a221cb07c75db7a7e90235932fab59e',
         indexName: 'simulately',
         contextualSearch: true,
-        insights: true,
-        debug: false,
-        externalUrlRegex: 'external\\.com|domain\\.com',
-        replaceSearchResultPathname: {
-          from: '/docs/', // or as RegExp: /\/docs\//
-          to: '/',
-        },
-  
         searchParameters: {},
         searchPagePath: 'search',
       },
