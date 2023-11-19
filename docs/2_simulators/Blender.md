@@ -46,7 +46,9 @@ sidebar_position: 8
 - [Phobos-Motion](https://github.com/YuyangLee/Phobos-Motion): A robotics visualization tool, based on Phobos
 
 ## Related Projects
-- CPVR 2023: [A New Benchmark: On the Utility of Synthetic Data with Blender for Bare Supervised Learning and Downstream Domain Adaptation](https://huitangtang.github.io/On_the_Utility_of_Synthetic_Data/): Blender
+- SIGGRAPH Asia 2023: [Object Motion Guided Human Motion Synthesis](https://lijiaman.github.io/projects/omomo/): Blender
+- CVPR 2023: [CIRCLE: Capture in Rich Contextual Environments](https://stanford-tml.github.io/circle_dataset/): Blender
+- CVPR 2023: [A New Benchmark: On the Utility of Synthetic Data with Blender for Bare Supervised Learning and Downstream Domain Adaptation](https://huitangtang.github.io/On_the_Utility_of_Synthetic_Data/): Blender
 - ALR 2023: [Simulating dual-arm robot motions to avoid collision by rigid body dynamics for laboratory bench work](https://link.springer.com/article/10.1007/s10015-022-00823-1); Blender
 - CVPR 2017: [CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning](https://cs.stanford.edu/people/jcjohns/clevr/): Blender
 - Preprint: [Objaverse-XL: A Universe of 10M+ 3D Objects](https://objaverse.allenai.org/): Blender
