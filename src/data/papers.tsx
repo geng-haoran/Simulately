@@ -270,7 +270,21 @@ const PAPERS: Paper[] = [
     preview: null,
     website: 'http://anyteleop.com/',
     tags: ['rl', 'manipulation'],
-  }
+  },
+  {
+    title: 'CIRCLE: Capture in Rich Contextual Environments',
+    description: 'CVPR 2023.',
+    preview: null,
+    website: 'https://stanford-tml.github.io/circle_dataset/',
+    tags: ['animation'],
+  },
+  {
+    title: 'Object Motion Guided Human Motion Synthesis',
+    description: 'SIGGRAPH Asia 2023.',
+    preview: null,
+    website: 'https://lijiaman.github.io/projects/omomo/',
+    tags: ['animation'],
+  },
 ];
 
 function sortPapers() {

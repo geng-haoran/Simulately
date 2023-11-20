@@ -10,6 +10,7 @@ export type PaperTagType =
     | 'manipulation'
     | 'dexterousgrasping'
     | 'mobilemanip'
+    | 'animation'
     | 'rgb';
 
     export const PaperTags: { [type in PaperTagType]: Tag } = {
@@ -91,6 +92,15 @@ export type PaperTagType =
             message: 
                 'Mobile manipulators',
             id: 'showcase.tag.mobilemanip.description',
+        }),
+        color: '#e9669e',
+    },
+    "animation": {
+        label: translate({ message: 'Character Animation' }),
+        description: translate({
+            message: 
+                'Character Animation',
+            id: 'showcase.tag.animation.description',
         }),
         color: '#e9669e',
     }

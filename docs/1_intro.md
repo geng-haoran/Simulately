@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
 # About Simulately
 
-![Simulately Teaser, by Stable Diffusion XL](/img/teaser.jpg)
+![Simulately Teaser, by Stable Diffusion XL](/img/teaser.png)
 
 > Teaser created by [Stable Diffusion XL](https://stability.ai/stable-diffusion).
 
