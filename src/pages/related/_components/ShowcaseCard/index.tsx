@@ -13,7 +13,7 @@ import { PaperTagList, PaperTagType, PaperTags } from '@site/src/shared/constant
 import { Tag } from '@site/src/shared/dto/Tag';
 import { GetWebsiteScreenshot } from '@site/src/utils/common';
 
-const SIMULATELY = require('@site/static/img/teaser.jpg');
+const SIMULATELY = require('@site/static/img/teaser.png');
 
 const TagComp = React.forwardRef<HTMLLIElement, Tag>(
   ({ label, color, description }, ref) => (

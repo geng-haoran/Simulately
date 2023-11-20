@@ -26,18 +26,10 @@ If you want to add or fix something, feel free to open up an issue, and we will 
 
 If you want to edit the content in person, you can fork the latest version, submit your modification, and use a pull request to merge. When you are editing the project on your device, here are some instructions for you.
 
-## Hand-On Docusaurus Locally
+### Hand-On Docusaurus Locally
 
 The project is built with Docusaurus, a static website generator for documentations. You need to follow [this page](https://docusaurus.io/zh-CN/docs/installation) to install it on your device, and also follow [this tutorial](https://docusaurus.io/zh-CN/docs/category/guides) to know how to write the documents.
 
-## Instructions for Coding
+### Merge Your Code
 
-TBD.
-
-## Instructions for Version Control
-
-TBD.
-
-## List of Contributors
-
-TBD.
+After comiting your code to your forked repo, you can start a pull request for merging it into our repo. Note that all the changes should be merged into the `dev` branch first. We will periodically update the `main` branch (which is used to compile the website at `simulately.wiki`) from the `dev` branch.

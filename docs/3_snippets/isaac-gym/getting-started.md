@@ -3,6 +3,7 @@ sidebar_position: 0
 ---
 
 # Getting Started
+
 Welcome to the Getting Started for using IsaacGym. In this guide, we will walk through the process of initializing the simulator, loading a groud, creating single or multiple environments and loading actors with IsaacGym API. The provided code snippets are adapted from the IsaacGym Docs to help you get started quickly.
 
 ## Initial the Simulator
