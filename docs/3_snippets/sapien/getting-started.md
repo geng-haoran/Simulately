@@ -56,7 +56,7 @@ box.set_pose(sapien.Pose(p=[0, 0, 0.5]))
 Add some lights so that you can observe the scene.
 ```python
 scene.set_ambient_light([0.5, 0.5, 0.5])
-        scene.add_directional_light([0, 1, -1], [0.5, 0.5, 0.5])
+scene.add_directional_light([0, 1, -1], [0.5, 0.5, 0.5])
 ```
 
 ### Create a viewer (window)
