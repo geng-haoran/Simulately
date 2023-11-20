@@ -83,6 +83,10 @@ while not viewer.closed:  # Press key q to quit
     viewer.render()
 ```
 
+Then you will see:
+<p align="center">
+  <img src="https://sapien.ucsd.edu/docs/latest/_images/hello_world.png" alt="Move the Box(Official)" width="500"/>
+</p>
 
 ## Load a robot and control it
 
