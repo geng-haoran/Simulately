@@ -26,7 +26,11 @@ Here is a table including a brief summary for physics simulators:
 
 # Rendering
 ### Comparison of Rendering Speed
-pending...
+|Simulator|SAPIEN|IsaacGym|IsaacSim|Pybullet|MuJoCo|CoppeliaSim|Gazebo|Blender|
+|:-------:|:----:|:-----:|:------:|:------:|:----:|:---------:|:----:|:-----:|
+|RGB @ FPS            | 292.159 | |  |  |  |  |  |  |
+|Depth @ FPS          | 260.029 |  |  |  |  |  |  |  |
+|Segmentation @ FPS   | 279.875 |  |  |  |  |  |  |  |
 ### Comparison of Rendering Performance
 pending...
 # Parallelization
