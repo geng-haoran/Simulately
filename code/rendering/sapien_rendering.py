@@ -9,7 +9,7 @@ import sapien.core as sapien
 import numpy as np
 from PIL import Image, ImageColor
 from scipy.spatial.transform import Rotation as R
-
+import time
 def main():
     engine = sapien.Engine()
     renderer = sapien.SapienRenderer()
@@ -47,32 +47,64 @@ def main():
         p=[-4, 0, 2], 
         q = q_SAPIEN
         ))
-    scene.step()  # make everything set
-    scene.update_render()
-    camera.take_picture()
+    
+    rgb = []
+    pos = []
+    seg = []
+    pic = []
+    for i in range(1000):
+        print("#"*10, i, "#"*10)
+        scene.step()  # make everything set
+        
+        s = time.time()
+        scene.update_render()
+        camera.take_picture()
+        t = time.time()
+        pic.append(t-s)
+        print("take picture:", t-s)
+        s = time.time()
+        rgba = camera.get_float_texture('Color')  # [H, W, 4]
+        t = time.time()
+        rgb.append(t-s)
+        print("get float texture:", t-s)
+        # rgba_img = (rgba * 255).clip(0, 255).astype("uint8")
+        # rgba_pil = Image.fromarray(rgba_img)
+        # rgba_pil.save('color.png')
 
-    rgba = camera.get_float_texture('Color')  # [H, W, 4]
-    rgba_img = (rgba * 255).clip(0, 255).astype("uint8")
-    rgba_pil = Image.fromarray(rgba_img)
-    rgba_pil.save('color.png')
+        # s = time.time()
+        # position = camera.get_float_texture('Position')  # [H, W, 4]
+        # t = time.time()
+        # pos.append(t-s)
+        # print("get position:", t-s)
 
-    position = camera.get_float_texture('Position')  # [H, W, 4]
+        # depth = -position[..., 2]
+        # depth_image = (depth * 1000.0).astype(np.uint16)
+        # depth_pil = Image.fromarray(depth_image)
+        # depth_pil.save('depth.png')
 
-    depth = -position[..., 2]
-    depth_image = (depth * 1000.0).astype(np.uint16)
-    depth_pil = Image.fromarray(depth_image)
-    depth_pil.save('depth.png')
-
-    seg_labels = camera.get_uint32_texture('Segmentation')  # [H, W, 4]
-    colormap = sorted(set(ImageColor.colormap.values()))
-    color_palette = np.array([ImageColor.getrgb(color) for color in colormap],
-                             dtype=np.uint8)
-    label0_image = seg_labels[..., 0].astype(np.uint8)  # mesh-level
-    label1_image = seg_labels[..., 1].astype(np.uint8)  # actor-level
-    label0_pil = Image.fromarray(color_palette[label0_image])
-    label0_pil.save('label0.png')
-    label1_pil = Image.fromarray(color_palette[label1_image])
-    label1_pil.save('label1.png')
-
+        # s = time.time()
+        # seg_labels = camera.get_uint32_texture('Segmentation')  # [H, W, 4]
+        # t = time.time()
+        # seg.append(t-s)
+        # print("get segmentation:", t-s)
+        # colormap = sorted(set(ImageColor.colormap.values()))
+        # color_palette = np.array([ImageColor.getrgb(color) for color in colormap],
+        #                         dtype=np.uint8)
+        # label0_image = seg_labels[..., 0].astype(np.uint8)  # mesh-level
+        # label1_image = seg_labels[..., 1].astype(np.uint8)  # actor-level
+        # label0_pil = Image.fromarray(color_palette[label0_image])
+        # label0_pil.save('label0.png')
+        # label1_pil = Image.fromarray(color_palette[label1_image])
+        # label1_pil.save('label1.png')
+    
+    rgb = np.array(rgb)
+    pos = np.array(pos)
+    pic = np.array(pic)
+    seg = np.array(seg)
+    print("pic:", pic.mean()) # 0.00018425440788269042
+    print("rgb:", rgb.mean(), 1/(pic.mean() + rgb.mean())) # 0.004276715517044068
+    print("pos:", pos.mean(), 1/(pic.mean() + pos.mean())) # 0.002738466024398804
+    print("seg:", seg.mean(), 1/(pic.mean() + seg.mean())) # 0.002738466024398804
+    
 if __name__ == '__main__':
     main()
