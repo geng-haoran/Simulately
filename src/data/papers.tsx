@@ -293,13 +293,6 @@ const PAPERS: Paper[] = [
     tags: ['rl', 'manipulation'],
   },
   {
-    title: 'Maniskill: Generalizable manipulation skill benchmark with large-scale demonstrations',
-    description: 'RAL 2023.',
-    preview: null,
-    website: 'https://shen-hhao.github.io/Category_Level_Manipulation/',
-    tags: ['rl', 'manipulation'],
-  },
-  {
     title: 'Decision Transformer: Reinforcement Learning via Sequence Modeling',
     description: 'NIPS2021.',
     preview: null,
