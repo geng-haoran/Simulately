@@ -4,22 +4,19 @@ sidebar_position: 0
 
 # Getting Started
 
-Welcome to the Getting Started for using MuJoCo.
-In this guide, we will walk through the process of initializing the simulator, loading a groud, creating light and
-loading actors with SAPIEN API. The provided code snippets are adapted from the SAPIEN Docs to help you get started
-quickly.
+Welcome to the introductory guide on using MuJoCo. In this tutorial, we will guide you through the steps to initialize
+the simulator, load a world XML, simulate the world, and render it to your screen. The code snippets provided here are
+adapted from the MuJoCo Documentation to facilitate a quick start.
 
-## Initial the Simulator
+### Building an XML World Description for a MuJoCo Scene
 
-### Create a XML world description for MuJoCo scene
+Unlike many simulators that prefer API functions to construct the world, MuJoCo necessitates the world description to be
+saved in an XML file. Once the XML is loaded and the simulation begins, you can't add or remove any objects in the
+scene. While this is a limitation of the MuJoCo simulation, it is also a design choice aimed at increasing speed through
+pre-allocated data buffers.
 
-Different from many simulators that favor using API function to create world, MuJoCo requires world description to be
-stored in a XML file. After loading the xml and begin simulation, you can not add or remove any objects into the scene.
-This is one drawback of MuJoCo simulation but is also its design choice to make it faster with pre-allocated data
-buffer.
-
-To begin, we need to create a XML description, which contains only a box in the world. This box can move freely in the
-space when force applied.
+We'll start by creating an XML description, which only includes a box in the world. This box is capable of moving freely
+in space when a force is applied.
 
 ```python
 world_xml = r"""
@@ -48,8 +45,8 @@ while data.time < 1:
 
 ### Create a renderer and bind the renderer to simulation
 
-Then we need to create a renderer. The renderer is responsible for rendering the scene, no matter whether for headless
-rendering on server or using viewer on your own computer.
+Next, we'll need to establish a renderer. The renderer is tasked with illustrating the scene, regardless of whether it's
+for headless rendering on a server or for using a viewer on your local machine.
 
 ```python
 model = mujoco.MjModel.from_xml_string(world_xml, {})
