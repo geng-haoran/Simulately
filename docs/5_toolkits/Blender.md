@@ -2,19 +2,7 @@
 sidebar_position: 6
 ---
 
-<h2 align="center">
-  <b>Blender</b>
-
-<div align="center">
-    <a href="https://www.blender.org/" target="_blank"><img src="https://img.shields.io/badge/Website-Blender-red"></img></a>
-    &nbsp;
-    <a href="https://github.com/blender/blender" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple" alt="Paper arXiv"></img></a>
-    &nbsp;
-    <a href="https://www.blender.org/community/" target="_blank"><img src="https://img.shields.io/badge/Forum-Community-yellow" alt="Forum"></img></a>
-</div>
-</h2>
-
-![Blender](imgs/Blender.svg)
+# Blender
 
 
 > Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, compositing and motion tracking, even video editing and game creation. Blender features **Blender’s physics system**, which allows you to simulate a number of different real-world physical phenomena. You can use these systems to create a variety of static and dynamic effects such as water, cloth, smoke, rain, grass, and many more.
