@@ -58,20 +58,20 @@ Full list of tunable parameters in IsaacGym:
 
 ```python
 class VhacdParams:
-    alpha: float
-    beta: float
-    concavity: float
-    convex_hull_approximation: bool
-    convex_hull_downsampling: int
-    max_convex_hulls: int
-    max_num_vertices_per_ch: int
-    min_volume_per_ch: float
-    mode: 0
-    ocl_acceleration: bool
-    pca: int
-    plane_downsampling: int
-    project_hull_vertices: bool
-    resolution: int
+  alpha: float
+  beta: float
+  concavity: float
+  convex_hull_approximation: bool
+  convex_hull_downsampling: int
+  max_convex_hulls: int
+  max_num_vertices_per_ch: int
+  min_volume_per_ch: float
+  mode: 0
+  ocl_acceleration: bool
+  pca: int
+  plane_downsampling: int
+  project_hull_vertices: bool
+  resolution: int
 ```
 
 ### SAPIEN
@@ -89,12 +89,12 @@ When loading single link object, e.g. mug:
 ```python
 builder = scene.create_actor_builder()
 builder = builder.add_multiple_convex_collisions_from_file(
-    filename=YOUR_MESH_FILE_PATH,
-    decomposition="coacd",
-    decomposition_params=dict(
-        threshold=0.05,
-        preprocess_mode="off",
-    ),
+  filename=YOUR_MESH_FILE_PATH,
+  decomposition="coacd",
+  decomposition_params=dict(
+    threshold=0.05,
+    preprocess_mode="off",
+  ),
 )
 builder.add_visual_from_file(filename=YOUR_MESH_FILE_PATH)
 single_link_object = builder.build()
@@ -118,5 +118,51 @@ verbose = False,
 ```
 
 ### PyBullet
+
+Unlike IsaacGym and SAPIEN, PyBullet segregates the process of convex decomposition and object loading into two separate
+steps. First, you can perform the convex decomposition and save the result to your filesystem. Following this, you
+can load the decomposed mesh into the simulation using [PyBullet's loader function](../3_snippets/pybullet/loading.md).
+
+```python
+import pybullet as p
+
+YOUR_MESH_FILE_PATH = "in.obj"
+YOUR_CONVEX_MESH_SAVE_PATH = "out_convex.obj"
+p.connect(p.DIRECT)
+p.vhacd(YOUR_MESH_FILE_PATH, YOUR_CONVEX_MESH_SAVE_PATH, "log.txt", resolution=1e6)
+```
+
+## Standalone convex decomposition
+
+For highly complex geometries, the default parameters of these convex decomposition algorithms may not yield
+satisfactory results. As such, you might need to adjust the decomposition parameters extensively. In such a scenario,
+rerunning simulation code each time can be laborious. A more efficient approach is to perform decomposition outside the
+simulator, evaluate the performance, and once satisfied, import the final output into the simulator. 
+For instance, you can use CoACD in a standalone manner:
+
+```bash
+pip install coacd
+
+coacd -i INPUT_MESH.obj -o OUTPUT_MESH.obj -t 0.1
+```
+You can use [MessLab](https://www.meshlab.net/) to visualize the results of convex decomposition:
+
+![meshlab_convex](imgs/meshlab_convex.png)
+
+Please note that this command will store multiple convex meshes in a single `.obj` file. As a result, when using this
+convex mesh, you must explicitly inform your simulator that it contains multiple meshes. Failing to do so will cause
+your `.obj` file to be interpreted as a single mesh, which effectively negates the purpose of performing convex
+decomposition. 
+
+```python
+# In IsaacGym
+asset_options = gymapi.AssetOptions()
+asset_options.convex_decomposition_from_submeshes = True
+
+# In SAPIEN
+loader = scene.create_urdf_loader()
+loader.load_multiple_collisions_from_file = True
+
+```
 
 [^1]: SIGGRAPH2022: Approximate convex decomposition for 3d meshes with collision-aware concavity and tree search.
