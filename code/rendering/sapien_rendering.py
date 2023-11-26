@@ -7,9 +7,10 @@ Concepts:
 
 import sapien.core as sapien
 import numpy as np
-from PIL import Image, ImageColor
 from scipy.spatial.transform import Rotation as R
 import time
+
+
 def main():
     engine = sapien.Engine()
     renderer = sapien.SapienRenderer()
@@ -42,31 +43,31 @@ def main():
         far=far,
     )
     q = R.from_euler('zyx', [0, np.arctan2(2, 4), 0]).as_quat()
-    q_SAPIEN = [q[3],q[0],q[1],q[2]]
+    q_SAPIEN = [q[3], q[0], q[1], q[2]]
     camera.set_pose(sapien.Pose(
-        p=[-4, 0, 2], 
-        q = q_SAPIEN
-        ))
-    
+        p=[-4, 0, 2],
+        q=q_SAPIEN
+    ))
+
     rgb = []
     pos = []
     seg = []
     pic = []
     for i in range(1000):
-        print("#"*10, i, "#"*10)
+        print("#" * 10, i, "#" * 10)
         scene.step()  # make everything set
-        
+
         s = time.time()
         scene.update_render()
         camera.take_picture()
         t = time.time()
-        pic.append(t-s)
-        print("take picture:", t-s)
+        pic.append(t - s)
+        print("take picture:", t - s)
         s = time.time()
         rgba = camera.get_float_texture('Color')  # [H, W, 4]
         t = time.time()
-        rgb.append(t-s)
-        print("get float texture:", t-s)
+        rgb.append(t - s)
+        print("get float texture:", t - s)
         # rgba_img = (rgba * 255).clip(0, 255).astype("uint8")
         # rgba_pil = Image.fromarray(rgba_img)
         # rgba_pil.save('color.png')
@@ -96,15 +97,16 @@ def main():
         # label0_pil.save('label0.png')
         # label1_pil = Image.fromarray(color_palette[label1_image])
         # label1_pil.save('label1.png')
-    
+
     rgb = np.array(rgb)
     pos = np.array(pos)
     pic = np.array(pic)
     seg = np.array(seg)
-    print("pic:", pic.mean()) # 0.00018425440788269042
-    print("rgb:", rgb.mean(), 1/(pic.mean() + rgb.mean())) # 0.004276715517044068
-    print("pos:", pos.mean(), 1/(pic.mean() + pos.mean())) # 0.002738466024398804
-    print("seg:", seg.mean(), 1/(pic.mean() + seg.mean())) # 0.002738466024398804
-    
+    print("pic:", pic.mean())  # 0.00018425440788269042
+    print("rgb:", rgb.mean(), 1 / (pic.mean() + rgb.mean()))  # 0.004276715517044068
+    print("pos:", pos.mean(), 1 / (pic.mean() + pos.mean()))  # 0.002738466024398804
+    print("seg:", seg.mean(), 1 / (pic.mean() + seg.mean()))  # 0.002738466024398804
+
+
 if __name__ == '__main__':
     main()
