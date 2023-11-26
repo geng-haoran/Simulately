@@ -19,7 +19,7 @@ sidebar_position: 6
 
 > Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, compositing and motion tracking, even video editing and game creation. Blender features **Blender’s physics system**, which allows you to simulate a number of different real-world physical phenomena. You can use these systems to create a variety of static and dynamic effects such as water, cloth, smoke, rain, grass, and many more.
 
-For more information of how to use Blender with python, checkout the code in the snippets section.
+> For more information of how to use Blender with python, checkout the code in the snippets section.
 
 ## Official Materials
 - [Website](https://www.blender.org/)
