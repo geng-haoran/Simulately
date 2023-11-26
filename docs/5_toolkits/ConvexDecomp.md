@@ -45,6 +45,7 @@ disabled by default. Therefore, you might need to enable them and tune the decom
 settings do not yield the desired results.
 
 ### IsaacGym
+
 You can enable v-hacd when loading asset.
 
 ```python
@@ -73,9 +74,6 @@ class VhacdParams:
     resolution: int
 ```
 
-### PyBullet
-
-
 ### SAPIEN
 
 When loading URDF, e.g. cabinet or robot:
@@ -87,6 +85,7 @@ loader.multiple_collisions_decomposition_params = {}
 ```
 
 When loading single link object, e.g. mug:
+
 ```python
 builder = scene.create_actor_builder()
 builder = builder.add_multiple_convex_collisions_from_file(
@@ -102,19 +101,22 @@ single_link_object = builder.build()
 ```
 
 Full list of CoACD parameters and its default:
+
 ```python
-threshold=0.05,
-max_convex_hull=-1,
-preprocess_mode="auto",
-preprocess_resolution=30,
-resolution=2000,
-mcts_nodes=20,
-mcts_iterations=150,
-mcts_max_depth=3,
-pca=False,
-merge=True,
-seed=0,
-verbose=False,
+threshold = 0.05,
+max_convex_hull = -1,
+preprocess_mode = "auto",
+preprocess_resolution = 30,
+resolution = 2000,
+mcts_nodes = 20,
+mcts_iterations = 150,
+mcts_max_depth = 3,
+pca = False,
+merge = True,
+seed = 0,
+verbose = False,
 ```
+
+### PyBullet
 
 [^1]: SIGGRAPH2022: Approximate convex decomposition for 3d meshes with collision-aware concavity and tree search.

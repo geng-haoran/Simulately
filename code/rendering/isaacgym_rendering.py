@@ -8,17 +8,12 @@ distribution of this software and related documentation without an express
 license agreement from NVIDIA CORPORATION is strictly prohibited.
 """
 
-import numpy as np
-import imageio
-import math
 import os
 
+import math
 from isaacgym import gymapi
-from isaacgym import gymutil
 from isaacgym import gymtorch
-
-import torch
-
+from isaacgym import gymutil
 
 gym = gymapi.acquire_gym()
 
@@ -95,7 +90,7 @@ for i in range(num_envs):
     pose = gymapi.Transform()
     pose.p = gymapi.Vec3(0.0, 0.5, 0.0)
     pose.r = gymapi.Quat(0.0, 0.0, 0.0, 1.0)
-    actor_handle = gym.create_actor(env, box_asset, pose, "box", i, 0, segmentationId = 1)
+    actor_handle = gym.create_actor(env, box_asset, pose, "box", i, 0, segmentationId=1)
 
     gym.set_rigid_body_color(env, actor_handle, 0, gymapi.MESH_VISUAL_AND_COLLISION, gymapi.Vec3(1, 0, 0))
     # add camera
