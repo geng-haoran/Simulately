@@ -151,7 +151,7 @@ You can use [MessLab](https://www.meshlab.net/) to visualize the results of conv
 
 Please note that this command will store multiple convex meshes in a single `.obj` file. As a result, when using this
 convex mesh, you must explicitly inform your simulator that it contains multiple meshes. Failing to do so will cause
-your `.obj` file to be interpreted as a single mesh, which effectively negates the purpose of performing convex
+your `.obj` file to be interpreted as a single mesh, which negates the purpose of performing convex
 decomposition. 
 
 ```python
