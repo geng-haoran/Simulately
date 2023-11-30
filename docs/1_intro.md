@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
 # About Simulately
 
-![Simulately Teaser, by Stable Diffusion XL](/img/teaser.jpg)
+![Simulately Teaser, by Stable Diffusion XL](/img/teaser.png)
 
 > Teaser created by [Stable Diffusion XL](https://stability.ai/stable-diffusion).
 
@@ -15,6 +16,9 @@ sidebar_position: 1
 - [Related work](/related) that represents the latest advancements in the field
 - A collection of useful and powerful [toolkits](./category/toolkits) that boosts your research
 - Guides on how you can [contribute](./contribute) to Simulately
+
+# Simulately GPT
+Try our [Simulately GPT](https://chat.openai.com/g/g-cjN7iYpRZ-simulately). You can ask anything about Simulators, Robotics and Vision. It is powered by [OpenAI's ChatGPT](https://chat.openai.com).
 
 # Acknowledgement
 
