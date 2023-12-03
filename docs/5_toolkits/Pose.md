@@ -10,8 +10,8 @@ This tutorial assumes the `numpy` and `transforms3d` Python packages have been i
 
 ### Inverting Transformation
 
-For an `SO(3)` rotation numpy matrix `R`, you can get the inverse simply as `R.T`. For quaternion `q`, the inverse
-is `-q`.
+For an `SO(3)` rotation numpy matrix `R`, you can get the inverse simply as `R.T`. For quaternion `q=(w,x,y,z)`, the inverse
+is `(-w,x,y,z)`.
 
 For an `SE(3)` transformation matrix `T`, `np.linalg.inv(T)` can be used to compute the inverse transformation. However,
 given its complexity of `O(n^3)`, this isn't efficient. A more efficient method to compute the inverse of the
