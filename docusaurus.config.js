@@ -67,7 +67,6 @@ const config = {
         apiKey: '4ccc5de403c4daaf21222ef95de6ea74',
         indexName: 'simulately',
         contextualSearch: true,
-        debug: false,
         searchParameters: {},
         searchPagePath: 'search'
       },
