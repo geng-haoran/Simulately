@@ -22,3 +22,6 @@ title: Dataset
 
 ### Demonstrations
 - [**RT-X**](https://robotics-transformer-x.github.io/) (Real-world Dataset): Open X-Embodiment: Robotic Learning Datasets and RT-X Models. [[Download]](https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit#gid=0) [[Paper]](https://arxiv.org/abs/2310.08864) [[Code]](https://github.com/google-deepmind/open_x_embodiment) 
+
+- [**ManiSkill 1&2**](https://maniskill2.github.io/) (Simulation Dataset): ManiSkill 1&2: A Benchmark for Manipulation Skill Learning in SAPIEN Simulator. [[Website]](https://maniskill2.github.io/) [[Doc]](https://haosulab.github.io/ManiSkill2/)  [[Code]](https://github.com/haosulab/ManiSkill2)
+ [[Paper]](https://arxiv.org/abs/2302.04659)
