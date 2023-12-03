@@ -7,7 +7,7 @@ slug: /
 
 ![Simulately Teaser, by Stable Diffusion XL](/img/teaser.png)
 
-> Teaser created by [Stable Diffusion XL](https://stability.ai/stable-diffusion).
+> Logo created by DALL-E 3.
 
 **Simulately** is a project where we gather useful information of **physics simulator** for cutting-edge robot learning research. It includes but is not limited to:
 
