@@ -11,6 +11,12 @@ title: Dataset
   dataset of 3D shapes. We provide researchers around the world with this data to enable research in computer graphics,
   computer vision, robotics, and other related
   disciplines. [[Download]](https://shapenet.org/login/) [[Paper]](https://arxiv.org/abs/1512.03012)
+  
+- [**FineSeg**](http://kevinkaixu.net/projects/shape2motion.html) Shape2Motion paper release FineSeg dataset, which
+  contains about 3000 3D shapes over six shape categories: chair (1000), table (500), airplanes (600), sofa (600),
+  helicopter (100) and bike (140). The models are collected from a subset of
+  ShapeNet.[[Download]](https://drive.google.com/file/d/1ZtWgMqYSNl1MSXKaTnMdN6xHXme9AjXb/view?usp=sharing) [[Paper]](https://arxiv.org/abs/1903.00709) [[Code]](https://github.com/wangxiaogang866/Shape2Motion)
+
 - [**PartNet**](https://partnet.cs.stanford.edu/): PartNet: a consistent, large-scale dataset of 3D objects annotated
   with fine-grained, instance-level, and hierarchical 3D part
   information. [[Download]](https://www.shapenet.org/login/) [[Code]](https://github.com/daerduoCarey/partnet_dataset) [[Paper]](https://arxiv.org/abs/1812.02713)
@@ -42,11 +48,6 @@ title: Dataset
   AKB48): By identifying and defining 9 GAPart classes (lids, handles, etc.) in 27 object categories, we construct a
   large-scale part-centric interactive dataset, GAPartNet, where we provide rich, part-level annotations (semantics,
   poses). [[Download]](https://forms.gle/3qzv8z5vP2BT5ARN7) [[Paper]](https://arxiv.org/abs/2211.05272) [[Code]](https://github.com/PKU-EPIC/GAPartNet)
-
-- [**FineSeg**](http://kevinkaixu.net/projects/shape2motion.html) Shape2Motion paper release FineSeg dataset, which
-  contains about 3000 3D shapes over six shape categories: chair (1000), table (500), airplanes (600), sofa (600),
-  helicopter (100) and bike (140). The models are collected from a subset of
-  ShapeNet.[[Download]](https://drive.google.com/file/d/1ZtWgMqYSNl1MSXKaTnMdN6xHXme9AjXb/view?usp=sharing) [[Paper]](https://arxiv.org/abs/1903.00709) [[Code]](https://github.com/wangxiaogang866/Shape2Motion)
 
 ### 3D Scene Datasets
 
