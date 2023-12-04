@@ -64,7 +64,11 @@ def main():
         pic.append(t - s)
         print("take picture:", t - s)
         s = time.time()
-        rgba = camera.get_float_texture('Color')  # [H, W, 4]
+        dl_tensor = camera.get_dl_tensor("Color")
+        shape = sapien.dlpack.dl_shape(dl_tensor)
+        rgba = np.zeros(shape, dtype=np.float32)
+        sapien.dlpack.dl_to_numpy_cuda_async_unchecked(dl_tensor, rgba)
+        sapien.dlpack.dl_cuda_sync()
         t = time.time()
         rgb.append(t - s)
         print("get float texture:", t - s)
