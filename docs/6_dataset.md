@@ -12,7 +12,6 @@ title: Dataset
 - [**OmniObject3D**](https://omniobject3d.github.io/): OmniObject3D, a large vocabulary 3D object dataset with massive high-quality real-scanned 3D objects to facilitate the development of 3D perception, reconstruction, and generation in the real world. [[Download]](https://opendatalab.com/OpenXDLab/OmniObject3D-New/tree/main) [[Paper]](https://arxiv.org/abs/2301.07525) [[Code]](https://github.com/omniobject3d/OmniObject3D/tree/main)
 - [**Objaverse-XL**](https://objaverse.allenai.org/): A Universe of 10M+ 3D Objects. Objaverse-XL is 12x larger than Objaverse 1.0 and 100x larger than all other 3D datasets combined. [[Download]](https://docs.google.com/forms/d/e/1FAIpQLScNOWKTHk3a7CGiegNjROFNfOcpzr5gt6G0FMEMQ8qXRTbs0Q/viewform) [[Paper]](https://arxiv.org/abs/2307.05663) [[Code]](https://github.com/allenai/objaverse-xl)
 
-
 ### Articulated Objects
 - [**PartNet Moblity**](https://sapien.ucsd.edu/browse): SAPIEN releases PartNet-Mobility dataset, which is a collection of 2K articulated objects with motion annotations and rendernig material. The dataset powers research for generalizable computer vision and manipulation. [[Download]](https://sapien.ucsd.edu/downloads) [[Paper]](https://arxiv.org/abs/2003.08515)
 
