@@ -31,7 +31,7 @@ sidebar_position: 10
 <img width="266px" src="https://github.com/yuanming-hu/public_files/raw/master/learning/difftaichi/ms3_final-cropped.gif"/>
 </div>
 
-> Differentiable programming in Taichi allows you to optimize neural network controllers efficiently with brute-force gradient descent, instead of using reinforcement learning.
+> Differentiable programming in Taichi allows you to optimize neural network controllers efficiently with brute-force gradient descent, instead of using reinforcement learning. It is much more efficient than REINFORCE update.
 > The DiffTaichi differentiable programming framework is now officially part of Taichi.
 
 ## Official Materials
@@ -45,3 +45,6 @@ sidebar_position: 10
 
 ## Related Projects
 - ICLR 2023: [PAC-NeRF: Physics Augmented Continuum Neural Radiance Fields for Geometry-Agnostic System Identification](https://github.com/xuan-li/PAC-NeRF)
+- ICLR 2022: [DiffSkill: Skill Abstraction from Differentiable Physics for Deformable Object Manipulations with Tools](https://github.com/Xingyu-Lin/DiffSkill)
+- ICLR 2021: [PlasticineLab: A Soft-Body Manipulation Benchmark with Differentiable Physics](https://github.com/hzaskywalker/PlasticineLab)
+- NeuIPS 2019: [Differentiable cloth simulation for inverse problems](https://github.com/williamljb/DifferentiableCloth)
