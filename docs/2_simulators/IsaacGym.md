@@ -36,23 +36,32 @@ Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and 
   - [Paper](https://arxiv.org/abs/2206.08686)
 
 ## Related Projects
+- SIGGRAPH2023: [CALM: Conditional Adversarial Latent Models for Directable Virtual Characters](https://xbpeng.github.io/projects/CALM/index.html): IsaacGym;
 - ICCV2023: [UniDexGrasp++: Improving Dexterous Grasping Policy Learning via Geometry-aware Curriculum and Iterative Generalist-Specialist Learning](https://pku-epic.github.io/UniDexGrasp++/): IsaacGym; RGB-D PointCloud
 - CoRL2023: [Dynamic Handover: Throw and Catch with Bimanual Hands](https://binghao-huang.github.io/dynamic_handover/): IsaacGym; RGB
 - CoRL2023: [Sequential Dexterity: Chaining Dexterous Policies for Long-Horizon Manipulation](https://sequential-dexterity.github.io/): IsaacGym; RGB-D; PointCloud
 - CORL2023: [Curiosity-Driven Learning of Joint Locomotion and Manipulation Tasks](https://openreview.net/forum?id=QG_ERxtDAP-&referrer=%5Bthe%20profile%20of%20Clemens%20Schwarke%5D(%2Fprofile%3Fid%3D~Clemens_Schwarke1)): IsaacGym; RL
 - CoRL2023: [General In-Hand Object Rotation with Vision and Touch](https://haozhi.io/rotateit/): IsaacGym; RGB-D
+- CoRL2023: [Fleet-DAgger: Interactive Robot Fleet Learning with Scalable Human Supervision](https://tinyurl.com/fleet-dagger)
 - CVPR2023: [UniDexGrasp: Universal Robotic Dexterous Grasping via Learning Diverse Proposal Generation and Goal-Conditioned Policy](https://pku-epic.github.io/UniDexGrasp/): IsaacGym; RGB-D PointCloud
 - CVPR2023: [PartManip: Learning Cross-Category Generalizable Part Manipulation Policy from Point Cloud Observations](https://github.com/PKU-EPIC/PartManip): Isaac Gym; RGB-D PointCloud
 - ICRA2023: [RLAfford: Official Implementation of "RLAfford: End-to-end Affordance Learning with Reinforcement Learning](https://github.com/hyperplane-lab/RLAfford): IsaacGym
 - ICRA2023: [GenDexGrasp: Generalizable Dexterous Grasping](https://sites.google.com/view/gendexgrasp/): IsaacGym; RGB-D; PointCloud
 - ICRA2023: [RLAfford: End-to-End Affordance Learning for Robotic Manipulation](https://sites.google.com/view/rlafford/): IsaacGym; RGB-D; PointCloud
+- ICRA2023: [ViNL: Visual Navigation and Locomotion Over Obstacles](http://www.joannetruong.com/projects/vinl.html): IsaacGym;
 - RSS2023: [AnyTeleop: A General Vision-Based Dexterous Robot Arm-Hand Teleoperation System](http://anyteleop.com/): IsaacGym
 - RSS2023: [DexPBT: Scaling up Dexterous Manipulation for Hand-Arm Systems with Population Based Training](https://sites.google.com/view/dexpbt): IsaacGym
 - RSS2023: [Rotating without Seeing: Towards In-hand Dexterity through Touch](https://touchdexterity.github.io/): IsaacGym
+- ScienceRobotics2023: [Visual Dexterity: In-Hand Reorientation of Novel and Complex Object Shapes](https://taochenshh.github.io/projects/visual-dexterity): IsaacGym; RGBD; PointCloud
 - ICML2023: [On Pre-Training for Visuo-Motor Control: Revisiting a Learning-from-Scratch Baseline](https://arxiv.org/abs/2212.05749): IsaacGym; RGB
+- ICML2023: [Parallel Q-Learning: Scaling Off-policy Reinforcement Learning](https://arxiv.org/abs/2307.12983): IsaacGym;
+- SIGGRAPHAsia2022: [PADL: Language-Directed Physics-Based Character Control](https://xbpeng.github.io/projects/PADL/index.html): IsaacGym;
+- ICRA2023: [Real2Sim2Real: Self-Supervised Learning of Physical Single-Step Dynamic Actions for Planar Robot Casting](https://tinyurl.com/robotcast): Isaac Gym;
 - CoRL2022: [In-Hand Object Rotation via Rapid Motor Adaptation](https://haozhi.io/hora/): IsaacGym
+- CoRL2022: [Legged Locomotion in Challenging Terrains using Egocentric Vision](https://vision-locomotion.github.io/): IsaacGym
 - NIPS2022: [Towards Human-Level Bimanual Dexterous Manipulation with Reinforcement Learning](https://bi-dexhands.ai/): IsaacGym; RGB-D; PointCloud
 - ICRA2022: [Data-Driven Operational Space Control for Adaptative and Robust Robot Manipulation](https://github.com/nvlabs/oscar): IsaacGym
+- RSS2022: [Rapid Locomotion via Reinforcement Learning](https://agility.csail.mit.edu/): IsaacGym
 - RSS2022: [Factory: Fast contact for robotic assembly](https://sites.google.com/nvidia.com/factory): IsaacGym
 - SIGGRAPH2022: [ASE: Large-scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters](https://nv-tlabs.github.io/ASE/): IsaacGym
 - CoRL2021: [STORM: An Integrated Framework for Fast Joint-Space Model-Predictive Control for Reactive Manipulation](https://github.com/NVlabs/storm): IsaacGym
