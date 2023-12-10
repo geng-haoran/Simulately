@@ -6,16 +6,16 @@ sidebar_position: 1
 
 Here is a table including a brief summary for physics simulators:
 
-|  Simulator  |           Physics Engine            |                Rendering                | Sensor(CHECK) |        Dynamics        | Parallelization | Vectorization | OpenSource |
-|:-----------:|:-----------------------------------:|:---------------------------------------:|:-------------:|:----------------------:|:---------------:|:-------------:|:----------:|
-|  IsaacSim   |               PhysX 5               | Rasterization; RayTracing; PathTracing  |     RGBD;     | Rigid;Soft;Cloth;Fluid |        ✔        |     GPU🟡     |     ✘      |
-|  IsaacGym   |            PhysX 5, Flex            |             Rasterization;              |     RGBD;     |    Rigid;Soft;Cloth    |        ✔        |    CPU;GPU    |     ✘      |
-|   SAPIEN    |            PhysX 5, Warp            |      Rasterization; RayTracing⭐️;       |     RGBD;     |    Rigid;Soft;Fluid    |        ✔        |     CPU;      |     ✔      |
-|  Pybullet   |               Bullet                |             Rasterization;              |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
-|   MuJoCo    |               MuJoCo                |             Rasterization;              |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
-| CoppeliaSim | MuJoCo; Bullet; ODE; Newton; Vortex |      Rasterization; RayTracing🔶;       |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
-|   Gazebo    |     Bullet; ODE; DART; Simbody      |             Rasterization;              |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
-|   Blender   |               Bullet                | Rasterization; PathTracing; PathTracing |     RGBD;     | Rigid;Soft;Cloth;Fluid |        ✘        |     CPU;      |     ✔      |
+|  Simulator  |           Physics Engine            |          Rendering           | Sensor(CHECK) |        Dynamics        | Parallelization | Vectorization | OpenSource |
+|:-----------:|:-----------------------------------:|:----------------------------:|:-------------:|:----------------------:|:---------------:|:-------------:|:----------:|
+|  IsaacSim   |               PhysX 5               |  Rasterization; RayTracing   |     RGBD;     | Rigid;Soft;Cloth;Fluid |        ✔        |     GPU🟡     |     ✘      |
+|  IsaacGym   |            PhysX 5, Flex            |        Rasterization;        |     RGBD;     |    Rigid;Soft;Cloth    |        ✔        |    CPU;GPU    |     ✘      |
+|   SAPIEN    |            PhysX 5, Warp            | Rasterization; RayTracing⭐️; |     RGBD;     |    Rigid;Soft;Fluid    |        ✔        |     CPU;      |     ✔      |
+|  Pybullet   |               Bullet                |        Rasterization;        |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
+|   MuJoCo    |               MuJoCo                |        Rasterization;        |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
+| CoppeliaSim | MuJoCo; Bullet; ODE; Newton; Vortex | Rasterization; RayTracing🔶; |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
+|   Gazebo    |     Bullet; ODE; DART; Simbody      |        Rasterization;        |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
+|   Blender   |               Bullet                |  Rasterization; RayTracing   |     RGBD;     | Rigid;Soft;Cloth;Fluid |        ✘        |     CPU;      |     ✔      |
 
 🟡: GPU only, RTX series is required.
 
