@@ -33,6 +33,53 @@ point_cloud = trimesh.PointCloud(point_cloud_array)
 point_cloud.export('output.obj')
 point_cloud.export('output.ply')
 ```
+### Merge Multiple Meshes to a Single Mesh
+
+Merge multiple meshes into a single mesh, and save the merged mesh to an OBJ file.
+
+```python
+def combine_meshes(input_files, output_file):
+    """
+    Combine multiple .obj mesh files into a single file.
+    
+    Parameters:
+    - input_files (list of str): List of input file paths.
+    - output_file (str): Output file path.
+    """
+    vertices_list = []
+    faces_list = []
+    last_vertex_index = 0
+    
+    for file_name in input_files:
+        with open(file_name, "r") as f:
+            vertices = []
+            faces = []
+            for line in f:
+                parts = line.strip().split()
+                if len(parts) == 0:
+                    continue
+                if parts[0] == "v":
+                    vertices.append(list(map(float, parts[1:])))
+                elif parts[0] == "f":
+                    # Update the vertex indices in face definitions
+                    updated_face = [str(int(p.split('/')[0]) + last_vertex_index) for p in parts[1:]]
+                    faces.append(updated_face)
+            
+            last_vertex_index += len(vertices)
+            vertices_list.extend(vertices)
+            faces_list.extend(faces)
+    
+    # Save combined mesh to output file
+    with open(output_file, "w") as f:
+        # Write vertices
+        for vertex in vertices_list:
+            f.write("v " + " ".join(map(str, vertex)) + "\n")
+        
+        # Write faces
+        for face in faces_list:
+            f.write("f " + " ".join(map(str, face)) + "\n")
+```
+
 
 ### Extracting Features from Mesh
 
