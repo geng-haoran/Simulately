@@ -105,6 +105,6 @@ def main():
     print("rgb:", rgb.mean(), 1/(pic.mean() + rgb.mean())) # 0.004276715517044068
     print("pos:", pos.mean(), 1/(pic.mean() + pos.mean())) # 0.002738466024398804
     print("seg:", seg.mean(), 1/(pic.mean() + seg.mean())) # 0.002738466024398804
-    
+
 if __name__ == '__main__':
     main()
