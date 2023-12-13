@@ -9,9 +9,9 @@ Notes:
     - For one process, you can only create one engine and one renderer.
 """
 
+import numpy as np
 import sapien.core as sapien
 from sapien.utils import Viewer
-import numpy as np
 
 
 def main():
@@ -29,7 +29,6 @@ def main():
     actor_builder.add_box_visual(half_size=[0.5, 0.5, 0.5], color=[1., 0., 0.])
     box = actor_builder.build(name='box')  # Add a box
     box.set_pose(sapien.Pose(p=[0, 0, 0.5]))
-
 
     # Add some lights so that you can observe the scene
     scene.set_ambient_light([0.5, 0.5, 0.5])
