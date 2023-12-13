@@ -37,6 +37,7 @@ sidebar_position: 1
 
 ### Add Articulated Objects
 ```python
+    loader: sapien.URDFLoader = scene.create_urdf_loader()
     loader.fix_root_link = fix_root_link
     art_obj: sapien.Articulation = loader.load("path_to_your_urdf")
     art_obj.set_root_pose(sapien.Pose([0, 0, 0], [1, 0, 0, 0]))

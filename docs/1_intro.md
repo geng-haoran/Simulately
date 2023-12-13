@@ -7,7 +7,7 @@ slug: /
 
 ![Simulately Teaser, by Stable Diffusion XL](/img/teaser.png)
 
-> Teaser created by [Stable Diffusion XL](https://stability.ai/stable-diffusion).
+> Logo created by DALL-E 3.
 
 **Simulately** is a project where we gather useful information of **physics simulator** for cutting-edge robot learning research. It includes but is not limited to:
 
@@ -22,7 +22,7 @@ Try our [Simulately GPT](https://chat.openai.com/g/g-cjN7iYpRZ-simulately). You 
 
 # Acknowledgement
 
-**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), and [Wensi Ai](https://wensi-ai.github.io).
+**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), and [Songlin Wei](http://wei.songl.in/).
 
 Simulately is inspired or helped by these projects:
 
