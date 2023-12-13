@@ -120,8 +120,8 @@ const PAPERS: Paper[] = [
   {
     title: 'Data-Driven Operational Space Control for Adaptative and Robust Robot Manipulation',
     description: 'ICRA2022.',
-    preview: null,
-    website: 'https://github.com/nvlabs/oscar',
+    preview: "https://cremebrule.github.io/oscar-web/assets/images/model_figure.png",
+    website: 'https://cremebrule.github.io/oscar-web/',
     tags: ['rgbd_pc', 'rl', 'dexterousgrasping'],
   },
   {
@@ -134,7 +134,7 @@ const PAPERS: Paper[] = [
   {
     title: 'ASE: Large-scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters',
     description: 'SIGGRAPH2022.',
-    preview: null,
+    preview: "https://research.nvidia.com/labs/toronto-ai/ASE/resources/ase_teaser.png",
     website: 'https://nv-tlabs.github.io/ASE/',
     tags: ['rl'],
   },
@@ -148,7 +148,7 @@ const PAPERS: Paper[] = [
   {
     title: 'Causal Reasoning in Simulationfor Structure and Transfer Learning of Robot Manipulation Policies',
     description: 'ICRA2021.',
-    preview: null,
+    preview: "https://lh6.googleusercontent.com/bPpfJYiG-ziOEfrKQ1yp7GyOEfg8mSY6zIqppiiBI_pHXNkt3I2p78PJ9BMSjCVAJTrpXaLKvr3N7yopI3pEP6ncBQILvGO_GZZ0p2h5bHvntCOpTPzy3hHMYkOx00sJlg=w1280",
     website: 'https://sites.google.com/view/crest-causal-struct-xfer-manip',
     tags: ['rgbd_pc', 'rl', 'dexterousgrasping', 'rgbd_pc'],
   },
@@ -171,13 +171,6 @@ const PAPERS: Paper[] = [
     description: 'ICRA2021.',
     preview: null,
     website: 'https://arxiv.org/pdf/2103.16747.pdf',
-    tags: ['rl'],
-  },
-  {
-    title: 'A Simple Method for Complex In-Hand Manipulation',
-    description: 'RSS2021_VLRR.',
-    preview: null,
-    website: 'https://sites.google.com/view/in-hand-reorientation',
     tags: ['rl'],
   },
   {
@@ -232,7 +225,7 @@ const PAPERS: Paper[] = [
   {
     title: 'Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience',
     description: 'ICRA2019.',
-    preview: null,
+    preview: "https://lh3.googleusercontent.com/oYkk94BYyeZ5gda1ZnoD8shCuZlohexeair4Urp2CNYltkajZtwrRnumkK0IPUtdhuCWqiMIbJi3Vj_5c9yuO-KLBTU47VyE8v9Ci4RKDyRZlToS=w1280",
     website: 'https://sites.google.com/view/simopt',
     tags: ['rl'],
   },
