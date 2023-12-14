@@ -21,7 +21,7 @@ gym = gymapi.acquire_gym()
 ### Create the Simulator
 Before creating a simulator, we must specify these things:
 - GPU devices we select for physics simulation and rendering.
-- Physics backend (physics engine) we wish to use. 
+- Physics backend (physics engine) we wish to use.
 - Simulation parameters, which allow us to configure the details of physics simulation.
 
 ```python
@@ -41,7 +41,7 @@ In this example, we've configured GPU device 0 for both physics simulation and r
 > **Note:** Pay attention to the up_axis and gravity parameters when creating the simulator. You can choose between Z-up and Y-up orientations, catering to different conventions in robotics and rendering research.
 
 Distinguishing the difference between the `gym` and `sim`:
-- `gym` serves as a proxy for programming script and the simulator, and does not do very much by itself. 
+- `gym` serves as a proxy for programming script and the simulator, and does not do very much by itself.
 - `sim` plays a more substantial role by housing the physics and graphics context, thereby enabling you to actively engage with and manipulate the simulator.
 
 For more parameters of the simulator, please refers to the IsaacGym Docs.
@@ -81,7 +81,7 @@ env = gym.create_env(sim, env_lower, env_upper, 1)
 ### Load an Asset
 Loading an asset file creates a `GymAsset` object that includes the definiton of all the bodies, collision shapes, visual attachments, joints, and degrees of freedom (DOFs). Soft bodies and particles are also supported with some formats.
 
-Assume we have already placed a MJCF nvidia-ant model at `./assets/mjcf/nv_ant.xml`, which raw text can be copy from: 
+Assume we have already placed a MJCF nvidia-ant model at `./assets/mjcf/nv_ant.xml`, which raw text can be copy from:
 <details> <summary>Raw text of nv_ant.xml</summary>
 
 ```html
@@ -108,10 +108,10 @@ Assume we have already placed a MJCF nvidia-ant model at `./assets/mjcf/nv_ant.x
   </visual>
 
   <asset>
-      <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512"/> 
+      <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512"/>
       <texture name="texplane" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" width="512" height="512" mark="cross" markrgb=".8 .8 .8"/>
-      <texture name="texgeom" type="cube" builtin="flat" mark="cross" width="127" height="1278" 
-          rgb1="0.8 0.6 0.4" rgb2="0.8 0.6 0.4" markrgb="1 1 1" random="0.01"/>  
+      <texture name="texgeom" type="cube" builtin="flat" mark="cross" width="127" height="1278"
+          rgb1="0.8 0.6 0.4" rgb2="0.8 0.6 0.4" markrgb="1 1 1" random="0.01"/>
 
       <material name="matplane" reflectance="0.3" texture="texplane" texrepeat="1 1" texuniform="true"/>
       <material name="matgeom" texture="texgeom" texuniform="true" rgba="0.8 0.6 .4 1"/>
@@ -239,6 +239,9 @@ while not gym.query_viewer_has_closed(viewer):
     gym.sync_frame_time(sim)
 ```
 
+Then you will see:
+![IsaacGymHW](imgs/isaacgym/isaacgym_hw.png)
+
 See IsaacGym Docs for more details of CameraProperties.
 
 
@@ -306,6 +309,9 @@ while not gym.query_viewer_has_closed(viewer):
     # sync_frame_time throttle down the simulation rate to real time
     gym.sync_frame_time(sim)
 ```
+
+Then you will see:
+![IsaacGymME](imgs/isaacgym/isaacgym_multi_env.png)
 
 ## Control the Actor
 
@@ -543,7 +549,7 @@ gym.viewer_camera_look_at(viewer, None, cam_pos, cam_target)
 next_franka_update_time = 1.5
 
 while not gym.query_viewer_has_closed(viewer):
-    
+
 
     # Every 0.01 seconds the pose of the attactor is updated
     t = gym.get_sim_time(sim)
@@ -568,3 +574,5 @@ gym.destroy_sim(sim)
 
 </details>
 
+Then you will see:
+![IsaacGymC](imgs/isaacgym/isaacgym_control.png)
