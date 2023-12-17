@@ -17,9 +17,6 @@ slug: /
 - A collection of useful and powerful [toolkits](./category/toolkits) that boosts your research
 - Guides on how you can [contribute](./contribute) to Simulately
 
-# Simulately GPT
-Try our [Simulately GPT](https://chat.openai.com/g/g-cjN7iYpRZ-simulately). You can ask anything about Simulators, Robotics and Vision. It is powered by [OpenAI's ChatGPT](https://chat.openai.com).
-
 # Acknowledgement
 
 **Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), and [Songlin Wei](http://wei.songl.in/).
