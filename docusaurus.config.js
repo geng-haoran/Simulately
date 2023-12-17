@@ -59,7 +59,7 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
       // Searching
       algolia: {
@@ -67,7 +67,6 @@ const config = {
         apiKey: '4ccc5de403c4daaf21222ef95de6ea74',
         indexName: 'simulately',
         contextualSearch: true,
-        debug: false,
         searchParameters: {},
         searchPagePath: 'search'
       },
@@ -80,11 +79,12 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Information' },
-          { to: '/blog', label: 'Blog', position: 'left'},
-          { to: '/related', label: 'Related Work', position: 'left'},
-          { href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right' },
-          { href: 'https://chat.openai.com/g/g-cjN7iYpRZ-simulately', label: 'Ask GPT', position: 'right' }
+          {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Information'},
+          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/related', label: 'Related Work', position: 'left'},
+          {to: '/gpt/gpt', label: 'Simulately GPT', position: 'left'},
+          {href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right'},
+          {href: 'https://chat.openai.com/g/g-cjN7iYpRZ-simulately', label: 'Ask GPT', position: 'right'}
         ],
       },
       footer: {

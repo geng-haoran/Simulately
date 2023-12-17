@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 title: Contribute
 ---
 
@@ -32,4 +32,4 @@ The project is built with Docusaurus, a static website generator for documentati
 
 ### Merge Your Code
 
-After comiting your code to your forked repo, you can start a pull request for merging it into our repo. Note that all the changes should be merged into the `dev` branch first. We will periodically update the `main` branch (which is used to compile the website at `simulately.wiki`) from the `dev` branch.
+After committing your code to your forked repo, you can start a pull request for merging it into our repo. Note that all the changes should be merged into the `dev` branch first. We will periodically update the `main` branch (which is used to compile the website at `simulately.wiki`) from the `dev` branch.
