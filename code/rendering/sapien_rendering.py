@@ -1,14 +1,11 @@
-"""Camera.
-
-Concepts:
-    - Create and mount cameras
-    - Render RGB images, point clouds, segmentation masks
-"""
-
 import sapien.core as sapien
 import numpy as np
 from scipy.spatial.transform import Rotation as R
+from PIL import Image, ImageColor
 import time
+import os
+
+SAVE_IMG_AND_EXIT = True
 
 
 def main():
@@ -72,9 +69,13 @@ def main():
         t = time.time()
         rgb.append(t - s)
         print("get float texture:", t - s)
-        # rgba_img = (rgba * 255).clip(0, 255).astype("uint8")
-        # rgba_pil = Image.fromarray(rgba_img)
-        # rgba_pil.save('color.png')
+        if SAVE_IMG_AND_EXIT:
+            rgba_img = (rgba * 255).clip(0, 255).astype("uint8")
+            rgba_pil = Image.fromarray(rgba_img)
+            os.makedirs("sapien", exist_ok=True)
+            rgba_pil.save('sapien/sapien_rgb.png')
+            exit()
+        
 
         # s = time.time()
         # position = camera.get_float_texture('Position')  # [H, W, 4]
