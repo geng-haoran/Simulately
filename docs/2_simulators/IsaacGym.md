@@ -28,12 +28,48 @@ sidebar_position: 3
 
 ## Related Benchmark
 
+### IsaacGymEnvs
+This repository contains example RL environments for the NVIDIA Isaac Gym high performance environments described in NVIDIA's NeurIPS 2021 Datasets and Benchmarks paper.
+
+<div align=center>
+<img src="imgs/isaacgym/isaacgymenvs.gif" border=0 width=75%>
+</div>
+
+- [Website](https://developer.nvidia.com/isaac-gym)
+- [Code](https://github.com/NVIDIA-Omniverse/IsaacGymEnvs)
+- [Paper](https://arxiv.org/abs/2108.10470)
+
 ### Bi-DexHands
-Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and reinforcement learning algorithms. Reaching human-level sophistication of hand dexterity and bimanual coordination remains an open challenge for modern robotics researchers. To better help the community study this problem, Bi-DexHands are developed with the following key features:
-  ![ManiSkill](imgs/isaacgym/quick_demo3.gif)
-  - [Website](https://bi-dexhands.ai)
-  - [Code](https://github.com/PKU-MARL/DexterousHands)
-  - [Paper](https://arxiv.org/abs/2206.08686)
+Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and reinforcement learning algorithms. Reaching human-level sophistication of hand dexterity and bimanual coordination remains an open challenge for modern robotics researchers.
+
+<div align=center>
+<img src="imgs/isaacgym/quick_demo3.gif" border=0 width=75%>
+</div>
+
+- [Website](https://bi-dexhands.ai)
+- [Code](https://github.com/PKU-MARL/DexterousHands)
+- [Paper](https://arxiv.org/abs/2206.08686)
+
+### DexPBT
+DexPBT implement challenging tasks for one- or two-armed robots equipped with multi-fingered hand end-effectors, including regrasping, grasp-and-throw, and object reorientation. And introduce a decentralized Population-Based Training (PBT) algorithm that massively amplify the exploration capabilities of deep reinforcement learning.
+
+<div align=center>
+<img src="imgs/isaacgym/dexpbt.gif" border=0 width=75%>
+</div>
+
+- [Website](https://sites.google.com/view/dexpbt)
+- [Code](https://github.com/NVIDIA-Omniverse/IsaacGymEnvs)
+- [Paper](https://arxiv.org/abs/2305.12127)
+
+### TimeChamber
+TimeChamber is a large scale self-play framework running on parallel simulation. Running self-play algorithms always need lots of hardware resources, especially on 3D physically simulated environments. We provide a self-play framework that can achieve fast training and evaluation with ONLY ONE GPU.
+
+<div align=center>
+<img src="imgs/isaacgym/humanoid_strike.gif" border=0 width=75%>
+</div>
+
+- [Website](https://github.com/inspirai/TimeChamber)
+- [Code](https://github.com/inspirai/TimeChamber)
 
 ## Related Projects
 - SIGGRAPH2023: [CALM: Conditional Adversarial Latent Models for Directable Virtual Characters](https://xbpeng.github.io/projects/CALM/index.html): IsaacGym;
@@ -65,17 +101,17 @@ Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and 
 - RSS2022: [Factory: Fast contact for robotic assembly](https://sites.google.com/nvidia.com/factory): IsaacGym
 - SIGGRAPH2022: [ASE: Large-scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters](https://nv-tlabs.github.io/ASE/): IsaacGym
 - CoRL2021: [STORM: An Integrated Framework for Fast Joint-Space Model-Predictive Control for Reactive Manipulation](https://github.com/NVlabs/storm): IsaacGym
-- ICRA2021: [Causal Reasoning in Simulationfor Structure and Transfer Learning of Robot Manipulation Policies](https://sites.google.com/view/crest-causal-struct-xfer-manip): IsaacGym (NoCode)
-- ICRA2021: [In-Hand Object Pose Tracking via Contact Feedback and GPU-Accelerated Robotic Simulation](https://sites.google.com/view/in-hand-object-pose-tracking/): IsaacGym (NoCode)
-- IROS2021: [Reactive Long Horizon Task Execution via Visual Skill and Precondition Models](https://arxiv.org/pdf/2011.08694.pdf): IsaacGym (NoCode)
-- ICRA2021: [Sim-to-Real for Robotic Tactile Sensing via Physics-Based Simulation and Learned Latent Projections](https://arxiv.org/pdf/2103.16747.pdf): IsaacGym (NoCode)
-- RSS2021_VLRR: [A Simple Method for Complex In-Hand Manipulation](https://sites.google.com/view/in-hand-reorientation): IsaacGym (NoCode)
+- ICRA2021: [Causal Reasoning in Simulationfor Structure and Transfer Learning of Robot Manipulation Policies](https://sites.google.com/view/crest-causal-struct-xfer-manip): IsaacGym
+- ICRA2021: [In-Hand Object Pose Tracking via Contact Feedback and GPU-Accelerated Robotic Simulation](https://sites.google.com/view/in-hand-object-pose-tracking/): IsaacGym
+- IROS2021: [Reactive Long Horizon Task Execution via Visual Skill and Precondition Models](https://arxiv.org/pdf/2011.08694.pdf): IsaacGym
+- ICRA2021: [Sim-to-Real for Robotic Tactile Sensing via Physics-Based Simulation and Learned Latent Projections](https://arxiv.org/pdf/2103.16747.pdf): IsaacGym
+- RSS2021_VLRR: [A Simple Method for Complex In-Hand Manipulation](https://sites.google.com/view/in-hand-reorientation): IsaacGym
 - CoRL2021: [Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning](https://leggedrobotics.github.io/legged_gym/): IsaacGym
-- ICRA2021: [Dynamics Randomization Revisited:A Case Study for Quadrupedal Locomotion](https://www.pair.toronto.edu/understanding-dr/): IsaacGym (NoCode)
-- NIPS2021: [Isaac Gym: High Performance GPU-Based Physics Simulation For Robot Learning](https://sites.google.com/view/isaacgym-nvidia): IsaacGym (NoCode)
-- RAL2021: [Learning a State Representation and Navigation in Cluttered and Dynamic Environments](https://arxiv.org/pdf/2103.04351.pdf): IsaacGym (NoCode)
-- CoRL2020: [Learning to Compose Hierarchical Object-Centric Controllers for Robotic Manipulation](https://sites.google.com/view/compositional-object-control/): IsaacGym (NoCode)
-- CoRL2020: [Learning a Contact-Adaptive Controller for Robust, Efficient Legged Locomotion](https://sites.google.com/view/learn-contact-controller/home): IsaacGym (NoCode)
-- RSS2020: [Learning Active Task-Oriented Exploration Policies for Bridging the Sim-to-Real Gap](https://sites.google.com/view/task-oriented-exploration/): IsaacGym (NoCode)
-- ICRA2019: [Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience](https://sites.google.com/view/simopt): IsaacGym (NoCode)
-- CoRL2018: [GPU-Accelerated Robotics Simulation for Distributed Reinforcement Learning](https://sites.google.com/view/accelerated-gpu-simulation/home): IsaacGym (NoCode)
+- ICRA2021: [Dynamics Randomization Revisited:A Case Study for Quadrupedal Locomotion](https://www.pair.toronto.edu/understanding-dr/): IsaacGym
+- NIPS2021: [Isaac Gym: High Performance GPU-Based Physics Simulation For Robot Learning](https://sites.google.com/view/isaacgym-nvidia): IsaacGym
+- RAL2021: [Learning a State Representation and Navigation in Cluttered and Dynamic Environments](https://arxiv.org/pdf/2103.04351.pdf): IsaacGym
+- CoRL2020: [Learning to Compose Hierarchical Object-Centric Controllers for Robotic Manipulation](https://sites.google.com/view/compositional-object-control/): IsaacGym
+- CoRL2020: [Learning a Contact-Adaptive Controller for Robust, Efficient Legged Locomotion](https://sites.google.com/view/learn-contact-controller/home): IsaacGym
+- RSS2020: [Learning Active Task-Oriented Exploration Policies for Bridging the Sim-to-Real Gap](https://sites.google.com/view/task-oriented-exploration/): IsaacGym
+- ICRA2019: [Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience](https://sites.google.com/view/simopt): IsaacGym
+- CoRL2018: [GPU-Accelerated Robotics Simulation for Distributed Reinforcement Learning](https://sites.google.com/view/accelerated-gpu-simulation/home): IsaacGym
