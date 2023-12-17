@@ -8,10 +8,7 @@ import pybullet
 import time
 import pybullet_data
 
-# plt.ion()
-
-img = np.random.rand(480, 640)
-
+SAVE_IMG_AND_EXIT = True
 
 pybullet.connect(pybullet.GUI)
 # pybullet.connect(pybullet.DIRECT)
@@ -77,11 +74,12 @@ for i in range(1000):
   #note that sending the data to matplotlib is really slow
 
   #reshape is needed
-  if SAVE_IMG:
+  if SAVE_IMG_AND_EXIT:
     np_img_arr = np.reshape(rgb, (h, w, 4))
     np_img_arr = np_img_arr
     img = Image.fromarray(np_img_arr)
     img.save('test.png')
+    exit()
   
 
 main_stop = time.time()
