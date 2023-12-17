@@ -62,7 +62,7 @@ DexPBT implement challenging tasks for one- or two-armed robots equipped with mu
 - [Paper](https://arxiv.org/abs/2305.12127)
 
 ### TimeChamber
-TimeChamber is a large scale self-play framework running on parallel simulation. Running self-play algorithms always need lots of hardware resources, especially on 3D physically simulated environments. We provide a self-play framework that can achieve fast training and evaluation with ONLY ONE GPU.
+TimeChamber is a large scale self-play framework running on parallel simulation. Running self-play algorithms always need lots of hardware resources, especially on 3D physically simulated environments. TimeChamber provide a self-play framework that can achieve fast training and evaluation with ONLY ONE GPU.
 
 <div align=center>
 <img src="imgs/isaacgym/humanoid_strike.gif" border=0 width=75%>
