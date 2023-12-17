@@ -35,7 +35,7 @@ function HomepageHeader() {
         <Link
             className="button button--secondary button--lg"
             to="/gpt/gpt">
-            SimulatelyGPT 🧠
+            Simulately GPT 🧠
         </Link>
         </div>
       </div>
