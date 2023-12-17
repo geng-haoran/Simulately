@@ -28,8 +28,15 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs">
             Simulate Like a Pro 👉
-          </Link>
-
+        </Link>
+        </div>
+        <br/>
+        <div className={styles.buttons}>
+        <Link
+            className="button button--secondary button--lg"
+            to="/gpt/gpt">
+            SimulatelyGPT 🧠
+        </Link>
         </div>
       </div>
     </header>
