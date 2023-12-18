@@ -111,4 +111,4 @@ p.disconnect()
 
 ## Control the Robot
 
-*Pending...*
+PyBullet provides `p.setJointMotorControlArray()` API to control the robot, supporting POSITION_CONTROL, VELOCITY_CONTROL, TORQUE_CONTROL and PD_CONTROl. For more details, please refers to [Docs](https://docs.google.com/document/d/10sXEhzFRSnvFcl3XxNGhnD4N2SedqwdAvK3dsihxVUA/edit#heading=h.jxof6bt5vhut).

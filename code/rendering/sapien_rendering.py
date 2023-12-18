@@ -1,14 +1,11 @@
-"""Camera.
-
-Concepts:
-    - Create and mount cameras
-    - Render RGB images, point clouds, segmentation masks
-"""
-
 import sapien.core as sapien
 import numpy as np
 from scipy.spatial.transform import Rotation as R
+from PIL import Image, ImageColor
 import time
+import os
+
+SAVE_IMG_AND_EXIT = True
 
 
 def main():
@@ -64,13 +61,21 @@ def main():
         pic.append(t - s)
         print("take picture:", t - s)
         s = time.time()
-        rgba = camera.get_float_texture('Color')  # [H, W, 4]
+        dl_tensor = camera.get_dl_tensor("Color")
+        shape = sapien.dlpack.dl_shape(dl_tensor)
+        rgba = np.zeros(shape, dtype=np.float32)
+        sapien.dlpack.dl_to_numpy_cuda_async_unchecked(dl_tensor, rgba)
+        sapien.dlpack.dl_cuda_sync()
         t = time.time()
         rgb.append(t - s)
         print("get float texture:", t - s)
-        # rgba_img = (rgba * 255).clip(0, 255).astype("uint8")
-        # rgba_pil = Image.fromarray(rgba_img)
-        # rgba_pil.save('color.png')
+        if SAVE_IMG_AND_EXIT:
+            rgba_img = (rgba * 255).clip(0, 255).astype("uint8")
+            rgba_pil = Image.fromarray(rgba_img)
+            os.makedirs("sapien", exist_ok=True)
+            rgba_pil.save('sapien/sapien_rgb.png')
+            exit()
+        
 
         # s = time.time()
         # position = camera.get_float_texture('Position')  # [H, W, 4]
@@ -102,10 +107,11 @@ def main():
     pos = np.array(pos)
     pic = np.array(pic)
     seg = np.array(seg)
+    # import pdb; pdb.set_trace()
     print("pic:", pic.mean())  # 0.00018425440788269042
     print("rgb:", rgb.mean(), 1 / (pic.mean() + rgb.mean()))  # 0.004276715517044068
-    print("pos:", pos.mean(), 1 / (pic.mean() + pos.mean()))  # 0.002738466024398804
-    print("seg:", seg.mean(), 1 / (pic.mean() + seg.mean()))  # 0.002738466024398804
+    # print("pos:", pos.mean(), 1 / (pic.mean() + pos.mean()))  # 0.002738466024398804
+    # print("seg:", seg.mean(), 1 / (pic.mean() + seg.mean()))  # 0.002738466024398804
 
 
 if __name__ == '__main__':

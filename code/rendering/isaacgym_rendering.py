@@ -1,19 +1,12 @@
-"""
-Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
-
-NVIDIA CORPORATION and its licensors retain all intellectual property
-and proprietary rights in and to this software, related documentation
-and any modifications thereto.  Any use, reproduction, disclosure or
-distribution of this software and related documentation without an express
-license agreement from NVIDIA CORPORATION is strictly prohibited.
-"""
-
 import os
-
 import math
 from isaacgym import gymapi
 from isaacgym import gymtorch
 from isaacgym import gymutil
+import imageio
+import numpy as np
+
+SAVE_IMG_AND_EXIT = True
 
 gym = gymapi.acquire_gym()
 
@@ -95,11 +88,15 @@ for i in range(num_envs):
     gym.set_rigid_body_color(env, actor_handle, 0, gymapi.MESH_VISUAL_AND_COLLISION, gymapi.Vec3(1, 0, 0))
     # add camera
     cam_props = gymapi.CameraProperties()
+    # import pdb; pdb.set_trace()
     cam_props.width = 640
     cam_props.height = 480
+    cam_props.far_plane = 100
+    cam_props.near_plane = 0.05 
+    cam_props.horizontal_fov = (1.0 / np.pi) * 180 *4/3
     cam_props.enable_tensors = True
     cam_handle = gym.create_camera_sensor(env, cam_props)
-    gym.set_camera_location(cam_handle, env, gymapi.Vec3(4, 2, 0), gymapi.Vec3(0, 0, 0))
+    gym.set_camera_location(cam_handle, env, gymapi.Vec3(-4, 2, 0), gymapi.Vec3(0, 0, 0))
     cams.append(cam_handle)
 
     # obtain camera tensor
@@ -123,7 +120,7 @@ gym.viewer_camera_look_at(viewer, middle_env, cam_pos, cam_target)
 gym.prepare_sim(sim)
 
 # create directory for saved images
-img_dir = "interop_images"
+img_dir = "isaacgym"
 if not os.path.exists(img_dir):
     os.mkdir(img_dir)
 
@@ -146,18 +143,17 @@ while viewer is None or not gym.query_viewer_has_closed(viewer):
     gym.start_access_image_tensors(sim)
 
     frame_no = gym.get_frame_count(sim)
-    # if frame_no % 10 == 0:
-    #     for i in range(num_envs):
-    #         # write tensor to image
-    #         fname = os.path.join(img_dir, "cam-%04d-%04d.png" % (frame_no, i))
-    #         cam_img = cam_tensors[i].cpu().numpy()
-    #         dep_img = dep_tensors[i].cpu().numpy()
-    #         seg_img = seg_tensors[i].cpu().numpy()
-    #         import pdb; pdb.set_trace()
-    #         imageio.imwrite(fname, cam_img)
-    #         imageio.imwrite(fname, np.stack((dep_img, dep_img, dep_img)).astype(np.uint8).transpose(1, 2, 0))
-    #         imageio.imwrite(fname, np.stack((seg_img, seg_img, seg_img)).astype(np.uint8).transpose(1, 2, 0))
-
+    if SAVE_IMG_AND_EXIT:
+        for i in range(num_envs):
+            # write tensor to image
+            fname = os.path.join(img_dir, "cam-%04d-%04d.png" % (frame_no, i))
+            cam_img = cam_tensors[i].cpu().numpy()
+            dep_img = dep_tensors[i].cpu().numpy()
+            seg_img = seg_tensors[i].cpu().numpy()
+            imageio.imwrite(fname, cam_img)
+            # imageio.imwrite(fname, np.stack((dep_img, dep_img, dep_img)).astype(np.uint8).transpose(1, 2, 0))
+            # imageio.imwrite(fname, np.stack((seg_img, seg_img, seg_img)).astype(np.uint8).transpose(1, 2, 0))
+        exit()
     t = gym.get_elapsed_time(sim)
     if t >= next_fps_report:
         t2 = gym.get_elapsed_time(sim)
