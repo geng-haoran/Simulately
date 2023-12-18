@@ -4,7 +4,7 @@
 
 Isaac Sim is under active development, whose latest documentation could change. As a result, links you find on search engines may only belong to an older version of documentation, which causes a 404 error.
 
-Our recommondendation is to always start from [this main page](https://docs.omniverse.nvidia.com/isaacsim/latest/index.html) for the latest version of the documentation, and use the built-in searching. Here are some portals:
+Our recommondendation is to always start from [this main page](https://docs.omniverse.nvidia.com/isaacsim/latest/index.html) for the latest version of the documentation, and use the built-in searching.
 
 ## Camera Intrinsics Error
 

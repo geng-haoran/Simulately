@@ -9,7 +9,9 @@ export type PaperTagType =
     | 'articulated'
     | 'manipulation'
     | 'dexterousgrasping'
-    | 'mobilemanip';
+    | 'mobilemanip'
+    | 'animation'
+    | 'rgb';
 
     export const PaperTags: { [type in PaperTagType]: Tag } = {
     "dataset": {
@@ -48,6 +50,15 @@ export type PaperTagType =
         }),
         color: '#e9669e',
     },
+    "rgb": {
+        label: translate({ message: 'RGB' }),
+        description: translate({
+            message: 
+                'Perceiving RGB images',
+            id: 'showcase.tag.rgb.description',
+        }),
+        color: '#e9669e',
+    },
     "articulated": {
         label: translate({ message: 'Articulated Object' }),
         description: translate({
@@ -81,6 +92,15 @@ export type PaperTagType =
             message: 
                 'Mobile manipulators',
             id: 'showcase.tag.mobilemanip.description',
+        }),
+        color: '#e9669e',
+    },
+    "animation": {
+        label: translate({ message: 'Character Animation' }),
+        description: translate({
+            message: 
+                'Character Animation',
+            id: 'showcase.tag.animation.description',
         }),
         color: '#e9669e',
     }
