@@ -14,9 +14,11 @@
         "write-heading-ids": "docusaurus write-heading-ids"
     },
     "dependencies": {
+        "@docsearch/js": "^3.5.2",
         "@docusaurus/core": "2.4.3",
         "@docusaurus/plugin-ideal-image": "^2.4.3",
         "@docusaurus/preset-classic": "2.4.3",
+        "@docusaurus/theme-search-algolia": "^2.4.3",
         "@mdx-js/react": "^1.6.22",
         "clsx": "^1.2.1",
         "minimatch": "^9.0.3",
