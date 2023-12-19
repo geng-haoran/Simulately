@@ -6,5 +6,3 @@
 
 > The website is built with Docusaurus, powered by Cloudflare Pages.
 
-## Contributors
-
