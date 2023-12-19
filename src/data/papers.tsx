@@ -408,7 +408,7 @@ const PAPERS: Paper[] = [
 
 function sortPapers() {
   let result = PAPERS;
-  // Sort by site name
+  // Sort by paper name
   result = sortBy(result, (paper) => paper.title.toLowerCase());
   
   // Sort by favorite tag, favorites first
