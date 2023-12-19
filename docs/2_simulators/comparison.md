@@ -29,6 +29,14 @@ However, this is not the same as full-fledged ray tracing for photorealistic ren
 
 ### Comparison of Rendering Speed
 
+We build up the same environment with all the simulators. Here are the rendered images
+
+<div style="display: flex; justify-content: center;">
+  <img src="../../code/rendering/sapien/color.png" alt="Image 1" style="margin-right: 10px;"></img>
+  <img src="../../code/rendering/isaacgym/color.png" alt="Image 1" style="margin-right: 10px;"></img>
+  <img src="../../code/rendering/pybullet/color.png" alt="Image 1" style="margin-right: 10px;"></img>
+</div>
+
 |     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo | Blender |
 |:------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|:-------:|
 |     RGB @ FPS      | 292.16 |  785.30  |          |          |        |             |        |         |
