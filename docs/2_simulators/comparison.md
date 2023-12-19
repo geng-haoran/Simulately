@@ -31,10 +31,10 @@ However, this is not the same as full-fledged ray tracing for photorealistic ren
 
 We build up the same environment with all the simulators. Here are the rendered images
 
-<div style="display: flex; justify-content: center;">
-  <img src="../../code/rendering/sapien/color.png" alt="Image 1" style="margin-right: 10px;"></img>
-  <img src="../../code/rendering/isaacgym/color.png" alt="Image 1" style="margin-right: 10px;"></img>
-  <img src="../../code/rendering/pybullet/color.png" alt="Image 1" style="margin-right: 10px;"></img>
+<div styles={{display : 'flex', justifyContent : 'center'}}>
+  <img src="/code/rendering/sapien/color.png" alt="Image 1" style={{marginRight: '10px'}}></img>
+  <img src="/code/rendering/isaacgym/color.png" alt="Image 2" style={{marginRight: '10px'}}></img>
+  <img src="/code/rendering/pybullet/color.png" alt="Image 3" style={{marginRight: '10px'}}></img>
 </div>
 
 |     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo | Blender |
