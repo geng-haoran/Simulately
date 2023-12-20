@@ -49,7 +49,7 @@ We build up the same environment with all the simulators. Here are the rendered 
 
 |     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo | Blender |
 |:------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|:-------:|
-|     RGB @ FPS      | 292.16 |  785.30  |          |          |        |             |        |         |
+|     RGB @ FPS      | 292.16 |  785.30  |          |22.49(OpenGL) 7.06(TinyRender)|        |             |        |         |
 |    Depth @ FPS     | 260.03 |  788.34  |          |          |        |             |        |         |
 | Segmentation @ FPS | 279.87 |  800.20  |          |          |        |             |        |         |
 
@@ -63,4 +63,13 @@ pending...
 
 # Popularity
 
-pending...
+|     Simulator            | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo |
+|:------------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|
+|     Github Star🟡         | 274    |    /     |     /    |   11.4k  |  6.6k  |      88     |  1.1k🔶 |
+|Citation(Google Scholar⭐️) | 302    |  788.34  |          |          |  4884  |             |        |
+
+🟡 Last Update: 2023.12.20
+
+⭐️ Last Update: 2023.12.20
+
+🔶 gazebo-classic
