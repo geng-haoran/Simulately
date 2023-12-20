@@ -30,7 +30,7 @@ However, this is not the same as full-fledged ray tracing for photorealistic ren
 
 ### Comparison of Rendering Speed
 
-We build up the same environment with all the simulators. Here are the rendered images
+We build up the same environment with all the simulators. Here are the rendered images and rendering speed🟡.
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
   <div style={{ textAlign: 'center', marginRight: '10px' }}>
@@ -47,11 +47,26 @@ We build up the same environment with all the simulators. Here are the rendered 
   </div>
 </div>
 
-|     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo | Blender |
-|:------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|:-------:|
-|     RGB @ FPS      | 292.16 |  785.30  |          |22.49(OpenGL) 7.06(TinyRender)|        |             |        |         |
-|    Depth @ FPS     | 260.03 |  788.34  |          |          |        |             |        |         |
-| Segmentation @ FPS | 279.87 |  800.20  |          |          |        |             |        |         |
+Evaluation 1 🟡:
+
+|     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet                     | MuJoCo | CoppeliaSim | Gazebo |
+|:------------------:|:------:|:--------:|:--------:|:----------------------------:|:------:|:-----------:|:------:|
+|     RGB @ FPS      | 292.16 |  785.30  |          |22.49(OpenGL) 7.06(TinyRender)|        |             |        |
+|    Depth @ FPS     | 260.03 |  788.34  |          |                              |        |             |        |
+| Segmentation @ FPS | 279.87 |  800.20  |          |                              |        |             |        |
+
+
+ found under `code/rendering` folder, see github repo for more details. The number reported here is ran with AMD EPYC 7742 64-Core Processor and A100(80G).
+
+
+Evaluation 1 🟡:
+
+|     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo |
+|:------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|
+|     RGB @ FPS      | 742.66 |  1849.71 |          |29.50(OpenGL) 13.68(TinyRender)|        |             |        |
+|    Depth @ FPS     | 742.66 |  1849.71 |          |          |        |             |        |
+| Segmentation @ FPS | 742.66 |  1849.71 |          |          |        |             |        |
+
 
 ### Comparison of Rendering Performance
 
@@ -66,7 +81,7 @@ pending...
 |     Simulator            | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo |
 |:------------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|
 |     Github Star🟡         | 274    |    /     |     /    |   11.4k  |  6.6k  |      88     |  1.1k🔶 |
-|Citation(Google Scholar⭐️) | 302    |  375     |          |    /     |  4884  |     1786    |  3949  |
+|Citation  (Google Scholar⭐️) | 302    |  375     |    /     |    /     |  4884  |     1786    |  3949  |
 
 🟡 Last Update: 2023.12.20
 

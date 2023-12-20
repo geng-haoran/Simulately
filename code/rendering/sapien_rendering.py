@@ -5,7 +5,7 @@ from PIL import Image, ImageColor
 import time
 import os
 
-SAVE_IMG_AND_EXIT = True
+SAVE_IMG_AND_EXIT = False
 
 
 def main():
@@ -61,7 +61,7 @@ def main():
         pic.append(t - s)
         print("take picture:", t - s)
         s = time.time()
-        dl_tensor = camera.get_dl_tensor("Color")
+        dl_tensor = camera.get_dl_tensor("Position")
         shape = sapien.dlpack.dl_shape(dl_tensor)
         rgba = np.zeros(shape, dtype=np.float32)
         sapien.dlpack.dl_to_numpy_cuda_async_unchecked(dl_tensor, rgba)

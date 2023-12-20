@@ -6,7 +6,7 @@ from isaacgym import gymutil
 import imageio
 import numpy as np
 
-SAVE_IMG_AND_EXIT = True
+SAVE_IMG_AND_EXIT = False
 
 gym = gymapi.acquire_gym()
 
