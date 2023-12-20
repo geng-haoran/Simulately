@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# FFMPEG
+# FFmpeg
 
 > **Advanced command line toolkits for video editing and compression**
 
