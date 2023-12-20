@@ -6,6 +6,37 @@ sidebar_position: 8
 
 > **Advanced command line toolkits for video editing and compression**
 
+## What is FFmpeg?
+
+FFmpeg is an open-source collection of tools and libraries that allows users to record, convert, and stream audio and
+video in various formats. It has a command-line interface, which means it operates through a text-based command prompt,
+offering a wide range of capabilities for processing multimedia content.
+
+The genius of FFmpeg lies in its versatility. It supports a vast array of codecs and formats, making it a go-to solution
+for format conversions, encoding, and even basic editing tasks like trimming and concatenating files. It's used by
+software developers and content creators alike for tasks ranging from simple file conversions to complex streaming
+solutions.
+
+FFmpeg can be found on its official website: [FFmpeg Official Website](https://ffmpeg.org/)
+
+## How to Install FFmpeg
+
+### macOS
+
+- The easiest way to install FFmpeg on macOS is through [Homebrew](https://brew.sh/), a package manager for macOS.
+- Run `brew install ffmpeg`.
+
+### Linux
+
+- Ubuntu: `sudo apt update && sudo apt install ffmpeg`.
+- Fedora: `sudo dnf install ffmpeg`.
+- Arch Linux: `sudo pacman -S ffmpeg`.
+
+Once installed, you can verify the installation by running `ffmpeg -version` in your command prompt or terminal. This
+should display the version of FFmpeg installed on your system.
+
+## Use FFmpeg
+
 ### Converting Video to `mp4` Format
 
 To convert a video to `mp4` format, utilize the following command:
@@ -96,8 +127,6 @@ ffmpeg -f concat -i video_concat.txt -c copy concat.mp4
 ```
 
 ### Change Keyframe Interval
-
-# Changing Keyframe Interval with FFMPEG
 
 To change the keyframe interval (also known as GOP size) of a video, you can use the `-g` option with `ffmpeg`. The
 following command will change the keyframe interval to every 30 frames:
