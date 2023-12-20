@@ -28,8 +28,15 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs">
             Simulate Like a Pro 👉
-          </Link>
-
+        </Link>
+        </div>
+        <br/>
+        <div className={styles.buttons}>
+        <Link
+            className="button button--secondary button--lg"
+            to="/gpt/gpt">
+            Simulately GPT 🧠
+        </Link>
         </div>
       </div>
     </header>
@@ -39,9 +46,7 @@ function HomepageHeader() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Simulately`}
-      description="Description will go into a meta tag in <head />">
+    <Layout title={`Simulately`} description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
