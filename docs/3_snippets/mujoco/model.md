@@ -49,3 +49,22 @@ model = mujoco.MjModel.from_binary_path(binary_path, assets)
 collection boasts an array of high-quality models tailored for the MuJoCo physics engine.Whether you're searching for a
 nimble humanoid, a sophisticated robotic arm, or something entirely different, the menagerie is your first port of call.
 
+# Visualize and Convert URDF to MJCF with MuJoCo Viewer
+
+Here's how you can bring a URDF file to MuJoCo. First, open the the MuJoCo Viewer:
+
+```shell
+python -m mujoco.viewer
+```
+
+Once open, it's a matter of a simple 'drag and drop'—take your URDF file and release it into the viewer. If
+the stars align and the URDF model loads successfully, you're halfway there.
+
+With your model now pirouetting in the viewer, you can convert it to native MuJoCo `mjcf` format. This transformation
+is as easy as a click on the `Save xml` button. It will be saved as an XML file right in the heart of your current
+working directory.
+
+However, keep in mind that MuJoCo and URDF are slightly different in format of the
+modeling language. Some components, like `DAE` meshes, might be unsupported in MuJoCo while very common in URDF. Also,
+MuJoCo will only take the collision mesh from your URDF and ignore the visual mesh during the loading process. You can
+manually integrate these visual elements, ensuring that your robot doesn't just perform well but also looks the part.
