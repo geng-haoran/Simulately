@@ -66,7 +66,7 @@ pending...
 |     Simulator            | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo |
 |:------------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|
 |     Github Star🟡         | 274    |    /     |     /    |   11.4k  |  6.6k  |      88     |  1.1k🔶 |
-|Citation(Google Scholar⭐️) | 302    |  788.34  |          |          |  4884  |             |        |
+|Citation(Google Scholar⭐️) | 302    |  375     |          |    /     |  4884  |     1786    |  3949  |
 
 🟡 Last Update: 2023.12.20
 
