@@ -26,6 +26,8 @@ mesh.export('output.obj')
 ### Point Cloud to Mesh and Mesh to Point Cloud
 
 ```python
+import trimesh
+
 # Convert a point cloud array to mesh trimesh object
 point_cloud = trimesh.PointCloud(point_cloud_array)
 
@@ -103,6 +105,9 @@ curvature = trimesh.curvature.discrete_mean_curvature_measure(mesh, mesh.vertice
 ### Compute Mesh Normal from Vertices
 
 ```python
+import numpy as np
+
+
 def compute_smooth_shading_normal_np(vertices, indices):
     """
     Compute the vertex normal from vertices and triangles with numpy
@@ -131,6 +136,11 @@ def compute_smooth_shading_normal_np(vertices, indices):
 ### SDF to Mesh and Mesh to SDF
 
 ```python
+import numpy as np
+import skimage
+import torch
+import trimesh
+
 ## Mesh-SDF bi-converter based on trimesh and nvidia kaolin
 class MeshSDF:
     ## bound_scale / voxel_resolution = spacing
