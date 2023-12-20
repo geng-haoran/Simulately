@@ -34,15 +34,15 @@ We build up the same environment with all the simulators. Here are the rendered 
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
   <div style={{ textAlign: 'center', marginRight: '10px' }}>
-    <img src="/code/rendering/sapien/color.png" alt="SAPIEN Rendering" style={{ width: 'auto', maxHeight: '200px' }} />
+    <img src="/comparison/rendering/sapien/color.png" alt="SAPIEN Rendering" style={{ width: 'auto', maxHeight: '200px' }} />
     <p>SAPIEN</p>
   </div>
   <div style={{ textAlign: 'center', marginRight: '10px' }}>
-    <img src="/code/rendering/isaacgym/color.png" alt="IsaacGym Rendering" style={{ width: 'auto', maxHeight: '200px' }} />
+    <img src="/comparison/rendering/isaacgym/color.png" alt="IsaacGym Rendering" style={{ width: 'auto', maxHeight: '200px' }} />
     <p>IsaacGym</p>
   </div>
   <div style={{ textAlign: 'center' }}>
-    <img src="/code/rendering/pybullet/color.png" alt="Pybullet Rendering" style={{ width: 'auto', maxHeight: '200px' }} />
+    <img src="/comparison/rendering/pybullet/color.png" alt="Pybullet Rendering" style={{ width: 'auto', maxHeight: '200px' }} />
     <p>Pybullet</p>
   </div>
 </div>

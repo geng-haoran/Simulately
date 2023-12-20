@@ -6,7 +6,7 @@ sidebar_position: 0
 Welcome to the Getting Started for using SAPIAN.
 In this guide, we will walk through the process of initializing the simulator, loading a groud, creating light and loading actors with SAPIEN API. The provided code snippets are adapted from the SAPIEN Docs to help you get started quickly.
 
-Try our demo code at the github `Simulately/code/getting_started`!
+Try our demo code on [Simulately on GitHub - Getting Started](https://github.com/geng-haoran/Simulately/tree/code/getting_started)!
 
 ## Initial the Simulator
 
@@ -94,7 +94,7 @@ Then you will see:
   <img src="https://sapien.ucsd.edu/docs/latest/_images/hello_world.png" alt="Move the Box(Official)" width="500"/>
 </p>
 
-Try our demo code at the github `Simulately/code/getting_started/sapien_1_helloworld.py`!
+Try our demo code on [Simulately on GitHub - Getting Started](https://github.com/geng-haoran/Simulately/tree/code/getting_started/sapien_1_helloworld.py)
 
 <details> <summary>Programming script of hello_world.py</summary>
 
@@ -306,7 +306,9 @@ while not viewer.closed:
     viewer.render()
 ```
 
-Try our demo code at the github `Simulately/code/getting_started/sapien_1_helloworld.py` with
+Try our demo code on [Simulately on GitHub - Getting Started](https://github.com/geng-haoran/Simulately/tree/code/getting_started/sapien_1_helloworld.py)!
+
+
 
 ```bash
 python sapien_2_control_robot.py --use-internal-drive # use internal drive
