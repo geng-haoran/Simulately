@@ -8,7 +8,7 @@ import pybullet
 import time
 import pybullet_data
 
-SAVE_IMG_AND_EXIT = True
+SAVE_IMG_AND_EXIT = False
 
 pybullet.connect(pybullet.GUI)
 # pybullet.connect(pybullet.DIRECT)
@@ -44,7 +44,7 @@ fov = 1 / np.pi * 180
 main_start = time.time()
 render_times = []
 render_times1 = []
-for i in range(1000):
+for i in range(100):
   pybullet.stepSimulation()
 
   viewMatrix = pybullet.computeViewMatrixFromYawPitchRoll(camTargetPos, camDistance, yaw, pitch,
@@ -87,5 +87,6 @@ main_stop = time.time()
 print("Total time %f" % (main_stop - main_start))
 render_times_arr = np.array(render_times)
 print("Mean render time: ", np.mean(render_times_arr))
+print("frequency: ", 1 / np.mean(render_times_arr))
 
 pybullet.resetSimulation()
