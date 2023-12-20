@@ -31,9 +31,7 @@ sidebar_position: 3
 ### IsaacGymEnvs
 This repository contains example RL environments for the NVIDIA Isaac Gym high performance environments described in NVIDIA's NeurIPS 2021 Datasets and Benchmarks paper.
 
-<div align=center>
-<img src="imgs/isaacgym/isaacgymenvs.gif" border=0 width=75%>
-</div>
+![](imgs/isaacgym/isaacgymenvs.gif)
 
 - [Website](https://developer.nvidia.com/isaac-gym)
 - [Code](https://github.com/NVIDIA-Omniverse/IsaacGymEnvs)
@@ -42,9 +40,7 @@ This repository contains example RL environments for the NVIDIA Isaac Gym high p
 ### Bi-DexHands
 Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and reinforcement learning algorithms. Reaching human-level sophistication of hand dexterity and bimanual coordination remains an open challenge for modern robotics researchers.
 
-<div align=center>
-<img src="imgs/isaacgym/quick_demo3.gif" border=0 width=75%>
-</div>
+![](imgs/isaacgym/quick_demo3.gif)
 
 - [Website](https://bi-dexhands.ai)
 - [Code](https://github.com/PKU-MARL/DexterousHands)
@@ -53,9 +49,7 @@ Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and 
 ### DexPBT
 DexPBT implement challenging tasks for one- or two-armed robots equipped with multi-fingered hand end-effectors, including regrasping, grasp-and-throw, and object reorientation. And introduce a decentralized Population-Based Training (PBT) algorithm that massively amplify the exploration capabilities of deep reinforcement learning.
 
-<div align=center>
-<img src="imgs/isaacgym/dexpbt.gif" border=0 width=75%>
-</div>
+![](imgs/isaacgym/dexpbt.gif)
 
 - [Website](https://sites.google.com/view/dexpbt)
 - [Code](https://github.com/NVIDIA-Omniverse/IsaacGymEnvs)
@@ -64,9 +58,7 @@ DexPBT implement challenging tasks for one- or two-armed robots equipped with mu
 ### TimeChamber
 TimeChamber is a large scale self-play framework running on parallel simulation. Running self-play algorithms always need lots of hardware resources, especially on 3D physically simulated environments. TimeChamber provide a self-play framework that can achieve fast training and evaluation with ONLY ONE GPU.
 
-<div align=center>
-<img src="imgs/isaacgym/humanoid_strike.gif" border=0 width=75%>
-</div>
+![](imgs/isaacgym/humanoid_strike.gif)
 
 - [Website](https://github.com/inspirai/TimeChamber)
 - [Code](https://github.com/inspirai/TimeChamber)
