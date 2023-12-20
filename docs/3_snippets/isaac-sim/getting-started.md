@@ -302,37 +302,57 @@ For more advanced ways of controlling the robot, consider referring to [RMPFlow]
 
 ## Quick-Start in Standalone Extensions
 
-Coding in Isaac Sim endows powerful simulations. In this section, we will switch to the standalone extensions, a way more flexible way. Go to your installation directory of your isaac sim (`INSTALL_DIRECTORY/pkg/isaac-sim-VERSION`), you will find a `python.sh` here. To start a standalone app, you run:
+Coding in Isaac Sim endows powerful simulations. In this section, we will show procedures to migrate the extension code to the standalone extension version. For more information, you can refer to [this page](https://docs.omniverse.nvidia.com/isaacsim/latest/core_api_tutorials/tutorial_core_hello_world.html#converting-the-example-to-a-standalone-application).
+
+A standalone extension is a python script. To run it, go to your installation directory of your isaac sim (`INSTALL_DIRECTORY/pkg/isaac-sim-VERSION`), you will find a `python.sh` here. To start a standalone app, you run:
 
 ```shell
 ./python.sh PATH_TO_YOUR_APP.py
 ```
 
-### Create a Standalone Extension
+### Migrate to / Create a Standalone Extension
 
-Now, let's add something to our script. First, we launch the simulation with
+Now, let's add something to our script. First, we launch the simulation application with
 
 ```python
 from omni.isaac.kit import SimulationApp
-simulation_app = SimulationApp({"headless": False})
+app = SimulationApp({"headless": False})
 
 from omni.isaac.core import World
 # other imports
 ```
-This two lines is recommended to be added as the very first two lines of your script, as importing other dependencies before them may cuase problems.
 
-### Adding a cube and a robot
+This two lines launches the Kit window, and are recommended to be added as the very first two lines of your script, as importing other dependencies before them may cuase problems.
 
-TBD.
+### Obtaining the `World` instance
 
-### Adding a camera to the robot
+To obtain the `World` instance, use:
 
-TBD.
+```python
+from omni.isaac.core import World
 
-### Render image
+world = World()
+```
 
-TBD.
+### Simulation steps
 
-#### Isaac Sim 2023.1.0
+The substitute for using the `physics_step` function as the callback is to create a loop and step the simulation inside:
 
-TBD.
+```python
+world.reset()
+N_STEPS = 10000
+
+for i in range(N_STEPS):
+    # Do your things
+
+    world.step(render=True)
+```
+
+### Closing the simulation app
+
+In the end, close the simulation app:
+
+```python
+app.close()
+```
+

@@ -64,9 +64,9 @@ const config = {
       // Searching
       algolia: {
         appId: '81A7HEMAGK',
-        apiKey: '4ccc5de403c4daaf21222ef95de6ea74',
+        apiKey: 'abf40978712646a81b2212726a3ee6e7',
         indexName: 'simulately',
-        contextualSearch: true,
+        contextualSearch: false,
         searchParameters: {},
         searchPagePath: 'search'
       },
