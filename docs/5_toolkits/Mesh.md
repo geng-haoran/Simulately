@@ -33,6 +33,7 @@ point_cloud = trimesh.PointCloud(point_cloud_array)
 point_cloud.export('output.obj')
 point_cloud.export('output.ply')
 ```
+
 ### Merge Multiple Meshes to a Single Mesh
 
 Merge multiple meshes into a single mesh, and save the merged mesh to an OBJ file.
