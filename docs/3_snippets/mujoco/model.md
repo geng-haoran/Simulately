@@ -45,7 +45,7 @@ model = mujoco.MjModel.from_binary_path(binary_path, assets)
 
 ![mujoco](https://github.com/google-deepmind/mujoco_menagerie/raw/main/banner.png)
 
-[mujoco_menagerie](mujoco_menagerie) is a repo a repository curated by the DeepMind MuJoCo team themselves. This
+[mujoco_menagerie](https://github.com/google-deepmind/mujoco_menagerie) is a repo a repository curated by the DeepMind MuJoCo team themselves. This
 collection boasts an array of high-quality models tailored for the MuJoCo physics engine.Whether you're searching for a
 nimble humanoid, a sophisticated robotic arm, or something entirely different, the menagerie is your first port of call.
 
