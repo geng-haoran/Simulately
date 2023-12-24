@@ -1,1 +1,3 @@
 *.ini
+.docusaurus/
+node_modules/
