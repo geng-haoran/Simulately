@@ -10,9 +10,9 @@ sidebar_position: 4
     &nbsp;
     <a href="https://www.coppeliarobotics.com/helpFiles/index.html" target="_blank"><img src="https://img.shields.io/badge/Doc-CoppeliaSim-blue"></img></a>
     &nbsp;
-    <a href="https://ieeexplore.ieee.org/document/6696520" target="_blank"><img src="https://img.shields.io/badge/Paper-IEEE-green"></img></a>
+    <a href="https://arxiv.org/abs/2303.02346" target="_blank"><img src="https://img.shields.io/badge/Paper-ArXiv-green"></img></a>
     &nbsp;
-    <a href="https://github.com/CoppeliaRobotics/CoppeliaSimLib" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple"></img></a>
+    <a href="https://github.com/zhouxian/FluidLab" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple"></img></a>
 </div>
 </h2>
 

@@ -11,7 +11,7 @@ slug: /
 
 **Simulately** is a project where we gather useful information of **physics simulator** for cutting-edge robot learning research. It includes but is not limited to:
 
-- Summary and comparisons of [simulators](./category/simulators) for robotic learning research
+- Summary and comparisons of [simulators](./category/general-simulators) for robotic learning research
 - [Snippets](./category/snippets) that help you add features and solve problems in development
 - [Related work](/related) that represents the latest advancements in the field
 - A collection of useful and powerful [toolkits](./category/toolkits) that boosts your research
