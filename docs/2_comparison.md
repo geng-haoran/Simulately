@@ -7,18 +7,17 @@ title: Overall Comparison
 
 Here is a table including a brief summary for physics simulators:
 
-|  Simulator  |           Physics Engine            |          Rendering           | Sensor(CHECK) |        Dynamics        | Parallelization | Vectorization | OpenSource |
-|:-----------:|:-----------------------------------:|:----------------------------:|:-------------:|:----------------------:|:---------------:|:-------------:|:----------:|
-|  IsaacSim   |               PhysX 5               |  Rasterization; RayTracing   |     RGBD;     | Rigid;Soft;Cloth;Fluid |        ✔        |     GPU🟡     |     ✘      |
-|  IsaacGym   |            PhysX 5, Flex            |        Rasterization;        |     RGBD;     |    Rigid;Soft;Cloth    |        ✔        |    CPU;GPU    |     ✘      |
-|   SAPIEN    |            PhysX 5, Warp            | Rasterization; RayTracing⭐️; |     RGBD;     |    Rigid;Soft;Fluid    |        ✔        |     CPU;      |     ✔      |
-|  Pybullet   |               Bullet                |        Rasterization;        |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
-|   MuJoCo    |               MuJoCo                |        Rasterization;        |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
-| CoppeliaSim | MuJoCo; Bullet; ODE; Newton; Vortex | Rasterization; RayTracing🔶; |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
-|   Gazebo    |     Bullet; ODE; DART; Simbody      |        Rasterization;        |     RGBD;     |    Rigid;Soft;Cloth    |        ✘        |     CPU;      |     ✔      |
-|   Blender   |               Bullet                |  Rasterization; RayTracing   |     RGBD;     | Rigid;Soft;Cloth;Fluid |        ✘        |     CPU;      |     ✔      |
+|  Simulator                                        |           Physics Engine            |          Rendering           |                    Sensor🤨                       |        Dynamics        | GPU simulation  | OpenSource |
+|:-------------------------------------------------:|:-----------------------------------:|:----------------------------:|:-------------------------------------------------:|:----------------------:|:---------------:|:----------:|
+|[IsaacSim](https://developer.nvidia.com/isaac-sim) |               PhysX 5               |  Rasterization; RayTracing   |RGBD; Lidar; Force; Effort; IMU; Contact; Proximity| Rigid;Soft;Cloth;Fluid |        ✔        |     ✘      |
+|[IsaacGym](https://developer.nvidia.com/isaac-gym) |            PhysX 5, Flex            |        Rasterization;        |RGBD; Force; Contact;                              |    Rigid;Soft;Cloth    |        ✔        |     ✘      |
+|[SAPIEN](https://sapien.ucsd.edu/)                 |            PhysX 5, Warp            | Rasterization; RayTracing⭐️; |RGBD; Force; Contact;                              |    Rigid;Soft;Fluid    |        ✘        |     ✔      |
+|[Pybullet](https://pybullet.org/wordpress/)        |               Bullet                |        Rasterization;        |RGBD; Force; IMU; Tactile;                         |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
+|[MuJoCo](https://mujoco.org/)                      |               MuJoCo                |        Rasterization;        |RGBD; Force; IMU; Tactile;                         |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
+|[CoppeliaSim](https://www.coppeliarobotics.com/)   | MuJoCo; Bullet; ODE; Newton; Vortex | Rasterization; RayTracing🔶; |RGBD; Force; Contact;                              |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
+|[Gazebo](https://gazebosim.org/home)               |     Bullet; ODE; DART; Simbody      |        Rasterization;        |RGBD; Lidar; Force; IMU;                           |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
 
-🟡: GPU only, RTX series is required.
+🤨: Check more information about sensors: [IsaacSim](https://docs.omniverse.nvidia.com/isaacsim/latest/features/sensors_simulation/index.html), IsaacGym(Doc), [SAPIEN](https://sapien.ucsd.edu/docs/latest/index.html), Pybullet, [MuJoCo](https://mujoco.readthedocs.io/en/stable/overview.html?highlight=sensor#sensor), CoppeliaSim, Gazebo
 
 ⭐️: RayTracing is currently not available in parallel gym-like envs.
 
@@ -55,9 +54,7 @@ Evaluation 1 🟡:
 |    Depth @ FPS     | 260.03 |  788.34  |          |                              |        |             |        |
 | Segmentation @ FPS | 279.87 |  800.20  |          |                              |        |             |        |
 
-
  found under `code/rendering` folder, see github repo for more details. The number reported here is ran with AMD EPYC 7742 64-Core Processor and A100(80G).
-
 
 Evaluation 1 🟡:
 
@@ -66,7 +63,6 @@ Evaluation 1 🟡:
 |     RGB @ FPS      | 742.66 |  1849.71 |          |29.50(OpenGL) 13.68(TinyRender)|        |             |        |
 |    Depth @ FPS     | 742.66 |  1849.71 |          |          |        |             |        |
 | Segmentation @ FPS | 742.66 |  1849.71 |          |          |        |             |        |
-
 
 ### Comparison of Rendering Performance
 
