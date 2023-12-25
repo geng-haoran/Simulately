@@ -9,7 +9,7 @@ sidebar_position: 6
 
 > For more information of how to use Blender with python, checkout the code in the snippets section.
 
-### What's the difference between the different renders?
+### What's the difference between different renders in Blender?
 
 There are 3 renderes in blender, each has its own uniqueness and weaknesses:
 
