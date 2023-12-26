@@ -54,15 +54,18 @@ Evaluation 1 🟡:
 |    Depth @ FPS     | 260.03 |  788.34  |          |                              |        |             |        |
 | Segmentation @ FPS | 279.87 |  800.20  |          |                              |        |             |        |
 
- found under `code/rendering` folder, see github repo for more details. The number reported here is ran with AMD EPYC 7742 64-Core Processor and A100(80G).
+🟡: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with AMD EPYC 7742 64-Core Processor and A100(80G).
 
-Evaluation 1 🟡:
+Evaluation 2 ⭐️:
 
-|     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo |
-|:------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|
-|     RGB @ FPS      | 742.66 |  1849.71 |          |29.50(OpenGL) 13.68(TinyRender)|        |             |        |
-|    Depth @ FPS     | 742.66 |  1849.71 |          |          |        |             |        |
-| Segmentation @ FPS | 742.66 |  1849.71 |          |          |        |             |        |
+|     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet                  | MuJoCo | CoppeliaSim | Gazebo |
+|:------------------:|:------:|:--------:|:--------:|:-------------------------:|:------:|:-----------:|:------:|
+|     RGB @ FPS      | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|    |             |        |
+|    Depth @ FPS     | 742.66 |  1849.71 | 182.44   |                           |        |             |        |
+| Segmentation @ FPS | 742.66 |  1849.71 | 182.44   |                           |        |             |        |
+
+⭐️: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with 13th Gen Intel Core i9-13900K and RTX 4090.
+
 
 ### Comparison of Rendering Performance
 
