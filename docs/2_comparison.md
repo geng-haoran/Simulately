@@ -61,8 +61,8 @@ Evaluation 2 ⭐️:
 |     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet                  | MuJoCo | CoppeliaSim | Gazebo |
 |:------------------:|:------:|:--------:|:--------:|:-------------------------:|:------:|:-----------:|:------:|
 |     RGB @ FPS      | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|    |             |        |
-|    Depth @ FPS     | 742.66 |  1849.71 | 182.44   |                           |        |             |        |
-| Segmentation @ FPS | 742.66 |  1849.71 | 182.44   |                           |        |             |        |
+|    Depth @ FPS     | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|    |             |        |
+| Segmentation @ FPS | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|    |             |        |
 
 ⭐️: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with 13th Gen Intel Core i9-13900K and RTX 4090.
 
