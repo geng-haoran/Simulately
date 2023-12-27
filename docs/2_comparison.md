@@ -7,7 +7,7 @@ title: Overall Comparison
 
 Here is a table including a brief summary for physics simulators:
 
-|  Simulator                                        |           Physics Engine            |          Rendering           |                    Sensor🤨                       |        Dynamics        | GPU simulation  | OpenSource |
+|  Simulator                                        |           Physics Engine            |          Rendering           |                    Sensor🤨                       |        Dynamics        | GPU-accelerated Simulation  | OpenSource |
 |:-------------------------------------------------:|:-----------------------------------:|:----------------------------:|:-------------------------------------------------:|:----------------------:|:---------------:|:----------:|
 |[IsaacSim](https://developer.nvidia.com/isaac-sim) |               PhysX 5               |  Rasterization; RayTracing   |RGBD; Lidar; Force; Effort; IMU; Contact; Proximity| Rigid;Soft;Cloth;Fluid |        ✔        |     ✘      |
 |[IsaacGym](https://developer.nvidia.com/isaac-gym) |            PhysX 5, Flex            |        Rasterization;        |RGBD; Force; Contact;                              |    Rigid;Soft;Cloth    |        ✔        |     ✘      |
@@ -48,7 +48,7 @@ We build up the same environment with all the simulators. Here are the rendered 
 
 Evaluation 1 🟡:
 
-|Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Path Tracing)  |Pybullet (Rasterization)|MuJoCo|
+|Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Ray Tracing)  |Pybullet (Rasterization)|MuJoCo|
 |:------------------:|:------:|:--------:|:--------:|:----------------------------:|:------:|
 |     RGB @ FPS      | 292.16 |  785.30  |102.43    |22.49(OpenGL) 7.06(TinyRender)|        |
 |    Depth @ FPS     | 260.03 |  788.34  |102.43    |22.49(OpenGL) 7.06(TinyRender)|        |
@@ -58,7 +58,7 @@ Evaluation 1 🟡:
 
 Evaluation 2 ⭐️:
 
-|Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Path Tracing)   |Pybullet (Rasterization)|MuJoCo|
+|Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Ray Tracing)   |Pybullet (Rasterization)|MuJoCo|
 |:------------------:|:------:|:--------:|:--------:|:-----------------------------:|:------:|
 |     RGB @ FPS      | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|        |
 |    Depth @ FPS     | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|        |
