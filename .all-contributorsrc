@@ -79,6 +79,17 @@
         "content",
         "blog"
       ]
+    },
+    {
+      "login": "Xiaoyao-Li",
+      "name": "Puhao Li",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64306155?v=4",
+      "profile": "https://xiaoyao-li.github.io/",
+      "contributions": [
+        "doc",
+        "content",
+        "blog"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -1,6 +1,6 @@
 # Simulately
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Teaser](assets/teaser.png)
@@ -26,6 +26,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nikepupu"><img src="https://avatars.githubusercontent.com/u/10679688?v=4?s=100" width="100px;" alt="nikepupu"/><br /><sub><b>nikepupu</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=nikepupu" title="Documentation">📖</a> <a href="#content-nikepupu" title="Content">🖋</a> <a href="#blog-nikepupu" title="Blogposts">📝</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/wensi-ai"><img src="https://avatars.githubusercontent.com/u/59036629?v=4?s=100" width="100px;" alt="Wensi (Vince) Ai"/><br /><sub><b>Wensi (Vince) Ai</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=wensi-ai" title="Documentation">📖</a> <a href="#content-wensi-ai" title="Content">🖋</a> <a href="#blog-wensi-ai" title="Blogposts">📝</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://cypypccpy.github.io/"><img src="https://avatars.githubusercontent.com/u/55881363?v=4?s=100" width="100px;" alt="cypypccpy"/><br /><sub><b>cypypccpy</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=cypypccpy" title="Documentation">📖</a> <a href="#content-cypypccpy" title="Content">🖋</a> <a href="#blog-cypypccpy" title="Blogposts">📝</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://xiaoyao-li.github.io/"><img src="https://avatars.githubusercontent.com/u/64306155?v=4?s=100" width="100px;" alt="Puhao Li"/><br /><sub><b>Puhao Li</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=Xiaoyao-Li" title="Documentation">📖</a> <a href="#content-Xiaoyao-Li" title="Content">🖋</a> <a href="#blog-Xiaoyao-Li" title="Blogposts">📝</a></td>
     </tr>
   </tbody>
 </table>
