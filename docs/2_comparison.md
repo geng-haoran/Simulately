@@ -25,7 +25,7 @@ Here is a table including a brief summary for physics simulators:
 For example, it can perform ray-casting operations, which are useful for sensor simulations and collision detections.
 However, this is not the same as full-fledged ray tracing for photorealistic rendering.
 
-# Rendering
+## Rendering
 
 ### Comparison of Rendering Speed
 
@@ -48,34 +48,34 @@ We build up the same environment with all the simulators. Here are the rendered 
 
 Evaluation 1 🟡:
 
-|     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet                     | MuJoCo | CoppeliaSim | Gazebo |
-|:------------------:|:------:|:--------:|:--------:|:----------------------------:|:------:|:-----------:|:------:|
-|     RGB @ FPS      | 292.16 |  785.30  |          |22.49(OpenGL) 7.06(TinyRender)|        |             |        |
-|    Depth @ FPS     | 260.03 |  788.34  |          |                              |        |             |        |
-| Segmentation @ FPS | 279.87 |  800.20  |          |                              |        |             |        |
+|Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Path Tracing)  |Pybullet (Rasterization)|MuJoCo|
+|:------------------:|:------:|:--------:|:--------:|:----------------------------:|:------:|
+|     RGB @ FPS      | 292.16 |  785.30  |102.43    |22.49(OpenGL) 7.06(TinyRender)|        |
+|    Depth @ FPS     | 260.03 |  788.34  |102.43    |22.49(OpenGL) 7.06(TinyRender)|        |
+| Segmentation @ FPS | 279.87 |  800.20  |102.43    |22.49(OpenGL) 7.06(TinyRender)|        |
 
 🟡: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with AMD EPYC 7742 64-Core Processor and A100(80G).
 
 Evaluation 2 ⭐️:
 
-|     Simulator      | SAPIEN | IsaacGym | IsaacSim | Pybullet                  | MuJoCo | CoppeliaSim | Gazebo |
-|:------------------:|:------:|:--------:|:--------:|:-------------------------:|:------:|:-----------:|:------:|
-|     RGB @ FPS      | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|    |             |        |
-|    Depth @ FPS     | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|    |             |        |
-| Segmentation @ FPS | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|    |             |        |
+|Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Path Tracing)   |Pybullet (Rasterization)|MuJoCo|
+|:------------------:|:------:|:--------:|:--------:|:-----------------------------:|:------:|
+|     RGB @ FPS      | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|        |
+|    Depth @ FPS     | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|        |
+| Segmentation @ FPS | 742.66 |  1849.71 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|        |
 
 ⭐️: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with 13th Gen Intel Core i9-13900K and RTX 4090.
 
 
-### Comparison of Rendering Performance
+<!-- ### Comparison of Rendering Performance
 
 pending...
 
 # Parallelization
 
-pending...
+pending... -->
 
-# Popularity
+## Popularity
 
 |     Simulator            | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo |
 |:------------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|
