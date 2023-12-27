@@ -112,3 +112,170 @@ p.disconnect()
 ## Control the Robot
 
 PyBullet provides `p.setJointMotorControlArray()` API to control the robot, supporting POSITION_CONTROL, VELOCITY_CONTROL, TORQUE_CONTROL and PD_CONTROl. For more details, please refers to [Docs](https://docs.google.com/document/d/10sXEhzFRSnvFcl3XxNGhnD4N2SedqwdAvK3dsihxVUA/edit#heading=h.jxof6bt5vhut).
+
+Consider the following two physical equations of each joint:
+
+<p align="center"><img src="https://math.vercel.app/?bgcolor=auto&from=q_%7Bt%2B%5Ctext%7Bd%7Dt%7D%20%3D%20q_t%20%2B%20v_t%20%5Ctext%7Bd%7Dt.svg" /></p>
+
+<p align="center"><img src="https://math.vercel.app/?bgcolor=auto&from=v_%7Bt%2B%5Ctext%7Bd%7Dt%7D%20%3D%20v_t%20%2B%20a_t%20%5Ctext%7Bd%7Dt%20.svg" /></p>
+
+, where *q*, *v*, *a* is the position, velocity and acceleration (a.k.a. force) of the DoF, respectively. *dt* is the time step. The robot can be controlled by 3 ways in pybullet in general.
+
+- **Effort ( target *a* ) Control** involves applying a specified force or torque to the joints of the robot. We can use `p.setJointMotorControlArray()` to control the robot by specifying the `controlMode=p.TORQUE_CONTROL` and `force` parameter. The `force` parameter is the target acceleration of the joint. For example, the following code snippet controls the robot by applying a constant torque of 1.0 to all joints.
+
+```python
+numOfJoints = p.getNumJoints(robotId)
+jointIds = range(numOfJoints)
+p.setJointMotorControlArray(robotId, jointIds, controlMode=p.TORQUE_CONTROL, forces=[1.0]*numOfJoints)
+```
+
+- **Velocity ( target *v* ) Control** involves applying a specified velocity to the joints of the robot. We can use `p.setJointMotorControlArray()` to control the robot by specifying the `controlMode=p.VELOCITY_CONTROL` and `targetVelocity` parameter. The `targetVelocity` parameter is the target velocity of the joint. For example, the following code snippet controls the robot by applying a constant velocity of 1.0 to all joints.
+
+```python
+numOfJoints = p.getNumJoints(robotId)
+jointIds = range(numOfJoints)
+p.setJointMotorControlArray(robotId, jointIds, controlMode=p.VELOCITY_CONTROL, targetVelocities=[1.0]*numOfJoints)
+```
+
+- **Position ( target *q* ) Control** involves applying a specified position to the joints of the robot. We can use `p.setJointMotorControlArray()` to control the robot by specifying the `controlMode=p.POSITION_CONTROL` and `targetPosition` parameter. The `targetPosition` parameter is the target position of the joint. For example, the following code snippet controls the robot by applying a constant position of 1.0 to all joints.
+
+```python
+numOfJoints = p.getNumJoints(robotId)
+jointIds = range(numOfJoints)
+p.setJointMotorControlArray(robotId, jointIds, controlMode=p.POSITION_CONTROL, targetPositions=[1.0]*numOfJoints)
+```
+
+> **_Note:_**  The actual implementation of the joint motor controller is as a constraint for POSITION_CONTROL and VELOCITY_CONTROL, and as an external force for TORQUE_CONTROL. For POSITION_CONTROL and VELOCITY_CONTROL, it acts as a constraint. `POSITION_CONTROL` involves minimizing errors in velocity and position using defined gains. `VELOCITY_CONTROL` enforces pure velocity constraints. For `TORQUE_CONTROL`, it functions as an external force. Starting with VELOCITY_CONTROL or POSITION_CONTROL is recommended, as TORQUE_CONTROL is more challenging and relies on accurate model parameters. Accurate URDF/SDF files and system identification are crucial for simulating correct forces.
+
+Here we offer some straightforward examples of robot control using effort, velocity, and position control methods.
+
+<details> <summary>Effort Control for Franka Robot</summary>
+
+```python
+import time
+import numpy as np
+import pybullet as p
+import pybullet_data
+
+physicsClient = p.connect(p.GUI)
+p.setAdditionalSearchPath(pybullet_data.getDataPath())
+p.setGravity(0,0,0)
+planeId = p.loadURDF("plane.urdf")
+startPos = [0,0,0]
+startOrientation = p.getQuaternionFromEuler([0,0,0])
+robotId = p.loadURDF("franka_panda/panda.urdf", startPos, startOrientation, useFixedBase=True)
+# see the number of joint of the robot
+numJoints = p.getNumJoints(robotId)
+print(f'Number of joints: {numJoints}')
+# find non-fixed joint
+jointTypeList = []
+for joint in range(numJoints):
+    info = p.getJointInfo(robotId, joint)
+    jointTypeList.append(info[2])
+    print(f'friction and damping of joint {joint}: {info[6:8]}')
+jointIds = [j for j in range(numJoints) if jointTypeList[j] != p.JOINT_FIXED]
+forces = np.array([0., -1.0, 0., -1.0, 0., 1.0, 1.0, 0.1, 0.1]) * 300
+controlPeriod = 240
+step = 0
+while True:
+    p.setJointMotorControlArray(bodyUniqueId=robotId, 
+                                jointIndices=jointIds, 
+                                controlMode=p.TORQUE_CONTROL, 
+                                forces=forces)
+    p.stepSimulation()
+    if step % controlPeriod == (controlPeriod - 1):
+        forces = - forces * 0.1
+    time.sleep(1./240.)
+    step += 1
+
+p.disconnect()
+```
+</details>
+
+<details> <summary>Velocity Control for Franka Robot</summary>
+
+```python
+import time
+import numpy as np
+import pybullet as p
+import pybullet_data
+
+physicsClient = p.connect(p.GUI)
+p.setAdditionalSearchPath(pybullet_data.getDataPath())
+p.setGravity(0,0,0)
+planeId = p.loadURDF("plane.urdf")
+startPos = [0,0,0]
+startOrientation = p.getQuaternionFromEuler([0,0,0])
+robotId = p.loadURDF("franka_panda/panda.urdf", startPos, startOrientation, useFixedBase=True)
+# see the number of joint of the robot
+numJoints = p.getNumJoints(robotId)
+print(f'Number of joints: {numJoints}')
+# find non-fixed joint
+jointTypeList = []
+for joint in range(numJoints):
+    info = p.getJointInfo(robotId, joint)
+    jointTypeList.append(info[2])
+jointIds = [j for j in range(numJoints) if jointTypeList[j] != p.JOINT_FIXED]
+targetVelocities = np.array([0., -1.0, 0., -2.0, 0., 1.0, 1.0, 0.1, 0.1])
+controlPeriod = 240
+step = 0
+while True:
+    p.setJointMotorControlArray(bodyUniqueId=robotId, 
+                                jointIndices=jointIds, 
+                                controlMode=p.VELOCITY_CONTROL, 
+                                targetVelocities=targetVelocities)
+    p.stepSimulation()
+    if step % controlPeriod == (controlPeriod - 1):
+        targetVelocities = - targetVelocities
+    time.sleep(1./240.)
+    step += 1
+
+p.disconnect()
+```
+</details>
+
+<details> <summary>Position Control for Franka Robot</summary>
+
+```python
+import time
+import numpy as np
+import pybullet as p
+import pybullet_data
+
+physicsClient = p.connect(p.GUI)
+p.setAdditionalSearchPath(pybullet_data.getDataPath())
+p.setGravity(0,0,0)
+planeId = p.loadURDF("plane.urdf")
+startPos = [0,0,0]
+startOrientation = p.getQuaternionFromEuler([0,0,0])
+robotId = p.loadURDF("franka_panda/panda.urdf", startPos, startOrientation, useFixedBase=True)
+# see the number of joint of the robot
+numJoints = p.getNumJoints(robotId)
+print(f'Number of joints: {numJoints}')
+# find non-fixed joint
+jointTypeList = []
+for joint in range(numJoints):
+    info = p.getJointInfo(robotId, joint)
+    jointTypeList.append(info[2])
+jointIds = [j for j in range(numJoints) if jointTypeList[j] != p.JOINT_FIXED]
+zeroPositions = np.array([0. for i in range(len(jointIds))])
+targetPositions = np.array([0., -0.785, 0., -2.356, 0., 1.571, 0.785, 0.04, 0.04])
+controlPeriod = 240
+step = 0
+while True:
+    desiredPositions = (step % controlPeriod) / controlPeriod * targetPositions + (1 - (step % controlPeriod) / controlPeriod) * zeroPositions
+    p.setJointMotorControlArray(bodyUniqueId=robotId, 
+                                jointIndices=jointIds, 
+                                controlMode=p.POSITION_CONTROL, 
+                                targetPositions=desiredPositions)
+    p.stepSimulation()
+    if step % controlPeriod == (controlPeriod - 1):
+        temp = zeroPositions
+        zeroPositions = targetPositions
+        targetPositions = temp
+    time.sleep(1./240.)
+    step += 1
+
+p.disconnect()
+```
+</details>
