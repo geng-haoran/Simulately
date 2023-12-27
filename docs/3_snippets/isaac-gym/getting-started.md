@@ -318,6 +318,7 @@ Then you will see:
 Controlling the robot is done using the degrees-of-freedom (DoFs). Let us consider the following two physical equations of one DoF:
 
 <p align="center"><img src="https://math.vercel.app/?bgcolor=auto&from=q_%7Bt%2B%5Ctext%7Bd%7Dt%7D%20%3D%20q_t%20%2B%20v_t%20%5Ctext%7Bd%7Dt.svg" /></p>
+
 <p align="center"><img src="https://math.vercel.app/?bgcolor=auto&from=v_%7Bt%2B%5Ctext%7Bd%7Dt%7D%20%3D%20v_t%20%2B%20a_t%20%5Ctext%7Bd%7Dt%20.svg" /></p>
 
 , where *q*, *v*, *a* is the position, velocity and acceleration of the DoF, respectively. *dt* is the time step. The robot can be controlled by 4 ways at isaacgym in general.
