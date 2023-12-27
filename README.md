@@ -1,6 +1,6 @@
 # Simulately
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Teaser](assets/teaser.png)
@@ -30,6 +30,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/DaLi-Jack"><img src="https://avatars.githubusercontent.com/u/70205757?v=4?s=100" width="100px;" alt="Junfeng Ni"/><br /><sub><b>Junfeng Ni</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=DaLi-Jack" title="Documentation">📖</a> <a href="#content-DaLi-Jack" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/qq456cvb"><img src="https://avatars.githubusercontent.com/u/7703989?v=4?s=100" width="100px;" alt="Yang You"/><br /><sub><b>Yang You</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=qq456cvb" title="Documentation">📖</a> <a href="#content-qq456cvb" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

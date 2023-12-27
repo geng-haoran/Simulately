@@ -100,6 +100,16 @@
         "doc",
         "content"
       ]
+    },
+    {
+      "login": "qq456cvb",
+      "name": "Yang You",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7703989?v=4",
+      "profile": "https://github.com/qq456cvb",
+      "contributions": [
+        "doc",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
