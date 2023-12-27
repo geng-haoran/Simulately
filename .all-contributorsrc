@@ -1,0 +1,29 @@
+{
+  "projectName": "Simulately",
+  "projectOwner": "geng-haoran",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "geng-haoran",
+      "name": "Haoran Geng",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71596067?v=4",
+      "profile": "https://geng-haoran.github.io/",
+      "contributions": [
+        "example",
+        "doc",
+        "content",
+        "code",
+        "blog"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": false
+}
