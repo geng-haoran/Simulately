@@ -57,6 +57,17 @@
         "content",
         "blog"
       ]
+    },
+    {
+      "login": "wensi-ai",
+      "name": "Wensi (Vince) Ai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59036629?v=4",
+      "profile": "https://github.com/wensi-ai",
+      "contributions": [
+        "doc",
+        "content",
+        "blog"
+      ]
     }
   ],
   "contributorsPerLine": 7,
