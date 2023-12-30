@@ -13,9 +13,14 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <span className={styles.indexCtasGitHubButtonWrapper}>
-          <img src="https://img.shields.io/github/stars/geng-haoran/Simulately?style=for-the-badge&color=E3F2FD&logo=github" />
+          <a href="https://github.com/geng-haoran/Simulately" target="_blank" >
+            <img src="https://img.shields.io/github/stars/geng-haoran/Simulately?style=for-the-badge&color=E3F2FD&logo=github" />
+          </a>
           &nbsp; &nbsp;
-          <img src="https://img.shields.io/github/watchers/geng-haoran/Simulately?style=for-the-badge&color=E3F2FD&logo=github" />
+          {/* Open in new tab */}
+          <a href="https://github.com/geng-haoran/Simulately" target="_blank" >
+            <img src="https://img.shields.io/github/watchers/geng-haoran/Simulately?style=for-the-badge&color=E3F2FD&logo=github" />
+          </a>
         </span>
         <h1 className="hero__title">Welcome to {siteConfig.title}</h1>
         <p className="hero__subtitle">🦾{siteConfig.tagline}</p>
