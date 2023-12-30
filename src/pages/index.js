@@ -13,13 +13,9 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <span className={styles.indexCtasGitHubButtonWrapper}>
-          <iframe
-            className={styles.indexCtasGitHubButton}
-            src="https://ghbtns.com/github-btn.html?user=geng-haoran&amp;repo=Simulately&amp;type=star&amp;count=true&amp;size=large"
-            width={120}
-            height={30}
-            title="GitHub Stars"
-          />
+          <img src="https://img.shields.io/github/stars/geng-haoran/Simulately?style=for-the-badge&color=E3F2FD&logo=github" />
+          &nbsp; &nbsp;
+          <img src="https://img.shields.io/github/watchers/geng-haoran/Simulately?style=for-the-badge&color=E3F2FD&logo=github" />
         </span>
         <h1 className="hero__title">Welcome to {siteConfig.title}</h1>
         <p className="hero__subtitle">🦾{siteConfig.tagline}</p>
@@ -29,9 +25,7 @@ function HomepageHeader() {
             to="/docs">
             Simulate Like a Pro 👉
         </Link>
-        </div>
-        <br/>
-        <div className={styles.buttons}>
+        &nbsp; &nbsp;
         <Link
             className="button button--secondary button--lg"
             to="/gpt/gpt">
