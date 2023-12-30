@@ -3,40 +3,79 @@ import time
 import mujoco
 import mujoco.viewer
 
+from PIL import Image
+import numpy as np
+
 hellworld = r"""
 <mujoco>
   <worldbody>
     <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1"/>
-    <geom type="plane" size="1 1 0.1" rgba=".9 0 0 1"/>
-    <body pos="0 0 1">
+    <geom type="plane" size="1 1 0.1" rgba="1 1 1 1"/>
+    <body pos="0 0 0.1 ">
       <joint type="free"/>
-      <geom type="box" size=".1 .2 .3" rgba="0 .9 0 1"/>
+      <geom type="box" size=".1 .1 .1" rgba="1 0 0 1"/>
     </body>
   </worldbody>
 </mujoco>
 """
 
+#m = mujoco.MjModel.from_xml_path('hello.xml')
 m = mujoco.MjModel.from_xml_string(hellworld)
 d = mujoco.MjData(m)
 
-with mujoco.viewer.launch_passive(m, d) as viewer:
-  # Close the viewer automatically after 30 wall-seconds.
-  start = time.time()
-  while viewer.is_running() and time.time() - start < 30:
-    step_start = time.time()
+renderer = mujoco.Renderer(m, 480, 640)
 
-    # mj_step can be replaced with code that also evaluates
-    # a policy and applies a control signal before stepping the physics.
+mujoco.mj_forward(m, d)
+renderer.update_scene(d)
+
+N = 2000
+frames = []
+
+# test_mode = "RGB"
+# test_mode = "DEPTH"
+test_mode = "SEG"
+
+if test_mode == "DEPTH": 
+    renderer.enable_depth_rendering()
+elif test_mode == "SEG":
+    renderer.enable_segmentation_rendering()
+
+write_to_file = False
+
+s = time.time()
+for i in range(N):
     mujoco.mj_step(m, d)
 
-    # Example modification of a viewer option: toggle contact points every two seconds.
-    with viewer.lock():
-      viewer.opt.flags[mujoco.mjtVisFlag.mjVIS_CONTACTPOINT] = int(d.time % 2)
+    renderer.update_scene(d)
+    out = renderer.render()
+    
+    if write_to_file and test_mode == "RGB":
+      Image.fromarray(out).save("rgb.png")
+    
+    if write_to_file and test_mode == "DEPTH":
+      # Shift nearest values to the origin.
+      out -= out.min()
+      # Scale by 2 mean distances of near rays.
+      out /= 2*out[out <= 1].mean()
+      out = (255*np.clip(out, 0, 1)).astype(np.uint8)
+      # depths.append(out)
+      Image.fromarray(out).save("depth.png")
 
-    # Pick up changes to the physics state, apply perturbations, update options from GUI.
-    viewer.sync()
+    out = renderer.render()
+    if write_to_file and test_mode == "SEG":
+      geom_ids = out[:, :, 0]
+      geom_ids = geom_ids.astype(np.float64) + 1
+      geom_ids = geom_ids / geom_ids.max()
+      out = (255*geom_ids).astype(np.uint8)
+      Image.fromarray(out).save("seg.png")
 
-    # Rudimentary time keeping, will drift relative to wall clock.
-    time_until_next_step = m.opt.timestep - (time.time() - step_start)
-    if time_until_next_step > 0:
-      time.sleep(time_until_next_step)
+    frames.append(out)
+    
+e = time.time()
+print(f"{test_mode} FPS: ", N/(e-s))
+
+""" RESULTS on (RTX 2080TI)
+  RGB FPS:  1006.2770196925943
+  DEPTH FPS:  396.12069736933626
+  SEG FPS:  96.72803766492979
+"""
