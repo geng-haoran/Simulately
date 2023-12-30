@@ -15,21 +15,27 @@ sidebar_position: 1
   ```python
   from PIL import Image
 
-    # Read an image
-    image = Image.open('path_to_image.jpg')
+  # Read an image
+  image = Image.open('path_to_image.jpg')
 
-    # Save an image
-    image.save('path_to_save_image.jpg')
+  # Convert the array to a PIL Image
+  image = Image.fromarray(img_np_array)
+
+  # Save an image
+  image.save('path_to_save_image.jpg')
   ```
 - Using OpenCV
   ```python
-    import cv2
+  import cv2
 
-    # Read an image
-    image = cv2.imread('path_to_image.jpg')
+  # Read an image
+  image = cv2.imread('path_to_image.jpg')
 
-    # Save an image
-    cv2.imwrite('path_to_save_image.jpg', image)
+  # Convert the image from RGB to BGR
+  bgr_image = cv2.cvtColor(rgb_image_array, cv2.COLOR_RGB2BGR)
+
+  # Save an image
+  cv2.imwrite('path_to_save_image.jpg', image)
   ```
 
 ### Image Resizing
