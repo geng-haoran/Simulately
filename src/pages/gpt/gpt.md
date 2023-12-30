@@ -14,5 +14,11 @@ It is powered by [OpenAI's ChatGPT](https://chat.openai.com).
 
 Here we provide several demos of our Simulately GPT. You can try it [here](https://chat.openai.com/g/g-cjN7iYpRZ-simulately).
 
-- Here is a comparison of GPT-4 and our Simulately GPT. Our Simulately GPT provides executable code and accurate answers, while GPT-4 provides outdated information.
+- Demo1: Here is a comparison of GPT-4 and our Simulately GPT. Our Simulately GPT provides **up-to-date and accurate answers** , while GPT-4 provides **wrong and out-of-date** information.
+![demo1](ques_dataset.jpg)
+
+- Demo2: Here is a comparison of GPT-4 and our Simulately GPT. Our Simulately GPT provides **up-to-date and accurate answers**, while GPT-4 provides **wrong and out-of-date** information.
+![demo1](ques_sensor.jpg)
+
+- Demo3: Here is a comparison of GPT-4 and our Simulately GPT. Our Simulately GPT provides **executable code and accurate answers**, while GPT-4 provides **outdated information**.
 ![demo1](image.png)
