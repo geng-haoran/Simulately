@@ -22,6 +22,7 @@ from omni.isaac.sensor import Camera
 from omni.isaac.core import SimulationContext
 from omni.kit.viewport.utility import get_active_viewport
 from omni.syntheticdata.tests.utils import add_semantics
+from PIL import Image
 
 RGB = 0
 DEPTH = 1
@@ -29,7 +30,7 @@ SEG = 2
 
 test_mode = RGB
 
-dt = 1/180.0
+dt = 1/1800.0
 my_world = World(stage_units_in_meters=1.0, physics_dt=dt, rendering_dt=dt)
 
 cube_2 = my_world.scene.add(
@@ -38,7 +39,7 @@ cube_2 = my_world.scene.add(
         name="cube_1",
         position=np.array([0.0, 0.0, 0.5]),
         scale=np.array([1.0, 1.0, 1.0]),
-        size=1.0,
+        size=0.5,
         color=np.array([255, 0, 0]),
     )
 )
@@ -46,10 +47,10 @@ viewport_api = get_active_viewport()
 render_product_path = viewport_api.get_render_product_path()
 camera = Camera(
     prim_path="/World/camera",
-    position=np.array([-10.0, 0.0, 15.0]),
+    position=np.array([-4.0, 0.0, 2.0]),
     dt = dt,
     resolution=(640, 480),
-    orientation=rot_utils.euler_angles_to_quats(np.array([0, 60, 0]), degrees=True),
+    orientation=rot_utils.euler_angles_to_quats(np.array([0, np.arctan2(2, 4)/np.pi * 180, 0]), degrees=True),
     render_product_path=render_product_path,
 )
 stage = get_current_stage()
@@ -71,16 +72,23 @@ frames = 0
 depths = []
 imgs = []
 segs = []
+times = []
 
-for _ in range(2000):
+for _ in range(1000):
+    s_i = time.time()
     my_world.step(render=True)
     if i == 0:
         s = time.time()
     if i >= 0:
         data = camera.get_current_frame()
+        e_i = time.time()
+        times.append(e_i-s_i)
         # camera.get_current_frame()
         if test_mode == RGB:
             img = data["rgba"]
+            import pdb; pdb.set_trace()
+            im = Image.fromarray(img)
+            im.save("test1.png")
             imgs.append(img)
         elif test_mode == DEPTH:
             depth = data['distance_to_image_plane']
@@ -89,11 +97,13 @@ for _ in range(2000):
             seg = data["semantic_segmentation"]['data']
             segs.append(seg)
         frames += 1
-
+    print("frame: ", frames, "time: ", times[-1])
     i += 1
 e = time.time()
 print("FPS: ", frames/(e-s))
-
+import pdb; pdb.set_trace()
+times = np.array(times)
+print("mean: ", np.mean(times))
 # assert all depth are equal
 if len(depths)> 0 :
     for i in range(len(depths)-1):
