@@ -17,111 +17,13 @@
       "profile": "https://geng-haoran.github.io/",
       "contributions": [
         "example",
-        "doc",
-        "content",
         "code",
-        "blog"
-      ]
-    },
-    {
-      "login": "YuyangLee",
-      "name": "Yuyang Li",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26186351?v=4",
-      "profile": "https://yuyangli.com/",
-      "contributions": [
-        "example",
-        "doc",
-        "content",
-        "code",
-        "blog"
-      ]
-    },
-    {
-      "login": "yzqin",
-      "name": "Yuzhe Qin",
-      "avatar_url": "https://avatars.githubusercontent.com/u/24649446?v=4",
-      "profile": "https://github.com/yzqin",
-      "contributions": [
         "doc",
         "content",
         "blog"
-      ]
-    },
-    {
-      "login": "nikepupu",
-      "name": "nikepupu",
-      "avatar_url": "https://avatars.githubusercontent.com/u/10679688?v=4",
-      "profile": "https://github.com/nikepupu",
-      "contributions": [
-        "doc",
-        "content",
-        "blog"
-      ]
-    },
-    {
-      "login": "wensi-ai",
-      "name": "Wensi (Vince) Ai",
-      "avatar_url": "https://avatars.githubusercontent.com/u/59036629?v=4",
-      "profile": "https://github.com/wensi-ai",
-      "contributions": [
-        "doc",
-        "content",
-        "blog"
-      ]
-    },
-    {
-      "login": "cypypccpy",
-      "name": "cypypccpy",
-      "avatar_url": "https://avatars.githubusercontent.com/u/55881363?v=4",
-      "profile": "https://cypypccpy.github.io/",
-      "contributions": [
-        "doc",
-        "content",
-        "blog"
-      ]
-    },
-    {
-      "login": "Xiaoyao-Li",
-      "name": "Puhao Li",
-      "avatar_url": "https://avatars.githubusercontent.com/u/64306155?v=4",
-      "profile": "https://xiaoyao-li.github.io/",
-      "contributions": [
-        "doc",
-        "content",
-        "blog"
-      ]
-    },
-    {
-      "login": "DaLi-Jack",
-      "name": "Junfeng Ni",
-      "avatar_url": "https://avatars.githubusercontent.com/u/70205757?v=4",
-      "profile": "https://github.com/DaLi-Jack",
-      "contributions": [
-        "doc",
-        "content"
-      ]
-    },
-    {
-      "login": "qq456cvb",
-      "name": "Yang You",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7703989?v=4",
-      "profile": "https://github.com/qq456cvb",
-      "contributions": [
-        "doc",
-        "content"
-      ]
-    },
-    {
-      "login": "Benjamin-eecs",
-      "name": "Bo Liu",
-      "avatar_url": "https://avatars.githubusercontent.com/u/32269413?v=4",
-      "profile": "https://github.com/Benjamin-eecs",
-      "contributions": [
-        "doc",
-        "content"
       ]
     }
   ],
   "contributorsPerLine": 7,
-  "linkToUsage": false
+  "linkToUsage": true
 }
