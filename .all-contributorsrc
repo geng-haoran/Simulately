@@ -46,6 +46,17 @@
         "content",
         "blog"
       ]
+    },
+    {
+      "login": "nikepupu",
+      "name": "nikepupu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10679688?v=4",
+      "profile": "https://github.com/nikepupu",
+      "contributions": [
+        "doc",
+        "content",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
