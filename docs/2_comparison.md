@@ -7,7 +7,7 @@ title: Overall Comparison
 
 Here is a table including a brief summary for physics simulators:
 
-|  Simulator                                        |           Physics Engine            |          Rendering           |                    Sensor🤨                       |        Dynamics        | GPU-accelerated Simulation  | OpenSource |
+|  Simulator                                        |           Physics Engine            |          Rendering           |                    Sensor🤨                       |        Dynamics        | GPU-accelerated Simulation  | Open-Source |
 |:-------------------------------------------------:|:-----------------------------------:|:----------------------------:|:-------------------------------------------------:|:----------------------:|:---------------:|:----------:|
 |[IsaacSim](https://developer.nvidia.com/isaac-sim) |               PhysX 5               |  Rasterization; RayTracing   |RGBD; Lidar; Force; Effort; IMU; Contact; Proximity| Rigid;Soft;Cloth;Fluid |        ✔        |     ✘      |
 |[IsaacGym](https://developer.nvidia.com/isaac-gym) |            PhysX 5, Flex            |        Rasterization;        |RGBD; Force; Contact;                              |    Rigid;Soft;Cloth    |        ✔        |     ✘      |

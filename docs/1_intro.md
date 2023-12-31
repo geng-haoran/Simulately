@@ -9,19 +9,19 @@ slug: /
 
 > Logo created by DALL-E 3.
 
-**Simulately** is a project where we gather useful information of **physics simulator** for cutting-edge robot learning research. It includes but is not limited to:
+**Simulately** is a project where we gather useful information of **robotics & physics simulators** for cutting-edge **robot learning** research. It includes but is not limited to:
 
-- Summary and comparisons of [simulators](./category/general-simulators) for robotic learning research
-- [Snippets](./category/snippets) that help you add features and solve problems in development
+- Summary and comparisons of popular existing [simulators](./category/general-simulators) for robotics research
+- Handy [snippets](./category/snippets) designed to streamline your efforts in developing robotics systems
 - [Related work](/related) that represents the latest advancements in the field
-- A collection of useful and powerful [toolkits](./category/toolkits) that boosts your research
-- Guides on how you can [contribute](./contribute) to Simulately
+- A curated collection of powerful [toolkits](./category/toolkits) that boosts your research
+- Step-by-step guides on [contributing](./contribute) to Simulately
 
 ## Contributors ✨
 
 **Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), and [Songlin Wei](http://wei.songl.in/).
 
-Thanks goes to these wonderful contributors:
+Thanks go to these wonderful contributors:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
