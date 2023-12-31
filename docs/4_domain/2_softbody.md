@@ -13,7 +13,7 @@ sidebar_position: 1
 - [**DiSECt**](#disect): a differentiable simulation engine for autonomous **robotic cutting**.
 - [**ThinShellLab**](#thinshelllab): a differentiable simulator for manipulating **thin-shell materials**, such as cloths and papers.
 - [**DaxBench**](#daxbench): a **deformable object manipulation** benchmark with differentiable physics.
-
+---
 
 ## SoftGym
 
