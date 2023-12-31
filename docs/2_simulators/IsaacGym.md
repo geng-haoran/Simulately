@@ -38,7 +38,7 @@ This repository contains example RL environments for the NVIDIA Isaac Gym high p
 - [Paper](https://arxiv.org/abs/2108.10470)
 
 ### Bi-DexHands
-Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and reinforcement learning algorithms. Reaching human-level sophistication of hand dexterity and bimanual coordination remains an open challenge for modern robotics researchers.
+Bi-DexHands provides a collection of bimanual dexterous manipulation tasks and reinforcement learning algorithms. Reaching human-level sophistication of hand dexterity and bimanual coordination remains an open challenge for modern robotics researchers.
 
 ![](imgs/isaacgym/quick_demo3.gif)
 
@@ -47,7 +47,7 @@ Bi-DexHands provides a collection of bimanual dexterous manipulations tasks and 
 - [Paper](https://arxiv.org/abs/2206.08686)
 
 ### DexPBT
-DexPBT implement challenging tasks for one- or two-armed robots equipped with multi-fingered hand end-effectors, including regrasping, grasp-and-throw, and object reorientation. And introduce a decentralized Population-Based Training (PBT) algorithm that massively amplify the exploration capabilities of deep reinforcement learning.
+DexPBT implements challenging tasks for one- or two-armed robots equipped with multi-fingered hand end-effectors, including regrasping, grasp-and-throw, and object reorientation. It also introduces a decentralized Population-Based Training (PBT) algorithm that massively amplifies the exploration capabilities of deep reinforcement learning.
 
 ![](imgs/isaacgym/dexpbt.gif)
 
@@ -56,7 +56,7 @@ DexPBT implement challenging tasks for one- or two-armed robots equipped with mu
 - [Paper](https://arxiv.org/abs/2305.12127)
 
 ### TimeChamber
-TimeChamber is a large scale self-play framework running on parallel simulation. Running self-play algorithms always need lots of hardware resources, especially on 3D physically simulated environments. TimeChamber provide a self-play framework that can achieve fast training and evaluation with ONLY ONE GPU.
+TimeChamber is a large scale self-play framework running on parallel simulation. Running self-play algorithms always need lots of hardware resources, especially on 3D physically simulated environments. TimeChamber provides a self-play framework that can achieve fast training and evaluation with ONLY ONE GPU.
 
 ![](imgs/isaacgym/humanoid_strike.gif)
 
