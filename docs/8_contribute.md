@@ -36,7 +36,7 @@ The project is built with Docusaurus, a static website generator for documentati
 
 ### Check Your Contribution
 
-After modifying the code, remenber to use `npm run build` to check the compilation, and use `npm run start` to check the compiled website. Once you think your modification is ready, you can commit your code.
+After modifying the code, remember to use `npm run build` to check the compilation, and use `npm run start` to check the compiled website. Once you think your modification is ready, you can commit your code.
 
 ### Merge Your Code
 
