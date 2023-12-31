@@ -99,6 +99,16 @@
         "doc",
         "content"
       ]
+    },
+    {
+      "login": "Benjamin-eecs",
+      "name": "Bo Liu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32269413?v=4",
+      "profile": "https://github.com/Benjamin-eecs",
+      "contributions": [
+        "doc",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
