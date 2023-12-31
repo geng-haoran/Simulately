@@ -61,7 +61,6 @@ for i in range(N):
       # depths.append(out)
       Image.fromarray(out).save("depth.png")
 
-    out = renderer.render()
     if write_to_file and test_mode == "SEG":
       geom_ids = out[:, :, 0]
       geom_ids = geom_ids.astype(np.float64) + 1
