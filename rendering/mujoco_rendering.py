@@ -1,7 +1,7 @@
 import time
 
 import mujoco
-import mujoco.viewer
+# import mujoco.viewer
 
 from PIL import Image
 import numpy as np
@@ -31,9 +31,9 @@ renderer.update_scene(d)
 N = 2000
 frames = []
 
-# test_mode = "RGB"
+test_mode = "RGB"
 # test_mode = "DEPTH"
-test_mode = "SEG"
+# test_mode = "SEG"
 
 if test_mode == "DEPTH": 
     renderer.enable_depth_rendering()
@@ -78,4 +78,10 @@ print(f"{test_mode} FPS: ", N/(e-s))
   RGB FPS:  1006.2770196925943
   DEPTH FPS:  396.12069736933626
   SEG FPS:  96.72803766492979
+"""
+
+""" RESULTS on (4090)
+SEG FPS:  165.23122106398043
+DEPTH FPS:  563.3816513824315
+RGB FPS:  1381.6397861018231
 """
