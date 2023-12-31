@@ -7,11 +7,11 @@ title: Contribute
 
 If you have expertise to share or find something wrong on the website, please don't hesitate to contribute! Currently, we are looking for contributions that enrich information and snippets concerning:
 
-- Gazebo, CoppeliaSim.
+- Gazebo, CoppeliaSim
 - Soft body and fluid simulators
 - Differentiable simulators
-- Handy toolkits.
-- Related work.
+- Handy toolkits
+- Related work
 
 # Contribute to This Website
 
@@ -36,7 +36,7 @@ The project is built with Docusaurus, a static website generator for documentati
 
 ### Check Your Contribution
 
-After modifying the code, remenber to use `npm run build` to check the compilation, and use `npm run start` to check the compiled website. Once you think your modification is ready, you can commit your code.
+After modifying the code, remember to use `npm run build` to check the compilation, and use `npm run start` to check the compiled website. Once you think your modification is ready, you can commit your code.
 
 ### Merge Your Code
 
