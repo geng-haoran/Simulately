@@ -6,6 +6,9 @@ import time
 import os
 
 SAVE_IMG_AND_EXIT = False
+MODE = "RGB"
+# MODE = "DEPTH"
+# MODE = "SEG"
 
 
 def main():
@@ -61,7 +64,12 @@ def main():
         pic.append(t - s)
         print("take picture:", t - s)
         s = time.time()
-        dl_tensor = camera.get_dl_tensor("Position")
+        if MODE == "RGB":
+            dl_tensor = camera.get_dl_tensor("Color")
+        elif MODE == "DEPTH":
+            dl_tensor = camera.get_dl_tensor("Position")
+        elif MODE == "SEG":
+            dl_tensor = camera.get_dl_tensor("Segmentation")
         shape = sapien.dlpack.dl_shape(dl_tensor)
         rgba = np.zeros(shape, dtype=np.float32)
         sapien.dlpack.dl_to_numpy_cuda_async_unchecked(dl_tensor, rgba)

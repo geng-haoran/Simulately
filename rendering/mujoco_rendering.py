@@ -31,9 +31,9 @@ renderer.update_scene(d)
 N = 2000
 frames = []
 
-test_mode = "RGB"
+# test_mode = "RGB"
 # test_mode = "DEPTH"
-# test_mode = "SEG"
+test_mode = "SEG"
 
 if test_mode == "DEPTH": 
     renderer.enable_depth_rendering()
@@ -61,7 +61,7 @@ for i in range(N):
       # depths.append(out)
       Image.fromarray(out).save("depth.png")
 
-    out = renderer.render()
+    # out = renderer.render()
     if write_to_file and test_mode == "SEG":
       geom_ids = out[:, :, 0]
       geom_ids = geom_ids.astype(np.float64) + 1
@@ -81,7 +81,13 @@ print(f"{test_mode} FPS: ", N/(e-s))
 """
 
 """ RESULTS on (4090)
-SEG FPS:  165.23122106398043
-DEPTH FPS:  563.3816513824315
-RGB FPS:  1381.6397861018231
+RGB FPS:  2219.621268188237
+DEPTH FPS:  1040.4817026544129
+SEG FPS:  316.711046921071
+"""
+
+""" RESULTS on (A100)
+RGB FPS:  105.25062292924402
+DEPTH FPS:  305.7977352193528
+SEG FPS:  118.22067886926256
 """
