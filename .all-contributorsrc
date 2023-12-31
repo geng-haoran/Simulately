@@ -67,6 +67,17 @@
         "doc",
         "content"
       ]
+    },
+    {
+      "login": "cypypccpy",
+      "name": "cypypccpy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55881363?v=4",
+      "profile": "https://cypypccpy.github.io/",
+      "contributions": [
+        "doc",
+        "content",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
