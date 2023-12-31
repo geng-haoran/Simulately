@@ -89,6 +89,16 @@
         "content",
         "code"
       ]
+    },
+    {
+      "login": "DaLi-Jack",
+      "name": "Junfeng Ni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70205757?v=4",
+      "profile": "https://github.com/DaLi-Jack",
+      "contributions": [
+        "doc",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
