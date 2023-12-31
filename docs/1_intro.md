@@ -19,7 +19,7 @@ slug: /
 
 ## Contributors ✨
 
-**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), and [Songlin Wei](http://wei.songl.in/).
+**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), [Songlin Wei](http://wei.songl.in/), [Xian Zhou](https://www.zhou-xian.com/).
 
 Thanks goes to these wonderful contributors:
 
