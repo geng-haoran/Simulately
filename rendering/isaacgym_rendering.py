@@ -7,6 +7,10 @@ import imageio
 import numpy as np
 
 SAVE_IMG_AND_EXIT = False
+MODE = "RGB"
+MODE = "DEPTH"
+MODE = "SEG"
+
 
 gym = gymapi.acquire_gym()
 
@@ -100,15 +104,18 @@ for i in range(num_envs):
     cams.append(cam_handle)
 
     # obtain camera tensor
-    cam_tensor = gym.get_camera_image_gpu_tensor(sim, env, cam_handle, gymapi.IMAGE_COLOR)
-    torch_cam_tensor = gymtorch.wrap_tensor(cam_tensor)
-    cam_tensors.append(torch_cam_tensor)
-    dep_tensor = gym.get_camera_image_gpu_tensor(sim, env, cam_handle, gymapi.IMAGE_DEPTH)
-    torch_dep_tensor = gymtorch.wrap_tensor(dep_tensor)
-    dep_tensors.append(torch_dep_tensor)
-    seg_tensor = gym.get_camera_image_gpu_tensor(sim, env, cam_handle, gymapi.IMAGE_SEGMENTATION)
-    torch_seg_tensor = gymtorch.wrap_tensor(seg_tensor)
-    seg_tensors.append(torch_seg_tensor)
+    if MODE == "RGB":
+        cam_tensor = gym.get_camera_image_gpu_tensor(sim, env, cam_handle, gymapi.IMAGE_COLOR)
+        torch_cam_tensor = gymtorch.wrap_tensor(cam_tensor)
+        cam_tensors.append(torch_cam_tensor)
+    elif MODE == "DEPTH":
+        dep_tensor = gym.get_camera_image_gpu_tensor(sim, env, cam_handle, gymapi.IMAGE_DEPTH)
+        torch_dep_tensor = gymtorch.wrap_tensor(dep_tensor)
+        dep_tensors.append(torch_dep_tensor)
+    elif MODE == "SEG":
+        seg_tensor = gym.get_camera_image_gpu_tensor(sim, env, cam_handle, gymapi.IMAGE_SEGMENTATION)
+        torch_seg_tensor = gymtorch.wrap_tensor(seg_tensor)
+        seg_tensors.append(torch_seg_tensor)
 
 # point camera at middle env
 cam_pos = gymapi.Vec3(8, 2, 6)
@@ -147,10 +154,13 @@ while viewer is None or not gym.query_viewer_has_closed(viewer):
         for i in range(num_envs):
             # write tensor to image
             fname = os.path.join(img_dir, "cam-%04d-%04d.png" % (frame_no, i))
-            cam_img = cam_tensors[i].cpu().numpy()
-            dep_img = dep_tensors[i].cpu().numpy()
-            seg_img = seg_tensors[i].cpu().numpy()
-            imageio.imwrite(fname, cam_img)
+            if MODE == "RGB":
+                cam_img = cam_tensors[i].cpu().numpy()
+                imageio.imwrite(fname, cam_img)
+            elif MODE == "DEPTH":
+                dep_img = dep_tensors[i].cpu().numpy()
+            elif MODE == "SEG":
+                seg_img = seg_tensors[i].cpu().numpy()
             # imageio.imwrite(fname, np.stack((dep_img, dep_img, dep_img)).astype(np.uint8).transpose(1, 2, 0))
             # imageio.imwrite(fname, np.stack((seg_img, seg_img, seg_img)).astype(np.uint8).transpose(1, 2, 0))
         exit()

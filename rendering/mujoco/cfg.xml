@@ -1,0 +1,11 @@
+<mujoco>
+    <worldbody>
+        <!-- Define the red cube -->
+        <body name="cube" pos="0 0 0">
+            <geom type="box" size="0.1 0.1 0.1" rgba="1 0 0 1"/> <!-- Red color -->
+        </body>
+
+        <!-- Define the camera -->
+        <camera name="main_camera" pos="0 0 1" lookat="0 0 0"/>
+    </worldbody>
+</mujoco>

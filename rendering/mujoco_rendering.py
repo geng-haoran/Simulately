@@ -1,7 +1,7 @@
 import time
 
 import mujoco
-import mujoco.viewer
+# import mujoco.viewer
 
 from PIL import Image
 import numpy as np
@@ -11,7 +11,7 @@ hellworld = r"""
   <worldbody>
     <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1"/>
     <geom type="plane" size="1 1 0.1" rgba="1 1 1 1"/>
-    <body pos="0 0 0.1 ">
+    <body pos="0 0 0.2 ">
       <joint type="free"/>
       <geom type="box" size=".1 .1 .1" rgba="1 0 0 1"/>
     </body>
@@ -61,6 +61,7 @@ for i in range(N):
       # depths.append(out)
       Image.fromarray(out).save("depth.png")
 
+    # out = renderer.render()
     if write_to_file and test_mode == "SEG":
       geom_ids = out[:, :, 0]
       geom_ids = geom_ids.astype(np.float64) + 1
@@ -77,4 +78,16 @@ print(f"{test_mode} FPS: ", N/(e-s))
   RGB FPS:  1006.2770196925943
   DEPTH FPS:  396.12069736933626
   SEG FPS:  96.72803766492979
+"""
+
+""" RESULTS on (4090)
+RGB FPS:  2219.621268188237
+DEPTH FPS:  1040.4817026544129
+SEG FPS:  316.711046921071
+"""
+
+""" RESULTS on (A100)
+RGB FPS:  105.25062292924402
+DEPTH FPS:  305.7977352193528
+SEG FPS:  118.22067886926256
 """
