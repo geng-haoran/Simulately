@@ -7,11 +7,11 @@ title: Contribute
 
 If you have expertise to share or find something wrong on the website, please don't hesitate to contribute! Currently, we are looking for contributions that enrich information and snippets concerning:
 
-- Gazebo, CoppeliaSim.
+- Gazebo, CoppeliaSim
 - Soft body and fluid simulators
 - Differentiable simulators
-- Handy toolkits.
-- Related work.
+- Handy toolkits
+- Related work
 
 # Contribute to This Website
 
