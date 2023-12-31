@@ -22,6 +22,19 @@
         "content",
         "blog"
       ]
+    },
+    {
+      "login": "YuyangLee",
+      "name": "Yuyang Li",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26186351?v=4",
+      "profile": "https://yuyangli.com/",
+      "contributions": [
+        "example",
+        "code",
+        "doc",
+        "content",
+        "blog"
+      ]
     }
   ],
   "contributorsPerLine": 7,
