@@ -6,7 +6,7 @@ sidebar_position: 0
 
 Welcome to the Getting Started for using IsaacGym. In this guide, we will walk through the process of initializing the simulator, loading a groud, creating single or multiple environments and loading actors with IsaacGym API. The provided code snippets are adapted from the IsaacGym Docs to help you get started quickly.
 
-## Initial the Simulator
+## Initialize the Simulator
 
 ### Create the GymAPI Instance
 
@@ -44,7 +44,7 @@ Distinguishing the difference between the `gym` and `sim`:
 - `gym` serves as a proxy for programming script and the simulator, and does not do very much by itself.
 - `sim` plays a more substantial role by housing the physics and graphics context, thereby enabling you to actively engage with and manipulate the simulator.
 
-For more parameters of the simulator, please refers to the IsaacGym Docs.
+For more parameters of the simulator, please refer to the IsaacGym Docs.
 
 ### Create a Ground Plane (Optional)
 
