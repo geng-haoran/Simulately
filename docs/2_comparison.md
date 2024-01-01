@@ -50,9 +50,9 @@ We build up the same environment with all the simulators. Here are the rendered 
 
 |Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Ray Tracing)   |Pybullet (Rasterization)|MuJoCo|
 |:------------------:|:------:|:--------:|:--------:|:-----------------------------:|:------:|
-|     RGB @ FPS      | 742.66 | 1917.32🤔 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|2219.62 |
-|    Depth @ FPS     | 742.66 | 1917.32🤔 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|1040.48 |
-| Segmentation @ FPS | 742.66 | 1917.32🤔 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|316.71  |
+|     RGB @ FPS      | 1175.74 | 1917.32🤔 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|2219.62 |
+|    Depth @ FPS     | 1467.48 | 1917.32🤔 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|1040.48 |
+| Segmentation @ FPS | 1153.03 | 1917.32🤔 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|316.71  |
 
 ⭐️: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is run with 13th Gen Intel Core i9-13900K and RTX 4090.
 
@@ -62,9 +62,9 @@ We build up the same environment with all the simulators. Here are the rendered 
 
 |Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Ray Tracing)  |Pybullet (Rasterization)|MuJoCo|
 |:------------------:|:------:|:--------:|:--------:|:----------------------------:|:------:|
-|     RGB @ FPS      | 292.16 |  785.30  |102.43    |22.49(OpenGL) 7.06(TinyRender)|105.25  |
-|    Depth @ FPS     | 260.03 |  788.34  |102.43    |22.49(OpenGL) 7.06(TinyRender)|305.80  |
-| Segmentation @ FPS | 279.87 |  800.20  |102.43    |22.49(OpenGL) 7.06(TinyRender)|118.22  |
+|     RGB @ FPS      | 228.23 |  785.30  |102.43    |22.49(OpenGL) 7.06(TinyRender)|105.25  |
+|    Depth @ FPS     | 280.56 |  788.34  |102.43    |22.49(OpenGL) 7.06(TinyRender)|305.80  |
+| Segmentation @ FPS | 261.06 |  800.20  |102.43    |22.49(OpenGL) 7.06(TinyRender)|118.22  |
 
 🟡: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with AMD EPYC 7742 64-Core Processor and A100(80G).
 

@@ -40,9 +40,7 @@ Thanks goes to these wonderful people:
   <tfoot>
     <tr>
       <td align="center" size="13px" colspan="7">
-        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
-          <a href="https://github.com/geng-haoran/Simulately/pulls">Add your contributions</a>
-        </img>
+        <a href="https://github.com/geng-haoran/Simulately/pulls">Add your contributions 😉!</a>
       </td>
     </tr>
   </tfoot>
