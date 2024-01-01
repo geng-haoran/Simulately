@@ -9,7 +9,7 @@ import torch
 
 SAVE_IMG_AND_EXIT = False
 MODE = "RGB"
-MODE = "DEPTH"
+# MODE = "DEPTH"
 # MODE = "SEG"
 
 
@@ -55,13 +55,13 @@ def main():
         p=[-4, 0, 2],
         q=q_SAPIEN
     ))
-
+    render = []
     rgb = []
     pos = []
     seg = []
     transfer = []
     for i in range(1000):
-        print("#" * 10, i, "#" * 10)
+        # print("#" * 10, i, "#" * 10)
         scene.step()  # make everything set
 
         # Rendering
@@ -83,32 +83,32 @@ def main():
         t = time.time()
 
         # GPU to CPU
-        s = time.time()
+        t_s = time.time()
         shape = sapien.dlpack.dl_shape(dl_tensor)
-        if MODE == "SEG":
-            output_array = torch.from_dlpack(dl_tensor).cpu().numpy()
-        else:
-            output_array = np.zeros(shape, dtype=np.float32)
-            sapien.dlpack.dl_to_numpy_cuda_async_unchecked(dl_tensor, output_array)
-            sapien.dlpack.dl_cuda_sync()
-        t = time.time()
-        transfer.append(t - s)
+        # if MODE == "SEG":
+        #     output_array = torch.from_dlpack(dl_tensor).cpu().numpy()
+        # else:
+        output_array = np.zeros(shape, dtype=np.float32)
+        sapien.dlpack.dl_to_numpy_cuda_async_unchecked(dl_tensor, output_array)
+        sapien.dlpack.dl_cuda_sync()
+        t_t = time.time()
+        transfer.append(t_t - t_s)
 
         if MODE == "RGB":
-            rgb.append(t - s)
+            render.append(t - s)
             if SAVE_IMG_AND_EXIT:
                 rgba_img = (output_array * 255).clip(0, 255).astype("uint8")
                 img_pil = Image.fromarray(rgba_img)
                 filename = "sapien_rgb.png"
         elif MODE == "DEPTH":
-            pos.append(t - s)
+            render.append(t - s)
             if SAVE_IMG_AND_EXIT:
                 depth = output_array[..., 2]
                 depth_image = (depth * 1000.0).astype(np.uint16)
                 img_pil = Image.fromarray(depth_image)
                 filename = "sapien_depth"
         elif MODE == "SEG":
-            seg.append(t - s)
+            render.append(t - s)
             if SAVE_IMG_AND_EXIT:
                 colormap = sorted(set(ImageColor.colormap.values()))
                 color_palette = np.array([ImageColor.getrgb(color) for color in colormap],
@@ -119,18 +119,19 @@ def main():
         else:
             raise RuntimeError(f"Unknown rendering mode: {MODE}")
 
-        print("rendering:", t - s)
+        # print("rendering:", t - s)
         if SAVE_IMG_AND_EXIT:
             os.makedirs("sapien", exist_ok=True)
             img_pil.save(f'sapien/{filename}')
             exit()
 
-    rgb = np.array(rgb)
-    pos = np.array(pos)
-    seg = np.array(seg)
+    # rgb = np.array(rgb)
+    # pos = np.array(pos)
+    # seg = np.array(seg)
+    render = np.array(render)
     transfer = np.array(transfer)
     # print("rgb:", rgb.mean(), 1 / rgb.mean())  # 0.004276715517044068
-    print("depth:", pos.mean(), 1 / pos.mean())  # 0.002738466024398804
+    print(MODE, "render:", render.mean(), 1 / render.mean())  # 0.002738466024398804
     # print("seg:", seg.mean(), 1 / + seg.mean())  # 0.002738466024398804
     print("transfer:", transfer.mean(), 1 / transfer.mean())  # 0.002738466024398804
 
