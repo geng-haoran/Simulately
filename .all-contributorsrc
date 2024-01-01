@@ -130,6 +130,16 @@
         "content",
         "code"
       ]
+    },
+    {
+      "login": "Selina2023",
+      "name": "Yufei Ding",
+      "avatar_url": "https://avatars.githubusercontent.com/u/141034149?v=4",
+      "profile": "https://github.com/Selina2023",
+      "contributions": [
+        "doc",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

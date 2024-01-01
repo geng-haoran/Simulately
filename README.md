@@ -14,12 +14,6 @@ Thanks goes to these wonderful people:
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 <table>
   <tbody>
     <tr>
@@ -36,9 +30,10 @@ Thanks goes to these wonderful people:
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Benjamin-eecs"><img src="https://avatars.githubusercontent.com/u/32269413?v=4?s=100" width="100px;" alt="Bo Liu"/><br /><sub><b>Bo Liu</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=Benjamin-eecs" title="Documentation">📖</a> <a href="#content-Benjamin-eecs" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/qq456cvb"><img src="https://avatars.githubusercontent.com/u/7703989?v=4?s=100" width="100px;" alt="Yang You"/><br /><sub><b>Yang You</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=qq456cvb" title="Documentation">📖</a> <a href="#content-qq456cvb" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.zhou-xian.com/"><img src="https://avatars.githubusercontent.com/u/19647225?v=4?s=100" width="100px;" alt="Zhou Xian"/><br /><sub><b>Zhou Xian</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=zhouxian" title="Documentation">📖</a> <a href="#content-zhouxian" title="Content">🖋</a> <a href="https://github.com/geng-haoran/Simulately/commits?author=zhouxian" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Selina2023"><img src="https://avatars.githubusercontent.com/u/141034149?v=4?s=100" width="100px;" alt="Yufei Ding"/><br /><sub><b>Yufei Ding</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=Selina2023" title="Documentation">📖</a> <a href="#content-Selina2023" title="Content">🖋</a></td>
     </tr>
   </tbody>
-  <!-- <tfoot>
+  <tfoot>
     <tr>
       <td align="center" size="13px" colspan="7">
         <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
@@ -46,7 +41,7 @@ Thanks goes to these wonderful people:
         </img>
       </td>
     </tr>
-  </tfoot> -->
+  </tfoot>
 </table>
 
 <!-- markdownlint-restore -->
