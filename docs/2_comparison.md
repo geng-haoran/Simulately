@@ -54,7 +54,7 @@ We build up the same environment with all the simulators. Here are the rendered 
 |    Depth @ FPS     | 742.66 | 1917.32🤔 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|1040.48 |
 | Segmentation @ FPS | 742.66 | 1917.32🤔 | 182.44   |29.50(OpenGL) 13.68(TinyRender)|316.71  |
 
-⭐️: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with 13th Gen Intel Core i9-13900K and RTX 4090.
+⭐️: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is run with 13th Gen Intel Core i9-13900K and RTX 4090.
 
 🤔: In IsaacGym, we cannot decouple depth, segmentation, and RGB rendering. Therefore, we report average FPS across all three rendering modes.
 

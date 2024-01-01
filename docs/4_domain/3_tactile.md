@@ -58,7 +58,9 @@ Taxim is a realistic and high-speed simulation model for a vision-based tactile 
 
 <div align="center">
 <div style={{ textAlign: 'center' }}>
-    <img src="http://tactilesim.csail.mit.edu/representative_image.jpg"  />
+    <img src="https://github.com/eanswer/DiffHand/raw/master/demos/tactile_sim.gif" width="266" />
+    <img src="https://github.com/eanswer/DiffHand/raw/master/demos/tactile_depth_map.gif" width="200" />
+    <img src="https://github.com/eanswer/DiffHand/raw/master/demos/tactile_force_map.gif" width="200" />
   </div>
 </div>
 

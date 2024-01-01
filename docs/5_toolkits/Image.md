@@ -66,5 +66,5 @@ sidebar_position: 1
 - [Awesome Open Vocabulary Object Detection](https://github.com/witnessai/Awesome-Open-Vocabulary-Object-Detection): A summary of open-vocabulary object detection papers. [Code](https://github.com/witnessai/Awesome-Open-Vocabulary-Object-Detection)
 
 ### Open-Vocabulary Image Segmentation
-- [GroundedSAM](https://github.com/IDEA-Research/Grounded-Segment-Anything):  A very interesting demo by combining Grounding DINO and Segment Anything which aims to detect and segment anything with text inputs! And we will continue to improve it and create more interesting demos based on this foundation.
+- [GroundedSAM](https://github.com/IDEA-Research/Grounded-Segment-Anything):  A very interesting demo combining Grounding DINO with Segment Anything which aims to detect and segment anything with text inputs! And we will continue to improve it and create more interesting demos based on this foundation.
 [Code](https://github.com/IDEA-Research/Grounded-Segment-Anything)
