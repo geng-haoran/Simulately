@@ -79,7 +79,7 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Information'},
+          {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Wiki'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/related', label: 'Related Work', position: 'left'},
           {to: '/gpt/gpt', label: 'Simulately GPT', position: 'left'},
