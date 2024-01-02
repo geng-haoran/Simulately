@@ -80,6 +80,17 @@
       ]
     },
     {
+      "login": "zhouxian",
+      "name": "Zhou Xian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19647225?v=4",
+      "profile": "https://www.zhou-xian.com/",
+      "contributions": [
+        "doc",
+        "content",
+        "code"
+      ]
+    },
+    {
       "login": "Xiaoyao-Li",
       "name": "Puhao Li",
       "avatar_url": "https://avatars.githubusercontent.com/u/64306155?v=4",
@@ -118,17 +129,6 @@
       "contributions": [
         "doc",
         "content"
-      ]
-    },
-    {
-      "login": "zhouxian",
-      "name": "Zhou Xian",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19647225?v=4",
-      "profile": "https://www.zhou-xian.com/",
-      "contributions": [
-        "doc",
-        "content",
-        "code"
       ]
     },
     {
