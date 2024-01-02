@@ -148,7 +148,7 @@ const PAPERS: Paper[] = [
   {
     title: 'Causal Reasoning in Simulationfor Structure and Transfer Learning of Robot Manipulation Policies',
     description: 'ICRA 2021.',
-    preview: "https://lh6.googleusercontent.com/bPpfJYiG-ziOEfrKQ1yp7GyOEfg8mSY6zIqppiiBI_pHXNkt3I2p78PJ9BMSjCVAJTrpXaLKvr3N7yopI3pEP6ncBQILvGO_GZZ0p2h5bHvntCOpTPzy3hHMYkOx00sJlg=w1280",
+    preview: null,
     website: 'https://sites.google.com/view/crest-causal-struct-xfer-manip',
     tags: ['rgbd_pc', 'rl', 'dexterousgrasping', 'rgbd_pc'],
   },
@@ -225,7 +225,7 @@ const PAPERS: Paper[] = [
   {
     title: 'Closing the Sim-to-Real Loop: Adapting Simulation Randomization with Real World Experience',
     description: 'ICRA 2019.',
-    preview: "https://lh3.googleusercontent.com/oYkk94BYyeZ5gda1ZnoD8shCuZlohexeair4Urp2CNYltkajZtwrRnumkK0IPUtdhuCWqiMIbJi3Vj_5c9yuO-KLBTU47VyE8v9Ci4RKDyRZlToS=w1280",
+    preview: null,
     website: 'https://sites.google.com/view/simopt',
     tags: ['rl'],
   },

@@ -45,7 +45,7 @@ export default function ShowcaseFilterToggle(): JSX.Element {
   }, [operator, location, history]);
 
   return (
-    <div>
+    <div style={{display: "flex"}}>
       <input
         type="checkbox"
         id={id}
