@@ -54,7 +54,6 @@ Thanks go to these wonderful contributors:
     <tr>
       <td align="center" size="13px" colspan="7">
           <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions 😉</a>
-        </img>
       </td>
     </tr>
   </tfoot>

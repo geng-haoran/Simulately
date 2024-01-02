@@ -8,9 +8,9 @@
 
 ## Contributors ✨
 
-**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), [Songlin Wei](http://wei.songl.in), [Zhou Xian](https://www.zhou-xian.com/).
+**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), [Songlin Wei](http://wei.songl.in/), [Xian Zhou](https://www.zhou-xian.com/).
 
-Thanks go to these wonderful people:
+Thanks goes to these wonderful people:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -41,9 +41,7 @@ Thanks go to these wonderful people:
   <tfoot>
     <tr>
       <td align="center" size="13px" colspan="7">
-        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
-          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions</a>
-        </img>
+          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions 😉</a>
       </td>
     </tr>
   </tfoot>
@@ -56,4 +54,4 @@ Thanks go to these wonderful people:
 
 <!-- example,code,doc,content,blog  -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
