@@ -128,8 +128,8 @@ const config = {
             title: 'About Us',
             items: [
               {
-                label: 'Editors\'s Words',
-                href: '/blog/editors-words',
+                label: 'X (Twitter)',
+                href: 'https://x.com/simulately12492',
               },
               {
                 label: 'GitHub',
