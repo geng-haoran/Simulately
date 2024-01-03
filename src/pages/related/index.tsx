@@ -162,7 +162,7 @@ function ShowcaseFilters() {
             <li key={i} className={styles.checkboxListItem}>
               <ShowcaseTooltip
                 id={id}
-                text={description}
+                //text={description}
                 anchorEl="#__docusaurus">
                 <ShowcaseTagSelect
                   tag={tag}
