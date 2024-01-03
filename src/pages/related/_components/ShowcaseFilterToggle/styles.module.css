@@ -23,6 +23,14 @@
   box-shadow: var(--ifm-global-shadow-md);
 }
 
+input {
+  opacity: 0;   
+}
+
+input:hover + .checkboxLabel{
+  cursor: pointer;
+}
+
 .checkboxLabel:hover {
   opacity: 1;
   box-shadow: var(--ifm-global-shadow-md),
