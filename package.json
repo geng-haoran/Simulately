@@ -22,6 +22,7 @@
         "@mdx-js/react": "^1.6.22",
         "clsx": "^1.2.1",
         "contributor-faces": "^1.1.0",
+        "docusaurus": "^1.14.7",
         "minimatch": "^9.0.3",
         "prism-react-renderer": "^1.3.5",
         "react": "^17.0.2",
