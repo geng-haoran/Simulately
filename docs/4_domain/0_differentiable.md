@@ -230,9 +230,10 @@ DaXBench is a differentiable simulation framework for deformable object manipula
 </h2>
 
 <div align="center">
-<div style={{ textAlign: 'center' }}>
-    <img src="https://nimblephysics.org/docs/_images/Falisse_Stair_Up.gif"  />
+  <div style={{ textAlign: 'center' }}>
+      <img src="https://nimblephysics.org/docs/_images/Falisse_Stair_Up.gif"  />
   </div>
+</div>
 
 Nimble is a toolkit for doing AI on human biomechanics (physically simulated realistic human bodies), written in C++ for speed, but with nice Python bindings. It focuses on studying real physical human bodies. Nimble started life as a general purpose differentiable physics engine, as a fork of the (not differentiable) DART physics engine. 
 </details>
@@ -255,4 +256,5 @@ Nimble is a toolkit for doing AI on human biomechanics (physically simulated rea
 <div align="center">
 
 Starting with version 3.0.0, MuJoCo includes MuJoCo XLA (MJX) under the mjx directory. MJX allows MuJoCo to run on compute hardware supported by the XLA compiler via the JAX framework. MJX runs on a all platforms supported by JAX: Nvidia and AMD GPUs, Apple Silicon, and Google Cloud TPUs. The MJX API is consistent with the main simulation functions in the MuJoCo API.
+</div>
 </details>
