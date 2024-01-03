@@ -17,6 +17,9 @@ slug: /
 - A curated collection of powerful [toolkits](./category/toolkits) that boosts your research
 - Step-by-step guides on [contributing](./contribute) to Simulately
 
+## Code and Data
+You can find the **Code and Data** used to run all the experiments mentioned in this document  (rendering, getting_started, etc.) in the `code` branch of our github repository: [here](https://github.com/geng-haoran/Simulately/tree/code).
+
 ## Contributors ✨
 
 **Simulately** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), [Songlin Wei](http://wei.songl.in/), and [Zhou Xian](https://www.zhou-xian.com/).
@@ -53,7 +56,7 @@ Thanks go to these wonderful contributors:
   <tfoot>
     <tr>
       <td align="center" size="13px" colspan="7">
-          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions 😉</a>
+          <a href="https://github.com/geng-haoran/Simulately/pulls">Add your contributions 😉</a>
       </td>
     </tr>
   </tfoot>
