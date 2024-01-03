@@ -21,6 +21,8 @@ function HomepageHeader() {
             <img src="https://img.shields.io/github/watchers/geng-haoran/Simulately?style=for-the-badge&color=E3F2FD&logo=github" />
           </a>
           &nbsp; &nbsp;
+          <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fsimulately.wiki&label=Visitors&countColor=%23e3f2fd" />
+          &nbsp; &nbsp;
           <a href="https://x.com/simulately12492" target="_blank" >
             <img src="https://img.shields.io/twitter/follow/simulately12492?logo=x&style=for-the-badge&color=E3F2FD" />
           </a>
