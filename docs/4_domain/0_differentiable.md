@@ -12,6 +12,8 @@ sidebar_position: 0
 - [**DiSECt**](#disect): a differentiable simulation engine for autonomous **robotic cutting**.
 - [**ThinShellLab**](#thinshelllab): a differentiable simulator for manipulating **thin-shell materials**, such as cloths and papers.
 - [**DaxBench**](#daxbench): a **deformable object manipulation** benchmark with differentiable physics.
+- [**NimblePhysics**](#nimblephysics): a general purpose differentiable physics engine for **articulated rigid bodies**.
+- [**MuJoCo XLA(MJX)**](#mjx): a re-implementation of the MuJoCo physics engine in JAX, which is differentiable.
 
 ---
 
@@ -208,4 +210,49 @@ ThinShellLab is a fully differentiable simulation platform tailored for robotic 
   </div>
 </div>
 DaXBench is a differentiable simulation framework for deformable object manipulation. While existing work often focuses on a specific type of deformable objects, DaXBench supports fluid, rope, cloth, etc ; it provides a general-purpose benchmark to evaluate widely different DOM methods, including planning, imitation learning, and reinforcement learning. DaXBench combines recent advances in deformable object simulation with JAX, a high-performance computational framework. All DOM tasks in DaXBench are wrapped with the OpenAI Gym API for easy integration with DOM algorithms.
+</details>
+
+## NimblePhysics
+
+> **NimbelPhysics** is a general purpose differentiable physics engine for **articulated rigid bodies**.
+
+<details open> <summary>Details</summary>
+<h2 align="center">
+  <b>NimblePhysics</b>
+
+<div align="center">
+    <a href="https://nimblephysics.org" target="_blank"><img src="https://img.shields.io/badge/Website-NimblePhysics-red"></img></a>
+    &nbsp;
+    <a href="https://arxiv.org/abs/2103.16021" target="_blank"><img src="https://img.shields.io/badge/Paper-ArXiv-green"></img></a>
+    &nbsp;
+    <a href="https://github.com/keenon/nimblephysics" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple"></img></a>
+</div>
+</h2>
+
+<div align="center">
+<div style={{ textAlign: 'center' }}>
+    <img src="https://nimblephysics.org/docs/_images/Falisse_Stair_Up.gif"  />
+  </div>
+
+Nimble is a toolkit for doing AI on human biomechanics (physically simulated realistic human bodies), written in C++ for speed, but with nice Python bindings. It focuses on studying real physical human bodies. Nimble started life as a general purpose differentiable physics engine, as a fork of the (not differentiable) DART physics engine. 
+</details>
+
+## MJX
+
+> **MuJoCo XLA(MJX)** is a re-implementation of the MuJoCo physics engine in JAX.
+
+<details open> <summary>Details</summary>
+<h2 align="center">
+  <b>MuJoCo XLA(MJX)</b>
+
+<div align="center">
+    <a href="https://mujoco.readthedocs.io/en/stable/mjx.html" target="_blank"><img src="https://img.shields.io/badge/Website-MJX-red"></img></a>
+    &nbsp;
+    <a href="https://github.com/google-deepmind/mujoco/tree/main/mjx" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple"></img></a>
+</div>
+</h2>
+
+<div align="center">
+
+Starting with version 3.0.0, MuJoCo includes MuJoCo XLA (MJX) under the mjx directory. MJX allows MuJoCo to run on compute hardware supported by the XLA compiler via the JAX framework. MJX runs on a all platforms supported by JAX: Nvidia and AMD GPUs, Apple Silicon, and Google Cloud TPUs. The MJX API is consistent with the main simulation functions in the MuJoCo API.
 </details>
