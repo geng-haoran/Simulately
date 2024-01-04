@@ -13,7 +13,7 @@ Here is a table including a brief summary for physics simulators:
 |[IsaacGym](https://developer.nvidia.com/isaac-gym) |            PhysX 5, Flex            |        Rasterization;        |RGBD; Force; Contact;                              |    Rigid;Soft;Cloth    |        ✔        |     ✘      |
 |[SAPIEN](https://sapien.ucsd.edu/)                 |            PhysX 5, Warp            | Rasterization; RayTracing⭐️; |RGBD; Force; Contact;                              |    Rigid;Soft;Fluid    |        ✘        |     ✔      |
 |[Pybullet](https://pybullet.org/wordpress/)        |               Bullet                |        Rasterization;        |RGBD; Force; IMU; Tactile;                         |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
-|[MuJoCo](https://mujoco.org/)                      |               MuJoCo                |        Rasterization;        |RGBD; Force; IMU; Tactile;                         |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
+|[MuJoCo](https://mujoco.org/)                      |               MuJoCo                |        Rasterization;        |RGBD; Force; IMU; Tactile;                         |    Rigid;Soft;Cloth    |        ✔💡      |     ✔      |
 |[CoppeliaSim](https://www.coppeliarobotics.com/)   | MuJoCo; Bullet; ODE; Newton; Vortex | Rasterization; RayTracing🔶; |RGBD; Force; Contact;                              |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
 |[Gazebo](https://gazebosim.org/home)               |     Bullet; ODE; DART; Simbody      |        Rasterization;        |RGBD; Lidar; Force; IMU;                           |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
 
@@ -25,11 +25,21 @@ Here is a table including a brief summary for physics simulators:
 For example, it can perform ray-casting operations, which are useful for sensor simulations and collision detections.
 However, this is not the same as full-fledged ray tracing for photorealistic rendering.
 
+💡: [MJX](https://mujoco.readthedocs.io/en/stable/mjx.html) allows MuJoCo to run on compute hardware supported 
+by the XLA compiler via the JAX framework. MJX runs on a all platforms supported by JAX: Nvidia and 
+AMD GPUs, Apple Silicon, and Google Cloud TPUs.
+
 ## Rendering
 
 ### Comparison of Rendering Speed
 
 We build up the same environment with all the simulators. Here are the rendered images and rendering speed🟡.
+
+Notice:
+- The rendering results are evaluated on two machines and we report two evaluation results.
+- The rendering code can be found under `code/rendering` folder, see [here](https://github.com/geng-haoran/Simulately/tree/code/rendering) for more details.
+- We are only providing as comprehensive a result as possible. The results are not completely authoritative and are not in any way inductive. The test code is all public. If you have any questions about the test, you can first take a look at the corresponding code, and then try to discuss it with us openly in the issue.
+- Everyone is welcome to contribute the test code and results to this project.
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
   <div style={{ textAlign: 'center', marginRight: '10px' }}>
@@ -50,9 +60,9 @@ We build up the same environment with all the simulators. Here are the rendered 
 
 |Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Ray Tracing)   |Pybullet (Rasterization)|MuJoCo|
 |:------------------:|:------:|:--------:|:--------:|:-----------------------------:|:------:|
-|     RGB @ FPS      | 1175.74 | 1917.32🤔 | 182.33 |29.50(OpenGL) 13.68(TinyRender)|2219.62 |
-|    Depth @ FPS     | 1467.48 | 1917.32🤔 | 156.31 |29.50(OpenGL) 13.68(TinyRender)|1040.48 |
-| Segmentation @ FPS | 1153.03 | 1917.32🤔 | 141.08  |29.50(OpenGL) 13.68(TinyRender)|316.71  |
+|     RGB @ FPS      | 1175.74 | 1917.32🤔 | 182.33 |29.50(OpenGL) 13.68(TinyRender)|2262.59 |
+|    Depth @ FPS     | 1467.48 | 1917.32🤔 | 156.31 |29.50(OpenGL) 13.68(TinyRender)|1039.91 |
+| Segmentation @ FPS | 1153.03 | 1917.32🤔 | 141.08  |29.50(OpenGL) 13.68(TinyRender)|320.86  |
 
 ⭐️: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is run with 13th Gen Intel Core i9-13900K and RTX 4090.
 
@@ -62,13 +72,11 @@ We build up the same environment with all the simulators. Here are the rendered 
 
 |Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Ray Tracing)  |Pybullet (Rasterization)|MuJoCo|
 |:------------------:|:------:|:--------:|:--------:|:----------------------------:|:------:|
-|     RGB @ FPS      | 228.23 |  785.30  |102.43    |22.49(OpenGL) 7.06(TinyRender)|105.25  |
-|    Depth @ FPS     | 280.56 |  788.34  |92.43    |22.49(OpenGL) 7.06(TinyRender)|305.80  |
-| Segmentation @ FPS | 261.06 |  800.20  |97.43    |22.49(OpenGL) 7.06(TinyRender)|118.22  |
+|     RGB @ FPS      | 228.23 |  785.30  |102.43    |22.49(OpenGL) 7.06(TinyRender)|88.68  |
+|    Depth @ FPS     | 280.56 |  788.34  |92.43    |22.49(OpenGL) 7.06(TinyRender)|288.61  |
+| Segmentation @ FPS | 261.06 |  800.20  |97.43    |22.49(OpenGL) 7.06(TinyRender)|119.74  |
 
 🟡: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with AMD EPYC 7742 64-Core Processor and A100(80G).
-
-
 
 <!-- ### Comparison of Rendering Performance
 
