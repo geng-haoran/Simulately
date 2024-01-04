@@ -280,9 +280,9 @@ const PAPERS: Paper[] = [
   },
   {
     title: 'Maniskill: Generalizable manipulation skill benchmark with large-scale demonstrations',
-    description: 'RAL 2023.',
+    description: 'NeurIPS 2021 (Dataset and Benchmark Track).',
     preview: null,
-    website: 'https://shen-hhao.github.io/Category_Level_Manipulation/',
+    website: 'https://github.com/haosulab/ManiSkill',
     tags: ['rl', 'manipulation'],
   },
   {
