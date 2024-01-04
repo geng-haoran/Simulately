@@ -28,9 +28,11 @@ RGB = 0
 DEPTH = 1
 SEG = 2
 
-test_mode = RGB
+# test_mode = RGB # 120.22
+test_mode = DEPTH # 106.31
+# test_mode = SEG #91.08
 
-dt = 1/1800.0
+dt = 1/180.0
 my_world = World(stage_units_in_meters=1.0, physics_dt=dt, rendering_dt=dt)
 
 cube_2 = my_world.scene.add(
@@ -75,8 +77,8 @@ segs = []
 times = []
 
 for _ in range(1000):
-    s_i = time.time()
     my_world.step(render=True)
+    s_i = time.time()
     if i == 0:
         s = time.time()
     if i >= 0:
@@ -86,9 +88,9 @@ for _ in range(1000):
         # camera.get_current_frame()
         if test_mode == RGB:
             img = data["rgba"]
-            import pdb; pdb.set_trace()
-            im = Image.fromarray(img)
-            im.save("test1.png")
+            # import pdb; pdb.set_trace()
+            # im = Image.fromarray(img)
+            # im.save("test1.png")
             imgs.append(img)
         elif test_mode == DEPTH:
             depth = data['distance_to_image_plane']
@@ -101,9 +103,10 @@ for _ in range(1000):
     i += 1
 e = time.time()
 print("FPS: ", frames/(e-s))
-import pdb; pdb.set_trace()
 times = np.array(times)
 print("mean: ", np.mean(times))
+
+import pdb; pdb.set_trace()
 # assert all depth are equal
 if len(depths)> 0 :
     for i in range(len(depths)-1):

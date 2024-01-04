@@ -31,9 +31,9 @@ renderer.update_scene(d)
 N = 2000
 frames = []
 
-# test_mode = "RGB"
+test_mode = "RGB"
 # test_mode = "DEPTH"
-test_mode = "SEG"
+# test_mode = "SEG"
 
 if test_mode == "DEPTH": 
     renderer.enable_depth_rendering()
@@ -42,12 +42,17 @@ elif test_mode == "SEG":
 
 write_to_file = False
 
-s = time.time()
+ss = time.time()
+times = []
 for i in range(N):
     mujoco.mj_step(m, d)
 
+
+    s = time.time()
     renderer.update_scene(d)
     out = renderer.render()
+    e = time.time()
+    times.append(e-s)
     
     if write_to_file and test_mode == "RGB":
       Image.fromarray(out).save("rgb.png")
@@ -61,7 +66,6 @@ for i in range(N):
       # depths.append(out)
       Image.fromarray(out).save("depth.png")
 
-    # out = renderer.render()
     if write_to_file and test_mode == "SEG":
       geom_ids = out[:, :, 0]
       geom_ids = geom_ids.astype(np.float64) + 1
@@ -71,8 +75,10 @@ for i in range(N):
 
     frames.append(out)
     
-e = time.time()
-print(f"{test_mode} FPS: ", N/(e-s))
+ee = time.time()
+print(f"{test_mode} FPS: ", N/(ee-ss))
+times = np.array(times)
+print("mean: ", 1 / np.mean(times))
 
 """ RESULTS on (RTX 2080TI)
   RGB FPS:  1006.2770196925943
