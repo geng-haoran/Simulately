@@ -13,6 +13,7 @@ sidebar_position: 1
 - [**DiSECt**](#disect): a differentiable simulation engine for autonomous **robotic cutting**.
 - [**ThinShellLab**](#thinshelllab): a differentiable simulator for manipulating **thin-shell materials**, such as cloths and papers.
 - [**DaxBench**](#daxbench): a **deformable object manipulation** benchmark with differentiable physics.
+- [**SoftMac**](#softmac): a differentiable soft body simulation with forecast-based contact model, coupling with articulated rigid bodies and clothes.
 ---
 
 ## SoftGym
@@ -209,3 +210,27 @@ ThinShellLab is a fully differentiable simulation platform tailored for robotic 
 DaXBench is a differentiable simulation framework for deformable object manipulation. While existing work often focuses on a specific type of deformable objects, DaXBench supports fluid, rope, cloth, etc ; it provides a general-purpose benchmark to evaluate widely different DOM methods, including planning, imitation learning, and reinforcement learning. DaXBench combines recent advances in deformable object simulation with JAX, a high-performance computational framework. All DOM tasks in DaXBench are wrapped with the OpenAI Gym API for easy integration with DOM algorithms.
 </details>
 
+
+## SoftMac
+
+> **SoftMac** is a differentiable soft body simulation with forecast-based contact model, coupling with articulated rigid bodies and clothes.
+
+<details open> <summary>Details</summary>
+<h2 align="center">
+  <b>SoftMac</b>
+
+<div align="center">
+    <a href="https://sites.google.com/view/softmac" target="_blank"><img src="https://img.shields.io/badge/Website-SoftMac-red"></img></a>
+    &nbsp;
+    <a href="https://arxiv.org/abs/2312.03297" target="_blank"><img src="https://img.shields.io/badge/Paper-ArXiv-green"></img></a>
+    &nbsp;
+    <a href="https://github.com/damianliumin/SoftMAC" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple"></img></a>
+</div>
+</h2>
+
+<div align="center">
+<div style={{ textAlign: 'center' }}>
+    <img src="https://lh3.googleusercontent.com/ijg0PhkHk9oR2MYuiY5t9evsDhzKpN-YDhFF3SOlIZ8QY96y70JbLBmi03CR0q5J24VFT72nSa2aBFFtXJxsnoyejjhB5mcjJ82UV2uV1TqgcP_Ic4e-4PFMQhqvRmQRfg=w1280"  />
+  </div>
+SoftMAC, a differentiable simulation framework coupling soft bodies with articulated rigid bodies and clothes. SoftMAC simulates soft bodies with the continuum-mechanics-based Material Point Method (MPM).
+</details>
