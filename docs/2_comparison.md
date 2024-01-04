@@ -72,11 +72,13 @@ Notice:
 
 |Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Ray Tracing)  |Pybullet (Rasterization)|MuJoCo|
 |:------------------:|:------:|:--------:|:--------:|:----------------------------:|:------:|
-|     RGB @ FPS      | 228.23 |  785.30  |102.43    |22.49(OpenGL) 7.06(TinyRender)|88.68  |
-|    Depth @ FPS     | 280.56 |  788.34  |92.43    |22.49(OpenGL) 7.06(TinyRender)|288.61  |
-| Segmentation @ FPS | 261.06 |  800.20  |97.43    |22.49(OpenGL) 7.06(TinyRender)|119.74  |
+|     RGB @ FPS      | 228.23 |  789.25🤔  |102.43    |22.49(OpenGL) 7.06(TinyRender)|88.68  |
+|    Depth @ FPS     | 280.56 |  789.25🤔  |92.43    |22.49(OpenGL) 7.06(TinyRender)|288.61  |
+| Segmentation @ FPS | 261.06 |  789.25🤔  |97.43    |22.49(OpenGL) 7.06(TinyRender)|119.74  |
 
 🟡: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with AMD EPYC 7742 64-Core Processor and A100(80G).
+
+🤔: In IsaacGym, we cannot decouple depth, segmentation, and RGB rendering. Therefore, we report average FPS across all three rendering modes.
 
 <!-- ### Comparison of Rendering Performance
 
