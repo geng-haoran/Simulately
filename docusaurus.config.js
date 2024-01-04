@@ -107,27 +107,6 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'BIGAI',
-                href: 'http://www.bigai.ai/',
-              },
-              {
-                label: 'PKU EPIC Lab',
-                href: 'https://pku-epic.github.io/',
-              },
-              {
-                label: 'PKU CoRe Lab',
-                href: 'https://pku.ai/',
-              },
-              {
-                label: 'UCLA VCLA',
-                href: 'https://vcla.stat.ucla.edu/',
-              },
-            ],
-          },
-          {
             title: 'Powered By',
             items: [
               {
