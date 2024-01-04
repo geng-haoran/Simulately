@@ -467,6 +467,27 @@ const PAPERS: Paper[] = [
     website: 'https://github.com/harryzhangOG/flowbotpp',
     tags: ['rl', 'manipulation', 'articulated'],
   },
+  {
+    title: 'SAGCI-System: Towards Sample-Efficient, Generalizable, Compositional, and Incremental Robot Learning',
+    description: 'A system for articulated object manipulation via differentiable simulation. ICRA 2022.',
+    preview: null,
+    website: 'https://sites.google.com/view/egci',
+    tags: ['rl', 'manipulation', 'articulated'],
+  },
+  {
+    title: 'SAM-RL: Sensing-Aware Model-based Reinforcement Learning via Differentiable Physics-based Simulation and Rendering',
+    description: 'RSS 2023. Best System Paper Finalist.',
+    preview: null,
+    website: 'https://sites.google.com/view/rss-sam-rl',
+    tags: ['rl', 'manipulation'],
+  },
+  {
+    title: 'Diff-LfD: Contact-aware Model-based Learning from Visual Demonstration for Robotic Manipulation via Differentiable Physics-based Simulation and Rendering',
+    description: 'CoRL 2023.',
+    preview: null,
+    website: 'https://sites.google.com/view/diff-lfd',
+    tags: ['rl', 'manipulation'],
+  },
 ];
 
 function sortPapers() {

@@ -14,7 +14,7 @@ sidebar_position: 0
 - [**DaxBench**](#daxbench): a **deformable object manipulation** benchmark with differentiable physics.
 - [**NimblePhysics**](#nimblephysics): a general purpose differentiable physics engine for **articulated rigid bodies**.
 - [**MuJoCo XLA(MJX)**](#mjx): a re-implementation of the MuJoCo physics engine in JAX, which is differentiable.
-
+- [**SoftMAC**](#softmac): a differentiable soft body simulation with forecast-based contact model, coupling with articulated rigid bodies and clothes.
 ---
 
 ## DiffSim
@@ -258,3 +258,26 @@ Nimble is a toolkit for doing AI on human biomechanics (physically simulated rea
 Starting with version 3.0.0, MuJoCo includes MuJoCo XLA (MJX) under the mjx directory. MJX allows MuJoCo to run on compute hardware supported by the XLA compiler via the JAX framework. MJX runs on a all platforms supported by JAX: Nvidia and AMD GPUs, Apple Silicon, and Google Cloud TPUs. The MJX API is consistent with the main simulation functions in the MuJoCo API.
 </div>
 </details>
+
+## SoftMac
+
+> **SoftMac** is a differentiable soft body simulation with forecast-based contact model, coupling with articulated rigid bodies and clothes.
+
+<details open> <summary>Details</summary>
+<h2 align="center">
+  <b>SoftMac</b>
+
+<div align="center">
+    <a href="https://sites.google.com/view/softmac" target="_blank"><img src="https://img.shields.io/badge/Website-SoftMac-red"></img></a>
+    &nbsp;
+    <a href="https://arxiv.org/abs/2312.03297" target="_blank"><img src="https://img.shields.io/badge/Paper-ArXiv-green"></img></a>
+    &nbsp;
+    <a href="https://github.com/damianliumin/SoftMAC" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple"></img></a>
+</div>
+</h2>
+
+<div align="center">
+<div style={{ textAlign: 'center' }}>
+    <img src="https://lh3.googleusercontent.com/ijg0PhkHk9oR2MYuiY5t9evsDhzKpN-YDhFF3SOlIZ8QY96y70JbLBmi03CR0q5J24VFT72nSa2aBFFtXJxsnoyejjhB5mcjJ82UV2uV1TqgcP_Ic4e-4PFMQhqvRmQRfg=w1280"  />
+  </div>
+SoftMAC, a differentiable simulation framework coupling soft bodies with articulated rigid bodies and clothes. SoftMAC simulates soft bodies with the continuum-mechanics-based Material Point Method (MPM).
