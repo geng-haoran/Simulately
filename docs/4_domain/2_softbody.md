@@ -233,3 +233,5 @@ DaXBench is a differentiable simulation framework for deformable object manipula
     <img src="https://lh3.googleusercontent.com/ijg0PhkHk9oR2MYuiY5t9evsDhzKpN-YDhFF3SOlIZ8QY96y70JbLBmi03CR0q5J24VFT72nSa2aBFFtXJxsnoyejjhB5mcjJ82UV2uV1TqgcP_Ic4e-4PFMQhqvRmQRfg=w1280"  />
   </div>
 SoftMAC, a differentiable simulation framework coupling soft bodies with articulated rigid bodies and clothes. SoftMAC simulates soft bodies with the continuum-mechanics-based Material Point Method (MPM).
+</div>
+</details>
