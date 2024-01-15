@@ -28,10 +28,14 @@ has occurred and provides additional information like contact points and collisi
 collision detection can take from 10% to 50% of the total computation time, depending on the
 complexity of the object geometry.
 
-Using convex meshes to represent geometry can accelerate the narrow phase of collision detection, enhancing
-the overall performance of a physical simulation. Moreover, many simulators automatically convert your imported mesh
-into a convex hull by default. If convex decomposition isn't performed beforehand, the simulation results might not be
-as expected. A classic example is a "closed mug" which cannot be used to hold water in the simulation.
+Using convex meshes to represent geometry can accelerate the narrow phase of collision detection, by simplifying the
+collision detection process, resulting in faster collision detection algorithms compared to the algorithm handling
+non-convex meshes.
+Thus, it can enhance the overall performance of physical simulation.
+Moreover, many simulators automatically **convert your imported mesh into a convex hull by default** (*middle sub-figure
+below*). If convex decomposition isn't performed beforehand, the simulation
+results might not be as expected. A classic example is a "closed mug" which cannot be used to hold water in the
+simulation.
 
 ![mug example](imgs/mug_collision.svg)
 
@@ -137,7 +141,7 @@ p.vhacd(YOUR_MESH_FILE_PATH, YOUR_CONVEX_MESH_SAVE_PATH, "log.txt", resolution=1
 For highly complex geometries, the default parameters of these convex decomposition algorithms may not yield
 satisfactory results. As such, you might need to adjust the decomposition parameters extensively. In such a scenario,
 rerunning simulation code each time can be laborious. A more efficient approach is to perform decomposition outside the
-simulator, evaluate the performance, and once satisfied, import the final output into the simulator. 
+simulator, evaluate the performance, and once satisfied, import the final output into the simulator.
 For instance, you can use CoACD in a standalone manner:
 
 ```bash
@@ -145,6 +149,7 @@ pip install coacd
 
 coacd -i INPUT_MESH.obj -o OUTPUT_MESH.obj -t 0.1
 ```
+
 You can use [MessLab](https://www.meshlab.net/) to visualize the results of convex decomposition:
 
 ![meshlab_convex](imgs/meshlab_convex.png)
@@ -152,7 +157,7 @@ You can use [MessLab](https://www.meshlab.net/) to visualize the results of conv
 Please note that this command will store multiple convex meshes in a single `.obj` file. As a result, when using this
 convex mesh, you must explicitly inform your simulator that it contains multiple meshes. Failing to do so will cause
 your `.obj` file to be interpreted as a single mesh, which negates the purpose of performing convex
-decomposition. 
+decomposition.
 
 ```python
 # In IsaacGym
