@@ -11,11 +11,11 @@ To query a link in a URDF file, we provide code using urdfpy and xml parser.
     from urdfpy import URDF
     # Load URDF file
     robot = URDF.load('path_to_urdf_file.urdf')
-
+    
     # Query a link by name
     link_name = 'desired_link_name'
     link = robot.link_map[link_name]
-
+    
     # Access link properties
     print(f"Link name: {link.name}")
     print(f"Link inertia: {link.inertia}")
@@ -23,15 +23,15 @@ To query a link in a URDF file, we provide code using urdfpy and xml parser.
 - xml
     ```python
     import xml.etree.ElementTree as ET
-
+    
     # Load and parse the URDF file
     tree = ET.parse('path_to_urdf_file.urdf')
     root = tree.getroot()
-
+    
     # Query a link by name
     link_name = 'desired_link_name'
     link = root.find(f".//link[@name='{link_name}']")
-
+    
     if link is not None:
         print(f"Found link: {link.get('name')}")
     else:
@@ -42,14 +42,14 @@ To query a joint in a URDF file, we provide code using urdfpy and xml parser.
 - urdfpy
   ```python
   from urdfpy import URDF
-
+  
     # Load URDF file
     robot = URDF.load('path_to_urdf_file.urdf')
-
+  
     # Query a joint by name
     joint_name = 'desired_joint_name'
     joint = robot.joint_map[joint_name]
-
+  
     # Access joint properties
     print(f"Joint name: {joint.name}")
     print(f"Joint type: {joint.joint_type}")
@@ -57,15 +57,15 @@ To query a joint in a URDF file, we provide code using urdfpy and xml parser.
 - xml
     ```python
     import xml.etree.ElementTree as ET
-
+    
     # Load and parse the URDF file
     tree = ET.parse('path_to_urdf_file.urdf')
     root = tree.getroot()
-
+    
     # Query a joint by name
     joint_name = 'desired_joint_name'
     joint = root.find(f".//joint[@name='{joint_name}']")
-
+    
     if joint is not None:
         print(f"Found joint: {joint.get('name')}")
     else:
@@ -367,3 +367,116 @@ if __name__ == '__main__':
 
 </details>
 
+### Speed Things Up with Hand-Written FK
+
+While the pytorch_kinematics package provides a user-friendly method for executing batched forward kinematics, its current implementation exhibits inefficiencies. For instance, when converting a joint angle to the joint rotation of a revolute joint, it initially translates the axis-angle representation to quaternions. Following this step, it constructs a `pytorch_kinematics.transforms.Transforms3d` object, which subsequently converts the quaternions into rotation matrices.
+
+<details> <summary>class.Frame for converting joint angle to joint rotation</summary>
+
+```python
+    def get_transform(self, theta):
+        dtype = self.joint.axis.dtype
+        d = self.joint.axis.device
+        if self.joint.joint_type == 'revolute':
+            t = tf.Transform3d(rot=tf.axis_angle_to_quaternion(theta * self.joint.axis), dtype=dtype, device=d)  # this line converts theta to quaternions then to rotation matrix
+        elif self.joint.joint_type == 'prismatic':
+            t = tf.Transform3d(pos=theta * self.joint.axis, dtype=dtype, device=d)
+        elif self.joint.joint_type == 'fixed':
+            t = tf.Transform3d(default_batch_size=theta.shape[0], dtype=dtype, device=d)
+        else:
+            raise ValueError("Unsupported joint type %s." % self.joint.joint_type)
+        return self.joint.offset.compose(t)
+```
+
+</details>
+
+Furthermore, the handling of transformation composition within `pk` is inappropriate, leading to increased computational complexity. When composing multiple `Transforms3d` objects, `pk` stores all these objects in a list and multiplies them successively upon calling `get_matrix`. Consequently, for the nth joint on a kinematic chain, `pk` performs `2*n` matrix multiplications when invoking `get_matrix`, whereas it could achieve the same outcome with only 2 matrix multiplications by reusing the composed transformation matrix from the preceding joint.
+
+<details> <summary>class.Transforms3d for transformation composition</summary>
+
+```python
+    def compose(self, *others):
+        """
+        Return a new Transform3d with the tranforms to compose stored as
+        an internal list.
+
+        Args:
+            *others: Any number of Transform3d objects
+
+        Returns:
+            A new Transform3d with the stored transforms
+        """
+        out = Transform3d(device=self.device, dtype=self.dtype)
+        out._matrix = self._matrix.clone()
+        for other in others:
+            if not isinstance(other, Transform3d):
+                msg = "Only possible to compose Transform3d objects; got %s"
+                raise ValueError(msg % type(other))
+        out._transforms = self._transforms + list(others)
+        return out
+            return out
+
+    def get_matrix(self):
+        """
+        Return a matrix which is the result of composing this transform
+        with others stored in self.transforms. Where necessary transforms
+        are broadcast against each other.
+        For example, if self.transforms contains transforms t1, t2, and t3, and
+        given a set of points x, the following should be true:
+
+        .. code-block:: python
+
+            y1 = t1.compose(t2, t3).transform(x)
+            y2 = t3.transform(t2.transform(t1.transform(x)))
+            y1.get_matrix() == y2.get_matrix()
+
+        Returns:
+            A transformation matrix representing the composed inputs.
+        """
+        composed_matrix = self._matrix.clone()
+        if len(self._transforms) > 0:
+            for other in self._transforms:
+                other_matrix = other.get_matrix()
+                composed_matrix = _broadcast_bmm(composed_matrix, other_matrix)
+        return composed_matrix
+```
+
+</details>
+
+Additionally, `pk` employs multiple layers of encapsulation, resulting in overhead, particularly when all the code is composed in Python. While attempting to accelerate batched forward kinematics (FK) using GPU, `pk` generates a sequence of small CUDA kernels interspersed with gaps to dispatch these kernels and advance the Python code. In cases where gradients are necessary during FK, this process is reiterated during the backward pass. As forward kinematics necessitates sequential computation, this overhead becomes notably severe, potentially evolving into the primary bottleneck during the entire training or optimization iteration.
+
+![Nsight Systems Profile of a Single 22DoF FK Invocation of Pytorch Kinematics](imgs/pk_speed_profile.jpg)
+
+To mitigate these inefficiencies, it's recommended to integrating forward kinematics directly within the `class.HandModel`. Optimize by directly converting axis angles to rotation matrices. But avoid using `pytorch3d.transforms.axis_angle_to_matrix` since it also uses quaternions as an inefficient intermediate. Additionally, be sure to reuse the translation and rotation from the parent joint. The rest is straightforward. 
+
+<details> <summary>optimized update_kinematics method for class.HandModel</summary>
+
+```python
+    def update_kinematics(self, hand_pose):
+        self.hand_pose = hand_pose
+        if self.hand_pose.requires_grad:
+            self.hand_pose.retain_grad()
+        self.global_translation = self.hand_pose[:, 0:3]
+        self.global_rotation = robust_compute_rotation_matrix_from_ortho6d(self.hand_pose[:, 3:9])
+        batch_size = len(self.hand_pose)
+        self.local_translations = {}
+        self.local_rotations = {}
+        self.local_translations[self.joints_parent[0]] = torch.zeros([batch_size, 3], dtype=torch.float, device=self.device)
+        self.local_rotations[self.joints_parent[0]] = torch.eye(3, dtype=torch.float, device=self.device).expand(batch_size, 3, 3).contiguous()
+        for joint_name, j in self.joint_order.items():
+            i = self.joint_names.index(joint_name)
+            child_name = self.joints_child[i]
+            parent_name = self.joints_parent[i]
+            # reuse parent joint's results
+            translations = self.local_rotations[parent_name] @ self.joints_translation[i] + self.local_translations[parent_name]
+            rotations = self.local_rotations[parent_name] @ self.joints_rotation[i]
+            if self.joints_type[i] == 'revolute':
+                thetas = self.hand_pose[:, 9 + j].view(batch_size, 1, 1)
+                K = self.joints_axis_K[i]
+                joint_rotations = torch.eye(3, dtype=torch.float, device=self.device) + torch.sin(thetas) * K + (1 - torch.cos(thetas)) * (K @ K)  # axis-angles to rotation matrices (Rodrigues' rotation formula)
+                rotations = rotations @ joint_rotations
+            self.local_translations[child_name] = translations
+            self.local_rotations[child_name] = rotations
+```
+
+</details>
