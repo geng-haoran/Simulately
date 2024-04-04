@@ -98,6 +98,7 @@ const config = {
           {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Wiki'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/related', label: 'Related Work', position: 'left'},
+          {to: '/daily/daily', label: 'Daily', position: 'left'},
           {to: '/gpt/gpt', label: 'Simulately GPT', position: 'left'},
           {href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right'},
           {href: 'https://chat.openai.com/g/g-cjN7iYpRZ-simulately', label: 'Ask GPT', position: 'right'}
