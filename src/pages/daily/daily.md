@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 ## 2024-04-04
 
 ### SliceIt! -- A Dual Simulator Framework for Learning Robot Food Slicing
@@ -12,13 +19,13 @@ Cooking robots can enhance the home experience by reducing the burden of daily c
 
 [Paper Link](https://arxiv.org/abs/2404.02569)
 
-![Teaser Image](imgs/2024-04-04_17-52.png)
 <div style={{ display: 'flex', justifyContent: 'center' }}>
-  <div style={{ textAlign: 'center', marginRight: '10px' }}>
-    <img src="/img/daily/2024-04-04_17-52.png" alt="SAPIEN Rendering" style={{ width: 'auto', maxHeight: '600px' }} />
-    <p>SAPIEN</p>
-  </div>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-04_17-52.png" alt="image" style={{ width: 'auto', maxHeight: '600px' }} />
 </div>
+</div>
+
+---
 
 ### A Survey of Optimization-based Task and Motion Planning: From Classical To Learning Approaches
 
@@ -32,9 +39,19 @@ Task and Motion Planning (TAMP) integrates high-level task planning and low-leve
 
 [Paper Link](https://arxiv.org/abs/2404.02817)
 
-![Teaser Image](imgs/2024-04-04_17-42.png)
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-04_17-42.png" alt="image" style={{ width: 'auto', maxHeight: '600px' }} />
+</div>
+</div>
 
-![Pipeline Image](imgs/2024-04-04_17-42_1.png)
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-04_17-42_1.png" alt="image" style={{ width: 'auto', maxHeight: '600px' }} />
+</div>
+</div>
+
+---
 
 ### Learning Quadrupedal Locomotion via Differentiable Simulation
 
@@ -48,4 +65,10 @@ The emergence of differentiable simulators enabling analytic gradient computatio
 
 [Paper Link](https://arxiv.org/abs/2404.02887)
 
-![Teaser Image](imgs/2024-04-04_17-00.png)
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-04_17-00.png" alt="image" style={{ width: 'auto', maxHeight: '600px' }} />
+</div>
+</div>
+
+---
