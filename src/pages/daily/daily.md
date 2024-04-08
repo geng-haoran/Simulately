@@ -213,3 +213,68 @@ The emergence of differentiable simulators enabling analytic gradient computatio
 </div>
 
 ---
+## 2024-04-03
+
+### Generalizing 6-DoF Grasp Detection via Domain Prior Knowledge
+
+- **Authors**: Haoxiang Ma, Modi Shi, Boyang Gao, Di Huang
+- **Main Affiliations**: Beihang University, Harbin Institute of Technology, Geometry Robotics
+- **Tags**: `6-DoF`
+
+#### Abstract
+
+We focus on the generalization ability of the 6-DoF grasp detection method in this paper. While learning-based grasp detection methods can predict grasp poses for unseen objects using the grasp distribution learned from the training set, they often exhibit a significant performance drop when encountering objects with diverse shapes and structures. To enhance the grasp detection methods' generalization ability, we incorporate domain prior knowledge of robotic grasping, enabling better adaptation to objects with significant shape and structure differences. More specifically, we employ the physical constraint regularization during the training phase to guide the model towards predicting grasps that comply with the physical rule on grasping. For the unstable grasp poses predicted on novel objects, we design a contact-score joint optimization using the projection contact map to refine these poses in cluttered scenarios. Extensive experiments conducted on the GraspNet-1billion benchmark demonstrate a substantial performance gain on the novel object set and the real-world grasping experiments also demonstrate the effectiveness of our generalizing 6-DoF grasp detection method.
+
+[Paper Link](https://arxiv.org/abs/2404.01727)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-08_17-45.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+## 2024-04-01
+
+### Snap-it, Tap-it, Splat-it: Tactile-Informed 3D Gaussian Splatting for Reconstructing Challenging Surfaces
+
+- **Authors**: Mauro Comi, Alessio Tonioni, Max Yang, Jonathan Tremblay, Valts Blukis, Yijiong Lin, Nathan F. Lepora, Laurence Aitchison
+- **Main Affiliations**: University of Bristol, Google Zurich, NVIDIA
+- **Tags**: `tactile`, `Gaussian Splatting`
+
+#### Abstract
+
+Touch and vision go hand in hand, mutually enhancing our ability to understand the world. From a research perspective, the problem of mixing touch and vision is underexplored and presents interesting challenges. To this end, we propose Tactile-Informed 3DGS, a novel approach that incorporates touch data (local depth maps) with multi-view vision data to achieve surface reconstruction and novel view synthesis. Our method optimises 3D Gaussian primitives to accurately model the object's geometry at points of contact. By creating a framework that decreases the transmittance at touch locations, we achieve a refined surface reconstruction, ensuring a uniformly smooth depth map. Touch is particularly useful when considering non-Lambertian objects (e.g. shiny or reflective surfaces) since contemporary methods tend to fail to reconstruct with fidelity specular highlights. By combining vision and tactile sensing, we achieve more accurate geometry reconstructions with fewer images than prior methods. We conduct evaluation on objects with glossy and reflective surfaces and demonstrate the effectiveness of our approach, offering significant improvements in reconstruction quality.
+
+[Paper Link](https://arxiv.org/abs/2403.20275)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-08_17-31.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+### Learning Visual Quadrupedal Loco-Manipulation from Demonstrations
+
+- **Authors**: Zhengmao He, Kun Lei, Yanjie Ze, Koushil Sreenath, Zhongyu Li, Huazhe Xu
+- **Main Affiliations**: Shanghai Qizhi Institute, Hong Kong University of Science and Technology, University of California, Berkeley, IIIS, Tsinghua University
+- **Tags**: `Behavioral Cloning`, `Reinforcement Learning`
+
+#### Abstract
+
+Quadruped robots are progressively being integrated into human environments. Despite the growing locomotion capabilities of quadrupedal robots, their interaction with objects in realistic scenes is still limited. While additional robotic arms on quadrupedal robots enable manipulating objects, they are sometimes redundant given that a quadruped robot is essentially a mobile unit equipped with four limbs, each possessing 3 degrees of freedom (DoFs). Hence, we aim to empower a quadruped robot to execute real-world manipulation tasks using only its legs. We decompose the loco-manipulation process into a low-level reinforcement learning (RL)-based controller and a high-level Behavior Cloning (BC)-based planner. By parameterizing the manipulation trajectory, we synchronize the efforts of the upper and lower layers, thereby leveraging the advantages of both RL and BC. Our approach is validated through simulations and real-world experiments, demonstrating the robot's ability to perform tasks that demand mobility and high precision, such as lifting a basket from the ground while moving, closing a dishwasher, pressing a button, and pushing a door. Project website: this https URL
+
+[Paper Link](https://arxiv.org/abs/2403.20328)
+
+[Website Link](https://zhengmaohe.github.io/leg-manip)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-08_17-20.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
