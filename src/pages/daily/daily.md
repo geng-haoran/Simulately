@@ -1,3 +1,47 @@
+## 2024-04-09
+### Long-horizon Locomotion and Manipulation on a Quadrupedal Robot with Large Language Models
+
+- **Authors**: Yutao Ouyang, Jinhan Li, Yunfei Li, Zhongyu Li, Chao Yu, Koushil Sreenath, Yi Wu
+- **Main Affiliations**: Shanghai Qizhi Institute, Tsinghua University, University of California, Berkeley
+- **Tags**: `Large Language Models`
+
+#### Abstract
+
+We present a large language model (LLM) based system to empower quadrupedal robots with problem-solving abilities for long-horizon tasks beyond short-term motions. Long-horizon tasks for quadrupeds are challenging since they require both a high-level understanding of the semantics of the problem for task planning and a broad range of locomotion and manipulation skills to interact with the environment. Our system builds a high-level reasoning layer with large language models, which generates hybrid discrete-continuous plans as robot code from task descriptions. It comprises multiple LLM agents: a semantic planner for sketching a plan, a parameter calculator for predicting arguments in the plan, and a code generator to convert the plan into executable robot code. At the low level, we adopt reinforcement learning to train a set of motion planning and control skills to unleash the flexibility of quadrupeds for rich environment interactions. Our system is tested on long-horizon tasks that are infeasible to complete with one single skill. Simulation and real-world experiments show that it successfully figures out multi-step strategies and demonstrates non-trivial behaviors, including building tools or notifying a human for help.
+
+[Paper Link](https://arxiv.org/abs/2404.05291)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-09_22-05.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+
+
+### Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer
+
+- **Authors**: Xinyang Gu, Yen-Jen Wang, Jianyu Chen
+- **Main Affiliations**: Shanghai Qizhi Institute, RobotEra, IIIS, Tsinghua University
+- **Tags**: `Simulation to Reality`
+
+#### Abstract
+
+Humanoid-Gym is an easy-to-use reinforcement learning (RL) framework based on Nvidia Isaac Gym, designed to train locomotion skills for humanoid robots, emphasizing zero-shot transfer from simulation to the real-world environment. Humanoid-Gym also integrates a sim-to-sim framework from Isaac Gym to Mujoco that allows users to verify the trained policies in different physical simulations to ensure the robustness and generalization of the policies. This framework is verified by RobotEra's XBot-S (1.2-meter tall humanoid robot) and XBot-L (1.65-meter tall humanoid robot) in a real-world environment with zero-shot sim-to-real transfer. The project website and source code can be found at: this https URL.
+
+[Paper Link](https://arxiv.org/abs/2404.05695)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-09_21-00.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+
 ## 2024-04-05
 ### Self-supervised 6-DoF Robot Grasping by Demonstration via Augmented Reality Teleoperation System
 
