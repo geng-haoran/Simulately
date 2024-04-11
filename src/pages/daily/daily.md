@@ -1,4 +1,67 @@
+## 2024-04-11
+
+### GOAT-Bench: A Benchmark for Multi-Modal Lifelong Navigation
+
+- **Authors**: Mukul Khanna, Ram Ramrakhya, Gunjan Chhablani, Sriram Yenamandra, Theophile Gervet, Matthew Chang, Zsolt Kira, Devendra Singh Chaplot, Dhruv Batra, Roozbeh Mottaghi
+- **Main Affiliations**: Georgia Institute of Technology, Carnegie Mellon University, University of Illinois Urbana-Champaign, Mistral AI, University of Washington
+- **Tags**: `Large Language Models`
+
+#### Abstract
+
+The Embodied AI community has made significant strides in visual navigation tasks, exploring targets from 3D coordinates, objects, language descriptions, and images. However, these navigation models often handle only a single input modality as the target. With the progress achieved so far, it is time to move towards universal navigation models capable of handling various goal types, enabling more effective user interaction with robots. To facilitate this goal, we propose GOAT-Bench, a benchmark for the universal navigation task referred to as GO to AnyThing (GOAT). In this task, the agent is directed to navigate to a sequence of targets specified by the category name, language description, or image in an open-vocabulary fashion. We benchmark monolithic RL and modular methods on the GOAT task, analyzing their performance across modalities, the role of explicit and implicit scene memories, their robustness to noise in goal specifications, and the impact of memory in lifelong scenarios.
+
+[Paper Link](https://arxiv.org/abs/2404.06609)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-11_16-29.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+### GenCHiP: Generating Robot Policy Code for High-Precision and Contact-Rich Manipulation Tasks
+
+- **Authors**: Kaylee Burns, Ajinkya Jain, Keegan Go, Fei Xia, Michael Stark, Stefan Schaal, Karol Hausman
+- **Main Affiliations**: [Google] Intrinsic, Stanford University, Google DeepMind
+- **Tags**: `Large Language Models`
+
+#### Abstract
+
+Large Language Models (LLMs) have been successful at generating robot policy code, but so far these results have been limited to high-level tasks that do not require precise movement. It is an open question how well such approaches work for tasks that require reasoning over contact forces and working within tight success tolerances. We find that, with the right action space, LLMs are capable of successfully generating policies for a variety of contact-rich and high-precision manipulation tasks, even under noisy conditions, such as perceptual errors or grasping inaccuracies. Specifically, we reparameterize the action space to include compliance with constraints on the interaction forces and stiffnesses involved in reaching a target pose. We validate this approach on subtasks derived from the Functional Manipulation Benchmark (FMB) and NIST Task Board Benchmarks. Exposing this action space alongside methods for estimating object poses improves policy generation with an LLM by greater than 3x and 4x when compared to non-compliant action spaces
+
+[Paper Link](https://arxiv.org/abs/2404.06645)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-11_16-21.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+### Wild Visual Navigation: Fast Traversability Learning via Pre-Trained Models and Online Self-Supervision
+
+- **Authors**: Matías Mattamala, Jonas Frey, Piotr Libera, Nived Chebrolu, Georg Martius, Cesar Cadena, Marco Hutter, Maurice Fallon
+- **Main Affiliations**: University of Oxford, Robotic Systems Lab-ETH Zurich
+- **Tags**: `Navigation`
+
+#### Abstract
+
+Natural environments such as forests and grasslands are challenging for robotic navigation because of the false perception of rigid obstacles from high grass, twigs, or bushes. In this work, we present Wild Visual Navigation (WVN), an online self-supervised learning system for visual traversability estimation. The system is able to continuously adapt from a short human demonstration in the field, only using onboard sensing and computing. One of the key ideas to achieve this is the use of high-dimensional features from pre-trained self-supervised models, which implicitly encode semantic information that massively simplifies the learning task. Further, the development of an online scheme for supervision generator enables concurrent training and inference of the learned model in the wild. We demonstrate our approach through diverse real-world deployments in forests, parks, and grasslands. Our system is able to bootstrap the traversable terrain segmentation in less than 5 min of in-field training time, enabling the robot to navigate in complex, previously unseen outdoor terrains. Code: this https URL - Project page:this https URL
+
+[Paper Link](https://arxiv.org/abs/2404.07110)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-11_16-03.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
 ## 2024-04-09
+
 ### Long-horizon Locomotion and Manipulation on a Quadrupedal Robot with Large Language Models
 
 - **Authors**: Yutao Ouyang, Jinhan Li, Yunfei Li, Zhongyu Li, Chao Yu, Koushil Sreenath, Yi Wu
@@ -18,8 +81,6 @@ We present a large language model (LLM) based system to empower quadrupedal robo
 </div>
 
 ---
-
-
 
 ### Humanoid-Gym: Reinforcement Learning for Humanoid Robot with Zero-Shot Sim2Real Transfer
 
@@ -41,8 +102,8 @@ Humanoid-Gym is an easy-to-use reinforcement learning (RL) framework based on Nv
 
 ---
 
-
 ## 2024-04-05
+
 ### Self-supervised 6-DoF Robot Grasping by Demonstration via Augmented Reality Teleoperation System
 
 - **Authors**: Xiwen Dengxiong, Xueting Wang, Shi Bai, Yunbo Zhang
@@ -62,7 +123,6 @@ Most existing 6-DoF robot grasping solutions depend on strong supervision on gra
 </div>
 
 ---
-
 
 ### Embodied Neuromorphic Artificial Intelligence for Robotics: Perspectives, Challenges, and Research Development Stack
 
@@ -84,7 +144,6 @@ Robotic technologies have been an indispensable part for improving human product
 
 ---
 
-
 ### Robot Safety Monitoring using Programmable Light Curtains
 
 - **Authors**: Karnik Ram, Shobhit Aggarwal, Robert Tamburo, Siddharth Ancha, Srinivasa Narasimhan
@@ -104,7 +163,6 @@ As factories continue to evolve into collaborative spaces with multiple robots w
 </div>
 
 ---
-
 
 ### Embodied AI with Two Arms: Zero-shot Learning, Safety and Modularity
 
@@ -132,9 +190,6 @@ We present an embodied AI system which receives open-ended natural language inst
 
 ---
 
-
-
-
 ### Anticipate & Collab: Data-driven Task Anticipation and Knowledge-driven Planning for Human-robot Collaboration
 
 - **Authors**: Shivam Singh, Karthik Swaminathan, Raghav Arora, Ramandeep Singh, Ahana Datta, Dipanjan Das, Snehasis Banerjee, Mohan Sridharan, Madhava Krishna
@@ -161,8 +216,6 @@ An agent assisting humans in daily living activities can collaborate more effect
 
 ---
 
-
-
 ### PreAfford: Universal Affordance-Based Pre-Grasping for Diverse Objects and Environments
 
 - **Authors**: Kairui Ding, Boyuan Chen, Ruihai Wu, Yuyang Li, Zongzheng Zhang, Huan-ang Gao, Siqi Li, Yixin Zhu, Guyue Zhou, Hao Dong, Hao Zhao
@@ -182,13 +235,6 @@ Robotic manipulation of ungraspable objects with two-finger grippers presents si
 </div>
 
 ---
-
-
-
-
-
-
-
 
 ## 2024-04-04
 
@@ -257,6 +303,7 @@ The emergence of differentiable simulators enabling analytic gradient computatio
 </div>
 
 ---
+
 ## 2024-04-03
 
 ### Generalizing 6-DoF Grasp Detection via Domain Prior Knowledge
