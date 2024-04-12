@@ -1,3 +1,26 @@
+## 2024-04-12
+
+### QuasiSim: Parameterized Quasi-Physical Simulators for Dexterous Manipulations Transfer
+
+- **Authors**: Xueyi Liu, Kangbo Lyu, Jieqiong Zhang, Tao Du, Li Yi
+- **Main Affiliations**: Tsinghua University, Shanghai AI Laboratory, Shanghai Qi Zhi Institute
+- **Tags**: `Simulation to Reality`
+
+#### Abstract
+
+We explore the dexterous manipulation transfer problem by designing simulators. The task wishes to transfer human manipulations to dexterous robot hand simulations and is inherently difficult due to its intricate, highly-constrained, and discontinuous dynamics and the need to control a dexterous hand with a DoF to accurately replicate human manipulations. Previous approaches that optimize in high-fidelity black-box simulators or a modified one with relaxed constraints only demonstrate limited capabilities or are restricted by insufficient simulation fidelity. We introduce parameterized quasi-physical simulators and a physics curriculum to overcome these limitations. The key ideas are 1) balancing between fidelity and optimizability of the simulation via a curriculum of parameterized simulators, and 2) solving the problem in each of the simulators from the curriculum, with properties ranging from high task optimizability to high fidelity. We successfully enable a dexterous hand to track complex and diverse manipulations in high-fidelity simulated environments, boosting the success rate by 11\%+ from the best-performed baseline. The project website is available at this https URL.
+
+[Paper Link](https://arxiv.org/abs/2404.07988)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-04-12_11-19.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+
 ## 2024-04-11
 
 ### GOAT-Bench: A Benchmark for Multi-Modal Lifelong Navigation
