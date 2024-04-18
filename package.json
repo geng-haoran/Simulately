@@ -32,7 +32,8 @@
         "remark-math": "^3.0.1"
     },
     "devDependencies": {
-        "@docusaurus/module-type-aliases": "2.4.3"
+        "@docusaurus/module-type-aliases": "2.4.3",
+        "all-contributors-cli": "^6.26.1"
     },
     "browserslist": {
         "production": [
