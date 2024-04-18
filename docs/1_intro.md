@@ -22,12 +22,11 @@ You can find the **Code and Data** used to run all the experiments mentioned in 
 
 ## Contributors ✨
 
-**Simulately** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), [Songlin Wei](http://wei.songl.in/), and [Zhou Xian](https://www.zhou-xian.com/).
+**Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), [Songlin Wei](http://wei.songl.in/), [Xian Zhou](https://www.zhou-xian.com/), [Jialiang Zhang](https://github.com/mzhmxzh), [Chaoyi Xu](https://github.com/co1one).
 
-Thanks go to these wonderful contributors:
-
+Thanks goes to these wonderful people:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -51,21 +50,21 @@ Thanks go to these wonderful contributors:
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/qq456cvb"><img src="https://avatars.githubusercontent.com/u/7703989?v=4?s=100" width="100px;" alt="Yang You"/><br /><sub><b>Yang You</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=qq456cvb" title="Documentation">📖</a> <a href="#content-qq456cvb" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Selina2023"><img src="https://avatars.githubusercontent.com/u/141034149?v=4?s=100" width="100px;" alt="Yufei Ding"/><br /><sub><b>Yufei Ding</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=Selina2023" title="Documentation">📖</a> <a href="#content-Selina2023" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/songlin"><img src="https://avatars.githubusercontent.com/u/853045?v=4?s=100" width="100px;" alt="Wei Songlin"/><br /><sub><b>Wei Songlin</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=songlin" title="Documentation">📖</a> <a href="#content-songlin" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/co1one"><img src="https://avatars.githubusercontent.com/u/74175280?v=4?s=100" width="100px;" alt="chaoyi"/><br /><sub><b>chaoyi</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=co1one" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mzhmxzh"><img src="https://avatars.githubusercontent.com/u/17493243?v=4?s=100" width="100px;" alt="Jialiang Zhang"/><br /><sub><b>Jialiang Zhang</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=mzhmxzh" title="Documentation">📖</a> <a href="#blog-mzhmxzh" title="Blogposts">📝</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://lyuj1998.github.io/"><img src="https://avatars.githubusercontent.com/u/31683380?v=4?s=100" width="100px;" alt="Lv Jun"/><br /><sub><b>Lv Jun</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=LyuJ1998" title="Documentation">📖</a></td>
     </tr>
   </tbody>
-  <tfoot>
-    <tr>
-      <td align="center" size="13px" colspan="7">
-          <a href="https://github.com/geng-haoran/Simulately/pulls">Add your contributions 😉</a>
-      </td>
-    </tr>
-  </tfoot>
 </table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+<!-- example,code,doc,content,blog  -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcomed!
 
