@@ -1,4 +1,27 @@
+## 2024-05-30
+
+### Grasp as You Say: Language-guided Dexterous Grasp Generation
+
+- **Authors**: Yi-Lin Wei, Jian-Jian Jiang, Chengyi Xing, Xiantuo Tan, Xiao-Ming Wu, Hao Li, Mark Cutkosky, Wei-Shi Zheng
+- **Main Affiliations**: Sun Yat-sen University, Stanford University, Wuhan University
+- **Tags**: `Simulation`
+
+#### Abstract
+
+This paper explores a novel task ""Dexterous Grasp as You Say"" (DexGYS), enabling robots to perform dexterous grasping based on human commands expressed in natural language. However, the development of this field is hindered by the lack of datasets with natural human guidance; thus, we propose a language-guided dexterous grasp dataset, named DexGYSNet, offering high-quality dexterous grasp annotations along with flexible and fine-grained human language guidance. Our dataset construction is cost-efficient, with the carefully-design hand-object interaction retargeting strategy, and the LLM-assisted language guidance annotation system. Equipped with this dataset, we introduce the DexGYSGrasp framework for generating dexterous grasps based on human language instructions, with the capability of producing grasps that are intent-aligned, high quality and diversity. To achieve this capability, our framework decomposes the complex learning process into two manageable progressive objectives and introduce two components to realize them. The first component learns the grasp distribution focusing on intention alignment and generation diversity. And the second component refines the grasp quality while maintaining intention consistency. Extensive experiments are conducted on DexGYSNet and real world environment for validation.
+
+[Paper Link](https://arxiv.org/abs/2405.19291)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-06-01_18-02.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
 ## 2024-05-21
+
 ### URDFormer: A Pipeline for Constructing Articulated Simulation Environments from Real-World Images
 
 - **Authors**: Zoey Chen, Aaron Walsman, Marius Memmel, Kaichun Mo, Alex Fang, Karthikeya Vemuri, Alan Wu, Dieter Fox, Abhishek Gupta
@@ -19,8 +42,6 @@ Constructing simulation scenes that are both visually and physically realistic i
 
 ---
 
-
-
 ### Octo: An Open-Source Generalist Robot Policy
 
 - **Authors**: Octo Model Team, Dibya Ghosh, Homer Walke, Karl Pertsch, Kevin Black, Oier Mees, Sudeep Dasari, Joey Hejna, Tobias Kreiman, Charles Xu, Jianlan Luo, You Liang Tan, Pannag Sanketi, Quan Vuong, Ted Xiao, Dorsa Sadigh, Chelsea Finn, Sergey Levine
@@ -40,7 +61,6 @@ Large policies pretrained on diverse robot datasets have the potential to transf
 </div>
 
 ---
-
 
 ## 2024-05-17
 
