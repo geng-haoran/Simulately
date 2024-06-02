@@ -17,7 +17,7 @@ sidebar_position: 4
 </h2>
 
 ![SAPIEN](imgs/sapien.jpg)
-> SAPIEN simulator provides physical simulation for robots, rigidbody, and articulated objects. It powers reinforcement learning and robotics with its pure Python interface. It also provides multiple rendering modalities, including depth map, normal map, optical flow, active light, and ray tracing.
+> SAPIEN simulator provides GPU parallelized diverse physical simulation for robots, rigidbody, and articulated objects. It also supports GPU parallelized rendering, supporting fast visual data collection. It also provides multiple rendering modalities, including depth map, normal map, optical flow, active light, and ray tracing. The [ManiSkill](https://github.com/haosulab/ManiSkill) framework built on top of SAPIEN provides pre-built tasks for robot learning workflows as well as an API to build custom tasks for many robotics domains.
 
 ## Official Materials
 - [Website](https://sapien.ucsd.edu/)
@@ -26,14 +26,14 @@ sidebar_position: 4
 - [Source Code](https://github.com/haosulab/SAPIEN)
 
 
-## Related Benchmark
+## Related Benchmarks
 
-### ManiSkill1&2
-ManiSkill2 embraces a heterogeneous collection of out-of-the-box task families for 20 manipulation skills. Distinct types of manipulation tasks are covered: stationary/mobile-base, single/dual-arm, rigid/soft-body.
+### ManiSkill
+ManiSkill embraces a heterogeneous collection of out-of-the-box GPU parallelized task families for manipulation skills, locomotion, humanoids, and standard control tasks. For manipulation, several types of tasks are covered: stationary/mobile-base, single/dual-arm, rigid/soft-body.
   ![ManiSkill](imgs/maniskill.jpg)
-  - [Website](https://maniskill2.github.io/)
-  - [Doc](https://haosulab.github.io/ManiSkill2/)
-  - [Code](https://github.com/haosulab/ManiSkill2)
+  - [Website](https://maniskill.readthedocs.io/en/latest/)
+  - [Doc](https://maniskill.readthedocs.io/en/latest/)
+  - [Code](https://github.com/haosulab/ManiSkill)
   - [Paper](https://arxiv.org/abs/2302.04659)
 
 

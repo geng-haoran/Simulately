@@ -26,7 +26,7 @@ sidebar_position: 3
 ## Related Materials
 - [Awesome NVIDIA Isaac Gym](https://github.com/wangcongrobot/awesome-isaac-gym)
 
-## Related Benchmark
+## Related Benchmarks
 
 ### IsaacGymEnvs
 This repository contains example RL environments for the NVIDIA Isaac Gym high performance environments described in NVIDIA's NeurIPS 2021 Datasets and Benchmarks paper.
