@@ -100,6 +100,7 @@ const config = {
           {to: '/related', label: 'Related Work', position: 'left'},
           {to: '/daily/daily', label: 'Daily', position: 'left'},
           {to: '/gpt/gpt', label: 'Simulately GPT', position: 'left'},
+          {to: '/omnisim/omnisim', label: 'OmniSim(Beta)', position: 'left'},
           {href: 'https://github.com/geng-haoran/Simulately', label: 'GitHub', position: 'right'},
           {href: 'https://chat.openai.com/g/g-cjN7iYpRZ-simulately', label: 'Ask GPT', position: 'right'}
         ],
