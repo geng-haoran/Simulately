@@ -1,3 +1,41 @@
+## 2024-07-04
+
+### IntentionNet: Map-Lite Visual Navigation at the Kilometre Scale
+
+- **Authors**: Wei Gao, Bo Ai, Joel Loo, Vinay, David Hsu
+
+#### Abstract
+
+This work explores the challenges of creating a scalable and robust robot navigation system that can traverse both indoor and outdoor environments to reach distant goals. We propose a navigation system architecture called IntentionNet that employs a monolithic neural network as the low-level planner/controller, and uses a general interface that we call intentions to steer the controller. The paper proposes two types of intentions, Local Path and Environment (LPE) and Discretised Local Move (DLM), and shows that DLM is robust to significant metric positioning and mapping errors. The paper also presents Kilo-IntentionNet, an instance of the IntentionNet system using the DLM intention that is deployed on a Boston Dynamics Spot robot, and which successfully navigates through complex indoor and outdoor environments over distances of up to a kilometre with only noisy odometry.
+
+[Paper Link](https://arxiv.org/abs/2407.03122)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-07-07_21-29.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+### TieBot: Learning to Knot a Tie from Visual Demonstration through a Real-to-Sim-to-Real Approach
+
+- **Authors**: Weikun Peng, Jun Lv, Yuwei Zeng, Haonan Chen, Siheng Zhao, Jicheng Sun, Cewu Lu, Lin Shao
+
+#### Abstract
+
+The tie-knotting task is highly challenging due to the tie's high deformation and long-horizon manipulation actions. This work presents TieBot, a Real-to-Sim-to-Real learning from visual demonstration system for the robots to learn to knot a tie. We introduce the Hierarchical Feature Matching approach to estimate a sequence of tie's meshes from the demonstration video. With these estimated meshes used as subgoals, we first learn a teacher policy using privileged information. Then, we learn a student policy with point cloud observation by imitating teacher policy. Lastly, our pipeline learns a residual policy when the learned policy is applied to real-world execution, mitigating the Sim2Real gap. We demonstrate the effectiveness of TieBot in simulation and the real world. In the real-world experiment, a dual-arm robot successfully knots a tie, achieving 50% success rate among 10 trials. Videos can be found on our $\href{this https URL}{\text{website}}$.
+
+[Paper Link](https://arxiv.org/abs/2407.03245)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-07-07_21-25.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
 ## 2024-07-03
 
 ### Learning Granular Media Avalanche Behavior for Indirectly Manipulating Obstacles on a Granular Slope
