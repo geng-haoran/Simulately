@@ -1,3 +1,63 @@
+## 2024-08-16
+
+### Autonomous Behavior Planning For Humanoid Loco-manipulation Through Grounded Language Model
+
+- **Authors**: Jin Wang, Arturo Laurenzi, Nikos Tsagarakis
+
+#### Abstract
+
+Enabling humanoid robots to perform autonomously loco-manipulation in unstructured environments is crucial and highly challenging for achieving embodied intelligence. This involves robots being able to plan their actions and behaviors in long-horizon tasks while using multi-modality to perceive deviations between task execution and high-level planning. Recently, large language models (LLMs) have demonstrated powerful planning and reasoning capabilities for comprehension and processing of semantic information through robot control tasks, as well as the usability of analytical judgment and decision-making for multi-modal inputs. To leverage the power of LLMs towards humanoid loco-manipulation, we propose a novel language-model based framework that enables robots to autonomously plan behaviors and low-level execution under given textual instructions, while observing and correcting failures that may occur during task execution. To systematically evaluate this framework in grounding LLMs, we created the robot 'action' and 'sensing' behavior library for task planning, and conducted mobile manipulation tasks and experiments in both simulated and real environments using the CENTAURO robot, and verified the effectiveness and application of this approach in robotic tasks with autonomous behavioral planning.
+
+[Paper Link](https://arxiv.org/abs/2408.08282)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-08-20_23-02.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+## 2024-08-15
+
+### Learning Multi-Modal Whole-Body Control for Real-World Humanoid Robots
+
+- **Authors**: Pranay Dugar, Aayam Shrestha, Fangzhou Yu, Bart van Marum, Alan Fern
+
+#### Abstract
+
+We introduce the Masked Humanoid Controller (MHC) for whole-body tracking of target trajectories over arbitrary subsets of humanoid state variables. This enables the realization of whole-body motions from diverse sources such as video, motion capture, and VR, while ensuring balance and robustness against disturbances. The MHC is trained in simulation using a carefully designed curriculum that imitates partially masked motions from a library of behaviors spanning pre-trained policy rollouts, optimized reference trajectories, re-targeted video clips, and human motion capture data. We showcase simulation experiments validating the MHC's ability to execute a wide variety of behavior from partially-specified target motions. Moreover, we also highlight sim-to-real transfer as demonstrated by real-world trials on the Digit humanoid robot. To our knowledge, this is the first instance of a learned controller that can realize whole-body control of a real-world humanoid for such diverse multi-modal targets.
+
+[Paper Link](https://arxiv.org/abs/2408.07295)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-08-20_22-57.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
+## 2024-08-14
+
+### Grasping by Hanging: a Learning-Free Grasping Detection Method for Previously Unseen Objects
+
+- **Authors**: Wanze Li, Wan Su, Gregory S. Chirikjian
+
+#### Abstract
+
+This paper proposes a novel learning-free three-stage method that predicts grasping poses, enabling robots to pick up and transfer previously unseen objects. Our method first identifies potential structures that can afford the action of hanging by analyzing the hanging mechanics and geometric properties. Then 6D poses are detected for a parallel gripper retrofitted with an extending bar, which when closed forms loops to hook each hangable structure. Finally, an evaluation policy qualities and rank grasp candidates for execution attempts. Compared to the traditional physical model-based and deep learning-based methods, our approach is closer to the human natural action of grasping unknown objects. And it also eliminates the need for a vast amount of training data. To evaluate the effectiveness of the proposed method, we conducted experiments with a real robot. Experimental results indicate that the grasping accuracy and stability are significantly higher than the state-of-the-art learning-based method, especially for thin and flat objects.
+
+[Paper Link](https://arxiv.org/abs/2408.06734)
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+<div style={{ textAlign: 'center', marginRight: '10px' }}>
+<img src="/img/daily/2024-08-20_22-21.png" alt="img" style={{ width: 'auto', maxHeight: '400px' }} />
+</div>
+</div>
+
+---
+
 ## 2024-08-02
 
 ### MuJoCo MPC for Humanoid Control: Evaluation on HumanoidBench
