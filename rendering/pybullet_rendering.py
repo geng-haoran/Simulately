@@ -10,8 +10,26 @@ import pybullet_data
 
 SAVE_IMG_AND_EXIT = False
 
-pybullet.connect(pybullet.GUI)
-# pybullet.connect(pybullet.DIRECT)
+if 0:
+    pybullet.connect(pybullet.GUI)
+else:
+    #headless, works in the cloud, Google Colab
+    import pkgutil
+    egl = pkgutil.get_loader('eglRenderer')
+
+    pybullet.connect(pybullet.DIRECT)
+    pybullet.setAdditionalSearchPath(pybullet_data.getDataPath())
+    plugin = pybullet.loadPlugin(egl.get_filename(), "_eglRendererPlugin")
+    print("plugin=", plugin)
+
+if 1:
+  pybullet.configureDebugVisualizer(pybullet.COV_ENABLE_SEGMENTATION_MARK_PREVIEW,0)
+  pybullet.configureDebugVisualizer(pybullet.COV_ENABLE_RGB_BUFFER_PREVIEW,0)
+  pybullet.configureDebugVisualizer(pybullet.COV_ENABLE_DEPTH_BUFFER_PREVIEW,0)
+  pybullet.configureDebugVisualizer(pybullet.COV_ENABLE_RENDERING,0)
+  pybullet.configureDebugVisualizer(pybullet.COV_ENABLE_GUI, 0)
+
+
 
 pybullet.setAdditionalSearchPath(pybullet_data.getDataPath())
 pybullet.loadURDF("plane.urdf", [0, 0, 0])
