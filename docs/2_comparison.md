@@ -60,9 +60,9 @@ Notice:
 
 |Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Ray Tracing)   |Pybullet (Rasterization)|MuJoCo|
 |:------------------:|:------:|:--------:|:--------:|:-----------------------------:|:------:|
-|     RGB @ FPS      | 1175.74 | 1917.32🤔 | 182.33 |29.50(OpenGL) 13.68(TinyRender)|2262.59 |
-|    Depth @ FPS     | 1467.48 | 1917.32🤔 | 156.31 |29.50(OpenGL) 13.68(TinyRender)|1039.91 |
-| Segmentation @ FPS | 1153.03 | 1917.32🤔 | 141.08  |29.50(OpenGL) 13.68(TinyRender)|320.86  |
+|     RGB @ FPS      | 1175.74 | 1917.32🤔 | 182.33 |258.04 (RTX 3090)|2262.59 |
+|    Depth @ FPS     | 1467.48 | 1917.32🤔 | 156.31 |- (update soon)|1039.91 |
+| Segmentation @ FPS | 1153.03 | 1917.32🤔 | 141.08  |- (update soon)|320.86  |
 
 ⭐️: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is run with 13th Gen Intel Core i9-13900K and RTX 4090.
 
@@ -72,9 +72,9 @@ Notice:
 
 |Simulator|SAPIEN (Rasterization)|IsaacGym (Rasterization)|IsaacSim(Ray Tracing)  |Pybullet (Rasterization)|MuJoCo|
 |:------------------:|:------:|:--------:|:--------:|:----------------------------:|:------:|
-|     RGB @ FPS      | 228.23 |  789.25🤔  |102.43    |22.49(OpenGL) 7.06(TinyRender)|88.68  |
-|    Depth @ FPS     | 280.56 |  789.25🤔  |92.43    |22.49(OpenGL) 7.06(TinyRender)|288.61  |
-| Segmentation @ FPS | 261.06 |  789.25🤔  |97.43    |22.49(OpenGL) 7.06(TinyRender)|119.74  |
+|     RGB @ FPS      | 228.23 |  789.25🤔  |102.43    |258.04 (RTX 3090)|88.68  |
+|    Depth @ FPS     | 280.56 |  789.25🤔  |92.43    |- (update soon)|288.61  |
+| Segmentation @ FPS | 261.06 |  789.25🤔  |97.43    |- (update soon)|119.74  |
 
 🟡: The rendering code can be found under `code/rendering` folder, see github repo for more details. The number reported here is ran with AMD EPYC 7742 64-Core Processor and A100(80G).
 
@@ -93,7 +93,7 @@ pending... -->
 |     Simulator            | SAPIEN | IsaacGym | IsaacSim | Pybullet | MuJoCo | CoppeliaSim | Gazebo |
 |:------------------------:|:------:|:--------:|:--------:|:--------:|:------:|:-----------:|:------:|
 |     Github Star🟡         | 274    |    /     |     /    |   11.4k  |  6.6k  |      88     |  1.1k🔶 |
-|Citation  (Google Scholar⭐️) | 302    |  375     |    /     |    /     |  4884  |     1786    |  3949  |
+|Citation  (Google Scholar⭐️) | 302    |  375     |    /     |    1942   |  4884  |     1786    |  3949  |
 
 🟡 Last Update: 2023.12.20
 
