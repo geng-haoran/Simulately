@@ -1,3 +1,2369 @@
+## 2024-10-21
+
+
+### Graph Optimality-Aware Stochastic LiDAR Bundle Adjustment with Progressive Spatial Smoothing
+
+- **Authors**: Jianping Li, Thien-Minh Nguyen, Muqing Cao, Shenghai Yuan, Tzu-Yi Hung, Lihua Xie
+
+#### Abstract
+
+Large-scale LiDAR Bundle Adjustment (LBA) for refining sensor orientation and
+point cloud accuracy simultaneously is a fundamental task in photogrammetry and
+robotics, particularly as low-cost 3D sensors are increasingly used for 3D
+mapping in complex scenes. Unlike pose-graph-based methods that rely solely on
+pairwise relationships between LiDAR frames, LBA leverages raw LiDAR
+correspondences to achieve more precise results, especially when initial pose
+estimates are unreliable for low-cost sensors. However, existing LBA methods
+face challenges such as simplistic planar correspondences, extensive
+observations, and dense normal matrices in the least-squares problem, which
+limit robustness, efficiency, and scalability. To address these issues, we
+propose a Graph Optimality-aware Stochastic Optimization scheme with
+Progressive Spatial Smoothing, namely PSS-GOSO, to achieve \textit{robust},
+\textit{efficient}, and \textit{scalable} LBA. The Progressive Spatial
+Smoothing (PSS) module extracts \textit{robust} LiDAR feature association
+exploiting the prior structure information obtained by the polynomial smooth
+kernel. The Graph Optimality-aware Stochastic Optimization (GOSO) module first
+sparsifies the graph according to optimality for an \textit{efficient}
+optimization. GOSO then utilizes stochastic clustering and graph
+marginalization to solve the large-scale state estimation problem for a
+\textit{scalable} LBA. We validate PSS-GOSO across diverse scenes captured by
+various platforms, demonstrating its superior performance compared to existing
+methods.
+
+[Paper Link](
+https://arxiv.org/abs/2410.14565
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-54.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-18
+
+
+### ALOHA Unleashed: A Simple Recipe for Robot Dexterity
+
+- **Authors**: Tony Z. Zhao, Jonathan Tompson, Danny Driess, Pete Florence, Kamyar Ghasemipour, Chelsea Finn, Ayzaan Wahid
+
+#### Abstract
+
+Recent work has shown promising results for learning end-to-end robot
+policies using imitation learning. In this work we address the question of how
+far can we push imitation learning for challenging dexterous manipulation
+tasks. We show that a simple recipe of large scale data collection on the ALOHA
+2 platform, combined with expressive models such as Diffusion Policies, can be
+effective in learning challenging bimanual manipulation tasks involving
+deformable objects and complex contact rich dynamics. We demonstrate our recipe
+on 5 challenging real-world and 3 simulated tasks and demonstrate improved
+performance over state-of-the-art baselines. The project website and videos can
+be found at aloha-unleashed.github.io.
+
+[Paper Link](
+https://arxiv.org/abs/2410.13126
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-48_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Interactive Navigation with Adaptive Non-prehensile Mobile Manipulation
+
+- **Authors**: Cunxi Dai, Xiaohan Liu, Koushil Sreenath, Zhongyu Li, Ralph Hollis
+
+#### Abstract
+
+This paper introduces a framework for interactive navigation through adaptive
+non-prehensile mobile manipulation. A key challenge in this process is handling
+objects with unknown dynamics, which are difficult to infer from visual
+observation. To address this, we propose an adaptive dynamics model for common
+movable indoor objects via learned SE(2) dynamics representations. This model
+is integrated into Model Predictive Path Integral (MPPI) control to guide the
+robot's interactions. Additionally, the learned dynamics help inform
+decision-making when navigating around objects that cannot be manipulated.Our
+approach is validated in both simulation and real-world scenarios,
+demonstrating its ability to accurately represent object dynamics and
+effectively manipulate various objects. We further highlight its success in the
+Navigation Among Movable Objects (NAMO) task by deploying the proposed
+framework on a dynamically balancing mobile robot, Shmoobot. Project website:
+https://cmushmoobot.github.io/AdaptivePushing/.
+
+[Website Link](https://cmushmoobot.github.io/AdaptivePushing/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.13418
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-48.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### State Estimation Transformers for Agile Legged Locomotion
+
+- **Authors**: Chen Yu, Yichu Yang, Tianlin Liu, Yangwei You, Mingliang Zhou, Diyun Xiang
+
+#### Abstract
+
+We propose a state estimation method that can accurately predict the robot's
+privileged states to push the limits of quadruped robots in executing advanced
+skills such as jumping in the wild. In particular, we present the State
+Estimation Transformers (SET), an architecture that casts the state estimation
+problem as conditional sequence modeling. SET outputs the robot states that are
+hard to obtain directly in the real world, such as the body height and
+velocities, by leveraging a causally masked Transformer. By conditioning an
+autoregressive model on the robot's past states, our SET model can predict
+these privileged observations accurately even in highly dynamic locomotions. We
+evaluate our methods on three tasks -- running jumping, running backflipping,
+and running sideslipping -- on a low-cost quadruped robot, Cyberdog2. Results
+show that SET can outperform other methods in estimation accuracy and
+transferability in the simulation as well as success rates of jumping and
+triggering a recovery controller in the real world, suggesting the superiority
+of such a Transformer-based explicit state estimator in highly dynamic
+locomotion tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2410.13496
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Preference Aligned Diffusion Planner for Quadrupedal Locomotion Control
+
+- **Authors**: Xinyi Yuan, Zhiwei Shang, Zifan Wang, Chenkai Wang, Zhao Shan, Zhenchao Qi, Meixin Zhu, Chenjia Bai, Xuelong Li
+
+#### Abstract
+
+Diffusion models demonstrate superior performance in capturing complex
+distributions from large-scale datasets, providing a promising solution for
+quadrupedal locomotion control. However, offline policy is sensitive to
+Out-of-Distribution (OOD) states due to the limited state coverage in the
+datasets. In this work, we propose a two-stage learning framework combining
+offline learning and online preference alignment for legged locomotion control.
+Through the offline stage, the diffusion planner learns the joint distribution
+of state-action sequences from expert datasets without using reward labels.
+Subsequently, we perform the online interaction in the simulation environment
+based on the trained offline planer, which significantly addresses the OOD
+issues and improves the robustness. Specifically, we propose a novel weak
+preference labeling method without the ground-truth reward or human
+preferences. The proposed method exhibits superior stability and velocity
+tracking accuracy in pacing, trotting, and bounding gait under both slow- and
+high-speed scenarios and can perform zero-shot transfer to the real Unitree Go1
+robots. The project website for this paper is at
+https://shangjaven.github.io/preference-aligned-diffusion-legged/.
+
+[Website Link](https://shangjaven.github.io/preference-aligned-diffusion-legged/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.13586
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Jailbreaking LLM-Controlled Robots
+
+- **Authors**: Alexander Robey, Zachary Ravichandran, Vijay Kumar, Hamed Hassani, George J. Pappas
+
+#### Abstract
+
+The recent introduction of large language models (LLMs) has revolutionized
+the field of robotics by enabling contextual reasoning and intuitive
+human-robot interaction in domains as varied as manipulation, locomotion, and
+self-driving vehicles. When viewed as a stand-alone technology, LLMs are known
+to be vulnerable to jailbreaking attacks, wherein malicious prompters elicit
+harmful text by bypassing LLM safety guardrails. To assess the risks of
+deploying LLMs in robotics, in this paper, we introduce RoboPAIR, the first
+algorithm designed to jailbreak LLM-controlled robots. Unlike existing, textual
+attacks on LLM chatbots, RoboPAIR elicits harmful physical actions from
+LLM-controlled robots, a phenomenon we experimentally demonstrate in three
+scenarios: (i) a white-box setting, wherein the attacker has full access to the
+NVIDIA Dolphins self-driving LLM, (ii) a gray-box setting, wherein the attacker
+has partial access to a Clearpath Robotics Jackal UGV robot equipped with a
+GPT-4o planner, and (iii) a black-box setting, wherein the attacker has only
+query access to the GPT-3.5-integrated Unitree Robotics Go2 robot dog. In each
+scenario and across three new datasets of harmful robotic actions, we
+demonstrate that RoboPAIR, as well as several static baselines, finds
+jailbreaks quickly and effectively, often achieving 100% attack success rates.
+Our results reveal, for the first time, that the risks of jailbroken LLMs
+extend far beyond text generation, given the distinct possibility that
+jailbroken robots could cause physical damage in the real world. Indeed, our
+results on the Unitree Go2 represent the first successful jailbreak of a
+deployed commercial robotic system. Addressing this emerging vulnerability is
+critical for ensuring the safe deployment of LLMs in robotics. Additional media
+is available at: https://robopair.org
+
+[Website Link](https://robopair.org)
+
+[Paper Link](
+https://arxiv.org/abs/2410.13691
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Differentiable Robot Rendering
+
+- **Authors**: Ruoshi Liu, Alper Canberk, Shuran Song, Carl Vondrick
+
+#### Abstract
+
+Vision foundation models trained on massive amounts of visual data have shown
+unprecedented reasoning and planning skills in open-world settings. A key
+challenge in applying them to robotic tasks is the modality gap between visual
+data and action data. We introduce differentiable robot rendering, a method
+allowing the visual appearance of a robot body to be directly differentiable
+with respect to its control parameters. Our model integrates a kinematics-aware
+deformable model and Gaussians Splatting and is compatible with any robot form
+factors and degrees of freedom. We demonstrate its capability and usage in
+applications including reconstruction of robot poses from images and
+controlling robots through vision language models. Quantitative and qualitative
+results show that our differentiable rendering model provides effective
+gradients for robotic control directly from pixels, setting the foundation for
+the future applications of vision foundation models in robotics.
+
+[Paper Link](
+https://arxiv.org/abs/2410.13851
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-17
+
+
+### Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile Manipulation
+
+- **Authors**: Zhijie Yan, Shufei Li, Zuoxu Wang, Lixiu Wu, Han Wang, Jun Zhu, Lijiang Chen, Jihong Liu
+
+#### Abstract
+
+Enabling mobile robots to perform long-term tasks in dynamic real-world
+environments is a formidable challenge, especially when the environment changes
+frequently due to human-robot interactions or the robot's own actions.
+Traditional methods typically assume static scenes, which limits their
+applicability in the continuously changing real world. To overcome these
+limitations, we present DovSG, a novel mobile manipulation framework that
+leverages dynamic open-vocabulary 3D scene graphs and a language-guided task
+planning module for long-term task execution. DovSG takes RGB-D sequences as
+input and utilizes vision-language models (VLMs) for object detection to obtain
+high-level object semantic features. Based on the segmented objects, a
+structured 3D scene graph is generated for low-level spatial relationships.
+Furthermore, an efficient mechanism for locally updating the scene graph,
+allows the robot to adjust parts of the graph dynamically during interactions
+without the need for full scene reconstruction. This mechanism is particularly
+valuable in dynamic environments, enabling the robot to continually adapt to
+scene changes and effectively support the execution of long-term tasks. We
+validated our system in real-world environments with varying degrees of manual
+modifications, demonstrating its effectiveness and superior performance in
+long-term tasks. Our project page is available at:
+https://BJHYZJ.github.io/DoviSG.
+
+[Website Link](https://BJHYZJ.github.io/DoviSG.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.11989
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-42.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### In-Context Learning Enables Robot Action Prediction in LLMs
+
+- **Authors**: Yida Yin, Zekai Wang, Yuvan Sharma, Dantong Niu, Trevor Darrell, Roei Herzig
+
+#### Abstract
+
+Recently, Large Language Models (LLMs) have achieved remarkable success using
+in-context learning (ICL) in the language domain. However, leveraging the ICL
+capabilities within LLMs to directly predict robot actions remains largely
+unexplored. In this paper, we introduce RoboPrompt, a framework that enables
+off-the-shelf text-only LLMs to directly predict robot actions through ICL
+without training. Our approach first heuristically identifies keyframes that
+capture important moments from an episode. Next, we extract end-effector
+actions from these keyframes as well as the estimated initial object poses, and
+both are converted into textual descriptions. Finally, we construct a
+structured template to form ICL demonstrations from these textual descriptions
+and a task instruction. This enables an LLM to directly predict robot actions
+at test time. Through extensive experiments and analysis, RoboPrompt shows
+stronger performance over zero-shot and ICL baselines in simulated and
+real-world settings.
+
+[Paper Link](
+https://arxiv.org/abs/2410.12782
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-35.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Harmon: Whole-Body Motion Generation of Humanoid Robots from Language Descriptions
+
+- **Authors**: Zhenyu Jiang, Yuqi Xie, Jinhan Li, Ye Yuan, Yifeng Zhu, Yuke Zhu
+
+#### Abstract
+
+Humanoid robots, with their human-like embodiment, have the potential to
+integrate seamlessly into human environments. Critical to their coexistence and
+cooperation with humans is the ability to understand natural language
+communications and exhibit human-like behaviors. This work focuses on
+generating diverse whole-body motions for humanoid robots from language
+descriptions. We leverage human motion priors from extensive human motion
+datasets to initialize humanoid motions and employ the commonsense reasoning
+capabilities of Vision Language Models (VLMs) to edit and refine these motions.
+Our approach demonstrates the capability to produce natural, expressive, and
+text-aligned humanoid motions, validated through both simulated and real-world
+experiments. More videos can be found at
+https://ut-austin-rpl.github.io/Harmon/.
+
+[Website Link](https://ut-austin-rpl.github.io/Harmon/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.12773
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-34.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-16
+
+
+### Visual Manipulation with Legs
+
+- **Authors**: Xialin He, Chengjing Yuan, Wenxuan Zhou, Ruihan Yang, David Held, Xiaolong Wang
+
+#### Abstract
+
+Animals use limbs for both locomotion and manipulation. We aim to equip
+quadruped robots with similar versatility. This work introduces a system that
+enables quadruped robots to interact with objects using their legs, inspired by
+non-prehensile manipulation. The system has two main components: a visual
+manipulation policy module and a loco-manipulator module. The visual
+manipulation policy, trained with reinforcement learning (RL) using point cloud
+observations and object-centric actions, decides how the leg should interact
+with the object. The loco-manipulator controller manages leg movements and body
+pose adjustments, based on impedance control and Model Predictive Control
+(MPC). Besides manipulating objects with a single leg, the system can select
+from the left or right leg based on critic maps and move objects to distant
+goals through base adjustment. Experiments evaluate the system on object pose
+alignment tasks in both simulation and the real world, demonstrating more
+versatile object manipulation skills with legs than previous work. Videos can
+be found at https://legged-manipulation.github.io/
+
+[Website Link](https://legged-manipulation.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.11345
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-33.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GSORB-SLAM: Gaussian Splatting SLAM benefits from ORB features and Transmittance information
+
+- **Authors**: Wancai Zheng, Xinyi Yu, Jintao Rong, Linlin Ou, Yan Wei, Libo Zhou
+
+#### Abstract
+
+The emergence of 3D Gaussian Splatting (3DGS) has recently sparked a renewed
+wave of dense visual SLAM research. However, current methods face challenges
+such as sensitivity to artifacts and noise, sub-optimal selection of training
+viewpoints, and a lack of light global optimization. In this paper, we propose
+a dense SLAM system that tightly couples 3DGS with ORB features. We design a
+joint optimization approach for robust tracking and effectively reducing the
+impact of noise and artifacts. This involves combining novel geometric
+observations, derived from accumulated transmittance, with ORB features
+extracted from pixel data. Furthermore, to improve mapping quality, we propose
+an adaptive Gaussian expansion and regularization method that enables Gaussian
+primitives to represent the scene compactly. This is coupled with a viewpoint
+selection strategy based on the hybrid graph to mitigate over-fitting effects
+and enhance convergence quality. Finally, our approach achieves compact and
+high-quality scene representations and accurate localization. GSORB-SLAM has
+been evaluated on different datasets, demonstrating outstanding performance.
+The code will be available.
+
+[Paper Link](
+https://arxiv.org/abs/2410.11356
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-32.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### PAVLM: Advancing Point Cloud based Affordance Understanding Via Vision-Language Model
+
+- **Authors**: Shang-Ching Liu, Van Nhiem Tran, Wenkai Chen, Wei-Lun Cheng, Yen-Lin Huang, I-Bin Liao, Yung-Hui Li, Jianwei Zhang
+
+#### Abstract
+
+Affordance understanding, the task of identifying actionable regions on 3D
+objects, plays a vital role in allowing robotic systems to engage with and
+operate within the physical world. Although Visual Language Models (VLMs) have
+excelled in high-level reasoning and long-horizon planning for robotic
+manipulation, they still fall short in grasping the nuanced physical properties
+required for effective human-robot interaction. In this paper, we introduce
+PAVLM (Point cloud Affordance Vision-Language Model), an innovative framework
+that utilizes the extensive multimodal knowledge embedded in pre-trained
+language models to enhance 3D affordance understanding of point cloud. PAVLM
+integrates a geometric-guided propagation module with hidden embeddings from
+large language models (LLMs) to enrich visual semantics. On the language side,
+we prompt Llama-3.1 models to generate refined context-aware text, augmenting
+the instructional input with deeper semantic cues. Experimental results on the
+3D-AffordanceNet benchmark demonstrate that PAVLM outperforms baseline methods
+for both full and partial point clouds, particularly excelling in its
+generalization to novel open-world affordance tasks of 3D objects. For more
+information, visit our project site: pavlm-source.github.io.
+
+[Paper Link](
+https://arxiv.org/abs/2410.11564
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-30.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SDS -- See it, Do it, Sorted: Quadruped Skill Synthesis from Single Video Demonstration
+
+- **Authors**: Jeffrey Li, Maria Stamatopoulou, Dimitrios Kanoulas
+
+#### Abstract
+
+In this paper, we present SDS (``See it. Do it. Sorted.''), a novel pipeline
+for intuitive quadrupedal skill learning from a single demonstration video.
+Leveraging the Visual capabilities of GPT-4o, SDS processes input videos
+through our novel chain-of-thought promoting technique (SUS) and generates
+executable reward functions (RFs) that drive the imitation of locomotion
+skills, through learning a Proximal Policy Optimization (PPO)-based
+Reinforcement Learning (RL) policy, using environment information from the
+NVIDIA IsaacGym simulator. SDS autonomously evaluates the RFs by monitoring the
+individual reward components and supplying training footage and fitness metrics
+back into GPT-4o, which is then prompted to evolve the RFs to achieve higher
+task fitness at each iteration. We validate our method on the Unitree Go1
+robot, demonstrating its ability to execute variable skills such as trotting,
+bounding, pacing and hopping, achieving high imitation fidelity and locomotion
+stability. SDS shows improvements over SOTA methods in task adaptability,
+reduced dependence on domain-specific knowledge, and bypassing the need for
+labor-intensive reward engineering and large-scale training datasets.
+Additional information and the open-sourced code can be found in:
+https://rpl-cs-ucl.github.io/SDSweb
+
+[Website Link](https://rpl-cs-ucl.github.io/SDSweb)
+
+[Paper Link](
+https://arxiv.org/abs/2410.11571
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-29_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DeformPAM: Data-Efficient Learning for Long-horizon Deformable Object Manipulation via Preference-based Action Alignment
+
+- **Authors**: Wendi Chen, Han Xue, Fangyuan Zhou, Yuan Fang, Cewu Lu
+
+#### Abstract
+
+In recent years, imitation learning has made progress in the field of robotic
+manipulation. However, it still faces challenges when dealing with complex
+long-horizon deformable object tasks, such as high-dimensional state spaces,
+complex dynamics, and multimodal action distributions. Traditional imitation
+learning methods often require a large amount of data and encounter
+distributional shifts and accumulative errors in these tasks. To address these
+issues, we propose a data-efficient general learning framework (DeformPAM)
+based on preference learning and reward-guided action selection. DeformPAM
+decomposes long-horizon tasks into multiple action primitives, utilizes 3D
+point cloud inputs and diffusion models to model action distributions, and
+trains an implicit reward model using human preference data. During the
+inference phase, the reward model scores multiple candidate actions, selecting
+the optimal action for execution, thereby reducing the occurrence of anomalous
+actions and improving task completion quality. Experiments conducted on three
+challenging real-world long-horizon deformable object manipulation tasks
+demonstrate the effectiveness of this method. Results show that DeformPAM
+improves both task completion quality and efficiency compared to baseline
+methods even with limited data. Code and data will be available at
+https://deform-pam.robotflow.ai.
+
+[Website Link](https://deform-pam.robotflow.ai.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.11584
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-29.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robust Manipulation Primitive Learning via Domain Contraction
+
+- **Authors**: Teng Xue, Amirreza Razmjoo, Suhan Shetty, Sylvain Calinon
+
+#### Abstract
+
+Contact-rich manipulation plays an important role in human daily activities,
+but uncertain parameters pose significant challenges for robots to achieve
+comparable performance through planning and control. To address this issue,
+domain adaptation and domain randomization have been proposed for robust policy
+learning. However, they either lose the generalization ability across diverse
+instances or perform conservatively due to neglecting instance-specific
+information. In this paper, we propose a bi-level approach to learn robust
+manipulation primitives, including parameter-augmented policy learning using
+multiple models, and parameter-conditioned policy retrieval through domain
+contraction. This approach unifies domain randomization and domain adaptation,
+providing optimal behaviors while keeping generalization ability. We validate
+the proposed method on three contact-rich manipulation primitives: hitting,
+pushing, and reorientation. The experimental results showcase the superior
+performance of our approach in generating robust policies for instances with
+diverse physical parameters.
+
+[Paper Link](
+https://arxiv.org/abs/2410.11600
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Latent Action Pretraining from Videos
+
+- **Authors**: Seonghyeon Ye, Joel Jang, Byeongguk Jeon, Sejune Joo, Jianwei Yang, Baolin Peng, Ajay Mandlekar, Reuben Tan, Yu-Wei Chao, Bill Yuchen Lin, Lars Liden, Kimin Lee, Jianfeng Gao, Luke Zettlemoyer, Dieter Fox, Minjoon Seo
+
+#### Abstract
+
+We introduce Latent Action Pretraining for general Action models (LAPA), an
+unsupervised method for pretraining Vision-Language-Action (VLA) models without
+ground-truth robot action labels. Existing Vision-Language-Action models
+require action labels typically collected by human teleoperators during
+pretraining, which significantly limits possible data sources and scale. In
+this work, we propose a method to learn from internet-scale videos that do not
+have robot action labels. We first train an action quantization model
+leveraging VQ-VAE-based objective to learn discrete latent actions between
+image frames, then pretrain a latent VLA model to predict these latent actions
+from observations and task descriptions, and finally finetune the VLA on
+small-scale robot manipulation data to map from latent to robot actions.
+Experimental results demonstrate that our method significantly outperforms
+existing techniques that train robot manipulation policies from large-scale
+videos. Furthermore, it outperforms the state-of-the-art VLA model trained with
+robotic action labels on real-world manipulation tasks that require language
+conditioning, generalization to unseen objects, and semantic generalization to
+unseen instructions. Training only on human manipulation videos also shows
+positive transfer, opening up the potential for leveraging web-scale data for
+robotics foundation model.
+
+[Paper Link](
+https://arxiv.org/abs/2410.11758
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-27.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation
+
+- **Authors**: Jinhan Li, Yifeng Zhu, Yuqi Xie, Zhenyu Jiang, Mingyo Seo, Georgios Pavlakos, Yuke Zhu
+
+#### Abstract
+
+We study the problem of teaching humanoid robots manipulation skills by
+imitating from single video demonstrations. We introduce OKAMI, a method that
+generates a manipulation plan from a single RGB-D video and derives a policy
+for execution. At the heart of our approach is object-aware retargeting, which
+enables the humanoid robot to mimic the human motions in an RGB-D video while
+adjusting to different object locations during deployment. OKAMI uses
+open-world vision models to identify task-relevant objects and retarget the
+body motions and hand poses separately. Our experiments show that OKAMI
+achieves strong generalizations across varying visual and spatial conditions,
+outperforming the state-of-the-art baseline on open-world imitation from
+observation. Furthermore, OKAMI rollout trajectories are leveraged to train
+closed-loop visuomotor policies, which achieve an average success rate of 79.2%
+without the need for labor-intensive teleoperation. More videos can be found on
+our website https://ut-austin-rpl.github.io/OKAMI/.
+
+[Website Link](https://ut-austin-rpl.github.io/OKAMI/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.11792
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Smooth Humanoid Locomotion through Lipschitz-Constrained Policies
+
+- **Authors**: Zixuan Chen, Xialin He, Yen-Jen Wang, Qiayuan Liao, Yanjie Ze, Zhongyu Li, S. Shankar Sastry, Jiajun Wu, Koushil Sreenath, Saurabh Gupta, Xue Bin Peng
+
+#### Abstract
+
+Reinforcement learning combined with sim-to-real transfer offers a general
+framework for developing locomotion controllers for legged robots. To
+facilitate successful deployment in the real world, smoothing techniques, such
+as low-pass filters and smoothness rewards, are often employed to develop
+policies with smooth behaviors. However, because these techniques are
+non-differentiable and usually require tedious tuning of a large set of
+hyperparameters, they tend to require extensive manual tuning for each robotic
+platform. To address this challenge and establish a general technique for
+enforcing smooth behaviors, we propose a simple and effective method that
+imposes a Lipschitz constraint on a learned policy, which we refer to as
+Lipschitz-Constrained Policies (LCP). We show that the Lipschitz constraint can
+be implemented in the form of a gradient penalty, which provides a
+differentiable objective that can be easily incorporated with automatic
+differentiation frameworks. We demonstrate that LCP effectively replaces the
+need for smoothing rewards or low-pass filters and can be easily integrated
+into training frameworks for many distinct humanoid robots. We extensively
+evaluate LCP in both simulation and real-world humanoid robots, producing
+smooth and robust locomotion controllers. All simulation and deployment code,
+along with complete checkpoints, is available on our project page:
+https://lipschitz-constrained-policy.github.io.
+
+[Website Link](https://lipschitz-constrained-policy.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.11825
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-25.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-15
+
+
+### Traversability-Aware Legged Navigation by Learning from Real-World Visual Data
+
+- **Authors**: Hongbo Zhang, Zhongyu Li, Xuanqi Zeng, Laura Smith, Kyle Stachowicz, Dhruv Shah, Linzhu Yue, Zhitao Song, Weipeng Xia, Sergey Levine, Koushil Sreenath, Yun-hui Liu
+
+#### Abstract
+
+The enhanced mobility brought by legged locomotion empowers quadrupedal
+robots to navigate through complex and unstructured environments. However,
+optimizing agile locomotion while accounting for the varying energy costs of
+traversing different terrains remains an open challenge. Most previous work
+focuses on planning trajectories with traversability cost estimation based on
+human-labeled environmental features. However, this human-centric approach is
+insufficient because it does not account for the varying capabilities of the
+robot locomotion controllers over challenging terrains. To address this, we
+develop a novel traversability estimator in a robot-centric manner, based on
+the value function of the robot's locomotion controller. This estimator is
+integrated into a new learning-based RGBD navigation framework. The framework
+develops a planner that guides the robot in avoiding obstacles and
+hard-to-traverse terrains while reaching its goals. The training of the
+navigation planner is directly performed in the real world using a sample
+efficient reinforcement learning method. Through extensive benchmarking, we
+demonstrate that the proposed framework achieves the best performance in
+accurate traversability cost estimation and efficient learning from multi-modal
+data (the robot's color and depth vision, and proprioceptive feedback) for
+real-world training. Using the proposed method, a quadrupedal robot learns to
+perform traversability-aware navigation through trial and error in various
+real-world environments with challenging terrains that are difficult to
+classify using depth vision alone.
+
+[Paper Link](
+https://arxiv.org/abs/2410.10621
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-21.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies
+
+- **Authors**: Yanjie Ze, Zixuan Chen, Wenhao Wang, Tianyi Chen, Xialin He, Ying Yuan, Xue Bin Peng, Jiajun Wu
+
+#### Abstract
+
+Humanoid robots capable of autonomous operation in diverse environments have
+long been a goal for roboticists. However, autonomous manipulation by humanoid
+robots has largely been restricted to one specific scene, primarily due to the
+difficulty of acquiring generalizable skills. Recent advances in 3D visuomotor
+policies, such as the 3D Diffusion Policy (DP3), have shown promise in
+extending these capabilities to wilder environments. However, 3D visuomotor
+policies often rely on camera calibration and point-cloud segmentation, which
+present challenges for deployment on mobile robots like humanoids. In this
+work, we introduce the Improved 3D Diffusion Policy (iDP3), a novel 3D
+visuomotor policy that eliminates these constraints by leveraging egocentric 3D
+visual representations. We demonstrate that iDP3 enables a full-sized humanoid
+robot to autonomously perform skills in diverse real-world scenarios, using
+only data collected in the lab. Videos are available at:
+https://humanoid-manipulation.github.io
+
+[Website Link](https://humanoid-manipulation.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2410.10803
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-19.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-14
+
+
+### FusionSense: Bridging Common Sense, Vision, and Touch for Robust Sparse-View Reconstruction
+
+- **Authors**: Irving Fang, Kairui Shi, Xujin He, Siqi Tan, Yifan Wang, Hanwen Zhao, Hung-Jui Huang, Wenzhen Yuan, Chen Feng, Jing Zhang
+
+#### Abstract
+
+Humans effortlessly integrate common-sense knowledge with sensory input from
+vision and touch to understand their surroundings. Emulating this capability,
+we introduce FusionSense, a novel 3D reconstruction framework that enables
+robots to fuse priors from foundation models with highly sparse observations
+from vision and tactile sensors. FusionSense addresses three key challenges:
+(i) How can robots efficiently acquire robust global shape information about
+the surrounding scene and objects? (ii) How can robots strategically select
+touch points on the object using geometric and common-sense priors? (iii) How
+can partial observations such as tactile signals improve the overall
+representation of the object? Our framework employs 3D Gaussian Splatting as a
+core representation and incorporates a hierarchical optimization strategy
+involving global structure construction, object visual hull pruning and local
+geometric constraints. This advancement results in fast and robust perception
+in environments with traditionally challenging objects that are transparent,
+reflective, or dark, enabling more downstream manipulation or navigation tasks.
+Experiments on real-world data suggest that our framework outperforms
+previously state-of-the-art sparse-view methods. All code and data are
+open-sourced on the project website.
+
+[Paper Link](
+https://arxiv.org/abs/2410.08282
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Guiding Collision-Free Humanoid Multi-Contact Locomotion using Convex Kinematic Relaxations and Dynamic Optimization
+
+- **Authors**: Carlos Gonzalez, Luis Sentis
+
+#### Abstract
+
+Humanoid robots rely on multi-contact planners to navigate a diverse set of
+environments, including those that are unstructured and highly constrained. To
+synthesize stable multi-contact plans within a reasonable time frame, most
+planners assume statically stable motions or rely on reduced order models.
+However, these approaches can also render the problem infeasible in the
+presence of large obstacles or when operating near kinematic and dynamic
+limits. To that end, we propose a new multi-contact framework that leverages
+recent advancements in relaxing collision-free path planning into a convex
+optimization problem, extending it to be applicable to humanoid multi-contact
+navigation. Our approach generates near-feasible trajectories used as guides in
+a dynamic trajectory optimizer, altogether addressing the aforementioned
+limitations. We evaluate our computational approach showcasing three
+different-sized humanoid robots traversing a high-raised naval knee-knocker
+door using our proposed framework in simulation. Our approach can generate
+motion plans within a few seconds consisting of several multi-contact states,
+including dynamic feasibility in joint space.
+
+[Paper Link](
+https://arxiv.org/abs/2410.08335
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-17.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Aerial Vision-and-Language Navigation via Semantic-Topo-Metric Representation Guided LLM Reasoning
+
+- **Authors**: Yunpeng Gao, Zhigang Wang, Linglin Jing, Dong Wang, Xuelong Li, Bin Zhao
+
+#### Abstract
+
+Aerial Vision-and-Language Navigation (VLN) is a novel task enabling Unmanned
+Aerial Vehicles (UAVs) to navigate in outdoor environments through natural
+language instructions and visual cues. It remains challenging due to the
+complex spatial relationships in outdoor aerial scenes. In this paper, we
+propose an end-to-end zero-shot framework for aerial VLN tasks, where the large
+language model (LLM) is introduced as our agent for action prediction.
+Specifically, we develop a novel Semantic-Topo-Metric Representation (STMR) to
+enhance the spatial reasoning ability of LLMs. This is achieved by extracting
+and projecting instruction-related semantic masks of landmarks into a top-down
+map that contains the location information of surrounding landmarks. Further,
+this map is transformed into a matrix representation with distance metrics as
+the text prompt to the LLM, for action prediction according to the instruction.
+Experiments conducted in real and simulation environments have successfully
+proved the effectiveness and robustness of our method, achieving 15.9% and
+12.5% improvements (absolute) in Oracle Success Rate (OSR) on AerialVLN-S
+dataset.
+
+[Paper Link](
+https://arxiv.org/abs/2410.08500
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-16.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SegGrasp: Zero-Shot Task-Oriented Grasping via Semantic and Geometric Guided Segmentation
+
+- **Authors**: Haosheng Li, Weixin Mao, Weipeng Deng, Chenyu Meng, Rui Zhang, Fan Jia, Tiancai Wang, Haoqiang Fan, Hongan Wang, Xiaoming Deng
+
+#### Abstract
+
+Task-oriented grasping, which involves grasping specific parts of objects
+based on their functions, is crucial for developing advanced robotic systems
+capable of performing complex tasks in dynamic environments. In this paper, we
+propose a training-free framework that incorporates both semantic and geometric
+priors for zero-shot task-oriented grasp generation. The proposed framework,
+SegGrasp, first leverages the vision-language models like GLIP for coarse
+segmentation. It then uses detailed geometric information from convex
+decomposition to improve segmentation quality through a fusion policy named
+GeoFusion. An effective grasp pose can be generated by a grasping network with
+improved segmentation. We conducted the experiments on both segmentation
+benchmark and real-world robot grasping. The experimental results show that
+SegGrasp surpasses the baseline by more than 15\% in grasp and segmentation
+performance.
+
+[Paper Link](
+https://arxiv.org/abs/2410.08901
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-11
+
+
+### SPA: 3D Spatial-Awareness Enables Effective Embodied Representation
+
+- **Authors**: Haoyi Zhu, Honghui Yang, Yating Wang, Jiange Yang, Limin Wang, Tong He
+
+#### Abstract
+
+In this paper, we introduce SPA, a novel representation learning framework
+that emphasizes the importance of 3D spatial awareness in embodied AI. Our
+approach leverages differentiable neural rendering on multi-view images to
+endow a vanilla Vision Transformer (ViT) with intrinsic spatial understanding.
+We present the most comprehensive evaluation of embodied representation
+learning to date, covering 268 tasks across 8 simulators with diverse policies
+in both single-task and language-conditioned multi-task scenarios. The results
+are compelling: SPA consistently outperforms more than 10 state-of-the-art
+representation methods, including those specifically designed for embodied AI,
+vision-centric tasks, and multi-modal applications, while using less training
+data. Furthermore, we conduct a series of real-world experiments to confirm its
+effectiveness in practical scenarios. These results highlight the critical role
+of 3D spatial awareness for embodied representation learning. Our strongest
+model takes more than 6000 GPU hours to train and we are committed to
+open-sourcing all code and model weights to foster future research in embodied
+representation learning. Project Page: https://haoyizhu.github.io/spa/.
+
+[Website Link](https://haoyizhu.github.io/spa/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.08208
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RDT-1B: a Diffusion Foundation Model for Bimanual Manipulation
+
+- **Authors**: Songming Liu, Lingxuan Wu, Bangguo Li, Hengkai Tan, Huayu Chen, Zhengyi Wang, Ke Xu, Hang Su, Jun Zhu
+
+#### Abstract
+
+Bimanual manipulation is essential in robotics, yet developing foundation
+models is extremely challenging due to the inherent complexity of coordinating
+two robot arms (leading to multi-modal action distributions) and the scarcity
+of training data. In this paper, we present the Robotics Diffusion Transformer
+(RDT), a pioneering diffusion foundation model for bimanual manipulation. RDT
+builds on diffusion models to effectively represent multi-modality, with
+innovative designs of a scalable Transformer to deal with the heterogeneity of
+multi-modal inputs and to capture the nonlinearity and high frequency of
+robotic data. To address data scarcity, we further introduce a Physically
+Interpretable Unified Action Space, which can unify the action representations
+of various robots while preserving the physical meanings of original actions,
+facilitating learning transferrable physical knowledge. With these designs, we
+managed to pre-train RDT on the largest collection of multi-robot datasets to
+date and scaled it up to 1.2B parameters, which is the largest diffusion-based
+foundation model for robotic manipulation. We finally fine-tuned RDT on a
+self-created multi-task bimanual dataset with over 6K+ episodes to refine its
+manipulation capabilities. Experiments on real robots demonstrate that RDT
+significantly outperforms existing methods. It exhibits zero-shot
+generalization to unseen objects and scenes, understands and follows language
+instructions, learns new skills with just 1~5 demonstrations, and effectively
+handles complex, dexterous tasks. We refer to
+https://rdt-robotics.github.io/rdt-robotics/ for the code and videos.
+
+[Website Link](https://rdt-robotics.github.io/rdt-robotics/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.07864
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Dynamic Object Catching with Quadruped Robot Front Legs
+
+- **Authors**: André Schakkal, Guillaume Bellegarda, Auke Ijspeert
+
+#### Abstract
+
+This paper presents a framework for dynamic object catching using a quadruped
+robot's front legs while it stands on its rear legs. The system integrates
+computer vision, trajectory prediction, and leg control to enable the quadruped
+to visually detect, track, and successfully catch a thrown object using an
+onboard camera. Leveraging a fine-tuned YOLOv8 model for object detection and a
+regression-based trajectory prediction module, the quadruped adapts its front
+leg positions iteratively to anticipate and intercept the object. The catching
+maneuver involves identifying the optimal catching position, controlling the
+front legs with Cartesian PD control, and closing the legs together at the
+right moment. We propose and validate three different methods for selecting the
+optimal catching position: 1) intersecting the predicted trajectory with a
+vertical plane, 2) selecting the point on the predicted trajectory with the
+minimal distance to the center of the robot's legs in their nominal position,
+and 3) selecting the point on the predicted trajectory with the highest
+likelihood on a Gaussian Mixture Model (GMM) modelling the robot's reachable
+space. Experimental results demonstrate robust catching capabilities across
+various scenarios, with the GMM method achieving the best performance, leading
+to an 80% catching success rate. A video demonstration of the system in action
+can be found at https://youtu.be/sm7RdxRfIYg .
+
+[Website Link](https://youtu.be/sm7RdxRfIYg)
+
+[Paper Link](
+https://arxiv.org/abs/2410.08065
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-10
+
+
+### Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making
+
+- **Authors**: Manling Li, Shiyu Zhao, Qineng Wang, Kangrui Wang, Yu Zhou, Sanjana Srivastava, Cem Gokmen, Tony Lee, Li Erran Li, Ruohan Zhang, Weiyu Liu, Percy Liang, Li Fei-Fei, Jiayuan Mao, Jiajun Wu
+
+#### Abstract
+
+We aim to evaluate Large Language Models (LLMs) for embodied decision making.
+While a significant body of work has been leveraging LLMs for decision making
+in embodied environments, we still lack a systematic understanding of their
+performance because they are usually applied in different domains, for
+different purposes, and built based on different inputs and outputs.
+Furthermore, existing evaluations tend to rely solely on a final success rate,
+making it difficult to pinpoint what ability is missing in LLMs and where the
+problem lies, which in turn blocks embodied agents from leveraging LLMs
+effectively and selectively. To address these limitations, we propose a
+generalized interface (Embodied Agent Interface) that supports the
+formalization of various types of tasks and input-output specifications of
+LLM-based modules. Specifically, it allows us to unify 1) a broad set of
+embodied decision-making tasks involving both state and temporally extended
+goals, 2) four commonly-used LLM-based modules for decision making: goal
+interpretation, subgoal decomposition, action sequencing, and transition
+modeling, and 3) a collection of fine-grained metrics which break down
+evaluation into various types of errors, such as hallucination errors,
+affordance errors, various types of planning errors, etc. Overall, our
+benchmark offers a comprehensive assessment of LLMs' performance for different
+subtasks, pinpointing the strengths and weaknesses in LLM-powered embodied AI
+systems, and providing insights for effective and selective use of LLMs in
+embodied decision making.
+
+[Paper Link](
+https://arxiv.org/abs/2410.07166
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Whole-Body Dynamic Throwing with Legged Manipulators
+
+- **Authors**: Humphrey Munn, Brendan Tidd, David Howard, Marcus Gallagher
+
+#### Abstract
+
+Most robotic behaviours focus on either manipulation or locomotion, where
+tasks that require the integration of both, such as full-body throwing, remain
+under-explored. Throwing with a robot involves complex coordination between
+object manipulation and legged locomotion, which is crucial for advanced
+real-world interactions. This work investigates the challenge of full-body
+throwing in robotic systems and highlights the advantages of utilising the
+robot's entire body. We propose a deep reinforcement learning (RL) approach
+that leverages the robot's body to enhance throwing performance through a
+strategically designed curriculum to avoid local optima and sparse but
+informative reward functions to improve policy flexibility. The robot's body
+learns to generate additional momentum and fine-tune the projectile release
+velocity. Our full-body method achieves on average 47% greater throwing
+distance and 34% greater throwing accuracy than the arm alone, across two robot
+morphologies - an armed quadruped and a humanoid. We also extend our method to
+optimise robot stability during throws. The learned policy effectively
+generalises throwing to targets at any 3D point in space within a specified
+range, which has not previously been achieved and does so with human-level
+throwing accuracy. We successfully transferred this approach from simulation to
+a real robot using sim2real techniques, demonstrating its practical viability.
+
+[Paper Link](
+https://arxiv.org/abs/2410.05681
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-22_00-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### OrionNav: Online Planning for Robot Autonomy with Context-Aware LLM and Open-Vocabulary Semantic Scene Graphs
+
+- **Authors**: Venkata Naren Devarakonda, Raktim Gautam Goswami, Ali Umut Kaypak, Naman Patel, Rooholla Khorrambakht, Prashanth Krishnamurthy, Farshad Khorrami
+
+#### Abstract
+
+Enabling robots to autonomously navigate unknown, complex, dynamic
+environments and perform diverse tasks remains a fundamental challenge in
+developing robust autonomous physical agents. They must effectively perceive
+their surroundings while leveraging world knowledge for decision-making. While
+recent approaches utilize vision-language and large language models for scene
+understanding and planning, they often rely on offline processing, external
+computing, or restrictive environmental assumptions. We present a novel
+framework for efficient and scalable real-time, onboard autonomous navigation
+that integrates multi-level abstraction in both perception and planning in
+unknown large-scale environments that change over time. Our system fuses data
+from multiple onboard sensors for localization and mapping and integrates it
+with open-vocabulary semantics to generate hierarchical scene graphs. An
+LLM-based planner leverages these graphs to generate high-level task execution
+strategies, which guide low-level controllers in safely accomplishing goals.
+Our framework's real-time operation enables continuous updates to scene graphs
+and plans, allowing swift responses to environmental changes and on-the-fly
+error correction. This is a key advantage over static or rule-based planning
+systems. We demonstrate our system's efficacy on a quadruped robot navigating
+large-scale, dynamic environments, showcasing its adaptability and robustness
+in diverse scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2410.06239
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-59.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-21
+
+
+### LocoVR: Multiuser Indoor Locomotion Dataset in Virtual Reality
+
+- **Authors**: Kojiro Takeyama, Yimeng Liu, Misha Sra
+
+#### Abstract
+
+Understanding human locomotion is crucial for AI agents such as robots,
+particularly in complex indoor home environments. Modeling human trajectories
+in these spaces requires insight into how individuals maneuver around physical
+obstacles and manage social navigation dynamics. These dynamics include subtle
+behaviors influenced by proxemics - the social use of space, such as stepping
+aside to allow others to pass or choosing longer routes to avoid collisions.
+Previous research has developed datasets of human motion in indoor scenes, but
+these are often limited in scale and lack the nuanced social navigation
+dynamics common in home environments. To address this, we present LocoVR, a
+dataset of 7000+ two-person trajectories captured in virtual reality from over
+130 different indoor home environments. LocoVR provides full body pose data and
+precise spatial information, along with rich examples of socially-motivated
+movement behaviors. For example, the dataset captures instances of individuals
+navigating around each other in narrow spaces, adjusting paths to respect
+personal boundaries in living areas, and coordinating movements in high-traffic
+zones like entryways and kitchens. Our evaluation shows that LocoVR
+significantly enhances model performance in three practical indoor tasks
+utilizing human trajectories, and demonstrates predicting socially-aware
+navigation patterns in home environments.
+
+[Paper Link](
+https://arxiv.org/abs/2410.06437
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Real-to-Sim Grasp: Rethinking the Gap between Simulation and Real World in Grasp Detection
+
+- **Authors**: Jia-Feng Cai, Zibo Chen, Xiao-Ming Wu, Jian-Jian Jiang, Yi-Lin Wei, Wei-Shi Zheng
+
+#### Abstract
+
+For 6-DoF grasp detection, simulated data is expandable to train more
+powerful model, but it faces the challenge of the large gap between simulation
+and real world. Previous works bridge this gap with a sim-to-real way. However,
+this way explicitly or implicitly forces the simulated data to adapt to the
+noisy real data when training grasp detectors, where the positional drift and
+structural distortion within the camera noise will harm the grasp learning. In
+this work, we propose a Real-to-Sim framework for 6-DoF Grasp detection, named
+R2SGrasp, with the key insight of bridging this gap in a real-to-sim way, which
+directly bypasses the camera noise in grasp detector training through an
+inference-time real-to-sim adaption. To achieve this real-to-sim adaptation,
+our R2SGrasp designs the Real-to-Sim Data Repairer (R2SRepairer) to mitigate
+the camera noise of real depth maps in data-level, and the Real-to-Sim Feature
+Enhancer (R2SEnhancer) to enhance real features with precise simulated
+geometric primitives in feature-level. To endow our framework with the
+generalization ability, we construct a large-scale simulated dataset
+cost-efficiently to train our grasp detector, which includes 64,000 RGB-D
+images with 14.4 million grasp annotations. Sufficient experiments show that
+R2SGrasp is powerful and our real-to-sim perspective is effective. The
+real-world experiments further show great generalization ability of R2SGrasp.
+Project page is available on https://isee-laboratory.github.io/R2SGrasp.
+
+[Website Link](https://isee-laboratory.github.io/R2SGrasp.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.06521
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### M3Bench: Benchmarking Whole-body Motion Generation for Mobile Manipulation in 3D Scenes
+
+- **Authors**: Zeyu Zhang, Sixu Yan, Muzhi Han, Zaijin Wang, Xinggang Wang, Song-Chun Zhu, Hangxin Liu
+
+#### Abstract
+
+We propose M^3Bench, a new benchmark of whole-body motion generation for
+mobile manipulation tasks. Given a 3D scene context, M^3Bench requires an
+embodied agent to understand its configuration, environmental constraints and
+task objectives, then generate coordinated whole-body motion trajectories for
+object rearrangement tasks. M^3Bench features 30k object rearrangement tasks
+across 119 diverse scenes, providing expert demonstrations generated by our
+newly developed M^3BenchMaker. This automatic data generation tool produces
+coordinated whole-body motion trajectories from high-level task instructions,
+requiring only basic scene and robot information. Our benchmark incorporates
+various task splits to assess generalization across different dimensions and
+leverages realistic physics simulation for trajectory evaluation. Through
+extensive experimental analyses, we reveal that state-of-the-art models still
+struggle with coordinated base-arm motion while adhering to environment-context
+and task-specific constraints, highlighting the need to develop new models that
+address this gap. Through M^3Bench, we aim to facilitate future robotics
+research towards more adaptive and capable mobile manipulation in diverse,
+real-world environments.
+
+[Paper Link](
+https://arxiv.org/abs/2410.06678
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VIRT: Vision Instructed Transformer for Robotic Manipulation
+
+- **Authors**: Zhuoling Li, Liangliang Ren, Jinrong Yang, Yong Zhao, Xiaoyang Wu, Zhenhua Xu, Xiang Bai, Hengshuang Zhao
+
+#### Abstract
+
+Robotic manipulation, owing to its multi-modal nature, often faces
+significant training ambiguity, necessitating explicit instructions to clearly
+delineate the manipulation details in tasks. In this work, we highlight that
+vision instruction is naturally more comprehensible to recent robotic policies
+than the commonly adopted text instruction, as these policies are born with
+some vision understanding ability like human infants. Building on this premise
+and drawing inspiration from cognitive science, we introduce the robotic
+imagery paradigm, which realizes large-scale robotic data pre-training without
+text annotations. Additionally, we propose the robotic gaze strategy that
+emulates the human eye gaze mechanism, thereby guiding subsequent actions and
+focusing the attention of the policy on the manipulated object. Leveraging
+these innovations, we develop VIRT, a fully Transformer-based policy. We design
+comprehensive tasks using both a physical robot and simulated environments to
+assess the efficacy of VIRT. The results indicate that VIRT can complete very
+competitive tasks like ``opening the lid of a tightly sealed bottle'', and the
+proposed techniques boost the success rates of the baseline policy on diverse
+challenging tasks from nearly 0% to more than 65%.
+
+[Paper Link](
+https://arxiv.org/abs/2410.07169
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-08
+
+
+### ETHcavation: A Dataset and Pipeline for Panoptic Scene Understanding and Object Tracking in Dynamic Construction Environments
+
+- **Authors**: Lorenzo Terenzi, Julian Nubert, Pol Eyschen, Pascal Roth, Simin Fei, Edo Jelavic, Marco Hutter
+
+#### Abstract
+
+Construction sites are challenging environments for autonomous systems due to
+their unstructured nature and the presence of dynamic actors, such as workers
+and machinery. This work presents a comprehensive panoptic scene understanding
+solution designed to handle the complexities of such environments by
+integrating 2D panoptic segmentation with 3D LiDAR mapping. Our system
+generates detailed environmental representations in real-time by combining
+semantic and geometric data, supported by Kalman Filter-based tracking for
+dynamic object detection. We introduce a fine-tuning method that adapts large
+pre-trained panoptic segmentation models for construction site applications
+using a limited number of domain-specific samples. For this use case, we
+release a first-of-its-kind dataset of 502 hand-labeled sample images with
+panoptic annotations from construction sites. In addition, we propose a dynamic
+panoptic mapping technique that enhances scene understanding in unstructured
+environments. As a case study, we demonstrate the system's application for
+autonomous navigation, utilizing real-time RRT* for reactive path planning in
+dynamic scenarios. The dataset
+(https://leggedrobotics.github.io/panoptic-scene-understanding.github.io/) and
+code (https://github.com/leggedrobotics/rsl_panoptic_mapping) for training and
+deployment are publicly available to support future research.
+
+[Website Link](https://leggedrobotics.github.io/panoptic-scene-understanding.github.io/))
+
+[Paper Link](
+https://arxiv.org/abs/2410.04250
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GARField: Addressing the visual Sim-to-Real gap in garment manipulation with mesh-attached radiance fields
+
+- **Authors**: Donatien Delehelle, Darwin G. Caldwell, Fei Chen
+
+#### Abstract
+
+While humans intuitively manipulate garments and other textiles items swiftly
+and accurately, it is a significant challenge for robots. A factor crucial to
+the human performance is the ability to imagine, a priori, the intended result
+of the manipulation intents and hence develop predictions on the garment pose.
+This allows us to plan from highly obstructed states, adapt our plans as we
+collect more information and react swiftly to unforeseen circumstances. Robots,
+on the other hand, struggle to establish such intuitions and form tight links
+between plans and observations. This can be attributed in part to the high cost
+of obtaining densely labelled data for textile manipulation, both in quality
+and quantity. The problem of data collection is a long standing issue in
+data-based approaches to garment manipulation. Currently, the generation of
+high quality and labelled garment manipulation data is mainly attempted through
+advanced data capture procedures that create simplified state estimations from
+real-world observations. In this work, however, we propose to generate
+real-world observations from given object states. To achieve this, we present
+GARField (Garment Attached Radiance Field) a differentiable rendering
+architecture allowing data generation from simulated states stored as triangle
+meshes. Code will be available on https://ddonatien.github.io/garfield-website/
+
+[Website Link](https://ddonatien.github.io/garfield-website/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.05038
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### PhotoReg: Photometrically Registering 3D Gaussian Splatting Models
+
+- **Authors**: Ziwen Yuan, Tianyi Zhang, Matthew Johnson-Roberson, Weiming Zhi
+
+#### Abstract
+
+Building accurate representations of the environment is critical for
+intelligent robots to make decisions during deployment. Advances in
+photorealistic environment models have enabled robots to develop
+hyper-realistic reconstructions, which can be used to generate images that are
+intuitive for human inspection. In particular, the recently introduced
+\ac{3DGS}, which describes the scene with up to millions of primitive
+ellipsoids, can be rendered in real time. \ac{3DGS} has rapidly gained
+prominence. However, a critical unsolved problem persists: how can we fuse
+multiple \ac{3DGS} into a single coherent model? Solving this problem will
+enable robot teams to jointly build \ac{3DGS} models of their surroundings. A
+key insight of this work is to leverage the {duality} between photorealistic
+reconstructions, which render realistic 2D images from 3D structure, and
+\emph{3D foundation models}, which predict 3D structure from image pairs. To
+this end, we develop PhotoReg, a framework to register multiple photorealistic
+\ac{3DGS} models with 3D foundation models. As \ac{3DGS} models are generally
+built from monocular camera images, they have \emph{arbitrary scale}. To
+resolve this, PhotoReg actively enforces scale consistency among the different
+\ac{3DGS} models by considering depth estimates within these models. Then, the
+alignment is iteratively refined with fine-grained photometric losses to
+produce high-quality fused \ac{3DGS} models. We rigorously evaluate PhotoReg on
+both standard benchmark datasets and our custom-collected datasets, including
+with two quadruped robots. The code is released at
+\url{ziweny11.github.io/photoreg}.
+
+[Paper Link](
+https://arxiv.org/abs/2410.05044
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-46_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### HE-Nav: A High-Performance and Efficient Navigation System for Aerial-Ground Robots in Cluttered Environments
+
+- **Authors**: Junming Wang, Zekai Sun, Xiuxian Guan, Tianxiang Shen, Dong Huang, Zongyuan Zhang, Tianyang Duan, Fangming Liu, Heming Cui
+
+#### Abstract
+
+Existing AGR navigation systems have advanced in lightly occluded scenarios
+(e.g., buildings) by employing 3D semantic scene completion networks for voxel
+occupancy prediction and constructing Euclidean Signed Distance Field (ESDF)
+maps for collision-free path planning. However, these systems exhibit
+suboptimal performance and efficiency in cluttered environments with severe
+occlusions (e.g., dense forests or tall walls), due to limitations arising from
+perception networks' low prediction accuracy and path planners' high
+computational overhead. In this paper, we present HE-Nav, the first
+high-performance and efficient navigation system tailored for AGRs operating in
+cluttered environments. The perception module utilizes a lightweight semantic
+scene completion network (LBSCNet), guided by a bird's eye view (BEV) feature
+fusion and enhanced by an exquisitely designed SCB-Fusion module and attention
+mechanism. This enables real-time and efficient obstacle prediction in
+cluttered areas, generating a complete local map. Building upon this completed
+map, our novel AG-Planner employs the energy-efficient kinodynamic A* search
+algorithm to guarantee planning is energy-saving. Subsequent trajectory
+optimization processes yield safe, smooth, dynamically feasible and ESDF-free
+aerial-ground hybrid paths. Extensive experiments demonstrate that HE-Nav
+achieved 7x energy savings in real-world situations while maintaining planning
+success rates of 98% in simulation scenarios. Code and video are available on
+our project page: https://jmwang0117.github.io/HE-Nav/.
+
+[Website Link](https://jmwang0117.github.io/HE-Nav/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.05079
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Towards a Modern and Lightweight Rendering Engine for Dynamic Robotic Simulations
+
+- **Authors**: Christopher John Allison, Haoying Zhou, Adnan Munawar, Peter Kazanzides, Juan Antonio Barragan
+
+#### Abstract
+
+Interactive dynamic simulators are an accelerator for developing novel
+robotic control algorithms and complex systems involving humans and robots. In
+user training and synthetic data generation applications, a high-fidelity
+visualization of the simulation is essential. Visual fidelity is dependent on
+the quality of the computer graphics algorithms used to render the simulated
+scene. Furthermore, the rendering algorithms must be implemented on the
+graphics processing unit (GPU) to achieve real-time performance, requiring the
+use of a graphics application programming interface (API). This paper presents
+a performance-focused and lightweight rendering engine supporting the Vulkan
+graphics API. The engine is designed to modernize the legacy rendering pipeline
+of Asynchronous Multi-Body Framework (AMBF), a dynamic simulation framework
+used extensively for interactive robotics simulation development. This new
+rendering engine implements graphical features such as physically based
+rendering (PBR), anti-aliasing, and ray-traced shadows, significantly improving
+the image quality of AMBF. Computational experiments show that the engine can
+render a simulated scene with over seven million triangles while maintaining
+GPU computation times within two milliseconds.
+
+[Paper Link](
+https://arxiv.org/abs/2410.05095
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Proprioceptive State Estimation for Quadruped Robots using Invariant Kalman Filtering and Scale-Variant Robust Cost Functions
+
+- **Authors**: Hilton Marques Souza Santana, João Carlos Virgolino Soares, Ylenia Nisticò, Marco Antonio Meggiolaro, Claudio Semini
+
+#### Abstract
+
+Accurate state estimation is crucial for legged robot locomotion, as it
+provides the necessary information to allow control and navigation. However, it
+is also challenging, especially in scenarios with uneven and slippery terrain.
+This paper presents a new Invariant Extended Kalman filter for legged robot
+state estimation using only proprioceptive sensors. We formulate the
+methodology by combining recent advances in state estimation theory with the
+use of robust cost functions in the measurement update. We tested our
+methodology on quadruped robots through experiments and public datasets,
+showing that we can obtain a pose drift up to 40% lower in trajectories
+covering a distance of over 450m, in comparison with a state-of-the-art
+Invariant Extended Kalman filter.
+
+[Paper Link](
+https://arxiv.org/abs/2410.05256
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-07
+
+
+### MO-DDN: A Coarse-to-Fine Attribute-based Exploration Agent for Multi-object Demand-driven Navigation
+
+- **Authors**: Hongcheng Wang, Peiqi Liu, Wenzhe Cai, Mingdong Wu, Zhengyu Qian, Hao Dong
+
+#### Abstract
+
+The process of satisfying daily demands is a fundamental aspect of humans'
+daily lives. With the advancement of embodied AI, robots are increasingly
+capable of satisfying human demands. Demand-driven navigation (DDN) is a task
+in which an agent must locate an object to satisfy a specified demand
+instruction, such as ``I am thirsty.'' The previous study typically assumes
+that each demand instruction requires only one object to be fulfilled and does
+not consider individual preferences. However, the realistic human demand may
+involve multiple objects. In this paper, we introduce the Multi-object
+Demand-driven Navigation (MO-DDN) benchmark, which addresses these nuanced
+aspects, including multi-object search and personal preferences, thus making
+the MO-DDN task more reflective of real-life scenarios compared to DDN.
+Building upon previous work, we employ the concept of ``attribute'' to tackle
+this new task. However, instead of solely relying on attribute features in an
+end-to-end manner like DDN, we propose a modular method that involves
+constructing a coarse-to-fine attribute-based exploration agent (C2FAgent). Our
+experimental results illustrate that this coarse-to-fine exploration strategy
+capitalizes on the advantages of attributes at various decision-making levels,
+resulting in superior performance compared to baseline methods. Code and video
+can be found at https://sites.google.com/view/moddn.
+
+[Website Link](https://sites.google.com/view/moddn.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.03488
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GenSim2: Scaling Robot Data Generation with Multi-modal and Reasoning LLMs
+
+- **Authors**: Pu Hua, Minghuan Liu, Annabella Macaluso, Yunfeng Lin, Weinan Zhang, Huazhe Xu, Lirui Wang
+
+#### Abstract
+
+Robotic simulation today remains challenging to scale up due to the human
+efforts required to create diverse simulation tasks and scenes.
+Simulation-trained policies also face scalability issues as many sim-to-real
+methods focus on a single task. To address these challenges, this work proposes
+GenSim2, a scalable framework that leverages coding LLMs with multi-modal and
+reasoning capabilities for complex and realistic simulation task creation,
+including long-horizon tasks with articulated objects. To automatically
+generate demonstration data for these tasks at scale, we propose planning and
+RL solvers that generalize within object categories. The pipeline can generate
+data for up to 100 articulated tasks with 200 objects and reduce the required
+human efforts. To utilize such data, we propose an effective multi-task
+language-conditioned policy architecture, dubbed proprioceptive point-cloud
+transformer (PPT), that learns from the generated demonstrations and exhibits
+strong sim-to-real zero-shot transfer. Combining the proposed pipeline and the
+policy architecture, we show a promising usage of GenSim2 that the generated
+data can be used for zero-shot transfer or co-train with real-world collected
+data, which enhances the policy performance by 20% compared with training
+exclusively on limited real data.
+
+[Paper Link](
+https://arxiv.org/abs/2410.03645
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-37_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Humanoid Locomotion over Challenging Terrain
+
+- **Authors**: Ilija Radosavovic, Sarthak Kamat, Trevor Darrell, Jitendra Malik
+
+#### Abstract
+
+Humanoid robots can, in principle, use their legs to go almost anywhere.
+Developing controllers capable of traversing diverse terrains, however, remains
+a considerable challenge. Classical controllers are hard to generalize broadly
+while the learning-based methods have primarily focused on gentle terrains.
+Here, we present a learning-based approach for blind humanoid locomotion
+capable of traversing challenging natural and man-made terrain. Our method uses
+a transformer model to predict the next action based on the history of
+proprioceptive observations and actions. The model is first pre-trained on a
+dataset of flat-ground trajectories with sequence modeling, and then fine-tuned
+on uneven terrain using reinforcement learning. We evaluate our model on a real
+humanoid robot across a variety of terrains, including rough, deformable, and
+sloped surfaces. The model demonstrates robust performance, in-context
+adaptation, and emergent terrain representations. In real-world case studies,
+our humanoid robot successfully traversed over 4 miles of hiking trails in
+Berkeley and climbed some of the steepest streets in San Francisco.
+
+[Paper Link](
+https://arxiv.org/abs/2410.03654
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-37.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-04
+
+
+### DivScene: Benchmarking LVLMs for Object Navigation with Diverse Scenes and Objects
+
+- **Authors**: Zhaowei Wang, Hongming Zhang, Tianqing Fang, Ye Tian, Yue Yang, Kaixin Ma, Xiaoman Pan, Yangqiu Song, Dong Yu
+
+#### Abstract
+
+Object navigation in unknown environments is crucial for deploying embodied
+agents in real-world applications. While we have witnessed huge progress due to
+large-scale scene datasets, faster simulators, and stronger models, previous
+studies mainly focus on limited scene types and target objects. In this paper,
+we study a new task of navigating to diverse target objects in a large number
+of scene types. To benchmark the problem, we present a large-scale scene
+dataset, DivScene, which contains 4,614 scenes across 81 different types. With
+the dataset, we build an end-to-end embodied agent, NatVLM, by fine-tuning a
+Large Vision Language Model (LVLM) through imitation learning. The LVLM is
+trained to take previous observations from the environment and generate the
+next actions. We also introduce CoT explanation traces of the action prediction
+for better performance when tuning LVLMs. Our extensive experiments find that
+we can build a performant LVLM-based agent through imitation learning on the
+shortest paths constructed by a BFS planner without any human supervision. Our
+agent achieves a success rate that surpasses GPT-4o by over 20%. Meanwhile, we
+carry out various analyses showing the generalization ability of our agent. Our
+code and data are available at https://github.com/zhaowei-wang-nlp/DivScene.
+
+[Website Link](https://github.com/zhaowei-wang-nlp/DivScene.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.02730
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-35.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Diverse Bimanual Dexterous Manipulation Skills from Human Demonstrations
+
+- **Authors**: Bohan Zhou, Haoqi Yuan, Yuhui Fu, Zongqing Lu
+
+#### Abstract
+
+Bimanual dexterous manipulation is a critical yet underexplored area in
+robotics. Its high-dimensional action space and inherent task complexity
+present significant challenges for policy learning, and the limited task
+diversity in existing benchmarks hinders general-purpose skill development.
+Existing approaches largely depend on reinforcement learning, often constrained
+by intricately designed reward functions tailored to a narrow set of tasks. In
+this work, we present a novel approach for efficiently learning diverse
+bimanual dexterous skills from abundant human demonstrations. Specifically, we
+introduce BiDexHD, a framework that unifies task construction from existing
+bimanual datasets and employs teacher-student policy learning to address all
+tasks. The teacher learns state-based policies using a general two-stage reward
+function across tasks with shared behaviors, while the student distills the
+learned multi-task policies into a vision-based policy. With BiDexHD, scalable
+learning of numerous bimanual dexterous skills from auto-constructed tasks
+becomes feasible, offering promising advances toward universal bimanual
+dexterous manipulation. Our empirical evaluation on the TACO dataset, spanning
+141 tasks across six categories, demonstrates a task fulfillment rate of 74.59%
+on trained tasks and 51.07% on unseen tasks, showcasing the effectiveness and
+competitive zero-shot generalization capabilities of BiDexHD. For videos and
+more information, visit our project page https://sites.google.com/view/bidexhd.
+
+[Website Link](https://sites.google.com/view/bidexhd.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.02477
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-34.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Cross-Embodiment Dexterous Grasping with Reinforcement Learning
+
+- **Authors**: Haoqi Yuan, Bohan Zhou, Yuhui Fu, Zongqing Lu
+
+#### Abstract
+
+Dexterous hands exhibit significant potential for complex real-world grasping
+tasks. While recent studies have primarily focused on learning policies for
+specific robotic hands, the development of a universal policy that controls
+diverse dexterous hands remains largely unexplored. In this work, we study the
+learning of cross-embodiment dexterous grasping policies using reinforcement
+learning (RL). Inspired by the capability of human hands to control various
+dexterous hands through teleoperation, we propose a universal action space
+based on the human hand's eigengrasps. The policy outputs eigengrasp actions
+that are then converted into specific joint actions for each robot hand through
+a retargeting mapping. We simplify the robot hand's proprioception to include
+only the positions of fingertips and the palm, offering a unified observation
+space across different robot hands. Our approach demonstrates an 80% success
+rate in grasping objects from the YCB dataset across four distinct embodiments
+using a single vision-based policy. Additionally, our policy exhibits zero-shot
+generalization to two previously unseen embodiments and significant improvement
+in efficient finetuning. For further details and videos, visit our project page
+https://sites.google.com/view/crossdex.
+
+[Website Link](https://sites.google.com/view/crossdex.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.02479
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-32.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-03
+
+
+### Divide et Impera: Learning impedance families for peg-in-hole assembly
+
+- **Authors**: Johannes Lachner, Federico Tessari, A. Michael West Jr., Moses C. Nah, Neville Hogan
+
+#### Abstract
+
+This paper addresses robotic peg-in-hole assembly using the framework of
+Elementary Dynamic Actions (EDA). Inspired by motor primitives in neuromotor
+control research, the method leverages three primitives: submovements,
+oscillations, and mechanical impedances (e.g., stiffness and damping), combined
+via a Norton equivalent network model. By focusing on impedance
+parameterization, we explore the adaptability of EDA in contact-rich tasks.
+Experimental results, conducted on a real robot setup with four different peg
+types, demonstrated a range of successful impedance parameters, challenging
+conventional methods that seek optimal parameters. We analyze our data in a
+lower-dimensional solution space. Clustering analysis shows the possibility to
+identify different individual strategies for each single peg, as well as common
+strategies across all pegs. A neural network model, trained on the experimental
+data, accurately predicted successful impedance parameters across all pegs. The
+practical utility of this work is enhanced by a success-predictor model and the
+public availability of all code and CAD files. These findings highlight the
+flexibility and robustness of EDA; show multiple equally-successful strategies
+for contact-rich manipulation; and offer valuable insights and tools for
+robotic assembly programming.
+
+[Paper Link](
+https://arxiv.org/abs/2410.01054
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoTip: A Finger-Shaped Tactile Sensor with Active Rotation
+
+- **Authors**: Xuyang Zhang, Jiaqi Jiang, Shan Luo
+
+#### Abstract
+
+In recent years, advancements in optical tactile sensor technology have
+primarily centred on enhancing sensing precision and expanding the range of
+sensing modalities. To meet the requirements for more skilful manipulation,
+there should be a movement towards making tactile sensors more dynamic. In this
+paper, we introduce RoTip, a novel vision-based tactile sensor that is uniquely
+designed with an independently controlled joint and the capability to sense
+contact over its entire surface. The rotational capability of the sensor is
+particularly crucial for manipulating everyday objects, especially thin and
+flexible ones, as it enables the sensor to mobilize while in contact with the
+object's surface. The manipulation experiments demonstrate the ability of our
+proposed RoTip to manipulate rigid and flexible objects, and the full-finger
+tactile feedback and active rotation capabilities have the potential to explore
+more complex and precise manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2410.01085
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-27.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### D(R, O) Grasp: A Unified Representation of Robot and Object Interaction for Cross-Embodiment Dexterous Grasping
+
+- **Authors**: Zhenyu Wei, Zhixuan Xu, Jingxiang Guo, Yiwen Hou, Chongkai Gao, Zhehao Cai, Jiayu Luo, Lin Shao
+
+#### Abstract
+
+Dexterous grasping is a fundamental yet challenging skill in robotic
+manipulation, requiring precise interaction between robotic hands and objects.
+In this paper, we present D(R,O) Grasp, a novel framework that models the
+interaction between the robotic hand in its grasping pose and the object,
+enabling broad generalization across various robot hands and object geometries.
+Our model takes the robot hand's description and object point cloud as inputs
+and efficiently predicts kinematically valid and stable grasps, demonstrating
+strong adaptability to diverse robot embodiments and object geometries.
+Extensive experiments conducted in both simulated and real-world environments
+validate the effectiveness of our approach, with significant improvements in
+success rate, grasp diversity, and inference speed across multiple robotic
+hands. Our method achieves an average success rate of 87.53% in simulation in
+less than one second, tested across three different dexterous robotic hands. In
+real-world experiments using the LeapHand, the method also demonstrates an
+average success rate of 89%. D(R,O) Grasp provides a robust solution for
+dexterous grasping in complex and varied environments. The code, appendix, and
+videos are available on our project website at
+https://nus-lins-lab.github.io/drograspweb/.
+
+[Website Link](https://nus-lins-lab.github.io/drograspweb/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.01702
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-20.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-02
+
+
+### Helpful DoggyBot: Open-World Object Fetching using Legged Robots and Vision-Language Models
+
+- **Authors**: Qi Wu, Zipeng Fu, Xuxin Cheng, Xiaolong Wang, Chelsea Finn
+
+#### Abstract
+
+Learning-based methods have achieved strong performance for quadrupedal
+locomotion. However, several challenges prevent quadrupeds from learning
+helpful indoor skills that require interaction with environments and humans:
+lack of end-effectors for manipulation, limited semantic understanding using
+only simulation data, and low traversability and reachability in indoor
+environments. We present a system for quadrupedal mobile manipulation in indoor
+environments. It uses a front-mounted gripper for object manipulation, a
+low-level controller trained in simulation using egocentric depth for agile
+skills like climbing and whole-body tilting, and pre-trained vision-language
+models (VLMs) with a third-person fisheye and an egocentric RGB camera for
+semantic understanding and command generation. We evaluate our system in two
+unseen environments without any real-world data collection or training. Our
+system can zero-shot generalize to these environments and complete tasks, like
+following user's commands to fetch a randomly placed stuff toy after climbing
+over a queen-sized bed, with a 60% success rate. Project website:
+https://helpful-doggybot.github.io/
+
+[Website Link](https://helpful-doggybot.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.00231
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-16.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ManiSkill3: GPU Parallelized Robotics Simulation and Rendering for Generalizable Embodied AI
+
+- **Authors**: Stone Tao, Fanbo Xiang, Arth Shukla, Yuzhe Qin, Xander Hinrichsen, Xiaodi Yuan, Chen Bao, Xinsong Lin, Yulin Liu, Tse-kai Chan, Yuan Gao, Xuanlin Li, Tongzhou Mu, Nan Xiao, Arnav Gurha, Zhiao Huang, Roberto Calandra, Rui Chen, Shan Luo, Hao Su
+
+#### Abstract
+
+Simulation has enabled unprecedented compute-scalable approaches to robot
+learning. However, many existing simulation frameworks typically support a
+narrow range of scenes/tasks and lack features critical for scaling
+generalizable robotics and sim2real. We introduce and open source ManiSkill3,
+the fastest state-visual GPU parallelized robotics simulator with contact-rich
+physics targeting generalizable manipulation. ManiSkill3 supports GPU
+parallelization of many aspects including simulation+rendering, heterogeneous
+simulation, pointclouds/voxels visual input, and more. Simulation with
+rendering on ManiSkill3 can run 10-1000x faster with 2-3x less GPU memory usage
+than other platforms, achieving up to 30,000+ FPS in benchmarked environments
+due to minimal python/pytorch overhead in the system, simulation on the GPU,
+and the use of the SAPIEN parallel rendering system. Tasks that used to take
+hours to train can now take minutes. We further provide the most comprehensive
+range of GPU parallelized environments/tasks spanning 12 distinct domains
+including but not limited to mobile manipulation for tasks such as drawing,
+humanoids, and dextrous manipulation in realistic scenes designed by artists or
+real-world digital twins. In addition, millions of demonstration frames are
+provided from motion planning, RL, and teleoperation. ManiSkill3 also provides
+a comprehensive set of baselines that span popular RL and
+learning-from-demonstrations algorithms.
+
+[Paper Link](
+https://arxiv.org/abs/2410.00425
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-14_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RobotGraffiti: An AR tool for semi-automated construction of workcell models to optimize robot deployment
+
+- **Authors**: Krzysztof Zieliński, Ryan Penning, Bruce Blumberg, Christian Schlette, Mikkel Baun Kjærgaard
+
+#### Abstract
+
+Improving robot deployment is a central step towards speeding up robot-based
+automation in manufacturing. A main challenge in robot deployment is how to
+best place the robot within the workcell. To tackle this challenge, we combine
+two knowledge sources: robotic knowledge of the system and workcell context
+awareness of the user, and intersect them with an Augmented Reality interface.
+RobotGraffiti is a unique tool that empowers the user in robot deployment
+tasks. One simply takes a 3D scan of the workcell with their mobile device,
+adds contextual data points that otherwise would be difficult to infer from the
+system, and receives a robot base position that satisfies the automation task.
+The proposed approach is an alternative to expensive and time-consuming digital
+twins, with a fast and easy-to-use tool that focuses on selected workcell
+features needed to run the placement optimization algorithm. The main
+contributions of this paper are the novel user interface for robot base
+placement data collection and a study comparing the traditional offline
+simulation with our proposed method. We showcase the method with a robot base
+placement solution and obtain up to 16 times reduction in time.
+
+[Paper Link](
+https://arxiv.org/abs/2410.00484
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Obstacle-Avoidant Leader Following with a Quadruped Robot
+
+- **Authors**: Carmen Scheidemann, Lennart Werner, Victor Reijgwart, Andrei Cramariuc, Joris Chomarat, Jia-Ruei Chiu, Roland Siegwart, Marco Hutter
+
+#### Abstract
+
+Personal mobile robotic assistants are expected to find wide applications in
+industry and healthcare. For example, people with limited mobility can benefit
+from robots helping with daily tasks, or construction workers can have robots
+perform precision monitoring tasks on-site. However, manually steering a robot
+while in motion requires significant concentration from the operator,
+especially in tight or crowded spaces. This reduces walking speed, and the
+constant need for vigilance increases fatigue and, thus, the risk of accidents.
+This work presents a virtual leash with which a robot can naturally follow an
+operator. We use a sensor fusion based on a custom-built RF transponder, RGB
+cameras, and a LiDAR. In addition, we customize a local avoidance planner for
+legged platforms, which enables us to navigate dynamic and narrow environments.
+We successfully validate on the ANYmal platform the robustness and performance
+of our entire pipeline in real-world experiments.
+
+[Paper Link](
+https://arxiv.org/abs/2410.00572
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-11.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-01
+
+
+### KineDepth: Utilizing Robot Kinematics for Online Metric Depth Estimation
+
+- **Authors**: Soofiyan Atar, Yuheng Zhi, Florian Richter, Michael Yip
+
+#### Abstract
+
+Depth perception is essential for a robot's spatial and geometric
+understanding of its environment, with many tasks traditionally relying on
+hardware-based depth sensors like RGB-D or stereo cameras. However, these
+sensors face practical limitations, including issues with transparent and
+reflective objects, high costs, calibration complexity, spatial and energy
+constraints, and increased failure rates in compound systems. While monocular
+depth estimation methods offer a cost-effective and simpler alternative, their
+adoption in robotics is limited due to their output of relative rather than
+metric depth, which is crucial for robotics applications. In this paper, we
+propose a method that utilizes a single calibrated camera, enabling the robot
+to act as a ``measuring stick" to convert relative depth estimates into metric
+depth in real-time as tasks are performed. Our approach employs an LSTM-based
+metric depth regressor, trained online and refined through probabilistic
+filtering, to accurately restore the metric depth across the monocular depth
+map, particularly in areas proximal to the robot's motion. Experiments with
+real robots demonstrate that our method significantly outperforms current
+state-of-the-art monocular metric depth estimation techniques, achieving a
+22.1% reduction in depth error and a 52% increase in success rate for a
+downstream task.
+
+[Paper Link](
+https://arxiv.org/abs/2409.19490
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### OptiGrasp: Optimized Grasp Pose Detection Using RGB Images for Warehouse Picking Robots
+
+- **Authors**: Soofiyan Atar, Yi Li, Markus Grotz, Michael Wolf, Dieter Fox, Joshua Smith
+
+#### Abstract
+
+In warehouse environments, robots require robust picking capabilities to
+manage a wide variety of objects. Effective deployment demands minimal
+hardware, strong generalization to new products, and resilience in diverse
+settings. Current methods often rely on depth sensors for structural
+information, which suffer from high costs, complex setups, and technical
+limitations. Inspired by recent advancements in computer vision, we propose an
+innovative approach that leverages foundation models to enhance suction
+grasping using only RGB images. Trained solely on a synthetic dataset, our
+method generalizes its grasp prediction capabilities to real-world robots and a
+diverse range of novel objects not included in the training set. Our network
+achieves an 82.3\% success rate in real-world applications. The project website
+with code and data will be available at http://optigrasp.github.io.
+
+[Website Link](http://optigrasp.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2409.19494
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-04.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Fast-UMI: A Scalable and Hardware-Independent Universal Manipulation Interface
+
+- **Authors**: Ziniu Wu, Tianyu Wang, Zhaxizhuoma, Chuyue Guan, Zhongjie Jia, Shuai Liang, Haoming Song, Delin Qu, Dong Wang, Zhigang Wang, Nieqing Cao, Yan Ding, Bin Zhao, Xuelong Li
+
+#### Abstract
+
+Collecting real-world manipulation trajectory data involving robotic arms is
+essential for developing general-purpose action policies in robotic
+manipulation, yet such data remains scarce. Existing methods face limitations
+such as high costs, labor intensity, hardware dependencies, and complex setup
+requirements involving SLAM algorithms. In this work, we introduce Fast-UMI, an
+interface-mediated manipulation system comprising two key components: a
+handheld device operated by humans for data collection and a robot-mounted
+device used during policy inference. Our approach employs a decoupled design
+compatible with a wide range of grippers while maintaining consistent
+observation perspectives, allowing models trained on handheld-collected data to
+be directly applied to real robots. By directly obtaining the end-effector pose
+using existing commercial hardware products, we eliminate the need for complex
+SLAM deployment and calibration, streamlining data processing. Fast-UMI
+provides supporting software tools for efficient robot learning data collection
+and conversion, facilitating rapid, plug-and-play functionality. This system
+offers an efficient and user-friendly tool for robotic learning data
+acquisition.
+
+[Paper Link](
+https://arxiv.org/abs/2409.19499
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-03_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboNurse-VLA: Robotic Scrub Nurse System based on Vision-Language-Action Model
+
+- **Authors**: Shunlei Li, Jin Wang, Rui Dai, Wanyu Ma, Wing Yin Ng, Yingbai Hu, Zheng Li
+
+#### Abstract
+
+In modern healthcare, the demand for autonomous robotic assistants has grown
+significantly, particularly in the operating room, where surgical tasks require
+precision and reliability. Robotic scrub nurses have emerged as a promising
+solution to improve efficiency and reduce human error during surgery. However,
+challenges remain in terms of accurately grasping and handing over surgical
+instruments, especially when dealing with complex or difficult objects in
+dynamic environments. In this work, we introduce a novel robotic scrub nurse
+system, RoboNurse-VLA, built on a Vision-Language-Action (VLA) model by
+integrating the Segment Anything Model 2 (SAM 2) and the Llama 2 language
+model.
+  The proposed RoboNurse-VLA system enables highly precise grasping and
+handover of surgical instruments in real-time based on voice commands from the
+surgeon. Leveraging state-of-the-art vision and language models, the system can
+address key challenges for object detection, pose optimization, and the
+handling of complex and difficult-to-grasp instruments. Through extensive
+evaluations, RoboNurse-VLA demonstrates superior performance compared to
+existing models, achieving high success rates in surgical instrument handovers,
+even with unseen tools and challenging items. This work presents a significant
+step forward in autonomous surgical assistance, showcasing the potential of
+integrating VLA models for real-world medical applications. More details can be
+found at https://robonurse-vla.github.io.
+
+[Website Link](https://robonurse-vla.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2409.19590
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-03.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Obstacle-Aware Quadrupedal Locomotion With Resilient Multi-Modal Reinforcement Learning
+
+- **Authors**: I Made Aswin Nahrendra, Byeongho Yu, Minho Oh, Dongkyu Lee, Seunghyun Lee, Hyeonwoo Lee, Hyungtae Lim, Hyun Myung
+
+#### Abstract
+
+Quadrupedal robots hold promising potential for applications in navigating
+cluttered environments with resilience akin to their animal counterparts.
+However, their floating base configuration makes them vulnerable to real-world
+uncertainties, yielding substantial challenges in their locomotion control.
+Deep reinforcement learning has become one of the plausible alternatives for
+realizing a robust locomotion controller. However, the approaches that rely
+solely on proprioception sacrifice collision-free locomotion because they
+require front-feet contact to detect the presence of stairs to adapt the
+locomotion gait. Meanwhile, incorporating exteroception necessitates a
+precisely modeled map observed by exteroceptive sensors over a period of time.
+Therefore, this work proposes a novel method to fuse proprioception and
+exteroception featuring a resilient multi-modal reinforcement learning. The
+proposed method yields a controller that showcases agile locomotion performance
+on a quadrupedal robot over a myriad of real-world courses, including rough
+terrains, steep slopes, and high-rise stairs, while retaining its robustness
+against out-of-distribution situations.
+
+[Paper Link](
+https://arxiv.org/abs/2409.19709
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### The Duke Humanoid: Design and Control For Energy Efficient Bipedal Locomotion Using Passive Dynamics
+
+- **Authors**: Boxi Xia, Bokuan Li, Jacob Lee, Michael Scutari, Boyuan Chen
+
+#### Abstract
+
+We present the Duke Humanoid, an open-source 10-degrees-of-freedom humanoid,
+as an extensible platform for locomotion research. The design mimics human
+physiology, with minimized leg distances and symmetrical body alignment in the
+frontal plane to maintain static balance with straight knees. We develop a
+reinforcement learning policy that can be deployed zero-shot on the hardware
+for velocity-tracking walking tasks. Additionally, to enhance energy efficiency
+in locomotion, we propose an end-to-end reinforcement learning algorithm that
+encourages the robot to leverage passive dynamics. Our experiment results show
+that our passive policy reduces the cost of transport by up to $50\%$ in
+simulation and $31\%$ in real-world testing. Our website is
+http://generalroboticslab.com/DukeHumanoidv1/ .
+
+[Website Link](http://generalroboticslab.com/DukeHumanoidv1/)
+
+[Paper Link](
+https://arxiv.org/abs/2409.19795
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_23-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Playful DoggyBot: Learning Agile and Precise Quadrupedal Locomotion
+
+- **Authors**: Xin Duan, Ziwen Zhuang, Hang Zhao, Soeren Schwertfeger
+
+#### Abstract
+
+Quadrupedal animals have the ability to perform agile while accurate tasks: a
+trained dog can chase and catch a flying frisbee before it touches the ground;
+a cat alone at home can jump and grab the door handle accurately. However,
+agility and precision are usually a trade-off in robotics problems. Recent
+works in quadruped robots either focus on agile but not-so-accurate tasks, such
+as locomotion in challenging terrain, or accurate but not-so-fast tasks, such
+as using an additional manipulator to interact with objects. In this work, we
+aim at an accurate and agile task, catching a small object hanging above the
+robot. We mount a passive gripper in front of the robot chassis, so that the
+robot has to jump and catch the object with extreme precision. Our experiment
+shows that our system is able to jump and successfully catch the ball at 1.05m
+high in simulation and 0.8m high in the real world, while the robot is 0.3m
+high when standing.
+
+[Paper Link](
+https://arxiv.org/abs/2409.19920
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_22-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GravMAD: Grounded Spatial Value Maps Guided Action Diffusion for Generalized 3D Manipulation
+
+- **Authors**: Yangtao Chen, Zixuan Chen, Junhui Yin, Jing Huo, Pinzhuo Tian, Jieqi Shi, Yang Gao
+
+#### Abstract
+
+Robots' ability to follow language instructions and execute diverse 3D tasks
+is vital in robot learning. Traditional imitation learning-based methods
+perform well on seen tasks but struggle with novel, unseen ones due to
+variability. Recent approaches leverage large foundation models to assist in
+understanding novel tasks, thereby mitigating this issue. However, these
+methods lack a task-specific learning process, which is essential for an
+accurate understanding of 3D environments, often leading to execution failures.
+In this paper, we introduce GravMAD, a sub-goal-driven, language-conditioned
+action diffusion framework that combines the strengths of imitation learning
+and foundation models. Our approach breaks tasks into sub-goals based on
+language instructions, allowing auxiliary guidance during both training and
+inference. During training, we introduce Sub-goal Keypose Discovery to identify
+key sub-goals from demonstrations. Inference differs from training, as there
+are no demonstrations available, so we use pre-trained foundation models to
+bridge the gap and identify sub-goals for the current task. In both phases,
+GravMaps are generated from sub-goals, providing flexible 3D spatial guidance
+compared to fixed 3D positions. Empirical evaluations on RLBench show that
+GravMAD significantly outperforms state-of-the-art methods, with a 28.63%
+improvement on novel tasks and a 13.36% gain on tasks encountered during
+training. These results demonstrate GravMAD's strong multi-task learning and
+generalization in 3D manipulation. Video demonstrations are available at:
+https://gravmad.github.io.
+
+[Website Link](https://gravmad.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2409.20154
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_22-41.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Opt2Skill: Imitating Dynamically-feasible Whole-Body Trajectories for Versatile Humanoid Loco-Manipulation
+
+- **Authors**: Fukang Liu, Zhaoyuan Gu, Yilin Cai, Ziyi Zhou, Shijie Zhao, Hyunyoung Jung, Sehoon Ha, Yue Chen, Danfei Xu, Ye Zhao
+
+#### Abstract
+
+Humanoid robots are designed to perform diverse loco-manipulation tasks.
+However, they face challenges due to their high-dimensional and unstable
+dynamics, as well as the complex contact-rich nature of the tasks. Model-based
+optimal control methods offer precise and systematic control but are limited by
+high computational complexity and accurate contact sensing. On the other hand,
+reinforcement learning (RL) provides robustness and handles high-dimensional
+spaces but suffers from inefficient learning, unnatural motion, and sim-to-real
+gaps. To address these challenges, we introduce Opt2Skill, an end-to-end
+pipeline that combines model-based trajectory optimization with RL to achieve
+robust whole-body loco-manipulation. We generate reference motions for the
+Digit humanoid robot using differential dynamic programming (DDP) and train RL
+policies to track these trajectories. Our results demonstrate that Opt2Skill
+outperforms pure RL methods in both training efficiency and task performance,
+with optimal trajectories that account for torque limits enhancing trajectory
+tracking. We successfully transfer our approach to real-world applications.
+
+[Paper Link](
+https://arxiv.org/abs/2409.20514
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_22-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### UniAff: A Unified Representation of Affordances for Tool Usage and Articulation with Vision-Language Models
+
+- **Authors**: Qiaojun Yu, Siyuan Huang, Xibin Yuan, Zhengkai Jiang, Ce Hao, Xin Li, Haonan Chang, Junbo Wang, Liu Liu, Hongsheng Li, Peng Gao, Cewu Lu
+
+#### Abstract
+
+Previous studies on robotic manipulation are based on a limited understanding
+of the underlying 3D motion constraints and affordances. To address these
+challenges, we propose a comprehensive paradigm, termed UniAff, that integrates
+3D object-centric manipulation and task understanding in a unified formulation.
+Specifically, we constructed a dataset labeled with manipulation-related key
+attributes, comprising 900 articulated objects from 19 categories and 600 tools
+from 12 categories. Furthermore, we leverage MLLMs to infer object-centric
+representations for manipulation tasks, including affordance recognition and
+reasoning about 3D motion constraints. Comprehensive experiments in both
+simulation and real-world settings indicate that UniAff significantly improves
+the generalization of robotic manipulation for tools and articulated objects.
+We hope that UniAff will serve as a general baseline for unified robotic
+manipulation tasks in the future. Images, videos, dataset, and code are
+published on the project website at:https://sites.google.com/view/uni-aff/home
+
+[Website Link](https://sites.google.com/view/uni-aff/home)
+
+[Paper Link](
+https://arxiv.org/abs/2409.20551
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_22-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Continuously Improving Mobile Manipulation with Autonomous Real-World RL
+
+- **Authors**: Russell Mendonca, Emmanuel Panov, Bernadette Bucher, Jiuguang Wang, Deepak Pathak
+
+#### Abstract
+
+We present a fully autonomous real-world RL framework for mobile manipulation
+that can learn policies without extensive instrumentation or human supervision.
+This is enabled by 1) task-relevant autonomy, which guides exploration towards
+object interactions and prevents stagnation near goal states, 2) efficient
+policy learning by leveraging basic task knowledge in behavior priors, and 3)
+formulating generic rewards that combine human-interpretable semantic
+information with low-level, fine-grained observations. We demonstrate that our
+approach allows Spot robots to continually improve their performance on a set
+of four challenging mobile manipulation tasks, obtaining an average success
+rate of 80% across tasks, a 3-4 improvement over existing approaches. Videos
+can be found at https://continual-mobile-manip.github.io/
+
+[Website Link](https://continual-mobile-manip.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2409.20568
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-21_22-22.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-09-30
 
 
