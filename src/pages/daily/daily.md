@@ -1,3 +1,520 @@
+## 2024-10-23
+
+
+### E-3DGS: Gaussian Splatting with Exposure and Motion Events
+
+- **Authors**: Xiaoting Yin, Hao Shi, Yuhan Bao, Zhenshan Bing, Yiyi Liao, Kailun Yang, Kaiwei Wang
+
+#### Abstract
+
+Estimating Neural Radiance Fields (NeRFs) from images captured under optimal
+conditions has been extensively explored in the vision community. However,
+robotic applications often face challenges such as motion blur, insufficient
+illumination, and high computational overhead, which adversely affect
+downstream tasks like navigation, inspection, and scene visualization. To
+address these challenges, we propose E-3DGS, a novel event-based approach that
+partitions events into motion (from camera or object movement) and exposure
+(from camera exposure), using the former to handle fast-motion scenes and using
+the latter to reconstruct grayscale images for high-quality training and
+optimization of event-based 3D Gaussian Splatting (3DGS). We introduce a novel
+integration of 3DGS with exposure events for high-quality reconstruction of
+explicit scene representations. Our versatile framework can operate on motion
+events alone for 3D reconstruction, enhance quality using exposure events, or
+adopt a hybrid mode that balances quality and effectiveness by optimizing with
+initial exposure events followed by high-speed motion events. We also introduce
+EME-3D, a real-world 3D dataset with exposure events, motion events, camera
+calibration parameters, and sparse point clouds. Our method is faster and
+delivers better reconstruction quality than event-based NeRF while being more
+cost-effective than NeRF methods that combine event and RGB data by using a
+single event sensor. By combining motion and exposure events, E-3DGS sets a new
+benchmark for event-based 3D reconstruction with robust performance in
+challenging conditions and lower hardware demands. The source code and dataset
+will be available at https://github.com/MasterHow/E-3DGS.
+
+[Website Link](https://github.com/MasterHow/E-3DGS.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.16995
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Implicit Contact Diffuser: Sequential Contact Reasoning with Latent Point Cloud Diffusion
+
+- **Authors**: Zixuan Huang, Yinong He, Yating Lin, Dmitry Berenson
+
+#### Abstract
+
+Long-horizon contact-rich manipulation has long been a challenging problem,
+as it requires reasoning over both discrete contact modes and continuous object
+motion. We introduce Implicit Contact Diffuser (ICD), a diffusion-based model
+that generates a sequence of neural descriptors that specify a series of
+contact relationships between the object and the environment. This sequence is
+then used as guidance for an MPC method to accomplish a given task. The key
+advantage of this approach is that the latent descriptors provide more
+task-relevant guidance to MPC, helping to avoid local minima for contact-rich
+manipulation tasks. Our experiments demonstrate that ICD outperforms baselines
+on complex, long-horizon, contact-rich manipulation tasks, such as cable
+routing and notebook folding. Additionally, our experiments also indicate that
+\methodshort can generalize a target contact relationship to a different
+environment. More visualizations can be found on our website
+$\href{https://implicit-contact-diffuser.github.io/}{https://implicit-contact-diffuser.github.io}$
+
+[Website Link](https://implicit-contact-diffuser.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.16571
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-52.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DiffusionSeeder: Seeding Motion Optimization with Diffusion for Rapid Motion Planning
+
+- **Authors**: Huang Huang, Balakumar Sundaralingam, Arsalan Mousavian, Adithyavairavan Murali, Ken Goldberg, Dieter Fox
+
+#### Abstract
+
+Running optimization across many parallel seeds leveraging GPU compute have
+relaxed the need for a good initialization, but this can fail if the problem is
+highly non-convex as all seeds could get stuck in local minima. One such
+setting is collision-free motion optimization for robot manipulation, where
+optimization converges quickly on easy problems but struggle in obstacle dense
+environments (e.g., a cluttered cabinet or table). In these situations,
+graph-based planning algorithms are used to obtain seeds, resulting in
+significant slowdowns. We propose DiffusionSeeder, a diffusion based approach
+that generates trajectories to seed motion optimization for rapid robot motion
+planning. DiffusionSeeder takes the initial depth image observation of the
+scene and generates high quality, multi-modal trajectories that are then
+fine-tuned with a few iterations of motion optimization. We integrate
+DiffusionSeeder to generate the seed trajectories for cuRobo, a GPU-accelerated
+motion optimization method, which results in 12x speed up on average, and 36x
+speed up for more complicated problems, while achieving 10% higher success rate
+in partially observed simulation environments. Our results show the
+effectiveness of using diverse solutions from a learned diffusion model.
+Physical experiments on a Franka robot demonstrate the sim2real transfer of
+DiffusionSeeder to the real robot, with an average success rate of 86% and
+planning time of 26ms, improving on cuRobo by 51% higher success rate while
+also being 2.5x faster.
+
+[Paper Link](
+https://arxiv.org/abs/2410.16727
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-50.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### EnvBridge: Bridging Diverse Environments with Cross-Environment Knowledge Transfer for Embodied AI
+
+- **Authors**: Tomoyuki Kagaya, Yuxuan Lou, Thong Jing Yuan, Subramanian Lakshmi, Jayashree Karlekar, Sugiri Pranata, Natsuki Murakami, Akira Kinose, Koki Oguri, Felix Wick, Yang You
+
+#### Abstract
+
+In recent years, Large Language Models (LLMs) have demonstrated high
+reasoning capabilities, drawing attention for their applications as agents in
+various decision-making processes. One notably promising application of LLM
+agents is robotic manipulation. Recent research has shown that LLMs can
+generate text planning or control code for robots, providing substantial
+flexibility and interaction capabilities. However, these methods still face
+challenges in terms of flexibility and applicability across different
+environments, limiting their ability to adapt autonomously. Current approaches
+typically fall into two categories: those relying on environment-specific
+policy training, which restricts their transferability, and those generating
+code actions based on fixed prompts, which leads to diminished performance when
+confronted with new environments. These limitations significantly constrain the
+generalizability of agents in robotic manipulation. To address these
+limitations, we propose a novel method called EnvBridge. This approach involves
+the retention and transfer of successful robot control codes from source
+environments to target environments. EnvBridge enhances the agent's
+adaptability and performance across diverse settings by leveraging insights
+from multiple environments. Notably, our approach alleviates environmental
+constraints, offering a more flexible and generalizable solution for robotic
+manipulation tasks. We validated the effectiveness of our method using robotic
+manipulation benchmarks: RLBench, MetaWorld, and CALVIN. Our experiments
+demonstrate that LLM agents can successfully leverage diverse knowledge sources
+to solve complex tasks. Consequently, our approach significantly enhances the
+adaptability and robustness of robotic manipulation agents in planning across
+diverse environments.
+
+[Paper Link](
+https://arxiv.org/abs/2410.16919
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-48.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GS-LIVM: Real-Time Photo-Realistic LiDAR-Inertial-Visual Mapping with Gaussian Splatting
+
+- **Authors**: Yusen Xie, Zhenmin Huang, Jin Wu, Jun Ma
+
+#### Abstract
+
+In this paper, we introduce GS-LIVM, a real-time photo-realistic
+LiDAR-Inertial-Visual mapping framework with Gaussian Splatting tailored for
+outdoor scenes. Compared to existing methods based on Neural Radiance Fields
+(NeRF) and 3D Gaussian Splatting (3DGS), our approach enables real-time
+photo-realistic mapping while ensuring high-quality image rendering in
+large-scale unbounded outdoor environments. In this work, Gaussian Process
+Regression (GPR) is employed to mitigate the issues resulting from sparse and
+unevenly distributed LiDAR observations. The voxel-based 3D Gaussians map
+representation facilitates real-time dense mapping in large outdoor
+environments with acceleration governed by custom CUDA kernels. Moreover, the
+overall framework is designed in a covariance-centered manner, where the
+estimated covariance is used to initialize the scale and rotation of 3D
+Gaussians, as well as update the parameters of the GPR. We evaluate our
+algorithm on several outdoor datasets, and the results demonstrate that our
+method achieves state-of-the-art performance in terms of mapping efficiency and
+rendering quality. The source code is available on GitHub.
+
+[Paper Link](
+https://arxiv.org/abs/2410.17084
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Precise, Contact-Rich Manipulation through Uncalibrated Tactile Skins
+
+- **Authors**: Venkatesh Pattabiraman, Yifeng Cao, Siddhant Haldar, Lerrel Pinto, Raunaq Bhirangi
+
+#### Abstract
+
+While visuomotor policy learning has advanced robotic manipulation, precisely
+executing contact-rich tasks remains challenging due to the limitations of
+vision in reasoning about physical interactions. To address this, recent work
+has sought to integrate tactile sensing into policy learning. However, many
+existing approaches rely on optical tactile sensors that are either restricted
+to recognition tasks or require complex dimensionality reduction steps for
+policy learning. In this work, we explore learning policies with magnetic skin
+sensors, which are inherently low-dimensional, highly sensitive, and
+inexpensive to integrate with robotic platforms. To leverage these sensors
+effectively, we present the Visuo-Skin (ViSk) framework, a simple approach that
+uses a transformer-based policy and treats skin sensor data as additional
+tokens alongside visual information. Evaluated on four complex real-world tasks
+involving credit card swiping, plug insertion, USB insertion, and bookshelf
+retrieval, ViSk significantly outperforms both vision-only and optical tactile
+sensing based policies. Further analysis reveals that combining tactile and
+visual modalities enhances policy performance and spatial generalization,
+achieving an average improvement of 27.5% across tasks.
+https://visuoskin.github.io/
+
+[Website Link](https://visuoskin.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.17246
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-22
+
+
+### EVA: An Embodied World Model for Future Video Anticipation
+
+- **Authors**: Xiaowei Chi, Hengyuan Zhang, Chun-Kai Fan, Xingqun Qi, Rongyu Zhang, Anthony Chen, Chi-min Chan, Wei Xue, Wenhan Luo, Shanghang Zhang, Yike Guo
+
+#### Abstract
+
+World models integrate raw data from various modalities, such as images and
+language to simulate comprehensive interactions in the world, thereby
+displaying crucial roles in fields like mixed reality and robotics. Yet,
+applying the world model for accurate video prediction is quite challenging due
+to the complex and dynamic intentions of the various scenes in practice. In
+this paper, inspired by the human rethinking process, we decompose the complex
+video prediction into four meta-tasks that enable the world model to handle
+this issue in a more fine-grained manner. Alongside these tasks, we introduce a
+new benchmark named Embodied Video Anticipation Benchmark (EVA-Bench) to
+provide a well-rounded evaluation. EVA-Bench focused on evaluating the video
+prediction ability of human and robot actions, presenting significant
+challenges for both the language model and the generation model. Targeting
+embodied video prediction, we propose the Embodied Video Anticipator (EVA), a
+unified framework aiming at video understanding and generation. EVA integrates
+a video generation model with a visual language model, effectively combining
+reasoning capabilities with high-quality generation. Moreover, to enhance the
+generalization of our framework, we tailor-designed a multi-stage pretraining
+paradigm that adaptatively ensembles LoRA to produce high-fidelity results.
+Extensive experiments on EVA-Bench highlight the potential of EVA to
+significantly improve performance in embodied scenes, paving the way for
+large-scale pre-trained models in real-world prediction tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2410.15461
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Diff-DAgger: Uncertainty Estimation with Diffusion Policy for Robotic Manipulation
+
+- **Authors**: Sung-Wook Lee, Yen-Ling Kuo
+
+#### Abstract
+
+Recently, diffusion policy has shown impressive results in handling
+multi-modal tasks in robotic manipulation. However, it has fundamental
+limitations in out-of-distribution failures that persist due to compounding
+errors and its limited capability to extrapolate. One way to address these
+limitations is robot-gated DAgger, an interactive imitation learning with a
+robot query system to actively seek expert help during policy rollout. While
+robot-gated DAgger has high potential for learning at scale, existing methods
+like Ensemble-DAgger struggle with highly expressive policies: They often
+misinterpret policy disagreements as uncertainty at multi-modal decision
+points. To address this problem, we introduce Diff-DAgger, an efficient
+robot-gated DAgger algorithm that leverages the training objective of diffusion
+policy. We evaluate Diff-DAgger across different robot tasks including
+stacking, pushing, and plugging, and show that Diff-DAgger improves the task
+failure prediction by 37%, the task completion rate by 14%, and reduces the
+wall-clock time by up to 540%. We hope that this work opens up a path for
+efficiently incorporating expressive yet data-hungry policies into interactive
+robot learning settings.
+
+[Paper Link](
+https://arxiv.org/abs/2410.14868
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-43_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### A Novel Approach to Grasping Control of Soft Robotic Grippers based on Digital Twin
+
+- **Authors**: Tianyi Xiang, Borui Li, Quan Zhang, Mark Leach, Eng Gee Lim
+
+#### Abstract
+
+This paper has proposed a Digital Twin (DT) framework for real-time motion
+and pose control of soft robotic grippers. The developed DT is based on an
+industrial robot workstation, integrated with our newly proposed approach for
+soft gripper control, primarily based on computer vision, for setting the
+driving pressure for desired gripper status in real-time. Knowing the gripper
+motion, the gripper parameters (e.g. curvatures and bending angles, etc.) are
+simulated by kinematics modelling in Unity 3D, which is based on four-piecewise
+constant curvature kinematics. The mapping in between the driving pressure and
+gripper parameters is achieved by implementing OpenCV based image processing
+algorithms and data fitting. Results show that our DT-based approach can
+achieve satisfactory performance in real-time control of soft gripper
+manipulation, which can satisfy a wide range of industrial applications.
+
+[Paper Link](
+https://arxiv.org/abs/2410.14928
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-43.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Development of a Simple and Novel Digital Twin Framework for Industrial Robots in Intelligent robotics manufacturing
+
+- **Authors**: Tianyi Xiang, Borui Li, Xin Pan, Quan Zhang
+
+#### Abstract
+
+This paper has proposed an easily replicable and novel approach for
+developing a Digital Twin (DT) system for industrial robots in intelligent
+manufacturing applications. Our framework enables effective communication via
+Robot Web Service (RWS), while a real-time simulation is implemented in Unity
+3D and Web-based Platform without any other 3rd party tools. The framework can
+do real-time visualization and control of the entire work process, as well as
+implement real-time path planning based on algorithms executed in MATLAB.
+Results verify the high communication efficiency with a refresh rate of only
+$17 ms$. Furthermore, our developed web-based platform and Graphical User
+Interface (GUI) enable easy accessibility and user-friendliness in real-time
+control.
+
+[Paper Link](
+https://arxiv.org/abs/2410.14934
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-42.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### MENTOR: Mixture-of-Experts Network with Task-Oriented Perturbation for Visual Reinforcement Learning
+
+- **Authors**: Suning Huang, Zheyu Zhang, Tianhai Liang, Yihan Xu, Zhehao Kou, Chenhao Lu, Guowei Xu, Zhengrong Xue, Huazhe Xu
+
+#### Abstract
+
+Visual deep reinforcement learning (RL) enables robots to acquire skills from
+visual input for unstructured tasks. However, current algorithms suffer from
+low sample efficiency, limiting their practical applicability. In this work, we
+present MENTOR, a method that improves both the architecture and optimization
+of RL agents. Specifically, MENTOR replaces the standard multi-layer perceptron
+(MLP) with a mixture-of-experts (MoE) backbone, enhancing the agent's ability
+to handle complex tasks by leveraging modular expert learning to avoid gradient
+conflicts. Furthermore, MENTOR introduces a task-oriented perturbation
+mechanism, which heuristically samples perturbation candidates containing
+task-relevant information, leading to more targeted and effective optimization.
+MENTOR outperforms state-of-the-art methods across three simulation domains --
+DeepMind Control Suite, Meta-World, and Adroit. Additionally, MENTOR achieves
+an average of 83% success rate on three challenging real-world robotic
+manipulation tasks including peg insertion, cable routing, and tabletop golf,
+which significantly surpasses the success rate of 32% from the current
+strongest model-free visual RL algorithm. These results underscore the
+importance of sample efficiency in advancing visual RL for real-world robotics.
+Experimental videos are available at
+https://suninghuang19.github.io/mentor_page.
+
+[Website Link](https://suninghuang19.github.io/mentor_page.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.14972
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-41.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GRS: Generating Robotic Simulation Tasks from Real-World Images
+
+- **Authors**: Alex Zook, Fan-Yun Sun, Josef Spjut, Valts Blukis, Stan Birchfield, Jonathan Tremblay
+
+#### Abstract
+
+We introduce GRS (Generating Robotic Simulation tasks), a novel system to
+address the challenge of real-to-sim in robotics, computer vision, and AR/VR.
+GRS enables the creation of digital twin simulations from single real-world
+RGB-D observations, complete with diverse, solvable tasks for virtual agent
+training. We use state-of-the-art vision-language models (VLMs) to achieve a
+comprehensive real-to-sim pipeline. GRS operates in three stages: 1) scene
+comprehension using SAM2 for object segmentation and VLMs for object
+description, 2) matching identified objects with simulation-ready assets, and
+3) generating contextually appropriate robotic tasks. Our approach ensures
+simulations align with task specifications by generating test suites designed
+to verify adherence to the task specification. We introduce a router that
+iteratively refines the simulation and test code to ensure the simulation is
+solvable by a robot policy while remaining aligned to the task specification.
+Our experiments demonstrate the system's efficacy in accurately identifying
+object correspondence, which allows us to generate task environments that
+closely match input environments, and enhance automated simulation task
+generation through our novel router mechanism.
+
+[Paper Link](
+https://arxiv.org/abs/2410.15536
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### MSGField: A Unified Scene Representation Integrating Motion, Semantics, and Geometry for Robotic Manipulation
+
+- **Authors**: Yu Sheng, Runfeng Lin, Lidian Wang, Quecheng Qiu, YanYong Zhang, Yu Zhang, Bei Hua, Jianmin Ji
+
+#### Abstract
+
+Combining accurate geometry with rich semantics has been proven to be highly
+effective for language-guided robotic manipulation. Existing methods for
+dynamic scenes either fail to update in real-time or rely on additional depth
+sensors for simple scene editing, limiting their applicability in real-world.
+In this paper, we introduce MSGField, a representation that uses a collection
+of 2D Gaussians for high-quality reconstruction, further enhanced with
+attributes to encode semantic and motion information. Specially, we represent
+the motion field compactly by decomposing each primitive's motion into a
+combination of a limited set of motion bases. Leveraging the differentiable
+real-time rendering of Gaussian splatting, we can quickly optimize object
+motion, even for complex non-rigid motions, with image supervision from only
+two camera views. Additionally, we designed a pipeline that utilizes object
+priors to efficiently obtain well-defined semantics. In our challenging
+dataset, which includes flexible and extremely small objects, our method
+achieve a success rate of 79.2% in static and 63.3% in dynamic environments for
+language-guided manipulation. For specified object grasping, we achieve a
+success rate of 90%, on par with point cloud-based methods. Code and dataset
+will be released at:https://shengyu724.github.io/MSGField.github.io.
+
+[Website Link](https://shengyu724.github.io/MSGField.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.15730
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-35.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Diffusion Transformer Policy
+
+- **Authors**: Zhi Hou, Tianyi Zhang, Yuwen Xiong, Hengjun Pu, Chengyang Zhao, Ronglei Tong, Yu Qiao, Jifeng Dai, Yuntao Chen
+
+#### Abstract
+
+Recent large visual-language action models pretrained on diverse robot
+datasets have demonstrated the potential for generalizing to new environments
+with a few in-domain data. However, those approaches usually predict
+discretized or continuous actions by a small action head, which limits the
+ability in handling diverse action spaces. In contrast, we model the continuous
+action with a large multi-modal diffusion transformer, dubbed as Diffusion
+Transformer Policy, in which we directly denoise action chunks by a large
+transformer model rather than a small action head. By leveraging the scaling
+capability of transformers, the proposed approach can effectively model
+continuous end-effector actions across large diverse robot datasets, and
+achieve better generalization performance. Extensive experiments demonstrate
+Diffusion Transformer Policy pretrained on diverse robot data can generalize to
+different embodiments, including simulation environments like Maniskill2 and
+Calvin, as well as the real-world Franka arm. Specifically, without bells and
+whistles, the proposed approach achieves state-of-the-art performance with only
+a single third-view camera stream in the Calvin novel task setting (ABC->D),
+improving the average number of tasks completed in a row of 5 to 3.6, and the
+pretraining stage significantly facilitates the success sequence length on the
+Calvin by over 1.2. The code will be publicly available.
+
+[Paper Link](
+https://arxiv.org/abs/2410.15959
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-23_18-32.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-10-21
 
 
