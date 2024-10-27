@@ -20,6 +20,7 @@
         "@docusaurus/preset-classic": "2.4.3",
         "@docusaurus/theme-search-algolia": "^2.4.3",
         "@mdx-js/react": "^1.6.22",
+        "@popperjs/core": "^2.11.8",
         "clsx": "^1.2.1",
         "contributor-faces": "^1.1.0",
         "docusaurus": "^1.14.7",
