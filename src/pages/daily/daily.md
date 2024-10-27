@@ -1,3 +1,381 @@
+## 2024-10-25
+
+
+### PointPatchRL -- Masked Reconstruction Improves Reinforcement Learning on Point Clouds
+
+- **Authors**: Balázs Gyenes, Nikolai Franke, Philipp Becker, Gerhard Neumann
+
+#### Abstract
+
+Perceiving the environment via cameras is crucial for Reinforcement Learning
+(RL) in robotics. While images are a convenient form of representation, they
+often complicate extracting important geometric details, especially with
+varying geometries or deformable objects. In contrast, point clouds naturally
+represent this geometry and easily integrate color and positional data from
+multiple camera views. However, while deep learning on point clouds has seen
+many recent successes, RL on point clouds is under-researched, with only the
+simplest encoder architecture considered in the literature. We introduce
+PointPatchRL (PPRL), a method for RL on point clouds that builds on the common
+paradigm of dividing point clouds into overlapping patches, tokenizing them,
+and processing the tokens with transformers. PPRL provides significant
+improvements compared with other point-cloud processing architectures
+previously used for RL. We then complement PPRL with masked reconstruction for
+representation learning and show that our method outperforms strong model-free
+and model-based baselines on image observations in complex manipulation tasks
+containing deformable objects and variations in target object geometry. Videos
+and code are available at https://alrhub.github.io/pprl-website
+
+[Website Link](https://alrhub.github.io/pprl-website)
+
+[Paper Link](
+https://arxiv.org/abs/2410.18800
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_15-16.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Ubiquitous Field Transportation Robots with Robust Wheel-Leg Transformable Modules
+
+- **Authors**: Haoran Wang, Cunxi Dai, Siyuan Wang, Ximan Zhang, Zheng Zhu, Xiaohan Liu, Jianxiang Zhou, Zhengtao Liu, Zhenzhong Jia
+
+#### Abstract
+
+This paper introduces two field transportation robots. Both robots are
+equipped with transformable wheel-leg modules, which can smoothly switch
+between operation modes and can work in various challenging terrains. SWhegPro,
+with six S-shaped legs, enables transporting loads in challenging uneven
+outdoor terrains. SWhegPro3, featuring four three-impeller wheels, has
+surprising stair-climbing performance in indoor scenarios. Different from
+ordinary gear-driven transformable mechanisms, the modular wheels we designed
+driven by self-locking electric push rods can switch modes accurately and
+stably with high loads, significantly improving the load capacity of the robot
+in leg mode. This study analyzes the robot's wheel-leg module operation when
+the terrain parameters change. Through the derivation of mathematical models
+and calculations based on simplified kinematic models, a method for optimizing
+the robot parameters and wheel-leg structure parameters is finally proposed.The
+design and control strategy are then verified through simulations and field
+experiments in various complex terrains, and the working performance of the two
+field transportation robots is calculated and analyzed by recording sensor data
+and proposing evaluation methods.
+
+[Paper Link](
+https://arxiv.org/abs/2410.18507
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_15-13.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Embodied Manipulation with Past and Future Morphologies through an Open Parametric Hand Design
+
+- **Authors**: Kieran Gilday, Chapa Sirithunge, Fumiya Iida, Josie Hughes
+
+#### Abstract
+
+A human-shaped robotic hand offers unparalleled versatility and fine motor
+skills, enabling it to perform a broad spectrum of tasks with precision, power
+and robustness. Across the paleontological record and animal kingdom we see a
+wide range of alternative hand and actuation designs. Understanding the
+morphological design space and the resulting emergent behaviors can not only
+aid our understanding of dexterous manipulation and its evolution, but also
+assist design optimization, achieving, and eventually surpassing human
+capabilities. Exploration of hand embodiment has to date been limited by
+inaccessibility of customizable hands in the real-world, and by the reality gap
+in simulation of complex interactions. We introduce an open parametric design
+which integrates techniques for simplified customization, fabrication, and
+control with design features to maximize behavioral diversity. Non-linear
+rolling joints, anatomical tendon routing, and a low degree-of-freedom,
+modulating, actuation system, enable rapid production of single-piece 3D
+printable hands without compromising dexterous behaviors. To demonstrate this,
+we evaluated the design's low-level behavior range and stability, showing
+variable stiffness over two orders of magnitude. Additionally, we fabricated
+three hand designs: human, mirrored human with two thumbs, and aye-aye hands.
+Manipulation tests evaluate the variation in each hand's proficiency at
+handling diverse objects, and demonstrate emergent behaviors unique to each
+design. Overall, we shed light on new possible designs for robotic hands,
+provide a design space to compare and contrast different hand morphologies and
+structures, and share a practical and open-source design for exploring embodied
+manipulation.
+
+[Paper Link](
+https://arxiv.org/abs/2410.18633
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_15-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Data Scaling Laws in Imitation Learning for Robotic Manipulation
+
+- **Authors**: Fanqi Lin, Yingdong Hu, Pingyue Sheng, Chuan Wen, Jiacheng You, Yang Gao
+
+#### Abstract
+
+Data scaling has revolutionized fields like natural language processing and
+computer vision, providing models with remarkable generalization capabilities.
+In this paper, we investigate whether similar data scaling laws exist in
+robotics, particularly in robotic manipulation, and whether appropriate data
+scaling can yield single-task robot policies that can be deployed zero-shot for
+any object within the same category in any environment. To this end, we conduct
+a comprehensive empirical study on data scaling in imitation learning. By
+collecting data across numerous environments and objects, we study how a
+policy's generalization performance changes with the number of training
+environments, objects, and demonstrations. Throughout our research, we collect
+over 40,000 demonstrations and execute more than 15,000 real-world robot
+rollouts under a rigorous evaluation protocol. Our findings reveal several
+intriguing results: the generalization performance of the policy follows a
+roughly power-law relationship with the number of environments and objects. The
+diversity of environments and objects is far more important than the absolute
+number of demonstrations; once the number of demonstrations per environment or
+object reaches a certain threshold, additional demonstrations have minimal
+effect. Based on these insights, we propose an efficient data collection
+strategy. With four data collectors working for one afternoon, we collect
+sufficient data to enable the policies for two tasks to achieve approximately
+90% success rates in novel environments with unseen objects.
+
+[Paper Link](
+https://arxiv.org/abs/2410.18647
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_15-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Diffusion for Multi-Embodiment Grasping
+
+- **Authors**: Roman Freiberg, Alexander Qualmann, Ngo Anh Vien, Gerhard Neumann
+
+#### Abstract
+
+Grasping is a fundamental skill in robotics with diverse applications across
+medical, industrial, and domestic domains. However, current approaches for
+predicting valid grasps are often tailored to specific grippers, limiting their
+applicability when gripper designs change. To address this limitation, we
+explore the transfer of grasping strategies between various gripper designs,
+enabling the use of data from diverse sources. In this work, we present an
+approach based on equivariant diffusion that facilitates gripper-agnostic
+encoding of scenes containing graspable objects and gripper-aware decoding of
+grasp poses by integrating gripper geometry into the model. We also develop a
+dataset generation framework that produces cluttered scenes with variable-sized
+object heaps, improving the training of grasp synthesis methods. Experimental
+evaluation on diverse object datasets demonstrates the generalizability of our
+approach across gripper architectures, ranging from simple parallel-jaw
+grippers to humanoid hands, outperforming both single-gripper and multi-gripper
+state-of-the-art methods.
+
+[Paper Link](
+https://arxiv.org/abs/2410.18835
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_14-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SkillMimicGen: Automated Demonstration Generation for Efficient Skill Learning and Deployment
+
+- **Authors**: Caelan Garrett, Ajay Mandlekar, Bowen Wen, Dieter Fox
+
+#### Abstract
+
+Imitation learning from human demonstrations is an effective paradigm for
+robot manipulation, but acquiring large datasets is costly and
+resource-intensive, especially for long-horizon tasks. To address this issue,
+we propose SkillMimicGen (SkillGen), an automated system for generating
+demonstration datasets from a few human demos. SkillGen segments human demos
+into manipulation skills, adapts these skills to new contexts, and stitches
+them together through free-space transit and transfer motion. We also propose a
+Hybrid Skill Policy (HSP) framework for learning skill initiation, control, and
+termination components from SkillGen datasets, enabling skills to be sequenced
+using motion planning at test-time. We demonstrate that SkillGen greatly
+improves data generation and policy learning performance over a
+state-of-the-art data generation framework, resulting in the capability to
+produce data for large scene variations, including clutter, and agents that are
+on average 24% more successful. We demonstrate the efficacy of SkillGen by
+generating over 24K demonstrations across 18 task variants in simulation from
+just 60 human demonstrations, and training proficient, often near-perfect, HSP
+agents. Finally, we apply SkillGen to 3 real-world manipulation tasks and also
+demonstrate zero-shot sim-to-real transfer on a long-horizon assembly task.
+Videos, and more at https://skillgen.github.io.
+
+[Website Link](https://skillgen.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.18907
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_14-34.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Dynamic 3D Gaussian Tracking for Graph-Based Neural Dynamics Modeling
+
+- **Authors**: Mingtong Zhang, Kaifeng Zhang, Yunzhu Li
+
+#### Abstract
+
+Videos of robots interacting with objects encode rich information about the
+objects' dynamics. However, existing video prediction approaches typically do
+not explicitly account for the 3D information from videos, such as robot
+actions and objects' 3D states, limiting their use in real-world robotic
+applications. In this work, we introduce a framework to learn object dynamics
+directly from multi-view RGB videos by explicitly considering the robot's
+action trajectories and their effects on scene dynamics. We utilize the 3D
+Gaussian representation of 3D Gaussian Splatting (3DGS) to train a
+particle-based dynamics model using Graph Neural Networks. This model operates
+on sparse control particles downsampled from the densely tracked 3D Gaussian
+reconstructions. By learning the neural dynamics model on offline robot
+interaction data, our method can predict object motions under varying initial
+configurations and unseen robot actions. The 3D transformations of Gaussians
+can be interpolated from the motions of control particles, enabling the
+rendering of predicted future object states and achieving action-conditioned
+video prediction. The dynamics model can also be applied to model-based
+planning frameworks for object manipulation tasks. We conduct experiments on
+various kinds of deformable materials, including ropes, clothes, and stuffed
+animals, demonstrating our framework's ability to model complex shapes and
+dynamics. Our project page is available at https://gs-dynamics.github.io.
+
+[Website Link](https://gs-dynamics.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.18912
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_14-33.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-24
+
+
+### DynamicCity: Large-Scale LiDAR Generation from Dynamic Scenes
+
+- **Authors**: Hengwei Bian, Lingdong Kong, Haozhe Xie, Liang Pan, Yu Qiao, Ziwei Liu
+
+#### Abstract
+
+LiDAR scene generation has been developing rapidly recently. However,
+existing methods primarily focus on generating static and single-frame scenes,
+overlooking the inherently dynamic nature of real-world driving environments.
+In this work, we introduce DynamicCity, a novel 4D LiDAR generation framework
+capable of generating large-scale, high-quality LiDAR scenes that capture the
+temporal evolution of dynamic environments. DynamicCity mainly consists of two
+key models. 1) A VAE model for learning HexPlane as the compact 4D
+representation. Instead of using naive averaging operations, DynamicCity
+employs a novel Projection Module to effectively compress 4D LiDAR features
+into six 2D feature maps for HexPlane construction, which significantly
+enhances HexPlane fitting quality (up to 12.56 mIoU gain). Furthermore, we
+utilize an Expansion & Squeeze Strategy to reconstruct 3D feature volumes in
+parallel, which improves both network training efficiency and reconstruction
+accuracy than naively querying each 3D point (up to 7.05 mIoU gain, 2.06x
+training speedup, and 70.84% memory reduction). 2) A DiT-based diffusion model
+for HexPlane generation. To make HexPlane feasible for DiT generation, a Padded
+Rollout Operation is proposed to reorganize all six feature planes of the
+HexPlane as a squared 2D feature map. In particular, various conditions could
+be introduced in the diffusion or sampling process, supporting versatile 4D
+generation applications, such as trajectory- and command-driven generation,
+inpainting, and layout-conditioned generation. Extensive experiments on the
+CarlaSC and Waymo datasets demonstrate that DynamicCity significantly
+outperforms existing state-of-the-art 4D LiDAR generation methods across
+multiple metrics. The code will be released to facilitate future research.
+
+[Paper Link](
+https://arxiv.org/abs/2410.18084
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_14-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AG-SLAM: Active Gaussian Splatting SLAM
+
+- **Authors**: Wen Jiang, Boshu Lei, Katrina Ashton, Kostas Daniilidis
+
+#### Abstract
+
+We present AG-SLAM, the first active SLAM system utilizing 3D Gaussian
+Splatting (3DGS) for online scene reconstruction. In recent years, radiance
+field scene representations, including 3DGS have been widely used in SLAM and
+exploration, but actively planning trajectories for robotic exploration is
+still unvisited. In particular, many exploration methods assume precise
+localization and thus do not mitigate the significant risk of constructing a
+trajectory, which is difficult for a SLAM system to operate on. This can cause
+camera tracking failure and lead to failures in real-world robotic
+applications. Our method leverages Fisher Information to balance the dual
+objectives of maximizing the information gain for the environment while
+minimizing the cost of localization errors. Experiments conducted on the Gibson
+and Habitat-Matterport 3D datasets demonstrate state-of-the-art results of the
+proposed method.
+
+[Paper Link](
+https://arxiv.org/abs/2410.17422
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_14-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GenDP: 3D Semantic Fields for Category-Level Generalizable Diffusion Policy
+
+- **Authors**: Yixuan Wang, Guang Yin, Binghao Huang, Tarik Kelestemur, Jiuguang Wang, Yunzhu Li
+
+#### Abstract
+
+Diffusion-based policies have shown remarkable capability in executing
+complex robotic manipulation tasks but lack explicit characterization of
+geometry and semantics, which often limits their ability to generalize to
+unseen objects and layouts. To enhance the generalization capabilities of
+Diffusion Policy, we introduce a novel framework that incorporates explicit
+spatial and semantic information via 3D semantic fields. We generate 3D
+descriptor fields from multi-view RGBD observations with large foundational
+vision models, then compare these descriptor fields against reference
+descriptors to obtain semantic fields. The proposed method explicitly considers
+geometry and semantics, enabling strong generalization capabilities in tasks
+requiring category-level generalization, resolving geometric ambiguities, and
+attention to subtle geometric details. We evaluate our method across eight
+tasks involving articulated objects and instances with varying shapes and
+textures from multiple object categories. Our method demonstrates its
+effectiveness by increasing Diffusion Policy's average success rate on unseen
+instances from 20% to 93%. Additionally, we provide a detailed analysis and
+visualization to interpret the sources of performance gain and explain how our
+method can generalize to novel instances.
+
+[Paper Link](
+https://arxiv.org/abs/2410.17488
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-27_14-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-10-23
 
 
