@@ -1,3 +1,412 @@
+## 2024-10-30
+
+
+### Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving
+
+- **Authors**: Bo Jiang, Shaoyu Chen, Bencheng Liao, Xingyu Zhang, Wei Yin, Qian Zhang, Chang Huang, Wenyu Liu, Xinggang Wang
+
+#### Abstract
+
+End-to-end autonomous driving demonstrates strong planning capabilities with
+large-scale data but still struggles in complex, rare scenarios due to limited
+commonsense. In contrast, Large Vision-Language Models (LVLMs) excel in scene
+understanding and reasoning. The path forward lies in merging the strengths of
+both approaches. Previous methods using LVLMs to predict trajectories or
+control signals yield suboptimal results, as LVLMs are not well-suited for
+precise numerical predictions. This paper presents Senna, an autonomous driving
+system combining an LVLM (Senna-VLM) with an end-to-end model (Senna-E2E).
+Senna decouples high-level planning from low-level trajectory prediction.
+Senna-VLM generates planning decisions in natural language, while Senna-E2E
+predicts precise trajectories. Senna-VLM utilizes a multi-image encoding
+approach and multi-view prompts for efficient scene understanding. Besides, we
+introduce planning-oriented QAs alongside a three-stage training strategy,
+which enhances Senna-VLM's planning performance while preserving commonsense.
+Extensive experiments on two datasets show that Senna achieves state-of-the-art
+planning performance. Notably, with pre-training on a large-scale dataset
+DriveX and fine-tuning on nuScenes, Senna significantly reduces average
+planning error by 27.12% and collision rate by 33.33% over model without
+pre-training. We believe Senna's cross-scenario generalization and
+transferability are essential for achieving fully autonomous driving. Code and
+models will be released at https://github.com/hustvl/Senna.
+
+[Website Link](https://github.com/hustvl/Senna.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.22313
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_17-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning
+
+- **Authors**: Jianlan Luo, Charles Xu, Jeffrey Wu, Sergey Levine
+
+#### Abstract
+
+Reinforcement learning (RL) holds great promise for enabling autonomous
+acquisition of complex robotic manipulation skills, but realizing this
+potential in real-world settings has been challenging. We present a
+human-in-the-loop vision-based RL system that demonstrates impressive
+performance on a diverse set of dexterous manipulation tasks, including dynamic
+manipulation, precision assembly, and dual-arm coordination. Our approach
+integrates demonstrations and human corrections, efficient RL algorithms, and
+other system-level design choices to learn policies that achieve near-perfect
+success rates and fast cycle times within just 1 to 2.5 hours of training. We
+show that our method significantly outperforms imitation learning baselines and
+prior RL approaches, with an average 2x improvement in success rate and 1.8x
+faster execution. Through extensive experiments and analysis, we provide
+insights into the effectiveness of our approach, demonstrating how it learns
+robust, adaptive policies for both reactive and predictive control strategies.
+Our results suggest that RL can indeed learn a wide range of complex
+vision-based manipulation policies directly in the real world within practical
+training times. We hope this work will inspire a new generation of learned
+robotic manipulation techniques, benefiting both industrial applications and
+research advancements. Videos and code are available at our project website
+https://hil-serl.github.io/.
+
+[Website Link](https://hil-serl.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.21845
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_17-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robots Pre-train Robots: Manipulation-Centric Robotic Representation from Large-Scale Robot Dataset
+
+- **Authors**: Guangqi Jiang, Yifei Sun, Tao Huang, Huanyu Li, Yongyuan Liang, Huazhe Xu
+
+#### Abstract
+
+The pre-training of visual representations has enhanced the efficiency of
+robot learning. Due to the lack of large-scale in-domain robotic datasets,
+prior works utilize in-the-wild human videos to pre-train robotic visual
+representation. Despite their promising results, representations from human
+videos are inevitably subject to distribution shifts and lack the dynamics
+information crucial for task completion. We first evaluate various pre-trained
+representations in terms of their correlation to the downstream robotic
+manipulation tasks (i.e., manipulation centricity). Interestingly, we find that
+the "manipulation centricity" is a strong indicator of success rates when
+applied to downstream tasks. Drawing from these findings, we propose
+Manipulation Centric Representation (MCR), a foundation representation learning
+framework capturing both visual features and the dynamics information such as
+actions and proprioceptions of manipulation tasks to improve manipulation
+centricity. Specifically, we pre-train a visual encoder on the DROID robotic
+dataset and leverage motion-relevant data such as robot proprioceptive states
+and actions. We introduce a novel contrastive loss that aligns visual
+observations with the robot's proprioceptive state-action dynamics, combined
+with a behavior cloning (BC)-like actor loss to predict actions during
+pre-training, along with a time contrastive loss. Empirical results across 4
+simulation domains with 20 tasks verify that MCR outperforms the strongest
+baseline method by 14.8%. Moreover, MCR boosts the performance of
+data-efficient learning with a UR5e arm on 3 real-world tasks by 76.9%. Project
+website: https://robots-pretrain-robots.github.io/.
+
+[Website Link](https://robots-pretrain-robots.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.22325
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_16-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Local Policies Enable Zero-shot Long-horizon Manipulation
+
+- **Authors**: Murtaza Dalal, Min Liu, Walter Talbott, Chen Chen, Deepak Pathak, Jian Zhang, Ruslan Salakhutdinov
+
+#### Abstract
+
+Sim2real for robotic manipulation is difficult due to the challenges of
+simulating complex contacts and generating realistic task distributions. To
+tackle the latter problem, we introduce ManipGen, which leverages a new class
+of policies for sim2real transfer: local policies. Locality enables a variety
+of appealing properties including invariances to absolute robot and object
+pose, skill ordering, and global scene configuration. We combine these policies
+with foundation models for vision, language and motion planning and demonstrate
+SOTA zero-shot performance of our method to Robosuite benchmark tasks in
+simulation (97%). We transfer our local policies from simulation to reality and
+observe they can solve unseen long-horizon manipulation tasks with up to 8
+stages with significant pose, object and scene configuration variation.
+ManipGen outperforms SOTA approaches such as SayCan, OpenVLA, LLMTrajGen and
+VoxPoser across 50 real-world manipulation tasks by 36%, 76%, 62% and 60%
+respectively. Video results at https://mihdalal.github.io/manipgen/
+
+[Website Link](https://mihdalal.github.io/manipgen/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.22332
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_16-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-29
+
+
+### HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots
+
+- **Authors**: Tairan He, Wenli Xiao, Toru Lin, Zhengyi Luo, Zhenjia Xu, Zhenyu Jiang, Jan Kautz, Changliu Liu, Guanya Shi, Xiaolong Wang, Linxi Fan, Yuke Zhu
+
+#### Abstract
+
+Humanoid whole-body control requires adapting to diverse tasks such as
+navigation, loco-manipulation, and tabletop manipulation, each demanding a
+different mode of control. For example, navigation relies on root velocity
+tracking, while tabletop manipulation prioritizes upper-body joint angle
+tracking. Existing approaches typically train individual policies tailored to a
+specific command space, limiting their transferability across modes. We present
+the key insight that full-body kinematic motion imitation can serve as a common
+abstraction for all these tasks and provide general-purpose motor skills for
+learning multiple modes of whole-body control. Building on this, we propose
+HOVER (Humanoid Versatile Controller), a multi-mode policy distillation
+framework that consolidates diverse control modes into a unified policy. HOVER
+enables seamless transitions between control modes while preserving the
+distinct advantages of each, offering a robust and scalable solution for
+humanoid control across a wide range of modes. By eliminating the need for
+policy retraining for each control mode, our approach improves efficiency and
+flexibility for future humanoid applications.
+
+[Paper Link](
+https://arxiv.org/abs/2410.21229
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_16-35.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### One-Step Diffusion Policy: Fast Visuomotor Policies via Diffusion Distillation
+
+- **Authors**: Zhendong Wang, Zhaoshuo Li, Ajay Mandlekar, Zhenjia Xu, Jiaojiao Fan, Yashraj Narang, Linxi Fan, Yuke Zhu, Yogesh Balaji, Mingyuan Zhou, Ming-Yu Liu, Yu Zeng
+
+#### Abstract
+
+Diffusion models, praised for their success in generative tasks, are
+increasingly being applied to robotics, demonstrating exceptional performance
+in behavior cloning. However, their slow generation process stemming from
+iterative denoising steps poses a challenge for real-time applications in
+resource-constrained robotics setups and dynamically changing environments. In
+this paper, we introduce the One-Step Diffusion Policy (OneDP), a novel
+approach that distills knowledge from pre-trained diffusion policies into a
+single-step action generator, significantly accelerating response times for
+robotic control tasks. We ensure the distilled generator closely aligns with
+the original policy distribution by minimizing the Kullback-Leibler (KL)
+divergence along the diffusion chain, requiring only $2\%$-$10\%$ additional
+pre-training cost for convergence. We evaluated OneDP on 6 challenging
+simulation tasks as well as 4 self-designed real-world tasks using the Franka
+robot. The results demonstrate that OneDP not only achieves state-of-the-art
+success rates but also delivers an order-of-magnitude improvement in inference
+speed, boosting action prediction frequency from 1.5 Hz to 62 Hz, establishing
+its potential for dynamic and computationally constrained robotic applications.
+We share the project page at https://research.nvidia.com/labs/dir/onedp/.
+
+[Website Link](https://research.nvidia.com/labs/dir/onedp/.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.21257
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_16-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-28
+
+
+### Versatile Demonstration Interface: Toward More Flexible Robot Demonstration Collection
+
+- **Authors**: Michael Hagenow, Dimosthenis Kontogiorgos, Yanwei Wang, Julie Shah
+
+#### Abstract
+
+Previous methods for Learning from Demonstration leverage several approaches
+for a human to teach motions to a robot, including teleoperation, kinesthetic
+teaching, and natural demonstrations. However, little previous work has
+explored more general interfaces that allow for multiple demonstration types.
+Given the varied preferences of human demonstrators and task characteristics, a
+flexible tool that enables multiple demonstration types could be crucial for
+broader robot skill training. In this work, we propose Versatile Demonstration
+Interface (VDI), an attachment for collaborative robots that simplifies the
+collection of three common types of demonstrations. Designed for flexible
+deployment in industrial settings, our tool requires no additional
+instrumentation of the environment. Our prototype interface captures human
+demonstrations through a combination of vision, force sensing, and state
+tracking (e.g., through the robot proprioception or AprilTag tracking). Through
+a user study where we deployed our prototype VDI at a local manufacturing
+innovation center with manufacturing experts, we demonstrated the efficacy of
+our prototype in representative industrial tasks. Interactions from our study
+exposed a range of industrial use cases for VDI, clear relationships between
+demonstration preferences and task criteria, and insights for future tool
+design.
+
+[Paper Link](
+https://arxiv.org/abs/2410.19141
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_16-22.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robotic Learning in your Backyard: A Neural Simulator from Open Source Components
+
+- **Authors**: Liyou Zhou, Oleg Sinavski, Athanasios Polydoros
+
+#### Abstract
+
+The emergence of 3D Gaussian Splatting for fast and high-quality novel view
+synthesize has opened up the possibility to construct photo-realistic
+simulations from video for robotic reinforcement learning. While the approach
+has been demonstrated in several research papers, the software tools used to
+build such a simulator remain unavailable or proprietary. We present SplatGym,
+an open source neural simulator for training data-driven robotic control
+policies. The simulator creates a photorealistic virtual environment from a
+single video. It supports ego camera view generation, collision detection, and
+virtual object in-painting. We demonstrate training several visual navigation
+policies via reinforcement learning. SplatGym represents a notable first step
+towards an open-source general-purpose neural environment for robotic learning.
+It broadens the range of applications that can effectively utilise
+reinforcement learning by providing convenient and unrestricted tooling, and by
+eliminating the need for the manual development of conventional 3D
+environments.
+
+[Paper Link](
+https://arxiv.org/abs/2410.19564
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_16-09.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### MILES: Making Imitation Learning Easy with Self-Supervision
+
+- **Authors**: Georgios Papagiannis, Edward Johns
+
+#### Abstract
+
+Data collection in imitation learning often requires significant, laborious
+human supervision, such as numerous demonstrations, and/or frequent environment
+resets for methods that incorporate reinforcement learning. In this work, we
+propose an alternative approach, MILES: a fully autonomous, self-supervised
+data collection paradigm, and we show that this enables efficient policy
+learning from just a single demonstration and a single environment reset. MILES
+autonomously learns a policy for returning to and then following the single
+demonstration, whilst being self-guided during data collection, eliminating the
+need for additional human interventions. We evaluated MILES across several
+real-world tasks, including tasks that require precise contact-rich
+manipulation such as locking a lock with a key. We found that, under the
+constraints of a single demonstration and no repeated environment resetting,
+MILES significantly outperforms state-of-the-art alternatives like imitation
+learning methods that leverage reinforcement learning. Videos of our
+experiments and code can be found on our webpage: www.robot-learning.uk/miles.
+
+[Paper Link](
+https://arxiv.org/abs/2410.19693
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_15-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### IPPON: Common Sense Guided Informative Path Planning for Object Goal Navigation
+
+- **Authors**: Kaixian Qu, Jie Tan, Tingnan Zhang, Fei Xia, Cesar Cadena, Marco Hutter
+
+#### Abstract
+
+Navigating efficiently to an object in an unexplored environment is a
+critical skill for general-purpose intelligent robots. Recent approaches to
+this object goal navigation problem have embraced a modular strategy,
+integrating classical exploration algorithms-notably frontier exploration-with
+a learned semantic mapping/exploration module. This paper introduces a novel
+informative path planning and 3D object probability mapping approach. The
+mapping module computes the probability of the object of interest through
+semantic segmentation and a Bayes filter. Additionally, it stores probabilities
+for common objects, which semantically guides the exploration based on common
+sense priors from a large language model. The planner terminates when the
+current viewpoint captures enough voxels identified with high confidence as the
+object of interest. Although our planner follows a zero-shot approach, it
+achieves state-of-the-art performance as measured by the Success weighted by
+Path Length (SPL) and Soft SPL in the Habitat ObjectNav Challenge 2023,
+outperforming other works by more than 20%. Furthermore, we validate its
+effectiveness on real robots. Project webpage: https://ippon-paper.github.io/
+
+[Website Link](https://ippon-paper.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.19697
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_15-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DA-VIL: Adaptive Dual-Arm Manipulation with Reinforcement Learning and Variable Impedance Control
+
+- **Authors**: Md Faizal Karim, Shreya Bollimuntha, Mohammed Saad Hashmi, Autrio Das, Gaurav Singh, Srinath Sridhar, Arun Kumar Singh, Nagamanikandan Govindan, K Madhava Krishna
+
+#### Abstract
+
+Dual-arm manipulation is an area of growing interest in the robotics
+community. Enabling robots to perform tasks that require the coordinated use of
+two arms, is essential for complex manipulation tasks such as handling large
+objects, assembling components, and performing human-like interactions.
+However, achieving effective dual-arm manipulation is challenging due to the
+need for precise coordination, dynamic adaptability, and the ability to manage
+interaction forces between the arms and the objects being manipulated. We
+propose a novel pipeline that combines the advantages of policy learning based
+on environment feedback and gradient-based optimization to learn controller
+gains required for the control outputs. This allows the robotic system to
+dynamically modulate its impedance in response to task demands, ensuring
+stability and dexterity in dual-arm operations. We evaluate our pipeline on a
+trajectory-tracking task involving a variety of large, complex objects with
+different masses and geometries. The performance is then compared to three
+other established methods for controlling dual-arm robots, demonstrating
+superior results.
+
+[Paper Link](
+https://arxiv.org/abs/2410.19712
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-10-30_15-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-10-25
 
 
