@@ -1,3 +1,511 @@
+## 2024-11-01
+
+
+### Get a Grip: Multi-Finger Grasp Evaluation at Scale Enables Robust Sim-to-Real Transfer
+
+- **Authors**: Tyler Ga Wei Lum, Albert H. Li, Preston Culbertson, Krishnan Srinivasan, Aaron D. Ames, Mac Schwager, Jeannette Bohg
+
+#### Abstract
+
+This work explores conditions under which multi-finger grasping algorithms
+can attain robust sim-to-real transfer. While numerous large datasets
+facilitate learning generative models for multi-finger grasping at scale,
+reliable real-world dexterous grasping remains challenging, with most methods
+degrading when deployed on hardware. An alternate strategy is to use
+discriminative grasp evaluation models for grasp selection and refinement,
+conditioned on real-world sensor measurements. This paradigm has produced
+state-of-the-art results for vision-based parallel-jaw grasping, but remains
+unproven in the multi-finger setting. In this work, we find that existing
+datasets and methods have been insufficient for training discriminitive models
+for multi-finger grasping. To train grasp evaluators at scale, datasets must
+provide on the order of millions of grasps, including both positive and
+negative examples, with corresponding visual data resembling measurements at
+inference time. To that end, we release a new, open-source dataset of 3.5M
+grasps on 4.3K objects annotated with RGB images, point clouds, and trained
+NeRFs. Leveraging this dataset, we train vision-based grasp evaluators that
+outperform both analytic and generative modeling-based baselines on extensive
+simulated and real-world trials across a diverse range of objects. We show via
+numerous ablations that the key factor for performance is indeed the evaluator,
+and that its quality degrades as the dataset shrinks, demonstrating the
+importance of our new dataset. Project website at:
+https://sites.google.com/view/get-a-grip-dataset.
+
+[Website Link](https://sites.google.com/view/get-a-grip-dataset.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.23701
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_15-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SceneComplete: Open-World 3D Scene Completion in Complex Real World Environments for Robot Manipulation
+
+- **Authors**: Aditya Agarwal, Gaurav Singh, Bipasha Sen, Tomás Lozano-Pérez, Leslie Pack Kaelbling
+
+#### Abstract
+
+Careful robot manipulation in every-day cluttered environments requires an
+accurate understanding of the 3D scene, in order to grasp and place objects
+stably and reliably and to avoid mistakenly colliding with other objects. In
+general, we must construct such a 3D interpretation of a complex scene based on
+limited input, such as a single RGB-D image. We describe SceneComplete, a
+system for constructing a complete, segmented, 3D model of a scene from a
+single view. It provides a novel pipeline for composing general-purpose
+pretrained perception modules (vision-language, segmentation, image-inpainting,
+image-to-3D, and pose-estimation) to obtain high-accuracy results. We
+demonstrate its accuracy and effectiveness with respect to ground-truth models
+in a large benchmark dataset and show that its accurate whole-object
+reconstruction enables robust grasp proposal generation, including for a
+dexterous hand.
+
+[Paper Link](
+https://arxiv.org/abs/2410.23643
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_15-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### $π_0$: A Vision-Language-Action Flow Model for General Robot Control
+
+- **Authors**: Kevin Black, Noah Brown, Danny Driess, Adnan Esmail, Michael Equi, Chelsea Finn, Niccolo Fusai, Lachy Groom, Karol Hausman, Brian Ichter, Szymon Jakubczak, Tim Jones, Liyiming Ke, Sergey Levine, Adrian Li-Bell, Mohith Mothukuri, Suraj Nair, Karl Pertsch, Lucy Xiaoyang Shi, James Tanner, Quan Vuong, Anna Walling, Haohuan Wang, Ury Zhilinsky
+
+#### Abstract
+
+Robot learning holds tremendous promise to unlock the full potential of
+flexible, general, and dexterous robot systems, as well as to address some of
+the deepest questions in artificial intelligence. However, bringing robot
+learning to the level of generality required for effective real-world systems
+faces major obstacles in terms of data, generalization, and robustness. In this
+paper, we discuss how generalist robot policies (i.e., robot foundation models)
+can address these challenges, and how we can design effective generalist robot
+policies for complex and highly dexterous tasks. We propose a novel flow
+matching architecture built on top of a pre-trained vision-language model (VLM)
+to inherit Internet-scale semantic knowledge. We then discuss how this model
+can be trained on a large and diverse dataset from multiple dexterous robot
+platforms, including single-arm robots, dual-arm robots, and mobile
+manipulators. We evaluate our model in terms of its ability to perform tasks in
+zero shot after pre-training, follow language instructions from people and from
+a high-level VLM policy, and its ability to acquire new skills via fine-tuning.
+Our results cover a wide variety of tasks, such as laundry folding, table
+cleaning, and assembling boxes.
+
+[Paper Link](
+https://arxiv.org/abs/2410.24164
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_15-03.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Sparsh: Self-supervised touch representations for vision-based tactile sensing
+
+- **Authors**: Carolina Higuera, Akash Sharma, Chaithanya Krishna Bodduluri, Taosha Fan, Patrick Lancaster, Mrinal Kalakrishnan, Michael Kaess, Byron Boots, Mike Lambeta, Tingfan Wu, Mustafa Mukadam
+
+#### Abstract
+
+In this work, we introduce general purpose touch representations for the
+increasingly accessible class of vision-based tactile sensors. Such sensors
+have led to many recent advances in robot manipulation as they markedly
+complement vision, yet solutions today often rely on task and sensor specific
+handcrafted perception models. Collecting real data at scale with task centric
+ground truth labels, like contact forces and slip, is a challenge further
+compounded by sensors of various form factor differing in aspects like lighting
+and gel markings. To tackle this we turn to self-supervised learning (SSL) that
+has demonstrated remarkable performance in computer vision. We present Sparsh,
+a family of SSL models that can support various vision-based tactile sensors,
+alleviating the need for custom labels through pre-training on 460k+ tactile
+images with masking and self-distillation in pixel and latent spaces. We also
+build TacBench, to facilitate standardized benchmarking across sensors and
+models, comprising of six tasks ranging from comprehending tactile properties
+to enabling physical perception and manipulation planning. In evaluations, we
+find that SSL pre-training for touch representation outperforms task and
+sensor-specific end-to-end training by 95.1% on average over TacBench, and
+Sparsh (DINO) and Sparsh (IJEPA) are the most competitive, indicating the
+merits of learning in latent space for tactile images. Project page:
+https://sparsh-ssl.github.io/
+
+[Website Link](https://sparsh-ssl.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.24090
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_15-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### 3D-ViTac: Learning Fine-Grained Manipulation with Visuo-Tactile Sensing
+
+- **Authors**: Binghao Huang, Yixuan Wang, Xinyi Yang, Yiyue Luo, Yunzhu Li
+
+#### Abstract
+
+Tactile and visual perception are both crucial for humans to perform
+fine-grained interactions with their environment. Developing similar
+multi-modal sensing capabilities for robots can significantly enhance and
+expand their manipulation skills. This paper introduces \textbf{3D-ViTac}, a
+multi-modal sensing and learning system designed for dexterous bimanual
+manipulation. Our system features tactile sensors equipped with dense sensing
+units, each covering an area of 3$mm^2$. These sensors are low-cost and
+flexible, providing detailed and extensive coverage of physical contacts,
+effectively complementing visual information. To integrate tactile and visual
+data, we fuse them into a unified 3D representation space that preserves their
+3D structures and spatial relationships. The multi-modal representation can
+then be coupled with diffusion policies for imitation learning. Through
+concrete hardware experiments, we demonstrate that even low-cost robots can
+perform precise manipulations and significantly outperform vision-only
+policies, particularly in safe interactions with fragile items and executing
+long-horizon tasks involving in-hand manipulation. Our project page is
+available at \url{https://binghao-huang.github.io/3D-ViTac/}.
+
+[Website Link](https://binghao-huang.github.io/3D-ViTac/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.24091
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_14-57_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation Learning
+
+- **Authors**: Zhenyu Jiang, Yuqi Xie, Kevin Lin, Zhenjia Xu, Weikang Wan, Ajay Mandlekar, Linxi Fan, Yuke Zhu
+
+#### Abstract
+
+Imitation learning from human demonstrations is an effective means to teach
+robots manipulation skills. But data acquisition is a major bottleneck in
+applying this paradigm more broadly, due to the amount of cost and human effort
+involved. There has been significant interest in imitation learning for
+bimanual dexterous robots, like humanoids. Unfortunately, data collection is
+even more challenging here due to the challenges of simultaneously controlling
+multiple arms and multi-fingered hands. Automated data generation in simulation
+is a compelling, scalable alternative to fuel this need for data. To this end,
+we introduce DexMimicGen, a large-scale automated data generation system that
+synthesizes trajectories from a handful of human demonstrations for humanoid
+robots with dexterous hands. We present a collection of simulation environments
+in the setting of bimanual dexterous manipulation, spanning a range of
+manipulation behaviors and different requirements for coordination among the
+two arms. We generate 21K demos across these tasks from just 60 source human
+demos and study the effect of several data generation and policy learning
+decisions on agent performance. Finally, we present a real-to-sim-to-real
+pipeline and deploy it on a real-world humanoid can sorting task. Videos and
+more are at https://dexmimicgen.github.io/
+
+[Website Link](https://dexmimicgen.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.24185
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_14-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### EgoMimic: Scaling Imitation Learning via Egocentric Video
+
+- **Authors**: Simar Kareer, Dhruv Patel, Ryan Punamiya, Pranay Mathur, Shuo Cheng, Chen Wang, Judy Hoffman, Danfei Xu
+
+#### Abstract
+
+The scale and diversity of demonstration data required for imitation learning
+is a significant challenge. We present EgoMimic, a full-stack framework which
+scales manipulation via human embodiment data, specifically egocentric human
+videos paired with 3D hand tracking. EgoMimic achieves this through: (1) a
+system to capture human embodiment data using the ergonomic Project Aria
+glasses, (2) a low-cost bimanual manipulator that minimizes the kinematic gap
+to human data, (3) cross-domain data alignment techniques, and (4) an imitation
+learning architecture that co-trains on human and robot data. Compared to prior
+works that only extract high-level intent from human videos, our approach
+treats human and robot data equally as embodied demonstration data and learns a
+unified policy from both data sources. EgoMimic achieves significant
+improvement on a diverse set of long-horizon, single-arm and bimanual
+manipulation tasks over state-of-the-art imitation learning methods and enables
+generalization to entirely new scenes. Finally, we show a favorable scaling
+trend for EgoMimic, where adding 1 hour of additional hand data is
+significantly more valuable than 1 hour of additional robot data. Videos and
+additional information can be found at https://egomimic.github.io/
+
+[Website Link](https://egomimic.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.24221
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_14-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-10-31
+
+
+### $\textbf{EMOS}$: $\textbf{E}$mbodiment-aware Heterogeneous $\textbf{M}$ulti-robot $\textbf{O}$perating $\textbf{S}$ystem with LLM Agents
+
+- **Authors**: Junting Chen, Checheng Yu, Xunzhe Zhou, Tianqi Xu, Yao Mu, Mengkang Hu, Wenqi Shao, Yikai Wang, Guohao Li, Lin Shao
+
+#### Abstract
+
+Heterogeneous multi-robot systems (HMRS) have emerged as a powerful approach
+for tackling complex tasks that single robots cannot manage alone. Current
+large-language-model-based multi-agent systems (LLM-based MAS) have shown
+success in areas like software development and operating systems, but applying
+these systems to robot control presents unique challenges. In particular, the
+capabilities of each agent in a multi-robot system are inherently tied to the
+physical composition of the robots, rather than predefined roles. To address
+this issue, we introduce a novel multi-agent framework designed to enable
+effective collaboration among heterogeneous robots with varying embodiments and
+capabilities, along with a new benchmark named Habitat-MAS. One of our key
+designs is $\textit{Robot Resume}$: Instead of adopting human-designed role
+play, we propose a self-prompted approach, where agents comprehend robot URDF
+files and call robot kinematics tools to generate descriptions of their physics
+capabilities to guide their behavior in task planning and action execution. The
+Habitat-MAS benchmark is designed to assess how a multi-agent framework handles
+tasks that require embodiment-aware reasoning, which includes 1) manipulation,
+2) perception, 3) navigation, and 4) comprehensive multi-floor object
+rearrangement. The experimental results indicate that the robot's resume and
+the hierarchical design of our multi-agent system are essential for the
+effective operation of the heterogeneous multi-robot system within this
+intricate problem context.
+
+[Paper Link](
+https://arxiv.org/abs/2410.22662
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_14-54.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Efficient End-to-End 6-Dof Grasp Detection Framework for Edge Devices with Hierarchical Heatmaps and Feature Propagation
+
+- **Authors**: Kaiqin Yang. Yixiang Dai, Guijin Wang, Siang Chen
+
+#### Abstract
+
+6-DoF grasp detection is critically important for the advancement of
+intelligent embodied systems, as it provides feasible robot poses for object
+grasping. Various methods have been proposed to detect 6-DoF grasps through the
+extraction of 3D geometric features from RGBD or point cloud data. However,
+most of these approaches encounter challenges during real robot deployment due
+to their significant computational demands, which can be particularly
+problematic for mobile robot platforms, especially those reliant on edge
+computing devices. This paper presents an Efficient End-to-End Grasp Detection
+Network (E3GNet) for 6-DoF grasp detection utilizing hierarchical heatmap
+representations. E3GNet effectively identifies high-quality and diverse grasps
+in cluttered real-world environments. Benefiting from our end-to-end
+methodology and efficient network design, our approach surpasses previous
+methods in model inference efficiency and achieves real-time 6-Dof grasp
+detection on edge devices. Furthermore, real-world experiments validate the
+effectiveness of our method, achieving a satisfactory 94% object grasping
+success rate.
+
+[Paper Link](
+https://arxiv.org/abs/2410.22980
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_14-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexGraspNet 2.0: Learning Generative Dexterous Grasping in Large-scale Synthetic Cluttered Scenes
+
+- **Authors**: Jialiang Zhang, Haoran Liu, Danshi Li, Xinqiang Yu, Haoran Geng, Yufei Ding, Jiayi Chen, He Wang
+
+#### Abstract
+
+Grasping in cluttered scenes remains highly challenging for dexterous hands
+due to the scarcity of data. To address this problem, we present a large-scale
+synthetic benchmark, encompassing 1319 objects, 8270 scenes, and 427 million
+grasps. Beyond benchmarking, we also propose a novel two-stage grasping method
+that learns efficiently from data by using a diffusion model that conditions on
+local geometry. Our proposed generative method outperforms all baselines in
+simulation experiments. Furthermore, with the aid of test-time-depth
+restoration, our method demonstrates zero-shot sim-to-real transfer, attaining
+90.7% real-world dexterous grasping success rate in cluttered scenes.
+
+[Paper Link](
+https://arxiv.org/abs/2410.23004
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_14-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Neural Attention Field: Emerging Point Relevance in 3D Scenes for One-Shot Dexterous Grasping
+
+- **Authors**: Qianxu Wang, Congyue Deng, Tyler Ga Wei Lum, Yuanpei Chen, Yaodong Yang, Jeannette Bohg, Yixin Zhu, Leonidas Guibas
+
+#### Abstract
+
+One-shot transfer of dexterous grasps to novel scenes with object and context
+variations has been a challenging problem. While distilled feature fields from
+large vision models have enabled semantic correspondences across 3D scenes,
+their features are point-based and restricted to object surfaces, limiting
+their capability of modeling complex semantic feature distributions for
+hand-object interactions. In this work, we propose the \textit{neural attention
+field} for representing semantic-aware dense feature fields in the 3D space by
+modeling inter-point relevance instead of individual point features. Core to it
+is a transformer decoder that computes the cross-attention between any 3D query
+point with all the scene points, and provides the query point feature with an
+attention-based aggregation. We further propose a self-supervised framework for
+training the transformer decoder from only a few 3D pointclouds without hand
+demonstrations. Post-training, the attention field can be applied to novel
+scenes for semantics-aware dexterous grasping from one-shot demonstration.
+Experiments show that our method provides better optimization landscapes by
+encouraging the end-effector to focus on task-relevant scene regions, resulting
+in significant improvements in success rates on real robots compared with the
+feature-field-based methods.
+
+[Paper Link](
+https://arxiv.org/abs/2410.23039
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_14-33.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### EMOTION: Expressive Motion Sequence Generation for Humanoid Robots with In-Context Learning
+
+- **Authors**: Peide Huang, Yuhan Hu, Nataliya Nechyporenko, Daehwa Kim, Walter Talbott, Jian Zhang
+
+#### Abstract
+
+This paper introduces a framework, called EMOTION, for generating expressive
+motion sequences in humanoid robots, enhancing their ability to engage in
+humanlike non-verbal communication. Non-verbal cues such as facial expressions,
+gestures, and body movements play a crucial role in effective interpersonal
+interactions. Despite the advancements in robotic behaviors, existing methods
+often fall short in mimicking the diversity and subtlety of human non-verbal
+communication. To address this gap, our approach leverages the in-context
+learning capability of large language models (LLMs) to dynamically generate
+socially appropriate gesture motion sequences for human-robot interaction. We
+use this framework to generate 10 different expressive gestures and conduct
+online user studies comparing the naturalness and understandability of the
+motions generated by EMOTION and its human-feedback version, EMOTION++, against
+those by human operators. The results demonstrate that our approach either
+matches or surpasses human performance in generating understandable and natural
+robot motions under certain scenarios. We also provide design implications for
+future research to consider a set of variables when generating expressive
+robotic gestures.
+
+[Paper Link](
+https://arxiv.org/abs/2410.23234
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_14-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Keypoint Abstraction using Large Models for Object-Relative Imitation Learning
+
+- **Authors**: Xiaolin Fang, Bo-Ruei Huang, Jiayuan Mao, Jasmine Shone, Joshua B. Tenenbaum, Tomás Lozano-Pérez, Leslie Pack Kaelbling
+
+#### Abstract
+
+Generalization to novel object configurations and instances across diverse
+tasks and environments is a critical challenge in robotics. Keypoint-based
+representations have been proven effective as a succinct representation for
+capturing essential object features, and for establishing a reference frame in
+action prediction, enabling data-efficient learning of robot skills. However,
+their manual design nature and reliance on additional human labels limit their
+scalability. In this paper, we propose KALM, a framework that leverages large
+pre-trained vision-language models (LMs) to automatically generate
+task-relevant and cross-instance consistent keypoints. KALM distills robust and
+consistent keypoints across views and objects by generating proposals using LMs
+and verifies them against a small set of robot demonstration data. Based on the
+generated keypoints, we can train keypoint-conditioned policy models that
+predict actions in keypoint-centric frames, enabling robots to generalize
+effectively across varying object poses, camera views, and object instances
+with similar functional shapes. Our method demonstrates strong performance in
+the real world, adapting to different tasks and environments from only a
+handful of demonstrations while requiring no additional labels. Website:
+https://kalm-il.github.io/
+
+[Website Link](https://kalm-il.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2410.23254
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_14-30.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Bridging the Human to Robot Dexterity Gap through Object-Oriented Rewards
+
+- **Authors**: Irmak Guzey, Yinlong Dai, Georgy Savva, Raunaq Bhirangi, Lerrel Pinto
+
+#### Abstract
+
+Training robots directly from human videos is an emerging area in robotics
+and computer vision. While there has been notable progress with two-fingered
+grippers, learning autonomous tasks for multi-fingered robot hands in this way
+remains challenging. A key reason for this difficulty is that a policy trained
+on human hands may not directly transfer to a robot hand due to morphology
+differences. In this work, we present HuDOR, a technique that enables online
+fine-tuning of policies by directly computing rewards from human videos.
+Importantly, this reward function is built using object-oriented trajectories
+derived from off-the-shelf point trackers, providing meaningful learning
+signals despite the morphology gap and visual differences between human and
+robot hands. Given a single video of a human solving a task, such as gently
+opening a music box, HuDOR enables our four-fingered Allegro hand to learn the
+task with just an hour of online interaction. Our experiments across four tasks
+show that HuDOR achieves a 4x improvement over baselines. Code and videos are
+available on our website, https://object-rewards.github.io.
+
+[Website Link](https://object-rewards.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2410.23289
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-01_13-32.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-10-30
 
 
