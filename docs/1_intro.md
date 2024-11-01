@@ -20,6 +20,24 @@ slug: /
 ## Code and Data
 You can find the **Code and Data** used to run all the experiments mentioned in this document  (rendering, getting_started, etc.) in the `code` branch of our github repository: [here](https://github.com/geng-haoran/Simulately/tree/code).
 
+## Contribute or Customize your Simulate in just 3 steps
+#### Requirements
+[Node.js](https://nodejs.org/en/download/package-manager) version 18.0 or above (which can be checked by running node -v). You can use nvm for managing multiple Node versions on a single machine installed.
+When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+
+#### Run the web page locally: Installation
+Install Docusaurus and dependences
+```bash
+cd <path>/<to>/<Simulately>
+npm install
+```
+
+#### Run the web page locally: Start, Edit and Enjoy!
+```
+npm run start
+```
+You will see the page running locally in your browser, and any edits or updates will appear directly in the local page.
+
 ## Contributors ✨
 
 **Simualtely** is started by [Haoran Geng](https://geng-haoran.github.io/), [Yuyang Li](https://yuyangli.com/), [Ran Gong](https://nikepupu.github.io/), [Yuanpei Chen](https://cypypccpy.github.io/), [Wensi Ai](https://wensi-ai.github.io), [Puhao Li](https://xiaoyao-li.github.io/), [Yuzhe Qin](https://yzqin.github.io/), [Songlin Wei](http://wei.songl.in/), [Xian Zhou](https://www.zhou-xian.com/), [Jialiang Zhang](https://github.com/mzhmxzh), [Chaoyi Xu](https://github.com/co1one).
