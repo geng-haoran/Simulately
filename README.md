@@ -6,7 +6,7 @@
 
 > The website is built with Docusaurus, powered by Cloudflare Pages.
 
-## Contribute or Customize your Simulate in just 3 steps
+## Contribute or Customize your Simulately in just 3 steps
 #### Requirements
 [Node.js](https://nodejs.org/en/download/package-manager) version 18.0 or above (which can be checked by running node -v). You can use nvm for managing multiple Node versions on a single machine installed.
 When installing Node.js, you are recommended to check all checkboxes related to dependencies.
