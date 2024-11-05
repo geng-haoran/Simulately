@@ -1,3 +1,590 @@
+## 2024-11-05
+
+
+### ManiBox: Enhancing Spatial Grasping Generalization via Scalable Simulation Data Generation
+
+- **Authors**: Hengkai Tan, Xuezhou Xu, Chengyang Ying, Xinyi Mao, Songming Liu, Xingxing Zhang, Hang Su, Jun Zhu
+
+#### Abstract
+
+Learning a precise robotic grasping policy is crucial for embodied agents
+operating in complex real-world manipulation tasks. Despite significant
+advancements, most models still struggle with accurate spatial positioning of
+objects to be grasped. We first show that this spatial generalization challenge
+stems primarily from the extensive data requirements for adequate spatial
+understanding. However, collecting such data with real robots is prohibitively
+expensive, and relying on simulation data often leads to visual generalization
+gaps upon deployment. To overcome these challenges, we then focus on
+state-based policy generalization and present \textbf{ManiBox}, a novel
+bounding-box-guided manipulation method built on a simulation-based
+teacher-student framework. The teacher policy efficiently generates scalable
+simulation data using bounding boxes, which are proven to uniquely determine
+the objects' spatial positions. The student policy then utilizes these
+low-dimensional spatial states to enable zero-shot transfer to real robots.
+Through comprehensive evaluations in simulated and real-world environments,
+ManiBox demonstrates a marked improvement in spatial grasping generalization
+and adaptability to diverse objects and backgrounds. Further, our empirical
+study into scaling laws for policy performance indicates that spatial volume
+generalization scales positively with data volume. For a certain level of
+spatial volume, the success rate of grasping empirically follows
+Michaelis-Menten kinetics relative to data volume, showing a saturation effect
+as data increases. Our videos and code are available in
+https://thkkk.github.io/manibox.
+
+[Website Link](https://thkkk.github.io/manibox.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.01850
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_21-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### IGOR: Image-GOal Representations are the Atomic Control Units for Foundation Models in Embodied AI
+
+- **Authors**: Xiaoyu Chen, Junliang Guo, Tianyu He, Chuheng Zhang, Pushi Zhang, Derek Cathera Yang, Li Zhao, Jiang Bian
+
+#### Abstract
+
+We introduce Image-GOal Representations (IGOR), aiming to learn a unified,
+semantically consistent action space across human and various robots. Through
+this unified latent action space, IGOR enables knowledge transfer among
+large-scale robot and human activity data. We achieve this by compressing
+visual changes between an initial image and its goal state into latent actions.
+IGOR allows us to generate latent action labels for internet-scale video data.
+This unified latent action space enables the training of foundation policy and
+world models across a wide variety of tasks performed by both robots and
+humans. We demonstrate that: (1) IGOR learns a semantically consistent action
+space for both human and robots, characterizing various possible motions of
+objects representing the physical interaction knowledge; (2) IGOR can "migrate"
+the movements of the object in the one video to other videos, even across human
+and robots, by jointly using the latent action model and world model; (3) IGOR
+can learn to align latent actions with natural language through the foundation
+policy model, and integrate latent actions with a low-level policy model to
+achieve effective robot control. We believe IGOR opens new possibilities for
+human-to-robot knowledge transfer and control.
+
+[Paper Link](
+https://arxiv.org/abs/2411.00785
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_21-13_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SPOT: SE(3) Pose Trajectory Diffusion for Object-Centric Manipulation
+
+- **Authors**: Cheng-Chun Hsu, Bowen Wen, Jie Xu, Yashraj Narang, Xiaolong Wang, Yuke Zhu, Joydeep Biswas, Stan Birchfield
+
+#### Abstract
+
+We introduce SPOT, an object-centric imitation learning framework. The key
+idea is to capture each task by an object-centric representation, specifically
+the SE(3) object pose trajectory relative to the target. This approach
+decouples embodiment actions from sensory inputs, facilitating learning from
+various demonstration types, including both action-based and action-less human
+hand demonstrations, as well as cross-embodiment generalization. Additionally,
+object pose trajectories inherently capture planning constraints from
+demonstrations without the need for manually crafted rules. To guide the robot
+in executing the task, the object trajectory is used to condition a diffusion
+policy. We show improvement compared to prior work on RLBench simulated tasks.
+In real-world evaluation, using only eight demonstrations shot on an iPhone,
+our approach completed all tasks while fully complying with task constraints.
+Project page: https://nvlabs.github.io/object_centric_diffusion
+
+[Website Link](https://nvlabs.github.io/object_centric_diffusion)
+
+[Paper Link](
+https://arxiv.org/abs/2411.00965
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_21-13.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GarmentLab: A Unified Simulation and Benchmark for Garment Manipulation
+
+- **Authors**: Haoran Lu, Ruihai Wu, Yitong Li, Sijie Li, Ziyu Zhu, Chuanruo Ning, Yan Shen, Longzan Luo, Yuanpei Chen, Hao Dong
+
+#### Abstract
+
+Manipulating garments and fabrics has long been a critical endeavor in the
+development of home-assistant robots. However, due to complex dynamics and
+topological structures, garment manipulations pose significant challenges.
+Recent successes in reinforcement learning and vision-based methods offer
+promising avenues for learning garment manipulation. Nevertheless, these
+approaches are severely constrained by current benchmarks, which offer limited
+diversity of tasks and unrealistic simulation behavior. Therefore, we present
+GarmentLab, a content-rich benchmark and realistic simulation designed for
+deformable object and garment manipulation. Our benchmark encompasses a diverse
+range of garment types, robotic systems and manipulators. The abundant tasks in
+the benchmark further explores of the interactions between garments, deformable
+objects, rigid bodies, fluids, and human body. Moreover, by incorporating
+multiple simulation methods such as FEM and PBD, along with our proposed
+sim-to-real algorithms and real-world benchmark, we aim to significantly narrow
+the sim-to-real gap. We evaluate state-of-the-art vision methods, reinforcement
+learning, and imitation learning approaches on these tasks, highlighting the
+challenges faced by current algorithms, notably their limited generalization
+capabilities. Our proposed open-source environments and comprehensive analysis
+show promising boost to future research in garment manipulation by unlocking
+the full potential of these methods. We guarantee that we will open-source our
+code as soon as possible. You can watch the videos in supplementary files to
+learn more about the details of our work. Our project page is available at:
+https://garmentlab.github.io/
+
+[Website Link](https://garmentlab.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.01200
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_21-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### The Role of Domain Randomization in Training Diffusion Policies for Whole-Body Humanoid Control
+
+- **Authors**: Oleg Kaidanov, Firas Al-Hafez, Yusuf Suvari, Boris Belousov, Jan Peters
+
+#### Abstract
+
+Humanoids have the potential to be the ideal embodiment in environments
+designed for humans. Thanks to the structural similarity to the human body,
+they benefit from rich sources of demonstration data, e.g., collected via
+teleoperation, motion capture, or even using videos of humans performing tasks.
+However, distilling a policy from demonstrations is still a challenging
+problem. While Diffusion Policies (DPs) have shown impressive results in
+robotic manipulation, their applicability to locomotion and humanoid control
+remains underexplored. In this paper, we investigate how dataset diversity and
+size affect the performance of DPs for humanoid whole-body control. In a
+simulated IsaacGym environment, we generate synthetic demonstrations by
+training Adversarial Motion Prior (AMP) agents under various Domain
+Randomization (DR) conditions, and we compare DPs fitted to datasets of
+different size and diversity. Our findings show that, although DPs can achieve
+stable walking behavior, successful training of locomotion policies requires
+significantly larger and more diverse datasets compared to manipulation tasks,
+even in simple scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2411.01349
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_21-07.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Eurekaverse: Environment Curriculum Generation via Large Language Models
+
+- **Authors**: William Liang, Sam Wang, Hung-Ju Wang, Osbert Bastani, Dinesh Jayaraman, Yecheng Jason Ma
+
+#### Abstract
+
+Recent work has demonstrated that a promising strategy for teaching robots a
+wide range of complex skills is by training them on a curriculum of
+progressively more challenging environments. However, developing an effective
+curriculum of environment distributions currently requires significant
+expertise, which must be repeated for every new domain. Our key insight is that
+environments are often naturally represented as code. Thus, we probe whether
+effective environment curriculum design can be achieved and automated via code
+generation by large language models (LLM). In this paper, we introduce
+Eurekaverse, an unsupervised environment design algorithm that uses LLMs to
+sample progressively more challenging, diverse, and learnable environments for
+skill training. We validate Eurekaverse's effectiveness in the domain of
+quadrupedal parkour learning, in which a quadruped robot must traverse through
+a variety of obstacle courses. The automatic curriculum designed by Eurekaverse
+enables gradual learning of complex parkour skills in simulation and can
+successfully transfer to the real-world, outperforming manual training courses
+designed by humans.
+
+[Paper Link](
+https://arxiv.org/abs/2411.01775
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_21-03.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### So You Think You Can Scale Up Autonomous Robot Data Collection?
+
+- **Authors**: Suvir Mirchandani, Suneel Belkhale, Joey Hejna, Evelyn Choi, Md Sazzad Islam, Dorsa Sadigh
+
+#### Abstract
+
+A long-standing goal in robot learning is to develop methods for robots to
+acquire new skills autonomously. While reinforcement learning (RL) comes with
+the promise of enabling autonomous data collection, it remains challenging to
+scale in the real-world partly due to the significant effort required for
+environment design and instrumentation, including the need for designing reset
+functions or accurate success detectors. On the other hand, imitation learning
+(IL) methods require little to no environment design effort, but instead
+require significant human supervision in the form of collected demonstrations.
+To address these shortcomings, recent works in autonomous IL start with an
+initial seed dataset of human demonstrations that an autonomous policy can
+bootstrap from. While autonomous IL approaches come with the promise of
+addressing the challenges of autonomous RL as well as pure IL strategies, in
+this work, we posit that such techniques do not deliver on this promise and are
+still unable to scale up autonomous data collection in the real world. Through
+a series of real-world experiments, we demonstrate that these approaches, when
+scaled up to realistic settings, face much of the same scaling challenges as
+prior attempts in RL in terms of environment design. Further, we perform a
+rigorous study of autonomous IL methods across different data scales and 7
+simulation and real-world tasks, and demonstrate that while autonomous data
+collection can modestly improve performance, simply collecting more human data
+often provides significantly more improvement. Our work suggests a negative
+result: that scaling up autonomous data collection for learning robot policies
+for real-world tasks is more challenging and impractical than what is suggested
+in prior work. We hope these insights about the core challenges of scaling up
+data collection help inform future efforts in autonomous learning.
+
+[Paper Link](
+https://arxiv.org/abs/2411.01813
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_21-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboCrowd: Scaling Robot Data Collection through Crowdsourcing
+
+- **Authors**: Suvir Mirchandani, David D. Yuan, Kaylee Burns, Md Sazzad Islam, Tony Z. Zhao, Chelsea Finn, Dorsa Sadigh
+
+#### Abstract
+
+In recent years, imitation learning from large-scale human demonstrations has
+emerged as a promising paradigm for training robot policies. However, the
+burden of collecting large quantities of human demonstrations is significant in
+terms of collection time and the need for access to expert operators. We
+introduce a new data collection paradigm, RoboCrowd, which distributes the
+workload by utilizing crowdsourcing principles and incentive design. RoboCrowd
+helps enable scalable data collection and facilitates more efficient learning
+of robot policies. We build RoboCrowd on top of ALOHA (Zhao et al. 2023) -- a
+bimanual platform that supports data collection via puppeteering -- to explore
+the design space for crowdsourcing in-person demonstrations in a public
+environment. We propose three classes of incentive mechanisms to appeal to
+users' varying sources of motivation for interacting with the system: material
+rewards, intrinsic interest, and social comparison. We instantiate these
+incentives through tasks that include physical rewards, engaging or challenging
+manipulations, as well as gamification elements such as a leaderboard. We
+conduct a large-scale, two-week field experiment in which the platform is
+situated in a university cafe. We observe significant engagement with the
+system -- over 200 individuals independently volunteered to provide a total of
+over 800 interaction episodes. Our findings validate the proposed incentives as
+mechanisms for shaping users' data quantity and quality. Further, we
+demonstrate that the crowdsourced data can serve as useful pre-training data
+for policies fine-tuned on expert demonstrations -- boosting performance up to
+20% compared to when this data is not available. These results suggest the
+potential for RoboCrowd to reduce the burden of robot data collection by
+carefully implementing crowdsourcing and incentive design principles.
+
+[Paper Link](
+https://arxiv.org/abs/2411.01915
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_20-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Real-Time Polygonal Semantic Mapping for Humanoid Robot Stair Climbing
+
+- **Authors**: Teng Bin, Jianming Yao, Tin Lun Lam, Tianwei Zhang
+
+#### Abstract
+
+We present a novel algorithm for real-time planar semantic mapping tailored
+for humanoid robots navigating complex terrains such as staircases. Our method
+is adaptable to any odometry input and leverages GPU-accelerated processes for
+planar extraction, enabling the rapid generation of globally consistent
+semantic maps. We utilize an anisotropic diffusion filter on depth images to
+effectively minimize noise from gradient jumps while preserving essential edge
+details, enhancing normal vector images' accuracy and smoothness. Both the
+anisotropic diffusion and the RANSAC-based plane extraction processes are
+optimized for parallel processing on GPUs, significantly enhancing
+computational efficiency. Our approach achieves real-time performance,
+processing single frames at rates exceeding $30~Hz$, which facilitates detailed
+plane extraction and map management swiftly and efficiently. Extensive testing
+underscores the algorithm's capabilities in real-time scenarios and
+demonstrates its practical application in humanoid robot gait planning,
+significantly improving its ability to navigate dynamic environments.
+
+[Paper Link](
+https://arxiv.org/abs/2411.01919
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_20-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DiffSim2Real: Deploying Quadrupedal Locomotion Policies Purely Trained in Differentiable Simulation
+
+- **Authors**: Joshua Bagajo, Clemens Schwarke, Victor Klemm, Ignat Georgiev, Jean-Pierre Sleiman, Jesus Tordesillas, Animesh Garg, Marco Hutter
+
+#### Abstract
+
+Differentiable simulators provide analytic gradients, enabling more
+sample-efficient learning algorithms and paving the way for data intensive
+learning tasks such as learning from images. In this work, we demonstrate that
+locomotion policies trained with analytic gradients from a differentiable
+simulator can be successfully transferred to the real world. Typically,
+simulators that offer informative gradients lack the physical accuracy needed
+for sim-to-real transfer, and vice-versa. A key factor in our success is a
+smooth contact model that combines informative gradients with physical
+accuracy, ensuring effective transfer of learned behaviors. To the best of our
+knowledge, this is the first time a real quadrupedal robot is able to locomote
+after training exclusively in a differentiable simulation.
+
+[Paper Link](
+https://arxiv.org/abs/2411.02189
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_20-37.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexHub and DART: Towards Internet Scale Robot Data Collection
+
+- **Authors**: Younghyo Park, Jagdeep Singh Bhatia, Lars Ankile, Pulkit Agrawal
+
+#### Abstract
+
+The quest to build a generalist robotic system is impeded by the scarcity of
+diverse and high-quality data. While real-world data collection effort exist,
+requirements for robot hardware, physical environment setups, and frequent
+resets significantly impede the scalability needed for modern learning
+frameworks. We introduce DART, a teleoperation platform designed for
+crowdsourcing that reimagines robotic data collection by leveraging cloud-based
+simulation and augmented reality (AR) to address many limitations of prior data
+collection efforts. Our user studies highlight that DART enables higher data
+collection throughput and lower physical fatigue compared to real-world
+teleoperation. We also demonstrate that policies trained using DART-collected
+datasets successfully transfer to reality and are robust to unseen visual
+disturbances. All data collected through DART is automatically stored in our
+cloud-hosted database, DexHub, which will be made publicly available upon
+curation, paving the path for DexHub to become an ever-growing data hub for
+robot learning. Videos are available at: https://dexhub.ai/project
+
+[Website Link](https://dexhub.ai/project)
+
+[Paper Link](
+https://arxiv.org/abs/2411.02214
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_20-35.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution
+
+- **Authors**: Yang Yue, Yulin Wang, Bingyi Kang, Yizeng Han, Shenzhi Wang, Shiji Song, Jiashi Feng, Gao Huang
+
+#### Abstract
+
+MLLMs have demonstrated remarkable comprehension and reasoning capabilities
+with complex language and visual data. These advances have spurred the vision
+of establishing a generalist robotic MLLM proficient in understanding complex
+human instructions and accomplishing various embodied tasks. However,
+developing MLLMs for real-world robots is challenging due to the typically
+limited computation and memory capacities available on robotic platforms. In
+contrast, the inference of MLLMs involves storing billions of parameters and
+performing tremendous computation, imposing significant hardware demands. In
+our paper, we propose a Dynamic Early-Exit Framework for Robotic
+Vision-Language-Action Model (DeeR-VLA, or simply DeeR) that automatically
+adjusts the size of the activated MLLM based on each situation at hand. The
+approach leverages a multi-exit architecture in MLLMs, which allows the model
+to terminate processing once a proper size of the model has been activated for
+a specific situation, thus avoiding further redundant computation.
+Additionally, we develop novel algorithms that establish early-termination
+criteria for DeeR, conditioned on predefined demands such as average
+computational cost (i.e., power consumption), as well as peak computational
+consumption (i.e., latency) and GPU memory usage. These enhancements ensure
+that DeeR operates efficiently under varying resource constraints while
+maintaining competitive performance. On the CALVIN robot manipulation
+benchmark, DeeR demonstrates significant reductions in computational costs of
+LLM by 5.2-6.5x and GPU memory of LLM by 2-6x without compromising performance.
+Code and checkpoints are available at https://github.com/yueyang130/DeeR-VLA.
+
+[Website Link](https://github.com/yueyang130/DeeR-VLA.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.02359
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_20-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-11-04
+
+
+### ConceptFactory: Facilitate 3D Object Knowledge Annotation with Object Conceptualization
+
+- **Authors**: Jianhua Sun, Yuxuan Li, Longfei Xu, Nange Wang, Jiude Wei, Yining Zhang, Cewu Lu
+
+#### Abstract
+
+We present ConceptFactory, a novel scope to facilitate more efficient
+annotation of 3D object knowledge by recognizing 3D objects through generalized
+concepts (i.e. object conceptualization), aiming at promoting machine
+intelligence to learn comprehensive object knowledge from both vision and
+robotics aspects. This idea originates from the findings in human cognition
+research that the perceptual recognition of objects can be explained as a
+process of arranging generalized geometric components (e.g. cuboids and
+cylinders). ConceptFactory consists of two critical parts: i) ConceptFactory
+Suite, a unified toolbox that adopts Standard Concept Template Library (STL-C)
+to drive a web-based platform for object conceptualization, and ii)
+ConceptFactory Asset, a large collection of conceptualized objects acquired
+using ConceptFactory suite. Our approach enables researchers to effortlessly
+acquire or customize extensive varieties of object knowledge to comprehensively
+study different object understanding tasks. We validate our idea on a wide
+range of benchmark tasks from both vision and robotics aspects with
+state-of-the-art algorithms, demonstrating the high quality and versatility of
+annotations provided by our approach. Our website is available at
+https://apeirony.github.io/ConceptFactory.
+
+[Website Link](https://apeirony.github.io/ConceptFactory.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.00448
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_20-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### PARTNR: A Benchmark for Planning and Reasoning in Embodied Multi-agent Tasks
+
+- **Authors**: Matthew Chang, Gunjan Chhablani, Alexander Clegg, Mikael Dallaire Cote, Ruta Desai, Michal Hlavac, Vladimir Karashchuk, Jacob Krantz, Roozbeh Mottaghi, Priyam Parashar, Siddharth Patki, Ishita Prasad, Xavier Puig, Akshara Rai, Ram Ramrakhya, Daniel Tran, Joanne Truong, John M. Turner, Eric Undersander, Tsung-Yen Yang
+
+#### Abstract
+
+We present a benchmark for Planning And Reasoning Tasks in humaN-Robot
+collaboration (PARTNR) designed to study human-robot coordination in household
+activities. PARTNR tasks exhibit characteristics of everyday tasks, such as
+spatial, temporal, and heterogeneous agent capability constraints. We employ a
+semi-automated task generation pipeline using Large Language Models (LLMs),
+incorporating simulation in the loop for grounding and verification. PARTNR
+stands as the largest benchmark of its kind, comprising 100,000 natural
+language tasks, spanning 60 houses and 5,819 unique objects. We analyze
+state-of-the-art LLMs on PARTNR tasks, across the axes of planning, perception
+and skill execution. The analysis reveals significant limitations in SoTA
+models, such as poor coordination and failures in task tracking and recovery
+from errors. When LLMs are paired with real humans, they require 1.5x as many
+steps as two humans collaborating and 1.1x more steps than a single human,
+underscoring the potential for improvement in these models. We further show
+that fine-tuning smaller LLMs with planning data can achieve performance on par
+with models 9 times larger, while being 8.6x faster at inference. Overall,
+PARTNR highlights significant challenges facing collaborative embodied agents
+and aims to drive research in this direction.
+
+[Paper Link](
+https://arxiv.org/abs/2411.00081
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_19-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Visual Parkour from Generated Images
+
+- **Authors**: Alan Yu, Ge Yang, Ran Choi, Yajvan Ravan, John Leonard, Phillip Isola
+
+#### Abstract
+
+Fast and accurate physics simulation is an essential component of robot
+learning, where robots can explore failure scenarios that are difficult to
+produce in the real world and learn from unlimited on-policy data. Yet, it
+remains challenging to incorporate RGB-color perception into the sim-to-real
+pipeline that matches the real world in its richness and realism. In this work,
+we train a robot dog in simulation for visual parkour. We propose a way to use
+generative models to synthesize diverse and physically accurate image sequences
+of the scene from the robot's ego-centric perspective. We present
+demonstrations of zero-shot transfer to the RGB-only observations of the real
+world on a robot equipped with a low-cost, off-the-shelf color camera. website
+visit https://lucidsim.github.io
+
+[Website Link](https://lucidsim.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2411.00083
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_18-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning to Look Around: Enhancing Teleoperation and Learning with a Human-like Actuated Neck
+
+- **Authors**: Bipasha Sen, Michelle Wang, Nandini Thakur, Aditya Agarwal, Pulkit Agrawal
+
+#### Abstract
+
+We introduce a teleoperation system that integrates a 5 DOF actuated neck,
+designed to replicate natural human head movements and perception. By enabling
+behaviors like peeking or tilting, the system provides operators with a more
+intuitive and comprehensive view of the environment, improving task
+performance, reducing cognitive load, and facilitating complex whole-body
+manipulation. We demonstrate the benefits of natural perception across seven
+challenging teleoperation tasks, showing how the actuated neck enhances the
+scope and efficiency of remote operation. Furthermore, we investigate its role
+in training autonomous policies through imitation learning. In three distinct
+tasks, the actuated neck supports better spatial awareness, reduces
+distribution shift, and enables adaptive task-specific adjustments compared to
+a static wide-angle camera.
+
+[Paper Link](
+https://arxiv.org/abs/2411.00704
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-05_15-37.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-01
 
 
