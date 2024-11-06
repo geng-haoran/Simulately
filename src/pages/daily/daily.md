@@ -1,3 +1,87 @@
+## 2024-11-06
+
+
+### Vocal Sandbox: Continual Learning and Adaptation for Situated Human-Robot Collaboration
+
+- **Authors**: Jennifer Grannen, Siddharth Karamcheti, Suvir Mirchandani, Percy Liang, Dorsa Sadigh
+
+#### Abstract
+
+We introduce Vocal Sandbox, a framework for enabling seamless human-robot
+collaboration in situated environments. Systems in our framework are
+characterized by their ability to adapt and continually learn at multiple
+levels of abstraction from diverse teaching modalities such as spoken dialogue,
+object keypoints, and kinesthetic demonstrations. To enable such adaptation, we
+design lightweight and interpretable learning algorithms that allow users to
+build an understanding and co-adapt to a robot's capabilities in real-time, as
+they teach new behaviors. For example, after demonstrating a new low-level
+skill for "tracking around" an object, users are provided with trajectory
+visualizations of the robot's intended motion when asked to track a new object.
+Similarly, users teach high-level planning behaviors through spoken dialogue,
+using pretrained language models to synthesize behaviors such as "packing an
+object away" as compositions of low-level skills $-$ concepts that can be
+reused and built upon. We evaluate Vocal Sandbox in two settings: collaborative
+gift bag assembly and LEGO stop-motion animation. In the first setting, we run
+systematic ablations and user studies with 8 non-expert participants,
+highlighting the impact of multi-level teaching. Across 23 hours of total robot
+interaction time, users teach 17 new high-level behaviors with an average of 16
+novel low-level skills, requiring 22.1% less active supervision compared to
+baselines and yielding more complex autonomous performance (+19.7%) with fewer
+failures (-67.1%). Qualitatively, users strongly prefer Vocal Sandbox systems
+due to their ease of use (+20.6%) and overall performance (+13.9%). Finally, we
+pair an experienced system-user with a robot to film a stop-motion animation;
+over two hours of continuous collaboration, the user teaches progressively more
+complex motion skills to shoot a 52 second (232 frame) movie.
+
+[Paper Link](
+https://arxiv.org/abs/2411.02599
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-06_21-35.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RT-Affordance: Affordances are Versatile Intermediate Representations for Robot Manipulation
+
+- **Authors**: Soroush Nasiriany, Sean Kirmani, Tianli Ding, Laura Smith, Yuke Zhu, Danny Driess, Dorsa Sadigh, Ted Xiao
+
+#### Abstract
+
+We explore how intermediate policy representations can facilitate
+generalization by providing guidance on how to perform manipulation tasks.
+Existing representations such as language, goal images, and trajectory sketches
+have been shown to be helpful, but these representations either do not provide
+enough context or provide over-specified context that yields less robust
+policies. We propose conditioning policies on affordances, which capture the
+pose of the robot at key stages of the task. Affordances offer expressive yet
+lightweight abstractions, are easy for users to specify, and facilitate
+efficient learning by transferring knowledge from large internet datasets. Our
+method, RT-Affordance, is a hierarchical model that first proposes an
+affordance plan given the task language, and then conditions the policy on this
+affordance plan to perform manipulation. Our model can flexibly bridge
+heterogeneous sources of supervision including large web datasets and robot
+trajectories. We additionally train our model on cheap-to-collect in-domain
+affordance images, allowing us to learn new tasks without collecting any
+additional costly robot trajectories. We show on a diverse set of novel tasks
+how RT-Affordance exceeds the performance of existing methods by over 50%, and
+we empirically demonstrate that affordances are robust to novel settings.
+Videos available at https://snasiriany.me/rt-affordance
+
+[Website Link](https://snasiriany.me/rt-affordance)
+
+[Paper Link](
+https://arxiv.org/abs/2411.02704
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-06_21-29.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-05
 
 

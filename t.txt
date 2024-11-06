@@ -1,0 +1,22 @@
+#SimulatelyHighlight
+🌐 PARTNR by @MetaAI is setting new standards in human-robot collaboration! 🤖🤝👩‍🔬
+
+✨ 100k tasks crafted to challenge multi-agent planning and reasoning
+✨ Merges simulation with LLM-based strategies for real-world applications
+✨ Exposes AI’s performance gap: 30% success vs. 93% for humans
+Explore how PARTNR advances robotics research 👉 aihabitat.org
+Find more daily insights here: https://simulately.wiki/daily/daily
+
+
+#SimulatelyPapers | [Date]
+📄 ConceptFactory: Facilitate 3D Object Knowledge Annotation
+🔗 arxiv.org/abs/2411.00448 | Project
+
+📄 PARTNR: A Benchmark for Multi-agent Task Planning
+🔗 arxiv.org/abs/2411.00081
+
+📄 Learning Visual Parkour from Generated Images
+🔗 arxiv.org/abs/2411.00083 | Project
+
+📄 Learning to Look Around: Enhancing Teleoperation
+🔗 arxiv.org/abs/2411.00704
