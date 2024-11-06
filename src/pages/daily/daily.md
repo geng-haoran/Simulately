@@ -1,6 +1,47 @@
 ## 2024-11-06
 
 
+### Digitizing Touch with an Artificial Multimodal Fingertip
+
+- **Authors**: Mike Lambeta, Tingfan Wu, Ali Sengul, Victoria Rose Most, Nolan Black, Kevin Sawyer, Romeo Mercado, Haozhi Qi, Alexander Sohn, Byron Taylor, Norb Tydingco, Gregg Kammerer, Dave Stroud, Jake Khatha, Kurt Jenkins, Kyle Most, Neal Stein, Ricardo Chavira, Thomas Craven-Bartle, Eric Sanchez, Yitian Ding, Jitendra Malik, Roberto Calandra
+
+#### Abstract
+
+Touch is a crucial sensing modality that provides rich information about
+object properties and interactions with the physical environment. Humans and
+robots both benefit from using touch to perceive and interact with the
+surrounding environment (Johansson and Flanagan, 2009; Li et al., 2020;
+Calandra et al., 2017). However, no existing systems provide rich, multi-modal
+digital touch-sensing capabilities through a hemispherical compliant
+embodiment. Here, we describe several conceptual and technological innovations
+to improve the digitization of touch. These advances are embodied in an
+artificial finger-shaped sensor with advanced sensing capabilities.
+Significantly, this fingertip contains high-resolution sensors (~8.3 million
+taxels) that respond to omnidirectional touch, capture multi-modal signals, and
+use on-device artificial intelligence to process the data in real time.
+Evaluations show that the artificial fingertip can resolve spatial features as
+small as 7 um, sense normal and shear forces with a resolution of 1.01 mN and
+1.27 mN, respectively, perceive vibrations up to 10 kHz, sense heat, and even
+sense odor. Furthermore, it embeds an on-device AI neural network accelerator
+that acts as a peripheral nervous system on a robot and mimics the reflex arc
+found in humans. These results demonstrate the possibility of digitizing touch
+with superhuman performance. The implications are profound, and we anticipate
+potential applications in robotics (industrial, medical, agricultural, and
+consumer-level), virtual reality and telepresence, prosthetics, and e-commerce.
+Toward digitizing touch at scale, we open-source a modular platform to
+facilitate future research on the nature of touch.
+
+[Paper Link](
+https://arxiv.org/abs/2411.02479
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-06_21-48.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
 ### Vocal Sandbox: Continual Learning and Adaptation for Situated Human-Robot Collaboration
 
 - **Authors**: Jennifer Grannen, Siddharth Karamcheti, Suvir Mirchandani, Percy Liang, Dorsa Sadigh
