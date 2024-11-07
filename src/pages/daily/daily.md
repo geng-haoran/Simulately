@@ -1,3 +1,146 @@
+## 2024-11-07
+
+
+### STEER: Flexible Robotic Manipulation via Dense Language Grounding
+
+- **Authors**: Laura Smith, Alex Irpan, Montserrat Gonzalez Arenas, Sean Kirmani, Dmitry Kalashnikov, Dhruv Shah, Ted Xiao
+
+#### Abstract
+
+The complexity of the real world demands robotic systems that can
+intelligently adapt to unseen situations. We present STEER, a robot learning
+framework that bridges high-level, commonsense reasoning with precise, flexible
+low-level control. Our approach translates complex situational awareness into
+actionable low-level behavior through training language-grounded policies with
+dense annotation. By structuring policy training around fundamental, modular
+manipulation skills expressed in natural language, STEER exposes an expressive
+interface for humans or Vision-Language Models (VLMs) to intelligently
+orchestrate the robot's behavior by reasoning about the task and context. Our
+experiments demonstrate the skills learned via STEER can be combined to
+synthesize novel behaviors to adapt to new situations or perform completely new
+tasks without additional data collection or training.
+
+[Paper Link](
+https://arxiv.org/abs/2411.03409
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-07_21-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VQ-ACE: Efficient Policy Search for Dexterous Robotic Manipulation via Action Chunking Embedding
+
+- **Authors**: Chenyu Yang, Davide Liconti, Robert K. Katzschmann
+
+#### Abstract
+
+Dexterous robotic manipulation remains a significant challenge due to the
+high dimensionality and complexity of hand movements required for tasks like
+in-hand manipulation and object grasping. This paper addresses this issue by
+introducing Vector Quantized Action Chunking Embedding (VQ-ACE), a novel
+framework that compresses human hand motion into a quantized latent space,
+significantly reducing the action space's dimensionality while preserving key
+motion characteristics. By integrating VQ-ACE with both Model Predictive
+Control (MPC) and Reinforcement Learning (RL), we enable more efficient
+exploration and policy learning in dexterous manipulation tasks using a
+biomimetic robotic hand. Our results show that latent space sampling with MPC
+produces more human-like behavior in tasks such as Ball Rolling and Object
+Picking, leading to higher task success rates and reduced control costs. For
+RL, action chunking accelerates learning and improves exploration, demonstrated
+through faster convergence in tasks like cube stacking and in-hand cube
+reorientation. These findings suggest that VQ-ACE offers a scalable and
+effective solution for robotic manipulation tasks involving complex,
+high-dimensional state spaces, contributing to more natural and adaptable
+robotic systems.
+
+[Paper Link](
+https://arxiv.org/abs/2411.03556
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-07_21-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ET-SEED: Efficient Trajectory-Level SE(3) Equivariant Diffusion Policy
+
+- **Authors**: Chenrui Tie, Yue Chen, Ruihai Wu, Boxuan Dong, Zeyi Li, Chongkai Gao, Hao Dong
+
+#### Abstract
+
+Imitation learning, e.g., diffusion policy, has been proven effective in
+various robotic manipulation tasks. However, extensive demonstrations are
+required for policy robustness and generalization. To reduce the demonstration
+reliance, we leverage spatial symmetry and propose ET-SEED, an efficient
+trajectory-level SE(3) equivariant diffusion model for generating action
+sequences in complex robot manipulation tasks. Further, previous equivariant
+diffusion models require the per-step equivariance in the Markov process,
+making it difficult to learn policy under such strong constraints. We
+theoretically extend equivariant Markov kernels and simplify the condition of
+equivariant diffusion process, thereby significantly improving training
+efficiency for trajectory-level SE(3) equivariant diffusion policy in an
+end-to-end manner. We evaluate ET-SEED on representative robotic manipulation
+tasks, involving rigid body, articulated and deformable object. Experiments
+demonstrate superior data efficiency and manipulation proficiency of our
+proposed method, as well as its ability to generalize to unseen configurations
+with only a few demonstrations. Website: https://et-seed.github.io/
+
+[Website Link](https://et-seed.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.03990
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-07_21-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Object-Centric Dexterous Manipulation from Human Motion Data
+
+- **Authors**: Yuanpei Chen, Chen Wang, Yaodong Yang, C. Karen Liu
+
+#### Abstract
+
+Manipulating objects to achieve desired goal states is a basic but important
+skill for dexterous manipulation. Human hand motions demonstrate proficient
+manipulation capability, providing valuable data for training robots with
+multi-finger hands. Despite this potential, substantial challenges arise due to
+the embodiment gap between human and robot hands. In this work, we introduce a
+hierarchical policy learning framework that uses human hand motion data for
+training object-centric dexterous robot manipulation. At the core of our method
+is a high-level trajectory generative model, learned with a large-scale human
+hand motion capture dataset, to synthesize human-like wrist motions conditioned
+on the desired object goal states. Guided by the generated wrist motions, deep
+reinforcement learning is further used to train a low-level finger controller
+that is grounded in the robot's embodiment to physically interact with the
+object to achieve the goal. Through extensive evaluation across 10 household
+objects, our approach not only demonstrates superior performance but also
+showcases generalization capability to novel object geometries and goal states.
+Furthermore, we transfer the learned policies from simulation to a real-world
+bimanual dexterous robot system, further demonstrating its applicability in
+real-world scenarios. Project website:
+https://cypypccpy.github.io/obj-dex.github.io/.
+
+[Website Link](https://cypypccpy.github.io/obj-dex.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.04005
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-07_21-27.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-06
 
 
