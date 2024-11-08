@@ -1,3 +1,192 @@
+## 2024-11-08
+
+
+### Vision Language Models are In-Context Value Learners
+
+- **Authors**: Yecheng Jason Ma, Joey Hejna, Ayzaan Wahid, Chuyuan Fu, Dhruv Shah, Jacky Liang, Zhuo Xu, Sean Kirmani, Peng Xu, Danny Driess, Ted Xiao, Jonathan Tompson, Osbert Bastani, Dinesh Jayaraman, Wenhao Yu, Tingnan Zhang, Dorsa Sadigh, Fei Xia
+
+#### Abstract
+
+Predicting temporal progress from visual trajectories is important for
+intelligent robots that can learn, adapt, and improve. However, learning such
+progress estimator, or temporal value function, across different tasks and
+domains requires both a large amount of diverse data and methods which can
+scale and generalize. To address these challenges, we present Generative Value
+Learning (\GVL), a universal value function estimator that leverages the world
+knowledge embedded in vision-language models (VLMs) to predict task progress.
+Naively asking a VLM to predict values for a video sequence performs poorly due
+to the strong temporal correlation between successive frames. Instead, GVL
+poses value estimation as a temporal ordering problem over shuffled video
+frames; this seemingly more challenging task encourages VLMs to more fully
+exploit their underlying semantic and temporal grounding capabilities to
+differentiate frames based on their perceived task progress, consequently
+producing significantly better value predictions. Without any robot or task
+specific training, GVL can in-context zero-shot and few-shot predict effective
+values for more than 300 distinct real-world tasks across diverse robot
+platforms, including challenging bimanual manipulation tasks. Furthermore, we
+demonstrate that GVL permits flexible multi-modal in-context learning via
+examples from heterogeneous tasks and embodiments, such as human videos. The
+generality of GVL enables various downstream applications pertinent to
+visuomotor policy learning, including dataset filtering, success detection, and
+advantage-weighted regression -- all without any model training or finetuning.
+
+[Paper Link](
+https://arxiv.org/abs/2411.04549
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-08_18-12.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### TacEx: GelSight Tactile Simulation in Isaac Sim -- Combining Soft-Body and Visuotactile Simulators
+
+- **Authors**: Duc Huy Nguyen, Tim Schneider, Guillaume Duret, Alap Kshirsagar, Boris Belousov, Jan Peters
+
+#### Abstract
+
+Training robot policies in simulation is becoming increasingly popular;
+nevertheless, a precise, reliable, and easy-to-use tactile simulator for
+contact-rich manipulation tasks is still missing. To close this gap, we develop
+TacEx -- a modular tactile simulation framework. We embed a state-of-the-art
+soft-body simulator for contacts named GIPC and vision-based tactile simulators
+Taxim and FOTS into Isaac Sim to achieve robust and plausible simulation of the
+visuotactile sensor GelSight Mini. We implement several Isaac Lab environments
+for Reinforcement Learning (RL) leveraging our TacEx simulation, including
+object pushing, lifting, and pole balancing. We validate that the simulation is
+stable and that the high-dimensional observations, such as the gel deformation
+and the RGB images from the GelSight camera, can be used for training. The
+code, videos, and additional results will be released online
+https://sites.google.com/view/tacex.
+
+[Website Link](https://sites.google.com/view/tacex.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.04776
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-08_18-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Stem-OB: Generalizable Visual Imitation Learning with Stem-Like Convergent Observation through Diffusion Inversion
+
+- **Authors**: Kaizhe Hu, Zihang Rui, Yao He, Yuyao Liu, Pu Hua, Huazhe Xu
+
+#### Abstract
+
+Visual imitation learning methods demonstrate strong performance, yet they
+lack generalization when faced with visual input perturbations, including
+variations in lighting and textures, impeding their real-world application. We
+propose Stem-OB that utilizes pretrained image diffusion models to suppress
+low-level visual differences while maintaining high-level scene structures.
+This image inversion process is akin to transforming the observation into a
+shared representation, from which other observations stem, with extraneous
+details removed. Stem-OB contrasts with data-augmentation approaches as it is
+robust to various unspecified appearance changes without the need for
+additional training. Our method is a simple yet highly effective plug-and-play
+solution. Empirical results confirm the effectiveness of our approach in
+simulated tasks and show an exceptionally significant improvement in real-world
+applications, with an average increase of 22.2% in success rates compared to
+the best baseline. See https://hukz18.github.io/Stem-Ob/ for more info.
+
+[Website Link](https://hukz18.github.io/Stem-Ob/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.04919
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-08_18-08.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning
+
+- **Authors**: Gaoyue Zhou, Hengkai Pan, Yann LeCun, Lerrel Pinto
+
+#### Abstract
+
+The ability to predict future outcomes given control actions is fundamental
+for physical reasoning. However, such predictive models, often called world
+models, have proven challenging to learn and are typically developed for
+task-specific solutions with online policy learning. We argue that the true
+potential of world models lies in their ability to reason and plan across
+diverse problems using only passive data. Concretely, we require world models
+to have the following three properties: 1) be trainable on offline,
+pre-collected trajectories, 2) support test-time behavior optimization, and 3)
+facilitate task-agnostic reasoning. To realize this, we present DINO World
+Model (DINO-WM), a new method to model visual dynamics without reconstructing
+the visual world. DINO-WM leverages spatial patch features pre-trained with
+DINOv2, enabling it to learn from offline behavioral trajectories by predicting
+future patch features. This design allows DINO-WM to achieve observational
+goals through action sequence optimization, facilitating task-agnostic behavior
+planning by treating desired goal patch features as prediction targets. We
+evaluate DINO-WM across various domains, including maze navigation, tabletop
+pushing, and particle manipulation. Our experiments demonstrate that DINO-WM
+can generate zero-shot behavioral solutions at test time without relying on
+expert demonstrations, reward modeling, or pre-learned inverse models. Notably,
+DINO-WM exhibits strong generalization capabilities compared to prior
+state-of-the-art work, adapting to diverse task families such as arbitrarily
+configured mazes, push manipulation with varied object shapes, and
+multi-particle scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2411.04983
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-08_18-04.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DynaMem: Online Dynamic Spatio-Semantic Memory for Open World Mobile Manipulation
+
+- **Authors**: Peiqi Liu, Zhanqiu Guo, Mohit Warke, Soumith Chintala, Chris Paxton, Nur Muhammad Mahi Shafiullah, Lerrel Pinto
+
+#### Abstract
+
+Significant progress has been made in open-vocabulary mobile manipulation,
+where the goal is for a robot to perform tasks in any environment given a
+natural language description. However, most current systems assume a static
+environment, which limits the system's applicability in real-world scenarios
+where environments frequently change due to human intervention or the robot's
+own actions. In this work, we present DynaMem, a new approach to open-world
+mobile manipulation that uses a dynamic spatio-semantic memory to represent a
+robot's environment. DynaMem constructs a 3D data structure to maintain a
+dynamic memory of point clouds, and answers open-vocabulary object localization
+queries using multimodal LLMs or open-vocabulary features generated by
+state-of-the-art vision-language models. Powered by DynaMem, our robots can
+explore novel environments, search for objects not found in memory, and
+continuously update the memory as objects move, appear, or disappear in the
+scene. We run extensive experiments on the Stretch SE3 robots in three real and
+nine offline scenes, and achieve an average pick-and-drop success rate of 70%
+on non-stationary objects, which is more than a 2x improvement over
+state-of-the-art static systems. Our code as well as our experiment and
+deployment videos are open sourced and can be found on our project website:
+https://dynamem.github.io/
+
+[Website Link](https://dynamem.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.04999
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-08_17-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-07
 
 
