@@ -1,3 +1,111 @@
+## 2024-11-12
+
+
+### Benchmarking Vision, Language, & Action Models on Robotic Learning Tasks
+
+- **Authors**: Pranav Guruprasad, Harshvardhan Sikka, Jaewoo Song, Yangyue Wang, Paul Pu Liang
+
+#### Abstract
+
+Vision-language-action (VLA) models represent a promising direction for
+developing general-purpose robotic systems, demonstrating the ability to
+combine visual understanding, language comprehension, and action generation.
+However, systematic evaluation of these models across diverse robotic tasks
+remains limited. In this work, we present a comprehensive evaluation framework
+and benchmark suite for assessing VLA models. We profile three state-of-the-art
+VLM and VLAs - GPT-4o, OpenVLA, and JAT - across 20 diverse datasets from the
+Open-X-Embodiment collection, evaluating their performance on various
+manipulation tasks. Our analysis reveals several key insights: 1. current VLA
+models show significant variation in performance across different tasks and
+robot platforms, with GPT-4o demonstrating the most consistent performance
+through sophisticated prompt engineering, 2. all models struggle with complex
+manipulation tasks requiring multi-step planning, and 3. model performance is
+notably sensitive to action space characteristics and environmental factors. We
+release our evaluation framework and findings to facilitate systematic
+assessment of future VLA models and identify critical areas for improvement in
+the development of general purpose robotic systems.
+
+[Paper Link](
+https://arxiv.org/abs/2411.05821
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-12_20-08.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Multi-Agent Collaborative Manipulation for Long-Horizon Quadrupedal Pushing
+
+- **Authors**: Chuye Hong, Yuming Feng, Yaru Niu, Shiqi Liu, Yuxiang Yang, Wenhao Yu, Tingnan Zhang, Jie Tan, Ding Zhao
+
+#### Abstract
+
+Recently, quadrupedal locomotion has achieved significant success, but their
+manipulation capabilities, particularly in handling large objects, remain
+limited, restricting their usefulness in demanding real-world applications such
+as search and rescue, construction, industrial automation, and room
+organization. This paper tackles the task of obstacle-aware, long-horizon
+pushing by multiple quadrupedal robots. We propose a hierarchical multi-agent
+reinforcement learning framework with three levels of control. The high-level
+controller integrates an RRT planner and a centralized adaptive policy to
+generate subgoals, while the mid-level controller uses a decentralized
+goal-conditioned policy to guide the robots toward these sub-goals. A
+pre-trained low-level locomotion policy executes the movement commands. We
+evaluate our method against several baselines in simulation, demonstrating
+significant improvements over baseline approaches, with 36.0% higher success
+rates and 24.5% reduction in completion time than the best baseline. Our
+framework successfully enables long-horizon, obstacle-aware manipulation tasks
+like Push-Cuboid and Push-T on Go1 robots in the real world.
+
+[Paper Link](
+https://arxiv.org/abs/2411.07104
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-12_19-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Grounding Video Models to Actions through Goal Conditioned Exploration
+
+- **Authors**: Yunhao Luo, Yilun Du
+
+#### Abstract
+
+Large video models, pretrained on massive amounts of Internet video, provide
+a rich source of physical knowledge about the dynamics and motions of objects
+and tasks. However, video models are not grounded in the embodiment of an
+agent, and do not describe how to actuate the world to reach the visual states
+depicted in a video. To tackle this problem, current methods use a separate
+vision-based inverse dynamic model trained on embodiment-specific data to map
+image states to actions. Gathering data to train such a model is often
+expensive and challenging, and this model is limited to visual settings similar
+to the ones in which data are available. In this paper, we investigate how to
+directly ground video models to continuous actions through self-exploration in
+the embodied environment -- using generated video states as visual goals for
+exploration. We propose a framework that uses trajectory level action
+generation in combination with video guidance to enable an agent to solve
+complex tasks without any external supervision, e.g., rewards, action labels,
+or segmentation masks. We validate the proposed approach on 8 tasks in Libero,
+6 tasks in MetaWorld, 4 tasks in Calvin, and 12 tasks in iThor Visual
+Navigation. We show how our approach is on par with or even surpasses multiple
+behavior cloning baselines trained on expert demonstrations while without
+requiring any action annotations.
+
+[Paper Link](
+https://arxiv.org/abs/2411.07223
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-12_19-16.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-08
 
 
