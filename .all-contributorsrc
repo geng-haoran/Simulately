@@ -178,6 +178,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "robo-alex",
+      "name": "Mingtong Zhang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71915735?v=4",
+      "profile": "https://robo-alex.github.io/",
+      "contributions": [
+        "blog"
+      ]
     }
   ],
   "contributorsPerLine": 7,
