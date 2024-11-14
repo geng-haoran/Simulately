@@ -1,3 +1,42 @@
+## 2024-11-14
+
+
+### Open-World Task and Motion Planning via Vision-Language Model Inferred Constraints
+
+- **Authors**: Nishanth Kumar, Fabio Ramos, Dieter Fox, Caelan Reed Garrett
+
+#### Abstract
+
+Foundation models trained on internet-scale data, such as Vision-Language
+Models (VLMs), excel at performing tasks involving common sense, such as visual
+question answering. Despite their impressive capabilities, these models cannot
+currently be directly applied to challenging robot manipulation problems that
+require complex and precise continuous reasoning. Task and Motion Planning
+(TAMP) systems can control high-dimensional continuous systems over long
+horizons through combining traditional primitive robot operations. However,
+these systems require detailed model of how the robot can impact its
+environment, preventing them from directly interpreting and addressing novel
+human objectives, for example, an arbitrary natural language goal. We propose
+deploying VLMs within TAMP systems by having them generate discrete and
+continuous language-parameterized constraints that enable TAMP to reason about
+open-world concepts. Specifically, we propose algorithms for VLM partial
+planning that constrain a TAMP system's discrete temporal search and VLM
+continuous constraints interpretation to augment the traditional manipulation
+constraints that TAMP systems seek to satisfy. We demonstrate our approach on
+two robot embodiments, including a real world robot, across several
+manipulation tasks, where the desired objectives are conveyed solely through
+language.
+
+[Paper Link](
+https://arxiv.org/abs/2411.08253
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-14_20-43.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-12
 
 
