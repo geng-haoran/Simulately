@@ -1,3 +1,302 @@
+## 2024-11-18
+
+
+### Whole-Body Impedance Coordinative Control of Wheel-Legged Robot on Uncertain Terrain
+
+- **Authors**: Lei Shi, Xinghua Yu, Cheng Zhou, Wanxin Jin, Wanchao Chi, Shenghao Zhang, Dongsheng Zhang, Xiong Li, Zhengyou Zhang
+
+#### Abstract
+
+This article propose a whole-body impedance coordinative control framework
+for a wheel-legged humanoid robot to achieve adaptability on complex terrains
+while maintaining robot upper body stability. The framework contains a bi-level
+control strategy. The outer level is a variable damping impedance controller,
+which optimizes the damping parameters to ensure the stability of the upper
+body while holding an object. The inner level employs Whole-Body Control (WBC)
+optimization that integrates real-time terrain estimation based on wheel-foot
+position and force data. It generates motor torques while accounting for
+dynamic constraints, joint limits,friction cones, real-time terrain updates,
+and a model-free friction compensation strategy. The proposed whole-body
+coordinative control method has been tested on a recently developed quadruped
+humanoid robot. The results demonstrate that the proposed algorithm effectively
+controls the robot, maintaining upper body stability to successfully complete a
+water-carrying task while adapting to varying terrains.
+
+[Paper Link](
+https://arxiv.org/abs/2411.09935
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-18_21-19.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ALPHA-$α$ and Bi-ACT Are All You Need: Importance of Position and Force Information/Control for Imitation Learning of Unimanual and Bimanual Robotic Manipulation with Low-Cost System
+
+- **Authors**: Masato Kobayashi, Thanpimon Buamanee, Takumi Kobayashi
+
+#### Abstract
+
+Autonomous manipulation in everyday tasks requires flexible action generation
+to handle complex, diverse real-world environments, such as objects with
+varying hardness and softness. Imitation Learning (IL) enables robots to learn
+complex tasks from expert demonstrations. However, a lot of existing methods
+rely on position/unilateral control, leaving challenges in tasks that require
+force information/control, like carefully grasping fragile or varying-hardness
+objects. As the need for diverse controls increases, there are demand for
+low-cost bimanual robots that consider various motor inputs. To address these
+challenges, we introduce Bilateral Control-Based Imitation Learning via Action
+Chunking with Transformers(Bi-ACT) and"A" "L"ow-cost "P"hysical "Ha"rdware
+Considering Diverse Motor Control Modes for Research in Everyday Bimanual
+Robotic Manipulation (ALPHA-$\alpha$). Bi-ACT leverages bilateral control to
+utilize both position and force information, enhancing the robot's adaptability
+to object characteristics such as hardness, shape, and weight. The concept of
+ALPHA-$\alpha$ is affordability, ease of use, repairability, ease of assembly,
+and diverse control modes (position, velocity, torque), allowing
+researchers/developers to freely build control systems using ALPHA-$\alpha$. In
+our experiments, we conducted a detailed analysis of Bi-ACT in unimanual
+manipulation tasks, confirming its superior performance and adaptability
+compared to Bi-ACT without force control. Based on these results, we applied
+Bi-ACT to bimanual manipulation tasks. Experimental results demonstrated high
+success rates in coordinated bimanual operations across multiple tasks. The
+effectiveness of the Bi-ACT and ALPHA-$\alpha$ can be seen through
+comprehensive real-world experiments. Video available at:
+https://mertcookimg.github.io/alpha-biact/
+
+[Website Link](https://mertcookimg.github.io/alpha-biact/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.09942
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-18_21-17.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-11-15
+
+
+### UniHOI: Learning Fast, Dense and Generalizable 4D Reconstruction for Egocentric Hand Object Interaction Videos
+
+- **Authors**: Chengbo Yuan, Geng Chen, Li Yi, Yang Gao
+
+#### Abstract
+
+Egocentric Hand Object Interaction (HOI) videos provide valuable insights
+into human interactions with the physical world, attracting growing interest
+from the computer vision and robotics communities. A key task in fully
+understanding the geometry and dynamics of HOI scenes is dense pointclouds
+sequence reconstruction. However, the inherent motion of both hands and the
+camera makes this challenging. Current methods often rely on time-consuming
+test-time optimization, making them impractical for reconstructing
+internet-scale videos. To address this, we introduce UniHOI, a model that
+unifies the estimation of all variables necessary for dense 4D reconstruction,
+including camera intrinsic, camera poses, and video depth, for egocentric HOI
+scene in a fast feed-forward manner. We end-to-end optimize all these variables
+to improve their consistency in 3D space. Furthermore, our model could be
+trained solely on large-scale monocular video dataset, overcoming the
+limitation of scarce labeled HOI data. We evaluate UniHOI with both in-domain
+and zero-shot generalization setting, surpassing all baselines in pointclouds
+sequence reconstruction and long-term 3D scene flow recovery. UniHOI is the
+first approach to offer fast, dense, and generalizable monocular egocentric HOI
+scene reconstruction in the presence of motion. Code and trained model will be
+released in the future.
+
+[Paper Link](
+https://arxiv.org/abs/2411.09145
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-15_14-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VidMan: Exploiting Implicit Dynamics from Video Diffusion Model for Effective Robot Manipulation
+
+- **Authors**: Youpeng Wen, Junfan Lin, Yi Zhu, Jianhua Han, Hang Xu, Shen Zhao, Xiaodan Liang
+
+#### Abstract
+
+Recent advancements utilizing large-scale video data for learning video
+generation models demonstrate significant potential in understanding complex
+physical dynamics. It suggests the feasibility of leveraging diverse robot
+trajectory data to develop a unified, dynamics-aware model to enhance robot
+manipulation. However, given the relatively small amount of available robot
+data, directly fitting data without considering the relationship between visual
+observations and actions could lead to suboptimal data utilization. To this
+end, we propose VidMan (Video Diffusion for Robot Manipulation), a novel
+framework that employs a two-stage training mechanism inspired by dual-process
+theory from neuroscience to enhance stability and improve data utilization
+efficiency. Specifically, in the first stage, VidMan is pre-trained on the Open
+X-Embodiment dataset (OXE) for predicting future visual trajectories in a video
+denoising diffusion manner, enabling the model to develop a long horizontal
+awareness of the environment's dynamics. In the second stage, a flexible yet
+effective layer-wise self-attention adapter is introduced to transform VidMan
+into an efficient inverse dynamics model that predicts action modulated by the
+implicit dynamics knowledge via parameter sharing. Our VidMan framework
+outperforms state-of-the-art baseline model GR-1 on the CALVIN benchmark,
+achieving a 11.7% relative improvement, and demonstrates over 9% precision
+gains on the OXE small-scale dataset. These results provide compelling evidence
+that world models can significantly enhance the precision of robot action
+prediction. Codes and models will be public.
+
+[Paper Link](
+https://arxiv.org/abs/2411.09153
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-15_14-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Predictive Visuo-Tactile Interactive Perception Framework for Object Properties Inference
+
+- **Authors**: Anirvan Dutta, Etienne Burdet, Mohsen Kaboli
+
+#### Abstract
+
+Interactive exploration of the unknown physical properties of objects such as
+stiffness, mass, center of mass, friction coefficient, and shape is crucial for
+autonomous robotic systems operating continuously in unstructured environments.
+Precise identification of these properties is essential to manipulate objects
+in a stable and controlled way, and is also required to anticipate the outcomes
+of (prehensile or non-prehensile) manipulation actions such as pushing,
+pulling, lifting, etc. Our study focuses on autonomously inferring the physical
+properties of a diverse set of various homogeneous, heterogeneous, and
+articulated objects utilizing a robotic system equipped with vision and tactile
+sensors. We propose a novel predictive perception framework for identifying
+object properties of the diverse objects by leveraging versatile exploratory
+actions: non-prehensile pushing and prehensile pulling. As part of the
+framework, we propose a novel active shape perception to seamlessly initiate
+exploration. Our innovative dual differentiable filtering with Graph Neural
+Networks learns the object-robot interaction and performs consistent inference
+of indirectly observable time-invariant object properties. In addition, we
+formulate a $N$-step information gain approach to actively select the most
+informative actions for efficient learning and inference. Extensive real-robot
+experiments with planar objects show that our predictive perception framework
+results in better performance than the state-of-the-art baseline and
+demonstrate our framework in three major applications for i) object tracking,
+ii) goal-driven task, and iii) change in environment detection.
+
+[Paper Link](
+https://arxiv.org/abs/2411.09020
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-15_14-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ClevrSkills: Compositional Language and Visual Reasoning in Robotics
+
+- **Authors**: Sanjay Haresh, Daniel Dijkman, Apratim Bhattacharyya, Roland Memisevic
+
+#### Abstract
+
+Robotics tasks are highly compositional by nature. For example, to perform a
+high-level task like cleaning the table a robot must employ low-level
+capabilities of moving the effectors to the objects on the table, pick them up
+and then move them off the table one-by-one, while re-evaluating the
+consequently dynamic scenario in the process. Given that large vision language
+models (VLMs) have shown progress on many tasks that require high level,
+human-like reasoning, we ask the question: if the models are taught the
+requisite low-level capabilities, can they compose them in novel ways to
+achieve interesting high-level tasks like cleaning the table without having to
+be explicitly taught so? To this end, we present ClevrSkills - a benchmark
+suite for compositional reasoning in robotics. ClevrSkills is an environment
+suite developed on top of the ManiSkill2 simulator and an accompanying dataset.
+The dataset contains trajectories generated on a range of robotics tasks with
+language and visual annotations as well as multi-modal prompts as task
+specification. The suite includes a curriculum of tasks with three levels of
+compositional understanding, starting with simple tasks requiring basic motor
+skills. We benchmark multiple different VLM baselines on ClevrSkills and show
+that even after being pre-trained on large numbers of tasks, these models fail
+on compositional reasoning in robotics tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2411.09052
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-15_13-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### One-Shot Manipulation Strategy Learning by Making Contact Analogies
+
+- **Authors**: Yuyao Liu, Jiayuan Mao, Joshua Tenenbaum, Tomás Lozano-Pérez, Leslie Pack Kaelbling
+
+#### Abstract
+
+We present a novel approach, MAGIC (manipulation analogies for generalizable
+intelligent contacts), for one-shot learning of manipulation strategies with
+fast and extensive generalization to novel objects. By leveraging a reference
+action trajectory, MAGIC effectively identifies similar contact points and
+sequences of actions on novel objects to replicate a demonstrated strategy,
+such as using different hooks to retrieve distant objects of different shapes
+and sizes. Our method is based on a two-stage contact-point matching process
+that combines global shape matching using pretrained neural features with local
+curvature analysis to ensure precise and physically plausible contact points.
+We experiment with three tasks including scooping, hanging, and hooking
+objects. MAGIC demonstrates superior performance over existing methods,
+achieving significant improvements in runtime speed and generalization to
+different object categories. Website: https://magic-2024.github.io/ .
+
+[Website Link](https://magic-2024.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.09627
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-15_13-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Motion Before Action: Diffusing Object Motion as Manipulation Condition
+
+- **Authors**: Yup Su, Xinyu Zhan, Hongjie Fang, Yong-Lu Li, Cewu Lu, Lixin Yang
+
+#### Abstract
+
+Inferring object motion representations from observations enhances the
+performance of robotic manipulation tasks. This paper introduces a new paradigm
+for robot imitation learning that generates action sequences by reasoning about
+object motion from visual observations. We propose MBA (Motion Before Action),
+a novel module that employs two cascaded diffusion processes for object motion
+generation and robot action generation under object motion guidance. MBA first
+predicts the future pose sequence of the object based on observations, then
+uses this sequence as a condition to guide robot action generation. Designed as
+a plug-and-play component, MBA can be flexibly integrated into existing robotic
+manipulation policies with diffusion action heads. Extensive experiments in
+both simulated and real-world environments demonstrate that our approach
+substantially improves the performance of existing policies across a wide range
+of manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2411.09658
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-15_13-16.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-14
 
 
