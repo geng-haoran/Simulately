@@ -1,3 +1,270 @@
+## 2024-11-19
+
+
+### The Oxford Spires Dataset: Benchmarking Large-Scale LiDAR-Visual Localisation, Reconstruction and Radiance Field Methods
+
+- **Authors**: Yifu Tao, Miguel Ángel Muñoz-Bañón, Lintong Zhang, Jiahao Wang, Lanke Frank Tarimo Fu, Maurice Fallon
+
+#### Abstract
+
+This paper introduces a large-scale multi-modal dataset captured in and
+around well-known landmarks in Oxford using a custom-built multi-sensor
+perception unit as well as a millimetre-accurate map from a Terrestrial LiDAR
+Scanner (TLS). The perception unit includes three synchronised global shutter
+colour cameras, an automotive 3D LiDAR scanner, and an inertial sensor - all
+precisely calibrated. We also establish benchmarks for tasks involving
+localisation, reconstruction, and novel-view synthesis, which enable the
+evaluation of Simultaneous Localisation and Mapping (SLAM) methods,
+Structure-from-Motion (SfM) and Multi-view Stereo (MVS) methods as well as
+radiance field methods such as Neural Radiance Fields (NeRF) and 3D Gaussian
+Splatting. To evaluate 3D reconstruction the TLS 3D models are used as ground
+truth. Localisation ground truth is computed by registering the mobile LiDAR
+scans to the TLS 3D models. Radiance field methods are evaluated not only with
+poses sampled from the input trajectory, but also from viewpoints that are from
+trajectories which are distant from the training poses. Our evaluation
+demonstrates a key limitation of state-of-the-art radiance field methods: we
+show that they tend to overfit to the training poses/images and do not
+generalise well to out-of-sequence poses. They also underperform in 3D
+reconstruction compared to MVS systems using the same visual inputs. Our
+dataset and benchmarks are intended to facilitate better integration of
+radiance field methods and SLAM systems. The raw and processed data, along with
+software for parsing and evaluation, can be accessed at
+https://dynamic.robots.ox.ac.uk/datasets/oxford-spires/.
+
+[Website Link](https://dynamic.robots.ox.ac.uk/datasets/oxford-spires/.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.10546
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-19_19-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### MetricGold: Leveraging Text-To-Image Latent Diffusion Models for Metric Depth Estimation
+
+- **Authors**: Ansh Shah, K Madhava Krishna
+
+#### Abstract
+
+Recovering metric depth from a single image remains a fundamental challenge
+in computer vision, requiring both scene understanding and accurate scaling.
+While deep learning has advanced monocular depth estimation, current models
+often struggle with unfamiliar scenes and layouts, particularly in zero-shot
+scenarios and when predicting scale-ergodic metric depth. We present
+MetricGold, a novel approach that harnesses generative diffusion model's rich
+priors to improve metric depth estimation. Building upon recent advances in
+MariGold, DDVM and Depth Anything V2 respectively, our method combines latent
+diffusion, log-scaled metric depth representation, and synthetic data training.
+MetricGold achieves efficient training on a single RTX 3090 within two days
+using photo-realistic synthetic data from HyperSIM, VirtualKitti, and
+TartanAir. Our experiments demonstrate robust generalization across diverse
+datasets, producing sharper and higher quality metric depth estimates compared
+to existing approaches.
+
+[Paper Link](
+https://arxiv.org/abs/2411.10886
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-19_19-03.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Hierarchical Adaptive Motion Planning with Nonlinear Model Predictive Control for Safety-Critical Collaborative Loco-Manipulation
+
+- **Authors**: Mohsen Sombolestan, Quan Nguyen
+
+#### Abstract
+
+As legged robots take on roles in industrial and autonomous construction,
+collaborative loco-manipulation is crucial for handling large and heavy objects
+that exceed the capabilities of a single robot. However, ensuring the safety of
+these multi-robot tasks is essential to prevent accidents and guarantee
+reliable operation. This paper presents a hierarchical control system for
+object manipulation using a team of quadrupedal robots. The combination of the
+motion planner and the decentralized locomotion controller in a hierarchical
+structure enables safe, adaptive planning for teams in complex scenarios. A
+high-level nonlinear model predictive control planner generates collision-free
+paths by incorporating control barrier functions, accounting for static and
+dynamic obstacles. This process involves calculating contact points and forces
+while adapting to unknown objects and terrain properties. The decentralized
+loco-manipulation controller then ensures each robot maintains stable
+locomotion and manipulation based on the planner's guidance. The effectiveness
+of our method is carefully examined in simulations under various conditions and
+validated in real-life setups with robot hardware. By modifying the object's
+configuration, the robot team can maneuver unknown objects through an
+environment containing both static and dynamic obstacles. We have made our code
+publicly available in an open-source repository at
+\url{https://github.com/DRCL-USC/collaborative_loco_manipulation}.
+
+[Website Link](https://github.com/DRCL-USC/collaborative_loco_manipulation)
+
+[Paper Link](
+https://arxiv.org/abs/2411.10699
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-19_18-54.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DrivingSphere: Building a High-fidelity 4D World for Closed-loop Simulation
+
+- **Authors**: Tianyi Yan, Dongming Wu, Wencheng Han, Junpeng Jiang, Xia Zhou, Kun Zhan, Cheng-zhong Xu, Jianbing Shen
+
+#### Abstract
+
+Autonomous driving evaluation requires simulation environments that closely
+replicate actual road conditions, including real-world sensory data and
+responsive feedback loops. However, many existing simulations need to predict
+waypoints along fixed routes on public datasets or synthetic photorealistic
+data, \ie, open-loop simulation usually lacks the ability to assess dynamic
+decision-making. While the recent efforts of closed-loop simulation offer
+feedback-driven environments, they cannot process visual sensor inputs or
+produce outputs that differ from real-world data. To address these challenges,
+we propose DrivingSphere, a realistic and closed-loop simulation framework. Its
+core idea is to build 4D world representation and generate real-life and
+controllable driving scenarios. In specific, our framework includes a Dynamic
+Environment Composition module that constructs a detailed 4D driving world with
+a format of occupancy equipping with static backgrounds and dynamic objects,
+and a Visual Scene Synthesis module that transforms this data into
+high-fidelity, multi-view video outputs, ensuring spatial and temporal
+consistency. By providing a dynamic and realistic simulation environment,
+DrivingSphere enables comprehensive testing and validation of autonomous
+driving algorithms, ultimately advancing the development of more reliable
+autonomous cars. The benchmark will be publicly released.
+
+[Paper Link](
+https://arxiv.org/abs/2411.11252
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-19_18-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SayComply: Grounding Field Robotic Tasks in Operational Compliance through Retrieval-Based Language Models
+
+- **Authors**: Muhammad Fadhil Ginting, Dong-Ki Kim, Sung-Kyun Kim, Bandi Jai Krishna, Mykel J. Kochenderfer, Shayegan Omidshafiei, Ali-akbar Agha-mohammadi
+
+#### Abstract
+
+This paper addresses the problem of task planning for robots that must comply
+with operational manuals in real-world settings. Task planning under these
+constraints is essential for enabling autonomous robot operation in domains
+that require adherence to domain-specific knowledge. Current methods for
+generating robot goals and plans rely on common sense knowledge encoded in
+large language models. However, these models lack grounding of robot plans to
+domain-specific knowledge and are not easily transferable between multiple
+sites or customers with different compliance needs. In this work, we present
+SayComply, which enables grounding robotic task planning with operational
+compliance using retrieval-based language models. We design a hierarchical
+database of operational, environment, and robot embodiment manuals and
+procedures to enable efficient retrieval of the relevant context under the
+limited context length of the LLMs. We then design a task planner using a
+tree-based retrieval augmented generation (RAG) technique to generate robot
+tasks that follow user instructions while simultaneously complying with the
+domain knowledge in the database. We demonstrate the benefits of our approach
+through simulations and hardware experiments in real-world scenarios that
+require precise context retrieval across various types of context,
+outperforming the standard RAG method. Our approach bridges the gap in
+deploying robots that consistently adhere to operational protocols, offering a
+scalable and edge-deployable solution for ensuring compliance across varied and
+complex real-world environments. Project website: saycomply.github.io.
+
+[Paper Link](
+https://arxiv.org/abs/2411.11323
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-19_18-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Differentiable GPU-Parallelized Task and Motion Planning
+
+- **Authors**: William Shen, Caelan Garrett, Ankit Goyal, Tucker Hermans, Fabio Ramos
+
+#### Abstract
+
+We present a differentiable optimization-based framework for Task and Motion
+Planning (TAMP) that is massively parallelizable on GPUs, enabling thousands of
+sampled seeds to be optimized simultaneously. Existing sampling-based
+approaches inherently disconnect the parameters by generating samples for each
+independently and combining them through composition and rejection, while
+optimization-based methods struggle with highly non-convex constraints and
+local optima. Our method treats TAMP constraint satisfaction as optimizing a
+batch of particles, each representing an assignment to a plan skeleton's
+continuous parameters. We represent the plan skeleton's constraints using
+differentiable cost functions, enabling us to compute the gradient of each
+particle and update it toward satisfying solutions. Our use of GPU parallelism
+better covers the parameter space through scale, increasing the likelihood of
+finding the global optima by exploring multiple basins through global sampling.
+We demonstrate that our algorithm can effectively solve a highly constrained
+Tetris packing problem using a Franka arm in simulation and deploy our planner
+on a real robot arm. Website: https://williamshen-nz.github.io/gpu-tamp
+
+[Website Link](https://williamshen-nz.github.io/gpu-tamp)
+
+[Paper Link](
+https://arxiv.org/abs/2411.11833
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-19_17-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboGSim: A Real2Sim2Real Robotic Gaussian Splatting Simulator
+
+- **Authors**: Xinhai Li, Jialin Li, Ziheng Zhang, Rui Zhang, Fan Jia, Tiancai Wang, Haoqiang Fan, Kuo-Kun Tseng, Ruiping Wang
+
+#### Abstract
+
+Efficient acquisition of real-world embodied data has been increasingly
+critical. However, large-scale demonstrations captured by remote operation tend
+to take extremely high costs and fail to scale up the data size in an efficient
+manner. Sampling the episodes under a simulated environment is a promising way
+for large-scale collection while existing simulators fail to high-fidelity
+modeling on texture and physics. To address these limitations, we introduce the
+RoboGSim, a real2sim2real robotic simulator, powered by 3D Gaussian Splatting
+and the physics engine. RoboGSim mainly includes four parts: Gaussian
+Reconstructor, Digital Twins Builder, Scene Composer, and Interactive Engine.
+It can synthesize the simulated data with novel views, objects, trajectories,
+and scenes. RoboGSim also provides an online, reproducible, and safe evaluation
+for different manipulation policies. The real2sim and sim2real transfer
+experiments show a high consistency in the texture and physics. Moreover, the
+effectiveness of synthetic data is validated under the real-world manipulated
+tasks. We hope RoboGSim serves as a closed-loop simulator for fair comparison
+on policy learning. More information can be found on our project page
+https://robogsim.github.io/ .
+
+[Website Link](https://robogsim.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.11839
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-19_17-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-18
 
 
