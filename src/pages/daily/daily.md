@@ -1,3 +1,197 @@
+## 2024-11-20
+
+
+### Reinforcement Learning with Action Sequence for Data-Efficient Robot Learning
+
+- **Authors**: Younggyo Seo, Pieter Abbeel
+
+#### Abstract
+
+Training reinforcement learning (RL) agents on robotic tasks typically
+requires a large number of training samples. This is because training data
+often consists of noisy trajectories, whether from exploration or
+human-collected demonstrations, making it difficult to learn value functions
+that understand the effect of taking each action. On the other hand, recent
+behavior-cloning (BC) approaches have shown that predicting a sequence of
+actions enables policies to effectively approximate noisy, multi-modal
+distributions of expert demonstrations. Can we use a similar idea for improving
+RL on robotic tasks? In this paper, we introduce a novel RL algorithm that
+learns a critic network that outputs Q-values over a sequence of actions. By
+explicitly training the value functions to learn the consequence of executing a
+series of current and future actions, our algorithm allows for learning useful
+value functions from noisy trajectories. We study our algorithm across various
+setups with sparse and dense rewards, and with or without demonstrations,
+spanning mobile bi-manual manipulation, whole-body control, and tabletop
+manipulation tasks from BiGym, HumanoidBench, and RLBench. We find that, by
+learning the critic network with action sequences, our algorithm outperforms
+various RL and BC baselines, in particular on challenging humanoid control
+tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2411.12155
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-20_13-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GLOVER: Generalizable Open-Vocabulary Affordance Reasoning for Task-Oriented Grasping
+
+- **Authors**: Teli Ma, Zifan Wang, Jiaming Zhou, Mengmeng Wang, Junwei Liang
+
+#### Abstract
+
+Inferring affordable (i.e., graspable) parts of arbitrary objects based on
+human specifications is essential for robots advancing toward open-vocabulary
+manipulation. Current grasp planners, however, are hindered by limited
+vision-language comprehension and time-consuming 3D radiance modeling,
+restricting real-time, open-vocabulary interactions with objects. To address
+these limitations, we propose GLOVER, a unified Generalizable Open-Vocabulary
+Affordance Reasoning framework, which fine-tunes the Large Language Models
+(LLMs) to predict visual affordance of graspable object parts within RGB
+feature space. We compile a dataset of over 10,000 images from human-object
+interactions, annotated with unified visual and linguistic affordance labels,
+to enable multi-modal fine-tuning. GLOVER inherits world knowledge and
+common-sense reasoning from LLMs, facilitating more fine-grained object
+understanding and sophisticated tool-use reasoning. To enable effective
+real-world deployment, we present Affordance-Aware Grasping Estimation (AGE), a
+non-parametric grasp planner that aligns the gripper pose with a superquadric
+surface derived from affordance data. In evaluations across 30 real-world
+scenes, GLOVER achieves success rates of 86.0% in part identification and 76.3%
+in grasping, with speeds approximately 330 times faster in affordance reasoning
+and 40 times faster in grasping pose estimation than the previous
+state-of-the-art.
+
+[Paper Link](
+https://arxiv.org/abs/2411.12286
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-20_13-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Instant Policy: In-Context Imitation Learning via Graph Diffusion
+
+- **Authors**: Vitalis Vosylius, Edward Johns
+
+#### Abstract
+
+Following the impressive capabilities of in-context learning with large
+transformers, In-Context Imitation Learning (ICIL) is a promising opportunity
+for robotics. We introduce Instant Policy, which learns new tasks instantly
+(without further training) from just one or two demonstrations, achieving ICIL
+through two key components. First, we introduce inductive biases through a
+graph representation and model ICIL as a graph generation problem with a
+learned diffusion process, enabling structured reasoning over demonstrations,
+observations, and actions. Second, we show that such a model can be trained
+using pseudo-demonstrations - arbitrary trajectories generated in simulation -
+as a virtually infinite pool of training data. Simulated and real experiments
+show that Instant Policy enables rapid learning of various everyday robot
+tasks. We also show how it can serve as a foundation for cross-embodiment and
+zero-shot transfer to language-defined tasks. Code and videos are available at
+https://www.robot-learning.uk/instant-policy.
+
+[Website Link](https://www.robot-learning.uk/instant-policy.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.12633
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-20_12-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### UBSoft: A Simulation Platform for Robotic Skill Learning in Unbounded Soft Environments
+
+- **Authors**: Chunru Lin, Jugang Fan, Yian Wang, Zeyuan Yang, Zhehuan Chen, Lixing Fang, Tsun-Hsuan Wang, Zhou Xian, Chuang Gan
+
+#### Abstract
+
+It is desired to equip robots with the capability of interacting with various
+soft materials as they are ubiquitous in the real world. While physics
+simulations are one of the predominant methods for data collection and robot
+training, simulating soft materials presents considerable challenges.
+Specifically, it is significantly more costly than simulating rigid objects in
+terms of simulation speed and storage requirements. These limitations typically
+restrict the scope of studies on soft materials to small and bounded areas,
+thereby hindering the learning of skills in broader spaces. To address this
+issue, we introduce UBSoft, a new simulation platform designed to support
+unbounded soft environments for robot skill acquisition. Our platform utilizes
+spatially adaptive resolution scales, where simulation resolution dynamically
+adjusts based on proximity to active robotic agents. Our framework markedly
+reduces the demand for extensive storage space and computation costs required
+for large-scale scenarios involving soft materials. We also establish a set of
+benchmark tasks in our platform, including both locomotion and manipulation
+tasks, and conduct experiments to evaluate the efficacy of various
+reinforcement learning algorithms and trajectory optimization techniques, both
+gradient-based and sampling-based. Preliminary results indicate that
+sampling-based trajectory optimization generally achieves better results for
+obtaining one trajectory to solve the task. Additionally, we conduct
+experiments in real-world environments to demonstrate that advancements made in
+our UBSoft simulator could translate to improved robot interactions with
+large-scale soft material. More videos can be found at
+https://vis-www.cs.umass.edu/ubsoft/.
+
+[Website Link](https://vis-www.cs.umass.edu/ubsoft/.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.12711
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-20_12-54.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Soft Robotic Dynamic In-Hand Pen Spinning
+
+- **Authors**: Yunchao Yao, Uksang Yoo, Jean Oh, Christopher G. Atkeson, Jeffrey Ichnowski
+
+#### Abstract
+
+Dynamic in-hand manipulation remains a challenging task for soft robotic
+systems that have demonstrated advantages in safe compliant interactions but
+struggle with high-speed dynamic tasks. In this work, we present SWIFT, a
+system for learning dynamic tasks using a soft and compliant robotic hand.
+Unlike previous works that rely on simulation, quasi-static actions and precise
+object models, the proposed system learns to spin a pen through trial-and-error
+using only real-world data without requiring explicit prior knowledge of the
+pen's physical attributes. With self-labeled trials sampled from the real
+world, the system discovers the set of pen grasping and spinning primitive
+parameters that enables a soft hand to spin a pen robustly and reliably. After
+130 sampled actions per object, SWIFT achieves 100% success rate across three
+pens with different weights and weight distributions, demonstrating the
+system's generalizability and robustness to changes in object properties. The
+results highlight the potential for soft robotic end-effectors to perform
+dynamic tasks including rapid in-hand manipulation. We also demonstrate that
+SWIFT generalizes to spinning items with different shapes and weights such as a
+brush and a screwdriver which we spin with 10/10 and 5/10 success rates
+respectively. Videos, data, and code are available at
+https://soft-spin.github.io.
+
+[Website Link](https://soft-spin.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.12734
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-20_12-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-19
 
 
