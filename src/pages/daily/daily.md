@@ -1,3 +1,154 @@
+## 2024-11-21
+
+
+### Generative World Explorer
+
+- **Authors**: Taiming Lu, Tianmin Shu, Alan Yuille, Daniel Khashabi, Jieneng Chen
+
+#### Abstract
+
+Planning with partial observation is a central challenge in embodied AI. A
+majority of prior works have tackled this challenge by developing agents that
+physically explore their environment to update their beliefs about the world
+state. In contrast, humans can $\textit{imagine}$ unseen parts of the world
+through a mental exploration and $\textit{revise}$ their beliefs with imagined
+observations. Such updated beliefs can allow them to make more informed
+decisions, without necessitating the physical exploration of the world at all
+times. To achieve this human-like ability, we introduce the $\textit{Generative
+World Explorer (Genex)}$, an egocentric world exploration framework that allows
+an agent to mentally explore a large-scale 3D world (e.g., urban scenes) and
+acquire imagined observations to update its belief. This updated belief will
+then help the agent to make a more informed decision at the current step. To
+train $\textit{Genex}$, we create a synthetic urban scene dataset, Genex-DB.
+Our experimental results demonstrate that (1) $\textit{Genex}$ can generate
+high-quality and consistent observations during long-horizon exploration of a
+large virtual physical world and (2) the beliefs updated with the generated
+observations can inform an existing decision-making model (e.g., an LLM agent)
+to make better plans.
+
+[Paper Link](
+https://arxiv.org/abs/2411.11844
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-21_17-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### BelHouse3D: A Benchmark Dataset for Assessing Occlusion Robustness in 3D Point Cloud Semantic Segmentation
+
+- **Authors**: Umamaheswaran Raman Kumar, Abdur Razzaq Fayjie, Jurgen Hannaert, Patrick Vandewalle
+
+#### Abstract
+
+Large-scale 2D datasets have been instrumental in advancing machine learning;
+however, progress in 3D vision tasks has been relatively slow. This disparity
+is largely due to the limited availability of 3D benchmarking datasets. In
+particular, creating real-world point cloud datasets for indoor scene semantic
+segmentation presents considerable challenges, including data collection within
+confined spaces and the costly, often inaccurate process of per-point labeling
+to generate ground truths. While synthetic datasets address some of these
+challenges, they often fail to replicate real-world conditions, particularly
+the occlusions that occur in point clouds collected from real environments.
+Existing 3D benchmarking datasets typically evaluate deep learning models under
+the assumption that training and test data are independently and identically
+distributed (IID), which affects the models' usability for real-world point
+cloud segmentation. To address these challenges, we introduce the BelHouse3D
+dataset, a new synthetic point cloud dataset designed for 3D indoor scene
+semantic segmentation. This dataset is constructed using real-world references
+from 32 houses in Belgium, ensuring that the synthetic data closely aligns with
+real-world conditions. Additionally, we include a test set with data occlusion
+to simulate out-of-distribution (OOD) scenarios, reflecting the occlusions
+commonly encountered in real-world point clouds. We evaluate popular
+point-based semantic segmentation methods using our OOD setting and present a
+benchmark. We believe that BelHouse3D and its OOD setting will advance research
+in 3D point cloud semantic segmentation for indoor scenes, providing valuable
+insights for the development of more generalizable models.
+
+[Paper Link](
+https://arxiv.org/abs/2411.13251
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-21_17-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### I Can Tell What I am Doing: Toward Real-World Natural Language Grounding of Robot Experiences
+
+- **Authors**: Zihan Wang, Brian Liang, Varad Dhat, Zander Brumbaugh, Nick Walker, Ranjay Krishna, Maya Cakmak
+
+#### Abstract
+
+Understanding robot behaviors and experiences through natural language is
+crucial for developing intelligent and transparent robotic systems. Recent
+advancement in large language models (LLMs) makes it possible to translate
+complex, multi-modal robotic experiences into coherent, human-readable
+narratives. However, grounding real-world robot experiences into natural
+language is challenging due to many reasons, such as multi-modal nature of
+data, differing sample rates, and data volume. We introduce RONAR, an LLM-based
+system that generates natural language narrations from robot experiences,
+aiding in behavior announcement, failure analysis, and human interaction to
+recover failure. Evaluated across various scenarios, RONAR outperforms
+state-of-the-art methods and improves failure recovery efficiency. Our
+contributions include a multi-modal framework for robot experience narration, a
+comprehensive real-robot dataset, and empirical evidence of RONAR's
+effectiveness in enhancing user experience in system transparency and failure
+analysis.
+
+[Paper Link](
+https://arxiv.org/abs/2411.12960
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-21_17-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AsymDex: Leveraging Asymmetry and Relative Motion in Learning Bimanual Dexterity
+
+- **Authors**: Zhaodong Yang, Yunhai Han, Harish Ravichandar
+
+#### Abstract
+
+We present Asymmetric Dexterity (AsymDex), a novel reinforcement learning
+(RL) framework that can efficiently learn asymmetric bimanual skills for
+multi-fingered hands without relying on demonstrations, which can be cumbersome
+to collect. Two crucial ingredients enable AsymDex to reduce the observation
+and action space dimensions and improve sample efficiency. First, AsymDex
+leverages the natural asymmetry found in human bimanual manipulation and
+assigns specific and interdependent roles to each hand: a facilitating hand
+that moves and reorients the object, and a dominant hand that performs complex
+manipulations on said object. Second, AsymDex defines and operates over
+relative observation and action spaces, facilitating responsive coordination
+between the two hands. Further, AsymDex can be easily integrated with recent
+advances in grasp learning to handle both the object acquisition phase and the
+interaction phase of bimanual dexterity. Unlike existing RL-based methods for
+bimanual dexterity, which are tailored to a specific task, AsymDex can be used
+to learn a wide variety of bimanual tasks that exhibit asymmetry. Detailed
+experiments on four simulated asymmetric bimanual dexterous manipulation tasks
+reveal that AsymDex consistently outperforms strong baselines that challenge
+its design choices, in terms of success rate and sample efficiency. The project
+website is at https://sites.google.com/view/asymdex-2024/.
+
+[Website Link](https://sites.google.com/view/asymdex-2024/.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.13020
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-21_16-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-20
 
 
