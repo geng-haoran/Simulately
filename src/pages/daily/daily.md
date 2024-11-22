@@ -1,3 +1,323 @@
+## 2024-11-22
+
+
+### Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics
+
+- **Authors**: Taowen Wang, Dongfang Liu, James Chenhao Liang, Wenhao Yang, Qifan Wang, Cheng Han, Jiebo Luo, Ruixiang Tang
+
+#### Abstract
+
+Recently in robotics, Vision-Language-Action (VLA) models have emerged as a
+transformative approach, enabling robots to execute complex tasks by
+integrating visual and linguistic inputs within an end-to-end learning
+framework. While VLA models offer significant capabilities, they also introduce
+new attack surfaces, making them vulnerable to adversarial attacks. With these
+vulnerabilities largely unexplored, this paper systematically quantifies the
+robustness of VLA-based robotic systems. Recognizing the unique demands of
+robotic execution, our attack objectives target the inherent spatial and
+functional characteristics of robotic systems. In particular, we introduce an
+untargeted position-aware attack objective that leverages spatial foundations
+to destabilize robotic actions, and a targeted attack objective that
+manipulates the robotic trajectory. Additionally, we design an adversarial
+patch generation approach that places a small, colorful patch within the
+camera's view, effectively executing the attack in both digital and physical
+environments. Our evaluation reveals a marked degradation in task success
+rates, with up to a 100\% reduction across a suite of simulated robotic tasks,
+highlighting critical security gaps in current VLA architectures. By unveiling
+these vulnerabilities and proposing actionable evaluation metrics, this work
+advances both the understanding and enhancement of safety for VLA-based robotic
+systems, underscoring the necessity for developing robust defense strategies
+prior to physical-world deployments.
+
+[Paper Link](
+https://arxiv.org/abs/2411.13587
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-22_12-19.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Bimanual Dexterity for Complex Tasks
+
+- **Authors**: Kenneth Shaw, Yulong Li, Jiahui Yang, Mohan Kumar Srirama, Ray Liu, Haoyu Xiong, Russell Mendonca, Deepak Pathak
+
+#### Abstract
+
+To train generalist robot policies, machine learning methods often require a
+substantial amount of expert human teleoperation data. An ideal robot for
+humans collecting data is one that closely mimics them: bimanual arms and
+dexterous hands. However, creating such a bimanual teleoperation system with
+over 50 DoF is a significant challenge. To address this, we introduce Bidex, an
+extremely dexterous, low-cost, low-latency and portable bimanual dexterous
+teleoperation system which relies on motion capture gloves and teacher arms. We
+compare Bidex to a Vision Pro teleoperation system and a SteamVR system and
+find Bidex to produce better quality data for more complex tasks at a faster
+rate. Additionally, we show Bidex operating a mobile bimanual robot for in the
+wild tasks. The robot hands (5k USD) and teleoperation system (7k USD) is
+readily reproducible and can be used on many robot arms including two xArms
+(16k USD). Website at https://bidex-teleop.github.io/
+
+[Website Link](https://bidex-teleop.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.13677
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-22_12-15_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Arm Robot: AR-Enhanced Embodied Control and Visualization for Intuitive Robot Arm Manipulation
+
+- **Authors**: Siyou Pei, Alexander Chen, Ronak Kaoshik, Ruofei Du, Yang Zhang
+
+#### Abstract
+
+Embodied interaction has been introduced to human-robot interaction (HRI) as
+a type of teleoperation, in which users control robot arms with bodily action
+via handheld controllers or haptic gloves. Embodied teleoperation has made
+robot control intuitive to non-technical users, but differences between humans'
+and robots' capabilities \eg ranges of motion and response time, remain
+challenging. In response, we present Arm Robot, an embodied robot arm
+teleoperation system that helps users tackle human-robot discrepancies.
+Specifically, Arm Robot (1) includes AR visualization as real-time feedback on
+temporal and spatial discrepancies, and (2) allows users to change observing
+perspectives and expand action space. We conducted a user study (N=18) to
+investigate the usability of the Arm Robot and learn how users perceive the
+embodiment. Our results show users could use Arm Robot's features to
+effectively control the robot arm, providing insights for continued work in
+embodied HRI.
+
+[Paper Link](
+https://arxiv.org/abs/2411.13851
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-22_12-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Cooperative Grasping and Transportation using Multi-agent Reinforcement Learning with Ternary Force Representation
+
+- **Authors**: Ing-Sheng Bernard-Tiong, Yoshihisa Tsurumine, Ryosuke Sota, Kazuki Shibata, Takamitsu Matsubara
+
+#### Abstract
+
+Cooperative grasping and transportation require effective coordination to
+complete the task. This study focuses on the approach leveraging force-sensing
+feedback, where robots use sensors to detect forces applied by others on an
+object to achieve coordination. Unlike explicit communication, it avoids delays
+and interruptions; however, force-sensing is highly sensitive and prone to
+interference from variations in grasping environment, such as changes in
+grasping force, grasping pose, object size and geometry, which can interfere
+with force signals, subsequently undermining coordination. We propose
+multi-agent reinforcement learning (MARL) with ternary force representation, a
+force representation that maintains consistent representation against
+variations in grasping environment. The simulation and real-world experiments
+demonstrate the robustness of the proposed method to changes in grasping force,
+object size and geometry as well as inherent sim2real gap.
+
+[Paper Link](
+https://arxiv.org/abs/2411.13942
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-22_12-12.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning thin deformable object manipulation with a multi-sensory integrated soft hand
+
+- **Authors**: Chao Zhao, Chunli Jiang, Lifan Luo, Shuai Yuan, Qifeng Chen, Hongyu Yu
+
+#### Abstract
+
+Robotic manipulation has made significant advancements, with systems
+demonstrating high precision and repeatability. However, this remarkable
+precision often fails to translate into efficient manipulation of thin
+deformable objects. Current robotic systems lack imprecise dexterity, the
+ability to perform dexterous manipulation through robust and adaptive behaviors
+that do not rely on precise control. This paper explores the singulation and
+grasping of thin, deformable objects. Here, we propose a novel solution that
+incorporates passive compliance, touch, and proprioception into thin,
+deformable object manipulation. Our system employs a soft, underactuated hand
+that provides passive compliance, facilitating adaptive and gentle interactions
+to dexterously manipulate deformable objects without requiring precise control.
+The tactile and force/torque sensors equipped on the hand, along with a depth
+camera, gather sensory data required for manipulation via the proposed slip
+module. The manipulation policies are learned directly from raw sensory data
+via model-free reinforcement learning, bypassing explicit environmental and
+object modeling. We implement a hierarchical double-loop learning process to
+enhance learning efficiency by decoupling the action space. Our method was
+deployed on real-world robots and trained in a self-supervised manner. The
+resulting policy was tested on a variety of challenging tasks that were beyond
+the capabilities of prior studies, ranging from displaying suit fabric like a
+salesperson to turning pages of sheet music for violinists.
+
+[Paper Link](
+https://arxiv.org/abs/2411.13952
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-22_12-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Continual Learning and Lifting of Koopman Dynamics for Linear Control of Legged Robots
+
+- **Authors**: Feihan Li, Abulikemu Abuduweili, Yifan Sun, Rui Chen, Weiye Zhao, Changliu Liu
+
+#### Abstract
+
+The control of legged robots, particularly humanoid and quadruped robots,
+presents significant challenges due to their high-dimensional and nonlinear
+dynamics. While linear systems can be effectively controlled using methods like
+Model Predictive Control (MPC), the control of nonlinear systems remains
+complex. One promising solution is the Koopman Operator, which approximates
+nonlinear dynamics with a linear model, enabling the use of proven linear
+control techniques. However, achieving accurate linearization through
+data-driven methods is difficult due to issues like approximation error, domain
+shifts, and the limitations of fixed linear state-space representations. These
+challenges restrict the scalability of Koopman-based approaches. This paper
+addresses these challenges by proposing a continual learning algorithm designed
+to iteratively refine Koopman dynamics for high-dimensional legged robots. The
+key idea is to progressively expand the dataset and latent space dimension,
+enabling the learned Koopman dynamics to converge towards accurate
+approximations of the true system dynamics. Theoretical analysis shows that the
+linear approximation error of our method converges monotonically. Experimental
+results demonstrate that our method achieves high control performance on robots
+like Unitree G1/H1/A1/Go2 and ANYmal D, across various terrains using simple
+linear MPC controllers. This work is the first to successfully apply linearized
+Koopman dynamics for locomotion control of high-dimensional legged robots,
+enabling a scalable model-based control solution.
+
+[Paper Link](
+https://arxiv.org/abs/2411.14321
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-22_11-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SplatR : Experience Goal Visual Rearrangement with 3D Gaussian Splatting and Dense Feature Matching
+
+- **Authors**: Arjun P S, Andrew Melnik, Gora Chand Nandi
+
+#### Abstract
+
+Experience Goal Visual Rearrangement task stands as a foundational challenge
+within Embodied AI, requiring an agent to construct a robust world model that
+accurately captures the goal state. The agent uses this world model to restore
+a shuffled scene to its original configuration, making an accurate
+representation of the world essential for successfully completing the task. In
+this work, we present a novel framework that leverages on 3D Gaussian Splatting
+as a 3D scene representation for experience goal visual rearrangement task.
+Recent advances in volumetric scene representation like 3D Gaussian Splatting,
+offer fast rendering of high quality and photo-realistic novel views. Our
+approach enables the agent to have consistent views of the current and the goal
+setting of the rearrangement task, which enables the agent to directly compare
+the goal state and the shuffled state of the world in image space. To compare
+these views, we propose to use a dense feature matching method with visual
+features extracted from a foundation model, leveraging its advantages of a more
+universal feature representation, which facilitates robustness, and
+generalization. We validate our approach on the AI2-THOR rearrangement
+challenge benchmark and demonstrate improvements over the current state of the
+art methods
+
+[Paper Link](
+https://arxiv.org/abs/2411.14322
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-22_11-54.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Humanoid Locomotion with Perceptive Internal Model
+
+- **Authors**: Junfeng Long, Junli Ren, Moji Shi, Zirui Wang, Tao Huang, Ping Luo, Jiangmiao Pang
+
+#### Abstract
+
+In contrast to quadruped robots that can navigate diverse terrains using a
+"blind" policy, humanoid robots require accurate perception for stable
+locomotion due to their high degrees of freedom and inherently unstable
+morphology. However, incorporating perceptual signals often introduces
+additional disturbances to the system, potentially reducing its robustness,
+generalizability, and efficiency. This paper presents the Perceptive Internal
+Model (PIM), which relies on onboard, continuously updated elevation maps
+centered around the robot to perceive its surroundings. We train the policy
+using ground-truth obstacle heights surrounding the robot in simulation,
+optimizing it based on the Hybrid Internal Model (HIM), and perform inference
+with heights sampled from the constructed elevation map. Unlike previous
+methods that directly encode depth maps or raw point clouds, our approach
+allows the robot to perceive the terrain beneath its feet clearly and is less
+affected by camera movement or noise. Furthermore, since depth map rendering is
+not required in simulation, our method introduces minimal additional
+computational costs and can train the policy in 3 hours on an RTX 4090 GPU. We
+verify the effectiveness of our method across various humanoid robots, various
+indoor and outdoor terrains, stairs, and various sensor configurations. Our
+method can enable a humanoid robot to continuously climb stairs and has the
+potential to serve as a foundational algorithm for the development of future
+humanoid control methods.
+
+[Paper Link](
+https://arxiv.org/abs/2411.14386
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-22_11-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### 23 DoF Grasping Policies from a Raw Point Cloud
+
+- **Authors**: Martin Matak, Karl Van Wyk, Tucker Hermans
+
+#### Abstract
+
+Coordinating the motion of robots with high degrees of freedom (DoF) to grasp
+objects gives rise to many challenges. In this paper, we propose a novel
+imitation learning approach to learn a policy that directly predicts 23 DoF
+grasp trajectories from a partial point cloud provided by a single, fixed
+camera. At the core of the approach is a second-order geometric-based model of
+behavioral dynamics. This Neural Geometric Fabric (NGF) policy predicts
+accelerations directly in joint space. We show that our policy is capable of
+generalizing to novel objects, and combine our policy with a geometric fabric
+motion planner in a loop to generate stable grasping trajectories. We evaluate
+our approach on a set of three different objects, compare different policy
+structures, and run ablation studies to understand the importance of different
+object encodings for policy learning.
+
+[Paper Link](
+https://arxiv.org/abs/2411.14400
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-22_11-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-21
 
 
