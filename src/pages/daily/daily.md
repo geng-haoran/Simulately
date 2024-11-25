@@ -1,3 +1,118 @@
+## 2024-11-25
+
+
+### FastGrasp: Efficient Grasp Synthesis with Diffusion
+
+- **Authors**: Xiaofei Wu, Tao Liu, Caoji Li, Yuexin Ma, Yujiao Shi, Xuming He
+
+#### Abstract
+
+Effectively modeling the interaction between human hands and objects is
+challenging due to the complex physical constraints and the requirement for
+high generation efficiency in applications. Prior approaches often employ
+computationally intensive two-stage approaches, which first generate an
+intermediate representation, such as contact maps, followed by an iterative
+optimization procedure that updates hand meshes to capture the hand-object
+relation. However, due to the high computation complexity during the
+optimization stage, such strategies often suffer from low efficiency in
+inference. To address this limitation, this work introduces a novel
+diffusion-model-based approach that generates the grasping pose in a one-stage
+manner. This allows us to significantly improve generation speed and the
+diversity of generated hand poses. In particular, we develop a Latent Diffusion
+Model with an Adaptation Module for object-conditioned hand pose generation and
+a contact-aware loss to enforce the physical constraints between hands and
+objects. Extensive experiments demonstrate that our method achieves faster
+inference, higher diversity, and superior pose quality than state-of-the-art
+approaches. Code is available at
+\href{https://github.com/wuxiaofei01/FastGrasp}{https://github.com/wuxiaofei01/FastGrasp.}
+
+[Website Link](https://github.com/wuxiaofei01/FastGrasp)
+
+[Paper Link](
+https://arxiv.org/abs/2411.14786
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-25_22-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Enhancing Exploration with Diffusion Policies in Hybrid Off-Policy RL: Application to Non-Prehensile Manipulation
+
+- **Authors**: Huy Le, Miroslav Gabriel, Tai Hoang, Gerhard Neumann, Ngo Anh Vien
+
+#### Abstract
+
+Learning diverse policies for non-prehensile manipulation is essential for
+improving skill transfer and generalization to out-of-distribution scenarios.
+In this work, we enhance exploration through a two-fold approach within a
+hybrid framework that tackles both discrete and continuous action spaces.
+First, we model the continuous motion parameter policy as a diffusion model,
+and second, we incorporate this into a maximum entropy reinforcement learning
+framework that unifies both the discrete and continuous components. The
+discrete action space, such as contact point selection, is optimized through
+Q-value function maximization, while the continuous part is guided by a
+diffusion-based policy. This hybrid approach leads to a principled objective,
+where the maximum entropy term is derived as a lower bound using structured
+variational inference. We propose the Hybrid Diffusion Policy algorithm (HyDo)
+and evaluate its performance on both simulation and zero-shot sim2real tasks.
+Our results show that HyDo encourages more diverse behavior policies, leading
+to significantly improved success rates across tasks - for example, increasing
+from 53% to 72% on a real-world 6D pose alignment task. Project page:
+https://leh2rng.github.io/hydo
+
+[Website Link](https://leh2rng.github.io/hydo)
+
+[Paper Link](
+https://arxiv.org/abs/2411.14913
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-25_22-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### WildLMa: Long Horizon Loco-Manipulation in the Wild
+
+- **Authors**: Ri-Zhao Qiu, Yuchen Song, Xuanbin Peng, Sai Aneesh Suryadevara, Ge Yang, Minghuan Liu, Mazeyu Ji, Chengzhe Jia, Ruihan Yang, Xueyan Zou, Xiaolong Wang
+
+#### Abstract
+
+`In-the-wild' mobile manipulation aims to deploy robots in diverse real-world
+environments, which requires the robot to (1) have skills that generalize
+across object configurations; (2) be capable of long-horizon task execution in
+diverse environments; and (3) perform complex manipulation beyond
+pick-and-place. Quadruped robots with manipulators hold promise for extending
+the workspace and enabling robust locomotion, but existing results do not
+investigate such a capability. This paper proposes WildLMa with three
+components to address these issues: (1) adaptation of learned low-level
+controller for VR-enabled whole-body teleoperation and traversability; (2)
+WildLMa-Skill -- a library of generalizable visuomotor skills acquired via
+imitation learning or heuristics and (3) WildLMa-Planner -- an interface of
+learned skills that allow LLM planners to coordinate skills for long-horizon
+tasks. We demonstrate the importance of high-quality training data by achieving
+higher grasping success rate over existing RL baselines using only tens of
+demonstrations. WildLMa exploits CLIP for language-conditioned imitation
+learning that empirically generalizes to objects unseen in training
+demonstrations. Besides extensive quantitative evaluation, we qualitatively
+demonstrate practical robot applications, such as cleaning up trash in
+university hallways or outdoor terrains, operating articulated objects, and
+rearranging items on a bookshelf.
+
+[Paper Link](
+https://arxiv.org/abs/2411.15131
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-25_22-24.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-22
 
 
