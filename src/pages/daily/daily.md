@@ -1,3 +1,110 @@
+## 2024-11-26
+
+
+### RoboSpatial: Teaching Spatial Understanding to 2D and 3D Vision-Language Models for Robotics
+
+- **Authors**: Chan Hee Song, Valts Blukis, Jonathan Tremblay, Stephen Tyree, Yu Su, Stan Birchfield
+
+#### Abstract
+
+Spatial understanding is a crucial capability for robots to make grounded
+decisions based on their environment. This foundational skill enables robots
+not only to perceive their surroundings but also to reason about and interact
+meaningfully within the world. In modern robotics, these capabilities are taken
+on by visual language models, and they face significant challenges when applied
+to spatial reasoning context due to their training data sources. These sources
+utilize general-purpose image datasets, and they often lack sophisticated
+spatial scene understanding capabilities. For example, the datasets do not
+address reference frame comprehension - spatial relationships require clear
+contextual understanding, whether from an ego-centric, object-centric, or
+world-centric perspective, which allow for effective real-world interaction. To
+address this issue, we introduce RoboSpatial, a large-scale spatial
+understanding dataset consisting of real indoor and tabletop scenes captured as
+3D scans and egocentric images, annotated with rich spatial information
+relevant to robotics. The dataset includes 1M images, 5K 3D scans, and 3M
+annotated spatial relationships, with paired 2D egocentric images and 3D scans
+to make it both 2D and 3D ready. Our experiments show that models trained with
+RoboSpatial outperform baselines on downstream tasks such as spatial affordance
+prediction, spatial relationship prediction, and robotics manipulation.
+
+[Paper Link](
+https://arxiv.org/abs/2411.16537
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-26_22-43.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FoAR: Force-Aware Reactive Policy for Contact-Rich Robotic Manipulation
+
+- **Authors**: Zihao He, Hongjie Fang, Jingjing Chen, Hao-Shu Fang, Cewu Lu
+
+#### Abstract
+
+Contact-rich tasks present significant challenges for robotic manipulation
+policies due to the complex dynamics of contact and the need for precise
+control. Vision-based policies often struggle with the skill required for such
+tasks, as they typically lack critical contact feedback modalities like
+force/torque information. To address this issue, we propose FoAR, a force-aware
+reactive policy that combines high-frequency force/torque sensing with visual
+inputs to enhance the performance in contact-rich manipulation. Built upon the
+RISE policy, FoAR incorporates a multimodal feature fusion mechanism guided by
+a future contact predictor, enabling dynamic adjustment of force/torque data
+usage between non-contact and contact phases. Its reactive control strategy
+also allows FoAR to accomplish contact-rich tasks accurately through simple
+position control. Experimental results demonstrate that FoAR significantly
+outperforms all baselines across various challenging contact-rich tasks while
+maintaining robust performance under unexpected dynamic disturbances. Project
+website: https://tonyfang.net/FoAR/
+
+[Website Link](https://tonyfang.net/FoAR/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.15753
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-26_22-39.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Bimanual Grasp Synthesis for Dexterous Robot Hands
+
+- **Authors**: Yanming Shao, Chenxi Xiao
+
+#### Abstract
+
+Humans naturally perform bimanual skills to handle large and heavy objects.
+To enhance robots' object manipulation capabilities, generating effective
+bimanual grasp poses is essential. Nevertheless, bimanual grasp synthesis for
+dexterous hand manipulators remains underexplored. To bridge this gap, we
+propose the BimanGrasp algorithm for synthesizing bimanual grasps on 3D
+objects. The BimanGrasp algorithm generates grasp poses by optimizing an energy
+function that considers grasp stability and feasibility. Furthermore, the
+synthesized grasps are verified using the Isaac Gym physics simulation engine.
+These verified grasp poses form the BimanGrasp-Dataset, the first large-scale
+synthesized bimanual dexterous hand grasp pose dataset to our knowledge. The
+dataset comprises over 150k verified grasps on 900 objects, facilitating the
+synthesis of bimanual grasps through a data-driven approach. Last, we propose
+BimanGrasp-DDPM, a diffusion model trained on the BimanGrasp-Dataset. This
+model achieved a grasp synthesis success rate of 69.87\% and significant
+acceleration in computational speed compared to BimanGrasp algorithm.
+
+[Paper Link](
+https://arxiv.org/abs/2411.15903
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-11-26_22-34.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-25
 
 
