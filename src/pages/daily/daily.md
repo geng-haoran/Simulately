@@ -1,3 +1,194 @@
+## 2024-11-28
+
+
+### HI-SLAM2: Geometry-Aware Gaussian SLAM for Fast Monocular Scene Reconstruction
+
+- **Authors**: Wei Zhang, Qing Cheng, David Skuddis, Niclas Zeller, Daniel Cremers, Norbert Haala
+
+#### Abstract
+
+We present HI-SLAM2, a geometry-aware Gaussian SLAM system that achieves fast
+and accurate monocular scene reconstruction using only RGB input. Existing
+Neural SLAM or 3DGS-based SLAM methods often trade off between rendering
+quality and geometry accuracy, our research demonstrates that both can be
+achieved simultaneously with RGB input alone. The key idea of our approach is
+to enhance the ability for geometry estimation by combining easy-to-obtain
+monocular priors with learning-based dense SLAM, and then using 3D Gaussian
+splatting as our core map representation to efficiently model the scene. Upon
+loop closure, our method ensures on-the-fly global consistency through
+efficient pose graph bundle adjustment and instant map updates by explicitly
+deforming the 3D Gaussian units based on anchored keyframe updates.
+Furthermore, we introduce a grid-based scale alignment strategy to maintain
+improved scale consistency in prior depths for finer depth details. Through
+extensive experiments on Replica, ScanNet, and ScanNet++, we demonstrate
+significant improvements over existing Neural SLAM methods and even surpass
+RGB-D-based methods in both reconstruction and rendering quality. The project
+page and source code will be made available at https://hi-slam2.github.io/.
+
+[Website Link](https://hi-slam2.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.17982
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-01_00-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Prediction with Action: Visual Policy Learning via Joint Denoising Process
+
+- **Authors**: Yanjiang Guo, Yucheng Hu, Jianke Zhang, Yen-Jen Wang, Xiaoyu Chen, Chaochao Lu, Jianyu Chen
+
+#### Abstract
+
+Diffusion models have demonstrated remarkable capabilities in image
+generation tasks, including image editing and video creation, representing a
+good understanding of the physical world. On the other line, diffusion models
+have also shown promise in robotic control tasks by denoising actions, known as
+diffusion policy. Although the diffusion generative model and diffusion policy
+exhibit distinct capabilities--image prediction and robotic action,
+respectively--they technically follow a similar denoising process. In robotic
+tasks, the ability to predict future images and generate actions is highly
+correlated since they share the same underlying dynamics of the physical world.
+Building on this insight, we introduce PAD, a novel visual policy learning
+framework that unifies image Prediction and robot Action within a joint
+Denoising process. Specifically, PAD utilizes Diffusion Transformers (DiT) to
+seamlessly integrate images and robot states, enabling the simultaneous
+prediction of future images and robot actions. Additionally, PAD supports
+co-training on both robotic demonstrations and large-scale video datasets and
+can be easily extended to other robotic modalities, such as depth images. PAD
+outperforms previous methods, achieving a significant 26.3% relative
+improvement on the full Metaworld benchmark, by utilizing a single
+text-conditioned visual policy within a data-efficient imitation learning
+setting. Furthermore, PAD demonstrates superior generalization to unseen tasks
+in real-world robot manipulation settings with 28.0% success rate increase
+compared to the strongest baseline. Project page at
+https://sites.google.com/view/pad-paper
+
+[Website Link](https://sites.google.com/view/pad-paper)
+
+[Paper Link](
+https://arxiv.org/abs/2411.18179
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-01_00-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GAPartManip: A Large-scale Part-centric Dataset for Material-Agnostic Articulated Object Manipulation
+
+- **Authors**: Wenbo Cui, Chengyang Zhao, Songlin Wei, Jiazhao Zhang, Haoran Geng, Yaran Chen, He Wang
+
+#### Abstract
+
+Effectively manipulating articulated objects in household scenarios is a
+crucial step toward achieving general embodied artificial intelligence.
+Mainstream research in 3D vision has primarily focused on manipulation through
+depth perception and pose detection. However, in real-world environments, these
+methods often face challenges due to imperfect depth perception, such as with
+transparent lids and reflective handles. Moreover, they generally lack the
+diversity in part-based interactions required for flexible and adaptable
+manipulation. To address these challenges, we introduced a large-scale
+part-centric dataset for articulated object manipulation that features both
+photo-realistic material randomizations and detailed annotations of
+part-oriented, scene-level actionable interaction poses. We evaluated the
+effectiveness of our dataset by integrating it with several state-of-the-art
+methods for depth estimation and interaction pose prediction. Additionally, we
+proposed a novel modular framework that delivers superior and robust
+performance for generalizable articulated object manipulation. Our extensive
+experiments demonstrate that our dataset significantly improves the performance
+of depth perception and actionable interaction pose prediction in both
+simulation and real-world scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2411.18276
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-01_00-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### G3Flow: Generative 3D Semantic Flow for Pose-aware and Generalizable Object Manipulation
+
+- **Authors**: Tianxing Chen, Yao Mu, Zhixuan Liang, Zanxin Chen, Shijia Peng, Qiangyu Chen, Mingkun Xu, Ruizhen Hu, Hongyuan Zhang, Xuelong Li, Ping Luo
+
+#### Abstract
+
+Recent advances in imitation learning for 3D robotic manipulation have shown
+promising results with diffusion-based policies. However, achieving human-level
+dexterity requires seamless integration of geometric precision and semantic
+understanding. We present G3Flow, a novel framework that constructs real-time
+semantic flow, a dynamic, object-centric 3D semantic representation by
+leveraging foundation models. Our approach uniquely combines 3D generative
+models for digital twin creation, vision foundation models for semantic feature
+extraction, and robust pose tracking for continuous semantic flow updates. This
+integration enables complete semantic understanding even under occlusions while
+eliminating manual annotation requirements. By incorporating semantic flow into
+diffusion policies, we demonstrate significant improvements in both
+terminal-constrained manipulation and cross-object generalization. Extensive
+experiments across five simulation tasks show that G3Flow consistently
+outperforms existing approaches, achieving up to 68.3% and 50.1% average
+success rates on terminal-constrained manipulation and cross-object
+generalization tasks respectively. Our results demonstrate the effectiveness of
+G3Flow in enhancing real-time dynamic semantic feature understanding for
+robotic manipulation policies.
+
+[Paper Link](
+https://arxiv.org/abs/2411.18369
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-01_00-25.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2024-11-27
+
+
+### g3D-LF: Generalizable 3D-Language Feature Fields for Embodied Tasks
+
+- **Authors**: Zihan Wang, Gim Hee Lee
+
+#### Abstract
+
+We introduce Generalizable 3D-Language Feature Fields (g3D-LF), a 3D
+representation model pre-trained on large-scale 3D-language dataset for
+embodied tasks. Our g3D-LF processes posed RGB-D images from agents to encode
+feature fields for: 1) Novel view representation predictions from any position
+in the 3D scene; 2) Generations of BEV maps centered on the agent; 3) Querying
+targets using multi-granularity language within the above-mentioned
+representations. Our representation can be generalized to unseen environments,
+enabling real-time construction and dynamic updates. By volume rendering latent
+features along sampled rays and integrating semantic and spatial relationships
+through multiscale encoders, our g3D-LF produces representations at different
+scales and perspectives, aligned with multi-granularity language, via
+multi-level contrastive learning. Furthermore, we prepare a large-scale
+3D-language dataset to align the representations of the feature fields with
+language. Extensive experiments on Vision-and-Language Navigation under both
+Panorama and Monocular settings, Zero-shot Object Navigation, and Situated
+Question Answering tasks highlight the significant advantages and effectiveness
+of our g3D-LF for embodied tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2411.17030
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-01_00-17.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-26
 
 
