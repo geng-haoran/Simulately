@@ -1,3 +1,283 @@
+## 2024-12-02
+
+
+### HOT3D: Hand and Object Tracking in 3D from Egocentric Multi-View Videos
+
+- **Authors**: Prithviraj Banerjee, Sindi Shkodrani, Pierre Moulon, Shreyas Hampali, Shangchen Han, Fan Zhang, Linguang Zhang, Jade Fountain, Edward Miller, Selen Basol, Richard Newcombe, Robert Wang, Jakob Julian Engel, Tomas Hodan
+
+#### Abstract
+
+We introduce HOT3D, a publicly available dataset for egocentric hand and
+object tracking in 3D. The dataset offers over 833 minutes (more than 3.7M
+images) of multi-view RGB/monochrome image streams showing 19 subjects
+interacting with 33 diverse rigid objects, multi-modal signals such as eye gaze
+or scene point clouds, as well as comprehensive ground-truth annotations
+including 3D poses of objects, hands, and cameras, and 3D models of hands and
+objects. In addition to simple pick-up/observe/put-down actions, HOT3D contains
+scenarios resembling typical actions in a kitchen, office, and living room
+environment. The dataset is recorded by two head-mounted devices from Meta:
+Project Aria, a research prototype of light-weight AR/AI glasses, and Quest 3,
+a production VR headset sold in millions of units. Ground-truth poses were
+obtained by a professional motion-capture system using small optical markers
+attached to hands and objects. Hand annotations are provided in the UmeTrack
+and MANO formats and objects are represented by 3D meshes with PBR materials
+obtained by an in-house scanner. In our experiments, we demonstrate the
+effectiveness of multi-view egocentric data for three popular tasks: 3D hand
+tracking, 6DoF object pose estimation, and 3D lifting of unknown in-hand
+objects. The evaluated multi-view methods, whose benchmarking is uniquely
+enabled by HOT3D, significantly outperform their single-view counterparts.
+
+[Paper Link](
+https://arxiv.org/abs/2411.19167
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-02_15-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robust Bayesian Scene Reconstruction by Leveraging Retrieval-Augmented Priors
+
+- **Authors**: Herbert Wright, Weiming Zhi, Matthew Johnson-Roberson, Tucker Hermans
+
+#### Abstract
+
+Constructing 3D representations of object geometry is critical for many
+downstream manipulation tasks. These representations must be built from
+potentially noisy partial observations. In this work we focus on the problem of
+reconstructing a multi-object scene from a single RGBD image. Current deep
+learning approaches to this problem can be brittle to noisy real world
+observations and out-of-distribution objects. Other approaches that do not rely
+on training data cannot accurately infer the backside of objects. We propose
+BRRP, a reconstruction method that can leverage preexisting mesh datasets to
+build an informative prior during robust probabilistic reconstruction. In order
+to make our method more efficient, we introduce the concept of
+retrieval-augmented prior, where we retrieve relevant components of our prior
+distribution during inference. Our method produces a distribution over object
+shape that can be used for reconstruction or measuring uncertainty. We evaluate
+our method in both procedurally generated scenes and in real world scenes. We
+show our method is more robust than a deep learning approach while being more
+accurate than a method with an uninformative prior.
+
+[Paper Link](
+https://arxiv.org/abs/2411.19461
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-02_15-07.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ELEMENTAL: Interactive Learning from Demonstrations and Vision-Language Models for Reward Design in Robotics
+
+- **Authors**: Letian Chen, Matthew Gombolay
+
+#### Abstract
+
+Reinforcement learning (RL) has demonstrated compelling performance in
+robotic tasks, but its success often hinges on the design of complex, ad hoc
+reward functions. Researchers have explored how Large Language Models (LLMs)
+could enable non-expert users to specify reward functions more easily. However,
+LLMs struggle to balance the importance of different features, generalize
+poorly to out-of-distribution robotic tasks, and cannot represent the problem
+properly with only text-based descriptions. To address these challenges, we
+propose ELEMENTAL (intEractive LEarning froM dEmoNstraTion And Language), a
+novel framework that combines natural language guidance with visual user
+demonstrations to align robot behavior with user intentions better. By
+incorporating visual inputs, ELEMENTAL overcomes the limitations of text-only
+task specifications, while leveraging inverse reinforcement learning (IRL) to
+balance feature weights and match the demonstrated behaviors optimally.
+ELEMENTAL also introduces an iterative feedback-loop through self-reflection to
+improve feature, reward, and policy learning. Our experiment results
+demonstrate that ELEMENTAL outperforms prior work by 42.3% on task success, and
+achieves 41.3% better generalization in out-of-distribution tasks, highlighting
+its robustness in LfD.
+
+[Paper Link](
+https://arxiv.org/abs/2411.18825
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-02_14-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GelSight FlexiRay: Breaking Planar Limits by Harnessing Large Deformations for Flexible,Full-Coverage Multimodal Sensing
+
+- **Authors**: Yanzhe Wang, Hao Wu, Haotian Guo, Huixu Dong
+
+#### Abstract
+
+The integration of tactile sensing into compliant soft robotic grippers
+offers a compelling pathway toward advanced robotic grasping and safer
+human-robot interactions. Visual-tactile sensors realize high-resolution,
+large-area tactile perception with affordable cameras. However, conventional
+visual-tactile sensors rely heavily on rigid forms, sacrificing finger
+compliance and sensing regions to achieve localized tactile feedback. Enabling
+seamless, large-area tactile sensing in soft grippers remains challenging, as
+deformations inherent to soft structures can obstruct the optical path and
+restrict the camera's field of view. To address these, we present Gelsight
+FlexiRay, a multimodal visual-tactile sensor designed for safe and compliant
+interactions with substantial structural deformation through integration with
+Finray Effect grippers. First, we adopt a multi-mirror configuration, which is
+systematically modeled and optimized based on the physical force-deformation
+characteristics of FRE grippers. Second, we enhanced Gelsight FlexiRay with
+human-like multimodal perception, including contact force and location,
+proprioception, temperature, texture, and slippage. Experiments demonstrate
+Gelsight FlexiRay's robust tactile performance across diverse deformation
+states, achieving a force measurement accuracy of 0.14 N and proprioceptive
+positioning accuracy of 0.19 mm. Compared with state of art compliant VTS, the
+FlexiRay demonstrates 5 times larger structural deformation under the same
+loads. Its expanded sensing area and ability to distinguish contact information
+and execute grasping and classification tasks highlights its potential for
+versatile, large-area multimodal tactile sensing integration within soft
+robotic systems. This work establishes a foundation for flexible,
+high-resolution tactile sensing in compliant robotic applications.
+
+[Paper Link](
+https://arxiv.org/abs/2411.18979
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-02_14-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Lost & Found: Updating Dynamic 3D Scene Graphs from Egocentric Observations
+
+- **Authors**: Tjark Behrens, René Zurbrügg, Marc Pollefeys, Zuria Bauer, Hermann Blum
+
+#### Abstract
+
+Recent approaches have successfully focused on the segmentation of static
+reconstructions, thereby equipping downstream applications with semantic 3D
+understanding. However, the world in which we live is dynamic, characterized by
+numerous interactions between the environment and humans or robotic agents.
+Static semantic maps are unable to capture this information, and the naive
+solution of rescanning the environment after every change is both costly and
+ineffective in tracking e.g. objects being stored away in drawers. With Lost &
+Found we present an approach that addresses this limitation. Based solely on
+egocentric recordings with corresponding hand position and camera pose
+estimates, we are able to track the 6DoF poses of the moving object within the
+detected interaction interval. These changes are applied online to a
+transformable scene graph that captures object-level relations. Compared to
+state-of-the-art object pose trackers, our approach is more reliable in
+handling the challenging egocentric viewpoint and the lack of depth
+information. It outperforms the second-best approach by 34% and 56% for
+translational and orientational error, respectively, and produces visibly
+smoother 6DoF object trajectories. In addition, we illustrate how the acquired
+interaction information in the dynamic scene graph can be employed in the
+context of robotic applications that would otherwise be unfeasible: We show how
+our method allows to command a mobile manipulator through teach & repeat, and
+how information about prior interaction allows a mobile manipulator to retrieve
+an object hidden in a drawer. Code, videos and corresponding data are
+accessible at https://behretj.github.io/LostAndFound.
+
+[Website Link](https://behretj.github.io/LostAndFound.)
+
+[Paper Link](
+https://arxiv.org/abs/2411.19162
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-02_14-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GRAPE: Generalizing Robot Policy via Preference Alignment
+
+- **Authors**: Zijian Zhang, Kaiyuan Zheng, Zhaorun Chen, Joel Jang, Yi Li, Chaoqi Wang, Mingyu Ding, Dieter Fox, Huaxiu Yao
+
+#### Abstract
+
+Despite the recent advancements of vision-language-action (VLA) models on a
+variety of robotics tasks, they suffer from critical issues such as poor
+generalizability to unseen tasks, due to their reliance on behavior cloning
+exclusively from successful rollouts. Furthermore, they are typically
+fine-tuned to replicate demonstrations collected by experts under different
+settings, thus introducing distribution bias and limiting their adaptability to
+diverse manipulation objectives, such as efficiency, safety, and task
+completion. To bridge this gap, we introduce GRAPE: Generalizing Robot Policy
+via Preference Alignment. Specifically, GRAPE aligns VLAs on a trajectory level
+and implicitly models reward from both successful and failure trials to boost
+generalizability to diverse tasks. Moreover, GRAPE breaks down complex
+manipulation tasks to independent stages and automatically guides preference
+modeling through customized spatiotemporal constraints with keypoints proposed
+by a large vision-language model. Notably, these constraints are flexible and
+can be customized to align the model with varying objectives, such as safety,
+efficiency, or task success. We evaluate GRAPE across a diverse array of tasks
+in both real-world and simulated environments. Experimental results demonstrate
+that GRAPE enhances the performance of state-of-the-art VLA models, increasing
+success rates on in-domain and unseen manipulation tasks by 51.79% and 60.36%,
+respectively. Additionally, GRAPE can be aligned with various objectives, such
+as safety and efficiency, reducing collision rates by 44.31% and rollout
+step-length by 11.15%, respectively. All code, models, and data are available
+at https://grape-vla.github.io/
+
+[Website Link](https://grape-vla.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2411.19309
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-02_14-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### CogACT: A Foundational Vision-Language-Action Model for Synergizing Cognition and Action in Robotic Manipulation
+
+- **Authors**: Qixiu Li, Yaobo Liang, Zeyu Wang, Lin Luo, Xi Chen, Mozheng Liao, Fangyun Wei, Yu Deng, Sicheng Xu, Yizhong Zhang, Xiaofan Wang, Bei Liu, Jianlong Fu, Jianmin Bao, Dong Chen, Yuanchun Shi, Jiaolong Yang, Baining Guo
+
+#### Abstract
+
+The advancement of large Vision-Language-Action (VLA) models has
+significantly improved robotic manipulation in terms of language-guided task
+execution and generalization to unseen scenarios. While existing VLAs adapted
+from pretrained large Vision-Language-Models (VLM) have demonstrated promising
+generalizability, their task performance is still unsatisfactory as indicated
+by the low tasks success rates in different environments. In this paper, we
+present a new advanced VLA architecture derived from VLM. Unlike previous works
+that directly repurpose VLM for action prediction by simple action
+quantization, we propose a omponentized VLA architecture that has a specialized
+action module conditioned on VLM output. We systematically study the design of
+the action module and demonstrates the strong performance enhancement with
+diffusion action transformers for action sequence modeling, as well as their
+favorable scaling behaviors. We also conduct comprehensive experiments and
+ablation studies to evaluate the efficacy of our models with varied designs.
+The evaluation on 5 robot embodiments in simulation and real work shows that
+our model not only significantly surpasses existing VLAs in task performance
+and but also exhibits remarkable adaptation to new robots and generalization to
+unseen objects and backgrounds. It exceeds the average success rates of OpenVLA
+which has similar model size (7B) with ours by over 35% in simulated evaluation
+and 55% in real robot experiments. It also outperforms the large RT-2-X model
+(55B) by 18% absolute success rates in simulation. Code and models can be found
+on our project page (https://cogact.github.io/).
+
+[Website Link](https://cogact.github.io/).)
+
+[Paper Link](
+https://arxiv.org/abs/2411.19650
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-02_14-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-11-28
 
 
