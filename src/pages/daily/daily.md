@@ -1,3 +1,266 @@
+## 2024-12-03
+
+
+### Holistic Understanding of 3D Scenes as Universal Scene Description
+
+- **Authors**: Anna-Maria Halacheva, Yang Miao, Jan-Nico Zaech, Xi Wang, Luc Van Gool, Danda Pani Paudel
+
+#### Abstract
+
+3D scene understanding is a long-standing challenge in computer vision and a
+key component in enabling mixed reality, wearable computing, and embodied AI.
+Providing a solution to these applications requires a multifaceted approach
+that covers scene-centric, object-centric, as well as interaction-centric
+capabilities. While there exist numerous datasets approaching the former two
+problems, the task of understanding interactable and articulated objects is
+underrepresented and only partly covered by current works. In this work, we
+address this shortcoming and introduce (1) an expertly curated dataset in the
+Universal Scene Description (USD) format, featuring high-quality manual
+annotations, for instance, segmentation and articulation on 280 indoor scenes;
+(2) a learning-based model together with a novel baseline capable of predicting
+part segmentation along with a full specification of motion attributes,
+including motion type, articulated and interactable parts, and motion
+parameters; (3) a benchmark serving to compare upcoming methods for the task at
+hand. Overall, our dataset provides 8 types of annotations - object and part
+segmentations, motion types, movable and interactable parts, motion parameters,
+connectivity, and object mass annotations. With its broad and high-quality
+annotations, the data provides the basis for holistic 3D scene understanding
+models. All data is provided in the USD format, allowing interoperability and
+easy integration with downstream tasks. We provide open access to our dataset,
+benchmark, and method's source code.
+
+[Paper Link](
+https://arxiv.org/abs/2412.01398
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-03_14-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Unleashing the Power of Data Synthesis in Visual Localization
+
+- **Authors**: Sihang Li, Siqi Tan, Bowen Chang, Jing Zhang, Chen Feng, Yiming Li
+
+#### Abstract
+
+Visual localization, which estimates a camera's pose within a known scene, is
+a long-standing challenge in vision and robotics. Recent end-to-end methods
+that directly regress camera poses from query images have gained attention for
+fast inference. However, existing methods often struggle to generalize to
+unseen views. In this work, we aim to unleash the power of data synthesis to
+promote the generalizability of pose regression. Specifically, we lift real 2D
+images into 3D Gaussian Splats with varying appearance and deblurring
+abilities, which are then used as a data engine to synthesize more posed
+images. To fully leverage the synthetic data, we build a two-branch joint
+training pipeline, with an adversarial discriminator to bridge the syn-to-real
+gap. Experiments on established benchmarks show that our method outperforms
+state-of-the-art end-to-end approaches, reducing translation and rotation
+errors by 50% and 21.6% on indoor datasets, and 35.56% and 38.7% on outdoor
+datasets. We also validate the effectiveness of our method in dynamic driving
+scenarios under varying weather conditions. Notably, as data synthesis scales
+up, our method exhibits a growing ability to interpolate and extrapolate
+training data for localizing unseen views. Project Page:
+https://ai4ce.github.io/RAP/
+
+[Website Link](https://ai4ce.github.io/RAP/)
+
+[Paper Link](
+https://arxiv.org/abs/2412.00138
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-03_14-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Event-based Tracking of Any Point with Motion-Robust Correlation Features
+
+- **Authors**: Friedhelm Hamann, Daniel Gehrig, Filbert Febryanto, Kostas Daniilidis, Guillermo Gallego
+
+#### Abstract
+
+Tracking any point (TAP) recently shifted the motion estimation paradigm from
+focusing on individual salient points with local templates to tracking
+arbitrary points with global image contexts. However, while research has mostly
+focused on driving the accuracy of models in nominal settings, addressing
+scenarios with difficult lighting conditions and high-speed motions remains out
+of reach due to the limitations of the sensor. This work addresses this
+challenge with the first event camera-based TAP method. It leverages the high
+temporal resolution and high dynamic range of event cameras for robust
+high-speed tracking, and the global contexts in TAP methods to handle
+asynchronous and sparse event measurements. We further extend the TAP framework
+to handle event feature variations induced by motion - thereby addressing an
+open challenge in purely event-based tracking - with a novel feature alignment
+loss which ensures the learning of motion-robust features. Our method is
+trained with data from a new data generation pipeline and systematically
+ablated across all design decisions. Our method shows strong cross-dataset
+generalization and performs 135% better on the average Jaccard metric than the
+baselines. Moreover, on an established feature tracking benchmark, it achieves
+a 19% improvement over the previous best event-only method and even surpasses
+the previous best events-and-frames method by 3.7%.
+
+[Paper Link](
+https://arxiv.org/abs/2412.00133
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-03_14-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ARMOR: Egocentric Perception for Humanoid Robot Collision Avoidance and Motion Planning
+
+- **Authors**: Daehwa Kim, Mario Srouji, Chen Chen, Jian Zhang
+
+#### Abstract
+
+Humanoid robots have significant gaps in their sensing and perception, making
+it hard to perform motion planning in dense environments. To address this, we
+introduce ARMOR, a novel egocentric perception system that integrates both
+hardware and software, specifically incorporating wearable-like depth sensors
+for humanoid robots. Our distributed perception approach enhances the robot's
+spatial awareness, and facilitates more agile motion planning. We also train a
+transformer-based imitation learning (IL) policy in simulation to perform
+dynamic collision avoidance, by leveraging around 86 hours worth of human
+realistic motions from the AMASS dataset. We show that our ARMOR perception is
+superior against a setup with multiple dense head-mounted, and externally
+mounted depth cameras, with a 63.7% reduction in collisions, and 78.7%
+improvement on success rate. We also compare our IL policy against a
+sampling-based motion planning expert cuRobo, showing 31.6% less collisions,
+16.9% higher success rate, and 26x reduction in computational latency. Lastly,
+we deploy our ARMOR perception on our real-world GR1 humanoid from Fourier
+Intelligence. We are going to update the link to the source code, HW
+description, and 3D CAD files in the arXiv version of this text.
+
+[Paper Link](
+https://arxiv.org/abs/2412.00396
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-03_14-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### A Cross-Scene Benchmark for Open-World Drone Active Tracking
+
+- **Authors**: Haowei Sun, Jinwu Hu, Zhirui Zhang, Haoyuan Tian, Xinze Xie, Yufeng Wang, Zhuliang Yu, Xiaohua Xie, Mingkui Tan
+
+#### Abstract
+
+Drone Visual Active Tracking aims to autonomously follow a target object by
+controlling the motion system based on visual observations, providing a more
+practical solution for effective tracking in dynamic environments. However,
+accurate Drone Visual Active Tracking using reinforcement learning remains
+challenging due to the absence of a unified benchmark, the complexity of
+open-world environments with frequent interference, and the diverse motion
+behavior of dynamic targets. To address these issues, we propose a unified
+cross-scene cross-domain benchmark for open-world drone active tracking called
+DAT. The DAT benchmark provides 24 visually complex environments to assess the
+algorithms' cross-scene and cross-domain generalization abilities, and
+high-fidelity modeling of realistic robot dynamics. Additionally, we propose a
+reinforcement learning-based drone tracking method called R-VAT, which aims to
+improve the performance of drone tracking targets in complex scenarios.
+Specifically, inspired by curriculum learning, we introduce a Curriculum-Based
+Training strategy that progressively enhances the agent tracking performance in
+vast environments with complex interference. We design a goal-centered reward
+function to provide precise feedback to the drone agent, preventing targets
+farther from the center of view from receiving higher rewards than closer ones.
+This allows the drone to adapt to the diverse motion behavior of open-world
+targets. Experiments demonstrate that the R-VAT has about 400% improvement over
+the SOTA method in terms of the cumulative reward metric.
+
+[Paper Link](
+https://arxiv.org/abs/2412.00744
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-03_14-23.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DaDu-E: Rethinking the Role of Large Language Model in Robotic Computing Pipeline
+
+- **Authors**: Wenhao Sun, Sai Hou, Zixuan Wang, Bo Yu, Shaoshan Liu, Xu Yang, Shuai Liang, Yiming Gan, Yinhe Han
+
+#### Abstract
+
+Performing complex tasks in open environments remains challenging for robots,
+even when using large language models (LLMs) as the core planner. Many
+LLM-based planners are inefficient due to their large number of parameters and
+prone to inaccuracies because they operate in open-loop systems. We think the
+reason is that only applying LLMs as planners is insufficient. In this work, we
+propose DaDu-E, a robust closed-loop planning framework for embodied AI robots.
+Specifically, DaDu-E is equipped with a relatively lightweight LLM, a set of
+encapsulated robot skill instructions, a robust feedback system, and memory
+augmentation. Together, these components enable DaDu-E to (i) actively perceive
+and adapt to dynamic environments, (ii) optimize computational costs while
+maintaining high performance, and (iii) recover from execution failures using
+its memory and feedback mechanisms. Extensive experiments on real-world and
+simulated tasks show that DaDu-E achieves task success rates comparable to
+embodied AI robots with larger models as planners like COME-Robot, while
+reducing computational requirements by $6.6 \times$. Users are encouraged to
+explore our system at: \url{https://rlc-lab.github.io/dadu-e/}.
+
+[Website Link](https://rlc-lab.github.io/dadu-e/)
+
+[Paper Link](
+https://arxiv.org/abs/2412.01663
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-03_14-12.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robot Learning with Super-Linear Scaling
+
+- **Authors**: Marcel Torne, Arhan Jain, Jiayi Yuan, Vidaaranya Macha, Lars Ankile, Anthony Simeonov, Pulkit Agrawal, Abhishek Gupta
+
+#### Abstract
+
+Scaling robot learning requires data collection pipelines that scale
+favorably with human effort. In this work, we propose Crowdsourcing and
+Amortizing Human Effort for Real-to-Sim-to-Real(CASHER), a pipeline for scaling
+up data collection and learning in simulation where the performance scales
+superlinearly with human effort. The key idea is to crowdsource digital twins
+of real-world scenes using 3D reconstruction and collect large-scale data in
+simulation, rather than the real-world. Data collection in simulation is
+initially driven by RL, bootstrapped with human demonstrations. As the training
+of a generalist policy progresses across environments, its generalization
+capabilities can be used to replace human effort with model generated
+demonstrations. This results in a pipeline where behavioral data is collected
+in simulation with continually reducing human effort. We show that CASHER
+demonstrates zero-shot and few-shot scaling laws on three real-world tasks
+across diverse scenarios. We show that CASHER enables fine-tuning of
+pre-trained policies to a target scenario using a video scan without any
+additional human effort. See our project website:
+https://casher-robot-learning.github.io/CASHER/
+
+[Website Link](https://casher-robot-learning.github.io/CASHER/)
+
+[Paper Link](
+https://arxiv.org/abs/2412.01770
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-03_14-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-02
 
 
