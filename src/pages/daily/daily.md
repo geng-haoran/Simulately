@@ -1,3 +1,188 @@
+## 2024-12-04
+
+
+### SparseGrasp: Robotic Grasping via 3D Semantic Gaussian Splatting from Sparse Multi-View RGB Images
+
+- **Authors**: Junqiu Yu, Xinlin Ren, Yongchong Gu, Haitao Lin, Tianyu Wang, Yi Zhu, Hang Xu, Yu-Gang Jiang, Xiangyang Xue, Yanwei Fu
+
+#### Abstract
+
+Language-guided robotic grasping is a rapidly advancing field where robots
+are instructed using human language to grasp specific objects. However,
+existing methods often depend on dense camera views and struggle to quickly
+update scenes, limiting their effectiveness in changeable environments.
+  In contrast, we propose SparseGrasp, a novel open-vocabulary robotic grasping
+system that operates efficiently with sparse-view RGB images and handles scene
+updates fastly. Our system builds upon and significantly enhances existing
+computer vision modules in robotic learning. Specifically, SparseGrasp utilizes
+DUSt3R to generate a dense point cloud as the initialization for 3D Gaussian
+Splatting (3DGS), maintaining high fidelity even under sparse supervision.
+Importantly, SparseGrasp incorporates semantic awareness from recent vision
+foundation models. To further improve processing efficiency, we repurpose
+Principal Component Analysis (PCA) to compress features from 2D models.
+Additionally, we introduce a novel render-and-compare strategy that ensures
+rapid scene updates, enabling multi-turn grasping in changeable environments.
+  Experimental results show that SparseGrasp significantly outperforms
+state-of-the-art methods in terms of both speed and adaptability, providing a
+robust solution for multi-turn grasping in changeable environment.
+
+[Paper Link](
+https://arxiv.org/abs/2412.02140
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-04_12-34_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GSGTrack: Gaussian Splatting-Guided Object Pose Tracking from RGB Videos
+
+- **Authors**: Zhiyuan Chen, Fan Lu, Guo Yu, Bin Li, Sanqing Qu, Yuan Huang, Changhong Fu, Guang Chen
+
+#### Abstract
+
+Tracking the 6DoF pose of unknown objects in monocular RGB video sequences is
+crucial for robotic manipulation. However, existing approaches typically rely
+on accurate depth information, which is non-trivial to obtain in real-world
+scenarios. Although depth estimation algorithms can be employed, geometric
+inaccuracy can lead to failures in RGBD-based pose tracking methods. To address
+this challenge, we introduce GSGTrack, a novel RGB-based pose tracking
+framework that jointly optimizes geometry and pose. Specifically, we adopt 3D
+Gaussian Splatting to create an optimizable 3D representation, which is learned
+simultaneously with a graph-based geometry optimization to capture the object's
+appearance features and refine its geometry. However, the joint optimization
+process is susceptible to perturbations from noisy pose and geometry data.
+Thus, we propose an object silhouette loss to address the issue of pixel-wise
+loss being overly sensitive to pose noise during tracking. To mitigate the
+geometric ambiguities caused by inaccurate depth information, we propose a
+geometry-consistent image pair selection strategy, which filters out
+low-confidence pairs and ensures robust geometric optimization. Extensive
+experiments on the OnePose and HO3D datasets demonstrate the effectiveness of
+GSGTrack in both 6DoF pose tracking and object reconstruction.
+
+[Paper Link](
+https://arxiv.org/abs/2412.02267
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-04_12-34.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Gaussian Object Carver: Object-Compositional Gaussian Splatting with surfaces completion
+
+- **Authors**: Liu Liu, Xinjie Wang, Jiaxiong Qiu, Tianwei Lin, Xiaolin Zhou, Zhizhong Su
+
+#### Abstract
+
+3D scene reconstruction is a foundational problem in computer vision. Despite
+recent advancements in Neural Implicit Representations (NIR), existing methods
+often lack editability and compositional flexibility, limiting their use in
+scenarios requiring high interactivity and object-level manipulation. In this
+paper, we introduce the Gaussian Object Carver (GOC), a novel, efficient, and
+scalable framework for object-compositional 3D scene reconstruction. GOC
+leverages 3D Gaussian Splatting (GS), enriched with monocular geometry priors
+and multi-view geometry regularization, to achieve high-quality and flexible
+reconstruction. Furthermore, we propose a zero-shot Object Surface Completion
+(OSC) model, which uses 3D priors from 3d object data to reconstruct unobserved
+surfaces, ensuring object completeness even in occluded areas. Experimental
+results demonstrate that GOC improves reconstruction efficiency and geometric
+fidelity. It holds promise for advancing the practical application of digital
+twins in embodied AI, AR/VR, and interactive simulation environments.
+
+[Paper Link](
+https://arxiv.org/abs/2412.02075
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-04_12-32.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Planning-Guided Diffusion Policy Learning for Generalizable Contact-Rich Bimanual Manipulation
+
+- **Authors**: Xuanlin Li, Tong Zhao, Xinghao Zhu, Jiuguang Wang, Tao Pang, Kuan Fang
+
+#### Abstract
+
+Contact-rich bimanual manipulation involves precise coordination of two arms
+to change object states through strategically selected contacts and motions.
+Due to the inherent complexity of these tasks, acquiring sufficient
+demonstration data and training policies that generalize to unseen scenarios
+remain a largely unresolved challenge. Building on recent advances in planning
+through contacts, we introduce Generalizable Planning-Guided Diffusion Policy
+Learning (GLIDE), an approach that effectively learns to solve contact-rich
+bimanual manipulation tasks by leveraging model-based motion planners to
+generate demonstration data in high-fidelity physics simulation. Through
+efficient planning in randomized environments, our approach generates
+large-scale and high-quality synthetic motion trajectories for tasks involving
+diverse objects and transformations. We then train a task-conditioned diffusion
+policy via behavior cloning using these demonstrations. To tackle the
+sim-to-real gap, we propose a set of essential design options in feature
+extraction, task representation, action prediction, and data augmentation that
+enable learning robust prediction of smooth action sequences and generalization
+to unseen scenarios. Through experiments in both simulation and the real world,
+we demonstrate that our approach can enable a bimanual robotic system to
+effectively manipulate objects of diverse geometries, dimensions, and physical
+properties. Website: https://glide-manip.github.io/
+
+[Website Link](https://glide-manip.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2412.02676
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-04_12-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### UniGraspTransformer: Simplified Policy Distillation for Scalable Dexterous Robotic Grasping
+
+- **Authors**: Wenbo Wang, Fangyun Wei, Lei Zhou, Xi Chen, Lin Luo, Xiaohan Yi, Yizhong Zhang, Yaobo Liang, Chang Xu, Yan Lu, Jiaolong Yang, Baining Guo
+
+#### Abstract
+
+We introduce UniGraspTransformer, a universal Transformer-based network for
+dexterous robotic grasping that simplifies training while enhancing scalability
+and performance. Unlike prior methods such as UniDexGrasp++, which require
+complex, multi-step training pipelines, UniGraspTransformer follows a
+streamlined process: first, dedicated policy networks are trained for
+individual objects using reinforcement learning to generate successful grasp
+trajectories; then, these trajectories are distilled into a single, universal
+network. Our approach enables UniGraspTransformer to scale effectively,
+incorporating up to 12 self-attention blocks for handling thousands of objects
+with diverse poses. Additionally, it generalizes well to both idealized and
+real-world inputs, evaluated in state-based and vision-based settings. Notably,
+UniGraspTransformer generates a broader range of grasping poses for objects in
+various shapes and orientations, resulting in more diverse grasp strategies.
+Experimental results demonstrate significant improvements over
+state-of-the-art, UniDexGrasp++, across various object categories, achieving
+success rate gains of 3.5%, 7.7%, and 10.1% on seen objects, unseen objects
+within seen categories, and completely unseen objects, respectively, in the
+vision-based setting. Project page:
+https://dexhand.github.io/UniGraspTransformer.
+
+[Website Link](https://dexhand.github.io/UniGraspTransformer.)
+
+[Paper Link](
+https://arxiv.org/abs/2412.02699
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-04_12-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-03
 
 
