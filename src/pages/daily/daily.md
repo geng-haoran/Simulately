@@ -1,3 +1,155 @@
+## 2024-12-05
+
+
+### Navigation World Models
+
+- **Authors**: Amir Bar, Gaoyue Zhou, Danny Tran, Trevor Darrell, Yann LeCun
+
+#### Abstract
+
+Navigation is a fundamental skill of agents with visual-motor capabilities.
+We introduce a Navigation World Model (NWM), a controllable video generation
+model that predicts future visual observations based on past observations and
+navigation actions. To capture complex environment dynamics, NWM employs a
+Conditional Diffusion Transformer (CDiT), trained on a diverse collection of
+egocentric videos of both human and robotic agents, and scaled up to 1 billion
+parameters. In familiar environments, NWM can plan navigation trajectories by
+simulating them and evaluating whether they achieve the desired goal. Unlike
+supervised navigation policies with fixed behavior, NWM can dynamically
+incorporate constraints during planning. Experiments demonstrate its
+effectiveness in planning trajectories from scratch or by ranking trajectories
+sampled from an external policy. Furthermore, NWM leverages its learned visual
+priors to imagine trajectories in unfamiliar environments from a single input
+image, making it a flexible and powerful tool for next-generation navigation
+systems.
+
+[Paper Link](
+https://arxiv.org/abs/2412.03572
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-05_16-04.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Whole-Body Loco-Manipulation for Omni-Directional Task Space Pose Tracking with a Wheeled-Quadrupedal-Manipulator
+
+- **Authors**: Kaiwen Jiang, Zhen Fu, Junde Guo, Wei Zhang, Hua Chen
+
+#### Abstract
+
+In this paper, we study the whole-body loco-manipulation problem using
+reinforcement learning (RL). Specifically, we focus on the problem of how to
+coordinate the floating base and the robotic arm of a wheeled-quadrupedal
+manipulator robot to achieve direct six-dimensional (6D) end-effector (EE) pose
+tracking in task space. Different from conventional whole-body
+loco-manipulation problems that track both floating-base and end-effector
+commands, the direct EE pose tracking problem requires inherent balance among
+redundant degrees of freedom in the whole-body motion. We leverage RL to solve
+this challenging problem. To address the associated difficulties, we develop a
+novel reward fusion module (RFM) that systematically integrates reward terms
+corresponding to different tasks in a nonlinear manner. In such a way, the
+inherent multi-stage and hierarchical feature of the loco-manipulation problem
+can be carefully accommodated. By combining the proposed RFM with the a
+teacher-student RL training paradigm, we present a complete RL scheme to
+achieve 6D EE pose tracking for the wheeled-quadruped manipulator robot.
+Extensive simulation and hardware experiments demonstrate the significance of
+the RFM. In particular, we enable smooth and precise tracking performance,
+achieving state-of-the-art tracking position error of less than 5 cm, and
+rotation error of less than 0.1 rad. Please refer to
+https://clearlab-sustech.github.io/RFM_loco_mani/ for more experimental videos.
+
+[Website Link](https://clearlab-sustech.github.io/RFM_loco_mani/)
+
+[Paper Link](
+https://arxiv.org/abs/2412.03012
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-05_12-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AffordDP: Generalizable Diffusion Policy with Transferable Affordance
+
+- **Authors**: Shijie Wu, Yihang Zhu, Yunao Huang, Kaizhen Zhu, Jiayuan Gu, Jingyi Yu, Ye Shi, Jingya Wang
+
+#### Abstract
+
+Diffusion-based policies have shown impressive performance in robotic
+manipulation tasks while struggling with out-of-domain distributions. Recent
+efforts attempted to enhance generalization by improving the visual feature
+encoding for diffusion policy. However, their generalization is typically
+limited to the same category with similar appearances. Our key insight is that
+leveraging affordances--manipulation priors that define "where" and "how" an
+agent interacts with an object--can substantially enhance generalization to
+entirely unseen object instances and categories. We introduce the Diffusion
+Policy with transferable Affordance (AffordDP), designed for generalizable
+manipulation across novel categories. AffordDP models affordances through 3D
+contact points and post-contact trajectories, capturing the essential static
+and dynamic information for complex tasks. The transferable affordance from
+in-domain data to unseen objects is achieved by estimating a 6D transformation
+matrix using foundational vision models and point cloud registration
+techniques. More importantly, we incorporate affordance guidance during
+diffusion sampling that can refine action sequence generation. This guidance
+directs the generated action to gradually move towards the desired manipulation
+for unseen objects while keeping the generated action within the manifold of
+action space. Experimental results from both simulated and real-world
+environments demonstrate that AffordDP consistently outperforms previous
+diffusion-based methods, successfully generalizing to unseen instances and
+categories where others fail.
+
+[Paper Link](
+https://arxiv.org/abs/2412.03142
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-05_12-12.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Rotograb: Combining Biomimetic Hands with Industrial Grippers using a Rotating Thumb
+
+- **Authors**: Arnaud Bersier, Matteo Leonforte, Alessio Vanetta, Sarah Lia Andrea Wotke, Andrea Nappi, Yifan Zhou, Sebastiano Oliani, Alexander M. Kübler, Robert K. Katzschmann
+
+#### Abstract
+
+The development of robotic grippers and hands for automation aims to emulate
+human dexterity without sacrificing the efficiency of industrial grippers. This
+study introduces Rotograb, a tendon-actuated robotic hand featuring a novel
+rotating thumb. The aim is to combine the dexterity of human hands with the
+efficiency of industrial grippers. The rotating thumb enlarges the workspace
+and allows in-hand manipulation. A novel joint design minimizes movement
+interference and simplifies kinematics, using a cutout for tendon routing. We
+integrate teleoperation, using a depth camera for real-time tracking and
+autonomous manipulation powered by reinforcement learning with proximal policy
+optimization. Experimental evaluations demonstrate that Rotograb's rotating
+thumb greatly improves both operational versatility and workspace. It can
+handle various grasping and manipulation tasks with objects from the YCB
+dataset, with particularly good results when rotating objects within its grasp.
+Rotograb represents a notable step towards bridging the capability gap between
+human hands and industrial grippers. The tendon-routing and thumb-rotating
+mechanisms allow for a new level of control and dexterity. Integrating
+teleoperation and autonomous learning underscores Rotograb's adaptability and
+sophistication, promising substantial advancements in both robotics research
+and practical applications.
+
+[Paper Link](
+https://arxiv.org/abs/2412.03279
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-05_12-07.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-04
 
 
