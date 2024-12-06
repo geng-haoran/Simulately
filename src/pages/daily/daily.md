@@ -1,3 +1,186 @@
+## 2024-12-06
+
+
+### SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding
+
+- **Authors**: Rong Li, Shijie Li, Lingdong Kong, Xulei Yang, Junwei Liang
+
+#### Abstract
+
+3D Visual Grounding (3DVG) aims to locate objects in 3D scenes based on
+textual descriptions, which is essential for applications like augmented
+reality and robotics. Traditional 3DVG approaches rely on annotated 3D datasets
+and predefined object categories, limiting scalability and adaptability. To
+overcome these limitations, we introduce SeeGround, a zero-shot 3DVG framework
+leveraging 2D Vision-Language Models (VLMs) trained on large-scale 2D data. We
+propose to represent 3D scenes as a hybrid of query-aligned rendered images and
+spatially enriched text descriptions, bridging the gap between 3D data and
+2D-VLMs input formats. We propose two modules: the Perspective Adaptation
+Module, which dynamically selects viewpoints for query-relevant image
+rendering, and the Fusion Alignment Module, which integrates 2D images with 3D
+spatial descriptions to enhance object localization. Extensive experiments on
+ScanRefer and Nr3D demonstrate that our approach outperforms existing zero-shot
+methods by large margins. Notably, we exceed weakly supervised methods and
+rival some fully supervised ones, outperforming previous SOTA by 7.7% on
+ScanRefer and 7.1% on Nr3D, showcasing its effectiveness.
+
+[Paper Link](
+https://arxiv.org/abs/2412.04383
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-06_13-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Reinforcement Learning from Wild Animal Videos
+
+- **Authors**: Elliot Chane-Sane, Constant Roux, Olivier Stasse, Nicolas Mansard
+
+#### Abstract
+
+We propose to learn legged robot locomotion skills by watching thousands of
+wild animal videos from the internet, such as those featured in nature
+documentaries. Indeed, such videos offer a rich and diverse collection of
+plausible motion examples, which could inform how robots should move. To
+achieve this, we introduce Reinforcement Learning from Wild Animal Videos
+(RLWAV), a method to ground these motions into physical robots. We first train
+a video classifier on a large-scale animal video dataset to recognize actions
+from RGB clips of animals in their natural habitats. We then train a
+multi-skill policy to control a robot in a physics simulator, using the
+classification score of a third-person camera capturing videos of the robot's
+movements as a reward for reinforcement learning. Finally, we directly transfer
+the learned policy to a real quadruped Solo. Remarkably, despite the extreme
+gap in both domain and embodiment between animals in the wild and robots, our
+approach enables the policy to learn diverse skills such as walking, jumping,
+and keeping still, without relying on reference trajectories nor skill-specific
+rewards.
+
+[Paper Link](
+https://arxiv.org/abs/2412.04273
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-06_13-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Moto: Latent Motion Token as the Bridging Language for Robot Manipulation
+
+- **Authors**: Yi Chen, Yuying Ge, Yizhuo Li, Yixiao Ge, Mingyu Ding, Ying Shan, Xihui Liu
+
+#### Abstract
+
+Recent developments in Large Language Models pre-trained on extensive corpora
+have shown significant success in various natural language processing tasks
+with minimal fine-tuning. This success offers new promise for robotics, which
+has long been constrained by the high cost of action-labeled data. We ask:
+given the abundant video data containing interaction-related knowledge
+available as a rich "corpus", can a similar generative pre-training approach be
+effectively applied to enhance robot learning? The key challenge is to identify
+an effective representation for autoregressive pre-training that benefits robot
+manipulation tasks. Inspired by the way humans learn new skills through
+observing dynamic environments, we propose that effective robotic learning
+should emphasize motion-related knowledge, which is closely tied to low-level
+actions and is hardware-agnostic, facilitating the transfer of learned motions
+to actual robot actions. To this end, we introduce Moto, which converts video
+content into latent Motion Token sequences by a Latent Motion Tokenizer,
+learning a bridging "language" of motion from videos in an unsupervised manner.
+We pre-train Moto-GPT through motion token autoregression, enabling it to
+capture diverse visual motion knowledge. After pre-training, Moto-GPT
+demonstrates the promising ability to produce semantically interpretable motion
+tokens, predict plausible motion trajectories, and assess trajectory
+rationality through output likelihood. To transfer learned motion priors to
+real robot actions, we implement a co-fine-tuning strategy that seamlessly
+bridges latent motion token prediction and real robot control. Extensive
+experiments show that the fine-tuned Moto-GPT exhibits superior robustness and
+efficiency on robot manipulation benchmarks, underscoring its effectiveness in
+transferring knowledge from video data to downstream visual manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2412.04445
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-06_12-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### NaVILA: Legged Robot Vision-Language-Action Model for Navigation
+
+- **Authors**: An-Chieh Cheng, Yandong Ji, Zhaojing Yang, Xueyan Zou, Jan Kautz, Erdem Bıyık, Hongxu Yin, Sifei Liu, Xiaolong Wang
+
+#### Abstract
+
+This paper proposes to solve the problem of Vision-and-Language Navigation
+with legged robots, which not only provides a flexible way for humans to
+command but also allows the robot to navigate through more challenging and
+cluttered scenes. However, it is non-trivial to translate human language
+instructions all the way to low-level leg joint actions. We propose NaVILA, a
+2-level framework that unifies a Vision-Language-Action model (VLA) with
+locomotion skills. Instead of directly predicting low-level actions from VLA,
+NaVILA first generates mid-level actions with spatial information in the form
+of language, (e.g., "moving forward 75cm"), which serves as an input for a
+visual locomotion RL policy for execution. NaVILA substantially improves
+previous approaches on existing benchmarks. The same advantages are
+demonstrated in our newly developed benchmarks with IsaacLab, featuring more
+realistic scenes, low-level controls, and real-world robot experiments. We show
+more results at https://navila-bot.github.io/
+
+[Website Link](https://navila-bot.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2412.04453
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-06_12-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic Failure Detection
+
+- **Authors**: Enshen Zhou, Qi Su, Cheng Chi, Zhizheng Zhang, Zhongyuan Wang, Tiejun Huang, Lu Sheng, He Wang
+
+#### Abstract
+
+Automatic detection and prevention of open-set failures are crucial in
+closed-loop robotic systems. Recent studies often struggle to simultaneously
+identify unexpected failures reactively after they occur and prevent
+foreseeable ones proactively. To this end, we propose Code-as-Monitor (CaM), a
+novel paradigm leveraging the vision-language model (VLM) for both open-set
+reactive and proactive failure detection. The core of our method is to
+formulate both tasks as a unified set of spatio-temporal constraint
+satisfaction problems and use VLM-generated code to evaluate them for real-time
+monitoring. To enhance the accuracy and efficiency of monitoring, we further
+introduce constraint elements that abstract constraint-related entities or
+their parts into compact geometric elements. This approach offers greater
+generality, simplifies tracking, and facilitates constraint-aware visual
+programming by leveraging these elements as visual prompts. Experiments show
+that CaM achieves a 28.7% higher success rate and reduces execution time by
+31.8% under severe disturbances compared to baselines across three simulators
+and a real-world setting. Moreover, CaM can be integrated with open-loop
+control policies to form closed-loop systems, enabling long-horizon tasks in
+cluttered scenes with dynamic environments.
+
+[Paper Link](
+https://arxiv.org/abs/2412.04455
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-03_14-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-05
 
 
