@@ -46,3 +46,22 @@ sidebar_position: 0
   AKB48): By identifying and defining 9 GAPart classes (lids, handles, etc.) in 27 object categories, we construct a
   large-scale part-centric interactive dataset, GAPartNet, where we provide rich, part-level annotations (semantics,
   poses). [[Download]](https://forms.gle/3qzv8z5vP2BT5ARN7) [[Paper]](https://arxiv.org/abs/2211.05272) [[Code]](https://github.com/PKU-EPIC/GAPartNet)
+
+- [**UniDoorManip**](https://unidoormanip.github.io/): This environment consists of the diverse door assets and door manipulation simulation with mechanisms.
+  The dataset consists of door bodies and handles covering 6 categories (Interior, Window, Car, Safe, StorageFurniture, Refrigerator) for PartNet-Mobility and 3D Warehouse.
+  The simulation provides mechanisms (such as locking and latching) of different doors. 
+  [[Download]](https://github.com/sectionZ6/UniDoorManip) [[Paper]](https://arxiv.org/abs/2211.05272) [[Code]](https://github.com/sectionZ6/UniDoorManip)
+
+## Deformable Objects
+
+- [**ClothesNet**](https://sites.google.com/view/clothesnet/): 
+  This dataset consists of around 4400 models covering 11 categories
+  annotated with clothes features, boundary lines, and key points.
+  Further, the authors establish benchmark tasks for clothes perception, including classification, boundary line segmentation.
+  [[Download]](https://docs.google.com/forms/d/e/1FAIpQLSdE-cUxWSzvC-D99RqkIHI9yLHjvT_5QygszjfqxnB6vIt8vw/viewform) [[Paper]](https://arxiv.org/abs/2308.09987)
+
+- [**GarmentLab**](https://garmentlab.github.io/): 
+  This environment provides physical simulations of garments in ClothesNet.
+  Further, it provides benchmarking tasks of garment manipulation tasks,
+  and models of real-world garments easily accessible globally for evaluation.
+  [[Download]](https://garmentlab.readthedocs.io/en/latest/tutorial/data/index.html) [[Paper]](https://arxiv.org/abs/2411.01200) [[Code]](https://github.com/GarmentLab/GarmentLab)

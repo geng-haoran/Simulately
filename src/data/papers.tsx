@@ -48,6 +48,27 @@ const PAPERS: Paper[] = [
     tags: ['rl', 'manipulation', 'articulated', 'rgbd_pc', 'affordance'],
   },
   {
+    title: 'Learning Foresightful Dense Visual Affordance for Deformable Object Manipulation',
+    description: 'ICCV 2023; RGB-D point cloud.',
+    preview: null,
+    website: 'https://hyperplane-lab.github.io/DeformableAffordance/',
+    tags: ['manipulation', 'rgbd_pc', 'affordance'],
+  },
+  {
+    title: 'DualAfford: Learning Collaborative Visual Affordance for Dual-gripper Manipulation',
+    description: 'ICLR 2023; RGB-D point cloud.',
+    preview: null,
+    website: 'https://hyperplane-lab.github.io/DualAfford/',
+    tags: ['manipulation', 'rgbd_pc', 'affordance'],
+  },
+  {
+    title: 'VAT-Mart: Learning Visual Action Trajectory Proposals for Manipulating 3D ARTiculated Objects',
+    description: 'ICLR 2022; RGB-D point cloud.',
+    preview: null,
+    website: 'https://hyperplane-lab.github.io/vat-mart/',
+    tags: ['manipulation', 'articulated', 'rgbd_pc', 'affordance'],
+  },
+  {
     title: 'PartManip: Learning Cross-Category Generalizable Part Manipulation Policy from Point Cloud Observations',
     description: 'CVPR 2023; RGB-D point cloud.',
     preview: null,
