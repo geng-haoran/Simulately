@@ -14,6 +14,7 @@ sidebar_position: 1
 - [**ThinShellLab**](#thinshelllab): a differentiable simulator for manipulating **thin-shell materials**, such as cloths and papers.
 - [**DaxBench**](#daxbench): a **deformable object manipulation** benchmark with differentiable physics.
 - [**SoftMAC**](#softmac): a differentiable soft body simulation with forecast-based contact model, coupling with articulated rigid bodies and clothes.
+- [**GarmentLab**](#garmentlab): a physical simulation environment for **garment manipulation** tasks.
 ---
 
 ## SoftGym
@@ -233,5 +234,32 @@ DaXBench is a differentiable simulation framework for deformable object manipula
     <img src="https://lh3.googleusercontent.com/ijg0PhkHk9oR2MYuiY5t9evsDhzKpN-YDhFF3SOlIZ8QY96y70JbLBmi03CR0q5J24VFT72nSa2aBFFtXJxsnoyejjhB5mcjJ82UV2uV1TqgcP_Ic4e-4PFMQhqvRmQRfg=w1280"  />
   </div>
 SoftMAC, a differentiable simulation framework coupling soft bodies with articulated rigid bodies and clothes. SoftMAC simulates soft bodies with the continuum-mechanics-based Material Point Method (MPM).
+</div>
+</details>
+
+
+## GarmentLab
+
+> **GarmentLab** is a garment simulation environment based on the physical engine of Isaac Sim, supporting more than 10 garment manipulation tasks. This environment supports the simulation and coupling of deformable objects (garments of more than 10 categories, fluid and blow), articulated objects and rigid objects.
+
+<details open> <summary>Details</summary>
+<h2 align="center">
+  <b>GarmentLab</b>
+
+<div align="center">
+    <a href="https://garmentlab.github.io/" target="_blank"><img src="https://img.shields.io/badge/Website-GarmentLab-red"></img></a>
+    &nbsp;
+    <a href="https://arxiv.org/abs/2411.01200" target="_blank"><img src="https://img.shields.io/badge/Paper-ArXiv-green"></img></a>
+    &nbsp;
+    <a href="https://github.com/GarmentLab/GarmentLab" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple"></img></a>
+</div>
+</h2>
+
+<div align="center">
+<div style={{ textAlign: 'center' }}>
+    <img src="https://garmentlab.github.io/static/images/pipeline.png"  />
+  </div>
+GarmentLab supports the simulation and coupling of deformable objects (garments of more than 10 categories, fluid and blow), articulated objects and rigid objects, covering more than 10 garment manipulation tasks.
+This environment is equipped with dexterous hands, mobile robots, tactile sensors, tele-operation framework, and proposes a whole sim2real pipeline and real-world evaluation platform.
 </div>
 </details>
