@@ -1,3 +1,111 @@
+## 2024-12-09
+
+
+### BimArt: A Unified Approach for the Synthesis of 3D Bimanual Interaction with Articulated Objects
+
+- **Authors**: Wanyue Zhang, Rishabh Dabral, Vladislav Golyanik, Vasileios Choutas, Eduardo Alvarado, Thabo Beeler, Marc Habermann, Christian Theobalt
+
+#### Abstract
+
+We present BimArt, a novel generative approach for synthesizing 3D bimanual
+hand interactions with articulated objects. Unlike prior works, we do not rely
+on a reference grasp, a coarse hand trajectory, or separate modes for grasping
+and articulating. To achieve this, we first generate distance-based contact
+maps conditioned on the object trajectory with an articulation-aware feature
+representation, revealing rich bimanual patterns for manipulation. The learned
+contact prior is then used to guide our hand motion generator, producing
+diverse and realistic bimanual motions for object movement and articulation.
+Our work offers key insights into feature representation and contact prior for
+articulated objects, demonstrating their effectiveness in taming the complex,
+high-dimensional space of bimanual hand-object interactions. Through
+comprehensive quantitative experiments, we demonstrate a clear step towards
+simplified and high-quality hand-object animations that excel over the
+state-of-the-art in motion quality and diversity.
+
+[Paper Link](
+https://arxiv.org/abs/2412.05066
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-09_14-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Maximizing Alignment with Minimal Feedback: Efficiently Learning Rewards for Visuomotor Robot Policy Alignment
+
+- **Authors**: Ran Tian, Yilin Wu, Chenfeng Xu, Masayoshi Tomizuka, Jitendra Malik, Andrea Bajcsy
+
+#### Abstract
+
+Visuomotor robot policies, increasingly pre-trained on large-scale datasets,
+promise significant advancements across robotics domains. However, aligning
+these policies with end-user preferences remains a challenge, particularly when
+the preferences are hard to specify. While reinforcement learning from human
+feedback (RLHF) has become the predominant mechanism for alignment in
+non-embodied domains like large language models, it has not seen the same
+success in aligning visuomotor policies due to the prohibitive amount of human
+feedback required to learn visual reward functions. To address this limitation,
+we propose Representation-Aligned Preference-based Learning (RAPL), an
+observation-only method for learning visual rewards from significantly less
+human preference feedback. Unlike traditional RLHF, RAPL focuses human feedback
+on fine-tuning pre-trained vision encoders to align with the end-user's visual
+representation and then constructs a dense visual reward via feature matching
+in this aligned representation space. We first validate RAPL through simulation
+experiments in the X-Magical benchmark and Franka Panda robotic manipulation,
+demonstrating that it can learn rewards aligned with human preferences, more
+efficiently uses preference data, and generalizes across robot embodiments.
+Finally, our hardware experiments align pre-trained Diffusion Policies for
+three object manipulation tasks. We find that RAPL can fine-tune these policies
+with 5x less real human preference data, taking the first step towards
+minimizing human feedback while maximizing visuomotor robot policy alignment.
+
+[Paper Link](
+https://arxiv.org/abs/2412.04835
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-09_13-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DenseMatcher: Learning 3D Semantic Correspondence for Category-Level Manipulation from a Single Demo
+
+- **Authors**: Junzhe Zhu, Yuanchen Ju, Junyi Zhang, Muhan Wang, Zhecheng Yuan, Kaizhe Hu, Huazhe Xu
+
+#### Abstract
+
+Dense 3D correspondence can enhance robotic manipulation by enabling the
+generalization of spatial, functional, and dynamic information from one object
+to an unseen counterpart. Compared to shape correspondence, semantic
+correspondence is more effective in generalizing across different object
+categories. To this end, we present DenseMatcher, a method capable of computing
+3D correspondences between in-the-wild objects that share similar structures.
+DenseMatcher first computes vertex features by projecting multiview 2D features
+onto meshes and refining them with a 3D network, and subsequently finds dense
+correspondences with the obtained features using functional map. In addition,
+we craft the first 3D matching dataset that contains colored object meshes
+across diverse categories. In our experiments, we show that DenseMatcher
+significantly outperforms prior 3D matching baselines by 43.5%. We demonstrate
+the downstream effectiveness of DenseMatcher in (i) robotic manipulation, where
+it achieves cross-instance and cross-category generalization on long-horizon
+complex manipulation tasks from observing only one demo; (ii) zero-shot color
+mapping between digital assets, where appearance can be transferred between
+different objects with relatable geometry.
+
+[Paper Link](
+https://arxiv.org/abs/2412.05268
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-09_13-48.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-06
 
 
