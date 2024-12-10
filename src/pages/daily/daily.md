@@ -1,3 +1,386 @@
+## 2024-12-10
+
+
+### M$^3$PC: Test-time Model Predictive Control for Pretrained Masked Trajectory Model
+
+- **Authors**: Kehan Wen, Yutong Hu, Yao Mu, Lei Ke
+
+#### Abstract
+
+Recent work in Offline Reinforcement Learning (RL) has shown that a unified
+Transformer trained under a masked auto-encoding objective can effectively
+capture the relationships between different modalities (e.g., states, actions,
+rewards) within given trajectory datasets. However, this information has not
+been fully exploited during the inference phase, where the agent needs to
+generate an optimal policy instead of just reconstructing masked components
+from unmasked ones. Given that a pretrained trajectory model can act as both a
+Policy Model and a World Model with appropriate mask patterns, we propose using
+Model Predictive Control (MPC) at test time to leverage the model's own
+predictive capability to guide its action selection. Empirical results on D4RL
+and RoboMimic show that our inference-phase MPC significantly improves the
+decision-making performance of a pretrained trajectory model without any
+additional parameter training. Furthermore, our framework can be adapted to
+Offline to Online (O2O) RL and Goal Reaching RL, resulting in more substantial
+performance gains when an additional online interaction budget is provided, and
+better generalization capabilities when different task targets are specified.
+Code is available: https://github.com/wkh923/m3pc.
+
+[Website Link](https://github.com/wkh923/m3pc.)
+
+[Paper Link](
+https://arxiv.org/abs/2412.05675
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_17-16_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RL Zero: Zero-Shot Language to Behaviors without any Supervision
+
+- **Authors**: Harshit Sikchi, Siddhant Agarwal, Pranaya Jajoo, Samyak Parajuli, Caleb Chuck, Max Rudolph, Peter Stone, Amy Zhang, Scott Niekum
+
+#### Abstract
+
+Rewards remain an uninterpretable way to specify tasks for Reinforcement
+Learning, as humans are often unable to predict the optimal behavior of any
+given reward function, leading to poor reward design and reward hacking.
+Language presents an appealing way to communicate intent to agents and bypass
+reward design, but prior efforts to do so have been limited by costly and
+unscalable labeling efforts. In this work, we propose a method for a completely
+unsupervised alternative to grounding language instructions in a zero-shot
+manner to obtain policies. We present a solution that takes the form of
+imagine, project, and imitate: The agent imagines the observation sequence
+corresponding to the language description of a task, projects the imagined
+sequence to our target domain, and grounds it to a policy. Video-language
+models allow us to imagine task descriptions that leverage knowledge of tasks
+learned from internet-scale video-text mappings. The challenge remains to
+ground these generations to a policy. In this work, we show that we can achieve
+a zero-shot language-to-behavior policy by first grounding the imagined
+sequences in real observations of an unsupervised RL agent and using a
+closed-form solution to imitation learning that allows the RL agent to mimic
+the grounded observations. Our method, RLZero, is the first to our knowledge to
+show zero-shot language to behavior generation abilities without any
+supervision on a variety of tasks on simulated domains. We further show that
+RLZero can also generate policies zero-shot from cross-embodied videos such as
+those scraped from YouTube.
+
+[Paper Link](
+https://arxiv.org/abs/2412.05718
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_17-16.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### CHOICE: Coordinated Human-Object Interaction in Cluttered Environments for Pick-and-Place Actions
+
+- **Authors**: Jintao Lu, He Zhang, Yuting Ye, Takaaki Shiratori, Sebastian Starke, Taku Komura
+
+#### Abstract
+
+Animating human-scene interactions such as pick-and-place tasks in cluttered,
+complex layouts is a challenging task, with objects of a wide variation of
+geometries and articulation under scenarios with various obstacles. The main
+difficulty lies in the sparsity of the motion data compared to the wide
+variation of the objects and environments as well as the poor availability of
+transition motions between different tasks, increasing the complexity of the
+generalization to arbitrary conditions. To cope with this issue, we develop a
+system that tackles the interaction synthesis problem as a hierarchical
+goal-driven task. Firstly, we develop a bimanual scheduler that plans a set of
+keyframes for simultaneously controlling the two hands to efficiently achieve
+the pick-and-place task from an abstract goal signal such as the target object
+selected by the user. Next, we develop a neural implicit planner that generates
+guidance hand trajectories under diverse object shape/types and obstacle
+layouts. Finally, we propose a linear dynamic model for our DeepPhase
+controller that incorporates a Kalman filter to enable smooth transitions in
+the frequency domain, resulting in a more realistic and effective
+multi-objective control of the character.Our system can produce a wide range of
+natural pick-and-place movements with respect to the geometry of objects, the
+articulation of containers and the layout of the objects in the scene.
+
+[Paper Link](
+https://arxiv.org/abs/2412.06702
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_17-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FlexEvent: Event Camera Object Detection at Arbitrary Frequencies
+
+- **Authors**: Dongyue Lu, Lingdong Kong, Gim Hee Lee, Camille Simon Chane, Wei Tsang Ooi
+
+#### Abstract
+
+Event cameras offer unparalleled advantages for real-time perception in
+dynamic environments, thanks to their microsecond-level temporal resolution and
+asynchronous operation. Existing event-based object detection methods, however,
+are limited by fixed-frequency paradigms and fail to fully exploit the
+high-temporal resolution and adaptability of event cameras. To address these
+limitations, we propose FlexEvent, a novel event camera object detection
+framework that enables detection at arbitrary frequencies. Our approach
+consists of two key components: FlexFuser, an adaptive event-frame fusion
+module that integrates high-frequency event data with rich semantic information
+from RGB frames, and FAL, a frequency-adaptive learning mechanism that
+generates frequency-adjusted labels to enhance model generalization across
+varying operational frequencies. This combination allows our method to detect
+objects with high accuracy in both fast-moving and static scenarios, while
+adapting to dynamic environments. Extensive experiments on large-scale event
+camera datasets demonstrate that our approach surpasses state-of-the-art
+methods, achieving significant improvements in both standard and high-frequency
+settings. Notably, our method maintains robust performance when scaling from 20
+Hz to 90 Hz and delivers accurate detection up to 180 Hz, proving its
+effectiveness in extreme conditions. Our framework sets a new benchmark for
+event-based object detection and paves the way for more adaptable, real-time
+vision systems.
+
+[Paper Link](
+https://arxiv.org/abs/2412.06708
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_17-12.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### LaNMP: A Language-Conditioned Mobile Manipulation Benchmark for Autonomous Robots
+
+- **Authors**: Ahmed Jaafar, Shreyas Sundara Raman, Yichen Wei, Sofia Juliani, Anneke Wernerfelt, Benedict Quartey, Ifrah Idrees, Jason Xinyu Liu, Stefanie Tellex
+
+#### Abstract
+
+As robots that follow natural language become more capable and prevalent, we
+need a benchmark to holistically develop and evaluate their ability to solve
+long-horizon mobile manipulation tasks in large, diverse environments. To
+tackle this challenge, robots must use visual and language understanding,
+navigation, and manipulation capabilities. Existing datasets do not integrate
+all these aspects, restricting their efficacy as benchmarks. To address this
+gap, we present the Language, Navigation, Manipulation, Perception (LaNMP,
+pronounced Lamp) dataset and demonstrate the benefits of integrating these four
+capabilities and various modalities. LaNMP comprises 574 trajectories across
+eight simulated and real-world environments for long-horizon room-to-room
+pick-and-place tasks specified by natural language. Every trajectory consists
+of over 20 attributes, including RGB-D images, segmentations, and the poses of
+the robot body, end-effector, and grasped objects. We fine-tuned and tested two
+models in simulation, and evaluated a third on a physical robot, to demonstrate
+the benchmark's applicability in development and evaluation, as well as making
+models more sample efficient. The models performed suboptimally compared to
+humans; however, showed promise in increasing model sample efficiency,
+indicating significant room for developing more sample efficient multimodal
+mobile manipulation models using our benchmark.
+
+[Paper Link](
+https://arxiv.org/abs/2412.05313
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_17-11.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### What's the Move? Hybrid Imitation Learning via Salient Points
+
+- **Authors**: Priya Sundaresan, Hengyuan Hu, Quan Vuong, Jeannette Bohg, Dorsa Sadigh
+
+#### Abstract
+
+While imitation learning (IL) offers a promising framework for teaching
+robots various behaviors, learning complex tasks remains challenging. Existing
+IL policies struggle to generalize effectively across visual and spatial
+variations even for simple tasks. In this work, we introduce SPHINX: Salient
+Point-based Hybrid ImitatioN and eXecution, a flexible IL policy that leverages
+multimodal observations (point clouds and wrist images), along with a hybrid
+action space of low-frequency, sparse waypoints and high-frequency, dense end
+effector movements. Given 3D point cloud observations, SPHINX learns to infer
+task-relevant points within a point cloud, or salient points, which support
+spatial generalization by focusing on semantically meaningful features. These
+salient points serve as anchor points to predict waypoints for long-range
+movement, such as reaching target poses in free-space. Once near a salient
+point, SPHINX learns to switch to predicting dense end-effector movements given
+close-up wrist images for precise phases of a task. By exploiting the strengths
+of different input modalities and action representations for different
+manipulation phases, SPHINX tackles complex tasks in a sample-efficient,
+generalizable manner. Our method achieves 86.7% success across 4 real-world and
+2 simulated tasks, outperforming the next best state-of-the-art IL baseline by
+41.1% on average across 440 real world trials. SPHINX additionally generalizes
+to novel viewpoints, visual distractors, spatial arrangements, and execution
+speeds with a 1.7x speedup over the most competitive baseline. Our website
+(http://sphinx-manip.github.io) provides open-sourced code for data collection,
+training, and evaluation, along with supplementary videos.
+
+[Website Link](http://sphinx-manip.github.io))
+
+[Paper Link](
+https://arxiv.org/abs/2412.05426
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_17-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AutoURDF: Unsupervised Robot Modeling from Point Cloud Frames Using Cluster Registration
+
+- **Authors**: Jiong Lin, Lechen Zhang, Kwansoo Lee, Jialong Ning, Judah Goldfeder, Hod Lipson
+
+#### Abstract
+
+Robot description models are essential for simulation and control, yet their
+creation often requires significant manual effort. To streamline this modeling
+process, we introduce AutoURDF, an unsupervised approach for constructing
+description files for unseen robots from point cloud frames. Our method
+leverages a cluster-based point cloud registration model that tracks the 6-DoF
+transformations of point clusters. Through analyzing cluster movements, we
+hierarchically address the following challenges: (1) moving part segmentation,
+(2) body topology inference, and (3) joint parameter estimation. The complete
+pipeline produces robot description files that are fully compatible with
+existing simulators. We validate our method across a variety of robots, using
+both synthetic and real-world scan data. Results indicate that our approach
+outperforms previous methods in registration and body topology estimation
+accuracy, offering a scalable solution for automated robot modeling.
+
+[Paper Link](
+https://arxiv.org/abs/2412.05507
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_17-08.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Video2Reward: Generating Reward Function from Videos for Legged Robot Behavior Learning
+
+- **Authors**: Runhao Zeng, Dingjie Zhou, Qiwei Liang, Junlin Liu, Hui Li, Changxin Huang, Jianqiang Li, Xiping Hu, Fuchun Sun
+
+#### Abstract
+
+Learning behavior in legged robots presents a significant challenge due to
+its inherent instability and complex constraints. Recent research has proposed
+the use of a large language model (LLM) to generate reward functions in
+reinforcement learning, thereby replacing the need for manually designed
+rewards by experts. However, this approach, which relies on textual
+descriptions to define learning objectives, fails to achieve controllable and
+precise behavior learning with clear directionality. In this paper, we
+introduce a new video2reward method, which directly generates reward functions
+from videos depicting the behaviors to be mimicked and learned. Specifically,
+we first process videos containing the target behaviors, converting the motion
+information of individuals in the videos into keypoint trajectories represented
+as coordinates through a video2text transforming module. These trajectories are
+then fed into an LLM to generate the reward function, which in turn is used to
+train the policy. To enhance the quality of the reward function, we develop a
+video-assisted iterative reward refinement scheme that visually assesses the
+learned behaviors and provides textual feedback to the LLM. This feedback
+guides the LLM to continually refine the reward function, ultimately
+facilitating more efficient behavior learning. Experimental results on tasks
+involving bipedal and quadrupedal robot motion control demonstrate that our
+method surpasses the performance of state-of-the-art LLM-based reward
+generation methods by over 37.6% in terms of human normalized score. More
+importantly, by switching video inputs, we find our method can rapidly learn
+diverse motion behaviors such as walking and running.
+
+[Paper Link](
+https://arxiv.org/abs/2412.05515
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_17-07.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Uni-NaVid: A Video-based Vision-Language-Action Model for Unifying Embodied Navigation Tasks
+
+- **Authors**: Jiazhao Zhang, Kunyu Wang, Shaoan Wang, Minghan Li, Haoran Liu, Songlin Wei, Zhongyuan Wang, Zhizheng Zhang, He Wang
+
+#### Abstract
+
+A practical navigation agent must be capable of handling a wide range of
+interaction demands, such as following instructions, searching objects,
+answering questions, tracking people, and more. Existing models for embodied
+navigation fall short of serving as practical generalists in the real world, as
+they are often constrained by specific task configurations or pre-defined maps
+with discretized waypoints. In this work, we present Uni-NaVid, the first
+video-based vision-language-action (VLA) model designed to unify diverse
+embodied navigation tasks and enable seamless navigation for mixed long-horizon
+tasks in unseen real-world environments. Uni-NaVid achieves this by harmonizing
+the input and output data configurations for all commonly used embodied
+navigation tasks and thereby integrating all tasks in one model. For training
+Uni-NaVid, we collect 3.6 million navigation data samples in total from four
+essential navigation sub-tasks and foster synergy in learning across them.
+Extensive experiments on comprehensive navigation benchmarks clearly
+demonstrate the advantages of unification modeling in Uni-NaVid and show it
+achieves state-of-the-art performance. Additionally, real-world experiments
+confirm the model's effectiveness and efficiency, shedding light on its strong
+generalizability.
+
+[Paper Link](
+https://arxiv.org/abs/2412.06224
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_16-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AnyBimanual: Transferring Unimanual Policy for General Bimanual Manipulation
+
+- **Authors**: Guanxing Lu, Tengbo Yu, Haoyuan Deng, Season Si Chen, Yansong Tang, Ziwei Wang
+
+#### Abstract
+
+Performing general language-conditioned bimanual manipulation tasks is of
+great importance for many applications ranging from household service to
+industrial assembly. However, collecting bimanual manipulation data is
+expensive due to the high-dimensional action space, which poses challenges for
+conventional methods to handle general bimanual manipulation tasks. In
+contrast, unimanual policy has recently demonstrated impressive
+generalizability across a wide range of tasks because of scaled model
+parameters and training data, which can provide sharable manipulation knowledge
+for bimanual systems. To this end, we propose a plug-and-play method named
+AnyBimanual, which transfers pre-trained unimanual policy to general bimanual
+manipulation policy with few bimanual demonstrations. Specifically, we first
+introduce a skill manager to dynamically schedule the skill representations
+discovered from pre-trained unimanual policy for bimanual manipulation tasks,
+which linearly combines skill primitives with task-oriented compensation to
+represent the bimanual manipulation instruction. To mitigate the observation
+discrepancy between unimanual and bimanual systems, we present a visual aligner
+to generate soft masks for visual embedding of the workspace, which aims to
+align visual input of unimanual policy model for each arm with those during
+pretraining stage. AnyBimanual shows superiority on 12 simulated tasks from
+RLBench2 with a sizable 12.67% improvement in success rate over previous
+methods. Experiments on 9 real-world tasks further verify its practicality with
+an average success rate of 84.62%.
+
+[Paper Link](
+https://arxiv.org/abs/2412.06779
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-10_16-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-09
 
 
