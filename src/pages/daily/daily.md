@@ -1,3 +1,243 @@
+## 2024-12-11
+
+
+### ArtFormer: Controllable Generation of Diverse 3D Articulated Objects
+
+- **Authors**: Jiayi Su, Youhe Feng, Zheng Li, Jinhua Song, Yangfan He, Botao Ren, Botian Xu
+
+#### Abstract
+
+This paper presents a novel framework for modeling and conditional generation
+of 3D articulated objects. Troubled by flexibility-quality tradeoffs, existing
+methods are often limited to using predefined structures or retrieving shapes
+from static datasets. To address these challenges, we parameterize an
+articulated object as a tree of tokens and employ a transformer to generate
+both the object's high-level geometry code and its kinematic relations.
+Subsequently, each sub-part's geometry is further decoded using a
+signed-distance-function (SDF) shape prior, facilitating the synthesis of
+high-quality 3D shapes. Our approach enables the generation of diverse objects
+with high-quality geometry and varying number of parts. Comprehensive
+experiments on conditional generation from text descriptions demonstrate the
+effectiveness and flexibility of our method.
+
+[Paper Link](
+https://arxiv.org/abs/2412.07237
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-11_12-04.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SAT: Spatial Aptitude Training for Multimodal Language Models
+
+- **Authors**: Arijit Ray, Jiafei Duan, Reuben Tan, Dina Bashkirova, Rose Hendrix, Kiana Ehsani, Aniruddha Kembhavi, Bryan A. Plummer, Ranjay Krishna, Kuo-Hao Zeng, Kate Saenko
+
+#### Abstract
+
+Spatial perception is a fundamental component of intelligence. While many
+studies highlight that large multimodal language models (MLMs) struggle to
+reason about space, they only test for static spatial reasoning, such as
+categorizing the relative positions of objects. Meanwhile, real-world
+deployment requires dynamic capabilities like perspective-taking and egocentric
+action recognition. As a roadmap to improving spatial intelligence, we
+introduce SAT, Spatial Aptitude Training, which goes beyond static relative
+object position questions to the more dynamic tasks. SAT contains 218K
+question-answer pairs for 22K synthetic scenes across a training and testing
+set. Generated using a photo-realistic physics engine, our dataset can be
+arbitrarily scaled and easily extended to new actions, scenes, and 3D assets.
+We find that even MLMs that perform relatively well on static questions
+struggle to accurately answer dynamic spatial questions. Further, we show that
+SAT instruction-tuning data improves not only dynamic spatial reasoning on SAT,
+but also zero-shot performance on existing real-image spatial benchmarks:
+$23\%$ on CVBench, $8\%$ on the harder BLINK benchmark, and $18\%$ on VSR. When
+instruction-tuned on SAT, our 13B model matches larger proprietary MLMs like
+GPT4-V and Gemini-3-1.0 in spatial reasoning. Our data/code is available at
+http://arijitray1993.github.io/SAT/ .
+
+[Website Link](http://arijitray1993.github.io/SAT/)
+
+[Paper Link](
+https://arxiv.org/abs/2412.07755
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-11_12-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Non-Prehensile Tool-Object Manipulation by Integrating LLM-Based Planning and Manoeuvrability-Driven Controls
+
+- **Authors**: Hoi-Yin Lee, Peng Zhou, Anqing Duan, Wanyu Ma, Chenguang Yang, David Navarro-Alarcon
+
+#### Abstract
+
+The ability to wield tools was once considered exclusive to human
+intelligence, but it's now known that many other animals, like crows, possess
+this capability. Yet, robotic systems still fall short of matching biological
+dexterity. In this paper, we investigate the use of Large Language Models
+(LLMs), tool affordances, and object manoeuvrability for non-prehensile
+tool-based manipulation tasks. Our novel method leverages LLMs based on scene
+information and natural language instructions to enable symbolic task planning
+for tool-object manipulation. This approach allows the system to convert the
+human language sentence into a sequence of feasible motion functions. We have
+developed a novel manoeuvrability-driven controller using a new tool affordance
+model derived from visual feedback. This controller helps guide the robot's
+tool utilization and manipulation actions, even within confined areas, using a
+stepping incremental approach. The proposed methodology is evaluated with
+experiments to prove its effectiveness under various manipulation scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2412.06931
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-11_11-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Collision-inclusive Manipulation Planning for Occluded Object Grasping via Compliant Robot Motions
+
+- **Authors**: Kejia Ren, Gaotian Wang, Andrew S. Morgan, Kaiyu Hang
+
+#### Abstract
+
+Traditional robotic manipulation mostly focuses on collision-free tasks. In
+practice, however, many manipulation tasks (e.g., occluded object grasping)
+require the robot to intentionally collide with the environment to reach a
+desired task configuration. By enabling compliant robot motions, collisions
+between the robot and the environment are allowed and can thus be exploited,
+but more physical uncertainties are introduced. To address collision-rich
+problems such as occluded object grasping while handling the involved
+uncertainties, we propose a collision-inclusive planning framework that can
+transition the robot to a desired task configuration via roughly modeled
+collisions absorbed by Cartesian impedance control. By strategically exploiting
+the environmental constraints and exploring inside a manipulation funnel formed
+by task repetitions, our framework can effectively reduce physical and
+perception uncertainties. With real-world evaluations on both single-arm and
+dual-arm setups, we show that our framework is able to efficiently address
+various realistic occluded grasping problems where a feasible grasp does not
+initially exist.
+
+[Paper Link](
+https://arxiv.org/abs/2412.06983
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-11_11-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboMM: All-in-One Multimodal Large Model for Robotic Manipulation
+
+- **Authors**: Feng Yan, Fanfan Liu, Liming Zheng, Yufeng Zhong, Yiyang Huang, Zechao Guan, Chengjian Feng, Lin Ma
+
+#### Abstract
+
+In recent years, robotics has advanced significantly through the integration
+of larger models and large-scale datasets. However, challenges remain in
+applying these models to 3D spatial interactions and managing data collection
+costs. To address these issues, we propose the multimodal robotic manipulation
+model, RoboMM, along with the comprehensive dataset, RoboData. RoboMM enhances
+3D perception through camera parameters and occupancy supervision. Building on
+OpenFlamingo, it incorporates Modality-Isolation-Mask and multimodal decoder
+blocks, improving modality fusion and fine-grained perception. RoboData offers
+the complete evaluation system by integrating several well-known datasets,
+achieving the first fusion of multi-view images, camera parameters, depth maps,
+and actions, and the space alignment facilitates comprehensive learning from
+diverse robotic datasets. Equipped with RoboData and the unified physical
+space, RoboMM is the generalist policy that enables simultaneous evaluation
+across all tasks within multiple datasets, rather than focusing on limited
+selection of data or tasks. Its design significantly enhances robotic
+manipulation performance, increasing the average sequence length on the CALVIN
+from 1.7 to 3.3 and ensuring cross-embodiment capabilities, achieving
+state-of-the-art results across multiple datasets.
+
+[Paper Link](
+https://arxiv.org/abs/2412.07215
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-11_11-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Stereo Hand-Object Reconstruction for Human-to-Robot Handover
+
+- **Authors**: Yik Lung Pang, Alessio Xompero, Changjae Oh, Andrea Cavallaro
+
+#### Abstract
+
+Jointly estimating hand and object shape ensures the success of the robot
+grasp in human-to-robot handovers. However, relying on hand-crafted prior
+knowledge about the geometric structure of the object fails when generalising
+to unseen objects, and depth sensors fail to detect transparent objects such as
+drinking glasses. In this work, we propose a stereo-based method for
+hand-object reconstruction that combines single-view reconstructions
+probabilistically to form a coherent stereo reconstruction. We learn 3D shape
+priors from a large synthetic hand-object dataset to ensure that our method is
+generalisable, and use RGB inputs instead of depth as RGB can better capture
+transparent objects. We show that our method achieves a lower object Chamfer
+distance compared to existing RGB based hand-object reconstruction methods on
+single view and stereo settings. We process the reconstructed hand-object shape
+with a projection-based outlier removal step and use the output to guide a
+human-to-robot handover pipeline with wide-baseline stereo RGB cameras. Our
+hand-object reconstruction enables a robot to successfully receive a diverse
+range of household objects from the human.
+
+[Paper Link](
+https://arxiv.org/abs/2412.07487
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-11_11-43.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Mobile-TeleVision: Predictive Motion Priors for Humanoid Whole-Body Control
+
+- **Authors**: Chenhao Lu, Xuxin Cheng, Jialong Li, Shiqi Yang, Mazeyu Ji, Chengjing Yuan, Ge Yang, Sha Yi, Xiaolong Wang
+
+#### Abstract
+
+Humanoid robots require both robust lower-body locomotion and precise
+upper-body manipulation. While recent Reinforcement Learning (RL) approaches
+provide whole-body loco-manipulation policies, they lack precise manipulation
+with high DoF arms. In this paper, we propose decoupling upper-body control
+from locomotion, using inverse kinematics (IK) and motion retargeting for
+precise manipulation, while RL focuses on robust lower-body locomotion. We
+introduce PMP (Predictive Motion Priors), trained with Conditional Variational
+Autoencoder (CVAE) to effectively represent upper-body motions. The locomotion
+policy is trained conditioned on this upper-body motion representation,
+ensuring that the system remains robust with both manipulation and locomotion.
+We show that CVAE features are crucial for stability and robustness, and
+significantly outperforms RL-based whole-body control in precise manipulation.
+With precise upper-body motion and robust lower-body locomotion control,
+operators can remotely control the humanoid to walk around and explore
+different environments, while performing diverse manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2412.07773
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-11_11-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-10
 
 
