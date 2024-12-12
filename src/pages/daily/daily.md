@@ -1,3 +1,115 @@
+## 2024-12-12
+
+
+### RoomTour3D: Geometry-Aware Video-Instruction Tuning for Embodied Navigation
+
+- **Authors**: Mingfei Han, Liang Ma, Kamila Zhumakhanova, Ekaterina Radionova, Jingyi Zhang, Xiaojun Chang, Xiaodan Liang, Ivan Laptev
+
+#### Abstract
+
+Vision-and-Language Navigation (VLN) suffers from the limited diversity and
+scale of training data, primarily constrained by the manual curation of
+existing simulators. To address this, we introduce RoomTour3D, a
+video-instruction dataset derived from web-based room tour videos that capture
+real-world indoor spaces and human walking demonstrations. Unlike existing VLN
+datasets, RoomTour3D leverages the scale and diversity of online videos to
+generate open-ended human walking trajectories and open-world navigable
+instructions. To compensate for the lack of navigation data in online videos,
+we perform 3D reconstruction and obtain 3D trajectories of walking paths
+augmented with additional information on the room types, object locations and
+3D shape of surrounding scenes. Our dataset includes $\sim$100K open-ended
+description-enriched trajectories with $\sim$200K instructions, and 17K
+action-enriched trajectories from 1847 room tour environments. We demonstrate
+experimentally that RoomTour3D enables significant improvements across multiple
+VLN tasks including CVDN, SOON, R2R, and REVERIE. Moreover, RoomTour3D
+facilitates the development of trainable zero-shot VLN agents, showcasing the
+potential and challenges of advancing towards open-world navigation.
+
+[Paper Link](
+https://arxiv.org/abs/2412.08591
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-12_21-25.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### THUD++: Large-Scale Dynamic Indoor Scene Dataset and Benchmark for Mobile Robots
+
+- **Authors**: Zeshun Li, Fuhao Li, Wanting Zhang, Zijie Zheng, Xueping Liu, Yongjin Liu, Long Zeng
+
+#### Abstract
+
+Most existing mobile robotic datasets primarily capture static scenes,
+limiting their utility for evaluating robotic performance in dynamic
+environments. To address this, we present a mobile robot oriented large-scale
+indoor dataset, denoted as THUD++ (TsingHua University Dynamic) robotic
+dataset, for dynamic scene understanding. Our current dataset includes 13
+large-scale dynamic scenarios, combining both real-world and synthetic data
+collected with a real robot platform and a physical simulation platform,
+respectively. The RGB-D dataset comprises over 90K image frames, 20M 2D/3D
+bounding boxes of static and dynamic objects, camera poses, and IMU. The
+trajectory dataset covers over 6,000 pedestrian trajectories in indoor scenes.
+Additionally, the dataset is augmented with a Unity3D-based simulation
+platform, allowing researchers to create custom scenes and test algorithms in a
+controlled environment. We evaluate state-of-the-art methods on THUD++ across
+mainstream indoor scene understanding tasks, e.g., 3D object detection,
+semantic segmentation, relocalization, pedestrian trajectory prediction, and
+navigation. Our experiments highlight the challenges mobile robots encounter in
+indoor environments, especially when navigating in complex, crowded, and
+dynamic scenes. By sharing this dataset, we aim to accelerate the development
+and testing of mobile robot algorithms, contributing to real-world robotic
+applications.
+
+[Paper Link](
+https://arxiv.org/abs/2412.08096
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-12_21-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FLIP: Flow-Centric Generative Planning for General-Purpose Manipulation Tasks
+
+- **Authors**: Chongkai Gao, Haozhuo Zhang, Zhixuan Xu, Zhehao Cai, Lin Shao
+
+#### Abstract
+
+We aim to develop a model-based planning framework for world models that can
+be scaled with increasing model and data budgets for general-purpose
+manipulation tasks with only language and vision inputs. To this end, we
+present FLow-centric generative Planning (FLIP), a model-based planning
+algorithm on visual space that features three key modules: 1. a multi-modal
+flow generation model as the general-purpose action proposal module; 2. a
+flow-conditioned video generation model as the dynamics module; and 3. a
+vision-language representation learning model as the value module. Given an
+initial image and language instruction as the goal, FLIP can progressively
+search for long-horizon flow and video plans that maximize the discounted
+return to accomplish the task. FLIP is able to synthesize long-horizon plans
+across objects, robots, and tasks with image flows as the general action
+representation, and the dense flow information also provides rich guidance for
+long-horizon video generation. In addition, the synthesized flow and video
+plans can guide the training of low-level control policies for robot execution.
+Experiments on diverse benchmarks demonstrate that FLIP can improve both the
+success rates and quality of long-horizon video plan synthesis and has the
+interactive world model property, opening up wider applications for future
+works.
+
+[Paper Link](
+https://arxiv.org/abs/2412.08261
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-12_21-11.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-11
 
 
