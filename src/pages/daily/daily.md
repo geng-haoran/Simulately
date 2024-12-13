@@ -1,3 +1,118 @@
+## 2024-12-13
+
+
+### Learning Camera Movement Control from Real-World Drone Videos
+
+- **Authors**: Yunzhong Hou, Liang Zheng, Philip Torr
+
+#### Abstract
+
+This study seeks to automate camera movement control for filming existing
+subjects into attractive videos, contrasting with the creation of non-existent
+content by directly generating the pixels. We select drone videos as our test
+case due to their rich and challenging motion patterns, distinctive viewing
+angles, and precise controls. Existing AI videography methods struggle with
+limited appearance diversity in simulation training, high costs of recording
+expert operations, and difficulties in designing heuristic-based goals to cover
+all scenarios. To avoid these issues, we propose a scalable method that
+involves collecting real-world training data to improve diversity, extracting
+camera trajectories automatically to minimize annotation costs, and training an
+effective architecture that does not rely on heuristics. Specifically, we
+collect 99k high-quality trajectories by running 3D reconstruction on online
+videos, connecting camera poses from consecutive frames to formulate 3D camera
+paths, and using Kalman filter to identify and remove low-quality data.
+Moreover, we introduce DVGFormer, an auto-regressive transformer that leverages
+the camera path and images from all past frames to predict camera movement in
+the next frame. We evaluate our system across 38 synthetic natural scenes and 7
+real city 3D scans. We show that our system effectively learns to perform
+challenging camera movements such as navigating through obstacles, maintaining
+low altitude to increase perceived speed, and orbiting towers and buildings,
+which are very useful for recording high-quality videos. Data and code are
+available at dvgformer.github.io.
+
+[Paper Link](
+https://arxiv.org/abs/2412.09620
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-13_15-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GenEx: Generating an Explorable World
+
+- **Authors**: Taiming Lu, Tianmin Shu, Junfei Xiao, Luoxin Ye, Jiahao Wang, Cheng Peng, Chen Wei, Daniel Khashabi, Rama Chellappa, Alan Yuille, Jieneng Chen
+
+#### Abstract
+
+Understanding, navigating, and exploring the 3D physical real world has long
+been a central challenge in the development of artificial intelligence. In this
+work, we take a step toward this goal by introducing GenEx, a system capable of
+planning complex embodied world exploration, guided by its generative
+imagination that forms priors (expectations) about the surrounding
+environments. GenEx generates an entire 3D-consistent imaginative environment
+from as little as a single RGB image, bringing it to life through panoramic
+video streams. Leveraging scalable 3D world data curated from Unreal Engine,
+our generative model is rounded in the physical world. It captures a continuous
+360-degree environment with little effort, offering a boundless landscape for
+AI agents to explore and interact with. GenEx achieves high-quality world
+generation, robust loop consistency over long trajectories, and demonstrates
+strong 3D capabilities such as consistency and active 3D mapping. Powered by
+generative imagination of the world, GPT-assisted agents are equipped to
+perform complex embodied tasks, including both goal-agnostic exploration and
+goal-driven navigation. These agents utilize predictive expectation regarding
+unseen parts of the physical world to refine their beliefs, simulate different
+outcomes based on potential decisions, and make more informed choices. In
+summary, we demonstrate that GenEx provides a transformative platform for
+advancing embodied AI in imaginative spaces and brings potential for extending
+these capabilities to real-world exploration.
+
+[Paper Link](
+https://arxiv.org/abs/2412.09624
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-13_15-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GainAdaptor: Learning Quadrupedal Locomotion with Dual Actors for Adaptable and Energy-Efficient Walking on Various Terrains
+
+- **Authors**: Mincheol Kim, Nahyun Kwon, Jung-Yup Kim
+
+#### Abstract
+
+Deep reinforcement learning (DRL) has emerged as an innovative solution for
+controlling legged robots in challenging environments using minimalist
+architectures. Traditional control methods for legged robots, such as inverse
+dynamics, either directly manage joint torques or use proportional-derivative
+(PD) controllers to regulate joint positions at a higher level. In case of DRL,
+direct torque control presents significant challenges, leading to a preference
+for joint position control. However, this approach necessitates careful
+adjustment of joint PD gains, which can limit both adaptability and efficiency.
+In this paper, we propose GainAdaptor, an adaptive gain control framework that
+autonomously tunes joint PD gains to enhance terrain adaptability and energy
+efficiency. The framework employs a dual-actor algorithm to dynamically adjust
+the PD gains based on varying ground conditions. By utilizing a divided action
+space, GainAdaptor efficiently learns stable and energy-efficient locomotion.
+We validate the effectiveness of the proposed method through experiments
+conducted on a Unitree Go1 robot, demonstrating improved locomotion performance
+across diverse terrains.
+
+[Paper Link](
+https://arxiv.org/abs/2412.09520
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-13_13-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-12
 
 
