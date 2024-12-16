@@ -1,3 +1,115 @@
+## 2024-12-16
+
+
+### Should We Learn Contact-Rich Manipulation Policies from Sampling-Based Planners?
+
+- **Authors**: Huaijiang Zhu, Tong Zhao, Xinpei Ni, Jiuguang Wang, Kuan Fang, Ludovic Righetti, Tao Pang
+
+#### Abstract
+
+The tremendous success of behavior cloning (BC) in robotic manipulation has
+been largely confined to tasks where demonstrations can be effectively
+collected through human teleoperation. However, demonstrations for contact-rich
+manipulation tasks that require complex coordination of multiple contacts are
+difficult to collect due to the limitations of current teleoperation
+interfaces. We investigate how to leverage model-based planning and
+optimization to generate training data for contact-rich dexterous manipulation
+tasks. Our analysis reveals that popular sampling-based planners like rapidly
+exploring random tree (RRT), while efficient for motion planning, produce
+demonstrations with unfavorably high entropy. This motivates modifications to
+our data generation pipeline that prioritizes demonstration consistency while
+maintaining solution diversity. Combined with a diffusion-based
+goal-conditioned BC approach, our method enables effective policy learning and
+zero-shot transfer to hardware for two challenging contact-rich manipulation
+tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2412.09743
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-16_14-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning
+
+- **Authors**: Charles Xu, Qiyang Li, Jianlan Luo, Sergey Levine
+
+#### Abstract
+
+Recent advances in robotic foundation models have enabled the development of
+generalist policies that can adapt to diverse tasks. While these models show
+impressive flexibility, their performance heavily depends on the quality of
+their training data. In this work, we propose Reinforcement Learning Distilled
+Generalists (RLDG), a method that leverages reinforcement learning to generate
+high-quality training data for finetuning generalist policies. Through
+extensive real-world experiments on precise manipulation tasks like connector
+insertion and assembly, we demonstrate that generalist policies trained with
+RL-generated data consistently outperform those trained with human
+demonstrations, achieving up to 40% higher success rates while generalizing
+better to new tasks. We also provide a detailed analysis that reveals this
+performance gain stems from both optimized action distributions and improved
+state coverage. Our results suggest that combining task-specific RL with
+generalist policy distillation offers a promising approach for developing more
+capable and efficient robotic manipulation systems that maintain the
+flexibility of foundation models while achieving the performance of specialized
+controllers. Videos and code can be found on our project website
+https://generalist-distillation.github.io
+
+[Website Link](https://generalist-distillation.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2412.09858
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-16_13-19.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### One Filter to Deploy Them All: Robust Safety for Quadrupedal Navigation in Unknown Environments
+
+- **Authors**: Albert Lin, Shuang Peng, Somil Bansal
+
+#### Abstract
+
+As learning-based methods for legged robots rapidly grow in popularity, it is
+important that we can provide safety assurances efficiently across different
+controllers and environments. Existing works either rely on a priori knowledge
+of the environment and safety constraints to ensure system safety or provide
+assurances for a specific locomotion policy. To address these limitations, we
+propose an observation-conditioned reachability-based (OCR) safety-filter
+framework. Our key idea is to use an OCR value network (OCR-VN) that predicts
+the optimal control-theoretic safety value function for new failure regions and
+dynamic uncertainty during deployment time. Specifically, the OCR-VN
+facilitates rapid safety adaptation through two key components: a LiDAR-based
+input that allows the dynamic construction of safe regions in light of new
+obstacles and a disturbance estimation module that accounts for dynamics
+uncertainty in the wild. The predicted safety value function is used to
+construct an adaptive safety filter that overrides the nominal quadruped
+controller when necessary to maintain safety. Through simulation studies and
+hardware experiments on a Unitree Go1 quadruped, we demonstrate that the
+proposed framework can automatically safeguard a wide range of hierarchical
+quadruped controllers, adapts to novel environments, and is robust to unmodeled
+dynamics without a priori access to the controllers or environments - hence,
+"One Filter to Deploy Them All". The experiment videos can be found on the
+project website.
+
+[Paper Link](
+https://arxiv.org/abs/2412.09989
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-16_13-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-13
 
 
