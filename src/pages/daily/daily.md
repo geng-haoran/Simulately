@@ -1,3 +1,108 @@
+## 2024-12-17
+
+
+### GROOT-2: Weakly Supervised Multi-Modal Instruction Following Agents
+
+- **Authors**: Shaofei Cai, Bowei Zhang, Zihao Wang, Haowei Lin, Xiaojian Ma, Anji Liu, Yitao Liang
+
+#### Abstract
+
+Developing agents that can follow multimodal instructions remains a
+fundamental challenge in robotics and AI. Although large-scale pre-training on
+unlabeled datasets (no language instruction) has enabled agents to learn
+diverse behaviors, these agents often struggle with following instructions.
+While augmenting the dataset with instruction labels can mitigate this issue,
+acquiring such high-quality annotations at scale is impractical. To address
+this issue, we frame the problem as a semi-supervised learning task and
+introduce GROOT-2, a multimodal instructable agent trained using a novel
+approach that combines weak supervision with latent variable models. Our method
+consists of two key components: constrained self-imitating, which utilizes
+large amounts of unlabeled demonstrations to enable the policy to learn diverse
+behaviors, and human intention alignment, which uses a smaller set of labeled
+demonstrations to ensure the latent space reflects human intentions. GROOT-2's
+effectiveness is validated across four diverse environments, ranging from video
+games to robotic manipulation, demonstrating its robust multimodal
+instruction-following capabilities.
+
+[Paper Link](
+https://arxiv.org/abs/2412.10410
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-17_14-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Stabilizing Reinforcement Learning in Differentiable Multiphysics Simulation
+
+- **Authors**: Eliot Xing, Vernon Luk, Jean Oh
+
+#### Abstract
+
+Recent advances in GPU-based parallel simulation have enabled practitioners
+to collect large amounts of data and train complex control policies using deep
+reinforcement learning (RL), on commodity GPUs. However, such successes for RL
+in robotics have been limited to tasks sufficiently simulated by fast
+rigid-body dynamics. Simulation techniques for soft bodies are comparatively
+several orders of magnitude slower, thereby limiting the use of RL due to
+sample complexity requirements. To address this challenge, this paper presents
+both a novel RL algorithm and a simulation platform to enable scaling RL on
+tasks involving rigid bodies and deformables. We introduce Soft Analytic Policy
+Optimization (SAPO), a maximum entropy first-order model-based actor-critic RL
+algorithm, which uses first-order analytic gradients from differentiable
+simulation to train a stochastic actor to maximize expected return and entropy.
+Alongside our approach, we develop Rewarped, a parallel differentiable
+multiphysics simulation platform that supports simulating various materials
+beyond rigid bodies. We re-implement challenging manipulation and locomotion
+tasks in Rewarped, and show that SAPO outperforms baselines over a range of
+tasks that involve interaction between rigid bodies, articulations, and
+deformables.
+
+[Paper Link](
+https://arxiv.org/abs/2412.12089
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-17_14-09.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning
+
+- **Authors**: Jimmy Wu, William Chong, Robert Holmberg, Aaditya Prasad, Yihuai Gao, Oussama Khatib, Shuran Song, Szymon Rusinkiewicz, Jeannette Bohg
+
+#### Abstract
+
+Exploiting the promise of recent advances in imitation learning for mobile
+manipulation will require the collection of large numbers of human-guided
+demonstrations. This paper proposes an open-source design for an inexpensive,
+robust, and flexible mobile manipulator that can support arbitrary arms,
+enabling a wide range of real-world household mobile manipulation tasks.
+Crucially, our design uses powered casters to enable the mobile base to be
+fully holonomic, able to control all planar degrees of freedom independently
+and simultaneously. This feature makes the base more maneuverable and
+simplifies many mobile manipulation tasks, eliminating the kinematic
+constraints that create complex and time-consuming motions in nonholonomic
+bases. We equip our robot with an intuitive mobile phone teleoperation
+interface to enable easy data acquisition for imitation learning. In our
+experiments, we use this interface to collect data and show that the resulting
+learned policies can successfully perform a variety of common household mobile
+manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2412.10447
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-17_14-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-16
 
 
