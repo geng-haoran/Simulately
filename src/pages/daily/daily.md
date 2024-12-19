@@ -1,3 +1,242 @@
+## 2024-12-19
+
+
+### When Should We Prefer State-to-Visual DAgger Over Visual Reinforcement Learning?
+
+- **Authors**: Tongzhou Mu, Zhaoyang Li, Stanisław Wiktor Strzelecki, Xiu Yuan, Yunchao Yao, Litian Liang, Hao Su
+
+#### Abstract
+
+Learning policies from high-dimensional visual inputs, such as pixels and
+point clouds, is crucial in various applications. Visual reinforcement learning
+is a promising approach that directly trains policies from visual observations,
+although it faces challenges in sample efficiency and computational costs. This
+study conducts an empirical comparison of State-to-Visual DAgger, a two-stage
+framework that initially trains a state policy before adopting online imitation
+to learn a visual policy, and Visual RL across a diverse set of tasks. We
+evaluate both methods across 16 tasks from three benchmarks, focusing on their
+asymptotic performance, sample efficiency, and computational costs.
+Surprisingly, our findings reveal that State-to-Visual DAgger does not
+universally outperform Visual RL but shows significant advantages in
+challenging tasks, offering more consistent performance. In contrast, its
+benefits in sample efficiency are less pronounced, although it often reduces
+the overall wall-clock time required for training. Based on our findings, we
+provide recommendations for practitioners and hope that our results contribute
+valuable perspectives for future research in visual policy learning.
+
+[Paper Link](
+https://arxiv.org/abs/2412.13662
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-19_20-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Efficient Language-instructed Skill Acquisition via Reward-Policy Co-Evolution
+
+- **Authors**: Changxin Huang, Yanbin Chang, Junfan Lin, Junyang Liang, Runhao Zeng, Jianqiang Li
+
+#### Abstract
+
+The ability to autonomously explore and resolve tasks with minimal human
+guidance is crucial for the self-development of embodied intelligence. Although
+reinforcement learning methods can largely ease human effort, it's challenging
+to design reward functions for real-world tasks, especially for
+high-dimensional robotic control, due to complex relationships among joints and
+tasks. Recent advancements large language models (LLMs) enable automatic reward
+function design. However, approaches evaluate reward functions by re-training
+policies from scratch placing an undue burden on the reward function, expecting
+it to be effective throughout the whole policy improvement process. We argue
+for a more practical strategy in robotic autonomy, focusing on refining
+existing policies with policy-dependent reward functions rather than a
+universal one. To this end, we propose a novel reward-policy co-evolution
+framework where the reward function and the learned policy benefit from each
+other's progressive on-the-fly improvements, resulting in more efficient and
+higher-performing skill acquisition. Specifically, the reward evolution process
+translates the robot's previous best reward function, descriptions of tasks and
+environment into text inputs. These inputs are used to query LLMs to generate a
+dynamic amount of reward function candidates, ensuring continuous improvement
+at each round of evolution. For policy evolution, our method generates new
+policy populations by hybridizing historically optimal and random policies.
+Through an improved Bayesian optimization, our approach efficiently and
+robustly identifies the most capable and plastic reward-policy combination,
+which then proceeds to the next round of co-evolution. Despite using less data,
+our approach demonstrates an average normalized improvement of 95.3% across
+various high-dimensional robotic skill learning tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2412.13492
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-19_20-12.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### TelePhantom: A User-Friendly Teleoperation System with Virtual Assistance for Enhanced Effectiveness
+
+- **Authors**: Jingxiang Guo, Jiayu Luo, Zhenyu Wei, Yiwen Hou, Zhixuan Xu, Xiaoyi Lin, Chongkai Gao, Lin Shao
+
+#### Abstract
+
+Dexterous manipulation is a critical area of robotics. In this field,
+teleoperation faces three key challenges: user-friendliness for novices, safety
+assurance, and transferability across different platforms. While collecting
+real robot dexterous manipulation data by teleoperation to train robots has
+shown impressive results on diverse tasks, due to the morphological differences
+between human and robot hands, it is not only hard for new users to understand
+the action mapping but also raises potential safety concerns during operation.
+To address these limitations, we introduce TelePhantom. This teleoperation
+system offers real-time visual feedback on robot actions based on human user
+inputs, with a total hardware cost of less than $1,000. TelePhantom allows the
+user to see a virtual robot that represents the outcome of the user's next
+movement. By enabling flexible switching between command visualization and
+actual execution, this system helps new users learn how to demonstrate quickly
+and safely. We demonstrate its superiority over other teleoperation systems
+across five tasks, emphasize its ease of use, and highlight its ease of
+deployment across diverse input sensors and robotic platforms. We will release
+our code and a deployment document on our website:
+https://telephantom.github.io/.
+
+[Website Link](https://telephantom.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2412.13548
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-19_20-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data for Robot Manipulation
+
+- **Authors**: Kun Wu, Chengkai Hou, Jiaming Liu, Zhengping Che, Xiaozhu Ju, Zhuqin Yang, Meng Li, Yinuo Zhao, Zhiyuan Xu, Guang Yang, Zhen Zhao, Guangyu Li, Zhao Jin, Lecheng Wang, Jilei Mao, Xinhua Wang, Shichao Fan, Ning Liu, Pei Ren, Qiang Zhang, Yaoxu Lyu, Mengzhen Liu, Jingyang He, Yulin Luo, Zeyu Gao, Chenxuan Li, Chenyang Gu, Yankai Fu, Di Wu, Xingyu Wang, Sixiang Chen, Zhenyu Wang, Pengju An, Siyuan Qian, Shanghang Zhang, Jian Tang
+
+#### Abstract
+
+Developing robust and general-purpose robotic manipulation policies is a key
+goal in the field of robotics. To achieve effective generalization, it is
+essential to construct comprehensive datasets that encompass a large number of
+demonstration trajectories and diverse tasks. Unlike vision or language data
+that can be collected from the Internet, robotic datasets require detailed
+observations and manipulation actions, necessitating significant investment in
+hardware-software infrastructure and human labor. While existing works have
+focused on assembling various individual robot datasets, there remains a lack
+of a unified data collection standard and insufficient diversity in tasks,
+scenarios, and robot types. In this paper, we introduce RoboMIND
+(Multi-embodiment Intelligence Normative Data for Robot manipulation),
+featuring 55k real-world demonstration trajectories across 279 diverse tasks
+involving 61 different object classes. RoboMIND is collected through human
+teleoperation and encompasses comprehensive robotic-related information,
+including multi-view RGB-D images, proprioceptive robot state information, end
+effector details, and linguistic task descriptions. To ensure dataset
+consistency and reliability during policy learning, RoboMIND is built on a
+unified data collection platform and standardized protocol, covering four
+distinct robotic embodiments. We provide a thorough quantitative and
+qualitative analysis of RoboMIND across multiple dimensions, offering detailed
+insights into the diversity of our datasets. In our experiments, we conduct
+extensive real-world testing with four state-of-the-art imitation learning
+methods, demonstrating that training with RoboMIND data results in a high
+manipulation success rate and strong generalization. Our project is at
+https://x-humanoid-robomind.github.io/.
+
+[Website Link](https://x-humanoid-robomind.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2412.13877
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-19_19-34.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning from Massive Human Videos for Universal Humanoid Pose Control
+
+- **Authors**: Jiageng Mao, Siheng Zhao, Siqi Song, Tianheng Shi, Junjie Ye, Mingtong Zhang, Haoran Geng, Jitendra Malik, Vitor Guizilini, Yue Wang
+
+#### Abstract
+
+Scalable learning of humanoid robots is crucial for their deployment in
+real-world applications. While traditional approaches primarily rely on
+reinforcement learning or teleoperation to achieve whole-body control, they are
+often limited by the diversity of simulated environments and the high costs of
+demonstration collection. In contrast, human videos are ubiquitous and present
+an untapped source of semantic and motion information that could significantly
+enhance the generalization capabilities of humanoid robots. This paper
+introduces Humanoid-X, a large-scale dataset of over 20 million humanoid robot
+poses with corresponding text-based motion descriptions, designed to leverage
+this abundant data. Humanoid-X is curated through a comprehensive pipeline:
+data mining from the Internet, video caption generation, motion retargeting of
+humans to humanoid robots, and policy learning for real-world deployment. With
+Humanoid-X, we further train a large humanoid model, UH-1, which takes text
+instructions as input and outputs corresponding actions to control a humanoid
+robot. Extensive simulated and real-world experiments validate that our
+scalable training approach leads to superior generalization in text-based
+humanoid control, marking a significant step toward adaptable, real-world-ready
+humanoid robots.
+
+[Paper Link](
+https://arxiv.org/abs/2412.14172
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-19_17-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Towards Generalist Robot Policies: What Matters in Building Vision-Language-Action Models
+
+- **Authors**: Xinghang Li, Peiyan Li, Minghuan Liu, Dong Wang, Jirong Liu, Bingyi Kang, Xiao Ma, Tao Kong, Hanbo Zhang, Huaping Liu
+
+#### Abstract
+
+Foundation Vision Language Models (VLMs) exhibit strong capabilities in
+multi-modal representation learning, comprehension, and reasoning. By injecting
+action components into the VLMs, Vision-Language-Action Models (VLAs) can be
+naturally formed and also show promising performance. Existing work has
+demonstrated the effectiveness and generalization of VLAs in multiple scenarios
+and tasks. Nevertheless, the transfer from VLMs to VLAs is not trivial since
+existing VLAs differ in their backbones, action-prediction formulations, data
+distributions, and training recipes. This leads to a missing piece for a
+systematic understanding of the design choices of VLAs. In this work, we
+disclose the key factors that significantly influence the performance of VLA
+and focus on answering three essential design choices: which backbone to
+select, how to formulate the VLA architectures, and when to add
+cross-embodiment data. The obtained results convince us firmly to explain why
+we need VLA and develop a new family of VLAs, RoboVLMs, which require very few
+manual designs and achieve a new state-of-the-art performance in three
+simulation tasks and real-world experiments. Through our extensive experiments,
+which include over 8 VLM backbones, 4 policy architectures, and over 600
+distinct designed experiments, we provide a detailed guidebook for the future
+design of VLAs. In addition to the study, the highly flexible RoboVLMs
+framework, which supports easy integrations of new VLMs and free combinations
+of various design choices, is made public to facilitate future research. We
+open-source all details, including codes, models, datasets, and toolkits, along
+with detailed training and evaluation recipes at: robovlms.github.io.
+
+[Paper Link](
+https://arxiv.org/abs/2412.14058
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-19_19-29.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-17
 
 
