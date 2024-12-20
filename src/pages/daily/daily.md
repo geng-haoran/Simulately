@@ -1,3 +1,197 @@
+## 2024-12-20
+
+
+### The One RING: a Robotic Indoor Navigation Generalist
+
+- **Authors**: Ainaz Eftekhar, Luca Weihs, Rose Hendrix, Ege Caglar, Jordi Salvador, Alvaro Herrasti, Winson Han, Eli VanderBil, Aniruddha Kembhavi, Ali Farhadi, Ranjay Krishna, Kiana Ehsani, Kuo-Hao Zeng
+
+#### Abstract
+
+Modern robots vary significantly in shape, size, and sensor configurations
+used to perceive and interact with their environments. However, most navigation
+policies are embodiment-specific; a policy learned using one robot's
+configuration does not typically gracefully generalize to another. Even small
+changes in the body size or camera viewpoint may cause failures. With the
+recent surge in custom hardware developments, it is necessary to learn a single
+policy that can be transferred to other embodiments, eliminating the need to
+(re)train for each specific robot. In this paper, we introduce RING (Robotic
+Indoor Navigation Generalist), an embodiment-agnostic policy, trained solely in
+simulation with diverse randomly initialized embodiments at scale.
+Specifically, we augment the AI2-THOR simulator with the ability to instantiate
+robot embodiments with controllable configurations, varying across body size,
+rotation pivot point, and camera configurations. In the visual object-goal
+navigation task, RING achieves robust performance on real unseen robot
+platforms (Stretch RE-1, LoCoBot, Unitree's Go1), achieving an average of 72.1%
+and 78.9% success rate across 5 embodiments in simulation and 4 robot platforms
+in the real world. (project website: https://one-ring-policy.allen.ai/)
+
+[Website Link](https://one-ring-policy.allen.ai/))
+
+[Paper Link](
+https://arxiv.org/abs/2412.14401
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-20_20-23.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Embedding high-resolution touch across robotic hands enables adaptive human-like grasping
+
+- **Authors**: Zihang Zhao, Wanlin Li, Yuyang Li, Tengyu Liu, Boren Li, Meng Wang, Kai Du, Hangxin Liu, Yixin Zhu, Qining Wang, Kaspar Althoefer, Song-Chun Zhu
+
+#### Abstract
+
+Developing robotic hands that adapt to real-world dynamics remains a
+fundamental challenge in robotics and machine intelligence. Despite significant
+advances in replicating human hand kinematics and control algorithms, robotic
+systems still struggle to match human capabilities in dynamic environments,
+primarily due to inadequate tactile feedback. To bridge this gap, we present
+F-TAC Hand, a biomimetic hand featuring high-resolution tactile sensing (0.1mm
+spatial resolution) across 70% of its surface area. Through optimized hand
+design, we overcome traditional challenges in integrating high-resolution
+tactile sensors while preserving the full range of motion. The hand, powered by
+our generative algorithm that synthesizes human-like hand configurations,
+demonstrates robust grasping capabilities in dynamic real-world conditions.
+Extensive evaluation across 600 real-world trials demonstrates that this
+tactile-embodied system significantly outperforms non-tactile alternatives in
+complex manipulation tasks (p<0.0001). These results provide empirical evidence
+for the critical role of rich tactile embodiment in developing advanced robotic
+intelligence, offering new perspectives on the relationship between physical
+sensing capabilities and intelligent behavior.
+
+[Paper Link](
+https://arxiv.org/abs/2412.14482
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-20_20-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Predictive Inverse Dynamics Models are Scalable Learners for Robotic Manipulation
+
+- **Authors**: Yang Tian, Sizhe Yang, Jia Zeng, Ping Wang, Dahua Lin, Hao Dong, Jiangmiao Pang
+
+#### Abstract
+
+Current efforts to learn scalable policies in robotic manipulation primarily
+fall into two categories: one focuses on "action," which involves behavior
+cloning from extensive collections of robotic data, while the other emphasizes
+"vision," enhancing model generalization by pre-training representations or
+generative models, also referred to as world models, using large-scale visual
+datasets. This paper presents an end-to-end paradigm that predicts actions
+using inverse dynamics models conditioned on the robot's forecasted visual
+states, named Predictive Inverse Dynamics Models (PIDM). By closing the loop
+between vision and action, the end-to-end PIDM can be a better scalable action
+learner. In practice, we use Transformers to process both visual states and
+actions, naming the model Seer. It is initially pre-trained on large-scale
+robotic datasets, such as DROID, and can be adapted to realworld scenarios with
+a little fine-tuning data. Thanks to large-scale, end-to-end training and the
+synergy between vision and action, Seer significantly outperforms previous
+methods across both simulation and real-world experiments. It achieves
+improvements of 13% on the LIBERO-LONG benchmark, 21% on CALVIN ABC-D, and 43%
+in real-world tasks. Notably, Seer sets a new state-of-the-art on CALVIN ABC-D
+benchmark, achieving an average length of 4.28, and exhibits superior
+generalization for novel objects, lighting conditions, and environments under
+high-intensity disturbances on real-world scenarios. Code and models are
+publicly available at https://github.com/OpenRobotLab/Seer/.
+
+[Website Link](https://github.com/OpenRobotLab/Seer/.)
+
+[Paper Link](
+https://arxiv.org/abs/2412.15109
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-20_19-59.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Human-Humanoid Robots Cross-Embodiment Behavior-Skill Transfer Using Decomposed Adversarial Learning from Demonstration
+
+- **Authors**: Junjia Liu, Zhuo Li, Minghao Yu, Zhipeng Dong, Sylvain Calinon, Darwin Caldwell, Fei Chen
+
+#### Abstract
+
+Humanoid robots are envisioned as embodied intelligent agents capable of
+performing a wide range of human-level loco-manipulation tasks, particularly in
+scenarios requiring strenuous and repetitive labor. However, learning these
+skills is challenging due to the high degrees of freedom of humanoid robots,
+and collecting sufficient training data for humanoid is a laborious process.
+Given the rapid introduction of new humanoid platforms, a cross-embodiment
+framework that allows generalizable skill transfer is becoming increasingly
+critical. To address this, we propose a transferable framework that reduces the
+data bottleneck by using a unified digital human model as a common prototype
+and bypassing the need for re-training on every new robot platform. The model
+learns behavior primitives from human demonstrations through adversarial
+imitation, and the complex robot structures are decomposed into functional
+components, each trained independently and dynamically coordinated. Task
+generalization is achieved through a human-object interaction graph, and skills
+are transferred to different robots via embodiment-specific kinematic motion
+retargeting and dynamic fine-tuning. Our framework is validated on five
+humanoid robots with diverse configurations, demonstrating stable
+loco-manipulation and highlighting its effectiveness in reducing data
+requirements and increasing the efficiency of skill transfer across platforms.
+
+[Paper Link](
+https://arxiv.org/abs/2412.15166
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-20_19-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### STRAP: Robot Sub-Trajectory Retrieval for Augmented Policy Learning
+
+- **Authors**: Marius Memmel, Jacob Berg, Bingqing Chen, Abhishek Gupta, Jonathan Francis
+
+#### Abstract
+
+Robot learning is witnessing a significant increase in the size, diversity,
+and complexity of pre-collected datasets, mirroring trends in domains such as
+natural language processing and computer vision. Many robot learning methods
+treat such datasets as multi-task expert data and learn a multi-task,
+generalist policy by training broadly across them. Notably, while these
+generalist policies can improve the average performance across many tasks, the
+performance of generalist policies on any one task is often suboptimal due to
+negative transfer between partitions of the data, compared to task-specific
+specialist policies. In this work, we argue for the paradigm of training
+policies during deployment given the scenarios they encounter: rather than
+deploying pre-trained policies to unseen problems in a zero-shot manner, we
+non-parametrically retrieve and train models directly on relevant data at test
+time. Furthermore, we show that many robotics tasks share considerable amounts
+of low-level behaviors and that retrieval at the "sub"-trajectory granularity
+enables significantly improved data utilization, generalization, and robustness
+in adapting policies to novel problems. In contrast, existing full-trajectory
+retrieval methods tend to underutilize the data and miss out on shared
+cross-task content. This work proposes STRAP, a technique for leveraging
+pre-trained vision foundation models and dynamic time warping to retrieve
+sub-sequences of trajectories from large training corpora in a robust fashion.
+STRAP outperforms both prior retrieval algorithms and multi-task learning
+methods in simulated and real experiments, showing the ability to scale to much
+larger offline datasets in the real world as well as the ability to learn
+robust control policies with just a handful of real-world demonstrations.
+
+[Paper Link](
+https://arxiv.org/abs/2412.15182
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-20_19-20.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-19
 
 
