@@ -1,3 +1,74 @@
+## 2024-12-23
+
+
+### FORCE: Physics-aware Human-object Interaction
+
+- **Authors**: Xiaohan Zhang, Bharat Lal Bhatnagar, Sebastian Starke, Ilya Petrov, Vladimir Guzov, Helisa Dhamo, Eduardo Pérez-Pellitero, Gerard Pons-Moll
+
+#### Abstract
+
+Interactions between human and objects are influenced not only by the
+object's pose and shape, but also by physical attributes such as object mass
+and surface friction. They introduce important motion nuances that are
+essential for diversity and realism. Despite advancements in recent
+human-object interaction methods, this aspect has been overlooked. Generating
+nuanced human motion presents two challenges. First, it is non-trivial to learn
+from multi-modal human and object information derived from both the physical
+and non-physical attributes. Second, there exists no dataset capturing nuanced
+human interactions with objects of varying physical properties, hampering model
+development. This work addresses the gap by introducing the FORCE model, an
+approach for synthesizing diverse, nuanced human-object interactions by
+modeling physical attributes. Our key insight is that human motion is dictated
+by the interrelation between the force exerted by the human and the perceived
+resistance. Guided by a novel intuitive physics encoding, the model captures
+the interplay between human force and resistance. Experiments also demonstrate
+incorporating human force facilitates learning multi-class motion. Accompanying
+our model, we contribute a dataset, which features diverse, different-styled
+motion through interactions with varying resistances.
+
+[Paper Link](
+https://arxiv.org/abs/2403.11237
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-23_14-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Dexterous Manipulation Based on Prior Dexterous Grasp Pose Knowledge
+
+- **Authors**: Hengxu Yan, Haoshu Fang, Cewu Lu
+
+#### Abstract
+
+Dexterous manipulation has received considerable attention in recent
+research. Predominantly, existing studies have concentrated on reinforcement
+learning methods to address the substantial degrees of freedom in hand
+movements. Nonetheless, these methods typically suffer from low efficiency and
+accuracy. In this work, we introduce a novel reinforcement learning approach
+that leverages prior dexterous grasp pose knowledge to enhance both efficiency
+and accuracy. Unlike previous work, they always make the robotic hand go with a
+fixed dexterous grasp pose, We decouple the manipulation process into two
+distinct phases: initially, we generate a dexterous grasp pose targeting the
+functional part of the object; after that, we employ reinforcement learning to
+comprehensively explore the environment. Our findings suggest that the majority
+of learning time is expended in identifying the appropriate initial position
+and selecting the optimal manipulation viewpoint. Experimental results
+demonstrate significant improvements in learning efficiency and success rates
+across four distinct tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2412.15587
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-23_14-34.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-20
 
 
