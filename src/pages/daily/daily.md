@@ -1,3 +1,69 @@
+## 2024-12-24
+
+
+### Learning an Adaptive Fall Recovery Controller for Quadrupeds on Complex Terrains
+
+- **Authors**: Yidan Lu, Yinzhao Dong, Ji Ma, Jiahui Zhang, Peng Lu
+
+#### Abstract
+
+Legged robots have shown promise in locomotion complex environments, but
+recovery from falls on challenging terrains remains a significant hurdle. This
+paper presents an Adaptive Fall Recovery (AFR) controller for quadrupedal
+robots on challenging terrains such as rocky, breams, steep slopes, and
+irregular stones. We leverage deep reinforcement learning to train the AFR,
+which can adapt to a wide range of terrain geometries and physical properties.
+Our method demonstrates improvements over existing approaches, showing
+promising results in recovery scenarios on challenging terrains. We trained our
+method in Isaac Gym using the Go1 and directly transferred it to several
+mainstream quadrupedal platforms, such as Spot and ANYmal. Additionally, we
+validated the controller's effectiveness in Gazebo. Our results indicate that
+the AFR controller generalizes well to complex terrains and outperforms
+baseline methods in terms of success rate and recovery speed.
+
+[Paper Link](
+https://arxiv.org/abs/2412.16924
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-24_12-21.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Mimicking-Bench: A Benchmark for Generalizable Humanoid-Scene Interaction Learning via Human Mimicking
+
+- **Authors**: Yun Liu, Bowen Yang, Licheng Zhong, He Wang, Li Yi
+
+#### Abstract
+
+Learning generic skills for humanoid robots interacting with 3D scenes by
+mimicking human data is a key research challenge with significant implications
+for robotics and real-world applications. However, existing methodologies and
+benchmarks are constrained by the use of small-scale, manually collected
+demonstrations, lacking the general dataset and benchmark support necessary to
+explore scene geometry generalization effectively. To address this gap, we
+introduce Mimicking-Bench, the first comprehensive benchmark designed for
+generalizable humanoid-scene interaction learning through mimicking large-scale
+human animation references. Mimicking-Bench includes six household full-body
+humanoid-scene interaction tasks, covering 11K diverse object shapes, along
+with 20K synthetic and 3K real-world human interaction skill references. We
+construct a complete humanoid skill learning pipeline and benchmark approaches
+for motion retargeting, motion tracking, imitation learning, and their various
+combinations. Extensive experiments highlight the value of human mimicking for
+skill learning, revealing key challenges and research directions.
+
+[Paper Link](
+https://arxiv.org/abs/2412.17730
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-24_12-11.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-23
 
 
