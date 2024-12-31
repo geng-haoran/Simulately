@@ -1,3 +1,73 @@
+## 2024-12-31
+
+
+### SyncDiff: Synchronized Motion Diffusion for Multi-Body Human-Object Interaction Synthesis
+
+- **Authors**: Wenkun He, Yun Liu, Ruitao Liu, Li Yi
+
+#### Abstract
+
+Synthesizing realistic human-object interaction motions is a critical problem
+in VR/AR and human animation. Unlike the commonly studied scenarios involving a
+single human or hand interacting with one object, we address a more generic
+multi-body setting with arbitrary numbers of humans, hands, and objects. This
+complexity introduces significant challenges in synchronizing motions due to
+the high correlations and mutual influences among bodies. To address these
+challenges, we introduce SyncDiff, a novel method for multi-body interaction
+synthesis using a synchronized motion diffusion strategy. SyncDiff employs a
+single diffusion model to capture the joint distribution of multi-body motions.
+To enhance motion fidelity, we propose a frequency-domain motion decomposition
+scheme. Additionally, we introduce a new set of alignment scores to emphasize
+the synchronization of different body motions. SyncDiff jointly optimizes both
+data sample likelihood and alignment likelihood through an explicit
+synchronization strategy. Extensive experiments across four datasets with
+various multi-body configurations demonstrate the superiority of SyncDiff over
+existing state-of-the-art motion synthesis methods.
+
+[Paper Link](
+https://arxiv.org/abs/2412.20104
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-31_14-30.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### UnrealZoo: Enriching Photo-realistic Virtual Worlds for Embodied AI
+
+- **Authors**: Fangwei Zhong, Kui Wu, Churan Wang, Hao Chen, Hai Ci, Zhoujun Li, Yizhou Wang
+
+#### Abstract
+
+We introduce UnrealZoo, a rich collection of photo-realistic 3D virtual
+worlds built on Unreal Engine, designed to reflect the complexity and
+variability of the open worlds. Additionally, we offer a variety of playable
+entities for embodied AI agents. Based on UnrealCV, we provide a suite of
+easy-to-use Python APIs and tools for various potential applications, such as
+data collection, environment augmentation, distributed training, and
+benchmarking. We optimize the rendering and communication efficiency of
+UnrealCV to support advanced applications, such as multi-agent interaction. Our
+experiments benchmark agents in various complex scenes, focusing on visual
+navigation and tracking, which are fundamental capabilities for embodied visual
+intelligence. The results yield valuable insights into the advantages of
+diverse training environments for reinforcement learning (RL) agents and the
+challenges faced by current embodied vision agents, including those based on RL
+and large vision-language models (VLMs), in open worlds. These challenges
+involve latency in closed-loop control in dynamic scenes and reasoning about 3D
+spatial structures in unstructured terrain.
+
+[Paper Link](
+https://arxiv.org/abs/2412.20977
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2024-12-31_14-22.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-25
 
 
