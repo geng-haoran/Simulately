@@ -1,3 +1,80 @@
+## 2025-01-03
+
+
+### Leverage Cross-Attention for End-to-End Open-Vocabulary Panoptic Reconstruction
+
+- **Authors**: Xuan Yu, Yuxuan Xie, Yili Liu, Haojian Lu, Rong Xiong, Yiyi Liao, Yue Wang
+
+#### Abstract
+
+Open-vocabulary panoptic reconstruction offers comprehensive scene
+understanding, enabling advances in embodied robotics and photorealistic
+simulation. In this paper, we propose PanopticRecon++, an end-to-end method
+that formulates panoptic reconstruction through a novel cross-attention
+perspective. This perspective models the relationship between 3D instances (as
+queries) and the scene's 3D embedding field (as keys) through their attention
+map. Unlike existing methods that separate the optimization of queries and keys
+or overlook spatial proximity, PanopticRecon++ introduces learnable 3D
+Gaussians as instance queries. This formulation injects 3D spatial priors to
+preserve proximity while maintaining end-to-end optimizability. Moreover, this
+query formulation facilitates the alignment of 2D open-vocabulary instance IDs
+across frames by leveraging optimal linear assignment with instance masks
+rendered from the queries. Additionally, we ensure semantic-instance
+segmentation consistency by fusing query-based instance segmentation
+probabilities with semantic probabilities in a novel panoptic head supervised
+by a panoptic loss. During training, the number of instance query tokens
+dynamically adapts to match the number of objects. PanopticRecon++ shows
+competitive performance in terms of 3D and 2D segmentation and reconstruction
+performance on both simulation and real-world datasets, and demonstrates a user
+case as a robot simulator. Our project website is at:
+https://yuxuan1206.github.io/panopticrecon_pp/
+
+[Website Link](https://yuxuan1206.github.io/panopticrecon_pp/)
+
+[Paper Link](
+https://arxiv.org/abs/2501.01119
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-03_14-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VinT-6D: A Large-Scale Object-in-hand Dataset from Vision, Touch and Proprioception
+
+- **Authors**: Zhaoliang Wan, Yonggen Ling, Senlin Yi, Lu Qi, Wangwei Lee, Minglei Lu, Sicheng Yang, Xiao Teng, Peng Lu, Xu Yang, Ming-Hsuan Yang, Hui Cheng
+
+#### Abstract
+
+This paper addresses the scarcity of large-scale datasets for accurate
+object-in-hand pose estimation, which is crucial for robotic in-hand
+manipulation within the ``Perception-Planning-Control" paradigm. Specifically,
+we introduce VinT-6D, the first extensive multi-modal dataset integrating
+vision, touch, and proprioception, to enhance robotic manipulation. VinT-6D
+comprises 2 million VinT-Sim and 0.1 million VinT-Real splits, collected via
+simulations in MuJoCo and Blender and a custom-designed real-world platform.
+This dataset is tailored for robotic hands, offering models with whole-hand
+tactile perception and high-quality, well-aligned data. To the best of our
+knowledge, the VinT-Real is the largest considering the collection difficulties
+in the real-world environment so that it can bridge the gap of simulation to
+real compared to the previous works. Built upon VinT-6D, we present a benchmark
+method that shows significant improvements in performance by fusing multi-modal
+information. The project is available at https://VinT-6D.github.io/.
+
+[Website Link](https://VinT-6D.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.00510
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-03_14-27.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2024-12-31
 
 
