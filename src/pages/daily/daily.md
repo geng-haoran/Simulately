@@ -1,3 +1,82 @@
+## 2025-01-06
+
+
+### TRG-planner: Traversal Risk Graph-Based Path Planning in Unstructured Environments for Safe and Efficient Navigation
+
+- **Authors**: Dongkyu Lee, I Made Aswin Nahrendra, Minho Oh, Byeongho Yu, Hyun Myung
+
+#### Abstract
+
+Unstructured environments such as mountains, caves, construction sites, or
+disaster areas are challenging for autonomous navigation because of terrain
+irregularities. In particular, it is crucial to plan a path to avoid risky
+terrain and reach the goal quickly and safely. In this paper, we propose a
+method for safe and distance-efficient path planning, leveraging Traversal Risk
+Graph (TRG), a novel graph representation that takes into account geometric
+traversability of the terrain. TRG nodes represent stability and reachability
+of the terrain, while edges represent relative traversal risk-weighted path
+candidates. Additionally, TRG is constructed in a wavefront propagation manner
+and managed hierarchically, enabling real-time planning even in large-scale
+environments. Lastly, we formulate a graph optimization problem on TRG that
+leads the robot to navigate by prioritizing both safe and short paths. Our
+approach demonstrated superior safety, distance efficiency, and fast processing
+time compared to the conventional methods. It was also validated in several
+real-world experiments using a quadrupedal robot. Notably, TRG-planner
+contributed as the global path planner of an autonomous navigation framework
+for the DreamSTEP team, which won the Quadruped Robot Challenge at ICRA 2023.
+The project page is available at https://trg-planner.github.io .
+
+[Website Link](https://trg-planner.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2501.01806
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-06_13-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### EnerVerse: Envisioning Embodied Future Space for Robotics Manipulation
+
+- **Authors**: Siyuan Huang, Liliang Chen, Pengfei Zhou, Shengcong Chen, Zhengkai Jiang, Yue Hu, Peng Gao, Hongsheng Li, Maoqing Yao, Guanghui Ren
+
+#### Abstract
+
+We introduce EnerVerse, a comprehensive framework for embodied future space
+generation specifically designed for robotic manipulation tasks. EnerVerse
+seamlessly integrates convolutional and bidirectional attention mechanisms for
+inner-chunk space modeling, ensuring low-level consistency and continuity.
+Recognizing the inherent redundancy in video data, we propose a sparse memory
+context combined with a chunkwise unidirectional generative paradigm to enable
+the generation of infinitely long sequences. To further augment robotic
+capabilities, we introduce the Free Anchor View (FAV) space, which provides
+flexible perspectives to enhance observation and analysis. The FAV space
+mitigates motion modeling ambiguity, removes physical constraints in confined
+environments, and significantly improves the robot's generalization and
+adaptability across various tasks and settings. To address the prohibitive
+costs and labor intensity of acquiring multi-camera observations, we present a
+data engine pipeline that integrates a generative model with 4D Gaussian
+Splatting (4DGS). This pipeline leverages the generative model's robust
+generalization capabilities and the spatial constraints provided by 4DGS,
+enabling an iterative enhancement of data quality and diversity, thus creating
+a data flywheel effect that effectively narrows the sim-to-real gap. Finally,
+our experiments demonstrate that the embodied future space generation prior
+substantially enhances policy predictive capabilities, resulting in improved
+overall performance, particularly in long-range robotic manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2501.01895
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-06_13-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-03
 
 
