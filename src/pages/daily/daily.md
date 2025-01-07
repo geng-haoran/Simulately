@@ -1,3 +1,76 @@
+## 2025-01-07
+
+
+### Depth Any Camera: Zero-Shot Metric Depth Estimation from Any Camera
+
+- **Authors**: Yuliang Guo, Sparsh Garg, S. Mahdi H. Miangoleh, Xinyu Huang, Liu Ren
+
+#### Abstract
+
+While recent depth estimation methods exhibit strong zero-shot
+generalization, achieving accurate metric depth across diverse camera
+types-particularly those with large fields of view (FoV) such as fisheye and
+360-degree cameras-remains a significant challenge. This paper presents Depth
+Any Camera (DAC), a powerful zero-shot metric depth estimation framework that
+extends a perspective-trained model to effectively handle cameras with varying
+FoVs. The framework is designed to ensure that all existing 3D data can be
+leveraged, regardless of the specific camera types used in new applications.
+Remarkably, DAC is trained exclusively on perspective images but generalizes
+seamlessly to fisheye and 360-degree cameras without the need for specialized
+training data. DAC employs Equi-Rectangular Projection (ERP) as a unified image
+representation, enabling consistent processing of images with diverse FoVs. Its
+key components include a pitch-aware Image-to-ERP conversion for efficient
+online augmentation in ERP space, a FoV alignment operation to support
+effective training across a wide range of FoVs, and multi-resolution data
+augmentation to address resolution disparities between training and testing.
+DAC achieves state-of-the-art zero-shot metric depth estimation, improving
+delta-1 ($\delta_1$) accuracy by up to 50% on multiple fisheye and 360-degree
+datasets compared to prior metric depth foundation models, demonstrating robust
+generalization across camera types.
+
+[Paper Link](
+https://arxiv.org/abs/2501.02464
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-06_13-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Humanoid Locomotion and Manipulation: Current Progress and Challenges in Control, Planning, and Learning
+
+- **Authors**: Zhaoyuan Gu, Junheng Li, Wenlan Shen, Wenhao Yu, Zhaoming Xie, Stephen McCrory, Xianyi Cheng, Abdulaziz Shamsah, Robert Griffin, C. Karen Liu, Abderrahmane Kheddar, Xue Bin Peng, Yuke Zhu, Guanya Shi, Quan Nguyen, Gordon Cheng, Huijun Gao, Ye Zhao
+
+#### Abstract
+
+Humanoid robots have great potential to perform various human-level skills.
+These skills involve locomotion, manipulation, and cognitive capabilities.
+Driven by advances in machine learning and the strength of existing model-based
+approaches, these capabilities have progressed rapidly, but often separately.
+Therefore, a timely overview of current progress and future trends in this
+fast-evolving field is essential. This survey first summarizes the model-based
+planning and control that have been the backbone of humanoid robotics for the
+past three decades. We then explore emerging learning-based methods, with a
+focus on reinforcement learning and imitation learning that enhance the
+versatility of loco-manipulation skills. We examine the potential of
+integrating foundation models with humanoid embodiments, assessing the
+prospects for developing generalist humanoid agents. In addition, this survey
+covers emerging research for whole-body tactile sensing that unlocks new
+humanoid skills that involve physical interactions. The survey concludes with a
+discussion of the challenges and future trends.
+
+[Paper Link](
+https://arxiv.org/abs/2501.02116
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-06_13-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-06
 
 
