@@ -33,7 +33,7 @@ https://arxiv.org/abs/2501.02464
 )
 
 <div style={{ textAlign: "center", marginRight: "10px" }}>
-    <img src="/img/daily/2025-01-06_13-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    <img src="/img/daily/2025-01-07_17-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
     </div>
 <br/>
 
@@ -66,7 +66,7 @@ https://arxiv.org/abs/2501.02116
 )
 
 <div style={{ textAlign: "center", marginRight: "10px" }}>
-    <img src="/img/daily/2025-01-06_13-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    <img src="/img/daily/2025-01-07_17-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
     </div>
 <br/>
 
