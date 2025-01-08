@@ -1,3 +1,179 @@
+## 2025-01-08
+
+
+### Cosmos World Foundation Model Platform for Physical AI
+
+- **Authors**: NVIDIA, :, Niket Agarwal, Arslan Ali, Maciej Bala, Yogesh Balaji, Erik Barker, Tiffany Cai, Prithvijit Chattopadhyay, Yongxin Chen, Yin Cui, Yifan Ding, Daniel Dworakowski, Jiaojiao Fan, Michele Fenzi, Francesco Ferroni, Sanja Fidler, Dieter Fox, Songwei Ge, Yunhao Ge, Jinwei Gu, Siddharth Gururani, Ethan He, Jiahui Huang, Jacob Huffman, Pooya Jannaty, Jingyi Jin, Seung Wook Kim, Gergely Klár, Grace Lam, Shiyi Lan, Laura Leal-Taixe, Anqi Li, Zhaoshuo Li, Chen-Hsuan Lin, Tsung-Yi Lin, Huan Ling, Ming-Yu Liu, Xian Liu, Alice Luo, Qianli Ma, Hanzi Mao, Kaichun Mo, Arsalan Mousavian, Seungjun Nah, Sriharsha Niverty, David Page, Despoina Paschalidou, Zeeshan Patel, Lindsey Pavao, Morteza Ramezanali, Fitsum Reda, Xiaowei Ren, Vasanth Rao Naik Sabavat, Ed Schmerling, Stella Shi, Bartosz Stefaniak, Shitao Tang, Lyne Tchapmi, Przemek Tredak, Wei-Cheng Tseng, Jibin Varghese, Hao Wang, Haoxiang Wang, Heng Wang, Ting-Chun Wang, Fangyin Wei, Xinyue Wei, Jay Zhangjie Wu, Jiashu Xu, Wei Yang, Lin Yen-Chen, Xiaohui Zeng, Yu Zeng, Jing Zhang, Qinsheng Zhang, Yuxuan Zhang, Qingqing Zhao, Artur Zolkowski
+
+#### Abstract
+
+Physical AI needs to be trained digitally first. It needs a digital twin of
+itself, the policy model, and a digital twin of the world, the world model. In
+this paper, we present the Cosmos World Foundation Model Platform to help
+developers build customized world models for their Physical AI setups. We
+position a world foundation model as a general-purpose world model that can be
+fine-tuned into customized world models for downstream applications. Our
+platform covers a video curation pipeline, pre-trained world foundation models,
+examples of post-training of pre-trained world foundation models, and video
+tokenizers. To help Physical AI builders solve the most critical problems of
+our society, we make our platform open-source and our models open-weight with
+permissive licenses available via https://github.com/NVIDIA/Cosmos.
+
+[Website Link](https://github.com/NVIDIA/Cosmos.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.03575
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-08_14-09.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Are VLMs Ready for Autonomous Driving? An Empirical Study from the Reliability, Data, and Metric Perspectives
+
+- **Authors**: Shaoyuan Xie, Lingdong Kong, Yuhao Dong, Chonghao Sima, Wenwei Zhang, Qi Alfred Chen, Ziwei Liu, Liang Pan
+
+#### Abstract
+
+Recent advancements in Vision-Language Models (VLMs) have sparked interest in
+their use for autonomous driving, particularly in generating interpretable
+driving decisions through natural language. However, the assumption that VLMs
+inherently provide visually grounded, reliable, and interpretable explanations
+for driving remains largely unexamined. To address this gap, we introduce
+DriveBench, a benchmark dataset designed to evaluate VLM reliability across 17
+settings (clean, corrupted, and text-only inputs), encompassing 19,200 frames,
+20,498 question-answer pairs, three question types, four mainstream driving
+tasks, and a total of 12 popular VLMs. Our findings reveal that VLMs often
+generate plausible responses derived from general knowledge or textual cues
+rather than true visual grounding, especially under degraded or missing visual
+inputs. This behavior, concealed by dataset imbalances and insufficient
+evaluation metrics, poses significant risks in safety-critical scenarios like
+autonomous driving. We further observe that VLMs struggle with multi-modal
+reasoning and display heightened sensitivity to input corruptions, leading to
+inconsistencies in performance. To address these challenges, we propose refined
+evaluation metrics that prioritize robust visual grounding and multi-modal
+understanding. Additionally, we highlight the potential of leveraging VLMs'
+awareness of corruptions to enhance their reliability, offering a roadmap for
+developing more trustworthy and interpretable decision-making systems in
+real-world autonomous driving contexts. The benchmark toolkit is publicly
+accessible.
+
+[Paper Link](
+https://arxiv.org/abs/2501.04003
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-08_14-08.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### LiLMaps: Learnable Implicit Language Maps
+
+- **Authors**: Evgenii Kruzhkov, Sven Behnke
+
+#### Abstract
+
+One of the current trends in robotics is to employ large language models
+(LLMs) to provide non-predefined command execution and natural human-robot
+interaction. It is useful to have an environment map together with its language
+representation, which can be further utilized by LLMs. Such a comprehensive
+scene representation enables numerous ways of interaction with the map for
+autonomously operating robots. In this work, we present an approach that
+enhances incremental implicit mapping through the integration of
+vision-language features. Specifically, we (i) propose a decoder optimization
+technique for implicit language maps which can be used when new objects appear
+on the scene, and (ii) address the problem of inconsistent vision-language
+predictions between different viewing positions. Our experiments demonstrate
+the effectiveness of LiLMaps and solid improvements in performance.
+
+[Paper Link](
+https://arxiv.org/abs/2501.03304
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-08_14-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VTAO-BiManip: Masked Visual-Tactile-Action Pre-training with Object Understanding for Bimanual Dexterous Manipulation
+
+- **Authors**: Zhengnan Sun, Zhaotai Shi, Jiayin Chen, Qingtao Liu, Yu Cui, Qi Ye, Jiming Chen
+
+#### Abstract
+
+Bimanual dexterous manipulation remains significant challenges in robotics
+due to the high DoFs of each hand and their coordination. Existing single-hand
+manipulation techniques often leverage human demonstrations to guide RL methods
+but fail to generalize to complex bimanual tasks involving multiple sub-skills.
+In this paper, we introduce VTAO-BiManip, a novel framework that combines
+visual-tactile-action pretraining with object understanding to facilitate
+curriculum RL to enable human-like bimanual manipulation. We improve prior
+learning by incorporating hand motion data, providing more effective guidance
+for dual-hand coordination than binary tactile feedback. Our pretraining model
+predicts future actions as well as object pose and size using masked multimodal
+inputs, facilitating cross-modal regularization. To address the multi-skill
+learning challenge, we introduce a two-stage curriculum RL approach to
+stabilize training. We evaluate our method on a bottle-cap unscrewing task,
+demonstrating its effectiveness in both simulated and real-world environments.
+Our approach achieves a success rate that surpasses existing visual-tactile
+pretraining methods by over 20%.
+
+[Paper Link](
+https://arxiv.org/abs/2501.03606
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-08_13-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### OmniManip: Towards General Robotic Manipulation via Object-Centric Interaction Primitives as Spatial Constraints
+
+- **Authors**: Mingjie Pan, Jiyao Zhang, Tianshu Wu, Yinghao Zhao, Wenlong Gao, Hao Dong
+
+#### Abstract
+
+The development of general robotic systems capable of manipulating in
+unstructured environments is a significant challenge. While Vision-Language
+Models(VLM) excel in high-level commonsense reasoning, they lack the
+fine-grained 3D spatial understanding required for precise manipulation tasks.
+Fine-tuning VLM on robotic datasets to create Vision-Language-Action
+Models(VLA) is a potential solution, but it is hindered by high data collection
+costs and generalization issues. To address these challenges, we propose a
+novel object-centric representation that bridges the gap between VLM's
+high-level reasoning and the low-level precision required for manipulation. Our
+key insight is that an object's canonical space, defined by its functional
+affordances, provides a structured and semantically meaningful way to describe
+interaction primitives, such as points and directions. These primitives act as
+a bridge, translating VLM's commonsense reasoning into actionable 3D spatial
+constraints. In this context, we introduce a dual closed-loop, open-vocabulary
+robotic manipulation system: one loop for high-level planning through primitive
+resampling, interaction rendering and VLM checking, and another for low-level
+execution via 6D pose tracking. This design ensures robust, real-time control
+without requiring VLM fine-tuning. Extensive experiments demonstrate strong
+zero-shot generalization across diverse robotic manipulation tasks,
+highlighting the potential of this approach for automating large-scale
+simulation data generation.
+
+[Paper Link](
+https://arxiv.org/abs/2501.03841
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-08_13-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-07
 
 
