@@ -1,3 +1,182 @@
+## 2025-01-09
+
+
+### Learning to Transfer Human Hand Skills for Robot Manipulations
+
+- **Authors**: Sungjae Park, Seungho Lee, Mingi Choi, Jiye Lee, Jeonghwan Kim, Jisoo Kim, Hanbyul Joo
+
+#### Abstract
+
+We present a method for teaching dexterous manipulation tasks to robots from
+human hand motion demonstrations. Unlike existing approaches that solely rely
+on kinematics information without taking into account the plausibility of robot
+and object interaction, our method directly infers plausible robot manipulation
+actions from human motion demonstrations. To address the embodiment gap between
+the human hand and the robot system, our approach learns a joint motion
+manifold that maps human hand movements, robot hand actions, and object
+movements in 3D, enabling us to infer one motion component from others. Our key
+idea is the generation of pseudo-supervision triplets, which pair human,
+object, and robot motion trajectories synthetically. Through real-world
+experiments with robot hand manipulation, we demonstrate that our data-driven
+retargeting method significantly outperforms conventional retargeting
+techniques, effectively bridging the embodiment gap between human and robotic
+hands. Website at https://rureadyo.github.io/MocapRobot/.
+
+[Website Link](https://rureadyo.github.io/MocapRobot/.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.04169
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-09_13-36.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Bridging Adaptivity and Safety: Learning Agile Collision-Free Locomotion Across Varied Physics
+
+- **Authors**: Yichao Zhong, Chong Zhang, Tairan He, Guanya Shi
+
+#### Abstract
+
+Real-world legged locomotion systems often need to reconcile agility and
+safety for different scenarios. Moreover, the underlying dynamics are often
+unknown and time-variant (e.g., payload, friction). In this paper, we introduce
+BAS (Bridging Adaptivity and Safety), which builds upon the pipeline of prior
+work Agile But Safe (ABS)(He et al.) and is designed to provide adaptive safety
+even in dynamic environments with uncertainties. BAS involves an agile policy
+to avoid obstacles rapidly and a recovery policy to prevent collisions, a
+physical parameter estimator that is concurrently trained with agile policy,
+and a learned control-theoretic RA (reach-avoid) value network that governs the
+policy switch. Also, the agile policy and RA network are both conditioned on
+physical parameters to make them adaptive. To mitigate the distribution shift
+issue, we further introduce an on-policy fine-tuning phase for the estimator to
+enhance its robustness and accuracy. The simulation results show that BAS
+achieves 50% better safety than baselines in dynamic environments while
+maintaining a higher speed on average. In real-world experiments, BAS shows its
+capability in complex environments with unknown physics (e.g., slippery floors
+with unknown frictions, unknown payloads up to 8kg), while baselines lack
+adaptivity, leading to collisions or. degraded agility. As a result, BAS
+achieves a 19.8% increase in speed and gets a 2.36 times lower collision rate
+than ABS in the real world. Videos: https://adaptive-safe-locomotion.github.io.
+
+[Website Link](https://adaptive-safe-locomotion.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.04276
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-09_13-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### MobileH2R: Learning Generalizable Human to Mobile Robot Handover Exclusively from Scalable and Diverse Synthetic Data
+
+- **Authors**: Zifan Wang, Ziqing Chen, Junyu Chen, Jilong Wang, Yuxin Yang, Yunze Liu, Xueyi Liu, He Wang, Li Yi
+
+#### Abstract
+
+This paper introduces MobileH2R, a framework for learning generalizable
+vision-based human-to-mobile-robot (H2MR) handover skills. Unlike traditional
+fixed-base handovers, this task requires a mobile robot to reliably receive
+objects in a large workspace enabled by its mobility. Our key insight is that
+generalizable handover skills can be developed in simulators using high-quality
+synthetic data, without the need for real-world demonstrations. To achieve
+this, we propose a scalable pipeline for generating diverse synthetic full-body
+human motion data, an automated method for creating safe and imitation-friendly
+demonstrations, and an efficient 4D imitation learning method for distilling
+large-scale demonstrations into closed-loop policies with base-arm
+coordination. Experimental evaluations in both simulators and the real world
+show significant improvements (at least +15% success rate) over baseline
+methods in all cases. Experiments also validate that large-scale and diverse
+synthetic data greatly enhances robot learning, highlighting our scalable
+framework.
+
+[Paper Link](
+https://arxiv.org/abs/2501.04595
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-09_13-07.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FrontierNet: Learning Visual Cues to Explore
+
+- **Authors**: Boyang Sun, Hanzhi Chen, Stefan Leutenegger, Cesar Cadena, Marc Pollefeys, Hermann Blum
+
+#### Abstract
+
+Exploration of unknown environments is crucial for autonomous robots; it
+allows them to actively reason and decide on what new data to acquire for tasks
+such as mapping, object discovery, and environmental assessment. Existing
+methods, such as frontier-based methods, rely heavily on 3D map operations,
+which are limited by map quality and often overlook valuable context from
+visual cues. This work aims at leveraging 2D visual cues for efficient
+autonomous exploration, addressing the limitations of extracting goal poses
+from a 3D map. We propose a image-only frontier-based exploration system, with
+FrontierNet as a core component developed in this work. FrontierNet is a
+learning-based model that (i) detects frontiers, and (ii) predicts their
+information gain, from posed RGB images enhanced by monocular depth priors. Our
+approach provides an alternative to existing 3D-dependent exploration systems,
+achieving a 16% improvement in early-stage exploration efficiency, as validated
+through extensive simulations and real-world experiments.
+
+[Paper Link](
+https://arxiv.org/abs/2501.04597
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-09_13-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Beyond Sight: Finetuning Generalist Robot Policies with Heterogeneous Sensors via Language Grounding
+
+- **Authors**: Joshua Jones, Oier Mees, Carmelo Sferrazza, Kyle Stachowicz, Pieter Abbeel, Sergey Levine
+
+#### Abstract
+
+Interacting with the world is a multi-sensory experience: achieving effective
+general-purpose interaction requires making use of all available modalities --
+including vision, touch, and audio -- to fill in gaps from partial observation.
+For example, when vision is occluded reaching into a bag, a robot should rely
+on its senses of touch and sound. However, state-of-the-art generalist robot
+policies are typically trained on large datasets to predict robot actions
+solely from visual and proprioceptive observations. In this work, we propose
+FuSe, a novel approach that enables finetuning visuomotor generalist policies
+on heterogeneous sensor modalities for which large datasets are not readily
+available by leveraging natural language as a common cross-modal grounding. We
+combine a multimodal contrastive loss with a sensory-grounded language
+generation loss to encode high-level semantics. In the context of robot
+manipulation, we show that FuSe enables performing challenging tasks that
+require reasoning jointly over modalities such as vision, touch, and sound in a
+zero-shot setting, such as multimodal prompting, compositional cross-modal
+prompting, and descriptions of objects it interacts with. We show that the same
+recipe is applicable to widely different generalist policies, including both
+diffusion-based generalist policies and large vision-language-action (VLA)
+models. Extensive experiments in the real world show that FuSeis able to
+increase success rates by over 20% compared to all considered baselines.
+
+[Paper Link](
+https://arxiv.org/abs/2501.04693
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-09_13-03.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-08
 
 
