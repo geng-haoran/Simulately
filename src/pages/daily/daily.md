@@ -1,3 +1,112 @@
+## 2025-01-10
+
+
+### ECBench: Can Multi-modal Foundation Models Understand the Egocentric World? A Holistic Embodied Cognition Benchmark
+
+- **Authors**: Ronghao Dang, Yuqian Yuan, Wenqi Zhang, Yifei Xin, Boqiang Zhang, Long Li, Liuyi Wang, Qinyang Zeng, Xin Li, Lidong Bing
+
+#### Abstract
+
+The enhancement of generalization in robots by large vision-language models
+(LVLMs) is increasingly evident. Therefore, the embodied cognitive abilities of
+LVLMs based on egocentric videos are of great interest. However, current
+datasets for embodied video question answering lack comprehensive and
+systematic evaluation frameworks. Critical embodied cognitive issues, such as
+robotic self-cognition, dynamic scene perception, and hallucination, are rarely
+addressed. To tackle these challenges, we propose ECBench, a high-quality
+benchmark designed to systematically evaluate the embodied cognitive abilities
+of LVLMs. ECBench features a diverse range of scene video sources, open and
+varied question formats, and 30 dimensions of embodied cognition. To ensure
+quality, balance, and high visual dependence, ECBench uses class-independent
+meticulous human annotation and multi-round question screening strategies.
+Additionally, we introduce ECEval, a comprehensive evaluation system that
+ensures the fairness and rationality of the indicators. Utilizing ECBench, we
+conduct extensive evaluations of proprietary, open-source, and task-specific
+LVLMs. ECBench is pivotal in advancing the embodied cognitive capabilities of
+LVLMs, laying a solid foundation for developing reliable core models for
+embodied agents. All data and code are available at
+https://github.com/Rh-Dang/ECBench.
+
+[Website Link](https://github.com/Rh-Dang/ECBench.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.05031
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-10_12-19.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboPanoptes: The All-seeing Robot with Whole-body Dexterity
+
+- **Authors**: Xiaomeng Xu, Dominik Bauer, Shuran Song
+
+#### Abstract
+
+We present RoboPanoptes, a capable yet practical robot system that achieves
+whole-body dexterity through whole-body vision. Its whole-body dexterity allows
+the robot to utilize its entire body surface for manipulation, such as
+leveraging multiple contact points or navigating constrained spaces. Meanwhile,
+whole-body vision uses a camera system distributed over the robot's surface to
+provide comprehensive, multi-perspective visual feedback of its own and the
+environment's state. At its core, RoboPanoptes uses a whole-body visuomotor
+policy that learns complex manipulation skills directly from human
+demonstrations, efficiently aggregating information from the distributed
+cameras while maintaining resilience to sensor failures. Together, these design
+aspects unlock new capabilities and tasks, allowing RoboPanoptes to unbox in
+narrow spaces, sweep multiple or oversized objects, and succeed in multi-step
+stowing in cluttered environments, outperforming baselines in adaptability and
+efficiency. Results are best viewed on https://robopanoptes.github.io.
+
+[Website Link](https://robopanoptes.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.05420
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-10_11-41.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### From Simple to Complex Skills: The Case of In-Hand Object Reorientation
+
+- **Authors**: Haozhi Qi, Brent Yi, Mike Lambeta, Yi Ma, Roberto Calandra, Jitendra Malik
+
+#### Abstract
+
+Learning policies in simulation and transferring them to the real world has
+become a promising approach in dexterous manipulation. However, bridging the
+sim-to-real gap for each new task requires substantial human effort, such as
+careful reward engineering, hyperparameter tuning, and system identification.
+In this work, we present a system that leverages low-level skills to address
+these challenges for more complex tasks. Specifically, we introduce a
+hierarchical policy for in-hand object reorientation based on previously
+acquired rotation skills. This hierarchical policy learns to select which
+low-level skill to execute based on feedback from both the environment and the
+low-level skill policies themselves. Compared to learning from scratch, the
+hierarchical policy is more robust to out-of-distribution changes and transfers
+easily from simulation to real-world environments. Additionally, we propose a
+generalizable object pose estimator that uses proprioceptive information,
+low-level skill predictions, and control errors as inputs to estimate the
+object pose over time. We demonstrate that our system can reorient objects,
+including symmetrical and textureless ones, to a desired pose.
+
+[Paper Link](
+https://arxiv.org/abs/2501.05439
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-10_11-37.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-09
 
 
