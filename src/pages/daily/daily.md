@@ -1,3 +1,184 @@
+## 2025-01-14
+
+
+### Vid2Sim: Realistic and Interactive Simulation from Video for Urban Navigation
+
+- **Authors**: Ziyang Xie, Zhizheng Liu, Zhenghao Peng, Wayne Wu, Bolei Zhou
+
+#### Abstract
+
+Sim-to-real gap has long posed a significant challenge for robot learning in
+simulation, preventing the deployment of learned models in the real world.
+Previous work has primarily focused on domain randomization and system
+identification to mitigate this gap. However, these methods are often limited
+by the inherent constraints of the simulation and graphics engines. In this
+work, we propose Vid2Sim, a novel framework that effectively bridges the
+sim2real gap through a scalable and cost-efficient real2sim pipeline for neural
+3D scene reconstruction and simulation. Given a monocular video as input,
+Vid2Sim can generate photorealistic and physically interactable 3D simulation
+environments to enable the reinforcement learning of visual navigation agents
+in complex urban environments. Extensive experiments demonstrate that Vid2Sim
+significantly improves the performance of urban navigation in the digital twins
+and real world by 31.2% and 68.3% in success rate compared with agents trained
+with prior simulation methods.
+
+[Paper Link](
+https://arxiv.org/abs/2501.06693
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Whole-Body Integrated Motion Planning for Aerial Manipulators
+
+- **Authors**: Weiliang Deng, Hongming Chen, Biyu Ye, Haoran Chen, Ximin Lyu
+
+#### Abstract
+
+Efficient motion planning for Aerial Manipulators (AMs) is essential for
+tackling complex manipulation tasks, yet achieving coupled trajectory planning
+remains challenging. In this work, we propose, to the best of our knowledge,
+the first whole-body integrated motion planning framework for aerial
+manipulators, which is facilitated by an improved Safe Flight Corridor (SFC)
+generation strategy and high-dimensional collision-free trajectory planning. In
+particular, we formulate an optimization problem to generate feasible
+trajectories for both the quadrotor and manipulator while ensuring collision
+avoidance, dynamic feasibility, kinematic feasibility, and waypoint
+constraints. To achieve collision avoidance, we introduce a variable geometry
+approximation method, which dynamically models the changing collision volume
+induced by different manipulator configurations. Moreover, waypoint constraints
+in our framework are defined in $\mathrm{SE(3)\times\mathbb{R}^3}$, allowing
+the aerial manipulator to traverse specified positions while maintaining
+desired attitudes and end-effector states. The effectiveness of our framework
+is validated through comprehensive simulations and real-world experiments
+across various environments.
+
+[Paper Link](
+https://arxiv.org/abs/2501.06493
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboHorizon: An LLM-Assisted Multi-View World Model for Long-Horizon Robotic Manipulation
+
+- **Authors**: Zixuan Chen, Jing Huo, Yangtao Chen, Yang Gao
+
+#### Abstract
+
+Efficient control in long-horizon robotic manipulation is challenging due to
+complex representation and policy learning requirements. Model-based visual
+reinforcement learning (RL) has shown great potential in addressing these
+challenges but still faces notable limitations, particularly in handling sparse
+rewards and complex visual features in long-horizon environments. To address
+these limitations, we propose the Recognize-Sense-Plan-Act (RSPA) pipeline for
+long-horizon tasks and further introduce RoboHorizon, an LLM-assisted
+multi-view world model tailored for long-horizon robotic manipulation. In
+RoboHorizon, pre-trained LLMs generate dense reward structures for multi-stage
+sub-tasks based on task language instructions, enabling robots to better
+recognize long-horizon tasks. Keyframe discovery is then integrated into the
+multi-view masked autoencoder (MAE) architecture to enhance the robot's ability
+to sense critical task sequences, strengthening its multi-stage perception of
+long-horizon processes. Leveraging these dense rewards and multi-view
+representations, a robotic world model is constructed to efficiently plan
+long-horizon tasks, enabling the robot to reliably act through RL algorithms.
+Experiments on two representative benchmarks, RLBench and FurnitureBench, show
+that RoboHorizon outperforms state-of-the-art visual model-based RL methods,
+achieving a 23.35% improvement in task success rates on RLBench's 4
+short-horizon tasks and a 29.23% improvement on 6 long-horizon tasks from
+RLBench and 3 furniture assembly tasks from FurnitureBench.
+
+[Paper Link](
+https://arxiv.org/abs/2501.06605
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Implicit Social Navigation Behavior using Deep Inverse Reinforcement Learning
+
+- **Authors**: Tribhi Kathuria, Ke Liu, Junwoo Jang, X. Jessie Yang, Maani Ghaffari
+
+#### Abstract
+
+This paper reports on learning a reward map for social navigation in dynamic
+environments where the robot can reason about its path at any time, given
+agents' trajectories and scene geometry. Humans navigating in dense and dynamic
+indoor environments often work with several implied social rules. A rule-based
+approach fails to model all possible interactions between humans, robots, and
+scenes. We propose a novel Smooth Maximum Entropy Deep Inverse Reinforcement
+Learning (S-MEDIRL) algorithm that can extrapolate beyond expert demos to
+better encode scene navigability from few-shot demonstrations. The agent learns
+to predict the cost maps reasoning on trajectory data and scene geometry. The
+agent samples a trajectory that is then executed using a local crowd navigation
+controller. We present results in a photo-realistic simulation environment,
+with a robot and a human navigating a narrow crossing scenario. The robot
+implicitly learns to exhibit social behaviors such as yielding to oncoming
+traffic and avoiding deadlocks. We compare the proposed approach to the popular
+model-based crowd navigation algorithm ORCA and a rule-based agent that
+exhibits yielding.
+
+[Paper Link](
+https://arxiv.org/abs/2501.06946
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-22.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Motion Tracks: A Unified Representation for Human-Robot Transfer in Few-Shot Imitation Learning
+
+- **Authors**: Juntao Ren, Priya Sundaresan, Dorsa Sadigh, Sanjiban Choudhury, Jeannette Bohg
+
+#### Abstract
+
+Teaching robots to autonomously complete everyday tasks remains a challenge.
+Imitation Learning (IL) is a powerful approach that imbues robots with skills
+via demonstrations, but is limited by the labor-intensive process of collecting
+teleoperated robot data. Human videos offer a scalable alternative, but it
+remains difficult to directly train IL policies from them due to the lack of
+robot action labels. To address this, we propose to represent actions as
+short-horizon 2D trajectories on an image. These actions, or motion tracks,
+capture the predicted direction of motion for either human hands or robot
+end-effectors. We instantiate an IL policy called Motion Track Policy (MT-pi)
+which receives image observations and outputs motion tracks as actions. By
+leveraging this unified, cross-embodiment action space, MT-pi completes tasks
+with high success given just minutes of human video and limited additional
+robot demonstrations. At test time, we predict motion tracks from two camera
+views, recovering 6DoF trajectories via multi-view synthesis. MT-pi achieves an
+average success rate of 86.5% across 4 real-world tasks, outperforming
+state-of-the-art IL baselines which do not leverage human data or our action
+space by 40%, and generalizes to scenarios seen only in human videos. Code and
+videos are available on our website
+https://portal-cornell.github.io/motion_track_policy/.
+
+[Website Link](https://portal-cornell.github.io/motion_track_policy/.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.06994
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-10
 
 
