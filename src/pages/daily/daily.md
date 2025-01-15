@@ -1,3 +1,78 @@
+## 2025-01-15
+
+
+### FDPP: Fine-tune Diffusion Policy with Human Preference
+
+- **Authors**: Yuxin Chen, Devesh K. Jha, Masayoshi Tomizuka, Diego Romeres
+
+#### Abstract
+
+Imitation learning from human demonstrations enables robots to perform
+complex manipulation tasks and has recently witnessed huge success. However,
+these techniques often struggle to adapt behavior to new preferences or changes
+in the environment. To address these limitations, we propose Fine-tuning
+Diffusion Policy with Human Preference (FDPP). FDPP learns a reward function
+through preference-based learning. This reward is then used to fine-tune the
+pre-trained policy with reinforcement learning (RL), resulting in alignment of
+pre-trained policy with new human preferences while still solving the original
+task. Our experiments across various robotic tasks and preferences demonstrate
+that FDPP effectively customizes policy behavior without compromising
+performance. Additionally, we show that incorporating Kullback-Leibler (KL)
+regularization during fine-tuning prevents over-fitting and helps maintain the
+competencies of the initial policy.
+
+[Paper Link](
+https://arxiv.org/abs/2501.08259
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-15_13-22_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VINGS-Mono: Visual-Inertial Gaussian Splatting Monocular SLAM in Large Scenes
+
+- **Authors**: Ke Wu, Zicheng Zhang, Muer Tie, Ziqing Ai, Zhongxue Gan, Wenchao Ding
+
+#### Abstract
+
+VINGS-Mono is a monocular (inertial) Gaussian Splatting (GS) SLAM framework
+designed for large scenes. The framework comprises four main components: VIO
+Front End, 2D Gaussian Map, NVS Loop Closure, and Dynamic Eraser. In the VIO
+Front End, RGB frames are processed through dense bundle adjustment and
+uncertainty estimation to extract scene geometry and poses. Based on this
+output, the mapping module incrementally constructs and maintains a 2D Gaussian
+map. Key components of the 2D Gaussian Map include a Sample-based Rasterizer,
+Score Manager, and Pose Refinement, which collectively improve mapping speed
+and localization accuracy. This enables the SLAM system to handle large-scale
+urban environments with up to 50 million Gaussian ellipsoids. To ensure global
+consistency in large-scale scenes, we design a Loop Closure module, which
+innovatively leverages the Novel View Synthesis (NVS) capabilities of Gaussian
+Splatting for loop closure detection and correction of the Gaussian map.
+Additionally, we propose a Dynamic Eraser to address the inevitable presence of
+dynamic objects in real-world outdoor scenes. Extensive evaluations in indoor
+and outdoor environments demonstrate that our approach achieves localization
+performance on par with Visual-Inertial Odometry while surpassing recent
+GS/NeRF SLAM methods. It also significantly outperforms all existing methods in
+terms of mapping and rendering quality. Furthermore, we developed a mobile app
+and verified that our framework can generate high-quality Gaussian maps in real
+time using only a smartphone camera and a low-frequency IMU sensor. To the best
+of our knowledge, VINGS-Mono is the first monocular Gaussian SLAM method
+capable of operating in outdoor environments and supporting kilometer-scale
+large scenes.
+
+[Paper Link](
+https://arxiv.org/abs/2501.08286
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-15_13-22.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-14
 
 
