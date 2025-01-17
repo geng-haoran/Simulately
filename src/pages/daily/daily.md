@@ -1,3 +1,109 @@
+## 2025-01-17
+
+
+### ThinTact:Thin Vision-Based Tactile Sensor by Lensless Imaging
+
+- **Authors**: Jing Xu, Weihang Chen, Hongyu Qian, Dan Wu, Rui Chen
+
+#### Abstract
+
+Vision-based tactile sensors have drawn increasing interest in the robotics
+community. However, traditional lens-based designs impose minimum thickness
+constraints on these sensors, limiting their applicability in space-restricted
+settings. In this paper, we propose ThinTact, a novel lensless vision-based
+tactile sensor with a sensing field of over 200 mm2 and a thickness of less
+than 10 mm.ThinTact utilizes the mask-based lensless imaging technique to map
+the contact information to CMOS signals. To ensure real-time tactile sensing,
+we propose a real-time lensless reconstruction algorithm that leverages a
+frequency-spatial-domain joint filter based on discrete cosine transform (DCT).
+This algorithm achieves computation significantly faster than existing
+optimization-based methods. Additionally, to improve the sensing quality, we
+develop a mask optimization method based on the generic algorithm and the
+corresponding system matrix calibration algorithm.We evaluate the performance
+of our proposed lensless reconstruction and tactile sensing through qualitative
+and quantitative experiments. Furthermore, we demonstrate ThinTact's practical
+applicability in diverse applications, including texture recognition and
+contact-rich object manipulation. The paper will appear in the IEEE
+Transactions on Robotics: https://ieeexplore.ieee.org/document/10842357. Video:
+https://youtu.be/YrOO9BDMAHo
+
+[Website Link](https://ieeexplore.ieee.org/document/10842357.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.09273
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-17_14-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Sensorimotor Control Strategies for Tactile Robotics
+
+- **Authors**: Enrico Donato, Matteo Lo Preti, Lucia Beccai, Egidio Falotico
+
+#### Abstract
+
+How are robots becoming smarter at interacting with their surroundings?
+Recent advances have reshaped how robots use tactile sensing to perceive and
+engage with the world. Tactile sensing is a game-changer, allowing robots to
+embed sensorimotor control strategies to interact with complex environments and
+skillfully handle heterogeneous objects. Such control frameworks plan
+contact-driven motions while staying responsive to sudden changes. We review
+the latest methods for building perception and control systems in tactile
+robotics while offering practical guidelines for their design and
+implementation. We also address key challenges to shape the future of
+intelligent robots.
+
+[Paper Link](
+https://arxiv.org/abs/2501.09468
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-17_13-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FAST: Efficient Action Tokenization for Vision-Language-Action Models
+
+- **Authors**: Karl Pertsch, Kyle Stachowicz, Brian Ichter, Danny Driess, Suraj Nair, Quan Vuong, Oier Mees, Chelsea Finn, Sergey Levine
+
+#### Abstract
+
+Autoregressive sequence models, such as Transformer-based vision-language
+action (VLA) policies, can be tremendously effective for capturing complex and
+generalizable robotic behaviors. However, such models require us to choose a
+tokenization of our continuous action signals, which determines how the
+discrete symbols predicted by the model map to continuous robot actions. We
+find that current approaches for robot action tokenization, based on simple
+per-dimension, per-timestep binning schemes, typically perform poorly when
+learning dexterous skills from high-frequency robot data. To address this
+challenge, we propose a new compression-based tokenization scheme for robot
+actions, based on the discrete cosine transform. Our tokenization approach,
+Frequency-space Action Sequence Tokenization (FAST), enables us to train
+autoregressive VLAs for highly dexterous and high-frequency tasks where
+standard discretization methods fail completely. Based on FAST, we release
+FAST+, a universal robot action tokenizer, trained on 1M real robot action
+trajectories. It can be used as a black-box tokenizer for a wide range of robot
+action sequences, with diverse action spaces and control frequencies. Finally,
+we show that, when combined with the pi0 VLA, our method can scale to training
+on 10k hours of robot data and match the performance of diffusion VLAs, while
+reducing training time by up to 5x.
+
+[Paper Link](
+https://arxiv.org/abs/2501.09747
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-17_13-29.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-15
 
 
