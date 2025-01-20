@@ -1,3 +1,147 @@
+## 2025-01-20
+
+
+### FoundationStereo: Zero-Shot Stereo Matching
+
+- **Authors**: Bowen Wen, Matthew Trepte, Joseph Aribido, Jan Kautz, Orazio Gallo, Stan Birchfield
+
+#### Abstract
+
+Tremendous progress has been made in deep stereo matching to excel on
+benchmark datasets through per-domain fine-tuning. However, achieving strong
+zero-shot generalization - a hallmark of foundation models in other computer
+vision tasks - remains challenging for stereo matching. We introduce
+FoundationStereo, a foundation model for stereo depth estimation designed to
+achieve strong zero-shot generalization. To this end, we first construct a
+large-scale (1M stereo pairs) synthetic training dataset featuring large
+diversity and high photorealism, followed by an automatic self-curation
+pipeline to remove ambiguous samples. We then design a number of network
+architecture components to enhance scalability, including a side-tuning feature
+backbone that adapts rich monocular priors from vision foundation models to
+mitigate the sim-to-real gap, and long-range context reasoning for effective
+cost volume filtering. Together, these components lead to strong robustness and
+accuracy across domains, establishing a new standard in zero-shot stereo depth
+estimation.
+
+[Paper Link](
+https://arxiv.org/abs/2501.09898
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-20_12-50.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SLIM: Sim-to-Real Legged Instructive Manipulation via Long-Horizon Visuomotor Learning
+
+- **Authors**: Haichao Zhang, Haonan Yu, Le Zhao, Andrew Choi, Qinxun Bai, Yiqing Yang, Wei Xu
+
+#### Abstract
+
+We present a low-cost quadruped manipulation system that solves long-horizon
+real-world tasks, trained by reinforcement learning purely in simulation. The
+system comprises 1) a hierarchical design of a high-level policy for
+visual-mobile manipulation following instructions, and a low-level policy for
+quadruped movement and limb-control, 2) a progressive policy expansion approach
+for solving the long-horizon task together with a teacher-student framework for
+efficient high-level training of the high-level visuomotor policy, and 3) a
+suite of techniques for minimizing sim-to-real gaps.
+  With budget-friendly but limited reliability and performance hardware, and
+just one wrist-mounted RGB camera, the entire system fully trained in
+simulation achieves high success rates for long horizon tasks involving search,
+move, grasp, and drop-into, with fluid sim-to-real transfer in a wide variety
+of indoor and outdoor scenes and lighting conditions.Extensive real-world
+evaluations show that on the long horizon mobile manipulation tasks, our system
+achieves good performance when transferred to real both in terms of task
+success rate and execution efficiency. Finally, we discuss the necessity of our
+sim-to-real techniques for legged mobile manipulation, and show their ablation
+performance.
+
+[Paper Link](
+https://arxiv.org/abs/2501.09905
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-20_12-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics
+
+- **Authors**: Chenhao Li, Andreas Krause, Marco Hutter
+
+#### Abstract
+
+Learning robust and generalizable world models is crucial for enabling
+efficient and scalable robotic control in real-world environments. In this
+work, we introduce a novel framework for learning world models that accurately
+capture complex, partially observable, and stochastic dynamics. The proposed
+method employs a dual-autoregressive mechanism and self-supervised training to
+achieve reliable long-horizon predictions without relying on domain-specific
+inductive biases, ensuring adaptability across diverse robotic tasks. We
+further propose a policy optimization framework that leverages world models for
+efficient training in imagined environments and seamless deployment in
+real-world systems. Through extensive experiments, our approach consistently
+outperforms state-of-the-art methods, demonstrating superior autoregressive
+prediction accuracy, robustness to noise, and generalization across
+manipulation and locomotion tasks. Notably, policies trained with our method
+are successfully deployed on ANYmal D hardware in a zero-shot transfer,
+achieving robust performance with minimal sim-to-real performance loss. This
+work advances model-based reinforcement learning by addressing the challenges
+of long-horizon prediction, error accumulation, and sim-to-real transfer. By
+providing a scalable and robust framework, the introduced methods pave the way
+for adaptive and efficient robotic systems in real-world applications.
+
+[Paper Link](
+https://arxiv.org/abs/2501.10100
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-20_12-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexForce: Extracting Force-informed Actions from Kinesthetic Demonstrations for Dexterous Manipulation
+
+- **Authors**: Claire Chen, Zhongchun Yu, Hojung Choi, Mark Cutkosky, Jeannette Bohg
+
+#### Abstract
+
+Imitation learning requires high-quality demonstrations consisting of
+sequences of state-action pairs. For contact-rich dexterous manipulation tasks
+that require fine-grained dexterity, the actions in these state-action pairs
+must produce the right forces. Current widely-used methods for collecting
+dexterous manipulation demonstrations are difficult to use for demonstrating
+contact-rich tasks due to unintuitive human-to-robot motion retargeting and the
+lack of direct haptic feedback. Motivated by this, we propose DexForce, a
+method for collecting demonstrations of contact-rich dexterous manipulation.
+DexForce leverages contact forces, measured during kinesthetic demonstrations,
+to compute force-informed actions for policy learning. We use DexForce to
+collect demonstrations for six tasks and show that policies trained on our
+force-informed actions achieve an average success rate of 76% across all tasks.
+In contrast, policies trained directly on actions that do not account for
+contact forces have near-zero success rates. We also conduct a study ablating
+the inclusion of force data in policy observations. We find that while using
+force data never hurts policy performance, it helps the most for tasks that
+require an advanced level of precision and coordination, like opening an
+AirPods case and unscrewing a nut.
+
+[Paper Link](
+https://arxiv.org/abs/2501.10356
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-20_12-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-17
 
 
