@@ -65,3 +65,8 @@ sidebar_position: 0
   Further, it provides benchmarking tasks of garment manipulation tasks,
   and models of real-world garments easily accessible globally for evaluation.
   [[Download]](https://garmentlab.readthedocs.io/en/latest/tutorial/data/index.html) [[Paper]](https://arxiv.org/abs/2411.01200) [[Code]](https://github.com/GarmentLab/GarmentLab)
+
+## Multi-modal
+
+- [**ObjectFolder**](https://objectfolder.stanford.edu/): 
+  This dataset models the multisensory behaviors of real objects with 1) ObjectFolder 2.0, a dataset of 1,000 neural objects in the form of implicit neural representations with simulated multisensory data, and 2) ObjectFolder Real, a dataset that contains the multisensory measurements for 100 real-world household objects, building upon a newly designed pipeline for collecting the 3D meshes, videos, impact sounds, and tactile readings of real-world objects. It also contains a standard benchmark suite of 10 tasks for multisensory object-centric learning, centered around object recognition, reconstruction, and manipulation with sight, sound, and touch.  [[Download]](https://objectfolder.stanford.edu/objectfolder-real-download) [[Paper]](https://openaccess.thecvf.com/content/CVPR2023/html/Gao_The_ObjectFolder_Benchmark_Multisensory_Learning_With_Neural_and_Real_Objects_CVPR_2023_paper.html)
