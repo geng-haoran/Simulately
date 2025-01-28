@@ -1,3 +1,45 @@
+## 2025-01-28
+
+
+### SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Model
+
+- **Authors**: Delin Qu, Haoming Song, Qizhi Chen, Yuanqi Yao, Xinyi Ye, Yan Ding, Zhigang Wang, JiaYuan Gu, Bin Zhao, Dong Wang, Xuelong Li
+
+#### Abstract
+
+In this paper, we claim that spatial understanding is the keypoint in robot
+manipulation, and propose SpatialVLA to explore effective spatial
+representations for the robot foundation model. Specifically, we introduce
+Ego3D Position Encoding to inject 3D information into the input observations of
+the visual-language-action model, and propose Adaptive Action Grids to
+represent spatial robot movement actions with adaptive discretized action
+grids, facilitating learning generalizable and transferrable spatial action
+knowledge for cross-robot control. SpatialVLA is first pre-trained on top of a
+vision-language model with 1.1 Million real-world robot episodes, to learn a
+generalist manipulation policy across multiple robot environments and tasks.
+After pre-training, SpatialVLA is directly applied to perform numerous tasks in
+a zero-shot manner. The superior results in both simulation and real-world
+robots demonstrate its advantage of inferring complex robot motion trajectories
+and its strong in-domain multi-task generalization ability. We further show the
+proposed Adaptive Action Grids offer a new and effective way to fine-tune the
+pre-trained SpatialVLA model for new simulation and real-world setups, where
+the pre-learned action grids are re-discretized to capture robot-specific
+spatial action movements of new setups. The superior results from extensive
+evaluations demonstrate the exceptional in-distribution generalization and
+out-of-distribution adaptation capability, highlighting the crucial benefit of
+the proposed spatial-aware representations for generalist robot policy
+learning. All the details and codes will be open-sourced.
+
+[Paper Link](
+https://arxiv.org/abs/2501.15830
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-28_23-25.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-20
 
 
