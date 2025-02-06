@@ -44,7 +44,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/geng-haoran/Simulately/',
+            'https://github.com/geng-haoran/Simulately/edit/main/',
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
@@ -53,7 +53,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/geng-haoran/Simulately/',
+            'https://github.com/geng-haoran/Simulately/edit/main/',
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
