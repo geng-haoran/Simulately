@@ -8,7 +8,10 @@ sidebar_position: 3
 - [**Taxim**](#taxim): an example-based simulator for **GelSight tactile** sensors and its variations.
 - [**DiffRedMax**](#diffredmax): a differentiable simulator with **penalty-based contact model** and supports implicit time integration.
 - [**TACTO**](#tacto): a fast, flexible, and open-source simulator for **vision-based tactile sensors**.
+- [**Tactile-Gym**](#tactile-gym): is a suite of simulated environments tailored towards tactile robotics and reinforcement learning.
 - [**DiffTactile**](#difftactile): a physics-based and fully differentiable tactile simulation system designed to enhance robotic manipulation with **dense and physically-accurate tactile feedback**.
+- [**FOTS**](#fots): is a fast optical tactile simulator with **multi-layer perceptron mapping, planar shadow generation, and marker distribution approximation**.
+- [**SimTacLS**](#simtacls): is a multiphysics simulation pipeline, which considers the **mechanical properties of external physical contact** and **realistic rendering of tactile images** in a simulation environment.
 
 ---
 
@@ -144,5 +147,58 @@ Tactile Gym 2.0 includes three new optical tactile sensors (TacTip, DIGIT and Di
 
 DiffTactile is a physics-based and fully differentiable tactile simulation system designed to enhance robotic manipulation with dense and physically-accurate tactile feedback. In contrast to prior tactile simulators which primarily focus on manipulating rigid bodies and often rely on simplified approximations to model stress and deformations of materials in contact, DiffTactile emphasizes physics-based contact modeling with high fidelity, supporting simulations of diverse contact modes and interactions with objects possessing a wide range of material properties.
 
+
+</details>
+
+## FOTS
+
+> **FOTS** is a fast optical tactile simulator with **multi-layer perceptron mapping and planar shadow generation** to simulate the optical response, along with **marker distribution approximation** to model the motion of surface markers.
+
+<details open> <summary>Details</summary>
+<h2 align="center">
+  <b>FOTS: A Fast Optical Tactile Simulator for Sim2Real Learning of Tactile-Motor Robot Manipulation Skills</b>
+
+<div align="center">
+    <a href="https://github.com/Rancho-zhao/FOTS" target="_blank"><img src="https://img.shields.io/badge/Website-FOTS-red"></img></a>
+    &nbsp;
+    <a href="https://ieeexplore.ieee.org/document/10518085" target="_blank"><img src="https://img.shields.io/badge/Paper-IEEE-green"></img></a>
+    &nbsp;
+    <a href="https://github.com/Rancho-zhao/FOTS" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple"></img></a>
+</div>
+</h2>
+
+<div align="center">
+
+![FOTS Animation](imgs/fots.gif)
+</div>
+
+FOTS (Fast Optical Tactile Simulator) is a fast simulator designed for optical tactile sensors. It leverages multi-layer perceptron mapping and planar shadow generation to simulate the optical response, while employing marker distribution approximation to model the motion of surface markers induced by elastomer deformation. Compared to prior work, FOTS improves image generation quality and rendering speed, achieving 28.6 fps for optical simulation and 326.1 fps for marker motion simulation on a single CPU, without requiring GPU acceleration.
+
+</details>
+
+## SimTacLS
+
+> **SimTacLS** is a multiphysics simulation pipeline, which considers the **mechanical properties of external physical contact** and **realistic rendering of tactile images** in a simulation environment.
+
+<details open> <summary>Details</summary>
+<h2 align="center">
+  <b>Simulation, Learning, and Application of Vision-Based Tactile Sensing at Large Scale</b>
+
+<div align="center">
+    <a href="https://github.com/Ho-lab-jaist/SimTacLS" target="_blank"><img src="https://img.shields.io/badge/Website-SimTacLS-red"></img></a>
+    &nbsp;
+    <a href="https://ieeexplore.ieee.org/document/10054516" target="_blank"><img src="https://img.shields.io/badge/Paper-IEEE-green"></img></a>
+    &nbsp;
+    <a href="https://github.com/Ho-lab-jaist/SimTacLS" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple"></img></a>
+</div>
+</h2>
+
+<div align="center">
+<div style={{ textAlign: 'center' }}>
+    <img src="https://raw.githubusercontent.com/Ho-lab-jaist/SimTacLS/main/figures/Fig_simtacls_overview.png" width="500" />
+  </div>
+</div>
+
+SimTacLS is simulation pipeline toward a framework for a large-scale marker-cum-vision-based tactile sensor that employs the physics engine SOFA1 to describe complex physical interactions of deformable bodies based on the finite-element method (FEM). 
 
 </details>

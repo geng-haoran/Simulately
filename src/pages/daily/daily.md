@@ -1,3 +1,1047 @@
+## 2025-02-05
+
+
+### Articulate AnyMesh: Open-Vocabulary 3D Articulated Objects Modeling
+
+- **Authors**: Xiaowen Qiu, Jincheng Yang, Yian Wang, Zhehuan Chen, Yufei Wang, Tsun-Hsuan Wang, Zhou Xian, Chuang Gan
+
+#### Abstract
+
+3D articulated objects modeling has long been a challenging problem, since it
+requires to capture both accurate surface geometries and semantically
+meaningful and spatially precise structures, parts, and joints. Existing
+methods heavily depend on training data from a limited set of handcrafted
+articulated object categories (e.g., cabinets and drawers), which restricts
+their ability to model a wide range of articulated objects in an
+open-vocabulary context. To address these limitations, we propose Articulate
+Anymesh, an automated framework that is able to convert any rigid 3D mesh into
+its articulated counterpart in an open-vocabulary manner. Given a 3D mesh, our
+framework utilizes advanced Vision-Language Models and visual prompting
+techniques to extract semantic information, allowing for both the segmentation
+of object parts and the construction of functional joints. Our experiments show
+that Articulate Anymesh can generate large-scale, high-quality 3D articulated
+objects, including tools, toys, mechanical devices, and vehicles, significantly
+expanding the coverage of existing 3D articulated object datasets.
+Additionally, we show that these generated assets can facilitate the
+acquisition of new articulated object manipulation skills in simulation, which
+can then be transferred to a real robotic system. Our Github website is
+https://articulate-anymesh.github.io.
+
+[Website Link](https://articulate-anymesh.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2502.02590
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_18-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning the RoPEs: Better 2D and 3D Position Encodings with STRING
+
+- **Authors**: Connor Schenck, Isaac Reid, Mithun George Jacob, Alex Bewley, Joshua Ainslie, David Rendleman, Deepali Jain, Mohit Sharma, Avinava Dubey, Ayzaan Wahid, Sumeet Singh, Rene Wagner, Tianli Ding, Chuyuan Fu, Arunkumar Byravan, Jake Varley, Alexey Gritsenko, Matthias Minderer, Dmitry Kalashnikov, Jonathan Tompson, Vikas Sindhwani, Krzysztof Choromanski
+
+#### Abstract
+
+We introduce STRING: Separable Translationally Invariant Position Encodings.
+STRING extends Rotary Position Encodings, a recently proposed and widely used
+algorithm in large language models, via a unifying theoretical framework.
+Importantly, STRING still provides exact translation invariance, including
+token coordinates of arbitrary dimensionality, whilst maintaining a low
+computational footprint. These properties are especially important in robotics,
+where efficient 3D token representation is key. We integrate STRING into Vision
+Transformers with RGB(-D) inputs (color plus optional depth), showing
+substantial gains, e.g. in open-vocabulary object detection and for robotics
+controllers. We complement our experiments with a rigorous mathematical
+analysis, proving the universality of our methods.
+
+[Paper Link](
+https://arxiv.org/abs/2502.02562
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_18-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### From Foresight to Forethought: VLM-In-the-Loop Policy Steering via Latent Alignment
+
+- **Authors**: Yilin Wu, Ran Tian, Gokul Swamy, Andrea Bajcsy
+
+#### Abstract
+
+While generative robot policies have demonstrated significant potential in
+learning complex, multimodal behaviors from demonstrations, they still exhibit
+diverse failures at deployment-time. Policy steering offers an elegant solution
+to reducing the chance of failure by using an external verifier to select from
+low-level actions proposed by an imperfect generative policy. Here, one might
+hope to use a Vision Language Model (VLM) as a verifier, leveraging its
+open-world reasoning capabilities. However, off-the-shelf VLMs struggle to
+understand the consequences of low-level robot actions as they are represented
+fundamentally differently than the text and images the VLM was trained on. In
+response, we propose FOREWARN, a novel framework to unlock the potential of
+VLMs as open-vocabulary verifiers for runtime policy steering. Our key idea is
+to decouple the VLM's burden of predicting action outcomes (foresight) from
+evaluation (forethought). For foresight, we leverage a latent world model to
+imagine future latent states given diverse low-level action plans. For
+forethought, we align the VLM with these predicted latent states to reason
+about the consequences of actions in its native representation--natural
+language--and effectively filter proposed plans. We validate our framework
+across diverse robotic manipulation tasks, demonstrating its ability to bridge
+representational gaps and provide robust, generalizable policy steering.
+
+[Paper Link](
+https://arxiv.org/abs/2502.01828
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_17-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-02-04
+
+
+### ToddlerBot: Open-Source ML-Compatible Humanoid Platform for Loco-Manipulation
+
+- **Authors**: Haochen Shi, Weizhuo Wang, Shuran Song, C. Karen Liu
+
+#### Abstract
+
+Learning-based robotics research driven by data demands a new approach to
+robot hardware design-one that serves as both a platform for policy execution
+and a tool for embodied data collection to train policies. We introduce
+ToddlerBot, a low-cost, open-source humanoid robot platform designed for
+scalable policy learning and research in robotics and AI. ToddlerBot enables
+seamless acquisition of high-quality simulation and real-world data. The
+plug-and-play zero-point calibration and transferable motor system
+identification ensure a high-fidelity digital twin, enabling zero-shot policy
+transfer from simulation to the real world. A user-friendly teleoperation
+interface facilitates streamlined real-world data collection for learning motor
+skills from human demonstrations. Utilizing its data collection ability and
+anthropomorphic design, ToddlerBot is an ideal platform to perform whole-body
+loco-manipulation. Additionally, ToddlerBot's compact size (0.56m, 3.4kg)
+ensures safe operation in real-world environments. Reproducibility is achieved
+with an entirely 3D-printed, open-source design and commercially available
+components, keeping the total cost under 6,000 USD. Comprehensive documentation
+allows assembly and maintenance with basic technical expertise, as validated by
+a successful independent replication of the system. We demonstrate ToddlerBot's
+capabilities through arm span, payload, endurance tests, loco-manipulation
+tasks, and a collaborative long-horizon scenario where two robots tidy a toy
+session together. By advancing ML-compatibility, capability, and
+reproducibility, ToddlerBot provides a robust platform for scalable learning
+and dynamic policy execution in robotics research.
+
+[Paper Link](
+https://arxiv.org/abs/2502.00893
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_17-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Dexterous Cable Manipulation: Taxonomy, Multi-Fingered Hand Design, and Long-Horizon Manipulation
+
+- **Authors**: Sun Zhaole, Xiao Gao, Xiaofeng Mao, Jihong Zhu, Aude Billard, Robert B. Fisher
+
+#### Abstract
+
+Existing research that addressed cable manipulation relied on two-fingered
+grippers, which make it difficult to perform similar cable manipulation tasks
+that humans perform. However, unlike dexterous manipulation of rigid objects,
+the development of dexterous cable manipulation skills in robotics remains
+underexplored due to the unique challenges posed by a cable's deformability and
+inherent uncertainty. In addition, using a dexterous hand introduces specific
+difficulties in tasks, such as cable grasping, pulling, and in-hand bending,
+for which no dedicated task definitions, benchmarks, or evaluation metrics
+exist. Furthermore, we observed that most existing dexterous hands are designed
+with structures identical to humans', typically featuring only one thumb, which
+often limits their effectiveness during dexterous cable manipulation. Lastly,
+existing non-task-specific methods did not have enough generalization ability
+to solve these cable manipulation tasks or are unsuitable due to the designed
+hardware. We have three contributions in real-world dexterous cable
+manipulation in the following steps: (1) We first defined and organized a set
+of dexterous cable manipulation tasks into a comprehensive taxonomy, covering
+most short-horizon action primitives and long-horizon tasks for one-handed
+cable manipulation. This taxonomy revealed that coordination between the thumb
+and the index finger is critical for cable manipulation, which decomposes
+long-horizon tasks into simpler primitives. (2) We designed a novel
+five-fingered hand with 25 degrees of freedom (DoF), featuring two symmetric
+thumb-index configurations and a rotatable joint on each fingertip, which
+enables dexterous cable manipulation. (3) We developed a demonstration
+collection pipeline for this non-anthropomorphic hand, which is difficult to
+operate by previous motion capture methods.
+
+[Paper Link](
+https://arxiv.org/abs/2502.00396
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_17-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills
+
+- **Authors**: Tairan He, Jiawei Gao, Wenli Xiao, Yuanhang Zhang, Zi Wang, Jiashun Wang, Zhengyi Luo, Guanqi He, Nikhil Sobanbab, Chaoyi Pan, Zeji Yi, Guannan Qu, Kris Kitani, Jessica Hodgins, Linxi "Jim" Fan, Yuke Zhu, Changliu Liu, Guanya Shi
+
+#### Abstract
+
+Humanoid robots hold the potential for unparalleled versatility in performing
+human-like, whole-body skills. However, achieving agile and coordinated
+whole-body motions remains a significant challenge due to the dynamics mismatch
+between simulation and the real world. Existing approaches, such as system
+identification (SysID) and domain randomization (DR) methods, often rely on
+labor-intensive parameter tuning or result in overly conservative policies that
+sacrifice agility. In this paper, we present ASAP (Aligning Simulation and
+Real-World Physics), a two-stage framework designed to tackle the dynamics
+mismatch and enable agile humanoid whole-body skills. In the first stage, we
+pre-train motion tracking policies in simulation using retargeted human motion
+data. In the second stage, we deploy the policies in the real world and collect
+real-world data to train a delta (residual) action model that compensates for
+the dynamics mismatch. Then, ASAP fine-tunes pre-trained policies with the
+delta action model integrated into the simulator to align effectively with
+real-world dynamics. We evaluate ASAP across three transfer scenarios: IsaacGym
+to IsaacSim, IsaacGym to Genesis, and IsaacGym to the real-world Unitree G1
+humanoid robot. Our approach significantly improves agility and whole-body
+coordination across various dynamic motions, reducing tracking error compared
+to SysID, DR, and delta dynamics learning baselines. ASAP enables highly agile
+motions that were previously difficult to achieve, demonstrating the potential
+of delta action learning in bridging simulation and real-world dynamics. These
+results suggest a promising sim-to-real direction for developing more
+expressive and agile humanoids.
+
+[Paper Link](
+https://arxiv.org/abs/2502.01143
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_16-54.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Embrace Collisions: Humanoid Shadowing for Deployable Contact-Agnostics Motions
+
+- **Authors**: Ziwen Zhuang, Hang Zhao
+
+#### Abstract
+
+Previous humanoid robot research works treat the robot as a bipedal mobile
+manipulation platform, where only the feet and hands contact the environment.
+However, we humans use all body parts to interact with the world, e.g., we sit
+in chairs, get up from the ground, or roll on the floor. Contacting the
+environment using body parts other than feet and hands brings significant
+challenges in both model-predictive control and reinforcement learning-based
+methods. An unpredictable contact sequence makes it almost impossible for
+model-predictive control to plan ahead in real time. The success of the
+zero-shot sim-to-real reinforcement learning method for humanoids heavily
+depends on the acceleration of GPU-based rigid-body physical simulator and
+simplification of the collision detection. Lacking extreme torso movement of
+the humanoid research makes all other components non-trivial to design, such as
+termination conditions, motion commands and reward designs. To address these
+potential challenges, we propose a general humanoid motion framework that takes
+discrete motion commands and controls the robot's motor action in real time.
+Using a GPU-accelerated rigid-body simulator, we train a humanoid whole-body
+control policy that follows the high-level motion command in the real world in
+real time, even with stochastic contacts and extremely large robot base
+rotation and not-so-feasible motion command. More details at
+https://project-instinct.github.io
+
+[Website Link](https://project-instinct.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2502.01465
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_16-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VR-Robo: A Real-to-Sim-to-Real Framework for Visual Robot Navigation and Locomotion
+
+- **Authors**: Shaoting Zhu, Linzhan Mou, Derun Li, Baijun Ye, Runhan Huang, Hang Zhao
+
+#### Abstract
+
+Recent success in legged robot locomotion is attributed to the integration of
+reinforcement learning and physical simulators. However, these policies often
+encounter challenges when deployed in real-world environments due to
+sim-to-real gaps, as simulators typically fail to replicate visual realism and
+complex real-world geometry. Moreover, the lack of realistic visual rendering
+limits the ability of these policies to support high-level tasks requiring
+RGB-based perception like ego-centric navigation. This paper presents a
+Real-to-Sim-to-Real framework that generates photorealistic and physically
+interactive "digital twin" simulation environments for visual navigation and
+locomotion learning. Our approach leverages 3D Gaussian Splatting (3DGS) based
+scene reconstruction from multi-view images and integrates these environments
+into simulations that support ego-centric visual perception and mesh-based
+physical interactions. To demonstrate its effectiveness, we train a
+reinforcement learning policy within the simulator to perform a visual
+goal-tracking task. Extensive experiments show that our framework achieves
+RGB-only sim-to-real policy transfer. Additionally, our framework facilitates
+the rapid adaptation of robot policies with effective exploration capability in
+complex new environments, highlighting its potential for applications in
+households and factories.
+
+[Paper Link](
+https://arxiv.org/abs/2502.01536
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_16-41.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Dynamic object goal pushing with mobile manipulators through model-free constrained reinforcement learning
+
+- **Authors**: Ioannis Dadiotis, Mayank Mittal, Nikos Tsagarakis, Marco Hutter
+
+#### Abstract
+
+Non-prehensile pushing to move and reorient objects to a goal is a versatile
+loco-manipulation skill. In the real world, the object's physical properties
+and friction with the floor contain significant uncertainties, which makes the
+task challenging for a mobile manipulator. In this paper, we develop a
+learning-based controller for a mobile manipulator to move an unknown object to
+a desired position and yaw orientation through a sequence of pushing actions.
+The proposed controller for the robotic arm and the mobile base motion is
+trained using a constrained Reinforcement Learning (RL) formulation. We
+demonstrate its capability in experiments with a quadrupedal robot equipped
+with an arm. The learned policy achieves a success rate of 91.35% in simulation
+and at least 80% on hardware in challenging scenarios. Through our extensive
+hardware experiments, we show that the approach demonstrates high robustness
+against unknown objects of different masses, materials, sizes, and shapes. It
+reactively discovers the pushing location and direction, thus achieving
+contact-rich behavior while observing only the pose of the object.
+Additionally, we demonstrate the adaptive behavior of the learned policy
+towards preventing the object from toppling.
+
+[Paper Link](
+https://arxiv.org/abs/2502.01546
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_16-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-01-31
+
+
+### SAM2Act: Integrating Visual Foundation Model with A Memory Architecture for Robotic Manipulation
+
+- **Authors**: Haoquan Fang, Markus Grotz, Wilbert Pumacay, Yi Ru Wang, Dieter Fox, Ranjay Krishna, Jiafei Duan
+
+#### Abstract
+
+Robotic manipulation systems operating in diverse, dynamic environments must
+exhibit three critical abilities: multitask interaction, generalization to
+unseen scenarios, and spatial memory. While significant progress has been made
+in robotic manipulation, existing approaches often fall short in generalization
+to complex environmental variations and addressing memory-dependent tasks. To
+bridge this gap, we introduce SAM2Act, a multi-view robotic transformer-based
+policy that leverages multi-resolution upsampling with visual representations
+from large-scale foundation model. SAM2Act achieves a state-of-the-art average
+success rate of 86.8% across 18 tasks in the RLBench benchmark, and
+demonstrates robust generalization on The Colosseum benchmark, with only a 4.3%
+performance gap under diverse environmental perturbations. Building on this
+foundation, we propose SAM2Act+, a memory-based architecture inspired by SAM2,
+which incorporates a memory bank, an encoder, and an attention mechanism to
+enhance spatial memory. To address the need for evaluating memory-dependent
+tasks, we introduce MemoryBench, a novel benchmark designed to assess spatial
+memory and action recall in robotic manipulation. SAM2Act+ achieves competitive
+performance on MemoryBench, significantly outperforming existing approaches and
+pushing the boundaries of memory-enabled robotic systems. Project page:
+https://sam2act.github.io/
+
+[Website Link](https://sam2act.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2501.18564
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-05_16-35.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-01-28
+
+
+### SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Model
+
+- **Authors**: Delin Qu, Haoming Song, Qizhi Chen, Yuanqi Yao, Xinyi Ye, Yan Ding, Zhigang Wang, JiaYuan Gu, Bin Zhao, Dong Wang, Xuelong Li
+
+#### Abstract
+
+In this paper, we claim that spatial understanding is the keypoint in robot
+manipulation, and propose SpatialVLA to explore effective spatial
+representations for the robot foundation model. Specifically, we introduce
+Ego3D Position Encoding to inject 3D information into the input observations of
+the visual-language-action model, and propose Adaptive Action Grids to
+represent spatial robot movement actions with adaptive discretized action
+grids, facilitating learning generalizable and transferrable spatial action
+knowledge for cross-robot control. SpatialVLA is first pre-trained on top of a
+vision-language model with 1.1 Million real-world robot episodes, to learn a
+generalist manipulation policy across multiple robot environments and tasks.
+After pre-training, SpatialVLA is directly applied to perform numerous tasks in
+a zero-shot manner. The superior results in both simulation and real-world
+robots demonstrate its advantage of inferring complex robot motion trajectories
+and its strong in-domain multi-task generalization ability. We further show the
+proposed Adaptive Action Grids offer a new and effective way to fine-tune the
+pre-trained SpatialVLA model for new simulation and real-world setups, where
+the pre-learned action grids are re-discretized to capture robot-specific
+spatial action movements of new setups. The superior results from extensive
+evaluations demonstrate the exceptional in-distribution generalization and
+out-of-distribution adaptation capability, highlighting the crucial benefit of
+the proposed spatial-aware representations for generalist robot policy
+learning. All the details and codes will be open-sourced.
+
+[Paper Link](
+https://arxiv.org/abs/2501.15830
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-28_23-25.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-01-20
+
+
+### FoundationStereo: Zero-Shot Stereo Matching
+
+- **Authors**: Bowen Wen, Matthew Trepte, Joseph Aribido, Jan Kautz, Orazio Gallo, Stan Birchfield
+
+#### Abstract
+
+Tremendous progress has been made in deep stereo matching to excel on
+benchmark datasets through per-domain fine-tuning. However, achieving strong
+zero-shot generalization - a hallmark of foundation models in other computer
+vision tasks - remains challenging for stereo matching. We introduce
+FoundationStereo, a foundation model for stereo depth estimation designed to
+achieve strong zero-shot generalization. To this end, we first construct a
+large-scale (1M stereo pairs) synthetic training dataset featuring large
+diversity and high photorealism, followed by an automatic self-curation
+pipeline to remove ambiguous samples. We then design a number of network
+architecture components to enhance scalability, including a side-tuning feature
+backbone that adapts rich monocular priors from vision foundation models to
+mitigate the sim-to-real gap, and long-range context reasoning for effective
+cost volume filtering. Together, these components lead to strong robustness and
+accuracy across domains, establishing a new standard in zero-shot stereo depth
+estimation.
+
+[Paper Link](
+https://arxiv.org/abs/2501.09898
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-20_12-50.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SLIM: Sim-to-Real Legged Instructive Manipulation via Long-Horizon Visuomotor Learning
+
+- **Authors**: Haichao Zhang, Haonan Yu, Le Zhao, Andrew Choi, Qinxun Bai, Yiqing Yang, Wei Xu
+
+#### Abstract
+
+We present a low-cost quadruped manipulation system that solves long-horizon
+real-world tasks, trained by reinforcement learning purely in simulation. The
+system comprises 1) a hierarchical design of a high-level policy for
+visual-mobile manipulation following instructions, and a low-level policy for
+quadruped movement and limb-control, 2) a progressive policy expansion approach
+for solving the long-horizon task together with a teacher-student framework for
+efficient high-level training of the high-level visuomotor policy, and 3) a
+suite of techniques for minimizing sim-to-real gaps.
+  With budget-friendly but limited reliability and performance hardware, and
+just one wrist-mounted RGB camera, the entire system fully trained in
+simulation achieves high success rates for long horizon tasks involving search,
+move, grasp, and drop-into, with fluid sim-to-real transfer in a wide variety
+of indoor and outdoor scenes and lighting conditions.Extensive real-world
+evaluations show that on the long horizon mobile manipulation tasks, our system
+achieves good performance when transferred to real both in terms of task
+success rate and execution efficiency. Finally, we discuss the necessity of our
+sim-to-real techniques for legged mobile manipulation, and show their ablation
+performance.
+
+[Paper Link](
+https://arxiv.org/abs/2501.09905
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-20_12-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics
+
+- **Authors**: Chenhao Li, Andreas Krause, Marco Hutter
+
+#### Abstract
+
+Learning robust and generalizable world models is crucial for enabling
+efficient and scalable robotic control in real-world environments. In this
+work, we introduce a novel framework for learning world models that accurately
+capture complex, partially observable, and stochastic dynamics. The proposed
+method employs a dual-autoregressive mechanism and self-supervised training to
+achieve reliable long-horizon predictions without relying on domain-specific
+inductive biases, ensuring adaptability across diverse robotic tasks. We
+further propose a policy optimization framework that leverages world models for
+efficient training in imagined environments and seamless deployment in
+real-world systems. Through extensive experiments, our approach consistently
+outperforms state-of-the-art methods, demonstrating superior autoregressive
+prediction accuracy, robustness to noise, and generalization across
+manipulation and locomotion tasks. Notably, policies trained with our method
+are successfully deployed on ANYmal D hardware in a zero-shot transfer,
+achieving robust performance with minimal sim-to-real performance loss. This
+work advances model-based reinforcement learning by addressing the challenges
+of long-horizon prediction, error accumulation, and sim-to-real transfer. By
+providing a scalable and robust framework, the introduced methods pave the way
+for adaptive and efficient robotic systems in real-world applications.
+
+[Paper Link](
+https://arxiv.org/abs/2501.10100
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-20_12-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexForce: Extracting Force-informed Actions from Kinesthetic Demonstrations for Dexterous Manipulation
+
+- **Authors**: Claire Chen, Zhongchun Yu, Hojung Choi, Mark Cutkosky, Jeannette Bohg
+
+#### Abstract
+
+Imitation learning requires high-quality demonstrations consisting of
+sequences of state-action pairs. For contact-rich dexterous manipulation tasks
+that require fine-grained dexterity, the actions in these state-action pairs
+must produce the right forces. Current widely-used methods for collecting
+dexterous manipulation demonstrations are difficult to use for demonstrating
+contact-rich tasks due to unintuitive human-to-robot motion retargeting and the
+lack of direct haptic feedback. Motivated by this, we propose DexForce, a
+method for collecting demonstrations of contact-rich dexterous manipulation.
+DexForce leverages contact forces, measured during kinesthetic demonstrations,
+to compute force-informed actions for policy learning. We use DexForce to
+collect demonstrations for six tasks and show that policies trained on our
+force-informed actions achieve an average success rate of 76% across all tasks.
+In contrast, policies trained directly on actions that do not account for
+contact forces have near-zero success rates. We also conduct a study ablating
+the inclusion of force data in policy observations. We find that while using
+force data never hurts policy performance, it helps the most for tasks that
+require an advanced level of precision and coordination, like opening an
+AirPods case and unscrewing a nut.
+
+[Paper Link](
+https://arxiv.org/abs/2501.10356
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-20_12-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-01-17
+
+
+### ThinTact:Thin Vision-Based Tactile Sensor by Lensless Imaging
+
+- **Authors**: Jing Xu, Weihang Chen, Hongyu Qian, Dan Wu, Rui Chen
+
+#### Abstract
+
+Vision-based tactile sensors have drawn increasing interest in the robotics
+community. However, traditional lens-based designs impose minimum thickness
+constraints on these sensors, limiting their applicability in space-restricted
+settings. In this paper, we propose ThinTact, a novel lensless vision-based
+tactile sensor with a sensing field of over 200 mm2 and a thickness of less
+than 10 mm.ThinTact utilizes the mask-based lensless imaging technique to map
+the contact information to CMOS signals. To ensure real-time tactile sensing,
+we propose a real-time lensless reconstruction algorithm that leverages a
+frequency-spatial-domain joint filter based on discrete cosine transform (DCT).
+This algorithm achieves computation significantly faster than existing
+optimization-based methods. Additionally, to improve the sensing quality, we
+develop a mask optimization method based on the generic algorithm and the
+corresponding system matrix calibration algorithm.We evaluate the performance
+of our proposed lensless reconstruction and tactile sensing through qualitative
+and quantitative experiments. Furthermore, we demonstrate ThinTact's practical
+applicability in diverse applications, including texture recognition and
+contact-rich object manipulation. The paper will appear in the IEEE
+Transactions on Robotics: https://ieeexplore.ieee.org/document/10842357. Video:
+https://youtu.be/YrOO9BDMAHo
+
+[Website Link](https://ieeexplore.ieee.org/document/10842357.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.09273
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-17_14-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Sensorimotor Control Strategies for Tactile Robotics
+
+- **Authors**: Enrico Donato, Matteo Lo Preti, Lucia Beccai, Egidio Falotico
+
+#### Abstract
+
+How are robots becoming smarter at interacting with their surroundings?
+Recent advances have reshaped how robots use tactile sensing to perceive and
+engage with the world. Tactile sensing is a game-changer, allowing robots to
+embed sensorimotor control strategies to interact with complex environments and
+skillfully handle heterogeneous objects. Such control frameworks plan
+contact-driven motions while staying responsive to sudden changes. We review
+the latest methods for building perception and control systems in tactile
+robotics while offering practical guidelines for their design and
+implementation. We also address key challenges to shape the future of
+intelligent robots.
+
+[Paper Link](
+https://arxiv.org/abs/2501.09468
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-17_13-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FAST: Efficient Action Tokenization for Vision-Language-Action Models
+
+- **Authors**: Karl Pertsch, Kyle Stachowicz, Brian Ichter, Danny Driess, Suraj Nair, Quan Vuong, Oier Mees, Chelsea Finn, Sergey Levine
+
+#### Abstract
+
+Autoregressive sequence models, such as Transformer-based vision-language
+action (VLA) policies, can be tremendously effective for capturing complex and
+generalizable robotic behaviors. However, such models require us to choose a
+tokenization of our continuous action signals, which determines how the
+discrete symbols predicted by the model map to continuous robot actions. We
+find that current approaches for robot action tokenization, based on simple
+per-dimension, per-timestep binning schemes, typically perform poorly when
+learning dexterous skills from high-frequency robot data. To address this
+challenge, we propose a new compression-based tokenization scheme for robot
+actions, based on the discrete cosine transform. Our tokenization approach,
+Frequency-space Action Sequence Tokenization (FAST), enables us to train
+autoregressive VLAs for highly dexterous and high-frequency tasks where
+standard discretization methods fail completely. Based on FAST, we release
+FAST+, a universal robot action tokenizer, trained on 1M real robot action
+trajectories. It can be used as a black-box tokenizer for a wide range of robot
+action sequences, with diverse action spaces and control frequencies. Finally,
+we show that, when combined with the pi0 VLA, our method can scale to training
+on 10k hours of robot data and match the performance of diffusion VLAs, while
+reducing training time by up to 5x.
+
+[Paper Link](
+https://arxiv.org/abs/2501.09747
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-17_13-29.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-01-15
+
+
+### FDPP: Fine-tune Diffusion Policy with Human Preference
+
+- **Authors**: Yuxin Chen, Devesh K. Jha, Masayoshi Tomizuka, Diego Romeres
+
+#### Abstract
+
+Imitation learning from human demonstrations enables robots to perform
+complex manipulation tasks and has recently witnessed huge success. However,
+these techniques often struggle to adapt behavior to new preferences or changes
+in the environment. To address these limitations, we propose Fine-tuning
+Diffusion Policy with Human Preference (FDPP). FDPP learns a reward function
+through preference-based learning. This reward is then used to fine-tune the
+pre-trained policy with reinforcement learning (RL), resulting in alignment of
+pre-trained policy with new human preferences while still solving the original
+task. Our experiments across various robotic tasks and preferences demonstrate
+that FDPP effectively customizes policy behavior without compromising
+performance. Additionally, we show that incorporating Kullback-Leibler (KL)
+regularization during fine-tuning prevents over-fitting and helps maintain the
+competencies of the initial policy.
+
+[Paper Link](
+https://arxiv.org/abs/2501.08259
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-15_13-22_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VINGS-Mono: Visual-Inertial Gaussian Splatting Monocular SLAM in Large Scenes
+
+- **Authors**: Ke Wu, Zicheng Zhang, Muer Tie, Ziqing Ai, Zhongxue Gan, Wenchao Ding
+
+#### Abstract
+
+VINGS-Mono is a monocular (inertial) Gaussian Splatting (GS) SLAM framework
+designed for large scenes. The framework comprises four main components: VIO
+Front End, 2D Gaussian Map, NVS Loop Closure, and Dynamic Eraser. In the VIO
+Front End, RGB frames are processed through dense bundle adjustment and
+uncertainty estimation to extract scene geometry and poses. Based on this
+output, the mapping module incrementally constructs and maintains a 2D Gaussian
+map. Key components of the 2D Gaussian Map include a Sample-based Rasterizer,
+Score Manager, and Pose Refinement, which collectively improve mapping speed
+and localization accuracy. This enables the SLAM system to handle large-scale
+urban environments with up to 50 million Gaussian ellipsoids. To ensure global
+consistency in large-scale scenes, we design a Loop Closure module, which
+innovatively leverages the Novel View Synthesis (NVS) capabilities of Gaussian
+Splatting for loop closure detection and correction of the Gaussian map.
+Additionally, we propose a Dynamic Eraser to address the inevitable presence of
+dynamic objects in real-world outdoor scenes. Extensive evaluations in indoor
+and outdoor environments demonstrate that our approach achieves localization
+performance on par with Visual-Inertial Odometry while surpassing recent
+GS/NeRF SLAM methods. It also significantly outperforms all existing methods in
+terms of mapping and rendering quality. Furthermore, we developed a mobile app
+and verified that our framework can generate high-quality Gaussian maps in real
+time using only a smartphone camera and a low-frequency IMU sensor. To the best
+of our knowledge, VINGS-Mono is the first monocular Gaussian SLAM method
+capable of operating in outdoor environments and supporting kilometer-scale
+large scenes.
+
+[Paper Link](
+https://arxiv.org/abs/2501.08286
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-15_13-22.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-01-14
+
+
+### Vid2Sim: Realistic and Interactive Simulation from Video for Urban Navigation
+
+- **Authors**: Ziyang Xie, Zhizheng Liu, Zhenghao Peng, Wayne Wu, Bolei Zhou
+
+#### Abstract
+
+Sim-to-real gap has long posed a significant challenge for robot learning in
+simulation, preventing the deployment of learned models in the real world.
+Previous work has primarily focused on domain randomization and system
+identification to mitigate this gap. However, these methods are often limited
+by the inherent constraints of the simulation and graphics engines. In this
+work, we propose Vid2Sim, a novel framework that effectively bridges the
+sim2real gap through a scalable and cost-efficient real2sim pipeline for neural
+3D scene reconstruction and simulation. Given a monocular video as input,
+Vid2Sim can generate photorealistic and physically interactable 3D simulation
+environments to enable the reinforcement learning of visual navigation agents
+in complex urban environments. Extensive experiments demonstrate that Vid2Sim
+significantly improves the performance of urban navigation in the digital twins
+and real world by 31.2% and 68.3% in success rate compared with agents trained
+with prior simulation methods.
+
+[Paper Link](
+https://arxiv.org/abs/2501.06693
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Whole-Body Integrated Motion Planning for Aerial Manipulators
+
+- **Authors**: Weiliang Deng, Hongming Chen, Biyu Ye, Haoran Chen, Ximin Lyu
+
+#### Abstract
+
+Efficient motion planning for Aerial Manipulators (AMs) is essential for
+tackling complex manipulation tasks, yet achieving coupled trajectory planning
+remains challenging. In this work, we propose, to the best of our knowledge,
+the first whole-body integrated motion planning framework for aerial
+manipulators, which is facilitated by an improved Safe Flight Corridor (SFC)
+generation strategy and high-dimensional collision-free trajectory planning. In
+particular, we formulate an optimization problem to generate feasible
+trajectories for both the quadrotor and manipulator while ensuring collision
+avoidance, dynamic feasibility, kinematic feasibility, and waypoint
+constraints. To achieve collision avoidance, we introduce a variable geometry
+approximation method, which dynamically models the changing collision volume
+induced by different manipulator configurations. Moreover, waypoint constraints
+in our framework are defined in $\mathrm{SE(3)\times\mathbb{R}^3}$, allowing
+the aerial manipulator to traverse specified positions while maintaining
+desired attitudes and end-effector states. The effectiveness of our framework
+is validated through comprehensive simulations and real-world experiments
+across various environments.
+
+[Paper Link](
+https://arxiv.org/abs/2501.06493
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboHorizon: An LLM-Assisted Multi-View World Model for Long-Horizon Robotic Manipulation
+
+- **Authors**: Zixuan Chen, Jing Huo, Yangtao Chen, Yang Gao
+
+#### Abstract
+
+Efficient control in long-horizon robotic manipulation is challenging due to
+complex representation and policy learning requirements. Model-based visual
+reinforcement learning (RL) has shown great potential in addressing these
+challenges but still faces notable limitations, particularly in handling sparse
+rewards and complex visual features in long-horizon environments. To address
+these limitations, we propose the Recognize-Sense-Plan-Act (RSPA) pipeline for
+long-horizon tasks and further introduce RoboHorizon, an LLM-assisted
+multi-view world model tailored for long-horizon robotic manipulation. In
+RoboHorizon, pre-trained LLMs generate dense reward structures for multi-stage
+sub-tasks based on task language instructions, enabling robots to better
+recognize long-horizon tasks. Keyframe discovery is then integrated into the
+multi-view masked autoencoder (MAE) architecture to enhance the robot's ability
+to sense critical task sequences, strengthening its multi-stage perception of
+long-horizon processes. Leveraging these dense rewards and multi-view
+representations, a robotic world model is constructed to efficiently plan
+long-horizon tasks, enabling the robot to reliably act through RL algorithms.
+Experiments on two representative benchmarks, RLBench and FurnitureBench, show
+that RoboHorizon outperforms state-of-the-art visual model-based RL methods,
+achieving a 23.35% improvement in task success rates on RLBench's 4
+short-horizon tasks and a 29.23% improvement on 6 long-horizon tasks from
+RLBench and 3 furniture assembly tasks from FurnitureBench.
+
+[Paper Link](
+https://arxiv.org/abs/2501.06605
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Implicit Social Navigation Behavior using Deep Inverse Reinforcement Learning
+
+- **Authors**: Tribhi Kathuria, Ke Liu, Junwoo Jang, X. Jessie Yang, Maani Ghaffari
+
+#### Abstract
+
+This paper reports on learning a reward map for social navigation in dynamic
+environments where the robot can reason about its path at any time, given
+agents' trajectories and scene geometry. Humans navigating in dense and dynamic
+indoor environments often work with several implied social rules. A rule-based
+approach fails to model all possible interactions between humans, robots, and
+scenes. We propose a novel Smooth Maximum Entropy Deep Inverse Reinforcement
+Learning (S-MEDIRL) algorithm that can extrapolate beyond expert demos to
+better encode scene navigability from few-shot demonstrations. The agent learns
+to predict the cost maps reasoning on trajectory data and scene geometry. The
+agent samples a trajectory that is then executed using a local crowd navigation
+controller. We present results in a photo-realistic simulation environment,
+with a robot and a human navigating a narrow crossing scenario. The robot
+implicitly learns to exhibit social behaviors such as yielding to oncoming
+traffic and avoiding deadlocks. We compare the proposed approach to the popular
+model-based crowd navigation algorithm ORCA and a rule-based agent that
+exhibits yielding.
+
+[Paper Link](
+https://arxiv.org/abs/2501.06946
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-22.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Motion Tracks: A Unified Representation for Human-Robot Transfer in Few-Shot Imitation Learning
+
+- **Authors**: Juntao Ren, Priya Sundaresan, Dorsa Sadigh, Sanjiban Choudhury, Jeannette Bohg
+
+#### Abstract
+
+Teaching robots to autonomously complete everyday tasks remains a challenge.
+Imitation Learning (IL) is a powerful approach that imbues robots with skills
+via demonstrations, but is limited by the labor-intensive process of collecting
+teleoperated robot data. Human videos offer a scalable alternative, but it
+remains difficult to directly train IL policies from them due to the lack of
+robot action labels. To address this, we propose to represent actions as
+short-horizon 2D trajectories on an image. These actions, or motion tracks,
+capture the predicted direction of motion for either human hands or robot
+end-effectors. We instantiate an IL policy called Motion Track Policy (MT-pi)
+which receives image observations and outputs motion tracks as actions. By
+leveraging this unified, cross-embodiment action space, MT-pi completes tasks
+with high success given just minutes of human video and limited additional
+robot demonstrations. At test time, we predict motion tracks from two camera
+views, recovering 6DoF trajectories via multi-view synthesis. MT-pi achieves an
+average success rate of 86.5% across 4 real-world tasks, outperforming
+state-of-the-art IL baselines which do not leverage human data or our action
+space by 40%, and generalizes to scenarios seen only in human videos. Code and
+videos are available on our website
+https://portal-cornell.github.io/motion_track_policy/.
+
+[Website Link](https://portal-cornell.github.io/motion_track_policy/.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.06994
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-14_12-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-01-10
+
+
+### ECBench: Can Multi-modal Foundation Models Understand the Egocentric World? A Holistic Embodied Cognition Benchmark
+
+- **Authors**: Ronghao Dang, Yuqian Yuan, Wenqi Zhang, Yifei Xin, Boqiang Zhang, Long Li, Liuyi Wang, Qinyang Zeng, Xin Li, Lidong Bing
+
+#### Abstract
+
+The enhancement of generalization in robots by large vision-language models
+(LVLMs) is increasingly evident. Therefore, the embodied cognitive abilities of
+LVLMs based on egocentric videos are of great interest. However, current
+datasets for embodied video question answering lack comprehensive and
+systematic evaluation frameworks. Critical embodied cognitive issues, such as
+robotic self-cognition, dynamic scene perception, and hallucination, are rarely
+addressed. To tackle these challenges, we propose ECBench, a high-quality
+benchmark designed to systematically evaluate the embodied cognitive abilities
+of LVLMs. ECBench features a diverse range of scene video sources, open and
+varied question formats, and 30 dimensions of embodied cognition. To ensure
+quality, balance, and high visual dependence, ECBench uses class-independent
+meticulous human annotation and multi-round question screening strategies.
+Additionally, we introduce ECEval, a comprehensive evaluation system that
+ensures the fairness and rationality of the indicators. Utilizing ECBench, we
+conduct extensive evaluations of proprietary, open-source, and task-specific
+LVLMs. ECBench is pivotal in advancing the embodied cognitive capabilities of
+LVLMs, laying a solid foundation for developing reliable core models for
+embodied agents. All data and code are available at
+https://github.com/Rh-Dang/ECBench.
+
+[Website Link](https://github.com/Rh-Dang/ECBench.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.05031
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-10_12-19.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboPanoptes: The All-seeing Robot with Whole-body Dexterity
+
+- **Authors**: Xiaomeng Xu, Dominik Bauer, Shuran Song
+
+#### Abstract
+
+We present RoboPanoptes, a capable yet practical robot system that achieves
+whole-body dexterity through whole-body vision. Its whole-body dexterity allows
+the robot to utilize its entire body surface for manipulation, such as
+leveraging multiple contact points or navigating constrained spaces. Meanwhile,
+whole-body vision uses a camera system distributed over the robot's surface to
+provide comprehensive, multi-perspective visual feedback of its own and the
+environment's state. At its core, RoboPanoptes uses a whole-body visuomotor
+policy that learns complex manipulation skills directly from human
+demonstrations, efficiently aggregating information from the distributed
+cameras while maintaining resilience to sensor failures. Together, these design
+aspects unlock new capabilities and tasks, allowing RoboPanoptes to unbox in
+narrow spaces, sweep multiple or oversized objects, and succeed in multi-step
+stowing in cluttered environments, outperforming baselines in adaptability and
+efficiency. Results are best viewed on https://robopanoptes.github.io.
+
+[Website Link](https://robopanoptes.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2501.05420
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-10_11-41.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### From Simple to Complex Skills: The Case of In-Hand Object Reorientation
+
+- **Authors**: Haozhi Qi, Brent Yi, Mike Lambeta, Yi Ma, Roberto Calandra, Jitendra Malik
+
+#### Abstract
+
+Learning policies in simulation and transferring them to the real world has
+become a promising approach in dexterous manipulation. However, bridging the
+sim-to-real gap for each new task requires substantial human effort, such as
+careful reward engineering, hyperparameter tuning, and system identification.
+In this work, we present a system that leverages low-level skills to address
+these challenges for more complex tasks. Specifically, we introduce a
+hierarchical policy for in-hand object reorientation based on previously
+acquired rotation skills. This hierarchical policy learns to select which
+low-level skill to execute based on feedback from both the environment and the
+low-level skill policies themselves. Compared to learning from scratch, the
+hierarchical policy is more robust to out-of-distribution changes and transfers
+easily from simulation to real-world environments. Additionally, we propose a
+generalizable object pose estimator that uses proprioceptive information,
+low-level skill predictions, and control errors as inputs to estimate the
+object pose over time. We demonstrate that our system can reorient objects,
+including symmetrical and textureless ones, to a desired pose.
+
+[Paper Link](
+https://arxiv.org/abs/2501.05439
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-01-10_11-37.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-01-09
 
 

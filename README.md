@@ -30,7 +30,7 @@ You will see the page running locally in your browser, and any edits or updates 
 
 Thanks goes to these wonderful people:
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -61,6 +61,8 @@ Thanks goes to these wonderful people:
       <td align="center" valign="top" width="14.28%"><a href="https://lyuj1998.github.io/"><img src="https://avatars.githubusercontent.com/u/31683380?v=4?s=100" width="100px;" alt="Lv Jun"/><br /><sub><b>Lv Jun</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=LyuJ1998" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://robo-alex.github.io"><img src="https://avatars.githubusercontent.com/u/71915735?v=4" width="100px;" alt="Mingtong Zhang"/><br /><sub><b>Mingtong Zhang</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=robo-alex" title="blogposts">📝</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://warshallrho.github.io"><img src="https://avatars.githubusercontent.com/u/37874862?v=4" width="100px;" alt="Ruihai Wu"/><br /><sub><b>Ruihai Wu</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=warshallrho" title="Documentation">📖</a> <a href="#content-Selina2023" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://hao-l1.github.io"><img src="https://avatars.githubusercontent.com/u/47584381?v=4" width="100px;" alt="Hao Li"/><br /><sub><b>Hao Li</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=hao-l1" title="blogposts">📝</a></td>
+
     </tr>
   </tbody>
 </table>
