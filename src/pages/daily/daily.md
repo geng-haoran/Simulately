@@ -1,3 +1,379 @@
+## 2025-02-07
+
+
+### Action-Free Reasoning for Policy Generalization
+
+- **Authors**: Jaden Clark, Suvir Mirchandani, Dorsa Sadigh, Suneel Belkhale
+
+#### Abstract
+
+End-to-end imitation learning offers a promising approach for training robot
+policies. However, generalizing to new settings remains a significant
+challenge. Although large-scale robot demonstration datasets have shown
+potential for inducing generalization, they are resource-intensive to scale. In
+contrast, human video data is abundant and diverse, presenting an attractive
+alternative. Yet, these human-video datasets lack action labels, complicating
+their use in imitation learning. Existing methods attempt to extract grounded
+action representations (e.g., hand poses), but resulting policies struggle to
+bridge the embodiment gap between human and robot actions. We propose an
+alternative approach: leveraging language-based reasoning from human
+videos-essential for guiding robot actions-to train generalizable robot
+policies. Building on recent advances in reasoning-based policy architectures,
+we introduce Reasoning through Action-free Data (RAD). RAD learns from both
+robot demonstration data (with reasoning and action labels) and action-free
+human video data (with only reasoning labels). The robot data teaches the model
+to map reasoning to low-level actions, while the action-free data enhances
+reasoning capabilities. Additionally, we will release a new dataset of 3,377
+human-hand demonstrations with reasoning annotations compatible with the Bridge
+V2 benchmark and aimed at facilitating future research on reasoning-driven
+robot learning. Our experiments show that RAD enables effective transfer across
+the embodiment gap, allowing robots to perform tasks seen only in action-free
+data. Furthermore, scaling up action-free reasoning data significantly improves
+policy performance and generalization to novel tasks. These results highlight
+the promise of reasoning-driven learning from action-free datasets for
+advancing generalizable robot control. Project page:
+https://rad-generalization.github.io
+
+[Website Link](https://rad-generalization.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2502.03729
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_19-27.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Real-World Action-Video Dynamics with Heterogeneous Masked Autoregression
+
+- **Authors**: Lirui Wang, Kevin Zhao, Chaoqi Liu, Xinlei Chen
+
+#### Abstract
+
+We propose Heterogeneous Masked Autoregression (HMA) for modeling
+action-video dynamics to generate high-quality data and evaluation in scaling
+robot learning. Building interactive video world models and policies for
+robotics is difficult due to the challenge of handling diverse settings while
+maintaining computational efficiency to run in real time. HMA uses
+heterogeneous pre-training from observations and action sequences across
+different robotic embodiments, domains, and tasks. HMA uses masked
+autoregression to generate quantized or soft tokens for video predictions.
+\ourshort achieves better visual fidelity and controllability than the previous
+robotic video generation models with 15 times faster speed in the real world.
+After post-training, this model can be used as a video simulator from low-level
+action inputs for evaluating policies and generating synthetic data. See this
+link https://liruiw.github.io/hma for more information.
+
+[Website Link](https://liruiw.github.io/hma)
+
+[Paper Link](
+https://arxiv.org/abs/2502.04296
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_17-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexterityGen: Foundation Controller for Unprecedented Dexterity
+
+- **Authors**: Zhao-Heng Yin, Changhao Wang, Luis Pineda, Francois Hogan, Krishna Bodduluri, Akash Sharma, Patrick Lancaster, Ishita Prasad, Mrinal Kalakrishnan, Jitendra Malik, Mike Lambeta, Tingfan Wu, Pieter Abbeel, Mustafa Mukadam
+
+#### Abstract
+
+Teaching robots dexterous manipulation skills, such as tool use, presents a
+significant challenge. Current approaches can be broadly categorized into two
+strategies: human teleoperation (for imitation learning) and sim-to-real
+reinforcement learning. The first approach is difficult as it is hard for
+humans to produce safe and dexterous motions on a different embodiment without
+touch feedback. The second RL-based approach struggles with the domain gap and
+involves highly task-specific reward engineering on complex tasks. Our key
+insight is that RL is effective at learning low-level motion primitives, while
+humans excel at providing coarse motion commands for complex, long-horizon
+tasks. Therefore, the optimal solution might be a combination of both
+approaches. In this paper, we introduce DexterityGen (DexGen), which uses RL to
+pretrain large-scale dexterous motion primitives, such as in-hand rotation or
+translation. We then leverage this learned dataset to train a dexterous
+foundational controller. In the real world, we use human teleoperation as a
+prompt to the controller to produce highly dexterous behavior. We evaluate the
+effectiveness of DexGen in both simulation and real world, demonstrating that
+it is a general-purpose controller that can realize input dexterous
+manipulation commands and significantly improves stability by 10-100x measured
+as duration of holding objects across diverse tasks. Notably, with DexGen we
+demonstrate unprecedented dexterous skills including diverse object
+reorientation and dexterous tool use such as pen, syringe, and screwdriver for
+the first time.
+
+[Paper Link](
+https://arxiv.org/abs/2502.04307
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_17-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robust Autonomy Emerges from Self-Play
+
+- **Authors**: Marco Cusumano-Towner, David Hafner, Alex Hertzberg, Brody Huval, Aleksei Petrenko, Eugene Vinitsky, Erik Wijmans, Taylor Killian, Stuart Bowers, Ozan Sener, Philipp Krähenbühl, Vladlen Koltun
+
+#### Abstract
+
+Self-play has powered breakthroughs in two-player and multi-player games.
+Here we show that self-play is a surprisingly effective strategy in another
+domain. We show that robust and naturalistic driving emerges entirely from
+self-play in simulation at unprecedented scale -- 1.6~billion~km of driving.
+This is enabled by Gigaflow, a batched simulator that can synthesize and train
+on 42 years of subjective driving experience per hour on a single 8-GPU node.
+The resulting policy achieves state-of-the-art performance on three independent
+autonomous driving benchmarks. The policy outperforms the prior state of the
+art when tested on recorded real-world scenarios, amidst human drivers, without
+ever seeing human data during training. The policy is realistic when assessed
+against human references and achieves unprecedented robustness, averaging 17.5
+years of continuous driving between incidents in simulation.
+
+[Paper Link](
+https://arxiv.org/abs/2502.03349
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_17-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning from Active Human Involvement through Proxy Value Propagation
+
+- **Authors**: Zhenghao Peng, Wenjie Mo, Chenda Duan, Quanyi Li, Bolei Zhou
+
+#### Abstract
+
+Learning from active human involvement enables the human subject to actively
+intervene and demonstrate to the AI agent during training. The interaction and
+corrective feedback from human brings safety and AI alignment to the learning
+process. In this work, we propose a new reward-free active human involvement
+method called Proxy Value Propagation for policy optimization. Our key insight
+is that a proxy value function can be designed to express human intents,
+wherein state-action pairs in the human demonstration are labeled with high
+values, while those agents' actions that are intervened receive low values.
+Through the TD-learning framework, labeled values of demonstrated state-action
+pairs are further propagated to other unlabeled data generated from agents'
+exploration. The proxy value function thus induces a policy that faithfully
+emulates human behaviors. Human-in-the-loop experiments show the generality and
+efficiency of our method. With minimal modification to existing reinforcement
+learning algorithms, our method can learn to solve continuous and discrete
+control tasks with various human control devices, including the challenging
+task of driving in Grand Theft Auto V. Demo video and code are available at:
+https://metadriverse.github.io/pvp
+
+[Website Link](https://metadriverse.github.io/pvp)
+
+[Paper Link](
+https://arxiv.org/abs/2502.03369
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_17-25.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning to Double Guess: An Active Perception Approach for Estimating the Center of Mass of Arbitrary Objects
+
+- **Authors**: Shengmiao Jin, Yuchen Mo, Wenzhen Yuan
+
+#### Abstract
+
+Manipulating arbitrary objects in unstructured environments is a significant
+challenge in robotics, primarily due to difficulties in determining an object's
+center of mass. This paper introduces U-GRAPH: Uncertainty-Guided Rotational
+Active Perception with Haptics, a novel framework to enhance the center of mass
+estimation using active perception. Traditional methods often rely on single
+interaction and are limited by the inherent inaccuracies of Force-Torque (F/T)
+sensors. Our approach circumvents these limitations by integrating a Bayesian
+Neural Network (BNN) to quantify uncertainty and guide the robotic system
+through multiple, information-rich interactions via grid search and a neural
+network that scores each action. We demonstrate the remarkable generalizability
+and transferability of our method with training on a small dataset with limited
+variation yet still perform well on unseen complex real-world objects.
+
+[Paper Link](
+https://arxiv.org/abs/2502.02663
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_17-23.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Rapidly Adapting Policies to the Real World via Simulation-Guided Fine-Tuning
+
+- **Authors**: Patrick Yin, Tyler Westenbroek, Simran Bagaria, Kevin Huang, Ching-an Cheng, Andrey Kobolov, Abhishek Gupta
+
+#### Abstract
+
+Robot learning requires a considerable amount of high-quality data to realize
+the promise of generalization. However, large data sets are costly to collect
+in the real world. Physics simulators can cheaply generate vast data sets with
+broad coverage over states, actions, and environments. However, physics engines
+are fundamentally misspecified approximations to reality. This makes direct
+zero-shot transfer from simulation to reality challenging, especially in tasks
+where precise and force-sensitive manipulation is necessary. Thus, fine-tuning
+these policies with small real-world data sets is an appealing pathway for
+scaling robot learning. However, current reinforcement learning fine-tuning
+frameworks leverage general, unstructured exploration strategies which are too
+inefficient to make real-world adaptation practical. This paper introduces the
+Simulation-Guided Fine-tuning (SGFT) framework, which demonstrates how to
+extract structural priors from physics simulators to substantially accelerate
+real-world adaptation. Specifically, our approach uses a value function learned
+in simulation to guide real-world exploration. We demonstrate this approach
+across five real-world dexterous manipulation tasks where zero-shot sim-to-real
+transfer fails. We further demonstrate our framework substantially outperforms
+baseline fine-tuning methods, requiring up to an order of magnitude fewer
+real-world samples and succeeding at difficult tasks where prior approaches
+fail entirely. Last but not least, we provide theoretical justification for
+this new paradigm which underpins how SGFT can rapidly learn high-performance
+policies in the face of large sim-to-real dynamics gaps. Project webpage:
+https://weirdlabuw.github.io/sgft/{weirdlabuw.github.io/sgft}
+
+[Website Link](https://weirdlabuw.github.io/sgft/{weirdlabuw.github.io/sgft)
+
+[Paper Link](
+https://arxiv.org/abs/2502.02705
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_16-39.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Dexterous Safe Control for Humanoids in Cluttered Environments via Projected Safe Set Algorithm
+
+- **Authors**: Rui Chen, Yifan Sun, Changliu Liu
+
+#### Abstract
+
+It is critical to ensure safety for humanoid robots in real-world
+applications without compromising performance. In this paper, we consider the
+problem of dexterous safety, featuring limb-level geometry constraints for
+avoiding both external and self-collisions in cluttered environments. Compared
+to safety with simplified bounding geometries in sprase environments, dexterous
+safety produces numerous constraints which often lead to infeasible constraint
+sets when solving for safe robot control. To address this issue, we propose
+Projected Safe Set Algorithm (p-SSA), an extension of classical safe control
+algorithms to multi-constraint cases. p-SSA relaxes conflicting constraints in
+a principled manner, minimizing safety violations to guarantee feasible robot
+control. We verify our approach in simulation and on a real Unitree G1 humanoid
+robot performing complex collision avoidance tasks. Results show that p-SSA
+enables the humanoid to operate robustly in challenging situations with minimal
+safety violations and directly generalizes to various tasks with zero parameter
+tuning.
+
+[Paper Link](
+https://arxiv.org/abs/2502.02858
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_16-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SPARK: A Modular Benchmark for Humanoid Robot Safety
+
+- **Authors**: Yifan Sun, Rui Chen, Kai S. Yun, Yikuan Fang, Sebin Jung, Feihan Li, Bowei Li, Weiye Zhao, Changliu Liu
+
+#### Abstract
+
+This paper introduces the Safe Protective and Assistive Robot Kit (SPARK), a
+comprehensive benchmark designed to ensure safety in humanoid autonomy and
+teleoperation. Humanoid robots pose significant safety risks due to their
+physical capabilities of interacting with complex environments. The physical
+structures of humanoid robots further add complexity to the design of general
+safety solutions. To facilitate the safe deployment of complex robot systems,
+SPARK can be used as a toolbox that comes with state-of-the-art safe control
+algorithms in a modular and composable robot control framework. Users can
+easily configure safety criteria and sensitivity levels to optimize the balance
+between safety and performance. To accelerate humanoid safety research and
+development, SPARK provides a simulation benchmark that compares safety
+approaches in a variety of environments, tasks, and robot models. Furthermore,
+SPARK allows quick deployment of synthesized safe controllers on real robots.
+For hardware deployment, SPARK supports Apple Vision Pro (AVP) or a Motion
+Capture System as external sensors, while also offering interfaces for seamless
+integration with alternative hardware setups. This paper demonstrates SPARK's
+capability with both simulation experiments and case studies with a Unitree G1
+humanoid robot. Leveraging these advantages of SPARK, users and researchers can
+significantly improve the safety of their humanoid systems as well as
+accelerate relevant research. The open-source code is available at
+https://github.com/intelligent-control-lab/spark.
+
+[Website Link](https://github.com/intelligent-control-lab/spark.)
+
+[Paper Link](
+https://arxiv.org/abs/2502.03132
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_16-08.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### A Unified and General Humanoid Whole-Body Controller for Fine-Grained Locomotion
+
+- **Authors**: Yufei Xue, Wentao Dong, Minghuan Liu, Weinan Zhang, Jiangmiao Pang
+
+#### Abstract
+
+Locomotion is a fundamental skill for humanoid robots. However, most existing
+works made locomotion a single, tedious, unextendable, and passive movement.
+This limits the kinematic capabilities of humanoid robots. In contrast, humans
+possess versatile athletic abilities-running, jumping, hopping, and finely
+adjusting walking parameters such as frequency, and foot height. In this paper,
+we investigate solutions to bring such versatility into humanoid locomotion and
+thereby propose HUGWBC: a unified and general humanoid whole-body controller
+for fine-grained locomotion. By designing a general command space in the aspect
+of tasks and behaviors, along with advanced techniques like symmetrical loss
+and intervention training for learning a whole-body humanoid controlling policy
+in simulation, HugWBC enables real-world humanoid robots to produce various
+natural gaits, including walking (running), jumping, standing, and hopping,
+with customizable parameters such as frequency, foot swing height, further
+combined with different body height, waist rotation, and body pitch, all in one
+single policy. Beyond locomotion, HUGWBC also supports real-time interventions
+from external upper-body controllers like teleoperation, enabling
+loco-manipulation while maintaining precise control under any locomotive
+behavior. Our experiments validate the high tracking accuracy and robustness of
+HUGWBC with/without upper-body intervention for all commands, and we further
+provide an in-depth analysis of how the various commands affect humanoid
+movement and offer insights into the relationships between these commands. To
+our knowledge, HugWBC is the first humanoid whole-body controller that supports
+such fine-grained locomotion behaviors with high robustness and flexibility.
+
+[Paper Link](
+https://arxiv.org/abs/2502.03206
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-07_16-07.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-02-05
 
 
