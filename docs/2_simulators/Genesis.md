@@ -22,7 +22,7 @@ sidebar_position: 10
 <img width="700px" src="https://genesis-world.readthedocs.io/en/latest/_images/teaser.png"/>
 </div>
 
-> Genesis integrates various physics solvers and their coupling into a unified framework. This core physics engine is further enhanced by a generative agent framework that operates at an upper level, aiming towards fully automated data generation for robotics and beyond.
+> Genesis integrates various physics solvers and their coupling into a unified framework. This core physics engine is further enhanced by a generative agent framework that operates at an upper level, aiming toward fully automated data generation for robotics and beyond.
 
 ## Official Materials
 - [Website](https://genesis-embodied-ai.github.io/)
@@ -34,9 +34,10 @@ sidebar_position: 10
 
 ### Performance Report
 This document contains a detailed report on Genesis's performance (FPS), comparatively analyzed alongside other GPU-accelerated robotics simulators (Mujoco, IsaacGym, Maniskill) through a series of tests involving but not limited to static and dynamic scenes, self-collisions, continuous collisions, and object manipulation/grasping.
-![](imgs/genesis.gif)
-
+<br />
 The document concludes that Genesis performs fast on both per-environment settings and parallel environment settings, with a total FPS scaling linearly with number of parallel environments up to over 32768 envs.
+
+![](imgs/genesis.gif)
 
 *Testing shows Genesis performs up to 8.8x faster than Maniskill in grasping-with-path-following scenario (gripper asked to follow simple motion trajectory)*
 
@@ -44,5 +45,5 @@ The document concludes that Genesis performs fast on both per-environment settin
 - [Link to testing scripts](https://github.com/zhouxian/genesis-speed-benchmark)
 
 ## Related Projects
-- [ICLR 2024] [DiffTactile: A Physics-based Differentiable Tactile Simulator for Contact-rich Robotic Manipulation](https://github.com/Genesis-Embodied-AI/DiffTactile)
+- ICLR 2024: [DiffTactile: A Physics-based Differentiable Tactile Simulator for Contact-rich Robotic Manipulation](https://github.com/Genesis-Embodied-AI/DiffTactile)
 - [Towards Generalist Robots: A Promising Paradigm via Generative Simulation](https://arxiv.org/abs/2305.10455)
