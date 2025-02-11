@@ -16,6 +16,7 @@ Here is a table including a brief summary for physics simulators:
 |[MuJoCo](https://mujoco.org/)                      |               MuJoCo                |        Rasterization;        |RGBD; Force; IMU; Tactile;                         |    Rigid;Soft;Cloth    |        ✔💡      |     ✔      |
 |[CoppeliaSim](https://www.coppeliarobotics.com/)   | MuJoCo; Bullet; ODE; Newton; Vortex | Rasterization; RayTracing🔶; |RGBD; Force; Contact;                              |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
 |[Gazebo](https://gazebosim.org/home)               |     Bullet; ODE; DART; Simbody      |        Rasterization;        |RGBD; Lidar; Force; IMU;                           |    Rigid;Soft;Cloth    |        ✘        |     ✔      |
+|[Genesis](https://genesis-embodied-ai.github.io/)               |     Genesis      |        Rasterization; Raytracing        |RGBD; Tactile; (update soon)                          |    Rigid;Soft;Cloth;Fluid    |        ✔        |     ✔      |
 
 🤨: Check more information about sensors: [IsaacSim](https://docs.omniverse.nvidia.com/isaacsim/latest/features/sensors_simulation/index.html), IsaacGym(Doc), [SAPIEN](https://sapien.ucsd.edu/docs/latest/index.html), Pybullet, [MuJoCo](https://mujoco.readthedocs.io/en/stable/overview.html?highlight=sensor#sensor), CoppeliaSim, Gazebo
 
