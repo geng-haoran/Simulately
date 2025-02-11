@@ -34,12 +34,9 @@ sidebar_position: 10
 
 ### Performance Report
 This document contains a detailed report on Genesis's performance (FPS), comparatively analyzed alongside other GPU-accelerated robotics simulators (Mujoco, IsaacGym, Maniskill) through a series of tests involving but not limited to static and dynamic scenes, self-collisions, continuous collisions, and object manipulation/grasping.
-<br />
+![](imgs/genesis.gif)
 The document concludes that Genesis performs fast on both per-environment settings and parallel environment settings, with a total FPS scaling linearly with number of parallel environments up to over 32768 envs.
-<br />
-<br />
-<img src="imgs/genesis.gif" width="300px" height="300px"/>
-<br />
+
 *Testing shows Genesis performs up to 8.8x faster than Maniskill in grasping-with-path-following scenario (gripper asked to follow simple motion trajectory)*
 
 - [See detailed report](https://placid-walkover-0cc.notion.site/genesis-performance-benchmarking#1700c06194e180fca2a5e884def86add)
