@@ -37,7 +37,7 @@ This document contains a detailed report on Genesis's performance (FPS), compara
 
 ![](imgs/genesis.gif)
 
-The document concludes that Genesis performs fast on both per-environment settings and parallel environment settings, with a total FPS scaling linearly with number of parallel environments up to over 32768 envs.
+The document concludes that Genesis performs fast on both per-environment and parallel environment settings, with a total FPS scaling linearly with number of parallel environments up to over 32768 envs.
 
 *Testing shows Genesis performs up to 8.8x faster than Maniskill in grasping-with-path-following scenario (gripper asked to follow simple motion trajectory)*
 
@@ -45,5 +45,5 @@ The document concludes that Genesis performs fast on both per-environment settin
 - [Link to testing scripts](https://github.com/zhouxian/genesis-speed-benchmark)
 
 ## Related Projects
-- [ICLR 2024] [DiffTactile: A Physics-based Differentiable Tactile Simulator for Contact-rich Robotic Manipulation](https://github.com/Genesis-Embodied-AI/DiffTactile)
+- [ICLR 2024][DiffTactile: A Physics-based Differentiable Tactile Simulator for Contact-rich Robotic Manipulation](https://github.com/Genesis-Embodied-AI/DiffTactile)
 - [Towards Generalist Robots: A Promising Paradigm via Generative Simulation](https://arxiv.org/abs/2305.10455)
