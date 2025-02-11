@@ -4,7 +4,6 @@ sidebar_position: 10
 <!-- title -->
 <h2 align="center">
   <b>Genesis</b>
-<!-- links -->
 <div align="center">
     <a href="https://genesis-embodied-ai.github.io/" target="_blank">
       <img src="https://img.shields.io/badge/Project Website-Genesis-red">
@@ -17,13 +16,11 @@ sidebar_position: 10
     <a href="https://github.com/Genesis-Embodied-AI/Genesis" target="_blank"><img src="https://img.shields.io/badge/Source-Code-purple" alt="Code"></img></a>
 </div>
 </h2>
-<!-- images -->
 <div align="center">
 <img width="500px" src="https://github.com/Genesis-Embodied-AI/Genesis/blob/main/imgs/big_text.png?raw=true"/>
 <br />
 <img width="700px" src="https://genesis-world.readthedocs.io/en/latest/_images/teaser.png"/>
 </div>
-<!-- quote -->
 
 > Genesis integrates various physics solvers and their coupling into a unified framework. This core physics engine is further enhanced by a generative agent framework that operates at an upper level, aiming towards fully automated data generation for robotics and beyond.
 
