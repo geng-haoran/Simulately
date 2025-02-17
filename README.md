@@ -64,7 +64,6 @@ Thanks goes to these wonderful people:
       <td align="center" valign="top" width="14.28%"><a href="https://hao-l1.github.io"><img src="https://avatars.githubusercontent.com/u/47584381?v=4" width="100px;" alt="Hao Li"/><br /><sub><b>Hao Li</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=hao-l1" title="blogposts">📝</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/karalu2"><img src="https://avatars.githubusercontent.com/u/186653194?v=4" width="100px;" alt="Kara Lu"/><br /><sub><b>Kara Lu</b></sub></a><br /><a href="https://github.com/geng-haoran/Simulately/commits?author=karalu2" title="blogposts">📝</a></td>
 
-    </tr>
   </tbody>
 </table>
 
