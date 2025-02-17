@@ -75,3 +75,15 @@ Thanks goes to these wonderful people:
 <!-- example,code,doc,content,blog  -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Citation
+If you use Genesis in your research, please consider citing:
+```
+@software{Simulately,
+  author = {Simulately Authors},
+  title = {Simulately: A Universal Summary of Current Robotics Simulators},
+  month = {Febuary},
+  year = {2025},
+  url = {https://simulately.wiki}
+}
+```
