@@ -1,3 +1,270 @@
+## 2025-02-12
+
+
+### RobotMover: Learning to Move Large Objects by Imitating the Dynamic Chain
+
+- **Authors**: Tianyu Li, Joanne Truong, Jimmy Yang, Alexander Clegg, Akshara Rai, Sehoon Ha, Xavier Puig
+
+#### Abstract
+
+Moving large objects, such as furniture, is a critical capability for robots
+operating in human environments. This task presents significant challenges due
+to two key factors: the need to synchronize whole-body movements to prevent
+collisions between the robot and the object, and the under-actuated dynamics
+arising from the substantial size and weight of the objects. These challenges
+also complicate performing these tasks via teleoperation. In this work, we
+introduce \method, a generalizable learning framework that leverages
+human-object interaction demonstrations to enable robots to perform large
+object manipulation tasks. Central to our approach is the Dynamic Chain, a
+novel representation that abstracts human-object interactions so that they can
+be retargeted to robotic morphologies. The Dynamic Chain is a spatial
+descriptor connecting the human and object root position via a chain of nodes,
+which encode the position and velocity of different interaction keypoints. We
+train policies in simulation using Dynamic-Chain-based imitation rewards and
+domain randomization, enabling zero-shot transfer to real-world settings
+without fine-tuning. Our approach outperforms both learning-based methods and
+teleoperation baselines across six evaluation metrics when tested on three
+distinct object types, both in simulation and on physical hardware.
+Furthermore, we successfully apply the learned policies to real-world tasks,
+such as moving a trash cart and rearranging chairs.
+
+[Paper Link](
+https://arxiv.org/abs/2502.05271
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-12_23-11.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy
+
+- **Authors**: Yuhui Chen, Shuai Tian, Shugao Liu, Yingting Zhou, Haoran Li, Dongbin Zhao
+
+#### Abstract
+
+Vision-Language-Action (VLA) models have shown substantial potential in
+real-world robotic manipulation. However, fine-tuning these models through
+supervised learning struggles to achieve robust performance due to limited,
+inconsistent demonstrations, especially in contact-rich environments. In this
+paper, we propose a reinforced fine-tuning approach for VLA models, named
+ConRFT, which consists of offline and online fine-tuning with a unified
+consistency-based training objective, to address these challenges. In the
+offline stage, our method integrates behavior cloning and Q-learning to
+effectively extract policy from a small set of demonstrations and stabilize
+value estimating. In the online stage, the VLA model is further fine-tuned via
+consistency policy, with human interventions to ensure safe exploration and
+high sample efficiency. We evaluate our approach on eight diverse real-world
+manipulation tasks. It achieves an average success rate of 96.3% within 45-90
+minutes of online fine-tuning, outperforming prior supervised methods with a
+144% improvement in success rate and 1.9x shorter episode length. This work
+highlights the potential of integrating reinforcement learning to enhance the
+performance of VLA models for real-world robotic applications.
+
+[Paper Link](
+https://arxiv.org/abs/2502.05450
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-12_23-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### HAMSTER: Hierarchical Action Models For Open-World Robot Manipulation
+
+- **Authors**: Yi Li, Yuquan Deng, Jesse Zhang, Joel Jang, Marius Memme, Raymond Yu, Caelan Reed Garrett, Fabio Ramos, Dieter Fox, Anqi Li, Abhishek Gupta, Ankit Goyal
+
+#### Abstract
+
+Large foundation models have shown strong open-world generalization to
+complex problems in vision and language, but similar levels of generalization
+have yet to be achieved in robotics. One fundamental challenge is the lack of
+robotic data, which are typically obtained through expensive on-robot
+operation. A promising remedy is to leverage cheaper, off-domain data such as
+action-free videos, hand-drawn sketches or simulation data. In this work, we
+posit that hierarchical vision-language-action (VLA) models can be more
+effective in utilizing off-domain data than standard monolithic VLA models that
+directly finetune vision-language models (VLMs) to predict actions. In
+particular, we study a class of hierarchical VLA models, where the high-level
+VLM is finetuned to produce a coarse 2D path indicating the desired robot
+end-effector trajectory given an RGB image and a task description. The
+intermediate 2D path prediction is then served as guidance to the low-level,
+3D-aware control policy capable of precise manipulation. Doing so alleviates
+the high-level VLM from fine-grained action prediction, while reducing the
+low-level policy's burden on complex task-level reasoning. We show that, with
+the hierarchical design, the high-level VLM can transfer across significant
+domain gaps between the off-domain finetuning data and real-robot testing
+scenarios, including differences on embodiments, dynamics, visual appearances
+and task semantics, etc. In the real-robot experiments, we observe an average
+of 20% improvement in success rate across seven different axes of
+generalization over OpenVLA, representing a 50% relative gain. Visual results
+are provided at: https://hamster-robot.github.io/
+
+[Website Link](https://hamster-robot.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2502.05485
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-12_23-08.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Hierarchical Equivariant Policy via Frame Transfer
+
+- **Authors**: Haibo Zhao, Dian Wang, Yizhe Zhu, Xupeng Zhu, Owen Howell, Linfeng Zhao, Yaoyao Qian, Robin Walters, Robert Platt
+
+#### Abstract
+
+Recent advances in hierarchical policy learning highlight the advantages of
+decomposing systems into high-level and low-level agents, enabling efficient
+long-horizon reasoning and precise fine-grained control. However, the interface
+between these hierarchy levels remains underexplored, and existing hierarchical
+methods often ignore domain symmetry, resulting in the need for extensive
+demonstrations to achieve robust performance. To address these issues, we
+propose Hierarchical Equivariant Policy (HEP), a novel hierarchical policy
+framework. We propose a frame transfer interface for hierarchical policy
+learning, which uses the high-level agent's output as a coordinate frame for
+the low-level agent, providing a strong inductive bias while retaining
+flexibility. Additionally, we integrate domain symmetries into both levels and
+theoretically demonstrate the system's overall equivariance. HEP achieves
+state-of-the-art performance in complex robotic manipulation tasks,
+demonstrating significant improvements in both simulation and real-world
+settings.
+
+[Paper Link](
+https://arxiv.org/abs/2502.05728
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-12_23-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control
+
+- **Authors**: Junjie Wen, Yichen Zhu, Jinming Li, Zhibin Tang, Chaomin Shen, Feifei Feng
+
+#### Abstract
+
+Enabling robots to perform diverse tasks across varied environments is a
+central challenge in robot learning. While vision-language-action (VLA) models
+have shown promise for generalizable robot skills, realizing their full
+potential requires addressing limitations in action representation and
+efficient training. Current VLA models often focus on scaling the
+vision-language model (VLM) component, while the action space representation
+remains a critical bottleneck. This paper introduces DexVLA, a novel framework
+designed to enhance the efficiency and generalization capabilities of VLAs for
+complex, long-horizon tasks across diverse robot embodiments. DexVLA features a
+novel diffusion-based action expert, scaled to one billion parameters, designed
+for cross-embodiment learning. A novel embodiment curriculum learning strategy
+facilitates efficient training: (1) pre-training the diffusion expert that is
+separable from the VLA on cross-embodiment data, (2) aligning the VLA model to
+specific embodiments, and (3) post-training for rapid adaptation to new tasks.
+We conduct comprehensive experiments across multiple embodiments, including
+single-arm, bimanual, and dexterous hand, demonstrating DexVLA's adaptability
+to challenging tasks without task-specific adaptation, its ability to learn
+dexterous skills on novel embodiments with limited data, and its capacity to
+complete complex, long-horizon tasks using only direct language prompting, such
+as laundry folding. In all settings, our method demonstrates superior
+performance compared to state-of-the-art models like Octo, OpenVLA, and
+Diffusion Policy.
+
+[Paper Link](
+https://arxiv.org/abs/2502.05855
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-12_23-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### EvoAgent: Agent Autonomous Evolution with Continual World Model for Long-Horizon Tasks
+
+- **Authors**: Tongtong Feng, Xin Wang, Zekai Zhou, Ren Wang, Yuwei Zhan, Guangyao Li, Qing Li, Wenwu Zhu
+
+#### Abstract
+
+Completing Long-Horizon (LH) tasks in open-ended worlds is an important yet
+difficult problem for embodied agents. Existing approaches suffer from two key
+challenges: (1) they heavily rely on experiences obtained from human-created
+data or curricula, lacking the ability to continuously update multimodal
+experiences, and (2) they may encounter catastrophic forgetting issues when
+faced with new tasks, lacking the ability to continuously update world
+knowledge. To solve these challenges, this paper presents EvoAgent, an
+autonomous-evolving agent with a continual World Model (WM), which can
+autonomously complete various LH tasks across environments through
+self-planning, self-control, and self-reflection, without human intervention.
+Our proposed EvoAgent contains three modules, i.e., i) the memory-driven
+planner which uses an LLM along with the WM and interaction memory, to convert
+LH tasks into executable sub-tasks; ii) the WM-guided action controller which
+leverages WM to generate low-level actions and incorporates a self-verification
+mechanism to update multimodal experiences; iii) the experience-inspired
+reflector which implements a two-stage curriculum learning algorithm to select
+experiences for task-adaptive WM updates. Moreover, we develop a continual
+World Model for EvoAgent, which can continuously update the multimodal
+experience pool and world knowledge through closed-loop dynamics. We conducted
+extensive experiments on Minecraft, compared with existing methods, EvoAgent
+can achieve an average success rate improvement of 105% and reduce ineffective
+actions by more than 6x.
+
+[Paper Link](
+https://arxiv.org/abs/2502.05907
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-12_22-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Predictive Red Teaming: Breaking Policies Without Breaking Robots
+
+- **Authors**: Anirudha Majumdar, Mohit Sharma, Dmitry Kalashnikov, Sumeet Singh, Pierre Sermanet, Vikas Sindhwani
+
+#### Abstract
+
+Visuomotor policies trained via imitation learning are capable of performing
+challenging manipulation tasks, but are often extremely brittle to lighting,
+visual distractors, and object locations. These vulnerabilities can depend
+unpredictably on the specifics of training, and are challenging to expose
+without time-consuming and expensive hardware evaluations. We propose the
+problem of predictive red teaming: discovering vulnerabilities of a policy with
+respect to environmental factors, and predicting the corresponding performance
+degradation without hardware evaluations in off-nominal scenarios. In order to
+achieve this, we develop RoboART: an automated red teaming (ART) pipeline that
+(1) modifies nominal observations using generative image editing to vary
+different environmental factors, and (2) predicts performance under each
+variation using a policy-specific anomaly detector executed on edited
+observations. Experiments across 500+ hardware trials in twelve off-nominal
+conditions for visuomotor diffusion policies demonstrate that RoboART predicts
+performance degradation with high accuracy (less than 0.19 average difference
+between predicted and real success rates). We also demonstrate how predictive
+red teaming enables targeted data collection: fine-tuning with data collected
+under conditions predicted to be adverse boosts baseline performance by 2-7x.
+
+[Paper Link](
+https://arxiv.org/abs/2502.06575
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-02-12_21-07.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-02-07
 
 
