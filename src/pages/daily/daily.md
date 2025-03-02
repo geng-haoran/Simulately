@@ -1,3 +1,149 @@
+## 2025-02-21
+
+
+### ChatVLA: Unified Multimodal Understanding and Robot Control with Vision-Language-Action Model
+
+- **Authors**: Zhongyi Zhou, Yichen Zhu, Minjie Zhu, Junjie Wen, Ning Liu, Zhiyuan Xu, Weibin Meng, Ran Cheng, Yaxin Peng, Chaomin Shen, Feifei Feng
+
+#### Abstract
+
+Humans possess a unified cognitive ability to perceive, comprehend, and
+interact with the physical world. Why can't large language models replicate
+this holistic understanding? Through a systematic analysis of existing training
+paradigms in vision-language-action models (VLA), we identify two key
+challenges: spurious forgetting, where robot training overwrites crucial
+visual-text alignments, and task interference, where competing control and
+understanding tasks degrade performance when trained jointly. To overcome these
+limitations, we propose ChatVLA, a novel framework featuring Phased Alignment
+Training, which incrementally integrates multimodal data after initial control
+mastery, and a Mixture-of-Experts architecture to minimize task interference.
+ChatVLA demonstrates competitive performance on visual question-answering
+datasets and significantly surpasses state-of-the-art vision-language-action
+(VLA) methods on multimodal understanding benchmarks. Notably, it achieves a
+six times higher performance on MMMU and scores 47.2% on MMStar with a more
+parameter-efficient design than ECoT. Furthermore, ChatVLA demonstrates
+superior performance on 25 real-world robot manipulation tasks compared to
+existing VLA methods like OpenVLA. Our findings highlight the potential of our
+unified framework for achieving both robust multimodal understanding and
+effective robot control.
+
+[Paper Link](
+https://arxiv.org/abs/2502.14420
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_21-58.pngg" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Watch Less, Feel More: Sim-to-Real RL for Generalizable Articulated Object Manipulation via Motion Adaptation and Impedance Control
+
+- **Authors**: Tan-Dzung Do, Nandiraju Gireesh, Jilong Wang, He Wang
+
+#### Abstract
+
+Articulated object manipulation poses a unique challenge compared to rigid
+object manipulation as the object itself represents a dynamic environment. In
+this work, we present a novel RL-based pipeline equipped with variable
+impedance control and motion adaptation leveraging observation history for
+generalizable articulated object manipulation, focusing on smooth and dexterous
+motion during zero-shot sim-to-real transfer. To mitigate the sim-to-real gap,
+our pipeline diminishes reliance on vision by not leveraging the vision data
+feature (RGBD/pointcloud) directly as policy input but rather extracting useful
+low-dimensional data first via off-the-shelf modules. Additionally, we
+experience less sim-to-real gap by inferring object motion and its intrinsic
+properties via observation history as well as utilizing impedance control both
+in the simulation and in the real world. Furthermore, we develop a
+well-designed training setting with great randomization and a specialized
+reward system (task-aware and motion-aware) that enables multi-staged,
+end-to-end manipulation without heuristic motion planning. To the best of our
+knowledge, our policy is the first to report 84\% success rate in the real
+world via extensive experiments with various unseen objects.
+
+[Paper Link](
+https://arxiv.org/abs/2502.14457
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_21-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Humanoid-VLA: Towards Universal Humanoid Control with Visual Integration
+
+- **Authors**: Pengxiang Ding, Jianfei Ma, Xinyang Tong, Binghong Zou, Xinxin Luo, Yiguo Fan, Ting Wang, Hongchao Lu, Panzhong Mo, Jinxin Liu, Yuefan Wang, Huaicheng Zhou, Wenshuo Feng, Jiacheng Liu, Siteng Huang, Donglin Wang
+
+#### Abstract
+
+This paper addresses the limitations of current humanoid robot control
+frameworks, which primarily rely on reactive mechanisms and lack autonomous
+interaction capabilities due to data scarcity. We propose Humanoid-VLA, a novel
+framework that integrates language understanding, egocentric scene perception,
+and motion control, enabling universal humanoid control. Humanoid-VLA begins
+with language-motion pre-alignment using non-egocentric human motion datasets
+paired with textual descriptions, allowing the model to learn universal motion
+patterns and action semantics. We then incorporate egocentric visual context
+through a parameter efficient video-conditioned fine-tuning, enabling
+context-aware motion generation. Furthermore, we introduce a self-supervised
+data augmentation strategy that automatically generates pseudoannotations
+directly derived from motion data. This process converts raw motion sequences
+into informative question-answer pairs, facilitating the effective use of
+large-scale unlabeled video data. Built upon whole-body control architectures,
+extensive experiments show that Humanoid-VLA achieves object interaction and
+environment exploration tasks with enhanced contextual awareness, demonstrating
+a more human-like capacity for adaptive and intelligent engagement.
+
+[Paper Link](
+https://arxiv.org/abs/2502.14795
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_21-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VB-Com: Learning Vision-Blind Composite Humanoid Locomotion Against Deficient Perception
+
+- **Authors**: Junli Ren, Tao Huang, Huayi Wang, Zirui Wang, Qingwei Ben, Jiangmiao Pang, Ping Luo
+
+#### Abstract
+
+The performance of legged locomotion is closely tied to the accuracy and
+comprehensiveness of state observations. Blind policies, which rely solely on
+proprioception, are considered highly robust due to the reliability of
+proprioceptive observations. However, these policies significantly limit
+locomotion speed and often require collisions with the terrain to adapt. In
+contrast, Vision policies allows the robot to plan motions in advance and
+respond proactively to unstructured terrains with an online perception module.
+However, perception is often compromised by noisy real-world environments,
+potential sensor failures, and the limitations of current simulations in
+presenting dynamic or deformable terrains. Humanoid robots, with high degrees
+of freedom and inherently unstable morphology, are particularly susceptible to
+misguidance from deficient perception, which can result in falls or termination
+on challenging dynamic terrains. To leverage the advantages of both vision and
+blind policies, we propose VB-Com, a composite framework that enables humanoid
+robots to determine when to rely on the vision policy and when to switch to the
+blind policy under perceptual deficiency. We demonstrate that VB-Com
+effectively enables humanoid robots to traverse challenging terrains and
+obstacles despite perception deficiencies caused by dynamic terrains or
+perceptual noise.
+
+[Paper Link](
+https://arxiv.org/abs/2502.14814
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_21-52.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-02-19
 
 
