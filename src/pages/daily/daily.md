@@ -1,4 +1,280 @@
-## 2025-03-02
+## 2025-02-19
+
+
+### Magma: A Foundation Model for Multimodal AI Agents
+
+- **Authors**: Jianwei Yang, Reuben Tan, Qianhui Wu, Ruijie Zheng, Baolin Peng, Yongyuan Liang, Yu Gu, Mu Cai, Seonghyeon Ye, Joel Jang, Yuquan Deng, Lars Liden, Jianfeng Gao
+
+#### Abstract
+
+We present Magma, a foundation model that serves multimodal AI agentic tasks
+in both the digital and physical worlds. Magma is a significant extension of
+vision-language (VL) models in that it not only retains the VL understanding
+ability (verbal intelligence) of the latter, but is also equipped with the
+ability to plan and act in the visual-spatial world (spatial-temporal
+intelligence) and complete agentic tasks ranging from UI navigation to robot
+manipulation. To endow the agentic capabilities, Magma is pretrained on large
+amounts of heterogeneous datasets spanning from images, videos to robotics
+data, where the actionable visual objects (e.g., clickable buttons in GUI) in
+images are labeled by Set-of-Mark (SoM) for action grounding, and the object
+movements (e.g., the trace of human hands or robotic arms) in videos are
+labeled by Trace-of-Mark (ToM) for action planning. Extensive experiments show
+that SoM and ToM reach great synergy and facilitate the acquisition of
+spatial-temporal intelligence for our Magma model, which is fundamental to a
+wide range of tasks as shown in Fig.1. In particular, Magma creates new
+state-of-the-art results on UI navigation and robotic manipulation tasks,
+outperforming previous models that are specifically tailored to these tasks. On
+image and video-related multimodal tasks, Magma also compares favorably to
+popular large multimodal models that are trained on much larger datasets. We
+make our model and code public for reproducibility at
+https://microsoft.github.io/Magma.
+
+[Website Link](https://microsoft.github.io/Magma.)
+
+[Paper Link](
+https://arxiv.org/abs/2502.13130
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_18-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit
+
+- **Authors**: Qingwei Ben, Feiyu Jia, Jia Zeng, Junting Dong, Dahua Lin, Jiangmiao Pang
+
+#### Abstract
+
+Current humanoid teleoperation systems either lack reliable low-level control
+policies, or struggle to acquire accurate whole-body control commands, making
+it difficult to teleoperate humanoids for loco-manipulation tasks. To solve
+these issues, we propose HOMIE, a novel humanoid teleoperation cockpit
+integrates a humanoid loco-manipulation policy and a low-cost exoskeleton-based
+hardware system. The policy enables humanoid robots to walk and squat to
+specific heights while accommodating arbitrary upper-body poses. This is
+achieved through our novel reinforcement learning-based training framework that
+incorporates upper-body pose curriculum, height-tracking reward, and symmetry
+utilization, without relying on any motion priors. Complementing the policy,
+the hardware system integrates isomorphic exoskeleton arms, a pair of
+motion-sensing gloves, and a pedal, allowing a single operator to achieve full
+control of the humanoid robot. Our experiments show our cockpit facilitates
+more stable, rapid, and precise humanoid loco-manipulation teleoperation,
+accelerating task completion and eliminating retargeting errors compared to
+inverse kinematics-based methods. We also validate the effectiveness of the
+data collected by our cockpit for imitation learning. Our project is fully
+open-sourced, demos and code can be found in https://homietele.github.io/.
+
+[Website Link](https://homietele.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2502.13013
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_18-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RHINO: Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations
+
+- **Authors**: Jingxiao Chen, Xinyao Li, Jiahang Cao, Zhengbang Zhu, Wentao Dong, Minghuan Liu, Ying Wen, Yong Yu, Liqing Zhang, Weinan Zhang
+
+#### Abstract
+
+Humanoid robots have shown success in locomotion and manipulation. Despite
+these basic abilities, humanoids are still required to quickly understand human
+instructions and react based on human interaction signals to become valuable
+assistants in human daily life. Unfortunately, most existing works only focus
+on multi-stage interactions, treating each task separately, and neglecting
+real-time feedback. In this work, we aim to empower humanoid robots with
+real-time reaction abilities to achieve various tasks, allowing human to
+interrupt robots at any time, and making robots respond to humans immediately.
+To support such abilities, we propose a general humanoid-human-object
+interaction framework, named RHINO, i.e., Real-time Humanoid-human Interaction
+and Object manipulation. RHINO provides a unified view of reactive motion,
+instruction-based manipulation, and safety concerns, over multiple human signal
+modalities, such as languages, images, and motions. RHINO is a hierarchical
+learning framework, enabling humanoids to learn reaction skills from
+human-human-object demonstrations and teleoperation data. In particular, it
+decouples the interaction process into two levels: 1) a high-level planner
+inferring human intentions from real-time human behaviors; and 2) a low-level
+controller achieving reactive motion behaviors and object manipulation skills
+based on the predicted intentions. We evaluate the proposed framework on a real
+humanoid robot and demonstrate its effectiveness, flexibility, and safety in
+various scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2502.13134
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_18-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation
+
+- **Authors**: Zekun Qi, Wenyao Zhang, Yufei Ding, Runpei Dong, Xinqiang Yu, Jingwen Li, Lingyun Xu, Baoyu Li, Xialin He, Guofan Fan, Jiazhao Zhang, Jiawei He, Jiayuan Gu, Xin Jin, Kaisheng Ma, Zhizheng Zhang, He Wang, Li Yi
+
+#### Abstract
+
+Spatial intelligence is a critical component of embodied AI, promoting robots
+to understand and interact with their environments. While recent advances have
+enhanced the ability of VLMs to perceive object locations and positional
+relationships, they still lack the capability to precisely understand object
+orientations-a key requirement for tasks involving fine-grained manipulations.
+Addressing this limitation not only requires geometric reasoning but also an
+expressive and intuitive way to represent orientation. In this context, we
+propose that natural language offers a more flexible representation space than
+canonical frames, making it particularly suitable for instruction-following
+robotic systems. In this paper, we introduce the concept of semantic
+orientation, which defines object orientations using natural language in a
+reference-frame-free manner (e.g., the ''plug-in'' direction of a USB or the
+''handle'' direction of a knife). To support this, we construct OrienText300K,
+a large-scale dataset of 3D models annotated with semantic orientations that
+link geometric understanding to functional semantics. By integrating semantic
+orientation into a VLM system, we enable robots to generate manipulation
+actions with both positional and orientational constraints. Extensive
+experiments in simulation and real world demonstrate that our approach
+significantly enhances robotic manipulation capabilities, e.g., 48.7% accuracy
+on Open6DOR and 74.9% accuracy on SIMPLER.
+
+[Paper Link](
+https://arxiv.org/abs/2502.13143
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_18-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AdaManip: Adaptive Articulated Object Manipulation Environments and Policy Learning
+
+- **Authors**: Yuanfei Wang, Xiaojie Zhang, Ruihai Wu, Yu Li, Yan Shen, Mingdong Wu, Zhaofeng He, Yizhou Wang, Hao Dong
+
+#### Abstract
+
+Articulated object manipulation is a critical capability for robots to
+perform various tasks in real-world scenarios. Composed of multiple parts
+connected by joints, articulated objects are endowed with diverse functional
+mechanisms through complex relative motions. For example, a safe consists of a
+door, a handle, and a lock, where the door can only be opened when the latch is
+unlocked. The internal structure, such as the state of a lock or joint angle
+constraints, cannot be directly observed from visual observation. Consequently,
+successful manipulation of these objects requires adaptive adjustment based on
+trial and error rather than a one-time visual inference. However, previous
+datasets and simulation environments for articulated objects have primarily
+focused on simple manipulation mechanisms where the complete manipulation
+process can be inferred from the object's appearance. To enhance the diversity
+and complexity of adaptive manipulation mechanisms, we build a novel
+articulated object manipulation environment and equip it with 9 categories of
+objects. Based on the environment and objects, we further propose an adaptive
+demonstration collection and 3D visual diffusion-based imitation learning
+pipeline that learns the adaptive manipulation policy. The effectiveness of our
+designs and proposed method is validated through both simulation and real-world
+experiments. Our project page is available at: https://adamanip.github.io
+
+[Website Link](https://adamanip.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2502.11124
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_18-34.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Getting-Up Policies for Real-World Humanoid Robots
+
+- **Authors**: Xialin He, Runpei Dong, Zixuan Chen, Saurabh Gupta
+
+#### Abstract
+
+Automatic fall recovery is a crucial prerequisite before humanoid robots can
+be reliably deployed. Hand-designing controllers for getting up is difficult
+because of the varied configurations a humanoid can end up in after a fall and
+the challenging terrains humanoid robots are expected to operate on. This paper
+develops a learning framework to produce controllers that enable humanoid
+robots to get up from varying configurations on varying terrains. Unlike
+previous successful applications of humanoid locomotion learning, the
+getting-up task involves complex contact patterns, which necessitates
+accurately modeling the collision geometry and sparser rewards. We address
+these challenges through a two-phase approach that follows a curriculum. The
+first stage focuses on discovering a good getting-up trajectory under minimal
+constraints on smoothness or speed / torque limits. The second stage then
+refines the discovered motions into deployable (i.e. smooth and slow) motions
+that are robust to variations in initial configuration and terrains. We find
+these innovations enable a real-world G1 humanoid robot to get up from two main
+situations that we considered: a) lying face up and b) lying face down, both
+tested on flat, deformable, slippery surfaces and slopes (e.g., sloppy grass
+and snowfield). To the best of our knowledge, this is the first successful
+demonstration of learned getting-up policies for human-sized humanoid robots in
+the real world. Project page: https://humanoid-getup.github.io/
+
+[Website Link](https://humanoid-getup.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2502.12152
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_18-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### BeamDojo: Learning Agile Humanoid Locomotion on Sparse Footholds
+
+- **Authors**: Huayi Wang, Zirui Wang, Junli Ren, Qingwei Ben, Tao Huang, Weinan Zhang, Jiangmiao Pang
+
+#### Abstract
+
+Traversing risky terrains with sparse footholds poses a significant challenge
+for humanoid robots, requiring precise foot placements and stable locomotion.
+Existing approaches designed for quadrupedal robots often fail to generalize to
+humanoid robots due to differences in foot geometry and unstable morphology,
+while learning-based approaches for humanoid locomotion still face great
+challenges on complex terrains due to sparse foothold reward signals and
+inefficient learning processes. To address these challenges, we introduce
+BeamDojo, a reinforcement learning (RL) framework designed for enabling agile
+humanoid locomotion on sparse footholds. BeamDojo begins by introducing a
+sampling-based foothold reward tailored for polygonal feet, along with a double
+critic to balancing the learning process between dense locomotion rewards and
+sparse foothold rewards. To encourage sufficient trail-and-error exploration,
+BeamDojo incorporates a two-stage RL approach: the first stage relaxes the
+terrain dynamics by training the humanoid on flat terrain while providing it
+with task terrain perceptive observations, and the second stage fine-tunes the
+policy on the actual task terrain. Moreover, we implement a onboard LiDAR-based
+elevation map to enable real-world deployment. Extensive simulation and
+real-world experiments demonstrate that BeamDojo achieves efficient learning in
+simulation and enables agile locomotion with precise foot placement on sparse
+footholds in the real world, maintaining a high success rate even under
+significant external disturbances.
+
+[Paper Link](
+https://arxiv.org/abs/2502.10363
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_18-16.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-02-17
 
 
 ### MuJoCo Playground
