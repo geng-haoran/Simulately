@@ -1,3 +1,144 @@
+## 2025-03-02
+
+
+### MuJoCo Playground
+
+- **Authors**: Kevin Zakka, Baruch Tabanpour, Qiayuan Liao, Mustafa Haiderbhai, Samuel Holt, Jing Yuan Luo, Arthur Allshire, Erik Frey, Koushil Sreenath, Lueder A. Kahrs, Carmelo Sferrazza, Yuval Tassa, Pieter Abbeel
+
+#### Abstract
+
+We introduce MuJoCo Playground, a fully open-source framework for robot
+learning built with MJX, with the express goal of streamlining simulation,
+training, and sim-to-real transfer onto robots. With a simple "pip install
+playground", researchers can train policies in minutes on a single GPU.
+Playground supports diverse robotic platforms, including quadrupeds, humanoids,
+dexterous hands, and robotic arms, enabling zero-shot sim-to-real transfer from
+both state and pixel inputs. This is achieved through an integrated stack
+comprising a physics engine, batch renderer, and training environments. Along
+with video results, the entire framework is freely available at
+playground.mujoco.org
+
+[Paper Link](
+https://arxiv.org/abs/2502.08844
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_18-11.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Humanoid Standing-up Control across Diverse Postures
+
+- **Authors**: Tao Huang, Junli Ren, Huayi Wang, Zirui Wang, Qingwei Ben, Muning Wen, Xiao Chen, Jianan Li, Jiangmiao Pang
+
+#### Abstract
+
+Standing-up control is crucial for humanoid robots, with the potential for
+integration into current locomotion and loco-manipulation systems, such as fall
+recovery. Existing approaches are either limited to simulations that overlook
+hardware constraints or rely on predefined ground-specific motion trajectories,
+failing to enable standing up across postures in real-world scenes. To bridge
+this gap, we present HoST (Humanoid Standing-up Control), a reinforcement
+learning framework that learns standing-up control from scratch, enabling
+robust sim-to-real transfer across diverse postures. HoST effectively learns
+posture-adaptive motions by leveraging a multi-critic architecture and
+curriculum-based training on diverse simulated terrains. To ensure successful
+real-world deployment, we constrain the motion with smoothness regularization
+and implicit motion speed bound to alleviate oscillatory and violent motions on
+physical hardware, respectively. After simulation-based training, the learned
+control policies are directly deployed on the Unitree G1 humanoid robot. Our
+experimental results demonstrate that the controllers achieve smooth, stable,
+and robust standing-up motions across a wide range of laboratory and outdoor
+environments. Videos are available at
+https://taohuang13.github.io/humanoid-standingup.github.io/.
+
+[Website Link](https://taohuang13.github.io/humanoid-standingup.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2502.08378
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_18-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### A Real-to-Sim-to-Real Approach to Robotic Manipulation with VLM-Generated Iterative Keypoint Rewards
+
+- **Authors**: Shivansh Patel, Xinchen Yin, Wenlong Huang, Shubham Garg, Hooshang Nayyeri, Li Fei-Fei, Svetlana Lazebnik, Yunzhu Li
+
+#### Abstract
+
+Task specification for robotic manipulation in open-world environments is
+challenging, requiring flexible and adaptive objectives that align with human
+intentions and can evolve through iterative feedback. We introduce Iterative
+Keypoint Reward (IKER), a visually grounded, Python-based reward function that
+serves as a dynamic task specification. Our framework leverages VLMs to
+generate and refine these reward functions for multi-step manipulation tasks.
+Given RGB-D observations and free-form language instructions, we sample
+keypoints in the scene and generate a reward function conditioned on these
+keypoints. IKER operates on the spatial relationships between keypoints,
+leveraging commonsense priors about the desired behaviors, and enabling precise
+SE(3) control. We reconstruct real-world scenes in simulation and use the
+generated rewards to train reinforcement learning (RL) policies, which are then
+deployed into the real world-forming a real-to-sim-to-real loop. Our approach
+demonstrates notable capabilities across diverse scenarios, including both
+prehensile and non-prehensile tasks, showcasing multi-step task execution,
+spontaneous error recovery, and on-the-fly strategy adjustments. The results
+highlight IKER's effectiveness in enabling robots to perform multi-step tasks
+in dynamic environments through iterative reward shaping.
+
+[Paper Link](
+https://arxiv.org/abs/2502.08643
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_17-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Re$^3$Sim: Generating High-Fidelity Simulation Data via 3D-Photorealistic Real-to-Sim for Robotic Manipulation
+
+- **Authors**: Xiaoshen Han, Minghuan Liu, Yilun Chen, Junqiu Yu, Xiaoyang Lyu, Yang Tian, Bolun Wang, Weinan Zhang, Jiangmiao Pang
+
+#### Abstract
+
+Real-world data collection for robotics is costly and resource-intensive,
+requiring skilled operators and expensive hardware. Simulations offer a
+scalable alternative but often fail to achieve sim-to-real generalization due
+to geometric and visual gaps. To address these challenges, we propose a
+3D-photorealistic real-to-sim system, namely, RE$^3$SIM, addressing geometric
+and visual sim-to-real gaps. RE$^3$SIM employs advanced 3D reconstruction and
+neural rendering techniques to faithfully recreate real-world scenarios,
+enabling real-time rendering of simulated cross-view cameras within a
+physics-based simulator. By utilizing privileged information to collect expert
+demonstrations efficiently in simulation, and train robot policies with
+imitation learning, we validate the effectiveness of the real-to-sim-to-real
+pipeline across various manipulation task scenarios. Notably, with only
+simulated data, we can achieve zero-shot sim-to-real transfer with an average
+success rate exceeding 58%. To push the limit of real-to-sim, we further
+generate a large-scale simulation dataset, demonstrating how a robust policy
+can be built from simulation data that generalizes across various objects.
+Codes and demos are available at: http://xshenhan.github.io/Re3Sim/.
+
+[Website Link](http://xshenhan.github.io/Re3Sim/.)
+
+[Paper Link](
+https://arxiv.org/abs/2502.08645
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-02_17-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-02-12
 
 
