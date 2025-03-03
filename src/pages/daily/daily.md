@@ -1,3 +1,337 @@
+## 2025-02-26
+
+
+### OpenFly: A Versatile Toolchain and Large-scale Benchmark for Aerial Vision-Language Navigation
+
+- **Authors**: Yunpeng Gao, Chenhui Li, Zhongrui You, Junli Liu, Zhen Li, Pengan Chen, Qizhi Chen, Zhonghan Tang, Liansheng Wang, Penghui Yang, Yiwen Tang, Yuhang Tang, Shuai Liang, Songyi Zhu, Ziqin Xiong, Yifei Su, Xinyi Ye, Jianan Li, Yan Ding, Dong Wang, Zhigang Wang, Bin Zhao, Xuelong Li
+
+#### Abstract
+
+Vision-Language Navigation (VLN) aims to guide agents through an environment
+by leveraging both language instructions and visual cues, playing a pivotal
+role in embodied AI. Indoor VLN has been extensively studied, whereas outdoor
+aerial VLN remains underexplored. The potential reason is that outdoor aerial
+view encompasses vast areas, making data collection more challenging, which
+results in a lack of benchmarks. To address this problem, we propose OpenFly, a
+platform comprising a versatile toolchain and large-scale benchmark for aerial
+VLN. Firstly, we develop a highly automated toolchain for data collection,
+enabling automatic point cloud acquisition, scene semantic segmentation, flight
+trajectory creation, and instruction generation. Secondly, based on the
+toolchain, we construct a large-scale aerial VLN dataset with 100k
+trajectories, covering diverse heights and lengths across 18 scenes. The
+corresponding visual data are generated using various rendering engines and
+advanced techniques, including Unreal Engine, GTA V, Google Earth, and 3D
+Gaussian Splatting (3D GS). All data exhibit high visual quality. Particularly,
+3D GS supports real-to-sim rendering, further enhancing the realism of the
+dataset. Thirdly, we propose OpenFly-Agent, a keyframe-aware VLN model, which
+takes language instructions, current observations, and historical keyframes as
+input, and outputs flight actions directly. Extensive analyses and experiments
+are conducted, showcasing the superiority of our OpenFly platform and
+OpenFly-Agent. The toolchain, dataset, and codes will be open-sourced.
+
+[Paper Link](
+https://arxiv.org/abs/2502.18041
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-59.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Impact of Object Weight in Handovers: Inspiring Robotic Grip Release and Motion from Human Handovers
+
+- **Authors**: Parag Khanna, Mårten Björkman, Christian Smith
+
+#### Abstract
+
+This work explores the effect of object weight on human motion and grip
+release during handovers to enhance the naturalness, safety, and efficiency of
+robot-human interactions. We introduce adaptive robotic strategies based on the
+analysis of human handover behavior with varying object weights. The key
+contributions of this work includes the development of an adaptive grip-release
+strategy for robots, a detailed analysis of how object weight influences human
+motion to guide robotic motion adaptations, and the creation of
+handover-datasets incorporating various object weights, including the YCB
+handover dataset. By aligning robotic grip release and motion with human
+behavior, this work aims to improve robot-human handovers for different
+weighted objects. We also evaluate these human-inspired adaptive robotic
+strategies in robot-to-human handovers to assess their effectiveness and
+performance and demonstrate that they outperform the baseline approaches in
+terms of naturalness, efficiency, and user perception.
+
+[Paper Link](
+https://arxiv.org/abs/2502.17834
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FetchBot: Object Fetching in Cluttered Shelves via Zero-Shot Sim2Real
+
+- **Authors**: Weiheng Liu, Yuxuan Wan, Jilong Wang, Yuxuan Kuang, Xuesong Shi, Haoran Li, Dongbin Zhao, Zhizheng Zhang, He Wang
+
+#### Abstract
+
+Object fetching from cluttered shelves is an important capability for robots
+to assist humans in real-world scenarios. Achieving this task demands robotic
+behaviors that prioritize safety by minimizing disturbances to surrounding
+objects, an essential but highly challenging requirement due to restricted
+motion space, limited fields of view, and complex object dynamics. In this
+paper, we introduce FetchBot, a sim-to-real framework designed to enable
+zero-shot generalizable and safety-aware object fetching from cluttered shelves
+in real-world settings. To address data scarcity, we propose an efficient
+voxel-based method for generating diverse simulated cluttered shelf scenes at
+scale and train a dynamics-aware reinforcement learning (RL) policy to generate
+object fetching trajectories within these scenes. This RL policy, which
+leverages oracle information, is subsequently distilled into a vision-based
+policy for real-world deployment. Considering that sim-to-real discrepancies
+stem from texture variations mostly while from geometric dimensions rarely, we
+propose to adopt depth information estimated by full-fledged depth foundation
+models as the input for the vision-based policy to mitigate sim-to-real gap. To
+tackle the challenge of limited views, we design a novel architecture for
+learning multi-view representations, allowing for comprehensive encoding of
+cluttered shelf scenes. This enables FetchBot to effectively minimize
+collisions while fetching objects from varying positions and depths, ensuring
+robust and safety-aware operation. Both simulation and real-robot experiments
+demonstrate FetchBot's superior generalization ability, particularly in
+handling a broad range of real-world scenarios, includ
+
+[Paper Link](
+https://arxiv.org/abs/2502.17894
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-50.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### From planning to policy: distilling $\texttt{Skill-RRT}$ for long-horizon prehensile and non-prehensile manipulation
+
+- **Authors**: Haewon Jung, Donguk Lee, Haecheol Park, JunHyeop Kim, Beomjoon Kim
+
+#### Abstract
+
+Current robots face challenges in manipulation tasks that require a long
+sequence of prehensile and non-prehensile skills. This involves handling
+contact-rich interactions and chaining multiple skills while considering their
+long-term consequences. This paper presents a framework that leverages
+imitation learning to distill a planning algorithm, capable of solving
+long-horizon problems but requiring extensive computation time, into a policy
+for efficient action inference. We introduce $\texttt{Skill-RRT}$, an extension
+of the rapidly-exploring random tree (RRT) that incorporates skill
+applicability checks and intermediate object pose sampling for efficient
+long-horizon planning. To enable skill chaining, we propose
+$\textit{connectors}$, goal-conditioned policies that transition between skills
+while minimizing object disturbance. Using lazy planning, connectors are
+selectively trained on relevant transitions, reducing the cost of training.
+High-quality demonstrations are generated with $\texttt{Skill-RRT}$ and refined
+by a noise-based replay mechanism to ensure robust policy performance. The
+distilled policy, trained entirely in simulation, zero-shot transfer to the
+real world, and achieves over 80% success rates across three challenging
+manipulation tasks. In simulation, our approach outperforms the
+state-of-the-art skill-based reinforcement learning method, $\texttt{MAPLE}$,
+and $\texttt{Skill-RRT}$.
+
+[Paper Link](
+https://arxiv.org/abs/2502.18015
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Retrieval Dexterity: Efficient Object Retrieval in Clutters with Dexterous Hand
+
+- **Authors**: Fengshuo Bai, Yu Li, Jie Chu, Tawei Chou, Runchuan Zhu, Ying Wen, Yaodong Yang, Yuanpei Chen
+
+#### Abstract
+
+Retrieving objects buried beneath multiple objects is not only challenging
+but also time-consuming. Performing manipulation in such environments presents
+significant difficulty due to complex contact relationships. Existing methods
+typically address this task by sequentially grasping and removing each
+occluding object, resulting in lengthy execution times and requiring
+impractical grasping capabilities for every occluding object. In this paper, we
+present a dexterous arm-hand system for efficient object retrieval in
+multi-object stacked environments. Our approach leverages large-scale parallel
+reinforcement learning within diverse and carefully designed cluttered
+environments to train policies. These policies demonstrate emergent
+manipulation skills (e.g., pushing, stirring, and poking) that efficiently
+clear occluding objects to expose sufficient surface area of the target object.
+We conduct extensive evaluations across a set of over 10 household objects in
+diverse clutter configurations, demonstrating superior retrieval performance
+and efficiency for both trained and unseen objects. Furthermore, we
+successfully transfer the learned policies to a real-world dexterous
+multi-fingered robot system, validating their practical applicability in
+real-world scenarios. Videos can be found on our project website
+https://ChangWinde.github.io/RetrDex.
+
+[Website Link](https://ChangWinde.github.io/RetrDex.)
+
+[Paper Link](
+https://arxiv.org/abs/2502.18423
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### COMPASS: Cross-embodiment Mobility Policy via Residual RL and Skill Synthesis
+
+- **Authors**: Wei Liu, Huihua Zhao, Chenran Li, Joydeep Biswas, Soha Pouya, Yan Chang
+
+#### Abstract
+
+As robots are increasingly deployed in diverse application domains,
+generalizable cross-embodiment mobility policies are increasingly essential.
+While classical mobility stacks have proven effective on specific robot
+platforms, they pose significant challenges when scaling to new embodiments.
+Learning-based methods, such as imitation learning (IL) and reinforcement
+learning (RL), offer alternative solutions but suffer from covariate shift,
+sparse sampling in large environments, and embodiment-specific constraints.
+  This paper introduces COMPASS, a novel workflow for developing
+cross-embodiment mobility policies by integrating IL, residual RL, and policy
+distillation. We begin with IL on a mobile robot, leveraging easily accessible
+teacher policies to train a foundational model that combines a world model with
+a mobility policy. Building on this base, we employ residual RL to fine-tune
+embodiment-specific policies, exploiting pre-trained representations to improve
+sampling efficiency in handling various physical constraints and sensor
+modalities. Finally, policy distillation merges these embodiment-specialist
+policies into a single robust cross-embodiment policy.
+  We empirically demonstrate that COMPASS scales effectively across diverse
+robot platforms while maintaining adaptability to various environment
+configurations, achieving a generalist policy with a success rate approximately
+5X higher than the pre-trained IL policy. The resulting framework offers an
+efficient, scalable solution for cross-embodiment mobility, enabling robots
+with different designs to navigate safely and efficiently in complex scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2502.16372
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AnyDexGrasp: General Dexterous Grasping for Different Hands with Human-level Learning Efficiency
+
+- **Authors**: Hao-Shu Fang, Hengxu Yan, Zhenyu Tang, Hongjie Fang, Chenxi Wang, Cewu Lu
+
+#### Abstract
+
+We introduce an efficient approach for learning dexterous grasping with
+minimal data, advancing robotic manipulation capabilities across different
+robotic hands. Unlike traditional methods that require millions of grasp labels
+for each robotic hand, our method achieves high performance with human-level
+learning efficiency: only hundreds of grasp attempts on 40 training objects.
+The approach separates the grasping process into two stages: first, a universal
+model maps scene geometry to intermediate contact-centric grasp
+representations, independent of specific robotic hands. Next, a unique grasp
+decision model is trained for each robotic hand through real-world trial and
+error, translating these representations into final grasp poses. Our results
+show a grasp success rate of 75-95\% across three different robotic hands in
+real-world cluttered environments with over 150 novel objects, improving to
+80-98\% with increased training objects. This adaptable method demonstrates
+promising applications for humanoid robots, prosthetics, and other domains
+requiring robust, versatile robotic manipulation.
+
+[Paper Link](
+https://arxiv.org/abs/2502.16420
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-43.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DemoGen: Synthetic Demonstration Generation for Data-Efficient Visuomotor Policy Learning
+
+- **Authors**: Zhengrong Xue, Shuying Deng, Zhenyang Chen, Yixuan Wang, Zhecheng Yuan, Huazhe Xu
+
+#### Abstract
+
+Visuomotor policies have shown great promise in robotic manipulation but
+often require substantial amounts of human-collected data for effective
+performance. A key reason underlying the data demands is their limited spatial
+generalization capability, which necessitates extensive data collection across
+different object configurations. In this work, we present DemoGen, a low-cost,
+fully synthetic approach for automatic demonstration generation. Using only one
+human-collected demonstration per task, DemoGen generates spatially augmented
+demonstrations by adapting the demonstrated action trajectory to novel object
+configurations. Visual observations are synthesized by leveraging 3D point
+clouds as the modality and rearranging the subjects in the scene via 3D
+editing. Empirically, DemoGen significantly enhances policy performance across
+a diverse range of real-world manipulation tasks, showing its applicability
+even in challenging scenarios involving deformable objects, dexterous hand
+end-effectors, and bimanual platforms. Furthermore, DemoGen can be extended to
+enable additional out-of-distribution capabilities, including disturbance
+resistance and obstacle avoidance.
+
+[Paper Link](
+https://arxiv.org/abs/2502.16932
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FACTR: Force-Attending Curriculum Training for Contact-Rich Policy Learning
+
+- **Authors**: Jason Jingzhou Liu, Yulong Li, Kenneth Shaw, Tony Tao, Ruslan Salakhutdinov, Deepak Pathak
+
+#### Abstract
+
+Many contact-rich tasks humans perform, such as box pickup or rolling dough,
+rely on force feedback for reliable execution. However, this force information,
+which is readily available in most robot arms, is not commonly used in
+teleoperation and policy learning. Consequently, robot behavior is often
+limited to quasi-static kinematic tasks that do not require intricate
+force-feedback. In this paper, we first present a low-cost, intuitive,
+bilateral teleoperation setup that relays external forces of the follower arm
+back to the teacher arm, facilitating data collection for complex, contact-rich
+tasks. We then introduce FACTR, a policy learning method that employs a
+curriculum which corrupts the visual input with decreasing intensity throughout
+training. The curriculum prevents our transformer-based policy from
+over-fitting to the visual input and guides the policy to properly attend to
+the force modality. We demonstrate that by fully utilizing the force
+information, our method significantly improves generalization to unseen objects
+by 43\% compared to baseline approaches without a curriculum. Video results and
+instructions at https://jasonjzliu.com/factr/
+
+[Website Link](https://jasonjzliu.com/factr/)
+
+[Paper Link](
+https://arxiv.org/abs/2502.17432
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-33.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-02-21
 
 
