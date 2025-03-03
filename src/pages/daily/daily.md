@@ -1,3 +1,317 @@
+## 2025-03-03
+
+
+### DexGraspVLA: A Vision-Language-Action Framework Towards General Dexterous Grasping
+
+- **Authors**: Yifan Zhong, Xuchuan Huang, Ruochong Li, Ceyao Zhang, Yitao Liang, Yaodong Yang, Yuanpei Chen
+
+#### Abstract
+
+Dexterous grasping remains a fundamental yet challenging problem in robotics.
+A general-purpose robot must be capable of grasping diverse objects in
+arbitrary scenarios. However, existing research typically relies on specific
+assumptions, such as single-object settings or limited environments, leading to
+constrained generalization. Our solution is DexGraspVLA, a hierarchical
+framework that utilizes a pre-trained Vision-Language model as the high-level
+task planner and learns a diffusion-based policy as the low-level Action
+controller. The key insight lies in iteratively transforming diverse language
+and visual inputs into domain-invariant representations, where imitation
+learning can be effectively applied due to the alleviation of domain shift.
+Thus, it enables robust generalization across a wide range of real-world
+scenarios. Notably, our method achieves a 90+% success rate under thousands of
+unseen object, lighting, and background combinations in a ``zero-shot''
+environment. Empirical analysis further confirms the consistency of internal
+model behavior across environmental variations, thereby validating our design
+and explaining its generalization performance. We hope our work can be a step
+forward in achieving general dexterous grasping. Our demo and code can be found
+at https://dexgraspvla.github.io/.
+
+[Website Link](https://dexgraspvla.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2502.20900
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_14-50.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete
+
+- **Authors**: Yuheng Ji, Huajie Tan, Jiayu Shi, Xiaoshuai Hao, Yuan Zhang, Hengyuan Zhang, Pengwei Wang, Mengdi Zhao, Yao Mu, Pengju An, Xinda Xue, Qinghang Su, Huaihai Lyu, Xiaolong Zheng, Jiaming Liu, Zhongyuan Wang, Shanghang Zhang
+
+#### Abstract
+
+Recent advancements in Multimodal Large Language Models (MLLMs) have shown
+remarkable capabilities across various multimodal contexts. However, their
+application in robotic scenarios, particularly for long-horizon manipulation
+tasks, reveals significant limitations. These limitations arise from the
+current MLLMs lacking three essential robotic brain capabilities: Planning
+Capability, which involves decomposing complex manipulation instructions into
+manageable sub-tasks; Affordance Perception, the ability to recognize and
+interpret the affordances of interactive objects; and Trajectory Prediction,
+the foresight to anticipate the complete manipulation trajectory necessary for
+successful execution. To enhance the robotic brain's core capabilities from
+abstract to concrete, we introduce ShareRobot, a high-quality heterogeneous
+dataset that labels multi-dimensional information such as task planning, object
+affordance, and end-effector trajectory. ShareRobot's diversity and accuracy
+have been meticulously refined by three human annotators. Building on this
+dataset, we developed RoboBrain, an MLLM-based model that combines robotic and
+general multi-modal data, utilizes a multi-stage training strategy, and
+incorporates long videos and high-resolution images to improve its robotic
+manipulation capabilities. Extensive experiments demonstrate that RoboBrain
+achieves state-of-the-art performance across various robotic tasks,
+highlighting its potential to advance robotic brain capabilities.
+
+[Paper Link](
+https://arxiv.org/abs/2502.21257
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_14-48.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### 3D-AffordanceLLM: Harnessing Large Language Models for Open-Vocabulary Affordance Detection in 3D Worlds
+
+- **Authors**: Hengshuo Chu, Xiang Deng, Xiaoyang Chen, Yinchuan Li, Jianye Hao, Liqiang Nie
+
+#### Abstract
+
+3D Affordance detection is a challenging problem with broad applications on
+various robotic tasks. Existing methods typically formulate the detection
+paradigm as a label-based semantic segmentation task. This paradigm relies on
+predefined labels and lacks the ability to comprehend complex natural language,
+resulting in limited generalization in open-world scene. To address these
+limitations, we reformulate the traditional affordance detection paradigm into
+\textit{Instruction Reasoning Affordance Segmentation} (IRAS) task. This task
+is designed to output a affordance mask region given a query reasoning text,
+which avoids fixed categories of input labels. We accordingly propose the
+\textit{3D-AffordanceLLM} (3D-ADLLM), a framework designed for reasoning
+affordance detection in 3D open-scene. Specifically, 3D-ADLLM introduces large
+language models (LLMs) to 3D affordance perception with a custom-designed
+decoder for generating affordance masks, thus achieving open-world reasoning
+affordance detection. In addition, given the scarcity of 3D affordance datasets
+for training large models, we seek to extract knowledge from general
+segmentation data and transfer it to affordance detection. Thus, we propose a
+multi-stage training strategy that begins with a novel pre-training task, i.e.,
+\textit{Referring Object Part Segmentation}~(ROPS). This stage is designed to
+equip the model with general recognition and segmentation capabilities at the
+object-part level. Then followed by fine-tuning with the IRAS task, 3D-ADLLM
+obtains the reasoning ability for affordance detection. In summary, 3D-ADLLM
+leverages the rich world knowledge and human-object interaction reasoning
+ability of LLMs, achieving approximately an 8\% improvement in mIoU on
+open-vocabulary affordance detection tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2502.20041
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_14-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success
+
+- **Authors**: Moo Jin Kim, Chelsea Finn, Percy Liang
+
+#### Abstract
+
+Recent vision-language-action models (VLAs) build upon pretrained
+vision-language models and leverage diverse robot datasets to demonstrate
+strong task execution, language following ability, and semantic generalization.
+Despite these successes, VLAs struggle with novel robot setups and require
+fine-tuning to achieve good performance, yet how to most effectively fine-tune
+them is unclear given many possible strategies. In this work, we study key VLA
+adaptation design choices such as different action decoding schemes, action
+representations, and learning objectives for fine-tuning, using OpenVLA as our
+representative base model. Our empirical analysis informs an Optimized
+Fine-Tuning (OFT) recipe that integrates parallel decoding, action chunking, a
+continuous action representation, and a simple L1 regression-based learning
+objective to altogether improve inference efficiency, policy performance, and
+flexibility in the model's input-output specifications. We propose OpenVLA-OFT,
+an instantiation of this recipe, which sets a new state of the art on the
+LIBERO simulation benchmark, significantly boosting OpenVLA's average success
+rate across four task suites from 76.5% to 97.1% while increasing action
+generation throughput by 26$\times$. In real-world evaluations, our fine-tuning
+recipe enables OpenVLA to successfully execute dexterous, high-frequency
+control tasks on a bimanual ALOHA robot and outperform other VLAs ($\pi_0$ and
+RDT-1B) fine-tuned using their default recipes, as well as strong imitation
+learning policies trained from scratch (Diffusion Policy and ACT) by up to 15%
+(absolute) in average success rate. We release code for OFT and pretrained
+model checkpoints at https://openvla-oft.github.io/.
+
+[Website Link](https://openvla-oft.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2502.19645
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_14-13.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids
+
+- **Authors**: Toru Lin, Kartik Sachdev, Linxi Fan, Jitendra Malik, Yuke Zhu
+
+#### Abstract
+
+Reinforcement learning has delivered promising results in achieving human- or
+even superhuman-level capabilities across diverse problem domains, but success
+in dexterous robot manipulation remains limited. This work investigates the key
+challenges in applying reinforcement learning to solve a collection of
+contact-rich manipulation tasks on a humanoid embodiment. We introduce novel
+techniques to overcome the identified challenges with empirical validation. Our
+main contributions include an automated real-to-sim tuning module that brings
+the simulated environment closer to the real world, a generalized reward design
+scheme that simplifies reward engineering for long-horizon contact-rich
+manipulation tasks, a divide-and-conquer distillation process that improves the
+sample efficiency of hard-exploration problems while maintaining sim-to-real
+performance, and a mixture of sparse and dense object representations to bridge
+the sim-to-real perception gap. We show promising results on three humanoid
+dexterous manipulation tasks, with ablation studies on each technique. Our work
+presents a successful approach to learning humanoid dexterous manipulation
+using sim-to-real reinforcement learning, achieving robust generalization and
+high performance without the need for human demonstration.
+
+[Paper Link](
+https://arxiv.org/abs/2502.20396
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_14-08.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Ground-level Viewpoint Vision-and-Language Navigation in Continuous Environments
+
+- **Authors**: Zerui Li, Gengze Zhou, Haodong Hong, Yanyan Shao, Wenqi Lyu, Yanyuan Qiao, Qi Wu
+
+#### Abstract
+
+Vision-and-Language Navigation (VLN) empowers agents to associate
+time-sequenced visual observations with corresponding instructions to make
+sequential decisions. However, generalization remains a persistent challenge,
+particularly when dealing with visually diverse scenes or transitioning from
+simulated environments to real-world deployment. In this paper, we address the
+mismatch between human-centric instructions and quadruped robots with a
+low-height field of view, proposing a Ground-level Viewpoint Navigation (GVNav)
+approach to mitigate this issue. This work represents the first attempt to
+highlight the generalization gap in VLN across varying heights of visual
+observation in realistic robot deployments. Our approach leverages weighted
+historical observations as enriched spatiotemporal contexts for instruction
+following, effectively managing feature collisions within cells by assigning
+appropriate weights to identical features across different viewpoints. This
+enables low-height robots to overcome challenges such as visual obstructions
+and perceptual mismatches. Additionally, we transfer the connectivity graph
+from the HM3D and Gibson datasets as an extra resource to enhance spatial
+priors and a more comprehensive representation of real-world scenarios, leading
+to improved performance and generalizability of the waypoint predictor in
+real-world environments. Extensive experiments demonstrate that our
+Ground-level Viewpoint Navigation (GVnav) approach significantly improves
+performance in both simulated environments and real-world deployments with
+quadruped robots.
+
+[Paper Link](
+https://arxiv.org/abs/2502.19024
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_14-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ObjectVLA: End-to-End Open-World Object Manipulation Without Demonstration
+
+- **Authors**: Minjie Zhu, Yichen Zhu, Jinming Li, Zhongyi Zhou, Junjie Wen, Xiaoyu Liu, Chaomin Shen, Yaxin Peng, Feifei Feng
+
+#### Abstract
+
+Imitation learning has proven to be highly effective in teaching robots
+dexterous manipulation skills. However, it typically relies on large amounts of
+human demonstration data, which limits its scalability and applicability in
+dynamic, real-world environments. One key challenge in this context is object
+generalization, where a robot trained to perform a task with one object, such
+as "hand over the apple," struggles to transfer its skills to a semantically
+similar but visually different object, such as "hand over the peach." This gap
+in generalization to new objects beyond those in the same category has yet to
+be adequately addressed in previous work on end-to-end visuomotor policy
+learning. In this paper, we present a simple yet effective approach for
+achieving object generalization through Vision-Language-Action (VLA) models,
+referred to as \textbf{ObjectVLA}. Our model enables robots to generalize
+learned skills to novel objects without requiring explicit human demonstrations
+for each new target object. By leveraging vision-language pair data, our method
+provides a lightweight and scalable way to inject knowledge about the target
+object, establishing an implicit link between the object and the desired
+action. We evaluate ObjectVLA on a real robotic platform, demonstrating its
+ability to generalize across 100 novel objects with a 64\% success rate in
+selecting objects not seen during training. Furthermore, we propose a more
+accessible method for enhancing object generalization in VLA models, using a
+smartphone to capture a few images and fine-tune the pre-trained model. These
+results highlight the effectiveness of our approach in enabling object-level
+generalization and reducing the need for extensive human demonstrations, paving
+the way for more flexible and scalable robotic learning systems.
+
+[Paper Link](
+https://arxiv.org/abs/2502.19250
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_14-04.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models
+
+- **Authors**: Lucy Xiaoyang Shi, Brian Ichter, Michael Equi, Liyiming Ke, Karl Pertsch, Quan Vuong, James Tanner, Anna Walling, Haohuan Wang, Niccolo Fusai, Adrian Li-Bell, Danny Driess, Lachy Groom, Sergey Levine, Chelsea Finn
+
+#### Abstract
+
+Generalist robots that can perform a range of different tasks in open-world
+settings must be able to not only reason about the steps needed to accomplish
+their goals, but also process complex instructions, prompts, and even feedback
+during task execution. Intricate instructions (e.g., "Could you make me a
+vegetarian sandwich?" or "I don't like that one") require not just the ability
+to physically perform the individual steps, but the ability to situate complex
+commands and feedback in the physical world. In this work, we describe a system
+that uses vision-language models in a hierarchical structure, first reasoning
+over complex prompts and user feedback to deduce the most appropriate next step
+to fulfill the task, and then performing that step with low-level actions. In
+contrast to direct instruction following methods that can fulfill simple
+commands ("pick up the cup"), our system can reason through complex prompts and
+incorporate situated feedback during task execution ("that's not trash"). We
+evaluate our system across three robotic platforms, including single-arm,
+dual-arm, and dual-arm mobile robots, demonstrating its ability to handle tasks
+such as cleaning messy tables, making sandwiches, and grocery shopping.
+
+[Paper Link](
+https://arxiv.org/abs/2502.19417
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_14-03.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-02-26
 
 
@@ -366,7 +680,7 @@ https://arxiv.org/abs/2502.14420
 )
 
 <div style={{ textAlign: "center", marginRight: "10px" }}>
-    <img src="/img/daily/2025-03-02_21-58.pngg" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    <img src="/img/daily/2025-03-02_21-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
     </div>
 <br/>
 
