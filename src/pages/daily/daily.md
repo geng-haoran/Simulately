@@ -1,3 +1,179 @@
+## 2025-03-08
+
+
+### Curating Demonstrations using Online Experience
+
+- **Authors**: Annie S. Chen, Alec M. Lessing, Yuejiang Liu, Chelsea Finn
+
+#### Abstract
+
+Many robot demonstration datasets contain heterogeneous demonstrations of
+varying quality. This heterogeneity may benefit policy pre-training, but can
+hinder robot performance when used with a final imitation learning objective.
+In particular, some strategies in the data may be less reliable than others or
+may be underrepresented in the data, leading to poor performance when such
+strategies are sampled at test time. Moreover, such unreliable or
+underrepresented strategies can be difficult even for people to discern, and
+sifting through demonstration datasets is time-consuming and costly. On the
+other hand, policy performance when trained on such demonstrations can reflect
+the reliability of different strategies. We thus propose for robots to
+self-curate based on online robot experience (Demo-SCORE). More specifically,
+we train and cross-validate a classifier to discern successful policy roll-outs
+from unsuccessful ones and use the classifier to filter heterogeneous
+demonstration datasets. Our experiments in simulation and the real world show
+that Demo-SCORE can effectively identify suboptimal demonstrations without
+manual curation. Notably, Demo-SCORE achieves over 15-35% higher absolute
+success rate in the resulting policy compared to the base policy trained with
+all original demonstrations.
+
+[Paper Link](
+https://arxiv.org/abs/2503.03707
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-03_13-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation
+
+- **Authors**: Han Xue, Jieji Ren, Wendi Chen, Gu Zhang, Yuan Fang, Guoying Gu, Huazhe Xu, Cewu Lu
+
+#### Abstract
+
+Humans can accomplish complex contact-rich tasks using vision and touch, with
+highly reactive capabilities such as quick adjustments to environmental changes
+and adaptive control of contact forces; however, this remains challenging for
+robots. Existing visual imitation learning (IL) approaches rely on action
+chunking to model complex behaviors, which lacks the ability to respond
+instantly to real-time tactile feedback during the chunk execution.
+Furthermore, most teleoperation systems struggle to provide fine-grained
+tactile / force feedback, which limits the range of tasks that can be
+performed. To address these challenges, we introduce TactAR, a low-cost
+teleoperation system that provides real-time tactile feedback through Augmented
+Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast
+visual-tactile imitation learning algorithm for learning contact-rich
+manipulation skills. RDP employs a two-level hierarchy: (1) a slow latent
+diffusion policy for predicting high-level action chunks in latent space at low
+frequency, (2) a fast asymmetric tokenizer for closed-loop tactile feedback
+control at high frequency. This design enables both complex trajectory modeling
+and quick reactive behavior within a unified framework. Through extensive
+evaluation across three challenging contact-rich tasks, RDP significantly
+improves performance compared to state-of-the-art visual IL baselines through
+rapid response to tactile / force feedback. Furthermore, experiments show that
+RDP is applicable across different tactile / force sensors. Code and videos are
+available on https://reactive-diffusion-policy.github.io/.
+
+[Website Link](https://reactive-diffusion-policy.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2503.02881
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-08_21-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Phantom: Training Robots Without Robots Using Only Human Videos
+
+- **Authors**: Marion Lepert, Jiaying Fang, Jeannette Bohg
+
+#### Abstract
+
+Scaling robotics data collection is critical to advancing general-purpose
+robots. Current approaches often rely on teleoperated demonstrations which are
+difficult to scale. We propose a novel data collection method that eliminates
+the need for robotics hardware by leveraging human video demonstrations. By
+training imitation learning policies on this human data, our approach enables
+zero-shot deployment on robots without collecting any robot-specific data. To
+bridge the embodiment gap between human and robot appearances, we utilize a
+data editing approach on the input observations that aligns the image
+distributions between training data on humans and test data on robots. Our
+method significantly reduces the cost of diverse data collection by allowing
+anyone with an RGBD camera to contribute. We demonstrate that our approach
+works in diverse, unseen environments and on varied tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2503.00779
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-08_21-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Exo-ViHa: A Cross-Platform Exoskeleton System with Visual and Haptic Feedback for Efficient Dexterous Skill Learning
+
+- **Authors**: Xintao Chao, Shilong Mu, Yushan Liu, Shoujie Li, Chuqiao Lyu, Xiao-Ping Zhang, Wenbo Ding
+
+#### Abstract
+
+Imitation learning has emerged as a powerful paradigm for robot skills
+learning. However, traditional data collection systems for dexterous
+manipulation face challenges, including a lack of balance between acquisition
+efficiency, consistency, and accuracy. To address these issues, we introduce
+Exo-ViHa, an innovative 3D-printed exoskeleton system that enables users to
+collect data from a first-person perspective while providing real-time haptic
+feedback. This system combines a 3D-printed modular structure with a slam
+camera, a motion capture glove, and a wrist-mounted camera. Various dexterous
+hands can be installed at the end, enabling it to simultaneously collect the
+posture of the end effector, hand movements, and visual data. By leveraging the
+first-person perspective and direct interaction, the exoskeleton enhances the
+task realism and haptic feedback, improving the consistency between
+demonstrations and actual robot deployments. In addition, it has cross-platform
+compatibility with various robotic arms and dexterous hands. Experiments show
+that the system can significantly improve the success rate and efficiency of
+data collection for dexterous manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2503.01543
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-08_21-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Discrete-Time Hybrid Automata Learning: Legged Locomotion Meets Skateboarding
+
+- **Authors**: Hang Liu, Sangli Teng, Ben Liu, Wei Zhang, Maani Ghaffari
+
+#### Abstract
+
+This paper introduces Discrete-time Hybrid Automata Learning (DHAL), a
+framework using on-policy Reinforcement Learning to identify and execute
+mode-switching without trajectory segmentation or event function learning.
+Hybrid dynamical systems, which include continuous flow and discrete mode
+switching, can model robotics tasks like legged robot locomotion. Model-based
+methods usually depend on predefined gaits, while model-free approaches lack
+explicit mode-switching knowledge. Current methods identify discrete modes via
+segmentation before regressing continuous flow, but learning high-dimensional
+complex rigid body dynamics without trajectory labels or segmentation is a
+challenging open problem. Our approach incorporates a beta policy distribution
+and a multi-critic architecture to model contact-guided motions, exemplified by
+a challenging quadrupedal robot skateboard task. We validate our method through
+simulations and real-world tests, demonstrating robust performance in hybrid
+dynamical systems.
+
+[Paper Link](
+https://arxiv.org/abs/2503.01842
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-08_20-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-03-03
 
 
