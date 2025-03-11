@@ -1,3 +1,232 @@
+## 2025-03-11
+
+
+### AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems
+
+- **Authors**: AgiBot-World-Contributors, Qingwen Bu, Jisong Cai, Li Chen, Xiuqi Cui, Yan Ding, Siyuan Feng, Shenyuan Gao, Xindong He, Xu Huang, Shu Jiang, Yuxin Jiang, Cheng Jing, Hongyang Li, Jialu Li, Chiming Liu, Yi Liu, Yuxiang Lu, Jianlan Luo, Ping Luo, Yao Mu, Yuehan Niu, Yixuan Pan, Jiangmiao Pang, Yu Qiao, Guanghui Ren, Cheng Ruan, Jiaqi Shan, Yongjian Shen, Chengshi Shi, Mingkang Shi, Modi Shi, Chonghao Sima, Jianheng Song, Huijie Wang, Wenhao Wang, Dafeng Wei, Chengen Xie, Guo Xu, Junchi Yan, Cunbiao Yang, Lei Yang, Shukai Yang, Maoqing Yao, Jia Zeng, Chi Zhang, Qinglin Zhang, Bin Zhao, Chengyue Zhao, Jiaqi Zhao, Jianchao Zhu
+
+#### Abstract
+
+We explore how scalable robot data can address real-world challenges for
+generalized robotic manipulation. Introducing AgiBot World, a large-scale
+platform comprising over 1 million trajectories across 217 tasks in five
+deployment scenarios, we achieve an order-of-magnitude increase in data scale
+compared to existing datasets. Accelerated by a standardized collection
+pipeline with human-in-the-loop verification, AgiBot World guarantees
+high-quality and diverse data distribution. It is extensible from grippers to
+dexterous hands and visuo-tactile sensors for fine-grained skill acquisition.
+Building on top of data, we introduce Genie Operator-1 (GO-1), a novel
+generalist policy that leverages latent action representations to maximize data
+utilization, demonstrating predictable performance scaling with increased data
+volume. Policies pre-trained on our dataset achieve an average performance
+improvement of 30% over those trained on Open X-Embodiment, both in in-domain
+and out-of-distribution scenarios. GO-1 exhibits exceptional capability in
+real-world dexterous and long-horizon tasks, achieving over 60% success rate on
+complex tasks and outperforming prior RDT approach by 32%. By open-sourcing the
+dataset, tools, and models, we aim to democratize access to large-scale,
+high-quality robot data, advancing the pursuit of scalable and general-purpose
+intelligence.
+
+[Paper Link](
+https://arxiv.org/abs/2503.06669
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-11_17-26.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### One-Shot Dual-Arm Imitation Learning
+
+- **Authors**: Yilong Wang, Edward Johns
+
+#### Abstract
+
+We introduce One-Shot Dual-Arm Imitation Learning (ODIL), which enables
+dual-arm robots to learn precise and coordinated everyday tasks from just a
+single demonstration of the task. ODIL uses a new three-stage visual servoing
+(3-VS) method for precise alignment between the end-effector and target object,
+after which replay of the demonstration trajectory is sufficient to perform the
+task. This is achieved without requiring prior task or object knowledge, or
+additional data collection and training following the single demonstration.
+Furthermore, we propose a new dual-arm coordination paradigm for learning
+dual-arm tasks from a single demonstration. ODIL was tested on a real-world
+dual-arm robot, demonstrating state-of-the-art performance across six precise
+and coordinated tasks in both 4-DoF and 6-DoF settings, and showing robustness
+in the presence of distractor objects and partial occlusions. Videos are
+available at: https://www.robot-learning.uk/one-shot-dual-arm.
+
+[Website Link](https://www.robot-learning.uk/one-shot-dual-arm.)
+
+[Paper Link](
+https://arxiv.org/abs/2503.06831
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-11_17-23.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VidBot: Learning Generalizable 3D Actions from In-the-Wild 2D Human Videos for Zero-Shot Robotic Manipulation
+
+- **Authors**: Hanzhi Chen, Boyang Sun, Anran Zhang, Marc Pollefeys, Stefan Leutenegger
+
+#### Abstract
+
+Future robots are envisioned as versatile systems capable of performing a
+variety of household tasks. The big question remains, how can we bridge the
+embodiment gap while minimizing physical robot learning, which fundamentally
+does not scale well. We argue that learning from in-the-wild human videos
+offers a promising solution for robotic manipulation tasks, as vast amounts of
+relevant data already exist on the internet. In this work, we present VidBot, a
+framework enabling zero-shot robotic manipulation using learned 3D affordance
+from in-the-wild monocular RGB-only human videos. VidBot leverages a pipeline
+to extract explicit representations from them, namely 3D hand trajectories from
+videos, combining a depth foundation model with structure-from-motion
+techniques to reconstruct temporally consistent, metric-scale 3D affordance
+representations agnostic to embodiments. We introduce a coarse-to-fine
+affordance learning model that first identifies coarse actions from the pixel
+space and then generates fine-grained interaction trajectories with a diffusion
+model, conditioned on coarse actions and guided by test-time constraints for
+context-aware interaction planning, enabling substantial generalization to
+novel scenes and embodiments. Extensive experiments demonstrate the efficacy of
+VidBot, which significantly outperforms counterparts across 13 manipulation
+tasks in zero-shot settings and can be seamlessly deployed across robot systems
+in real-world environments. VidBot paves the way for leveraging everyday human
+videos to make robot learning more scalable.
+
+[Paper Link](
+https://arxiv.org/abs/2503.07135
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-11_17-20.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AffordDexGrasp: Open-set Language-guided Dexterous Grasp with Generalizable-Instructive Affordance
+
+- **Authors**: Yi-Lin Wei, Mu Lin, Yuhao Lin, Jian-Jian Jiang, Xiao-Ming Wu, Ling-An Zeng, Wei-Shi Zheng
+
+#### Abstract
+
+Language-guided robot dexterous generation enables robots to grasp and
+manipulate objects based on human commands. However, previous data-driven
+methods are hard to understand intention and execute grasping with unseen
+categories in the open set. In this work, we explore a new task, Open-set
+Language-guided Dexterous Grasp, and find that the main challenge is the huge
+gap between high-level human language semantics and low-level robot actions. To
+solve this problem, we propose an Affordance Dexterous Grasp (AffordDexGrasp)
+framework, with the insight of bridging the gap with a new
+generalizable-instructive affordance representation. This affordance can
+generalize to unseen categories by leveraging the object's local structure and
+category-agnostic semantic attributes, thereby effectively guiding dexterous
+grasp generation. Built upon the affordance, our framework introduces
+Affordacne Flow Matching (AFM) for affordance generation with language as
+input, and Grasp Flow Matching (GFM) for generating dexterous grasp with
+affordance as input. To evaluate our framework, we build an open-set table-top
+language-guided dexterous grasp dataset. Extensive experiments in the
+simulation and real worlds show that our framework surpasses all previous
+methods in open-set generalization.
+
+[Paper Link](
+https://arxiv.org/abs/2503.07360
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-11_17-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### PointVLA: Injecting the 3D World into Vision-Language-Action Models
+
+- **Authors**: Chengmeng Li, Junjie Wen, Yan Peng, Yaxin Peng, Feifei Feng, Yichen Zhu
+
+#### Abstract
+
+Vision-Language-Action (VLA) models excel at robotic tasks by leveraging
+large-scale 2D vision-language pretraining, but their reliance on RGB images
+limits spatial reasoning critical for real-world interaction. Retraining these
+models with 3D data is computationally prohibitive, while discarding existing
+2D datasets wastes valuable resources. To bridge this gap, we propose PointVLA,
+a framework that enhances pre-trained VLAs with point cloud inputs without
+requiring retraining. Our method freezes the vanilla action expert and injects
+3D features via a lightweight modular block. To identify the most effective way
+of integrating point cloud representations, we conduct a skip-block analysis to
+pinpoint less useful blocks in the vanilla action expert, ensuring that 3D
+features are injected only into these blocks--minimizing disruption to
+pre-trained representations.
+  Extensive experiments demonstrate that PointVLA outperforms state-of-the-art
+2D imitation learning methods, such as OpenVLA, Diffusion Policy and DexVLA,
+across both simulated and real-world robotic tasks. Specifically, we highlight
+several key advantages of PointVLA enabled by point cloud integration: (1)
+Few-shot multi-tasking, where PointVLA successfully performs four different
+tasks using only 20 demonstrations each; (2) Real-vs-photo discrimination,
+where PointVLA distinguishes real objects from their images, leveraging 3D
+world knowledge to improve safety and reliability; (3) Height adaptability,
+Unlike conventional 2D imitation learning methods, PointVLA enables robots to
+adapt to objects at varying table height that unseen in train data.
+Furthermore, PointVLA achieves strong performance in long-horizon tasks, such
+as picking and packing objects from a moving conveyor belt, showcasing its
+ability to generalize across complex, dynamic environments.
+
+[Paper Link](
+https://arxiv.org/abs/2503.07511
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-11_17-11.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities
+
+- **Authors**: Yunfan Jiang, Ruohan Zhang, Josiah Wong, Chen Wang, Yanjie Ze, Hang Yin, Cem Gokmen, Shuran Song, Jiajun Wu, Li Fei-Fei
+
+#### Abstract
+
+Real-world household tasks present significant challenges for mobile
+manipulation robots. An analysis of existing robotics benchmarks reveals that
+successful task performance hinges on three key whole-body control
+capabilities: bimanual coordination, stable and precise navigation, and
+extensive end-effector reachability. Achieving these capabilities requires
+careful hardware design, but the resulting system complexity further
+complicates visuomotor policy learning. To address these challenges, we
+introduce the BEHAVIOR Robot Suite (BRS), a comprehensive framework for
+whole-body manipulation in diverse household tasks. Built on a bimanual,
+wheeled robot with a 4-DoF torso, BRS integrates a cost-effective whole-body
+teleoperation interface for data collection and a novel algorithm for learning
+whole-body visuomotor policies. We evaluate BRS on five challenging household
+tasks that not only emphasize the three core capabilities but also introduce
+additional complexities, such as long-range navigation, interaction with
+articulated and deformable objects, and manipulation in confined spaces. We
+believe that BRS's integrated robotic embodiment, data collection interface,
+and learning framework mark a significant step toward enabling real-world
+whole-body manipulation for everyday household tasks. BRS is open-sourced at
+https://behavior-robot-suite.github.io/
+
+[Website Link](https://behavior-robot-suite.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2503.05652
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-11_16-59.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-03-08
 
 
