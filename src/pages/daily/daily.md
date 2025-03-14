@@ -1,3 +1,420 @@
+## 2025-03-14
+
+
+### 6D Object Pose Tracking in Internet Videos for Robotic Manipulation
+
+- **Authors**: Georgy Ponimatkin, Martin Cífka, Tomáš Souček, Médéric Fourmy, Yann Labbé, Vladimir Petrik, Josef Sivic
+
+#### Abstract
+
+We seek to extract a temporally consistent 6D pose trajectory of a
+manipulated object from an Internet instructional video. This is a challenging
+set-up for current 6D pose estimation methods due to uncontrolled capturing
+conditions, subtle but dynamic object motions, and the fact that the exact mesh
+of the manipulated object is not known. To address these challenges, we present
+the following contributions. First, we develop a new method that estimates the
+6D pose of any object in the input image without prior knowledge of the object
+itself. The method proceeds by (i) retrieving a CAD model similar to the
+depicted object from a large-scale model database, (ii) 6D aligning the
+retrieved CAD model with the input image, and (iii) grounding the absolute
+scale of the object with respect to the scene. Second, we extract smooth 6D
+object trajectories from Internet videos by carefully tracking the detected
+objects across video frames. The extracted object trajectories are then
+retargeted via trajectory optimization into the configuration space of a
+robotic manipulator. Third, we thoroughly evaluate and ablate our 6D pose
+estimation method on YCB-V and HOPE-Video datasets as well as a new dataset of
+instructional videos manually annotated with approximate 6D object
+trajectories. We demonstrate significant improvements over existing
+state-of-the-art RGB 6D pose estimation methods. Finally, we show that the 6D
+object motion estimated from Internet videos can be transferred to a 7-axis
+robotic manipulator both in a virtual simulator as well as in a real world
+set-up. We also successfully apply our method to egocentric videos taken from
+the EPIC-KITCHENS dataset, demonstrating potential for Embodied AI
+applications.
+
+[Paper Link](
+https://arxiv.org/abs/2503.10307
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-14_15-16.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SmartWay: Enhanced Waypoint Prediction and Backtracking for Zero-Shot Vision-and-Language Navigation
+
+- **Authors**: Xiangyu Shi, Zerui Li, Wenqi Lyu, Jiatong Xia, Feras Dayoub, Yanyuan Qiao, Qi Wu
+
+#### Abstract
+
+Vision-and-Language Navigation (VLN) in continuous environments requires
+agents to interpret natural language instructions while navigating
+unconstrained 3D spaces. Existing VLN-CE frameworks rely on a two-stage
+approach: a waypoint predictor to generate waypoints and a navigator to execute
+movements. However, current waypoint predictors struggle with spatial
+awareness, while navigators lack historical reasoning and backtracking
+capabilities, limiting adaptability. We propose a zero-shot VLN-CE framework
+integrating an enhanced waypoint predictor with a Multi-modal Large Language
+Model (MLLM)-based navigator. Our predictor employs a stronger vision encoder,
+masked cross-attention fusion, and an occupancy-aware loss for better waypoint
+quality. The navigator incorporates history-aware reasoning and adaptive path
+planning with backtracking, improving robustness. Experiments on R2R-CE and
+MP3D benchmarks show our method achieves state-of-the-art (SOTA) performance in
+zero-shot settings, demonstrating competitive results compared to fully
+supervised methods. Real-world validation on Turtlebot 4 further highlights its
+adaptability.
+
+[Paper Link](
+https://arxiv.org/abs/2503.10069
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-14_11-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots
+
+- **Authors**: Rui Zhong, Chuang Cheng, Junpeng Xu, Yantong Wei, Ce Guo, Daoxun Zhang, Wei Dai, Huimin Lu
+
+#### Abstract
+
+The evolution from motion capture and teleoperation to robot skill learning
+has emerged as a hotspot and critical pathway for advancing embodied
+intelligence. However, existing systems still face a persistent gap in
+simultaneously achieving four objectives: accurate tracking of full upper limb
+movements over extended durations (Accuracy), ergonomic adaptation to human
+biomechanics (Comfort), versatile data collection (e.g., force data) and
+compatibility with humanoid robots (Versatility), and lightweight design for
+outdoor daily use (Convenience). We present a wearable exoskeleton system,
+incorporating user-friendly immersive teleoperation and multi-modal sensing
+collection to bridge this gap. Due to the features of a novel shoulder
+mechanism with synchronized linkage and timing belt transmission, this system
+can adapt well to compound shoulder movements and replicate 100% coverage of
+natural upper limb motion ranges. Weighing 5.2 kg, NuExo supports backpack-type
+use and can be conveniently applied in daily outdoor scenarios. Furthermore, we
+develop a unified intuitive teleoperation framework and a comprehensive data
+collection system integrating multi-modal sensing for various humanoid robots.
+Experiments across distinct humanoid platforms and different users validate our
+exoskeleton's superiority in motion range and flexibility, while confirming its
+stability in data collection and teleoperation accuracy in dynamic scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2503.10554
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-14_11-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-03-13
+
+
+### FP3: A 3D Foundation Policy for Robotic Manipulation
+
+- **Authors**: Rujia Yang, Geng Chen, Chuan Wen, Yang Gao
+
+#### Abstract
+
+Following its success in natural language processing and computer vision,
+foundation models that are pre-trained on large-scale multi-task datasets have
+also shown great potential in robotics. However, most existing robot foundation
+models rely solely on 2D image observations, ignoring 3D geometric information,
+which is essential for robots to perceive and reason about the 3D world. In
+this paper, we introduce FP3, a first large-scale 3D foundation policy model
+for robotic manipulation. FP3 builds on a scalable diffusion transformer
+architecture and is pre-trained on 60k trajectories with point cloud
+observations. With the model design and diverse pre-training data, FP3 can be
+efficiently fine-tuned for downstream tasks while exhibiting strong
+generalization capabilities. Experiments on real robots demonstrate that with
+only 80 demonstrations, FP3 is able to learn a new task with over 90% success
+rates in novel environments with unseen objects, significantly surpassing
+existing robot foundation models.
+
+[Paper Link](
+https://arxiv.org/abs/2503.08950
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-13_23-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Tacchi 2.0: A Low Computational Cost and Comprehensive Dynamic Contact Simulator for Vision-based Tactile Sensors
+
+- **Authors**: Yuhao Sun, Shixin Zhang, Wenzhuang Li, Jie Zhao, Jianhua Shan, Zirong Shen, Zixi Chen, Fuchun Sun, Di Guo, Bin Fang
+
+#### Abstract
+
+With the development of robotics technology, some tactile sensors, such as
+vision-based sensors, have been applied to contact-rich robotics tasks.
+However, the durability of vision-based tactile sensors significantly increases
+the cost of tactile information acquisition. Utilizing simulation to generate
+tactile data has emerged as a reliable approach to address this issue. While
+data-driven methods for tactile data generation lack robustness, finite element
+methods (FEM) based approaches require significant computational costs. To
+address these issues, we integrated a pinhole camera model into the low
+computational cost vision-based tactile simulator Tacchi that used the Material
+Point Method (MPM) as the simulated method, completing the simulation of marker
+motion images. We upgraded Tacchi and introduced Tacchi 2.0. This simulator can
+simulate tactile images, marked motion images, and joint images under different
+motion states like pressing, slipping, and rotating. Experimental results
+demonstrate the reliability of our method and its robustness across various
+vision-based tactile sensors.
+
+[Paper Link](
+https://arxiv.org/abs/2503.09100
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-13_23-29.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexGrasp Anything: Towards Universal Robotic Dexterous Grasping with Physics Awareness
+
+- **Authors**: Yiming Zhong, Qi Jiang, Jingyi Yu, Yuexin Ma
+
+#### Abstract
+
+A dexterous hand capable of grasping any object is essential for the
+development of general-purpose embodied intelligent robots. However, due to the
+high degree of freedom in dexterous hands and the vast diversity of objects,
+generating high-quality, usable grasping poses in a robust manner is a
+significant challenge. In this paper, we introduce DexGrasp Anything, a method
+that effectively integrates physical constraints into both the training and
+sampling phases of a diffusion-based generative model, achieving
+state-of-the-art performance across nearly all open datasets. Additionally, we
+present a new dexterous grasping dataset containing over 3.4 million diverse
+grasping poses for more than 15k different objects, demonstrating its potential
+to advance universal dexterous grasping. The code of our method and our dataset
+will be publicly released soon.
+
+[Paper Link](
+https://arxiv.org/abs/2503.08257
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-13_23-22.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboCopilot: Human-in-the-loop Interactive Imitation Learning for Robot Manipulation
+
+- **Authors**: Philipp Wu, Yide Shentu, Qiayuan Liao, Ding Jin, Menglong Guo, Koushil Sreenath, Xingyu Lin, Pieter Abbeel
+
+#### Abstract
+
+Learning from human demonstration is an effective approach for learning
+complex manipulation skills. However, existing approaches heavily focus on
+learning from passive human demonstration data for its simplicity in data
+collection. Interactive human teaching has appealing theoretical and practical
+properties, but they are not well supported by existing human-robot interfaces.
+This paper proposes a novel system that enables seamless control switching
+between human and an autonomous policy for bi-manual manipulation tasks,
+enabling more efficient learning of new tasks. This is achieved through a
+compliant, bilateral teleoperation system. Through simulation and hardware
+experiments, we demonstrate the value of our system in an interactive human
+teaching for learning complex bi-manual manipulation skills.
+
+[Paper Link](
+https://arxiv.org/abs/2503.07771
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-13_23-19.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### TLA: Tactile-Language-Action Model for Contact-Rich Manipulation
+
+- **Authors**: Peng Hao, Chaofan Zhang, Dingzhe Li, Xiaoge Cao, Xiaoshuai Hao, Shaowei Cui, Shuo Wang
+
+#### Abstract
+
+Significant progress has been made in vision-language models. However,
+language-conditioned robotic manipulation for contact-rich tasks remains
+underexplored, particularly in terms of tactile sensing. To address this gap,
+we introduce the Tactile-Language-Action (TLA) model, which effectively
+processes sequential tactile feedback via cross-modal language grounding to
+enable robust policy generation in contact-intensive scenarios. In addition, we
+construct a comprehensive dataset that contains 24k pairs of tactile action
+instruction data, customized for fingertip peg-in-hole assembly, providing
+essential resources for TLA training and evaluation. Our results show that TLA
+significantly outperforms traditional imitation learning methods (e.g.,
+diffusion policy) in terms of effective action generation and action accuracy,
+while demonstrating strong generalization capabilities by achieving over 85\%
+success rate on previously unseen assembly clearances and peg shapes. We
+publicly release all data and code in the hope of advancing research in
+language-conditioned tactile manipulation skill learning. Project website:
+https://sites.google.com/view/tactile-language-action/
+
+[Website Link](https://sites.google.com/view/tactile-language-action/)
+
+[Paper Link](
+https://arxiv.org/abs/2503.08548
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-13_23-06.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### MoE-Loco: Mixture of Experts for Multitask Locomotion
+
+- **Authors**: Runhan Huang, Shaoting Zhu, Yilun Du, Hang Zhao
+
+#### Abstract
+
+We present MoE-Loco, a Mixture of Experts (MoE) framework for multitask
+locomotion for legged robots. Our method enables a single policy to handle
+diverse terrains, including bars, pits, stairs, slopes, and baffles, while
+supporting quadrupedal and bipedal gaits. Using MoE, we mitigate the gradient
+conflicts that typically arise in multitask reinforcement learning, improving
+both training efficiency and performance. Our experiments demonstrate that
+different experts naturally specialize in distinct locomotion behaviors, which
+can be leveraged for task migration and skill composition. We further validate
+our approach in both simulation and real-world deployment, showcasing its
+robustness and adaptability.
+
+[Paper Link](
+https://arxiv.org/abs/2503.08564
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-13_23-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Proc4Gem: Foundation models for physical agency through procedural generation
+
+- **Authors**: Yixin Lin, Jan Humplik, Sandy H. Huang, Leonard Hasenclever, Francesco Romano, Stefano Saliceti, Daniel Zheng, Jose Enrique Chen, Catarina Barros, Adrian Collister, Matt Young, Adil Dostmohamed, Ben Moran, Ken Caluwaerts, Marissa Giustina, Joss Moore, Kieran Connell, Francesco Nori, Nicolas Heess, Steven Bohez, Arunkumar Byravan
+
+#### Abstract
+
+In robot learning, it is common to either ignore the environment semantics,
+focusing on tasks like whole-body control which only require reasoning about
+robot-environment contacts, or conversely to ignore contact dynamics, focusing
+on grounding high-level movement in vision and language. In this work, we show
+that advances in generative modeling, photorealistic rendering, and procedural
+generation allow us to tackle tasks requiring both. By generating contact-rich
+trajectories with accurate physics in semantically-diverse simulations, we can
+distill behaviors into large multimodal models that directly transfer to the
+real world: a system we call Proc4Gem. Specifically, we show that a foundation
+model, Gemini, fine-tuned on only simulation data, can be instructed in
+language to control a quadruped robot to push an object with its body to unseen
+targets in unseen real-world environments. Our real-world results demonstrate
+the promise of using simulation to imbue foundation models with physical
+agency. Videos can be found at our website:
+https://sites.google.com/view/proc4gem
+
+[Website Link](https://sites.google.com/view/proc4gem)
+
+[Paper Link](
+https://arxiv.org/abs/2503.08593
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-13_23-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### EMMOE: A Comprehensive Benchmark for Embodied Mobile Manipulation in Open Environments
+
+- **Authors**: Dongping Li, Tielong Cai, Tianci Tang, Wenhao Chai, Katherine Rose Driggs-Campbell, Gaoang Wang
+
+#### Abstract
+
+Developing autonomous home robots controlled by natural language has long
+been a pursuit of human. While advancements in large language models (LLMs) and
+embodied intelligence make this goal closer, several challenges persist: the
+lack of a unified benchmark for more complex robot tasks, limited evaluation
+methods and metrics, data incompatibility between LLMs and mobile manipulation
+trajectories. To address these issues, we introduce Embodied Mobile
+Manipulation in Open Environments (EMMOE), which requires agents to interpret
+user instructions and execute long-horizon everyday tasks in continuous space.
+EMMOE seamlessly integrates high-level and low-level embodied tasks into a
+unified framework, along with three new metrics for more diverse assessment.
+Additionally, we collect EMMOE-100, which features in various task attributes,
+detailed process annotations, re-plans after failures, and two sub-datasets for
+LLM training. Furthermore, we design HomieBot, a sophisticated agent system
+consists of LLM with Direct Preference Optimization (DPO), light weighted
+navigation and manipulation models, and multiple error detection mechanisms.
+Finally, we demonstrate HomieBot's performance and the evaluation of different
+models and policies.
+
+[Paper Link](
+https://arxiv.org/abs/2503.08604
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-13_22-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Generating Robot Constitutions & Benchmarks for Semantic Safety
+
+- **Authors**: Pierre Sermanet, Anirudha Majumdar, Alex Irpan, Dmitry Kalashnikov, Vikas Sindhwani
+
+#### Abstract
+
+Until recently, robotics safety research was predominantly about collision
+avoidance and hazard reduction in the immediate vicinity of a robot. Since the
+advent of large vision and language models (VLMs), robots are now also capable
+of higher-level semantic scene understanding and natural language interactions
+with humans. Despite their known vulnerabilities (e.g. hallucinations or
+jail-breaking), VLMs are being handed control of robots capable of physical
+contact with the real world. This can lead to dangerous behaviors, making
+semantic safety for robots a matter of immediate concern. Our contributions in
+this paper are two fold: first, to address these emerging risks, we release the
+ASIMOV Benchmark, a large-scale and comprehensive collection of datasets for
+evaluating and improving semantic safety of foundation models serving as robot
+brains. Our data generation recipe is highly scalable: by leveraging text and
+image generation techniques, we generate undesirable situations from real-world
+visual scenes and human injury reports from hospitals. Secondly, we develop a
+framework to automatically generate robot constitutions from real-world data to
+steer a robot's behavior using Constitutional AI mechanisms. We propose a novel
+auto-amending process that is able to introduce nuances in written rules of
+behavior; this can lead to increased alignment with human preferences on
+behavior desirability and safety. We explore trade-offs between generality and
+specificity across a diverse set of constitutions of different lengths, and
+demonstrate that a robot is able to effectively reject unconstitutional
+actions. We measure a top alignment rate of 84.3% on the ASIMOV Benchmark using
+generated constitutions, outperforming no-constitution baselines and
+human-written constitutions. Data is available at asimov-benchmark.github.io
+
+[Paper Link](
+https://arxiv.org/abs/2503.08663
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-13_22-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-03-11
 
 
