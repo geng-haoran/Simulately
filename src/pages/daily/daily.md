@@ -1,3 +1,76 @@
+## 2025-03-22
+
+
+### Motion Synthesis with Sparse and Flexible Keyjoint Control
+
+- **Authors**: Inwoo Hwang, Jinseok Bae, Donggeun Lim, Young Min Kim
+
+#### Abstract
+
+Creating expressive character animations is labor-intensive, requiring
+intricate manual adjustment of animators across space and time. Previous works
+on controllable motion generation often rely on a predefined set of dense
+spatio-temporal specifications (e.g., dense pelvis trajectories with exact
+per-frame timing), limiting practicality for animators. To process high-level
+intent and intuitive control in diverse scenarios, we propose a practical
+controllable motions synthesis framework that respects sparse and flexible
+keyjoint signals. Our approach employs a decomposed diffusion-based motion
+synthesis framework that first synthesizes keyjoint movements from sparse input
+control signals and then synthesizes full-body motion based on the completed
+keyjoint trajectories. The low-dimensional keyjoint movements can easily adapt
+to various control signal types, such as end-effector position for diverse
+goal-driven motion synthesis, or incorporate functional constraints on a subset
+of keyjoints. Additionally, we introduce a time-agnostic control formulation,
+eliminating the need for frame-specific timing annotations and enhancing
+control flexibility. Then, the shared second stage can synthesize a natural
+whole-body motion that precisely satisfies the task requirement from dense
+keyjoint movements. We demonstrate the effectiveness of sparse and flexible
+keyjoint control through comprehensive experiments on diverse datasets and
+scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2503.15557
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-22_16-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboFactory: Exploring Embodied Agent Collaboration with Compositional Constraints
+
+- **Authors**: Yiran Qin, Li Kang, Xiufeng Song, Zhenfei Yin, Xiaohong Liu, Xihui Liu, Ruimao Zhang, Lei Bai
+
+#### Abstract
+
+Designing effective embodied multi-agent systems is critical for solving
+complex real-world tasks across domains. Due to the complexity of multi-agent
+embodied systems, existing methods fail to automatically generate safe and
+efficient training data for such systems. To this end, we propose the concept
+of compositional constraints for embodied multi-agent systems, addressing the
+challenges arising from collaboration among embodied agents. We design various
+interfaces tailored to different types of constraints, enabling seamless
+interaction with the physical world. Leveraging compositional constraints and
+specifically designed interfaces, we develop an automated data collection
+framework for embodied multi-agent systems and introduce the first benchmark
+for embodied multi-agent manipulation, RoboFactory. Based on RoboFactory
+benchmark, we adapt and evaluate the method of imitation learning and analyzed
+its performance in different difficulty agent tasks. Furthermore, we explore
+the architectures and training strategies for multi-agent imitation learning,
+aiming to build safe and efficient embodied multi-agent systems.
+
+[Paper Link](
+https://arxiv.org/abs/2503.16408
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-22_15-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-03-20
 
 
