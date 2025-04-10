@@ -1,3 +1,793 @@
+## 2025-04-10
+
+
+### MAPLE: Encoding Dexterous Robotic Manipulation Priors Learned From Egocentric Videos
+
+- **Authors**: Alexey Gavryushin, Xi Wang, Robert J. S. Malate, Chenyu Yang, Xiangyi Jia, Shubh Goel, Davide Liconti, René Zurbrügg, Robert K. Katzschmann, Marc Pollefeys
+
+#### Abstract
+
+Large-scale egocentric video datasets capture diverse human activities across
+a wide range of scenarios, offering rich and detailed insights into how humans
+interact with objects, especially those that require fine-grained dexterous
+control. Such complex, dexterous skills with precise controls are crucial for
+many robotic manipulation tasks, yet are often insufficiently addressed by
+traditional data-driven approaches to robotic manipulation. To address this
+gap, we leverage manipulation priors learned from large-scale egocentric video
+datasets to improve policy learning for dexterous robotic manipulation tasks.
+We present MAPLE, a novel method for dexterous robotic manipulation that
+exploits rich manipulation priors to enable efficient policy learning and
+better performance on diverse, complex manipulation tasks. Specifically, we
+predict hand-object contact points and detailed hand poses at the moment of
+hand-object contact and use the learned features to train policies for
+downstream manipulation tasks. Experimental results demonstrate the
+effectiveness of MAPLE across existing simulation benchmarks, as well as a
+newly designed set of challenging simulation tasks, which require fine-grained
+object control and complex dexterous skills. The benefits of MAPLE are further
+highlighted in real-world experiments using a dexterous robotic hand, whereas
+simultaneous evaluation across both simulation and real-world experiments has
+remained underexplored in prior work.
+
+[Paper Link](
+https://arxiv.org/abs/2504.06084
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_17-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface
+
+- **Authors**: Fangchen Liu, Chuanyu Li, Yihua Qin, Ankit Shaw, Jing Xu, Pieter Abbeel, Rui Chen
+
+#### Abstract
+
+Tactile information plays a crucial role for humans and robots to interact
+effectively with their environment, particularly for tasks requiring the
+understanding of contact properties. Solving such dexterous manipulation tasks
+often relies on imitation learning from demonstration datasets, which are
+typically collected via teleoperation systems and often demand substantial time
+and effort. To address these challenges, we present ViTaMIn, an embodiment-free
+manipulation interface that seamlessly integrates visual and tactile sensing
+into a hand-held gripper, enabling data collection without the need for
+teleoperation. Our design employs a compliant Fin Ray gripper with tactile
+sensing, allowing operators to perceive force feedback during manipulation for
+more intuitive operation. Additionally, we propose a multimodal representation
+learning strategy to obtain pre-trained tactile representations, improving data
+efficiency and policy robustness. Experiments on seven contact-rich
+manipulation tasks demonstrate that ViTaMIn significantly outperforms baseline
+methods, demonstrating its effectiveness for complex manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2504.06156
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_17-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexSinGrasp: Learning a Unified Policy for Dexterous Object Singulation and Grasping in Cluttered Environments
+
+- **Authors**: Lixin Xu, Zixuan Liu, Zhewei Gui, Jingxiang Guo, Zeyu Jiang, Zhixuan Xu, Chongkai Gao, Lin Shao
+
+#### Abstract
+
+Grasping objects in cluttered environments remains a fundamental yet
+challenging problem in robotic manipulation. While prior works have explored
+learning-based synergies between pushing and grasping for two-fingered
+grippers, few have leveraged the high degrees of freedom (DoF) in dexterous
+hands to perform efficient singulation for grasping in cluttered settings. In
+this work, we introduce DexSinGrasp, a unified policy for dexterous object
+singulation and grasping. DexSinGrasp enables high-dexterity object singulation
+to facilitate grasping, significantly improving efficiency and effectiveness in
+cluttered environments. We incorporate clutter arrangement curriculum learning
+to enhance success rates and generalization across diverse clutter conditions,
+while policy distillation enables a deployable vision-based grasping strategy.
+To evaluate our approach, we introduce a set of cluttered grasping tasks with
+varying object arrangements and occlusion levels. Experimental results show
+that our method outperforms baselines in both efficiency and grasping success
+rate, particularly in dense clutter. Codes, appendix, and videos are available
+on our project website https://nus-lins-lab.github.io/dexsingweb/.
+
+[Website Link](https://nus-lins-lab.github.io/dexsingweb/.)
+
+[Paper Link](
+https://arxiv.org/abs/2504.04516
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_17-42.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RobustDexGrasp: Robust Dexterous Grasping of General Objects from Single-view Perception
+
+- **Authors**: Hui Zhang, Zijian Wu, Linyi Huang, Sammy Christen, Jie Song
+
+#### Abstract
+
+Robust grasping of various objects from single-view perception is fundamental
+for dexterous robots. Previous works often rely on fully observable objects,
+expert demonstrations, or static grasping poses, which restrict their
+generalization ability and adaptability to external disturbances. In this
+paper, we present a reinforcement-learning-based framework that enables
+zero-shot dynamic dexterous grasping of a wide range of unseen objects from
+single-view perception, while performing adaptive motions to external
+disturbances. We utilize a hand-centric object representation for shape feature
+extraction that emphasizes interaction-relevant local shapes, enhancing
+robustness to shape variance and uncertainty. To enable effective hand
+adaptation to disturbances with limited observations, we propose a mixed
+curriculum learning strategy, which first utilizes imitation learning to
+distill a policy trained with privileged real-time visual-tactile feedback, and
+gradually transfers to reinforcement learning to learn adaptive motions under
+disturbances caused by observation noises and dynamic randomization. Our
+experiments demonstrate strong generalization in grasping unseen objects with
+random poses, achieving success rates of 97.0% across 247,786 simulated objects
+and 94.6% across 512 real objects. We also demonstrate the robustness of our
+method to various disturbances, including unobserved object movement and
+external forces, through both quantitative and qualitative evaluations. Project
+Page: https://zdchan.github.io/Robust_DexGrasp/
+
+[Website Link](https://zdchan.github.io/Robust_DexGrasp/)
+
+[Paper Link](
+https://arxiv.org/abs/2504.05287
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_17-37.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets
+
+- **Authors**: Chuning Zhu, Raymond Yu, Siyuan Feng, Benjamin Burchfiel, Paarth Shah, Abhishek Gupta
+
+#### Abstract
+
+Imitation learning has emerged as a promising approach towards building
+generalist robots. However, scaling imitation learning for large robot
+foundation models remains challenging due to its reliance on high-quality
+expert demonstrations. Meanwhile, large amounts of video data depicting a wide
+range of environments and diverse behaviors are readily available. This data
+provides a rich source of information about real-world dynamics and
+agent-environment interactions. Leveraging this data directly for imitation
+learning, however, has proven difficult due to the lack of action annotation
+required for most contemporary methods. In this work, we present Unified World
+Models (UWM), a framework that allows for leveraging both video and action data
+for policy learning. Specifically, a UWM integrates an action diffusion process
+and a video diffusion process within a unified transformer architecture, where
+independent diffusion timesteps govern each modality. We show that by simply
+controlling each diffusion timestep, UWM can flexibly represent a policy, a
+forward dynamics, an inverse dynamics, and a video generator. Through simulated
+and real-world experiments, we show that: (1) UWM enables effective pretraining
+on large-scale multitask robot datasets with both dynamics and action
+predictions, resulting in more generalizable and robust policies than imitation
+learning, (2) UWM naturally facilitates learning from action-free video data
+through independent control of modality-specific diffusion timesteps, further
+improving the performance of finetuned policies. Our results suggest that UWM
+offers a promising step toward harnessing large, heterogeneous datasets for
+scalable robot learning, and provides a simple unification between the often
+disparate paradigms of imitation learning and world modeling. Videos and code
+are available at https://weirdlabuw.github.io/uwm/.
+
+[Website Link](https://weirdlabuw.github.io/uwm/.)
+
+[Paper Link](
+https://arxiv.org/abs/2504.02792
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_17-24.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Dexterous Non-Prehensile Manipulation for Ungraspable Object via Extrinsic Dexterity
+
+- **Authors**: Yuhan Wang, Yu Li, Yaodong Yang, Yuanpei Chen
+
+#### Abstract
+
+Objects with large base areas become ungraspable when they exceed the
+end-effector's maximum aperture. Existing approaches address this limitation
+through extrinsic dexterity, which exploits environmental features for
+non-prehensile manipulation. While grippers have shown some success in this
+domain, dexterous hands offer superior flexibility and manipulation
+capabilities that enable richer environmental interactions, though they present
+greater control challenges. Here we present ExDex, a dexterous arm-hand system
+that leverages reinforcement learning to enable non-prehensile manipulation for
+grasping ungraspable objects. Our system learns two strategic manipulation
+sequences: relocating objects from table centers to edges for direct grasping,
+or to walls where extrinsic dexterity enables grasping through environmental
+interaction. We validate our approach through extensive experiments with dozens
+of diverse household objects, demonstrating both superior performance and
+generalization capabilities with novel objects. Furthermore, we successfully
+transfer the learned policies from simulation to a real-world robot system
+without additional training, further demonstrating its applicability in
+real-world scenarios. Project website: https://tangty11.github.io/ExDex/.
+
+[Website Link](https://tangty11.github.io/ExDex/.)
+
+[Paper Link](
+https://arxiv.org/abs/2503.23120
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_16-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ZeroMimic: Distilling Robotic Manipulation Skills from Web Videos
+
+- **Authors**: Junyao Shi, Zhuolun Zhao, Tianyou Wang, Ian Pedroza, Amy Luo, Jie Wang, Jason Ma, Dinesh Jayaraman
+
+#### Abstract
+
+Many recent advances in robotic manipulation have come through imitation
+learning, yet these rely largely on mimicking a particularly hard-to-acquire
+form of demonstrations: those collected on the same robot in the same room with
+the same objects as the trained policy must handle at test time. In contrast,
+large pre-recorded human video datasets demonstrating manipulation skills
+in-the-wild already exist, which contain valuable information for robots. Is it
+possible to distill a repository of useful robotic skill policies out of such
+data without any additional requirements on robot-specific demonstrations or
+exploration? We present the first such system ZeroMimic, that generates
+immediately deployable image goal-conditioned skill policies for several common
+categories of manipulation tasks (opening, closing, pouring, pick&place,
+cutting, and stirring) each capable of acting upon diverse objects and across
+diverse unseen task setups. ZeroMimic is carefully designed to exploit recent
+advances in semantic and geometric visual understanding of human videos,
+together with modern grasp affordance detectors and imitation policy classes.
+After training ZeroMimic on the popular EpicKitchens dataset of ego-centric
+human videos, we evaluate its out-of-the-box performance in varied real-world
+and simulated kitchen settings with two different robot embodiments,
+demonstrating its impressive abilities to handle these varied tasks. To enable
+plug-and-play reuse of ZeroMimic policies on other task setups and robots, we
+release software and policy checkpoints of our skill policies.
+
+[Paper Link](
+https://arxiv.org/abs/2503.23877
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_16-42.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AutoEval: Autonomous Evaluation of Generalist Robot Manipulation Policies in the Real World
+
+- **Authors**: Zhiyuan Zhou, Pranav Atreya, You Liang Tan, Karl Pertsch, Sergey Levine
+
+#### Abstract
+
+Scalable and reproducible policy evaluation has been a long-standing
+challenge in robot learning. Evaluations are critical to assess progress and
+build better policies, but evaluation in the real world, especially at a scale
+that would provide statistically reliable results, is costly in terms of human
+time and hard to obtain. Evaluation of increasingly generalist robot policies
+requires an increasingly diverse repertoire of evaluation environments, making
+the evaluation bottleneck even more pronounced. To make real-world evaluation
+of robotic policies more practical, we propose AutoEval, a system to
+autonomously evaluate generalist robot policies around the clock with minimal
+human intervention. Users interact with AutoEval by submitting evaluation jobs
+to the AutoEval queue, much like how software jobs are submitted with a cluster
+scheduling system, and AutoEval will schedule the policies for evaluation
+within a framework supplying automatic success detection and automatic scene
+resets. We show that AutoEval can nearly fully eliminate human involvement in
+the evaluation process, permitting around the clock evaluations, and the
+evaluation results correspond closely to ground truth evaluations conducted by
+hand. To facilitate the evaluation of generalist policies in the robotics
+community, we provide public access to multiple AutoEval scenes in the popular
+BridgeData robot setup with WidowX robot arms. In the future, we hope that
+AutoEval scenes can be set up across institutions to form a diverse and
+distributed evaluation network.
+
+[Paper Link](
+https://arxiv.org/abs/2503.24278
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_16-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation
+
+- **Authors**: Abhiram Maddukuri, Zhenyu Jiang, Lawrence Yunliang Chen, Soroush Nasiriany, Yuqi Xie, Yu Fang, Wenqi Huang, Zu Wang, Zhenjia Xu, Nikita Chernyadev, Scott Reed, Ken Goldberg, Ajay Mandlekar, Linxi Fan, Yuke Zhu
+
+#### Abstract
+
+Large real-world robot datasets hold great potential to train generalist
+robot models, but scaling real-world human data collection is time-consuming
+and resource-intensive. Simulation has great potential in supplementing
+large-scale data, especially with recent advances in generative AI and
+automated data generation tools that enable scalable creation of robot behavior
+datasets. However, training a policy solely in simulation and transferring it
+to the real world often demands substantial human effort to bridge the reality
+gap. A compelling alternative is to co-train the policy on a mixture of
+simulation and real-world datasets. Preliminary studies have recently shown
+this strategy to substantially improve the performance of a policy over one
+trained on a limited amount of real-world data. Nonetheless, the community
+lacks a systematic understanding of sim-and-real co-training and what it takes
+to reap the benefits of simulation data for real-robot learning. This work
+presents a simple yet effective recipe for utilizing simulation data to solve
+vision-based robotic manipulation tasks. We derive this recipe from
+comprehensive experiments that validate the co-training strategy on various
+simulation and real-world datasets. Using two domains--a robot arm and a
+humanoid--across diverse tasks, we demonstrate that simulation data can enhance
+real-world task performance by an average of 38%, even with notable differences
+between the simulation and real-world data. Videos and additional results can
+be found at https://co-training.github.io/
+
+[Website Link](https://co-training.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2503.24361
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_16-14.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models
+
+- **Authors**: Qingqing Zhao, Yao Lu, Moo Jin Kim, Zipeng Fu, Zhuoyang Zhang, Yecheng Wu, Zhaoshuo Li, Qianli Ma, Song Han, Chelsea Finn, Ankur Handa, Ming-Yu Liu, Donglai Xiang, Gordon Wetzstein, Tsung-Yi Lin
+
+#### Abstract
+
+Vision-language-action models (VLAs) have shown potential in leveraging
+pretrained vision-language models and diverse robot demonstrations for learning
+generalizable sensorimotor control. While this paradigm effectively utilizes
+large-scale data from both robotic and non-robotic sources, current VLAs
+primarily focus on direct input--output mappings, lacking the intermediate
+reasoning steps crucial for complex manipulation tasks. As a result, existing
+VLAs lack temporal planning or reasoning capabilities. In this paper, we
+introduce a method that incorporates explicit visual chain-of-thought (CoT)
+reasoning into vision-language-action models (VLAs) by predicting future image
+frames autoregressively as visual goals before generating a short action
+sequence to achieve these goals. We introduce CoT-VLA, a state-of-the-art 7B
+VLA that can understand and generate visual and action tokens. Our experimental
+results demonstrate that CoT-VLA achieves strong performance, outperforming the
+state-of-the-art VLA model by 17% in real-world manipulation tasks and 6% in
+simulation benchmarks. Project website: https://cot-vla.github.io/
+
+[Website Link](https://cot-vla.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2503.22020
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-10_16-13.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-03-27
+
+
+### Gemini Robotics: Bringing AI into the Physical World
+
+- **Authors**: Gemini Robotics Team, Saminda Abeyruwan, Joshua Ainslie, Jean-Baptiste Alayrac, Montserrat Gonzalez Arenas, Travis Armstrong, Ashwin Balakrishna, Robert Baruch, Maria Bauza, Michiel Blokzijl, Steven Bohez, Konstantinos Bousmalis, Anthony Brohan, Thomas Buschmann, Arunkumar Byravan, Serkan Cabi, Ken Caluwaerts, Federico Casarini, Oscar Chang, Jose Enrique Chen, Xi Chen, Hao-Tien Lewis Chiang, Krzysztof Choromanski, David D'Ambrosio, Sudeep Dasari, Todor Davchev, Coline Devin, Norman Di Palo, Tianli Ding, Adil Dostmohamed, Danny Driess, Yilun Du, Debidatta Dwibedi, Michael Elabd, Claudio Fantacci, Cody Fong, Erik Frey, Chuyuan Fu, Marissa Giustina, Keerthana Gopalakrishnan, Laura Graesser, Leonard Hasenclever, Nicolas Heess, Brandon Hernaez, Alexander Herzog, R. Alex Hofer, Jan Humplik, Atil Iscen, Mithun George Jacob, Deepali Jain, Ryan Julian, Dmitry Kalashnikov, M. Emre Karagozler, Stefani Karp, Chase Kew, Jerad Kirkland, Sean Kirmani, Yuheng Kuang, Thomas Lampe, Antoine Laurens, Isabel Leal, Alex X. Lee, Tsang-Wei Edward Lee, Jacky Liang, Yixin Lin, Sharath Maddineni, Anirudha Majumdar, Assaf Hurwitz Michaely, Robert Moreno, Michael Neunert, Francesco Nori, Carolina Parada, Emilio Parisotto, Peter Pastor, Acorn Pooley, Kanishka Rao, Krista Reymann, Dorsa Sadigh, Stefano Saliceti, Pannag Sanketi, Pierre Sermanet, Dhruv Shah, Mohit Sharma, Kathryn Shea, Charles Shu, Vikas Sindhwani, Sumeet Singh, Radu Soricut, Jost Tobias Springenberg, Rachel Sterneck, Razvan Surdulescu, Jie Tan, Jonathan Tompson, Vincent Vanhoucke, Jake Varley, Grace Vesom, Giulia Vezzani, Oriol Vinyals, Ayzaan Wahid, Stefan Welker, Paul Wohlhart, Fei Xia, Ted Xiao, Annie Xie, Jinyu Xie, Peng Xu, Sichun Xu, Ying Xu, Zhuo Xu, Yuxiang Yang, Rui Yao, Sergey Yaroshenko, Wenhao Yu, Wentao Yuan, Jingwei Zhang, Tingnan Zhang, Allan Zhou, Yuxiang Zhou
+
+#### Abstract
+
+Recent advancements in large multimodal models have led to the emergence of
+remarkable generalist capabilities in digital domains, yet their translation to
+physical agents such as robots remains a significant challenge. This report
+introduces a new family of AI models purposefully designed for robotics and
+built upon the foundation of Gemini 2.0. We present Gemini Robotics, an
+advanced Vision-Language-Action (VLA) generalist model capable of directly
+controlling robots. Gemini Robotics executes smooth and reactive movements to
+tackle a wide range of complex manipulation tasks while also being robust to
+variations in object types and positions, handling unseen environments as well
+as following diverse, open vocabulary instructions. We show that with
+additional fine-tuning, Gemini Robotics can be specialized to new capabilities
+including solving long-horizon, highly dexterous tasks, learning new
+short-horizon tasks from as few as 100 demonstrations and adapting to
+completely novel robot embodiments. This is made possible because Gemini
+Robotics builds on top of the Gemini Robotics-ER model, the second model we
+introduce in this work. Gemini Robotics-ER (Embodied Reasoning) extends
+Gemini's multimodal reasoning capabilities into the physical world, with
+enhanced spatial and temporal understanding. This enables capabilities relevant
+to robotics including object detection, pointing, trajectory and grasp
+prediction, as well as multi-view correspondence and 3D bounding box
+predictions. We show how this novel combination can support a variety of
+robotics applications. We also discuss and address important safety
+considerations related to this new class of robotics foundation models. The
+Gemini Robotics family marks a substantial step towards developing
+general-purpose robots that realizes AI's potential in the physical world.
+
+[Paper Link](
+https://arxiv.org/abs/2503.20020
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_13-07.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### MoLe-VLA: Dynamic Layer-skipping Vision Language Action Model via Mixture-of-Layers for Efficient Robot Manipulation
+
+- **Authors**: Rongyu Zhang, Menghang Dong, Yuan Zhang, Liang Heng, Xiaowei Chi, Gaole Dai, Li Du, Dan Wang, Yuan Du, Shanghang Zhang
+
+#### Abstract
+
+Multimodal Large Language Models (MLLMs) excel in understanding complex
+language and visual data, enabling generalist robotic systems to interpret
+instructions and perform embodied tasks. Nevertheless, their real-world
+deployment is hindered by substantial computational and storage demands. Recent
+insights into the homogeneous patterns in the LLM layer have inspired
+sparsification techniques to address these challenges, such as early exit and
+token pruning. However, these methods often neglect the critical role of the
+final layers that encode the semantic information most relevant to downstream
+robotic tasks. Aligning with the recent breakthrough of the Shallow Brain
+Hypothesis (SBH) in neuroscience and the mixture of experts in model
+sparsification, we conceptualize each LLM layer as an expert and propose a
+Mixture-of-Layers Vision-Language-Action model (MoLe-VLA, or simply MoLe)
+architecture for dynamic LLM layer activation. We introduce a Spatial-Temporal
+Aware Router (STAR) for MoLe to selectively activate only parts of the layers
+based on the robot's current state, mimicking the brain's distinct signal
+pathways specialized for cognition and causal reasoning. Additionally, to
+compensate for the cognitive ability of LLMs lost in MoLe, we devise a
+Cognition Self-Knowledge Distillation (CogKD) framework. CogKD enhances the
+understanding of task demands and improves the generation of task-relevant
+action sequences by leveraging cognitive features. Extensive experiments
+conducted in both RLBench simulation and real-world environments demonstrate
+the superiority of MoLe-VLA in both efficiency and performance. Specifically,
+MoLe-VLA achieves an 8% improvement in the mean success rate across ten tasks
+while reducing computational costs by up to x5.6 compared to standard LLMs.
+
+[Paper Link](
+https://arxiv.org/abs/2503.20384
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_11-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### OpenLex3D: A New Evaluation Benchmark for Open-Vocabulary 3D Scene Representations
+
+- **Authors**: Christina Kassab, Sacha Morin, Martin Büchner, Matías Mattamala, Kumaraditya Gupta, Abhinav Valada, Liam Paull, Maurice Fallon
+
+#### Abstract
+
+3D scene understanding has been transformed by open-vocabulary language
+models that enable interaction via natural language. However, the evaluation of
+these representations is limited to closed-set semantics that do not capture
+the richness of language. This work presents OpenLex3D, a dedicated benchmark
+to evaluate 3D open-vocabulary scene representations. OpenLex3D provides
+entirely new label annotations for 23 scenes from Replica, ScanNet++, and HM3D,
+which capture real-world linguistic variability by introducing synonymical
+object categories and additional nuanced descriptions. By introducing an
+open-set 3D semantic segmentation task and an object retrieval task, we provide
+insights on feature precision, segmentation, and downstream capabilities. We
+evaluate various existing 3D open-vocabulary methods on OpenLex3D, showcasing
+failure cases, and avenues for improvement. The benchmark is publicly available
+at: https://openlex3d.github.io/.
+
+[Website Link](https://openlex3d.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2503.19764
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_11-52.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### G-DexGrasp: Generalizable Dexterous Grasping Synthesis Via Part-Aware Prior Retrieval and Prior-Assisted Generation
+
+- **Authors**: Juntao Jian, Xiuping Liu, Zixuan Chen, Manyi Li, Jian Liu, Ruizhen Hu
+
+#### Abstract
+
+Recent advances in dexterous grasping synthesis have demonstrated significant
+progress in producing reasonable and plausible grasps for many task purposes.
+But it remains challenging to generalize to unseen object categories and
+diverse task instructions. In this paper, we propose G-DexGrasp, a
+retrieval-augmented generation approach that can produce high-quality dexterous
+hand configurations for unseen object categories and language-based task
+instructions. The key is to retrieve generalizable grasping priors, including
+the fine-grained contact part and the affordance-related distribution of
+relevant grasping instances, for the following synthesis pipeline.
+Specifically, the fine-grained contact part and affordance act as generalizable
+guidance to infer reasonable grasping configurations for unseen objects with a
+generative model, while the relevant grasping distribution plays as
+regularization to guarantee the plausibility of synthesized grasps during the
+subsequent refinement optimization. Our comparison experiments validate the
+effectiveness of our key designs for generalization and demonstrate the
+remarkable performance against the existing approaches. Project page:
+https://g-dexgrasp.github.io/
+
+[Website Link](https://g-dexgrasp.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2503.19457
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_11-27.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SG-Tailor: Inter-Object Commonsense Relationship Reasoning for Scene Graph Manipulation
+
+- **Authors**: Haoliang Shang, Hanyu Wu, Guangyao Zhai, Boyang Sun, Fangjinhua Wang, Federico Tombari, Marc Pollefeys
+
+#### Abstract
+
+Scene graphs capture complex relationships among objects, serving as strong
+priors for content generation and manipulation. Yet, reasonably manipulating
+scene graphs -- whether by adding nodes or modifying edges -- remains a
+challenging and untouched task. Tasks such as adding a node to the graph or
+reasoning about a node's relationships with all others are computationally
+intractable, as even a single edge modification can trigger conflicts due to
+the intricate interdependencies within the graph. To address these challenges,
+we introduce SG-Tailor, an autoregressive model that predicts the conflict-free
+relationship between any two nodes. SG-Tailor not only infers inter-object
+relationships, including generating commonsense edges for newly added nodes but
+also resolves conflicts arising from edge modifications to produce coherent,
+manipulated graphs for downstream tasks. For node addition, the model queries
+the target node and other nodes from the graph to predict the appropriate
+relationships. For edge modification, SG-Tailor employs a Cut-And-Stitch
+strategy to solve the conflicts and globally adjust the graph. Extensive
+experiments demonstrate that SG-Tailor outperforms competing methods by a large
+margin and can be seamlessly integrated as a plug-in module for scene
+generation and robotic manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2503.18988
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_11-23.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Dita: Scaling Diffusion Transformer for Generalist Vision-Language-Action Policy
+
+- **Authors**: Zhi Hou, Tianyi Zhang, Yuwen Xiong, Haonan Duan, Hengjun Pu, Ronglei Tong, Chengyang Zhao, Xizhou Zhu, Yu Qiao, Jifeng Dai, Yuntao Chen
+
+#### Abstract
+
+While recent vision-language-action models trained on diverse robot datasets
+exhibit promising generalization capabilities with limited in-domain data,
+their reliance on compact action heads to predict discretized or continuous
+actions constrains adaptability to heterogeneous action spaces. We present
+Dita, a scalable framework that leverages Transformer architectures to directly
+denoise continuous action sequences through a unified multimodal diffusion
+process. Departing from prior methods that condition denoising on fused
+embeddings via shallow networks, Dita employs in-context conditioning --
+enabling fine-grained alignment between denoised actions and raw visual tokens
+from historical observations. This design explicitly models action deltas and
+environmental nuances. By scaling the diffusion action denoiser alongside the
+Transformer's scalability, Dita effectively integrates cross-embodiment
+datasets across diverse camera perspectives, observation scenes, tasks, and
+action spaces. Such synergy enhances robustness against various variances and
+facilitates the successful execution of long-horizon tasks. Evaluations across
+extensive benchmarks demonstrate state-of-the-art or comparative performance in
+simulation. Notably, Dita achieves robust real-world adaptation to
+environmental variances and complex long-horizon tasks through 10-shot
+finetuning, using only third-person camera inputs. The architecture establishes
+a versatile, lightweight and open-source baseline for generalist robot policy
+learning. Project Page: https://robodita.github.io.
+
+[Website Link](https://robodita.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2503.19757
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_10-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Visuo-Tactile Object Pose Estimation for a Multi-Finger Robot Hand with Low-Resolution In-Hand Tactile Sensing
+
+- **Authors**: Lukas Mack, Felix Grüninger, Benjamin A. Richardson, Regine Lendway, Katherine J. Kuchenbecker, Joerg Stueckler
+
+#### Abstract
+
+Accurate 3D pose estimation of grasped objects is an important prerequisite
+for robots to perform assembly or in-hand manipulation tasks, but object
+occlusion by the robot's own hand greatly increases the difficulty of this
+perceptual task. Here, we propose that combining visual information and
+proprioception with binary, low-resolution tactile contact measurements from
+across the interior surface of an articulated robotic hand can mitigate this
+issue. The visuo-tactile object-pose-estimation problem is formulated
+probabilistically in a factor graph. The pose of the object is optimized to
+align with the three kinds of measurements using a robust cost function to
+reduce the influence of visual or tactile outlier readings. The advantages of
+the proposed approach are first demonstrated in simulation: a custom 15-DoF
+robot hand with one binary tactile sensor per link grasps 17 YCB objects while
+observed by an RGB-D camera. This low-resolution in-hand tactile sensing
+significantly improves object-pose estimates under high occlusion and also high
+visual noise. We also show these benefits through grasping tests with a
+preliminary real version of our tactile hand, obtaining reasonable
+visuo-tactile estimates of object pose at approximately 13.3 Hz on average.
+
+[Paper Link](
+https://arxiv.org/abs/2503.19893
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_10-09.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Any6D: Model-free 6D Pose Estimation of Novel Objects
+
+- **Authors**: Taeyeop Lee, Bowen Wen, Minjun Kang, Gyuree Kang, In So Kweon, Kuk-Jin Yoon
+
+#### Abstract
+
+We introduce Any6D, a model-free framework for 6D object pose estimation that
+requires only a single RGB-D anchor image to estimate both the 6D pose and size
+of unknown objects in novel scenes. Unlike existing methods that rely on
+textured 3D models or multiple viewpoints, Any6D leverages a joint object
+alignment process to enhance 2D-3D alignment and metric scale estimation for
+improved pose accuracy. Our approach integrates a render-and-compare strategy
+to generate and refine pose hypotheses, enabling robust performance in
+scenarios with occlusions, non-overlapping views, diverse lighting conditions,
+and large cross-environment variations. We evaluate our method on five
+challenging datasets: REAL275, Toyota-Light, HO3D, YCBINEOAT, and LM-O,
+demonstrating its effectiveness in significantly outperforming state-of-the-art
+methods for novel object pose estimation. Project page:
+https://taeyeop.com/any6d
+
+[Website Link](https://taeyeop.com/any6d)
+
+[Paper Link](
+https://arxiv.org/abs/2503.18673
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_10-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboEngine: Plug-and-Play Robot Data Augmentation with Semantic Robot Segmentation and Background Generation
+
+- **Authors**: Chengbo Yuan, Suraj Joshi, Shaoting Zhu, Hang Su, Hang Zhao, Yang Gao
+
+#### Abstract
+
+Visual augmentation has become a crucial technique for enhancing the visual
+robustness of imitation learning. However, existing methods are often limited
+by prerequisites such as camera calibration or the need for controlled
+environments (e.g., green screen setups). In this work, we introduce
+RoboEngine, the first plug-and-play visual robot data augmentation toolkit. For
+the first time, users can effortlessly generate physics- and task-aware robot
+scenes with just a few lines of code. To achieve this, we present a novel robot
+scene segmentation dataset, a generalizable high-quality robot segmentation
+model, and a fine-tuned background generation model, which together form the
+core components of the out-of-the-box toolkit. Using RoboEngine, we demonstrate
+the ability to generalize robot manipulation tasks across six entirely new
+scenes, based solely on demonstrations collected from a single scene, achieving
+a more than 200% performance improvement compared to the no-augmentation
+baseline. All datasets, model weights, and the toolkit will be publicly
+released.
+
+[Paper Link](
+https://arxiv.org/abs/2503.18738
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_09-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Unraveling the Effects of Synthetic Data on End-to-End Autonomous Driving
+
+- **Authors**: Junhao Ge, Zuhong Liu, Longteng Fan, Yifan Jiang, Jiaqi Su, Yiming Li, Zhejun Zhang, Siheng Chen
+
+#### Abstract
+
+End-to-end (E2E) autonomous driving (AD) models require diverse, high-quality
+data to perform well across various driving scenarios. However, collecting
+large-scale real-world data is expensive and time-consuming, making
+high-fidelity synthetic data essential for enhancing data diversity and model
+robustness. Existing driving simulators for synthetic data generation have
+significant limitations: game-engine-based simulators struggle to produce
+realistic sensor data, while NeRF-based and diffusion-based methods face
+efficiency challenges. Additionally, recent simulators designed for closed-loop
+evaluation provide limited interaction with other vehicles, failing to simulate
+complex real-world traffic dynamics. To address these issues, we introduce
+SceneCrafter, a realistic, interactive, and efficient AD simulator based on 3D
+Gaussian Splatting (3DGS). SceneCrafter not only efficiently generates
+realistic driving logs across diverse traffic scenarios but also enables robust
+closed-loop evaluation of end-to-end models. Experimental results demonstrate
+that SceneCrafter serves as both a reliable evaluation platform and a efficient
+data generator that significantly improves end-to-end model generalization.
+
+[Paper Link](
+https://arxiv.org/abs/2503.18108
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-27_09-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-03-24
+
+
+### ContactFusion: Stochastic Poisson Surface Maps from Visual and Contact Sensing
+
+- **Authors**: Aditya Kamireddypalli, Joao Moura, Russell Buchanan, Sethu Vijayakumar, Subramanian Ramamoorthy
+
+#### Abstract
+
+Robust and precise robotic assembly entails insertion of constituent
+components. Insertion success is hindered when noise in scene understanding
+exceeds tolerance limits, especially when fabricated with tight tolerances. In
+this work, we propose ContactFusion which combines global mapping with local
+contact information, fusing point clouds with force sensing. Our method entails
+a Rejection Sampling based contact occupancy sensing procedure which estimates
+contact locations on the end-effector from Force/Torque sensing at the wrist.
+We demonstrate how to fuse contact with visual information into a Stochastic
+Poisson Surface Map (SPSMap) - a map representation that can be updated with
+the Stochastic Poisson Surface Reconstruction (SPSR) algorithm. We first
+validate the contact occupancy sensor in simulation and show its ability to
+detect the contact location on the robot from force sensing information. Then,
+we evaluate our method in a peg-in-hole task, demonstrating an improvement in
+the hole pose estimate with the fusion of the contact information with the
+SPSMap.
+
+[Paper Link](
+https://arxiv.org/abs/2503.16592
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-03-24_11-54.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-03-22
 
 
