@@ -1,3 +1,227 @@
+## 2025-04-20
+
+
+### UniPhys: Unified Planner and Controller with Diffusion for Flexible Physics-Based Character Control
+
+- **Authors**: Yan Wu, Korrawe Karunratanakul, Zhengyi Luo, Siyu Tang
+
+#### Abstract
+
+Generating natural and physically plausible character motion remains
+challenging, particularly for long-horizon control with diverse guidance
+signals. While prior work combines high-level diffusion-based motion planners
+with low-level physics controllers, these systems suffer from domain gaps that
+degrade motion quality and require task-specific fine-tuning. To tackle this
+problem, we introduce UniPhys, a diffusion-based behavior cloning framework
+that unifies motion planning and control into a single model. UniPhys enables
+flexible, expressive character motion conditioned on multi-modal inputs such as
+text, trajectories, and goals. To address accumulated prediction errors over
+long sequences, UniPhys is trained with the Diffusion Forcing paradigm,
+learning to denoise noisy motion histories and handle discrepancies introduced
+by the physics simulator. This design allows UniPhys to robustly generate
+physically plausible, long-horizon motions. Through guided sampling, UniPhys
+generalizes to a wide range of control signals, including unseen ones, without
+requiring task-specific fine-tuning. Experiments show that UniPhys outperforms
+prior methods in motion naturalness, generalization, and robustness across
+diverse control tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2504.12540
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-20_11-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Practical Insights on Grasp Strategies for Mobile Manipulation in the Wild
+
+- **Authors**: Isabella Huang, Richard Cheng, Sangwoon Kim, Dan Kruse, Carolyn Matl, Lukas Kaul, JC Hancock, Shanmuga Harikumar, Mark Tjersland, James Borders, Dan Helmick
+
+#### Abstract
+
+Mobile manipulation robots are continuously advancing, with their grasping
+capabilities rapidly progressing. However, there are still significant gaps
+preventing state-of-the-art mobile manipulators from widespread real-world
+deployments, including their ability to reliably grasp items in unstructured
+environments. To help bridge this gap, we developed SHOPPER, a mobile
+manipulation robot platform designed to push the boundaries of reliable and
+generalizable grasp strategies. We develop these grasp strategies and deploy
+them in a real-world grocery store -- an exceptionally challenging setting
+chosen for its vast diversity of manipulable items, fixtures, and layouts. In
+this work, we present our detailed approach to designing general grasp
+strategies towards picking any item in a real grocery store. Additionally, we
+provide an in-depth analysis of our latest real-world field test, discussing
+key findings related to fundamental failure modes over hundreds of distinct
+pick attempts. Through our detailed analysis, we aim to offer valuable
+practical insights and identify key grasping challenges, which can guide the
+robotics community towards pressing open problems in the field.
+
+[Paper Link](
+https://arxiv.org/abs/2504.12512
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-20_11-11.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### A0: An Affordance-Aware Hierarchical Model for General Robotic Manipulation
+
+- **Authors**: Rongtao Xu, Jian Zhang, Minghao Guo, Youpeng Wen, Haoting Yang, Min Lin, Jianzheng Huang, Zhe Li, Kaidong Zhang, Liqiong Wang, Yuxuan Kuang, Meng Cao, Feng Zheng, Xiaodan Liang
+
+#### Abstract
+
+Robotic manipulation faces critical challenges in understanding spatial
+affordances--the "where" and "how" of object interactions--essential for
+complex manipulation tasks like wiping a board or stacking objects. Existing
+methods, including modular-based and end-to-end approaches, often lack robust
+spatial reasoning capabilities. Unlike recent point-based and flow-based
+affordance methods that focus on dense spatial representations or trajectory
+modeling, we propose A0, a hierarchical affordance-aware diffusion model that
+decomposes manipulation tasks into high-level spatial affordance understanding
+and low-level action execution. A0 leverages the Embodiment-Agnostic Affordance
+Representation, which captures object-centric spatial affordances by predicting
+contact points and post-contact trajectories. A0 is pre-trained on 1 million
+contact points data and fine-tuned on annotated trajectories, enabling
+generalization across platforms. Key components include Position Offset
+Attention for motion-aware feature extraction and a Spatial Information
+Aggregation Layer for precise coordinate mapping. The model's output is
+executed by the action execution module. Experiments on multiple robotic
+systems (Franka, Kinova, Realman, and Dobot) demonstrate A0's superior
+performance in complex tasks, showcasing its efficiency, flexibility, and
+real-world applicability.
+
+[Paper Link](
+https://arxiv.org/abs/2504.12636
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-20_11-08.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### B*: Efficient and Optimal Base Placement for Fixed-Base Manipulators
+
+- **Authors**: Zihang Zhao, Leiyao Cui, Sirui Xie, Saiyao Zhang, Zhi Han, Lecheng Ruan, Yixin Zhu
+
+#### Abstract
+
+B* is a novel optimization framework that addresses a critical challenge in
+fixed-base manipulator robotics: optimal base placement. Current methods rely
+on pre-computed kinematics databases generated through sampling to search for
+solutions. However, they face an inherent trade-off between solution optimality
+and computational efficiency when determining sampling resolution. To address
+these limitations, B* unifies multiple objectives without database dependence.
+The framework employs a two-layer hierarchical approach. The outer layer
+systematically manages terminal constraints through progressive tightening,
+particularly for base mobility, enabling feasible initialization and broad
+solution exploration. The inner layer addresses non-convexities in each
+outer-layer subproblem through sequential local linearization, converting the
+original problem into tractable sequential linear programming (SLP). Testing
+across multiple robot platforms demonstrates B*'s effectiveness. The framework
+achieves solution optimality five orders of magnitude better than
+sampling-based approaches while maintaining perfect success rates and reduced
+computational overhead. Operating directly in configuration space, B* enables
+simultaneous path planning with customizable optimization criteria. B* serves
+as a crucial initialization tool that bridges the gap between theoretical
+motion planning and practical deployment, where feasible trajectory existence
+is fundamental.
+
+[Paper Link](
+https://arxiv.org/abs/2504.12719
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-20_11-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboTwin: Dual-Arm Robot Benchmark with Generative Digital Twins
+
+- **Authors**: Yao Mu, Tianxing Chen, Zanxin Chen, Shijia Peng, Zhiqian Lan, Zeyu Gao, Zhixuan Liang, Qiaojun Yu, Yude Zou, Mingkun Xu, Lunkai Lin, Zhiqiang Xie, Mingyu Ding, Ping Luo
+
+#### Abstract
+
+In the rapidly advancing field of robotics, dual-arm coordination and complex
+object manipulation are essential capabilities for developing advanced
+autonomous systems. However, the scarcity of diverse, high-quality
+demonstration data and real-world-aligned evaluation benchmarks severely limits
+such development. To address this, we introduce RoboTwin, a generative digital
+twin framework that uses 3D generative foundation models and large language
+models to produce diverse expert datasets and provide a real-world-aligned
+evaluation platform for dual-arm robotic tasks. Specifically, RoboTwin creates
+varied digital twins of objects from single 2D images, generating realistic and
+interactive scenarios. It also introduces a spatial relation-aware code
+generation framework that combines object annotations with large language
+models to break down tasks, determine spatial constraints, and generate precise
+robotic movement code. Our framework offers a comprehensive benchmark with both
+simulated and real-world data, enabling standardized evaluation and better
+alignment between simulated training and real-world performance. We validated
+our approach using the open-source COBOT Magic Robot platform. Policies
+pre-trained on RoboTwin-generated data and fine-tuned with limited real-world
+samples demonstrate significant potential for enhancing dual-arm robotic
+manipulation systems by improving success rates by over 70% for single-arm
+tasks and over 40% for dual-arm tasks compared to models trained solely on
+real-world data.
+
+[Paper Link](
+https://arxiv.org/abs/2504.13059
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-20_10-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation
+
+- **Authors**: Sizhe Yang, Wenye Yu, Jia Zeng, Jun Lv, Kerui Ren, Cewu Lu, Dahua Lin, Jiangmiao Pang
+
+#### Abstract
+
+Visuomotor policies learned from teleoperated demonstrations face challenges
+such as lengthy data collection, high costs, and limited data diversity.
+Existing approaches address these issues by augmenting image observations in
+RGB space or employing Real-to-Sim-to-Real pipelines based on physical
+simulators. However, the former is constrained to 2D data augmentation, while
+the latter suffers from imprecise physical simulation caused by inaccurate
+geometric reconstruction. This paper introduces RoboSplat, a novel method that
+generates diverse, visually realistic demonstrations by directly manipulating
+3D Gaussians. Specifically, we reconstruct the scene through 3D Gaussian
+Splatting (3DGS), directly edit the reconstructed scene, and augment data
+across six types of generalization with five techniques: 3D Gaussian
+replacement for varying object types, scene appearance, and robot embodiments;
+equivariant transformations for different object poses; visual attribute
+editing for various lighting conditions; novel view synthesis for new camera
+perspectives; and 3D content generation for diverse object types. Comprehensive
+real-world experiments demonstrate that RoboSplat significantly enhances the
+generalization of visuomotor policies under diverse disturbances. Notably,
+while policies trained on hundreds of real-world demonstrations with additional
+2D data augmentation achieve an average success rate of 57.2%, RoboSplat
+attains 87.8% in one-shot settings across six types of generalization in the
+real world.
+
+[Paper Link](
+https://arxiv.org/abs/2504.13175
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-04-20_10-54.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-04-10
 
 
