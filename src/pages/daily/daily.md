@@ -1,3 +1,356 @@
+## 2025-05-18
+
+
+### Measuring Uncertainty in Shape Completion to Improve Grasp Quality
+
+- **Authors**: Nuno Ferreira Duarte, Seyed S. Mohammadi, Plinio Moreno, Alessio Del Bue, Jose Santos-Victor
+
+#### Abstract
+
+Shape completion networks have been used recently in real-world robotic
+experiments to complete the missing/hidden information in environments where
+objects are only observed in one or few instances where self-occlusions are
+bound to occur. Nowadays, most approaches rely on deep neural networks that
+handle rich 3D point cloud data that lead to more precise and realistic object
+geometries. However, these models still suffer from inaccuracies due to its
+nondeterministic/stochastic inferences which could lead to poor performance in
+grasping scenarios where these errors compound to unsuccessful grasps. We
+present an approach to calculate the uncertainty of a 3D shape completion model
+during inference of single view point clouds of an object on a table top. In
+addition, we propose an update to grasp pose algorithms quality score by
+introducing the uncertainty of the completed point cloud present in the grasp
+candidates. To test our full pipeline we perform real world grasping with a
+7dof robotic arm with a 2 finger gripper on a large set of household objects
+and compare against previous approaches that do not measure uncertainty. Our
+approach ranks the grasp quality better, leading to higher grasp success rate
+for the rank 5 grasp candidates compared to state of the art.
+
+[Paper Link](
+https://arxiv.org/abs/2504.16183
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_16-09.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### PCF-Grasp: Converting Point Completion to Geometry Feature to Enhance 6-DoF Grasp
+
+- **Authors**: Yaofeng Cheng, Fusheng Zha, Wei Guo, Pengfei Wang, Chao Zeng, Lining Sun, Chenguang Yang
+
+#### Abstract
+
+The 6-Degree of Freedom (DoF) grasp method based on point clouds has shown
+significant potential in enabling robots to grasp target objects. However, most
+existing methods are based on the point clouds (2.5D points) generated from
+single-view depth images. These point clouds only have one surface side of the
+object providing incomplete geometry information, which mislead the grasping
+algorithm to judge the shape of the target object, resulting in low grasping
+accuracy. Humans can accurately grasp objects from a single view by leveraging
+their geometry experience to estimate object shapes. Inspired by humans, we
+propose a novel 6-DoF grasping framework that converts the point completion
+results as object shape features to train the 6-DoF grasp network. Here, point
+completion can generate approximate complete points from the 2.5D points
+similar to the human geometry experience, and converting it as shape features
+is the way to utilize it to improve grasp efficiency. Furthermore, due to the
+gap between the network generation and actual execution, we integrate a score
+filter into our framework to select more executable grasp proposals for the
+real robot. This enables our method to maintain a high grasp quality in any
+camera viewpoint. Extensive experiments demonstrate that utilizing complete
+point features enables the generation of significantly more accurate grasp
+proposals and the inclusion of a score filter greatly enhances the credibility
+of real-world robot grasping. Our method achieves a 17.8\% success rate higher
+than the state-of-the-art method in real-world experiments.
+
+[Paper Link](
+https://arxiv.org/abs/2504.16320
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_16-07.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### PP-Tac: Paper Picking Using Tactile Feedback in Dexterous Robotic Hands
+
+- **Authors**: Pei Lin, Yuzhe Huang, Wanlin Li, Jianpeng Ma, Chenxi Xiao, Ziyuan Jiao
+
+#### Abstract
+
+Robots are increasingly envisioned as human companions, assisting with
+everyday tasks that often involve manipulating deformable objects. Although
+recent advances in robotic hardware and embodied AI have expanded their
+capabilities, current systems still struggle with handling thin, flat, and
+deformable objects such as paper and fabric. This limitation arises from the
+lack of suitable perception techniques for robust state estimation under
+diverse object appearances, as well as the absence of planning techniques for
+generating appropriate grasp motions. To bridge these gaps, this paper
+introduces PP-Tac, a robotic system for picking up paper-like objects. PP-Tac
+features a multi-fingered robotic hand with high-resolution omnidirectional
+tactile sensors \sensorname. This hardware configuration enables real-time slip
+detection and online frictional force control that mitigates such slips.
+Furthermore, grasp motion generation is achieved through a trajectory synthesis
+pipeline, which first constructs a dataset of finger's pinching motions. Based
+on this dataset, a diffusion-based policy is trained to control the hand-arm
+robotic system. Experiments demonstrate that PP-Tac can effectively grasp
+paper-like objects of varying material, thickness, and stiffness, achieving an
+overall success rate of 87.5\%. To our knowledge, this work is the first
+attempt to grasp paper-like deformable objects using a tactile dexterous hand.
+Our project webpage can be found at:
+https://peilin-666.github.io/projects/PP-Tac/
+
+[Website Link](https://peilin-666.github.io/projects/PP-Tac/)
+
+[Paper Link](
+https://arxiv.org/abs/2504.16649
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_16-03.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Offline Robotic World Model: Learning Robotic Policies without a Physics Simulator
+
+- **Authors**: Chenhao Li, Andreas Krause, Marco Hutter
+
+#### Abstract
+
+Reinforcement Learning (RL) has demonstrated impressive capabilities in
+robotic control but remains challenging due to high sample complexity, safety
+concerns, and the sim-to-real gap. While offline RL eliminates the need for
+risky real-world exploration by learning from pre-collected data, it suffers
+from distributional shift, limiting policy generalization. Model-Based RL
+(MBRL) addresses this by leveraging predictive models for synthetic rollouts,
+yet existing approaches often lack robust uncertainty estimation, leading to
+compounding errors in offline settings. We introduce Offline Robotic World
+Model (RWM-O), a model-based approach that explicitly estimates epistemic
+uncertainty to improve policy learning without reliance on a physics simulator.
+By integrating these uncertainty estimates into policy optimization, our
+approach penalizes unreliable transitions, reducing overfitting to model errors
+and enhancing stability. Experimental results show that RWM-O improves
+generalization and safety, enabling policy learning purely from real-world data
+and advancing scalable, data-efficient RL for robotics.
+
+[Paper Link](
+https://arxiv.org/abs/2504.16680
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_16-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### MOSAIC: A Skill-Centric Algorithmic Framework for Long-Horizon Manipulation Planning
+
+- **Authors**: Itamar Mishani, Yorai Shaoul, Maxim Likhachev
+
+#### Abstract
+
+Planning long-horizon motions using a set of predefined skills is a key
+challenge in robotics and AI. Addressing this challenge requires methods that
+systematically explore skill combinations to uncover task-solving sequences,
+harness generic, easy-to-learn skills (e.g., pushing, grasping) to generalize
+across unseen tasks, and bypass reliance on symbolic world representations that
+demand extensive domain and task-specific knowledge. Despite significant
+progress, these elements remain largely disjoint in existing approaches,
+leaving a critical gap in achieving robust, scalable solutions for complex,
+long-horizon problems. In this work, we present MOSAIC, a skill-centric
+framework that unifies these elements by using the skills themselves to guide
+the planning process. MOSAIC uses two families of skills: Generators compute
+executable trajectories and world configurations, and Connectors link these
+independently generated skill trajectories by solving boundary value problems,
+enabling progress toward completing the overall task. By breaking away from the
+conventional paradigm of incrementally discovering skills from predefined start
+or goal states--a limitation that significantly restricts exploration--MOSAIC
+focuses planning efforts on regions where skills are inherently effective. We
+demonstrate the efficacy of MOSAIC in both simulated and real-world robotic
+manipulation tasks, showcasing its ability to solve complex long-horizon
+planning problems using a diverse set of skills incorporating generative
+diffusion models, motion planning algorithms, and manipulation-specific models.
+Visit https://skill-mosaic.github.io for demonstrations and examples.
+
+[Website Link](https://skill-mosaic.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2504.16738
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_16-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Physically Consistent Humanoid Loco-Manipulation using Latent Diffusion Models
+
+- **Authors**: Ilyass Taouil, Haizhou Zhao, Angela Dai, Majid Khadiv
+
+#### Abstract
+
+This paper uses the capabilities of latent diffusion models (LDMs) to
+generate realistic RGB human-object interaction scenes to guide humanoid
+loco-manipulation planning. To do so, we extract from the generated images both
+the contact locations and robot configurations that are then used inside a
+whole-body trajectory optimization (TO) formulation to generate physically
+consistent trajectories for humanoids. We validate our full pipeline in
+simulation for different long-horizon loco-manipulation scenarios and perform
+an extensive analysis of the proposed contact and robot configuration
+extraction pipeline. Our results show that using the information extracted from
+LDMs, we can generate physically consistent trajectories that require
+long-horizon reasoning.
+
+[Paper Link](
+https://arxiv.org/abs/2504.16843
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_15-59.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Latent Diffusion Planning for Imitation Learning
+
+- **Authors**: Amber Xie, Oleh Rybkin, Dorsa Sadigh, Chelsea Finn
+
+#### Abstract
+
+Recent progress in imitation learning has been enabled by policy
+architectures that scale to complex visuomotor tasks, multimodal distributions,
+and large datasets. However, these methods often rely on learning from large
+amount of expert demonstrations. To address these shortcomings, we propose
+Latent Diffusion Planning (LDP), a modular approach consisting of a planner
+which can leverage action-free demonstrations, and an inverse dynamics model
+which can leverage suboptimal data, that both operate over a learned latent
+space. First, we learn a compact latent space through a variational
+autoencoder, enabling effective forecasting of future states in image-based
+domains. Then, we train a planner and an inverse dynamics model with diffusion
+objectives. By separating planning from action prediction, LDP can benefit from
+the denser supervision signals of suboptimal and action-free data. On simulated
+visual robotic manipulation tasks, LDP outperforms state-of-the-art imitation
+learning approaches, as they cannot leverage such additional data.
+
+[Paper Link](
+https://arxiv.org/abs/2504.16925
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_15-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### $π_{0.5}$: a Vision-Language-Action Model with Open-World Generalization
+
+- **Authors**: Physical Intelligence, Kevin Black, Noah Brown, James Darpinian, Karan Dhabalia, Danny Driess, Adnan Esmail, Michael Equi, Chelsea Finn, Niccolo Fusai, Manuel Y. Galliker, Dibya Ghosh, Lachy Groom, Karol Hausman, Brian Ichter, Szymon Jakubczak, Tim Jones, Liyiming Ke, Devin LeBlanc, Sergey Levine, Adrian Li-Bell, Mohith Mothukuri, Suraj Nair, Karl Pertsch, Allen Z. Ren, Lucy Xiaoyang Shi, Laura Smith, Jost Tobias Springenberg, Kyle Stachowicz, James Tanner, Quan Vuong, Homer Walke, Anna Walling, Haohuan Wang, Lili Yu, Ury Zhilinsky
+
+#### Abstract
+
+In order for robots to be useful, they must perform practically relevant
+tasks in the real world, outside of the lab. While vision-language-action (VLA)
+models have demonstrated impressive results for end-to-end robot control, it
+remains an open question how far such models can generalize in the wild. We
+describe $\pi_{0.5}$, a new model based on $\pi_{0}$ that uses co-training on
+heterogeneous tasks to enable broad generalization. $\pi_{0.5}$\ uses data from
+multiple robots, high-level semantic prediction, web data, and other sources to
+enable broadly generalizable real-world robotic manipulation. Our system uses a
+combination of co-training and hybrid multi-modal examples that combine image
+observations, language commands, object detections, semantic subtask
+prediction, and low-level actions. Our experiments show that this kind of
+knowledge transfer is essential for effective generalization, and we
+demonstrate for the first time that an end-to-end learning-enabled robotic
+system can perform long-horizon and dexterous manipulation skills, such as
+cleaning a kitchen or bedroom, in entirely new homes.
+
+[Paper Link](
+https://arxiv.org/abs/2504.16054
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_15-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### BiDexHand: Design and Evaluation of an Open-Source 16-DoF Biomimetic Dexterous Hand
+
+- **Authors**: Zhengyang Kris Weng
+
+#### Abstract
+
+Achieving human-level dexterity in robotic hands remains a fundamental
+challenge for enabling versatile manipulation across diverse applications. This
+extended abstract presents BiDexHand, a cable-driven biomimetic robotic hand
+that combines human-like dexterity with accessible and efficient mechanical
+design. The robotic hand features 16 independently actuated degrees of freedom
+and 5 mechanically coupled joints through novel phalange designs that replicate
+natural finger motion. Performance validation demonstrated success across all
+33 grasp types in the GRASP Taxonomy, 9 of 11 positions in the Kapandji thumb
+opposition test, a measured fingertip force of 2.14\,N, and the capability to
+lift a 10\,lb weight. As an open-source platform supporting multiple control
+modes including vision-based teleoperation, BiDexHand aims to democratize
+access to advanced manipulation capabilities for the broader robotics research
+community.
+
+[Paper Link](
+https://arxiv.org/abs/2504.14712
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_15-37.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Automatic Generation of Aerobatic Flight in Complex Environments via Diffusion Models
+
+- **Authors**: Yuhang Zhong, Anke Zhao, Tianyue Wu, Tingrui Zhang, Fei Gao
+
+#### Abstract
+
+Performing striking aerobatic flight in complex environments demands manual
+designs of key maneuvers in advance, which is intricate and time-consuming as
+the horizon of the trajectory performed becomes long. This paper presents a
+novel framework that leverages diffusion models to automate and scale up
+aerobatic trajectory generation. Our key innovation is the decomposition of
+complex maneuvers into aerobatic primitives, which are short frame sequences
+that act as building blocks, featuring critical aerobatic behaviors for
+tractable trajectory synthesis. The model learns aerobatic primitives using
+historical trajectory observations as dynamic priors to ensure motion
+continuity, with additional conditional inputs (target waypoints and optional
+action constraints) integrated to enable user-editable trajectory generation.
+During model inference, classifier guidance is incorporated with batch sampling
+to achieve obstacle avoidance. Additionally, the generated outcomes are refined
+through post-processing with spatial-temporal trajectory optimization to ensure
+dynamical feasibility. Extensive simulations and real-world experiments have
+validated the key component designs of our method, demonstrating its
+feasibility for deploying on real drones to achieve long-horizon aerobatic
+flight.
+
+[Paper Link](
+https://arxiv.org/abs/2504.15138
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_15-32.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-04-20
 
 
