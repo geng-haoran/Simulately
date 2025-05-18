@@ -1,4 +1,289 @@
-## 2025-05-18
+## 2025-05-01
+
+
+### RoboGround: Robotic Manipulation with Grounded Vision-Language Priors
+
+- **Authors**: Haifeng Huang, Xinyi Chen, Yilun Chen, Hao Li, Xiaoshen Han, Zehan Wang, Tai Wang, Jiangmiao Pang, Zhou Zhao
+
+#### Abstract
+
+Recent advancements in robotic manipulation have highlighted the potential of
+intermediate representations for improving policy generalization. In this work,
+we explore grounding masks as an effective intermediate representation,
+balancing two key advantages: (1) effective spatial guidance that specifies
+target objects and placement areas while also conveying information about
+object shape and size, and (2) broad generalization potential driven by
+large-scale vision-language models pretrained on diverse grounding datasets. We
+introduce RoboGround, a grounding-aware robotic manipulation system that
+leverages grounding masks as an intermediate representation to guide policy
+networks in object manipulation tasks. To further explore and enhance
+generalization, we propose an automated pipeline for generating large-scale,
+simulated data with a diverse set of objects and instructions. Extensive
+experiments show the value of our dataset and the effectiveness of grounding
+masks as intermediate guidance, significantly enhancing the generalization
+abilities of robot policies.
+
+[Paper Link](
+https://arxiv.org/abs/2504.21530
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_17-39.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### LangWBC: Language-directed Humanoid Whole-Body Control via End-to-end Learning
+
+- **Authors**: Yiyang Shao, Xiaoyu Huang, Bike Zhang, Qiayuan Liao, Yuman Gao, Yufeng Chi, Zhongyu Li, Sophia Shao, Koushil Sreenath
+
+#### Abstract
+
+General-purpose humanoid robots are expected to interact intuitively with
+humans, enabling seamless integration into daily life. Natural language
+provides the most accessible medium for this purpose. However, translating
+language into humanoid whole-body motion remains a significant challenge,
+primarily due to the gap between linguistic understanding and physical actions.
+In this work, we present an end-to-end, language-directed policy for real-world
+humanoid whole-body control. Our approach combines reinforcement learning with
+policy distillation, allowing a single neural network to interpret language
+commands and execute corresponding physical actions directly. To enhance motion
+diversity and compositionality, we incorporate a Conditional Variational
+Autoencoder (CVAE) structure. The resulting policy achieves agile and versatile
+whole-body behaviors conditioned on language inputs, with smooth transitions
+between various motions, enabling adaptation to linguistic variations and the
+emergence of novel motions. We validate the efficacy and generalizability of
+our method through extensive simulations and real-world experiments,
+demonstrating robust whole-body control. Please see our website at
+LangWBC.github.io for more information.
+
+[Paper Link](
+https://arxiv.org/abs/2504.21738
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_17-35.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning
+
+- **Authors**: Haoran Geng, Feishi Wang, Songlin Wei, Yuyang Li, Bangjun Wang, Boshi An, Charlie Tianyue Cheng, Haozhe Lou, Peihao Li, Yen-Jen Wang, Yutong Liang, Dylan Goetting, Chaoyi Xu, Haozhe Chen, Yuxi Qian, Yiran Geng, Jiageng Mao, Weikang Wan, Mingtong Zhang, Jiangran Lyu, Siheng Zhao, Jiazhao Zhang, Jialiang Zhang, Chengyang Zhao, Haoran Lu, Yufei Ding, Ran Gong, Yuran Wang, Yuxuan Kuang, Ruihai Wu, Baoxiong Jia, Carlo Sferrazza, Hao Dong, Siyuan Huang, Yue Wang, Jitendra Malik, Pieter Abbeel
+
+#### Abstract
+
+Data scaling and standardized evaluation benchmarks have driven significant
+advances in natural language processing and computer vision. However, robotics
+faces unique challenges in scaling data and establishing evaluation protocols.
+Collecting real-world data is resource-intensive and inefficient, while
+benchmarking in real-world scenarios remains highly complex. Synthetic data and
+simulation offer promising alternatives, yet existing efforts often fall short
+in data quality, diversity, and benchmark standardization. To address these
+challenges, we introduce RoboVerse, a comprehensive framework comprising a
+simulation platform, a synthetic dataset, and unified benchmarks. Our
+simulation platform supports multiple simulators and robotic embodiments,
+enabling seamless transitions between different environments. The synthetic
+dataset, featuring high-fidelity physics and photorealistic rendering, is
+constructed through multiple approaches. Additionally, we propose unified
+benchmarks for imitation learning and reinforcement learning, enabling
+evaluation across different levels of generalization. At the core of the
+simulation platform is MetaSim, an infrastructure that abstracts diverse
+simulation environments into a universal interface. It restructures existing
+simulation environments into a simulator-agnostic configuration system, as well
+as an API aligning different simulator functionalities, such as launching
+simulation environments, loading assets with initial states, stepping the
+physics engine, etc. This abstraction ensures interoperability and
+extensibility. Comprehensive experiments demonstrate that RoboVerse enhances
+the performance of imitation learning, reinforcement learning, world model
+learning, and sim-to-real transfer. These results validate the reliability of
+our dataset and benchmarks, establishing RoboVerse as a robust solution for
+advancing robot learning.
+
+[Paper Link](
+https://arxiv.org/abs/2504.18904
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_17-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learned Perceptive Forward Dynamics Model for Safe and Platform-aware Robotic Navigation
+
+- **Authors**: Pascal Roth, Jonas Frey, Cesar Cadena, Marco Hutter
+
+#### Abstract
+
+Ensuring safe navigation in complex environments requires accurate real-time
+traversability assessment and understanding of environmental interactions
+relative to the robot`s capabilities. Traditional methods, which assume
+simplified dynamics, often require designing and tuning cost functions to
+safely guide paths or actions toward the goal. This process is tedious,
+environment-dependent, and not generalizable. To overcome these issues, we
+propose a novel learned perceptive Forward Dynamics Model (FDM) that predicts
+the robot`s future state conditioned on the surrounding geometry and history of
+proprioceptive measurements, proposing a more scalable, safer, and
+heuristic-free solution. The FDM is trained on multiple years of simulated
+navigation experience, including high-risk maneuvers, and real-world
+interactions to incorporate the full system dynamics beyond rigid body
+simulation. We integrate our perceptive FDM into a zero-shot Model Predictive
+Path Integral (MPPI) planning framework, leveraging the learned mapping between
+actions, future states, and failure probability. This allows for optimizing a
+simplified cost function, eliminating the need for extensive cost-tuning to
+ensure safety. On the legged robot ANYmal, the proposed perceptive FDM improves
+the position estimation by on average 41% over competitive baselines, which
+translates into a 27% higher navigation success rate in rough simulation
+environments. Moreover, we demonstrate effective sim-to-real transfer and
+showcase the benefit of training on synthetic and real data. Code and models
+are made publicly available under https://github.com/leggedrobotics/fdm.
+
+[Website Link](https://github.com/leggedrobotics/fdm.)
+
+[Paper Link](
+https://arxiv.org/abs/2504.19322
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_17-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### PolyTouch: A Robust Multi-Modal Tactile Sensor for Contact-rich Manipulation Using Tactile-Diffusion Policies
+
+- **Authors**: Jialiang Zhao, Naveen Kuppuswamy, Siyuan Feng, Benjamin Burchfiel, Edward Adelson
+
+#### Abstract
+
+Achieving robust dexterous manipulation in unstructured domestic environments
+remains a significant challenge in robotics. Even with state-of-the-art robot
+learning methods, haptic-oblivious control strategies (i.e. those relying only
+on external vision and/or proprioception) often fall short due to occlusions,
+visual complexities, and the need for precise contact interaction control. To
+address these limitations, we introduce PolyTouch, a novel robot finger that
+integrates camera-based tactile sensing, acoustic sensing, and peripheral
+visual sensing into a single design that is compact and durable. PolyTouch
+provides high-resolution tactile feedback across multiple temporal scales,
+which is essential for efficiently learning complex manipulation tasks.
+Experiments demonstrate an at least 20-fold increase in lifespan over
+commercial tactile sensors, with a design that is both easy to manufacture and
+scalable. We then use this multi-modal tactile feedback along with
+visuo-proprioceptive observations to synthesize a tactile-diffusion policy from
+human demonstrations; the resulting contact-aware control policy significantly
+outperforms haptic-oblivious policies in multiple contact-aware manipulation
+policies. This paper highlights how effectively integrating multi-modal contact
+sensing can hasten the development of effective contact-aware manipulation
+policies, paving the way for more reliable and versatile domestic robots. More
+information can be found at https://polytouch.alanz.info/
+
+[Website Link](https://polytouch.alanz.info/)
+
+[Paper Link](
+https://arxiv.org/abs/2504.19341
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_17-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Demonstrating Berkeley Humanoid Lite: An Open-source, Accessible, and Customizable 3D-printed Humanoid Robot
+
+- **Authors**: Yufeng Chi, Qiayuan Liao, Junfeng Long, Xiaoyu Huang, Sophia Shao, Borivoje Nikolic, Zhongyu Li, Koushil Sreenath
+
+#### Abstract
+
+Despite significant interest and advancements in humanoid robotics, most
+existing commercially available hardware remains high-cost, closed-source, and
+non-transparent within the robotics community. This lack of accessibility and
+customization hinders the growth of the field and the broader development of
+humanoid technologies. To address these challenges and promote democratization
+in humanoid robotics, we demonstrate Berkeley Humanoid Lite, an open-source
+humanoid robot designed to be accessible, customizable, and beneficial for the
+entire community. The core of this design is a modular 3D-printed gearbox for
+the actuators and robot body. All components can be sourced from widely
+available e-commerce platforms and fabricated using standard desktop 3D
+printers, keeping the total hardware cost under $5,000 (based on U.S. market
+prices). The design emphasizes modularity and ease of fabrication. To address
+the inherent limitations of 3D-printed gearboxes, such as reduced strength and
+durability compared to metal alternatives, we adopted a cycloidal gear design,
+which provides an optimal form factor in this context. Extensive testing was
+conducted on the 3D-printed actuators to validate their durability and
+alleviate concerns about the reliability of plastic components. To demonstrate
+the capabilities of Berkeley Humanoid Lite, we conducted a series of
+experiments, including the development of a locomotion controller using
+reinforcement learning. These experiments successfully showcased zero-shot
+policy transfer from simulation to hardware, highlighting the platform's
+suitability for research validation. By fully open-sourcing the hardware
+design, embedded code, and training and deployment frameworks, we aim for
+Berkeley Humanoid Lite to serve as a pivotal step toward democratizing the
+development of humanoid robotics. All resources are available at
+https://lite.berkeley-humanoid.org.
+
+[Website Link](https://lite.berkeley-humanoid.org.)
+
+[Paper Link](
+https://arxiv.org/abs/2504.17249
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_16-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Gripper Keypose and Object Pointflow as Interfaces for Bimanual Robotic Manipulation
+
+- **Authors**: Yuyin Yang, Zetao Cai, Yang Tian, Jia Zeng, Jiangmiao Pang
+
+#### Abstract
+
+Bimanual manipulation is a challenging yet crucial robotic capability,
+demanding precise spatial localization and versatile motion trajectories, which
+pose significant challenges to existing approaches. Existing approaches fall
+into two categories: keyframe-based strategies, which predict gripper poses in
+keyframes and execute them via motion planners, and continuous control methods,
+which estimate actions sequentially at each timestep. The keyframe-based method
+lacks inter-frame supervision, struggling to perform consistently or execute
+curved motions, while the continuous method suffers from weaker spatial
+perception. To address these issues, this paper introduces an end-to-end
+framework PPI (keyPose and Pointflow Interface), which integrates the
+prediction of target gripper poses and object pointflow with the continuous
+actions estimation. These interfaces enable the model to effectively attend to
+the target manipulation area, while the overall framework guides diverse and
+collision-free trajectories. By combining interface predictions with continuous
+actions estimation, PPI demonstrates superior performance in diverse bimanual
+manipulation tasks, providing enhanced spatial localization and satisfying
+flexibility in handling movement restrictions. In extensive evaluations, PPI
+significantly outperforms prior methods in both simulated and real-world
+experiments, achieving state-of-the-art performance with a +16.1% improvement
+on the RLBench2 simulation benchmark and an average of +27.5% gain across four
+challenging real-world tasks. Notably, PPI exhibits strong stability, high
+precision, and remarkable generalization capabilities in real-world scenarios.
+Project page: https://yuyinyang3y.github.io/PPI/
+
+[Website Link](https://yuyinyang3y.github.io/PPI/)
+
+[Paper Link](
+https://arxiv.org/abs/2504.17784
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-18_16-24.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-04-24
 
 
 ### Measuring Uncertainty in Shape Completion to Improve Grasp Quality
