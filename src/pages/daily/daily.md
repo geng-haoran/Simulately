@@ -1,3 +1,202 @@
+## 2025-05-19
+
+
+### MetaScenes: Towards Automated Replica Creation for Real-world 3D Scans
+
+- **Authors**: Huangyue Yu, Baoxiong Jia, Yixin Chen, Yandan Yang, Puhao Li, Rongpeng Su, Jiaxin Li, Qing Li, Wei Liang, Song-Chun Zhu, Tengyu Liu, Siyuan Huang
+
+#### Abstract
+
+Embodied AI (EAI) research requires high-quality, diverse 3D scenes to
+effectively support skill acquisition, sim-to-real transfer, and
+generalization. Achieving these quality standards, however, necessitates the
+precise replication of real-world object diversity. Existing datasets
+demonstrate that this process heavily relies on artist-driven designs, which
+demand substantial human effort and present significant scalability challenges.
+To scalably produce realistic and interactive 3D scenes, we first present
+MetaScenes, a large-scale, simulatable 3D scene dataset constructed from
+real-world scans, which includes 15366 objects spanning 831 fine-grained
+categories. Then, we introduce Scan2Sim, a robust multi-modal alignment model,
+which enables the automated, high-quality replacement of assets, thereby
+eliminating the reliance on artist-driven designs for scaling 3D scenes. We
+further propose two benchmarks to evaluate MetaScenes: a detailed scene
+synthesis task focused on small item layouts for robotic manipulation and a
+domain transfer task in vision-and-language navigation (VLN) to validate
+cross-domain transfer. Results confirm MetaScene's potential to enhance EAI by
+supporting more generalizable agent learning and sim-to-real applications,
+introducing new possibilities for EAI research. Project website:
+https://meta-scenes.github.io/.
+
+[Website Link](https://meta-scenes.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2505.02388
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-19_20-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### TWIST: Teleoperated Whole-Body Imitation System
+
+- **Authors**: Yanjie Ze, Zixuan Chen, João Pedro Araújo, Zi-ang Cao, Xue Bin Peng, Jiajun Wu, C. Karen Liu
+
+#### Abstract
+
+Teleoperating humanoid robots in a whole-body manner marks a fundamental step
+toward developing general-purpose robotic intelligence, with human motion
+providing an ideal interface for controlling all degrees of freedom. Yet, most
+current humanoid teleoperation systems fall short of enabling coordinated
+whole-body behavior, typically limiting themselves to isolated locomotion or
+manipulation tasks. We present the Teleoperated Whole-Body Imitation System
+(TWIST), a system for humanoid teleoperation through whole-body motion
+imitation. We first generate reference motion clips by retargeting human motion
+capture data to the humanoid robot. We then develop a robust, adaptive, and
+responsive whole-body controller using a combination of reinforcement learning
+and behavior cloning (RL+BC). Through systematic analysis, we demonstrate how
+incorporating privileged future motion frames and real-world motion capture
+(MoCap) data improves tracking accuracy. TWIST enables real-world humanoid
+robots to achieve unprecedented, versatile, and coordinated whole-body motor
+skills--spanning whole-body manipulation, legged manipulation, locomotion, and
+expressive movement--using a single unified neural network controller. Our
+project website: https://humanoid-teleop.github.io
+
+[Website Link](https://humanoid-teleop.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2505.02833
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-19_19-39.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GENMO: A GENeralist Model for Human MOtion
+
+- **Authors**: Jiefeng Li, Jinkun Cao, Haotian Zhang, Davis Rempe, Jan Kautz, Umar Iqbal, Ye Yuan
+
+#### Abstract
+
+Human motion modeling traditionally separates motion generation and
+estimation into distinct tasks with specialized models. Motion generation
+models focus on creating diverse, realistic motions from inputs like text,
+audio, or keyframes, while motion estimation models aim to reconstruct accurate
+motion trajectories from observations like videos. Despite sharing underlying
+representations of temporal dynamics and kinematics, this separation limits
+knowledge transfer between tasks and requires maintaining separate models. We
+present GENMO, a unified Generalist Model for Human Motion that bridges motion
+estimation and generation in a single framework. Our key insight is to
+reformulate motion estimation as constrained motion generation, where the
+output motion must precisely satisfy observed conditioning signals. Leveraging
+the synergy between regression and diffusion, GENMO achieves accurate global
+motion estimation while enabling diverse motion generation. We also introduce
+an estimation-guided training objective that exploits in-the-wild videos with
+2D annotations and text descriptions to enhance generative diversity.
+Furthermore, our novel architecture handles variable-length motions and mixed
+multimodal conditions (text, audio, video) at different time intervals,
+offering flexible control. This unified approach creates synergistic benefits:
+generative priors improve estimated motions under challenging conditions like
+occlusions, while diverse video data enhances generation capabilities.
+Extensive experiments demonstrate GENMO's effectiveness as a generalist
+framework that successfully handles multiple human motion tasks within a single
+model.
+
+[Paper Link](
+https://arxiv.org/abs/2505.01425
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-19_19-33.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### IK Seed Generator for Dual-Arm Human-like Physicality Robot with Mobile Base
+
+- **Authors**: Jun Takamatsu, Atsushi Kanehira, Kazuhiro Sasabuchi, Naoki Wake, Katsushi Ikeuchi
+
+#### Abstract
+
+Robots are strongly expected as a means of replacing human tasks. If a robot
+has a human-like physicality, the possibility of replacing human tasks
+increases. In the case of household service robots, it is desirable for them to
+be on a human-like size so that they do not become excessively large in order
+to coexist with humans in their operating environment. However, robots with
+size limitations tend to have difficulty solving inverse kinematics (IK) due to
+mechanical limitations, such as joint angle limitations. Conversely, if the
+difficulty coming from this limitation could be mitigated, one can expect that
+the use of such robots becomes more valuable. In numerical IK solver, which is
+commonly used for robots with higher degrees-of-freedom (DOF), the solvability
+of IK depends on the initial guess given to the solver. Thus, this paper
+proposes a method for generating a good initial guess for a numerical IK solver
+given the target hand configuration. For the purpose, we define the goodness of
+an initial guess using the scaled Jacobian matrix, which can calculate the
+manipulability index considering the joint limits. These two factors are
+related to the difficulty of solving IK. We generate the initial guess by
+optimizing the goodness using the genetic algorithm (GA). To enumerate much
+possible IK solutions, we use the reachability map that represents the
+reachable area of the robot hand in the arm-base coordinate system. We conduct
+quantitative evaluation and prove that using an initial guess that is judged to
+be better using the goodness value increases the probability that IK is solved.
+Finally, as an application of the proposed method, we show that by generating
+good initial guesses for IK a robot actually achieves three typical scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2505.00871
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-19_19-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Towards Autonomous Micromobility through Scalable Urban Simulation
+
+- **Authors**: Wayne Wu, Honglin He, Chaoyuan Zhang, Jack He, Seth Z. Zhao, Ran Gong, Quanyi Li, Bolei Zhou
+
+#### Abstract
+
+Micromobility, which utilizes lightweight mobile machines moving in urban
+public spaces, such as delivery robots and mobility scooters, emerges as a
+promising alternative to vehicular mobility. Current micromobility depends
+mostly on human manual operation (in-person or remote control), which raises
+safety and efficiency concerns when navigating busy urban environments full of
+unpredictable obstacles and pedestrians. Assisting humans with AI agents in
+maneuvering micromobility devices presents a viable solution for enhancing
+safety and efficiency. In this work, we present a scalable urban simulation
+solution to advance autonomous micromobility. First, we build URBAN-SIM - a
+high-performance robot learning platform for large-scale training of embodied
+agents in interactive urban scenes. URBAN-SIM contains three critical modules:
+Hierarchical Urban Generation pipeline, Interactive Dynamics Generation
+strategy, and Asynchronous Scene Sampling scheme, to improve the diversity,
+realism, and efficiency of robot learning in simulation. Then, we propose
+URBAN-BENCH - a suite of essential tasks and benchmarks to gauge various
+capabilities of the AI agents in achieving autonomous micromobility.
+URBAN-BENCH includes eight tasks based on three core skills of the agents:
+Urban Locomotion, Urban Navigation, and Urban Traverse. We evaluate four robots
+with heterogeneous embodiments, such as the wheeled and legged robots, across
+these tasks. Experiments on diverse terrains and urban structures reveal each
+robot's strengths and limitations.
+
+[Paper Link](
+https://arxiv.org/abs/2505.00690
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-19_17-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-05-01
 
 
