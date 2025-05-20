@@ -1,4 +1,409 @@
-## 2025-05-19
+## 2025-05-20
+
+
+### ADD: Physics-Based Motion Imitation with Adversarial Differential Discriminators
+
+- **Authors**: Ziyu Zhang, Sergey Bashkirov, Dun Yang, Michael Taylor, Xue Bin Peng
+
+#### Abstract
+
+Multi-objective optimization problems, which require the simultaneous
+optimization of multiple terms, are prevalent across numerous applications.
+Existing multi-objective optimization methods often rely on manually tuned
+aggregation functions to formulate a joint optimization target. The performance
+of such hand-tuned methods is heavily dependent on careful weight selection, a
+time-consuming and laborious process. These limitations also arise in the
+setting of reinforcement-learning-based motion tracking for physically
+simulated characters, where intricately crafted reward functions are typically
+used to achieve high-fidelity results. Such solutions not only require domain
+expertise and significant manual adjustment, but also limit the applicability
+of the resulting reward function across diverse skills. To bridge this gap, we
+present a novel adversarial multi-objective optimization technique that is
+broadly applicable to a range of multi-objective optimization problems,
+including motion tracking. The proposed adversarial differential discriminator
+receives a single positive sample, yet is still effective at guiding the
+optimization process. We demonstrate that our technique can enable characters
+to closely replicate a variety of acrobatic and agile behaviors, achieving
+comparable quality to state-of-the-art motion-tracking methods, without relying
+on manually tuned reward functions. Results are best visualized through
+https://youtu.be/rz8BYCE9E2w.
+
+[Website Link](https://youtu.be/rz8BYCE9E2w.)
+
+[Paper Link](
+https://arxiv.org/abs/2505.04961
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_19-13.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### PlaceIt3D: Language-Guided Object Placement in Real 3D Scenes
+
+- **Authors**: Ahmed Abdelreheem, Filippo Aleotti, Jamie Watson, Zawar Qureshi, Abdelrahman Eldesokey, Peter Wonka, Gabriel Brostow, Sara Vicente, Guillermo Garcia-Hernando
+
+#### Abstract
+
+We introduce the novel task of Language-Guided Object Placement in Real 3D
+Scenes. Our model is given a 3D scene's point cloud, a 3D asset, and a textual
+prompt broadly describing where the 3D asset should be placed. The task here is
+to find a valid placement for the 3D asset that respects the prompt. Compared
+with other language-guided localization tasks in 3D scenes such as grounding,
+this task has specific challenges: it is ambiguous because it has multiple
+valid solutions, and it requires reasoning about 3D geometric relationships and
+free space. We inaugurate this task by proposing a new benchmark and evaluation
+protocol. We also introduce a new dataset for training 3D LLMs on this task, as
+well as the first method to serve as a non-trivial baseline. We believe that
+this challenging task and our new benchmark could become part of the suite of
+benchmarks used to evaluate and compare generalist 3D LLM models.
+
+[Paper Link](
+https://arxiv.org/abs/2505.05288
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_19-12.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Steerable Scene Generation with Post Training and Inference-Time Search
+
+- **Authors**: Nicholas Pfaff, Hongkai Dai, Sergey Zakharov, Shun Iwase, Russ Tedrake
+
+#### Abstract
+
+Training robots in simulation requires diverse 3D scenes that reflect the
+specific challenges of downstream tasks. However, scenes that satisfy strict
+task requirements, such as high-clutter environments with plausible spatial
+arrangement, are rare and costly to curate manually. Instead, we generate
+large-scale scene data using procedural models that approximate realistic
+environments for robotic manipulation, and adapt it to task-specific goals. We
+do this by training a unified diffusion-based generative model that predicts
+which objects to place from a fixed asset library, along with their SE(3)
+poses. This model serves as a flexible scene prior that can be adapted using
+reinforcement learning-based post training, conditional generation, or
+inference-time search, steering generation toward downstream objectives even
+when they differ from the original data distribution. Our method enables
+goal-directed scene synthesis that respects physical feasibility and scales
+across scene types. We introduce a novel MCTS-based inference-time search
+strategy for diffusion models, enforce feasibility via projection and
+simulation, and release a dataset of over 44 million SE(3) scenes spanning five
+diverse environments. Website with videos, code, data, and model weights:
+https://steerable-scene-generation.github.io/
+
+[Website Link](https://steerable-scene-generation.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2505.04831
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_19-11.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robust Model-Based In-Hand Manipulation with Integrated Real-Time Motion-Contact Planning and Tracking
+
+- **Authors**: Yongpeng Jiang, Mingrui Yu, Xinghao Zhu, Masayoshi Tomizuka, Xiang Li
+
+#### Abstract
+
+Robotic dexterous in-hand manipulation, where multiple fingers dynamically
+make and break contact, represents a step toward human-like dexterity in
+real-world robotic applications. Unlike learning-based approaches that rely on
+large-scale training or extensive data collection for each specific task,
+model-based methods offer an efficient alternative. Their online computing
+nature allows for ready application to new tasks without extensive retraining.
+However, due to the complexity of physical contacts, existing model-based
+methods encounter challenges in efficient online planning and handling modeling
+errors, which limit their practical applications. To advance the effectiveness
+and robustness of model-based contact-rich in-hand manipulation, this paper
+proposes a novel integrated framework that mitigates these limitations. The
+integration involves two key aspects: 1) integrated real-time planning and
+tracking achieved by a hierarchical structure; and 2) joint optimization of
+motions and contacts achieved by integrated motion-contact modeling.
+Specifically, at the high level, finger motion and contact force references are
+jointly generated using contact-implicit model predictive control. The
+high-level module facilitates real-time planning and disturbance recovery. At
+the low level, these integrated references are concurrently tracked using a
+hand force-motion model and actual tactile feedback. The low-level module
+compensates for modeling errors and enhances the robustness of manipulation.
+Extensive experiments demonstrate that our approach outperforms existing
+model-based methods in terms of accuracy, robustness, and real-time
+performance. Our method successfully completes five challenging tasks in
+real-world environments, even under appreciable external disturbances.
+
+[Paper Link](
+https://arxiv.org/abs/2505.04978
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_19-10.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Morphologically Symmetric Reinforcement Learning for Ambidextrous Bimanual Manipulation
+
+- **Authors**: Zechu Li, Yufeng Jin, Daniel Ordonez Apraez, Claudio Semini, Puze Liu, Georgia Chalvatzaki
+
+#### Abstract
+
+Humans naturally exhibit bilateral symmetry in their gross manipulation
+skills, effortlessly mirroring simple actions between left and right hands.
+Bimanual robots-which also feature bilateral symmetry-should similarly exploit
+this property to perform tasks with either hand. Unlike humans, who often favor
+a dominant hand for fine dexterous skills, robots should ideally execute
+ambidextrous manipulation with equal proficiency. To this end, we introduce
+SYMDEX (SYMmetric DEXterity), a reinforcement learning framework for
+ambidextrous bi-manipulation that leverages the robot's inherent bilateral
+symmetry as an inductive bias. SYMDEX decomposes complex bimanual manipulation
+tasks into per-hand subtasks and trains dedicated policies for each. By
+exploiting bilateral symmetry via equivariant neural networks, experience from
+one arm is inherently leveraged by the opposite arm. We then distill the
+subtask policies into a global ambidextrous policy that is independent of the
+hand-task assignment. We evaluate SYMDEX on six challenging simulated
+manipulation tasks and demonstrate successful real-world deployment on two of
+them. Our approach strongly outperforms baselines on complex task in which the
+left and right hands perform different roles. We further demonstrate SYMDEX's
+scalability by extending it to a four-arm manipulation setup, where our
+symmetry-aware policies enable effective multi-arm collaboration and
+coordination. Our results highlight how structural symmetry as inductive bias
+in policy learning enhances sample efficiency, robustness, and generalization
+across diverse dexterous manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2505.05287
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_19-08.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GraspVLA: a Grasping Foundation Model Pre-trained on Billion-scale Synthetic Action Data
+
+- **Authors**: Shengliang Deng, Mi Yan, Songlin Wei, Haixin Ma, Yuxin Yang, Jiayi Chen, Zhiqi Zhang, Taoyu Yang, Xuheng Zhang, Heming Cui, Zhizheng Zhang, He Wang
+
+#### Abstract
+
+Embodied foundation models are gaining increasing attention for their
+zero-shot generalization, scalability, and adaptability to new tasks through
+few-shot post-training. However, existing models rely heavily on real-world
+data, which is costly and labor-intensive to collect. Synthetic data offers a
+cost-effective alternative, yet its potential remains largely underexplored. To
+bridge this gap, we explore the feasibility of training Vision-Language-Action
+models entirely with large-scale synthetic action data. We curate SynGrasp-1B,
+a billion-frame robotic grasping dataset generated in simulation with
+photorealistic rendering and extensive domain randomization. Building on this,
+we present GraspVLA, a VLA model pretrained on large-scale synthetic action
+data as a foundational model for grasping tasks. GraspVLA integrates
+autoregressive perception tasks and flow-matching-based action generation into
+a unified Chain-of-Thought process, enabling joint training on synthetic action
+data and Internet semantics data. This design helps mitigate sim-to-real gaps
+and facilitates the transfer of learned actions to a broader range of
+Internet-covered objects, achieving open-vocabulary generalization in grasping.
+Extensive evaluations across real-world and simulation benchmarks demonstrate
+GraspVLA's advanced zero-shot generalizability and few-shot adaptability to
+specific human preferences. We will release SynGrasp-1B dataset and pre-trained
+weights to benefit the community.
+
+[Paper Link](
+https://arxiv.org/abs/2505.03233
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_19-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboOS: A Hierarchical Embodied Framework for Cross-Embodiment and Multi-Agent Collaboration
+
+- **Authors**: Huajie Tan, Xiaoshuai Hao, Minglan Lin, Pengwei Wang, Yaoxu Lyu, Mingyu Cao, Zhongyuan Wang, Shanghang Zhang
+
+#### Abstract
+
+The dawn of embodied intelligence has ushered in an unprecedented imperative
+for resilient, cognition-enabled multi-agent collaboration across
+next-generation ecosystems, revolutionizing paradigms in autonomous
+manufacturing, adaptive service robotics, and cyber-physical production
+architectures. However, current robotic systems face significant limitations,
+such as limited cross-embodiment adaptability, inefficient task scheduling, and
+insufficient dynamic error correction. While End-to-end VLA models demonstrate
+inadequate long-horizon planning and task generalization, hierarchical VLA
+models suffer from a lack of cross-embodiment and multi-agent coordination
+capabilities. To address these challenges, we introduce RoboOS, the first
+open-source embodied system built on a Brain-Cerebellum hierarchical
+architecture, enabling a paradigm shift from single-agent to multi-agent
+intelligence. Specifically, RoboOS consists of three key components: (1)
+Embodied Brain Model (RoboBrain), a MLLM designed for global perception and
+high-level decision-making; (2) Cerebellum Skill Library, a modular,
+plug-and-play toolkit that facilitates seamless execution of multiple skills;
+and (3) Real-Time Shared Memory, a spatiotemporal synchronization mechanism for
+coordinating multi-agent states. By integrating hierarchical information flow,
+RoboOS bridges Embodied Brain and Cerebellum Skill Library, facilitating robust
+planning, scheduling, and error correction for long-horizon tasks, while
+ensuring efficient multi-agent collaboration through Real-Time Shared Memory.
+Furthermore, we enhance edge-cloud communication and cloud-based distributed
+inference to facilitate high-frequency interactions and enable scalable
+deployment. Extensive real-world experiments across various scenarios,
+demonstrate RoboOS's versatility in supporting heterogeneous embodiments.
+Project website: https://github.com/FlagOpen/RoboOS
+
+[Website Link](https://github.com/FlagOpen/RoboOS)
+
+[Paper Link](
+https://arxiv.org/abs/2505.03673
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_18-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Demonstrating ViSafe: Vision-enabled Safety for High-speed Detect and Avoid
+
+- **Authors**: Parv Kapoor, Ian Higgins, Nikhil Keetha, Jay Patrikar, Brady Moon, Zelin Ye, Yao He, Ivan Cisneros, Yaoyu Hu, Changliu Liu, Eunsuk Kang, Sebastian Scherer
+
+#### Abstract
+
+Assured safe-separation is essential for achieving seamless high-density
+operation of airborne vehicles in a shared airspace. To equip
+resource-constrained aerial systems with this safety-critical capability, we
+present ViSafe, a high-speed vision-only airborne collision avoidance system.
+ViSafe offers a full-stack solution to the Detect and Avoid (DAA) problem by
+tightly integrating a learning-based edge-AI framework with a custom
+multi-camera hardware prototype designed under SWaP-C constraints. By
+leveraging perceptual input-focused control barrier functions (CBF) to design,
+encode, and enforce safety thresholds, ViSafe can provide provably safe runtime
+guarantees for self-separation in high-speed aerial operations. We evaluate
+ViSafe's performance through an extensive test campaign involving both
+simulated digital twins and real-world flight scenarios. By independently
+varying agent types, closure rates, interaction geometries, and environmental
+conditions (e.g., weather and lighting), we demonstrate that ViSafe
+consistently ensures self-separation across diverse scenarios. In
+first-of-its-kind real-world high-speed collision avoidance tests with closure
+rates reaching 144 km/h, ViSafe sets a new benchmark for vision-only autonomous
+collision avoidance, establishing a new standard for safety in high-speed
+aerial navigation.
+
+[Paper Link](
+https://arxiv.org/abs/2505.03694
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_18-50.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### PyRoki: A Modular Toolkit for Robot Kinematic Optimization
+
+- **Authors**: Chung Min Kim, Brent Yi, Hongsuk Choi, Yi Ma, Ken Goldberg, Angjoo Kanazawa
+
+#### Abstract
+
+Robot motion can have many goals. Depending on the task, we might optimize
+for pose error, speed, collision, or similarity to a human demonstration.
+Motivated by this, we present PyRoki: a modular, extensible, and cross-platform
+toolkit for solving kinematic optimization problems. PyRoki couples an
+interface for specifying kinematic variables and costs with an efficient
+nonlinear least squares optimizer. Unlike existing tools, it is also
+cross-platform: optimization runs natively on CPU, GPU, and TPU. In this paper,
+we present (i) the design and implementation of PyRoki, (ii) motion retargeting
+and planning case studies that highlight the advantages of PyRoki's modularity,
+and (iii) optimization benchmarking, where PyRoki can be 1.4-1.7x faster and
+converges to lower errors than cuRobo, an existing GPU-accelerated inverse
+kinematics library.
+
+[Paper Link](
+https://arxiv.org/abs/2505.03728
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_18-41.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Visual Imitation Enables Contextual Humanoid Control
+
+- **Authors**: Arthur Allshire, Hongsuk Choi, Junyi Zhang, David McAllister, Anthony Zhang, Chung Min Kim, Trevor Darrell, Pieter Abbeel, Jitendra Malik, Angjoo Kanazawa
+
+#### Abstract
+
+How can we teach humanoids to climb staircases and sit on chairs using the
+surrounding environment context? Arguably, the simplest way is to just show
+them-casually capture a human motion video and feed it to humanoids. We
+introduce VIDEOMIMIC, a real-to-sim-to-real pipeline that mines everyday
+videos, jointly reconstructs the humans and the environment, and produces
+whole-body control policies for humanoid robots that perform the corresponding
+skills. We demonstrate the results of our pipeline on real humanoid robots,
+showing robust, repeatable contextual control such as staircase ascents and
+descents, sitting and standing from chairs and benches, as well as other
+dynamic whole-body skills-all from a single policy, conditioned on the
+environment and global root commands. VIDEOMIMIC offers a scalable path towards
+teaching humanoids to operate in diverse real-world environments.
+
+[Paper Link](
+https://arxiv.org/abs/2505.03729
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_18-39.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control
+
+- **Authors**: Jialong Li, Xuxin Cheng, Tianshu Huang, Shiqi Yang, Ri-Zhao Qiu, Xiaolong Wang
+
+#### Abstract
+
+Humanoid robots derive much of their dexterity from hyper-dexterous
+whole-body movements, enabling tasks that require a large operational
+workspace: such as picking objects off the ground. However, achieving these
+capabilities on real humanoids remains challenging due to their high degrees of
+freedom (DoF) and nonlinear dynamics. We propose Adaptive Motion Optimization
+(AMO), a framework that integrates sim-to-real reinforcement learning (RL) with
+trajectory optimization for real-time, adaptive whole-body control. To mitigate
+distribution bias in motion imitation RL, we construct a hybrid AMO dataset and
+train a network capable of robust, on-demand adaptation to potentially O.O.D.
+commands. We validate AMO in simulation and on a 29-DoF Unitree G1 humanoid
+robot, demonstrating superior stability and an expanded workspace compared to
+strong baselines. Finally, we show that AMO's consistent performance supports
+autonomous task execution via imitation learning, underscoring the system's
+versatility and robustness.
+
+[Paper Link](
+https://arxiv.org/abs/2505.03738
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-20_18-27.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-05-06
 
 
 ### MetaScenes: Towards Automated Replica Creation for Real-world 3D Scans
