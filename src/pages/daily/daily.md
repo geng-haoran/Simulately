@@ -1,3 +1,503 @@
+## 2025-05-19
+
+
+### Grasp EveryThing (GET): 1-DoF, 3-Fingered Gripper with Tactile Sensing for Robust Grasping
+
+- **Authors**: Michael Burgess, Edward H. Adelson
+
+#### Abstract
+
+We introduce the Grasp EveryThing (GET) gripper, a novel 1-DoF, 3-finger
+design for securely grasping objects of many shapes and sizes. Mounted on a
+standard parallel jaw actuator, the design features three narrow, tapered
+fingers arranged in a two-against-one configuration, where the two fingers
+converge into a V-shape. The GET gripper is more capable of conforming to
+object geometries and forming secure grasps than traditional designs with two
+flat fingers. Inspired by the principle of self-similarity, these V-shaped
+fingers enable secure grasping across a wide range of object sizes. Further to
+this end, fingers are parametrically designed for convenient resizing and
+interchangeability across robotic embodiments with a parallel jaw gripper.
+Additionally, we incorporate a rigid fingernail to enhance small object
+manipulation. Tactile sensing can be integrated into the standalone finger via
+an externally-mounted camera. A neural network was trained to estimate normal
+force from tactile images with an average validation error of 1.3~N across a
+diverse set of geometries. In grasping 15 objects and performing 3 tasks via
+teleoperation, the GET fingers consistently outperformed standard flat fingers.
+Finger designs for use with multiple robotic embodiments are available on
+GitHub.
+
+[Paper Link](
+https://arxiv.org/abs/2505.09771
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-29.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation
+
+- **Authors**: Jun Guo, Xiaojian Ma, Yikai Wang, Min Yang, Huaping Liu, Qing Li
+
+#### Abstract
+
+This paper investigates training better visual world models for robot
+manipulation, i.e., models that can predict future visual observations by
+conditioning on past frames and robot actions. Specifically, we consider world
+models that operate on RGB-D frames (RGB-D world models). As opposed to
+canonical approaches that handle dynamics prediction mostly implicitly and
+reconcile it with visual rendering in a single model, we introduce FlowDreamer,
+which adopts 3D scene flow as explicit motion representations. FlowDreamer
+first predicts 3D scene flow from past frame and action conditions with a
+U-Net, and then a diffusion model will predict the future frame utilizing the
+scene flow. FlowDreamer is trained end-to-end despite its modularized nature.
+We conduct experiments on 4 different benchmarks, covering both video
+prediction and visual planning tasks. The results demonstrate that FlowDreamer
+achieves better performance compared to other baseline RGB-D world models by 7%
+on semantic similarity, 11% on pixel quality, and 6% on success rate in various
+robot manipulation domains.
+
+[Paper Link](
+https://arxiv.org/abs/2505.10075
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Real-Time Out-of-Distribution Failure Prevention via Multi-Modal Reasoning
+
+- **Authors**: Milan Ganai, Rohan Sinha, Christopher Agia, Daniel Morton, Marco Pavone
+
+#### Abstract
+
+Foundation models can provide robust high-level reasoning on appropriate
+safety interventions in hazardous scenarios beyond a robot's training data,
+i.e. out-of-distribution (OOD) failures. However, due to the high inference
+latency of Large Vision and Language Models, current methods rely on manually
+defined intervention policies to enact fallbacks, thereby lacking the ability
+to plan generalizable, semantically safe motions. To overcome these challenges
+we present FORTRESS, a framework that generates and reasons about semantically
+safe fallback strategies in real time to prevent OOD failures. At a low
+frequency in nominal operations, FORTRESS uses multi-modal reasoners to
+identify goals and anticipate failure modes. When a runtime monitor triggers a
+fallback response, FORTRESS rapidly synthesizes plans to fallback goals while
+inferring and avoiding semantically unsafe regions in real time. By bridging
+open-world, multi-modal reasoning with dynamics-aware planning, we eliminate
+the need for hard-coded fallbacks and human safety interventions. FORTRESS
+outperforms on-the-fly prompting of slow reasoning models in safety
+classification accuracy on synthetic benchmarks and real-world ANYmal robot
+data, and further improves system safety and planning success in simulation and
+on quadrotor hardware for urban navigation.
+
+[Paper Link](
+https://arxiv.org/abs/2505.10547
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-27.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### VTLA: Vision-Tactile-Language-Action Model with Preference Learning for Insertion Manipulation
+
+- **Authors**: Chaofan Zhang, Peng Hao, Xiaoge Cao, Xiaoshuai Hao, Shaowei Cui, Shuo Wang
+
+#### Abstract
+
+While vision-language models have advanced significantly, their application
+in language-conditioned robotic manipulation is still underexplored, especially
+for contact-rich tasks that extend beyond visually dominant pick-and-place
+scenarios. To bridge this gap, we introduce Vision-Tactile-Language-Action
+model, a novel framework that enables robust policy generation in
+contact-intensive scenarios by effectively integrating visual and tactile
+inputs through cross-modal language grounding. A low-cost, multi-modal dataset
+has been constructed in a simulation environment, containing
+vision-tactile-action-instruction pairs specifically designed for the fingertip
+insertion task. Furthermore, we introduce Direct Preference Optimization (DPO)
+to offer regression-like supervision for the VTLA model, effectively bridging
+the gap between classification-based next token prediction loss and continuous
+robotic tasks. Experimental results show that the VTLA model outperforms
+traditional imitation learning methods (e.g., diffusion policies) and existing
+multi-modal baselines (TLA/VLA), achieving over 90% success rates on unseen peg
+shapes. Finally, we conduct real-world peg-in-hole experiments to demonstrate
+the exceptional Sim2Real performance of the proposed VTLA model. For
+supplementary videos and results, please visit our project website:
+https://sites.google.com/view/vtla
+
+[Website Link](https://sites.google.com/view/vtla)
+
+[Paper Link](
+https://arxiv.org/abs/2505.09577
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-24_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Real2Render2Real: Scaling Robot Data Without Dynamics Simulation or Robot Hardware
+
+- **Authors**: Justin Yu, Letian Fu, Huang Huang, Karim El-Refai, Rares Andrei Ambrus, Richard Cheng, Muhammad Zubair Irshad, Ken Goldberg
+
+#### Abstract
+
+Scaling robot learning requires vast and diverse datasets. Yet the prevailing
+data collection paradigm-human teleoperation-remains costly and constrained by
+manual effort and physical robot access. We introduce Real2Render2Real (R2R2R),
+a novel approach for generating robot training data without relying on object
+dynamics simulation or teleoperation of robot hardware. The input is a
+smartphone-captured scan of one or more objects and a single video of a human
+demonstration. R2R2R renders thousands of high visual fidelity robot-agnostic
+demonstrations by reconstructing detailed 3D object geometry and appearance,
+and tracking 6-DoF object motion. R2R2R uses 3D Gaussian Splatting (3DGS) to
+enable flexible asset generation and trajectory synthesis for both rigid and
+articulated objects, converting these representations to meshes to maintain
+compatibility with scalable rendering engines like IsaacLab but with collision
+modeling off. Robot demonstration data generated by R2R2R integrates directly
+with models that operate on robot proprioceptive states and image observations,
+such as vision-language-action models (VLA) and imitation learning policies.
+Physical experiments suggest that models trained on R2R2R data from a single
+human demonstration can match the performance of models trained on 150 human
+teleoperation demonstrations. Project page: https://real2render2real.com
+
+[Website Link](https://real2render2real.com)
+
+[Paper Link](
+https://arxiv.org/abs/2505.09601
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-24.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### What Matters for Batch Online Reinforcement Learning in Robotics?
+
+- **Authors**: Perry Dong, Suvir Mirchandani, Dorsa Sadigh, Chelsea Finn
+
+#### Abstract
+
+The ability to learn from large batches of autonomously collected data for
+policy improvement -- a paradigm we refer to as batch online reinforcement
+learning -- holds the promise of enabling truly scalable robot learning by
+significantly reducing the need for human effort of data collection while
+getting benefits from self-improvement. Yet, despite the promise of this
+paradigm, it remains challenging to achieve due to algorithms not being able to
+learn effectively from the autonomous data. For example, prior works have
+applied imitation learning and filtered imitation learning methods to the batch
+online RL problem, but these algorithms often fail to efficiently improve from
+the autonomously collected data or converge quickly to a suboptimal point. This
+raises the question of what matters for effective batch online RL in robotics.
+Motivated by this question, we perform a systematic empirical study of three
+axes -- (i) algorithm class, (ii) policy extraction methods, and (iii) policy
+expressivity -- and analyze how these axes affect performance and scaling with
+the amount of autonomous data. Through our analysis, we make several
+observations. First, we observe that the use of Q-functions to guide batch
+online RL significantly improves performance over imitation-based methods.
+Building on this, we show that an implicit method of policy extraction -- via
+choosing the best action in the distribution of the policy -- is necessary over
+traditional policy extraction methods from offline RL. Next, we show that an
+expressive policy class is preferred over less expressive policy classes. Based
+on this analysis, we propose a general recipe for effective batch online RL. We
+then show a simple addition to the recipe of using temporally-correlated noise
+to obtain more diversity results in further performance gains. Our recipe
+obtains significantly better performance and scaling compared to prior methods.
+
+[Paper Link](
+https://arxiv.org/abs/2505.08078
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-23.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance
+
+- **Authors**: Wenzhe Cai, Jiaqi Peng, Yuqiang Yang, Yujian Zhang, Meng Wei, Hanqing Wang, Yilun Chen, Tai Wang, Jiangmiao Pang
+
+#### Abstract
+
+Learning navigation in dynamic open-world environments is an important yet
+challenging skill for robots. Most previous methods rely on precise
+localization and mapping or learn from expensive real-world demonstrations. In
+this paper, we propose the Navigation Diffusion Policy (NavDP), an end-to-end
+framework trained solely in simulation and can zero-shot transfer to different
+embodiments in diverse real-world environments. The key ingredient of NavDP's
+network is the combination of diffusion-based trajectory generation and a
+critic function for trajectory selection, which are conditioned on only local
+observation tokens encoded from a shared policy transformer. Given the
+privileged information of the global environment in simulation, we scale up the
+demonstrations of good quality to train the diffusion policy and formulate the
+critic value function targets with contrastive negative samples. Our
+demonstration generation approach achieves about 2,500 trajectories/GPU per
+day, 20$\times$ more efficient than real-world data collection, and results in
+a large-scale navigation dataset with 363.2km trajectories across 1244 scenes.
+Trained with this simulation dataset, NavDP achieves state-of-the-art
+performance and consistently outstanding generalization capability on
+quadruped, wheeled, and humanoid robots in diverse indoor and outdoor
+environments. In addition, we present a preliminary attempt at using Gaussian
+Splatting to make in-domain real-to-sim fine-tuning to further bridge the
+sim-to-real gap. Experiments show that adding such real-to-sim data can improve
+the success rate by 30\% without hurting its generalization capability.
+
+[Paper Link](
+https://arxiv.org/abs/2505.08712
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-20.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies
+
+- **Authors**: Tony Tao, Mohan Kumar Srirama, Jason Jingzhou Liu, Kenneth Shaw, Deepak Pathak
+
+#### Abstract
+
+Large-scale, diverse robot datasets have emerged as a promising path toward
+enabling dexterous manipulation policies to generalize to novel environments,
+but acquiring such datasets presents many challenges. While teleoperation
+provides high-fidelity datasets, its high cost limits its scalability. Instead,
+what if people could use their own hands, just as they do in everyday life, to
+collect data? In DexWild, a diverse team of data collectors uses their hands to
+collect hours of interactions across a multitude of environments and objects.
+To record this data, we create DexWild-System, a low-cost, mobile, and
+easy-to-use device. The DexWild learning framework co-trains on both human and
+robot demonstrations, leading to improved performance compared to training on
+each dataset individually. This combination results in robust robot policies
+capable of generalizing to novel environments, tasks, and embodiments with
+minimal additional robot-specific data. Experimental results demonstrate that
+DexWild significantly improves performance, achieving a 68.5% success rate in
+unseen environments-nearly four times higher than policies trained with robot
+data only-and offering 5.8x better cross-embodiment generalization. Video
+results, codebases, and instructions at https://dexwild.github.io
+
+[Website Link](https://dexwild.github.io)
+
+[Paper Link](
+https://arxiv.org/abs/2505.07813
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### H$^{\mathbf{3}}$DP: Triply-Hierarchical Diffusion Policy for Visuomotor Learning
+
+- **Authors**: Yiyang Lu, Yufeng Tian, Zhecheng Yuan, Xianbang Wang, Pu Hua, Zhengrong Xue, Huazhe Xu
+
+#### Abstract
+
+Visuomotor policy learning has witnessed substantial progress in robotic
+manipulation, with recent approaches predominantly relying on generative models
+to model the action distribution. However, these methods often overlook the
+critical coupling between visual perception and action prediction. In this
+work, we introduce $\textbf{Triply-Hierarchical Diffusion
+Policy}~(\textbf{H$^{\mathbf{3}}$DP})$, a novel visuomotor learning framework
+that explicitly incorporates hierarchical structures to strengthen the
+integration between visual features and action generation. H$^{3}$DP contains
+$\mathbf{3}$ levels of hierarchy: (1) depth-aware input layering that organizes
+RGB-D observations based on depth information; (2) multi-scale visual
+representations that encode semantic features at varying levels of granularity;
+and (3) a hierarchically conditioned diffusion process that aligns the
+generation of coarse-to-fine actions with corresponding visual features.
+Extensive experiments demonstrate that H$^{3}$DP yields a $\mathbf{+27.5\%}$
+average relative improvement over baselines across $\mathbf{44}$ simulation
+tasks and achieves superior performance in $\mathbf{4}$ challenging bimanual
+real-world manipulation tasks. Project Page: https://lyy-iiis.github.io/h3dp/.
+
+[Website Link](https://lyy-iiis.github.io/h3dp/.)
+
+[Paper Link](
+https://arxiv.org/abs/2505.07819
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-17.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Web2Grasp: Learning Functional Grasps from Web Images of Hand-Object Interactions
+
+- **Authors**: Hongyi Chen, Yunchao Yao, Yufei Ye, Zhixuan Xu, Homanga Bharadhwaj, Jiashun Wang, Shubham Tulsiani, Zackory Erickson, Jeffrey Ichnowski
+
+#### Abstract
+
+Functional grasp is essential for enabling dexterous multi-finger robot hands
+to manipulate objects effectively. However, most prior work either focuses on
+power grasping, which simply involves holding an object still, or relies on
+costly teleoperated robot demonstrations to teach robots how to grasp each
+object functionally. Instead, we propose extracting human grasp information
+from web images since they depict natural and functional object interactions,
+thereby bypassing the need for curated demonstrations. We reconstruct human
+hand-object interaction (HOI) 3D meshes from RGB images, retarget the human
+hand to multi-finger robot hands, and align the noisy object mesh with its
+accurate 3D shape. We show that these relatively low-quality HOI data from
+inexpensive web sources can effectively train a functional grasping model. To
+further expand the grasp dataset for seen and unseen objects, we use the
+initially-trained grasping policy with web data in the IsaacGym simulator to
+generate physically feasible grasps while preserving functionality. We train
+the grasping model on 10 object categories and evaluate it on 9 unseen objects,
+including challenging items such as syringes, pens, spray bottles, and tongs,
+which are underrepresented in existing datasets. The model trained on the web
+HOI dataset, achieving a 75.8% success rate on seen objects and 61.8% across
+all objects in simulation, with a 6.7% improvement in success rate and a 1.8x
+increase in functionality ratings over baselines. Simulator-augmented data
+further boosts performance from 61.8% to 83.4%. The sim-to-real transfer to the
+LEAP Hand achieves a 85% success rate. Project website is at:
+https://web2grasp.github.io/.
+
+[Website Link](https://web2grasp.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2505.05517
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-15_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Occupancy World Model for Robots
+
+- **Authors**: Zhang Zhang, Qiang Zhang, Wei Cui, Shuai Shi, Yijie Guo, Gang Han, Wen Zhao, Jingkai Sun, Jiahang Cao, Jiaxu Wang, Hao Cheng, Xiaozhu Ju, Zhengping Che, Renjing Xu, Jian Tang
+
+#### Abstract
+
+Understanding and forecasting the scene evolutions deeply affect the
+exploration and decision of embodied agents. While traditional methods simulate
+scene evolutions through trajectory prediction of potential instances, current
+works use the occupancy world model as a generative framework for describing
+fine-grained overall scene dynamics. However, existing methods cluster on the
+outdoor structured road scenes, while ignoring the exploration of forecasting
+3D occupancy scene evolutions for robots in indoor scenes. In this work, we
+explore a new framework for learning the scene evolutions of observed
+fine-grained occupancy and propose an occupancy world model based on the
+combined spatio-temporal receptive field and guided autoregressive transformer
+to forecast the scene evolutions, called RoboOccWorld. We propose the
+Conditional Causal State Attention (CCSA), which utilizes camera poses of next
+state as conditions to guide the autoregressive transformer to adapt and
+understand the indoor robotics scenarios. In order to effectively exploit the
+spatio-temporal cues from historical observations, Hybrid Spatio-Temporal
+Aggregation (HSTA) is proposed to obtain the combined spatio-temporal receptive
+field based on multi-scale spatio-temporal windows. In addition, we restructure
+the OccWorld-ScanNet benchmark based on local annotations to facilitate the
+evaluation of the indoor 3D occupancy scene evolution prediction task.
+Experimental results demonstrate that our RoboOccWorld outperforms
+state-of-the-art methods in indoor 3D occupancy scene evolution prediction
+task. The code will be released soon.
+
+[Paper Link](
+https://arxiv.org/abs/2505.05512
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_22-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### UniVLA: Learning to Act Anywhere with Task-centric Latent Actions
+
+- **Authors**: Qingwen Bu, Yanting Yang, Jisong Cai, Shenyuan Gao, Guanghui Ren, Maoqing Yao, Ping Luo, Hongyang Li
+
+#### Abstract
+
+A generalist robot should perform effectively across various environments.
+However, most existing approaches heavily rely on scaling action-annotated data
+to enhance their capabilities. Consequently, they are often limited to single
+physical specification and struggle to learn transferable knowledge across
+different embodiments and environments. To confront these limitations, we
+propose UniVLA, a new framework for learning cross-embodiment
+vision-language-action (VLA) policies. Our key innovation is to derive
+task-centric action representations from videos with a latent action model.
+This enables us to exploit extensive data across a wide spectrum of embodiments
+and perspectives. To mitigate the effect of task-irrelevant dynamics, we
+incorporate language instructions and establish a latent action model within
+the DINO feature space. Learned from internet-scale videos, the generalist
+policy can be deployed to various robots through efficient latent action
+decoding. We obtain state-of-the-art results across multiple manipulation and
+navigation benchmarks, as well as real-robot deployments. UniVLA achieves
+superior performance over OpenVLA with less than 1/20 of pretraining compute
+and 1/10 of downstream data. Continuous performance improvements are observed
+as heterogeneous data, even including human videos, are incorporated into the
+training pipeline. The results underscore UniVLA's potential to facilitate
+scalable and efficient robot policy learning.
+
+[Paper Link](
+https://arxiv.org/abs/2505.06111
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_21-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Let Humanoids Hike! Integrative Skill Development on Complex Trails
+
+- **Authors**: Kwan-Yee Lin, Stella X. Yu
+
+#### Abstract
+
+Hiking on complex trails demands balance, agility, and adaptive
+decision-making over unpredictable terrain. Current humanoid research remains
+fragmented and inadequate for hiking: locomotion focuses on motor skills
+without long-term goals or situational awareness, while semantic navigation
+overlooks real-world embodiment and local terrain variability. We propose
+training humanoids to hike on complex trails, driving integrative skill
+development across visual perception, decision making, and motor execution. We
+develop a learning framework, LEGO-H, that enables a vision-equipped humanoid
+robot to hike complex trails autonomously. We introduce two technical
+innovations: 1) A temporal vision transformer variant - tailored into
+Hierarchical Reinforcement Learning framework - anticipates future local goals
+to guide movement, seamlessly integrating locomotion with goal-directed
+navigation. 2) Latent representations of joint movement patterns, combined with
+hierarchical metric learning - enhance Privileged Learning scheme - enable
+smooth policy transfer from privileged training to onboard execution. These
+components allow LEGO-H to handle diverse physical and environmental challenges
+without relying on predefined motion patterns. Experiments across varied
+simulated trails and robot morphologies highlight LEGO-H's versatility and
+robustness, positioning hiking as a compelling testbed for embodied autonomy
+and LEGO-H as a baseline for future humanoid development.
+
+[Paper Link](
+https://arxiv.org/abs/2505.06218
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-22_21-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-05-09
 
 
