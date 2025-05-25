@@ -1,3 +1,484 @@
+## 2025-05-25
+
+
+### EasyInsert: A Data-Efficient and Generalizable Insertion Policy
+
+- **Authors**: Guanghe Li, Junming Zhao, Shengjie Wang, Yang Gao
+
+#### Abstract
+
+Insertion task is highly challenging that requires robots to operate with
+exceptional precision in cluttered environments. Existing methods often have
+poor generalization capabilities. They typically function in restricted and
+structured environments, and frequently fail when the plug and socket are far
+apart, when the scene is densely cluttered, or when handling novel objects.
+They also rely on strong assumptions such as access to CAD models or a digital
+twin in simulation. To address this, we propose EasyInsert, a framework which
+leverages the human intuition that relative pose (delta pose) between plug and
+socket is sufficient for successful insertion, and employs efficient and
+automated real-world data collection with minimal human labor to train a
+generalizable model for relative pose prediction. During execution, EasyInsert
+follows a coarse-to-fine execution procedure based on predicted delta pose, and
+successfully performs various insertion tasks. EasyInsert demonstrates strong
+zero-shot generalization capability for unseen objects in cluttered
+environments, handling cases with significant initial pose deviations while
+maintaining high sample efficiency and requiring little human effort. In
+real-world experiments, with just 5 hours of training data, EasyInsert achieves
+over 90% success in zero-shot insertion for 13 out of 15 unseen novel objects,
+including challenging objects like Type-C cables, HDMI cables, and Ethernet
+cables. Furthermore, with only one human demonstration and 4 minutes of
+automatically collected data for fine-tuning, it reaches over 90% success rate
+for all 15 objects.
+
+[Paper Link](
+https://arxiv.org/abs/2505.16187
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-26_00-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+## 2025-05-25
+
+
+### FLARE: Robot Learning with Implicit World Modeling
+
+- **Authors**: Ruijie Zheng, Jing Wang, Scott Reed, Johan Bjorck, Yu Fang, Fengyuan Hu, Joel Jang, Kaushil Kundalia, Zongyu Lin, Loic Magne, Avnish Narayan, You Liang Tan, Guanzhi Wang, Qi Wang, Jiannan Xiang, Yinzhen Xu, Seonghyeon Ye, Jan Kautz, Furong Huang, Yuke Zhu, Linxi Fan
+
+#### Abstract
+
+We introduce $\textbf{F}$uture $\textbf{LA}$tent $\textbf{RE}$presentation
+Alignment ($\textbf{FLARE}$), a novel framework that integrates predictive
+latent world modeling into robot policy learning. By aligning features from a
+diffusion transformer with latent embeddings of future observations,
+$\textbf{FLARE}$ enables a diffusion transformer policy to anticipate latent
+representations of future observations, allowing it to reason about long-term
+consequences while generating actions. Remarkably lightweight, $\textbf{FLARE}$
+requires only minimal architectural modifications -- adding a few tokens to
+standard vision-language-action (VLA) models -- yet delivers substantial
+performance gains. Across two challenging multitask simulation imitation
+learning benchmarks spanning single-arm and humanoid tabletop manipulation,
+$\textbf{FLARE}$ achieves state-of-the-art performance, outperforming prior
+policy learning baselines by up to 26%. Moreover, $\textbf{FLARE}$ unlocks the
+ability to co-train with human egocentric video demonstrations without action
+labels, significantly boosting policy generalization to a novel object with
+unseen geometry with as few as a single robot demonstration. Our results
+establish $\textbf{FLARE}$ as a general and scalable approach for combining
+implicit world modeling with high-frequency robotic control.
+
+[Paper Link](
+https://arxiv.org/abs/2505.15659
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FLARE: Robot Learning with Implicit World Modeling
+
+- **Authors**: Ruijie Zheng, Jing Wang, Scott Reed, Johan Bjorck, Yu Fang, Fengyuan Hu, Joel Jang, Kaushil Kundalia, Zongyu Lin, Loic Magne, Avnish Narayan, You Liang Tan, Guanzhi Wang, Qi Wang, Jiannan Xiang, Yinzhen Xu, Seonghyeon Ye, Jan Kautz, Furong Huang, Yuke Zhu, Linxi Fan
+
+#### Abstract
+
+We introduce $\textbf{F}$uture $\textbf{LA}$tent $\textbf{RE}$presentation
+Alignment ($\textbf{FLARE}$), a novel framework that integrates predictive
+latent world modeling into robot policy learning. By aligning features from a
+diffusion transformer with latent embeddings of future observations,
+$\textbf{FLARE}$ enables a diffusion transformer policy to anticipate latent
+representations of future observations, allowing it to reason about long-term
+consequences while generating actions. Remarkably lightweight, $\textbf{FLARE}$
+requires only minimal architectural modifications -- adding a few tokens to
+standard vision-language-action (VLA) models -- yet delivers substantial
+performance gains. Across two challenging multitask simulation imitation
+learning benchmarks spanning single-arm and humanoid tabletop manipulation,
+$\textbf{FLARE}$ achieves state-of-the-art performance, outperforming prior
+policy learning baselines by up to 26%. Moreover, $\textbf{FLARE}$ unlocks the
+ability to co-train with human egocentric video demonstrations without action
+labels, significantly boosting policy generalization to a novel object with
+unseen geometry with as few as a single robot demonstration. Our results
+establish $\textbf{FLARE}$ as a general and scalable approach for combining
+implicit world modeling with high-frequency robotic control.
+
+[Paper Link](
+https://arxiv.org/abs/2505.15659
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-54.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### LaDi-WM: A Latent Diffusion-based World Model for Predictive Manipulation
+
+- **Authors**: Yuhang Huang, JIazhao Zhang, Shilong Zou, XInwang Liu, Ruizhen Hu, Kai Xu
+
+#### Abstract
+
+Predictive manipulation has recently gained considerable attention in the
+Embodied AI community due to its potential to improve robot policy performance
+by leveraging predicted states. However, generating accurate future visual
+states of robot-object interactions from world models remains a well-known
+challenge, particularly in achieving high-quality pixel-level representations.
+To this end, we propose LaDi-WM, a world model that predicts the latent space
+of future states using diffusion modeling. Specifically, LaDi-WM leverages the
+well-established latent space aligned with pre-trained Visual Foundation Models
+(VFMs), which comprises both geometric features (DINO-based) and semantic
+features (CLIP-based). We find that predicting the evolution of the latent
+space is easier to learn and more generalizable than directly predicting
+pixel-level images. Building on LaDi-WM, we design a diffusion policy that
+iteratively refines output actions by incorporating forecasted states, thereby
+generating more consistent and accurate results. Extensive experiments on both
+synthetic and real-world benchmarks demonstrate that LaDi-WM significantly
+enhances policy performance by 27.9\% on the LIBERO-LONG benchmark and 20\% on
+the real-world scenario. Furthermore, our world model and policies achieve
+impressive generalizability in real-world experiments.
+
+[Paper Link](
+https://arxiv.org/abs/2505.11528
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### H2R: A Human-to-Robot Data Augmentation for Robot Pre-training from Videos
+
+- **Authors**: Guangrun Li, Yaoxu Lyu, Zhuoyang Liu, Chengkai Hou, Yinda Xu, Jieyu Zhang, Shanghang Zhang
+
+#### Abstract
+
+Large-scale pre-training using videos has proven effective for robot
+learning. However, the models pre-trained on such data can be suboptimal for
+robot learning due to the significant visual gap between human hands and those
+of different robots. To remedy this, we propose H2R, a simple data augmentation
+technique that detects human hand keypoints, synthesizes robot motions in
+simulation, and composites rendered robots into egocentric videos. This process
+explicitly bridges the visual gap between human and robot embodiments during
+pre-training. We apply H2R to augment large-scale egocentric human video
+datasets such as Ego4D and SSv2, replacing human hands with simulated robotic
+arms to generate robot-centric training data. Based on this, we construct and
+release a family of 1M-scale datasets covering multiple robot embodiments (UR5
+with gripper/Leaphand, Franka) and data sources (SSv2, Ego4D). To verify the
+effectiveness of the augmentation pipeline, we introduce a CLIP-based
+image-text similarity metric that quantitatively evaluates the semantic
+fidelity of robot-rendered frames to the original human actions. We validate
+H2R across three simulation benchmarks: Robomimic, RLBench and PushT and
+real-world manipulation tasks with a UR5 robot equipped with Gripper and
+Leaphand end-effectors. H2R consistently improves downstream success rates,
+yielding gains of 5.0%-10.2% in simulation and 6.7%-23.3% in real-world tasks
+across various visual encoders and policy learning methods. These results
+indicate that H2R improves the generalization ability of robotic policies by
+mitigating the visual discrepancies between human and robot domains.
+
+[Paper Link](
+https://arxiv.org/abs/2505.11920
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-46.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### OneTwoVLA: A Unified Vision-Language-Action Model with Adaptive Reasoning
+
+- **Authors**: Fanqi Lin, Ruiqian Nai, Yingdong Hu, Jiacheng You, Junming Zhao, Yang Gao
+
+#### Abstract
+
+General-purpose robots capable of performing diverse tasks require
+synergistic reasoning and acting capabilities. However, recent dual-system
+approaches, which separate high-level reasoning from low-level acting, often
+suffer from challenges such as limited mutual understanding of capabilities
+between systems and latency issues. This paper introduces OneTwoVLA, a single
+unified vision-language-action model that can perform both acting (System One)
+and reasoning (System Two). Crucially, OneTwoVLA adaptively switches between
+two modes: explicitly reasoning at critical moments during task execution, and
+generating actions based on the most recent reasoning at other times. To
+further unlock OneTwoVLA's reasoning and generalization capabilities, we design
+a scalable pipeline for synthesizing embodied reasoning-centric vision-language
+data, used for co-training with robot data. We validate OneTwoVLA's
+effectiveness through extensive experiments, highlighting its superior
+performance across four key capabilities: long-horizon task planning, error
+detection and recovery, natural human-robot interaction, and generalizable
+visual grounding, enabling the model to perform long-horizon, highly dexterous
+manipulation tasks such as making hotpot or mixing cocktails.
+
+[Paper Link](
+https://arxiv.org/abs/2505.11917
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Emergent Active Perception and Dexterity of Simulated Humanoids from Visual Reinforcement Learning
+
+- **Authors**: Zhengyi Luo, Chen Tessler, Toru Lin, Ye Yuan, Tairan He, Wenli Xiao, Yunrong Guo, Gal Chechik, Kris Kitani, Linxi Fan, Yuke Zhu
+
+#### Abstract
+
+Human behavior is fundamentally shaped by visual perception -- our ability to
+interact with the world depends on actively gathering relevant information and
+adapting our movements accordingly. Behaviors like searching for objects,
+reaching, and hand-eye coordination naturally emerge from the structure of our
+sensory system. Inspired by these principles, we introduce Perceptive Dexterous
+Control (PDC), a framework for vision-driven dexterous whole-body control with
+simulated humanoids. PDC operates solely on egocentric vision for task
+specification, enabling object search, target placement, and skill selection
+through visual cues, without relying on privileged state information (e.g., 3D
+object positions and geometries). This perception-as-interface paradigm enables
+learning a single policy to perform multiple household tasks, including
+reaching, grasping, placing, and articulated object manipulation. We also show
+that training from scratch with reinforcement learning can produce emergent
+behaviors such as active search. These results demonstrate how vision-driven
+control and complex tasks induce human-like behaviors and can serve as the key
+ingredients in closing the perception-action loop for animation, robotics, and
+embodied AI.
+
+[Paper Link](
+https://arxiv.org/abs/2505.12278
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-42.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DreamGen: Unlocking Generalization in Robot Learning through Neural Trajectories
+
+- **Authors**: Joel Jang, Seonghyeon Ye, Zongyu Lin, Jiannan Xiang, Johan Bjorck, Yu Fang, Fengyuan Hu, Spencer Huang, Kaushil Kundalia, Yen-Chen Lin, Loic Magne, Ajay Mandlekar, Avnish Narayan, You Liang Tan, Guanzhi Wang, Jing Wang, Qi Wang, Yinzhen Xu, Xiaohui Zeng, Kaiyuan Zheng, Ruijie Zheng, Ming-Yu Liu, Luke Zettlemoyer, Dieter Fox, Jan Kautz, Scott Reed, Yuke Zhu, Linxi Fan
+
+#### Abstract
+
+We introduce DreamGen, a simple yet highly effective 4-stage pipeline for
+training robot policies that generalize across behaviors and environments
+through neural trajectories - synthetic robot data generated from video world
+models. DreamGen leverages state-of-the-art image-to-video generative models,
+adapting them to the target robot embodiment to produce photorealistic
+synthetic videos of familiar or novel tasks in diverse environments. Since
+these models generate only videos, we recover pseudo-action sequences using
+either a latent action model or an inverse-dynamics model (IDM). Despite its
+simplicity, DreamGen unlocks strong behavior and environment generalization: a
+humanoid robot can perform 22 new behaviors in both seen and unseen
+environments, while requiring teleoperation data from only a single
+pick-and-place task in one environment. To evaluate the pipeline
+systematically, we introduce DreamGen Bench, a video generation benchmark that
+shows a strong correlation between benchmark performance and downstream policy
+success. Our work establishes a promising new axis for scaling robot learning
+well beyond manual data collection.
+
+[Paper Link](
+https://arxiv.org/abs/2505.12705
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### TeleOpBench: A Simulator-Centric Benchmark for Dual-Arm Dexterous Teleoperation
+
+- **Authors**: Hangyu Li, Qin Zhao, Haoran Xu, Xinyu Jiang, Qingwei Ben, Feiyu Jia, Haoyu Zhao, Liang Xu, Jia Zeng, Hanqing Wang, Bo Dai, Junting Dong, Jiangmiao Pang
+
+#### Abstract
+
+Teleoperation is a cornerstone of embodied-robot learning, and bimanual
+dexterous teleoperation in particular provides rich demonstrations that are
+difficult to obtain with fully autonomous systems. While recent studies have
+proposed diverse hardware pipelines-ranging from inertial motion-capture gloves
+to exoskeletons and vision-based interfaces-there is still no unified benchmark
+that enables fair, reproducible comparison of these systems. In this paper, we
+introduce TeleOpBench, a simulator-centric benchmark tailored to bimanual
+dexterous teleoperation. TeleOpBench contains 30 high-fidelity task
+environments that span pick-and-place, tool use, and collaborative
+manipulation, covering a broad spectrum of kinematic and force-interaction
+difficulty. Within this benchmark we implement four representative
+teleoperation modalities-(i) MoCap, (ii) VR device, (iii) arm-hand
+exoskeletons, and (iv) monocular vision tracking-and evaluate them with a
+common protocol and metric suite. To validate that performance in simulation is
+predictive of real-world behavior, we conduct mirrored experiments on a
+physical dual-arm platform equipped with two 6-DoF dexterous hands. Across 10
+held-out tasks we observe a strong correlation between simulator and hardware
+performance, confirming the external validity of TeleOpBench. TeleOpBench
+establishes a common yardstick for teleoperation research and provides an
+extensible platform for future algorithmic and hardware innovation.
+
+[Paper Link](
+https://arxiv.org/abs/2505.12748
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GraspMolmo: Generalizable Task-Oriented Grasping via Large-Scale Synthetic Data Generation
+
+- **Authors**: Abhay Deshpande, Yuquan Deng, Arijit Ray, Jordi Salvador, Winson Han, Jiafei Duan, Kuo-Hao Zeng, Yuke Zhu, Ranjay Krishna, Rose Hendrix
+
+#### Abstract
+
+We present GrasMolmo, a generalizable open-vocabulary task-oriented grasping
+(TOG) model. GraspMolmo predicts semantically appropriate, stable grasps
+conditioned on a natural language instruction and a single RGB-D frame. For
+instance, given "pour me some tea", GraspMolmo selects a grasp on a teapot
+handle rather than its body. Unlike prior TOG methods, which are limited by
+small datasets, simplistic language, and uncluttered scenes, GraspMolmo learns
+from PRISM, a novel large-scale synthetic dataset of 379k samples featuring
+cluttered environments and diverse, realistic task descriptions. We fine-tune
+the Molmo visual-language model on this data, enabling GraspMolmo to generalize
+to novel open-vocabulary instructions and objects. In challenging real-world
+evaluations, GraspMolmo achieves state-of-the-art results, with a 70%
+prediction success on complex tasks, compared to the 35% achieved by the next
+best alternative. GraspMolmo also successfully demonstrates the ability to
+predict semantically correct bimanual grasps zero-shot. We release our
+synthetic dataset, code, model, and benchmarks to accelerate research in
+task-semantic robotic manipulation, which, along with videos, are available at
+https://abhaybd.github.io/GraspMolmo/.
+
+[Website Link](https://abhaybd.github.io/GraspMolmo/.)
+
+[Paper Link](
+https://arxiv.org/abs/2505.13441
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-34.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### TartanGround: A Large-Scale Dataset for Ground Robot Perception and Navigation
+
+- **Authors**: Manthan Patel, Fan Yang, Yuheng Qiu, Cesar Cadena, Sebastian Scherer, Marco Hutter, Wenshan Wang
+
+#### Abstract
+
+We present TartanGround, a large-scale, multi-modal dataset to advance the
+perception and autonomy of ground robots operating in diverse environments.
+This dataset, collected in various photorealistic simulation environments
+includes multiple RGB stereo cameras for 360-degree coverage, along with depth,
+optical flow, stereo disparity, LiDAR point clouds, ground truth poses,
+semantic segmented images, and occupancy maps with semantic labels. Data is
+collected using an integrated automatic pipeline, which generates trajectories
+mimicking the motion patterns of various ground robot platforms, including
+wheeled and legged robots. We collect 910 trajectories across 70 environments,
+resulting in 1.5 million samples. Evaluations on occupancy prediction and SLAM
+tasks reveal that state-of-the-art methods trained on existing datasets
+struggle to generalize across diverse scenes. TartanGround can serve as a
+testbed for training and evaluation of a broad range of learning-based tasks,
+including occupancy prediction, SLAM, neural scene representation,
+perception-based navigation, and more, enabling advancements in robotic
+perception and autonomy towards achieving robust models generalizable to more
+diverse scenarios. The dataset and codebase for data collection will be made
+publicly available upon acceptance. Webpage: https://tartanair.org/tartanground
+
+[Website Link](https://tartanair.org/tartanground)
+
+[Paper Link](
+https://arxiv.org/abs/2505.10696
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-24.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Infinigen-Sim: Procedural Generation of Articulated Simulation Assets
+
+- **Authors**: Abhishek Joshi, Beining Han, Jack Nugent, Yiming Zuo, Jonathan Liu, Hongyu Wen, Stamatis Alexandropoulos, Tao Sun, Alexander Raistrick, Gaowen Liu, Yi Shao, Jia Deng
+
+#### Abstract
+
+We introduce Infinigen-Sim, a toolkit which enables users to create diverse
+and realistic articulated object procedural generators. These tools are
+composed of high-level utilities for use creating articulated assets in
+Blender, as well as an export pipeline to integrate the resulting assets into
+common robotics simulators. We demonstrate our system by creating procedural
+generators for 5 common articulated object categories. Experiments show that
+assets sampled from these generators are useful for movable object
+segmentation, training generalizable reinforcement learning policies, and
+sim-to-real transfer of imitation learning policies.
+
+[Paper Link](
+https://arxiv.org/abs/2505.10755
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-22.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexGarmentLab: Dexterous Garment Manipulation Environment with Generalizable Policy
+
+- **Authors**: Yuran Wang, Ruihai Wu, Yue Chen, Jiarui Wang, Jiaqi Liang, Ziyu Zhu, Haoran Geng, Jitendra Malik, Pieter Abbeel, Hao Dong
+
+#### Abstract
+
+Garment manipulation is a critical challenge due to the diversity in garment
+categories, geometries, and deformations. Despite this, humans can effortlessly
+handle garments, thanks to the dexterity of our hands. However, existing
+research in the field has struggled to replicate this level of dexterity,
+primarily hindered by the lack of realistic simulations of dexterous garment
+manipulation. Therefore, we propose DexGarmentLab, the first environment
+specifically designed for dexterous (especially bimanual) garment manipulation,
+which features large-scale high-quality 3D assets for 15 task scenarios, and
+refines simulation techniques tailored for garment modeling to reduce the
+sim-to-real gap. Previous data collection typically relies on teleoperation or
+training expert reinforcement learning (RL) policies, which are labor-intensive
+and inefficient. In this paper, we leverage garment structural correspondence
+to automatically generate a dataset with diverse trajectories using only a
+single expert demonstration, significantly reducing manual intervention.
+However, even extensive demonstrations cannot cover the infinite states of
+garments, which necessitates the exploration of new algorithms. To improve
+generalization across diverse garment shapes and deformations, we propose a
+Hierarchical gArment-manipuLation pOlicy (HALO). It first identifies
+transferable affordance points to accurately locate the manipulation area, then
+generates generalizable trajectories to complete the task. Through extensive
+experiments and detailed analysis of our method and baseline, we demonstrate
+that HALO consistently outperforms existing methods, successfully generalizing
+to previously unseen instances even with significant variations in shape and
+deformation where others fail. Our project page is available at:
+https://wayrise.github.io/DexGarmentLab/.
+
+[Website Link](https://wayrise.github.io/DexGarmentLab/.)
+
+[Paper Link](
+https://arxiv.org/abs/2505.11032
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-05-25_23-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-05-19
 
 
