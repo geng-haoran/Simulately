@@ -1,3 +1,449 @@
+## 2025-05-29
+
+
+### DexUMI: Using Human Hand as the Universal Manipulation Interface for Dexterous Manipulation
+
+- **Authors**: Mengda Xu, Han Zhang, Yifan Hou, Zhenjia Xu, Linxi Fan, Manuela Veloso, Shuran Song
+
+#### Abstract
+
+We present DexUMI - a data collection and policy learning framework that uses
+the human hand as the natural interface to transfer dexterous manipulation
+skills to various robot hands. DexUMI includes hardware and software
+adaptations to minimize the embodiment gap between the human hand and various
+robot hands. The hardware adaptation bridges the kinematics gap using a
+wearable hand exoskeleton. It allows direct haptic feedback in manipulation
+data collection and adapts human motion to feasible robot hand motion. The
+software adaptation bridges the visual gap by replacing the human hand in video
+data with high-fidelity robot hand inpainting. We demonstrate DexUMI's
+capabilities through comprehensive real-world experiments on two different
+dexterous robot hand hardware platforms, achieving an average task success rate
+of 86%.
+
+[Paper Link](
+https://arxiv.org/abs/2505.21864
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-59.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SCIZOR: A Self-Supervised Approach to Data Curation for Large-Scale Imitation Learning
+
+- **Authors**: Yu Zhang, Yuqi Xie, Huihan Liu, Rutav Shah, Michael Wan, Linxi Fan, Yuke Zhu
+
+#### Abstract
+
+Imitation learning advances robot capabilities by enabling the acquisition of
+diverse behaviors from human demonstrations. However, large-scale datasets used
+for policy training often introduce substantial variability in quality, which
+can negatively impact performance. As a result, automatically curating datasets
+by filtering low-quality samples to improve quality becomes essential. Existing
+robotic curation approaches rely on costly manual annotations and perform
+curation at a coarse granularity, such as the dataset or trajectory level,
+failing to account for the quality of individual state-action pairs. To address
+this, we introduce SCIZOR, a self-supervised data curation framework that
+filters out low-quality state-action pairs to improve the performance of
+imitation learning policies. SCIZOR targets two complementary sources of
+low-quality data: suboptimal data, which hinders learning with undesirable
+actions, and redundant data, which dilutes training with repetitive patterns.
+SCIZOR leverages a self-supervised task progress predictor for suboptimal data
+to remove samples lacking task progression, and a deduplication module
+operating on joint state-action representation for samples with redundant
+patterns. Empirically, we show that SCIZOR enables imitation learning policies
+to achieve higher performance with less data, yielding an average improvement
+of 15.4% across multiple benchmarks. More information is available at:
+https://ut-austin-rpl.github.io/SCIZOR/
+
+[Website Link](https://ut-austin-rpl.github.io/SCIZOR/)
+
+[Paper Link](
+https://arxiv.org/abs/2505.22626
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents
+
+- **Authors**: Rui Li, Zixuan Hu, Wenxi Qu, Jinouwen Zhang, Zhenfei Yin, Sha Zhang, Xuantuo Huang, Hanqing Wang, Tai Wang, Jiangmiao Pang, Wanli Ouyang, Lei Bai, Wangmeng Zuo, Ling-Yu Duan, Dongzhan Zhou, Shixiang Tang
+
+#### Abstract
+
+Scientific embodied agents play a crucial role in modern laboratories by
+automating complex experimental workflows. Compared to typical household
+environments, laboratory settings impose significantly higher demands on
+perception of physical-chemical transformations and long-horizon planning,
+making them an ideal testbed for advancing embodied intelligence. However, its
+development has been long hampered by the lack of suitable simulator and
+benchmarks. In this paper, we address this gap by introducing LabUtopia, a
+comprehensive simulation and benchmarking suite designed to facilitate the
+development of generalizable, reasoning-capable embodied agents in laboratory
+settings. Specifically, it integrates i) LabSim, a high-fidelity simulator
+supporting multi-physics and chemically meaningful interactions; ii) LabScene,
+a scalable procedural generator for diverse scientific scenes; and iii)
+LabBench, a hierarchical benchmark spanning five levels of complexity from
+atomic actions to long-horizon mobile manipulation. LabUtopia supports 30
+distinct tasks and includes more than 200 scene and instrument assets, enabling
+large-scale training and principled evaluation in high-complexity environments.
+We demonstrate that LabUtopia offers a powerful platform for advancing the
+integration of perception, planning, and control in scientific-purpose agents
+and provides a rigorous testbed for exploring the practical capabilities and
+generalization limits of embodied intelligence in future research.
+
+[Paper Link](
+https://arxiv.org/abs/2505.22634
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-48.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FastTD3: Simple, Fast, and Capable Reinforcement Learning for Humanoid Control
+
+- **Authors**: Younggyo Seo, Carmelo Sferrazza, Haoran Geng, Michal Nauman, Zhao-Heng Yin, Pieter Abbeel
+
+#### Abstract
+
+Reinforcement learning (RL) has driven significant progress in robotics, but
+its complexity and long training times remain major bottlenecks. In this
+report, we introduce FastTD3, a simple, fast, and capable RL algorithm that
+significantly speeds up training for humanoid robots in popular suites such as
+HumanoidBench, IsaacLab, and MuJoCo Playground. Our recipe is remarkably
+simple: we train an off-policy TD3 agent with several modifications -- parallel
+simulation, large-batch updates, a distributional critic, and carefully tuned
+hyperparameters. FastTD3 solves a range of HumanoidBench tasks in under 3 hours
+on a single A100 GPU, while remaining stable during training. We also provide a
+lightweight and easy-to-use implementation of FastTD3 to accelerate RL research
+in robotics.
+
+[Paper Link](
+https://arxiv.org/abs/2505.22642
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-47.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Generalizable Robot Policy with Human Demonstration Video as a Prompt
+
+- **Authors**: Xiang Zhu, Yichen Liu, Hezhong Li, Jianyu Chen
+
+#### Abstract
+
+Recent robot learning methods commonly rely on imitation learning from
+massive robotic dataset collected with teleoperation. When facing a new task,
+such methods generally require collecting a set of new teleoperation data and
+finetuning the policy. Furthermore, the teleoperation data collection pipeline
+is also tedious and expensive. Instead, human is able to efficiently learn new
+tasks by just watching others do. In this paper, we introduce a novel two-stage
+framework that utilizes human demonstrations to learn a generalizable robot
+policy. Such policy can directly take human demonstration video as a prompt and
+perform new tasks without any new teleoperation data and model finetuning at
+all. In the first stage, we train video generation model that captures a joint
+representation for both the human and robot demonstration video data using
+cross-prediction. In the second stage, we fuse the learned representation with
+a shared action space between human and robot using a novel prototypical
+contrastive loss. Empirical evaluations on real-world dexterous manipulation
+tasks show the effectiveness and generalization capabilities of our proposed
+method.
+
+[Paper Link](
+https://arxiv.org/abs/2505.20795
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-35.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Unified Force and Position Control for Legged Loco-Manipulation
+
+- **Authors**: Peiyuan Zhi, Peiyang Li, Jianqin Yin, Baoxiong Jia, Siyuan Huang
+
+#### Abstract
+
+Robotic loco-manipulation tasks often involve contact-rich interactions with
+the environment, requiring the joint modeling of contact force and robot
+position. However, recent visuomotor policies often focus solely on learning
+position or force control, overlooking their co-learning. In this work, we
+propose the first unified policy for legged robots that jointly models force
+and position control learned without reliance on force sensors. By simulating
+diverse combinations of position and force commands alongside external
+disturbance forces, we use reinforcement learning to learn a policy that
+estimates forces from historical robot states and compensates for them through
+position and velocity adjustments. This policy enables a wide range of
+manipulation behaviors under varying force and position inputs, including
+position tracking, force application, force tracking, and compliant
+interactions. Furthermore, we demonstrate that the learned policy enhances
+trajectory-based imitation learning pipelines by incorporating essential
+contact information through its force estimation module, achieving
+approximately 39.5% higher success rates across four challenging contact-rich
+manipulation tasks compared to position-control policies. Extensive experiments
+on both a quadrupedal manipulator and a humanoid robot validate the versatility
+and robustness of the proposed policy across diverse scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2505.20829
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-33.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Hume: Introducing System-2 Thinking in Visual-Language-Action Model
+
+- **Authors**: Haoming Song, Delin Qu, Yuanqi Yao, Qizhi Chen, Qi Lv, Yiwen Tang, Modi Shi, Guanghui Ren, Maoqing Yao, Bin Zhao, Dong Wang, Xuelong Li
+
+#### Abstract
+
+Humans practice slow thinking before performing actual actions when handling
+complex tasks in the physical world. This thinking paradigm, recently, has
+achieved remarkable advancement in boosting Large Language Models (LLMs) to
+solve complex tasks in digital domains. However, the potential of slow thinking
+remains largely unexplored for robotic foundation models interacting with the
+physical world. In this work, we propose Hume: a dual-system
+Vision-Language-Action (VLA) model with value-guided System-2 thinking and
+cascaded action denoising, exploring human-like thinking capabilities of
+Vision-Language-Action models for dexterous robot control. System 2 of Hume
+implements value-Guided thinking by extending a Vision-Language-Action Model
+backbone with a novel value-query head to estimate the state-action value of
+predicted actions. The value-guided thinking is conducted by repeat sampling
+multiple action candidates and selecting one according to state-action value.
+System 1 of Hume is a lightweight reactive visuomotor policy that takes System
+2 selected action and performs cascaded action denoising for dexterous robot
+control. At deployment time, System 2 performs value-guided thinking at a low
+frequency while System 1 asynchronously receives the System 2 selected action
+candidate and predicts fluid actions in real time. We show that Hume
+outperforms the existing state-of-the-art Vision-Language-Action models across
+multiple simulation benchmark and real-robot deployments.
+
+[Paper Link](
+https://arxiv.org/abs/2505.21432
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### CLAMP: Crowdsourcing a LArge-scale in-the-wild haptic dataset with an open-source device for Multimodal robot Perception
+
+- **Authors**: Pranav N. Thakkar, Shubhangi Sinha, Karan Baijal, Yuhan, Bian, Leah Lackey, Ben Dodson, Heisen Kong, Jueun Kwon, Amber Li, Yifei Hu, Alexios Rekoutis, Tom Silver, Tapomayukh Bhattacharjee
+
+#### Abstract
+
+Robust robot manipulation in unstructured environments often requires
+understanding object properties that extend beyond geometry, such as material
+or compliance-properties that can be challenging to infer using vision alone.
+Multimodal haptic sensing provides a promising avenue for inferring such
+properties, yet progress has been constrained by the lack of large, diverse,
+and realistic haptic datasets. In this work, we introduce the CLAMP device, a
+low-cost (<\$200) sensorized reacher-grabber designed to collect large-scale,
+in-the-wild multimodal haptic data from non-expert users in everyday settings.
+We deployed 16 CLAMP devices to 41 participants, resulting in the CLAMP
+dataset, the largest open-source multimodal haptic dataset to date, comprising
+12.3 million datapoints across 5357 household objects. Using this dataset, we
+train a haptic encoder that can infer material and compliance object properties
+from multimodal haptic data. We leverage this encoder to create the CLAMP
+model, a visuo-haptic perception model for material recognition that
+generalizes to novel objects and three robot embodiments with minimal
+finetuning. We also demonstrate the effectiveness of our model in three
+real-world robot manipulation tasks: sorting recyclable and non-recyclable
+waste, retrieving objects from a cluttered bag, and distinguishing overripe
+from ripe bananas. Our results show that large-scale, in-the-wild haptic data
+collection can unlock new capabilities for generalizable robot manipulation.
+Website: https://emprise.cs.cornell.edu/clamp/
+
+[Website Link](https://emprise.cs.cornell.edu/clamp/)
+
+[Paper Link](
+https://arxiv.org/abs/2505.21495
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### MaskedManipulator: Versatile Whole-Body Control for Loco-Manipulation
+
+- **Authors**: Chen Tessler, Yifeng Jiang, Erwin Coumans, Zhengyi Luo, Gal Chechik, Xue Bin Peng
+
+#### Abstract
+
+Humans interact with their world while leveraging precise full-body control
+to achieve versatile goals. This versatility allows them to solve long-horizon,
+underspecified problems, such as placing a cup in a sink, by seamlessly
+sequencing actions like approaching the cup, grasping, transporting it, and
+finally placing it in the sink. Such goal-driven control can enable new
+procedural tools for animation systems, enabling users to define partial
+objectives while the system naturally ``fills in'' the intermediate motions.
+However, while current methods for whole-body dexterous manipulation in
+physics-based animation achieve success in specific interaction tasks, they
+typically employ control paradigms (e.g., detailed kinematic motion tracking,
+continuous object trajectory following, or direct VR teleoperation) that offer
+limited versatility for high-level goal specification across the entire coupled
+human-object system. To bridge this gap, we present MaskedManipulator, a
+unified and generative policy developed through a two-stage learning approach.
+First, our system trains a tracking controller to physically reconstruct
+complex human-object interactions from large-scale human mocap datasets. This
+tracking controller is then distilled into MaskedManipulator, which provides
+users with intuitive control over both the character's body and the manipulated
+object. As a result, MaskedManipulator enables users to specify complex
+loco-manipulation tasks through intuitive high-level objectives (e.g., target
+object poses, key character stances), and MaskedManipulator then synthesizes
+the necessary full-body actions for a physically simulated humanoid to achieve
+these goals, paving the way for more interactive and life-like virtual
+characters.
+
+[Paper Link](
+https://arxiv.org/abs/2505.19086
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-15.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Genie Centurion: Accelerating Scalable Real-World Robot Training with Human Rewind-and-Refine Guidance
+
+- **Authors**: Wenhao Wang, Jianheng Song, Chiming Liu, Jiayao Ma, Siyuan Feng, Jingyuan Wang, Yuxin Jiang, Kylin Chen, Sikang Zhan, Yi Wang, Tong Meng, Modi Shi, Xindong He, Guanghui Ren, Yang Yang, Maoqing Yao
+
+#### Abstract
+
+While Vision-Language-Action (VLA) models show strong generalizability in
+various tasks, real-world deployment of robotic policy still requires
+large-scale, high-quality human expert demonstrations. However, passive data
+collection via human teleoperation is costly, hard to scale, and often biased
+toward passive demonstrations with limited diversity. To address this, we
+propose Genie Centurion (GCENT), a scalable and general data collection
+paradigm based on human rewind-and-refine guidance. When the robot execution
+failures occur, GCENT enables the system revert to a previous state with a
+rewind mechanism, after which a teleoperator provides corrective demonstrations
+to refine the policy. This framework supports a one-human-to-many-robots
+supervision scheme with a Task Sentinel module, which autonomously predicts
+task success and solicits human intervention when necessary, enabling scalable
+supervision. Empirical results show that GCENT achieves up to 40% higher task
+success rates than state-of-the-art data collection methods, and reaches
+comparable performance using less than half the data. We also quantify the data
+yield-to-effort ratio under multi-robot scenarios, demonstrating GCENT's
+potential for scalable and cost-efficient robot policy training in real-world
+environments.
+
+[Paper Link](
+https://arxiv.org/abs/2505.18793
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_11-12.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### ManiFeel: Benchmarking and Understanding Visuotactile Manipulation Policy Learning
+
+- **Authors**: Quan Khanh Luu, Pokuang Zhou, Zhengtong Xu, Zhiyuan Zhang, Qiang Qiu, Yu She
+
+#### Abstract
+
+Supervised visuomotor policies have shown strong performance in robotic
+manipulation but often struggle in tasks with limited visual input, such as
+operations in confined spaces, dimly lit environments, or scenarios where
+perceiving the object's properties and state is critical for task success. In
+such cases, tactile feedback becomes essential for manipulation. While the
+rapid progress of supervised visuomotor policies has benefited greatly from
+high-quality, reproducible simulation benchmarks in visual imitation, the
+visuotactile domain still lacks a similarly comprehensive and reliable
+benchmark for large-scale and rigorous evaluation. To address this, we
+introduce ManiFeel, a reproducible and scalable simulation benchmark for
+studying supervised visuotactile manipulation policies across a diverse set of
+tasks and scenarios. ManiFeel presents a comprehensive benchmark suite spanning
+a diverse set of manipulation tasks, evaluating various policies, input
+modalities, and tactile representation methods. Through extensive experiments,
+our analysis reveals key factors that influence supervised visuotactile policy
+learning, identifies the types of tasks where tactile sensing is most
+beneficial, and highlights promising directions for future research in
+visuotactile policy learning. ManiFeel aims to establish a reproducible
+benchmark for supervised visuotactile policy learning, supporting progress in
+visuotactile manipulation and perception. To facilitate future research and
+ensure reproducibility, we will release our codebase, datasets, training logs,
+and pretrained checkpoints. Please visit the project website for more details:
+https://zhengtongxu.github.io/manifeel-website/
+
+[Website Link](https://zhengtongxu.github.io/manifeel-website/)
+
+[Paper Link](
+https://arxiv.org/abs/2505.18472
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_10-51.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### EgoZero: Robot Learning from Smart Glasses
+
+- **Authors**: Vincent Liu, Ademi Adeniji, Haotian Zhan, Siddhant Haldar, Raunaq Bhirangi, Pieter Abbeel, Lerrel Pinto
+
+#### Abstract
+
+Despite recent progress in general purpose robotics, robot policies still lag
+far behind basic human capabilities in the real world. Humans interact
+constantly with the physical world, yet this rich data resource remains largely
+untapped in robot learning. We propose EgoZero, a minimal system that learns
+robust manipulation policies from human demonstrations captured with Project
+Aria smart glasses, $\textbf{and zero robot data}$. EgoZero enables: (1)
+extraction of complete, robot-executable actions from in-the-wild, egocentric,
+human demonstrations, (2) compression of human visual observations into
+morphology-agnostic state representations, and (3) closed-loop policy learning
+that generalizes morphologically, spatially, and semantically. We deploy
+EgoZero policies on a gripper Franka Panda robot and demonstrate zero-shot
+transfer with 70% success rate over 7 manipulation tasks and only 20 minutes of
+data collection per task. Our results suggest that in-the-wild human data can
+serve as a scalable foundation for real-world robot learning - paving the way
+toward a future of abundant, diverse, and naturalistic training data for
+robots. Code and videos are available at https://egozero-robot.github.io.
+
+[Website Link](https://egozero-robot.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2505.20290
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_10-31.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-05-25
 
 
@@ -40,7 +486,7 @@ https://arxiv.org/abs/2505.16187
 <br/>
 
 ---
-## 2025-05-25
+## 2025-05-24
 
 
 ### FLARE: Robot Learning with Implicit World Modeling
