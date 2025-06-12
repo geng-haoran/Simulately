@@ -1,3 +1,228 @@
+## 2025-05-30
+
+
+### TrackVLA: Embodied Visual Tracking in the Wild
+
+- **Authors**: Shaoan Wang, Jiazhao Zhang, Minghan Li, Jiahang Liu, Anqi Li, Kui Wu, Fangwei Zhong, Junzhi Yu, Zhizheng Zhang, He Wang
+
+#### Abstract
+
+Embodied visual tracking is a fundamental skill in Embodied AI, enabling an
+agent to follow a specific target in dynamic environments using only egocentric
+vision. This task is inherently challenging as it requires both accurate target
+recognition and effective trajectory planning under conditions of severe
+occlusion and high scene dynamics. Existing approaches typically address this
+challenge through a modular separation of recognition and planning. In this
+work, we propose TrackVLA, a Vision-Language-Action (VLA) model that learns the
+synergy between object recognition and trajectory planning. Leveraging a shared
+LLM backbone, we employ a language modeling head for recognition and an
+anchor-based diffusion model for trajectory planning. To train TrackVLA, we
+construct an Embodied Visual Tracking Benchmark (EVT-Bench) and collect diverse
+difficulty levels of recognition samples, resulting in a dataset of 1.7 million
+samples. Through extensive experiments in both synthetic and real-world
+environments, TrackVLA demonstrates SOTA performance and strong
+generalizability. It significantly outperforms existing methods on public
+benchmarks in a zero-shot manner while remaining robust to high dynamics and
+occlusion in real-world scenarios at 10 FPS inference speed. Our project page
+is: https://pku-epic.github.io/TrackVLA-web.
+
+[Website Link](https://pku-epic.github.io/TrackVLA-web.)
+
+[Paper Link](
+https://arxiv.org/abs/2505.23189
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-12_18-33.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### LocoTouch: Learning Dexterous Quadrupedal Transport with Tactile Sensing
+
+- **Authors**: Changyi Lin, Yuxin Ray Song, Boda Huo, Mingyang Yu, Yikai Wang, Shiqi Liu, Yuxiang Yang, Wenhao Yu, Tingnan Zhang, Jie Tan, Yiyue Luo, Ding Zhao
+
+#### Abstract
+
+Quadrupedal robots have demonstrated remarkable agility and robustness in
+traversing complex terrains. However, they remain limited in performing object
+interactions that require sustained contact. In this work, we present
+LocoTouch, a system that equips quadrupedal robots with tactile sensing to
+address a challenging task in this category: long-distance transport of
+unsecured cylindrical objects, which typically requires custom mounting
+mechanisms to maintain stability. For efficient large-area tactile sensing, we
+design a high-density distributed tactile sensor array that covers the entire
+back of the robot. To effectively leverage tactile feedback for locomotion
+control, we develop a simulation environment with high-fidelity tactile
+signals, and train tactile-aware transport policies using a two-stage learning
+pipeline. Furthermore, we design a novel reward function to promote stable,
+symmetric, and frequency-adaptive locomotion gaits. After training in
+simulation, LocoTouch transfers zero-shot to the real world, reliably balancing
+and transporting a wide range of unsecured, cylindrical everyday objects with
+broadly varying sizes and weights. Thanks to the responsiveness of the tactile
+sensor and the adaptive gait reward, LocoTouch can robustly balance objects
+with slippery surfaces over long distances, or even under severe external
+perturbations.
+
+[Paper Link](
+https://arxiv.org/abs/2505.23175
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-12_18-30.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning coordinated badminton skills for legged manipulators
+
+- **Authors**: Yuntao Ma, Andrei Cramariuc, Farbod Farshidian, Marco Hutter
+
+#### Abstract
+
+Coordinating the motion between lower and upper limbs and aligning limb
+control with perception are substantial challenges in robotics, particularly in
+dynamic environments. To this end, we introduce an approach for enabling legged
+mobile manipulators to play badminton, a task that requires precise
+coordination of perception, locomotion, and arm swinging. We propose a unified
+reinforcement learning-based control policy for whole-body visuomotor skills
+involving all degrees of freedom to achieve effective shuttlecock tracking and
+striking. This policy is informed by a perception noise model that utilizes
+real-world camera data, allowing for consistent perception error levels between
+simulation and deployment and encouraging learned active perception behaviors.
+Our method includes a shuttlecock prediction model, constrained reinforcement
+learning for robust motion control, and integrated system identification
+techniques to enhance deployment readiness. Extensive experimental results in a
+variety of environments validate the robot's capability to predict shuttlecock
+trajectories, navigate the service area effectively, and execute precise
+strikes against human players, demonstrating the feasibility of using legged
+mobile manipulators in complex and dynamic sports scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2505.22974
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-12_18-27.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better
+
+- **Authors**: Danny Driess, Jost Tobias Springenberg, Brian Ichter, Lili Yu, Adrian Li-Bell, Karl Pertsch, Allen Z. Ren, Homer Walke, Quan Vuong, Lucy Xiaoyang Shi, Sergey Levine
+
+#### Abstract
+
+Vision-language-action (VLA) models provide a powerful approach to training
+control policies for physical systems, such as robots, by combining end-to-end
+learning with transfer of semantic knowledge from web-scale vision-language
+model (VLM) training. However, the constraints of real-time control are often
+at odds with the design of VLMs: the most powerful VLMs have tens or hundreds
+of billions of parameters, presenting an obstacle to real-time inference, and
+operate on discrete tokens rather than the continuous-valued outputs that are
+required for controlling robots. To address this challenge, recent VLA models
+have used specialized modules for efficient continuous control, such as action
+experts or continuous output heads, which typically require adding new
+untrained parameters to the pretrained VLM backbone. While these modules
+improve real-time and control capabilities, it remains an open question whether
+they preserve or degrade the semantic knowledge contained in the pretrained
+VLM, and what effect they have on the VLA training dynamics. In this paper, we
+study this question in the context of VLAs that include a continuous diffusion
+or flow matching action expert, showing that naively including such experts
+significantly harms both training speed and knowledge transfer. We provide an
+extensive analysis of various design choices, their impact on performance and
+knowledge transfer, and propose a technique for insulating the VLM backbone
+during VLA training that mitigates this issue. Videos are available at
+https://pi.website/research/knowledge_insulation.
+
+[Website Link](https://pi.website/research/knowledge_insulation.)
+
+[Paper Link](
+https://arxiv.org/abs/2505.23705
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-12_18-24.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Humanoid Loco-manipulation Planning based on Graph Search and Reachability Maps
+
+- **Authors**: Masaki Murooka, Iori Kumagai, Mitsuharu Morisawa, Fumio Kanehiro, Abderrahmane Kheddar
+
+#### Abstract
+
+In this letter, we propose an efficient and highly versatile
+loco-manipulation planning for humanoid robots. Loco-manipulation planning is a
+key technological brick enabling humanoid robots to autonomously perform object
+transportation by manipulating them. We formulate planning of the alternation
+and sequencing of footsteps and grasps as a graph search problem with a new
+transition model that allows for a flexible representation of
+loco-manipulation. Our transition model is quickly evaluated by relocating and
+switching the reachability maps depending on the motion of both the robot and
+object. We evaluate our approach by applying it to loco-manipulation use-cases,
+such as a bobbin rolling operation with regrasping, where the motion is
+automatically planned by our framework.
+
+[Paper Link](
+https://arxiv.org/abs/2505.23505
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_12-16.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Mobi-$π$: Mobilizing Your Robot Learning Policy
+
+- **Authors**: Jingyun Yang, Isabella Huang, Brandon Vu, Max Bajracharya, Rika Antonova, Jeannette Bohg
+
+#### Abstract
+
+Learned visuomotor policies are capable of performing increasingly complex
+manipulation tasks. However, most of these policies are trained on data
+collected from limited robot positions and camera viewpoints. This leads to
+poor generalization to novel robot positions, which limits the use of these
+policies on mobile platforms, especially for precise tasks like pressing
+buttons or turning faucets. In this work, we formulate the policy mobilization
+problem: find a mobile robot base pose in a novel environment that is in
+distribution with respect to a manipulation policy trained on a limited set of
+camera viewpoints. Compared to retraining the policy itself to be more robust
+to unseen robot base pose initializations, policy mobilization decouples
+navigation from manipulation and thus does not require additional
+demonstrations. Crucially, this problem formulation complements existing
+efforts to improve manipulation policy robustness to novel viewpoints and
+remains compatible with them. To study policy mobilization, we introduce the
+Mobi-$\pi$ framework, which includes: (1) metrics that quantify the difficulty
+of mobilizing a given policy, (2) a suite of simulated mobile manipulation
+tasks based on RoboCasa to evaluate policy mobilization, (3) visualization
+tools for analysis, and (4) several baseline methods. We also propose a novel
+approach that bridges navigation and manipulation by optimizing the robot's
+base pose to align with an in-distribution base pose for a learned policy. Our
+approach utilizes 3D Gaussian Splatting for novel view synthesis, a score
+function to evaluate pose suitability, and sampling-based optimization to
+identify optimal robot poses. We show that our approach outperforms baselines
+in both simulation and real-world environments, demonstrating its effectiveness
+for policy mobilization.
+
+[Paper Link](
+https://arxiv.org/abs/2505.23692
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-11_12-04.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-05-29
 
 
