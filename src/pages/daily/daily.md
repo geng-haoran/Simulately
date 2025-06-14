@@ -1,3 +1,184 @@
+## 2025-06-03
+
+
+### FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation
+
+- **Authors**: Longyan Wu, Checheng Yu, Jieji Ren, Li Chen, Ran Huang, Guoying Gu, Hongyang Li
+
+#### Abstract
+
+Enabling robots with contact-rich manipulation remains a pivotal challenge in
+robot learning, which is substantially hindered by the data collection gap,
+including its inefficiency and limited sensor setup. While prior work has
+explored handheld paradigms, their rod-based mechanical structures remain rigid
+and unintuitive, providing limited tactile feedback and posing challenges for
+human operators. Motivated by the dexterity and force feedback of human motion,
+we propose FreeTacMan, a human-centric and robot-free data collection system
+for accurate and efficient robot manipulation. Concretely, we design a wearable
+data collection device with dual visuo-tactile grippers, which can be worn by
+human fingers for intuitive and natural control. A high-precision optical
+tracking system is introduced to capture end-effector poses, while
+synchronizing visual and tactile feedback simultaneously. FreeTacMan achieves
+multiple improvements in data collection performance compared to prior works,
+and enables effective policy learning for contact-rich manipulation tasks with
+the help of the visuo-tactile information. We will release the work to
+facilitate reproducibility and accelerate research in visuo-tactile
+manipulation.
+
+[Paper Link](
+https://arxiv.org/abs/2506.01941
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-13_13-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Feel the Force: Contact-Driven Learning from Humans
+
+- **Authors**: Ademi Adeniji, Zhuoran Chen, Vincent Liu, Venkatesh Pattabiraman, Raunaq Bhirangi, Siddhant Haldar, Pieter Abbeel, Lerrel Pinto
+
+#### Abstract
+
+Controlling fine-grained forces during manipulation remains a core challenge
+in robotics. While robot policies learned from robot-collected data or
+simulation show promise, they struggle to generalize across the diverse range
+of real-world interactions. Learning directly from humans offers a scalable
+solution, enabling demonstrators to perform skills in their natural embodiment
+and in everyday environments. However, visual demonstrations alone lack the
+information needed to infer precise contact forces. We present FeelTheForce
+(FTF): a robot learning system that models human tactile behavior to learn
+force-sensitive manipulation. Using a tactile glove to measure contact forces
+and a vision-based model to estimate hand pose, we train a closed-loop policy
+that continuously predicts the forces needed for manipulation. This policy is
+re-targeted to a Franka Panda robot with tactile gripper sensors using shared
+visual and action representations. At execution, a PD controller modulates
+gripper closure to track predicted forces-enabling precise, force-aware
+control. Our approach grounds robust low-level force control in scalable human
+supervision, achieving a 77% success rate across 5 force-sensitive manipulation
+tasks. Code and videos are available at https://feel-the-force-ftf.github.io.
+
+[Website Link](https://feel-the-force-ftf.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.01944
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-13_13-53.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Hold My Beer: Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control
+
+- **Authors**: Yitang Li, Yuanhang Zhang, Wenli Xiao, Chaoyi Pan, Haoyang Weng, Guanqi He, Tairan He, Guanya Shi
+
+#### Abstract
+
+Can your humanoid walk up and hand you a full cup of beer, without spilling a
+drop? While humanoids are increasingly featured in flashy demos like dancing,
+delivering packages, traversing rough terrain, fine-grained control during
+locomotion remains a significant challenge. In particular, stabilizing a filled
+end-effector (EE) while walking is far from solved, due to a fundamental
+mismatch in task dynamics: locomotion demands slow-timescale, robust control,
+whereas EE stabilization requires rapid, high-precision corrections. To address
+this, we propose SoFTA, a Slow-Fast Two-Agent framework that decouples
+upper-body and lower-body control into separate agents operating at different
+frequencies and with distinct rewards. This temporal and objective separation
+mitigates policy interference and enables coordinated whole-body behavior.
+SoFTA executes upper-body actions at 100 Hz for precise EE control and
+lower-body actions at 50 Hz for robust gait. It reduces EE acceleration by 2-5x
+relative to baselines and performs much closer to human-level stability,
+enabling delicate tasks such as carrying nearly full cups, capturing steady
+video during locomotion, and disturbance rejection with EE stability.
+
+[Paper Link](
+https://arxiv.org/abs/2505.24198
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-13_12-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SR3D: Unleashing Single-view 3D Reconstruction for Transparent and Specular Object Grasping
+
+- **Authors**: Mingxu Zhang, Xiaoqi Li, Jiahui Xu, Kaichen Zhou, Hojin Bae, Yan Shen, Chuyan Xiong, Jiaming Liu, Hao Dong
+
+#### Abstract
+
+Recent advancements in 3D robotic manipulation have improved grasping of
+everyday objects, but transparent and specular materials remain challenging due
+to depth sensing limitations. While several 3D reconstruction and depth
+completion approaches address these challenges, they suffer from setup
+complexity or limited observation information utilization. To address this,
+leveraging the power of single view 3D object reconstruction approaches, we
+propose a training free framework SR3D that enables robotic grasping of
+transparent and specular objects from a single view observation. Specifically,
+given single view RGB and depth images, SR3D first uses the external visual
+models to generate 3D reconstructed object mesh based on RGB image. Then, the
+key idea is to determine the 3D object's pose and scale to accurately localize
+the reconstructed object back into its original depth corrupted 3D scene.
+Therefore, we propose view matching and keypoint matching mechanisms,which
+leverage both the 2D and 3D's inherent semantic and geometric information in
+the observation to determine the object's 3D state within the scene, thereby
+reconstructing an accurate 3D depth map for effective grasp detection.
+Experiments in both simulation and real world show the reconstruction
+effectiveness of SR3D.
+
+[Paper Link](
+https://arxiv.org/abs/2505.24305
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-13_11-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexMachina: Functional Retargeting for Bimanual Dexterous Manipulation
+
+- **Authors**: Zhao Mandi, Yifan Hou, Dieter Fox, Yashraj Narang, Ajay Mandlekar, Shuran Song
+
+#### Abstract
+
+We study the problem of functional retargeting: learning dexterous
+manipulation policies to track object states from human hand-object
+demonstrations. We focus on long-horizon, bimanual tasks with articulated
+objects, which is challenging due to large action space, spatiotemporal
+discontinuities, and embodiment gap between human and robot hands. We propose
+DexMachina, a novel curriculum-based algorithm: the key idea is to use virtual
+object controllers with decaying strength: an object is first driven
+automatically towards its target states, such that the policy can gradually
+learn to take over under motion and contact guidance. We release a simulation
+benchmark with a diverse set of tasks and dexterous hands, and show that
+DexMachina significantly outperforms baseline methods. Our algorithm and
+benchmark enable a functional comparison for hardware designs, and we present
+key findings informed by quantitative and qualitative results. With the recent
+surge in dexterous hand development, we hope this work will provide a useful
+platform for identifying desirable hardware capabilities and lower the barrier
+for contributing to future research. Videos and more at
+https://project-dexmachina.github.io/
+
+[Website Link](https://project-dexmachina.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2505.24853
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-13_11-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-05-30
 
 
