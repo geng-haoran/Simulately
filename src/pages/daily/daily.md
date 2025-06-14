@@ -1,3 +1,621 @@
+## 2025-06-13
+
+
+### EmbodiedGen: Towards a Generative 3D World Engine for Embodied Intelligence
+
+- **Authors**: Wang Xinjie, Liu Liu, Cao Yu, Wu Ruiqi, Qin Wenkang, Wang Dehui, Sui Wei, Su Zhizhong
+
+#### Abstract
+
+Constructing a physically realistic and accurately scaled simulated 3D world
+is crucial for the training and evaluation of embodied intelligence tasks. The
+diversity, realism, low cost accessibility and affordability of 3D data assets
+are critical for achieving generalization and scalability in embodied AI.
+However, most current embodied intelligence tasks still rely heavily on
+traditional 3D computer graphics assets manually created and annotated, which
+suffer from high production costs and limited realism. These limitations
+significantly hinder the scalability of data driven approaches. We present
+EmbodiedGen, a foundational platform for interactive 3D world generation. It
+enables the scalable generation of high-quality, controllable and
+photorealistic 3D assets with accurate physical properties and real-world scale
+in the Unified Robotics Description Format (URDF) at low cost. These assets can
+be directly imported into various physics simulation engines for fine-grained
+physical control, supporting downstream tasks in training and evaluation.
+EmbodiedGen is an easy-to-use, full-featured toolkit composed of six key
+modules: Image-to-3D, Text-to-3D, Texture Generation, Articulated Object
+Generation, Scene Generation and Layout Generation. EmbodiedGen generates
+diverse and interactive 3D worlds composed of generative 3D assets, leveraging
+generative AI to address the challenges of generalization and evaluation to the
+needs of embodied intelligence related research. Code is available at
+https://horizonrobotics.github.io/robot_lab/embodied_gen/index.html.
+
+[Website Link](https://horizonrobotics.github.io/robot_lab/embodied_gen/index.html.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.10600
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_19-59.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GENMANIP: LLM-driven Simulation for Generalizable Instruction-Following Manipulation
+
+- **Authors**: Ning Gao, Yilun Chen, Shuai Yang, Xinyi Chen, Yang Tian, Hao Li, Haifeng Huang, Hanqing Wang, Tai Wang, Jiangmiao Pang
+
+#### Abstract
+
+Robotic manipulation in real-world settings remains challenging, especially
+regarding robust generalization. Existing simulation platforms lack sufficient
+support for exploring how policies adapt to varied instructions and scenarios.
+Thus, they lag behind the growing interest in instruction-following foundation
+models like LLMs, whose adaptability is crucial yet remains underexplored in
+fair comparisons. To bridge this gap, we introduce GenManip, a realistic
+tabletop simulation platform tailored for policy generalization studies. It
+features an automatic pipeline via LLM-driven task-oriented scene graph to
+synthesize large-scale, diverse tasks using 10K annotated 3D object assets. To
+systematically assess generalization, we present GenManip-Bench, a benchmark of
+200 scenarios refined via human-in-the-loop corrections. We evaluate two policy
+types: (1) modular manipulation systems integrating foundation models for
+perception, reasoning, and planning, and (2) end-to-end policies trained
+through scalable data collection. Results show that while data scaling benefits
+end-to-end methods, modular systems enhanced with foundation models generalize
+more effectively across diverse scenarios. We anticipate this platform to
+facilitate critical insights for advancing policy generalization in realistic
+conditions. Project Page: https://genmanip.axi404.top/.
+
+[Website Link](https://genmanip.axi404.top/.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.10966
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_19-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop
+
+- **Authors**: Justin Kerr, Kush Hari, Ethan Weber, Chung Min Kim, Brent Yi, Tyler Bonnen, Ken Goldberg, Angjoo Kanazawa
+
+#### Abstract
+
+Humans do not passively observe the visual world -- we actively look in order
+to act. Motivated by this principle, we introduce EyeRobot, a robotic system
+with gaze behavior that emerges from the need to complete real-world tasks. We
+develop a mechanical eyeball that can freely rotate to observe its surroundings
+and train a gaze policy to control it using reinforcement learning. We
+accomplish this by first collecting teleoperated demonstrations paired with a
+360 camera. This data is imported into a simulation environment that supports
+rendering arbitrary eyeball viewpoints, allowing episode rollouts of eye gaze
+on top of robot demonstrations. We then introduce a BC-RL loop to train the
+hand and eye jointly: the hand (BC) agent is trained from rendered eye
+observations, and the eye (RL) agent is rewarded when the hand produces correct
+action predictions. In this way, hand-eye coordination emerges as the eye looks
+towards regions which allow the hand to complete the task. EyeRobot implements
+a foveal-inspired policy architecture allowing high resolution with a small
+compute budget, which we find also leads to the emergence of more stable
+fixation as well as improved ability to track objects and ignore distractors.
+We evaluate EyeRobot on five panoramic workspace manipulation tasks requiring
+manipulation in an arc surrounding the robot arm. Our experiments suggest
+EyeRobot exhibits hand-eye coordination behaviors which effectively facilitate
+manipulation over large workspaces with a single camera. See project site for
+videos: https://www.eyerobot.net/
+
+[Website Link](https://www.eyerobot.net/)
+
+[Paper Link](
+https://arxiv.org/abs/2506.10968
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_19-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### UAD: Unsupervised Affordance Distillation for Generalization in Robotic Manipulation
+
+- **Authors**: Yihe Tang, Wenlong Huang, Yingke Wang, Chengshu Li, Roy Yuan, Ruohan Zhang, Jiajun Wu, Li Fei-Fei
+
+#### Abstract
+
+Understanding fine-grained object affordances is imperative for robots to
+manipulate objects in unstructured environments given open-ended task
+instructions. However, existing methods of visual affordance predictions often
+rely on manually annotated data or conditions only on a predefined set of
+tasks. We introduce UAD (Unsupervised Affordance Distillation), a method for
+distilling affordance knowledge from foundation models into a task-conditioned
+affordance model without any manual annotations. By leveraging the
+complementary strengths of large vision models and vision-language models, UAD
+automatically annotates a large-scale dataset with detailed $<$instruction,
+visual affordance$>$ pairs. Training only a lightweight task-conditioned
+decoder atop frozen features, UAD exhibits notable generalization to
+in-the-wild robotic scenes and to various human activities, despite only being
+trained on rendered objects in simulation. Using affordance provided by UAD as
+the observation space, we show an imitation learning policy that demonstrates
+promising generalization to unseen object instances, object categories, and
+even variations in task instructions after training on as few as 10
+demonstrations. Project website: https://unsup-affordance.github.io/
+
+[Website Link](https://unsup-affordance.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2506.09284
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_19-49.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SkillBlender: Towards Versatile Humanoid Whole-Body Loco-Manipulation via Skill Blending
+
+- **Authors**: Yuxuan Kuang, Haoran Geng, Amine Elhafsi, Tan-Dzung Do, Pieter Abbeel, Jitendra Malik, Marco Pavone, Yue Wang
+
+#### Abstract
+
+Humanoid robots hold significant potential in accomplishing daily tasks
+across diverse environments thanks to their flexibility and human-like
+morphology. Recent works have made significant progress in humanoid whole-body
+control and loco-manipulation leveraging optimal control or reinforcement
+learning. However, these methods require tedious task-specific tuning for each
+task to achieve satisfactory behaviors, limiting their versatility and
+scalability to diverse tasks in daily scenarios. To that end, we introduce
+SkillBlender, a novel hierarchical reinforcement learning framework for
+versatile humanoid loco-manipulation. SkillBlender first pretrains
+goal-conditioned task-agnostic primitive skills, and then dynamically blends
+these skills to accomplish complex loco-manipulation tasks with minimal
+task-specific reward engineering. We also introduce SkillBench, a parallel,
+cross-embodiment, and diverse simulated benchmark containing three embodiments,
+four primitive skills, and eight challenging loco-manipulation tasks,
+accompanied by a set of scientific evaluation metrics balancing accuracy and
+feasibility. Extensive simulated experiments show that our method significantly
+outperforms all baselines, while naturally regularizing behaviors to avoid
+reward hacking, resulting in more accurate and feasible movements for diverse
+loco-manipulation tasks in our daily scenarios. Our code and benchmark will be
+open-sourced to the community to facilitate future research. Project page:
+https://usc-gvl.github.io/SkillBlender-web/.
+
+[Website Link](https://usc-gvl.github.io/SkillBlender-web/.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.09366
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_19-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks
+
+- **Authors**: Yixuan Li, Yutang Lin, Jieming Cui, Tengyu Liu, Wei Liang, Yixin Zhu, Siyuan Huang
+
+#### Abstract
+
+Humanoid teleoperation plays a vital role in demonstrating and collecting
+data for complex humanoid-scene interactions. However, current teleoperation
+systems face critical limitations: they decouple upper- and lower-body control
+to maintain stability, restricting natural coordination, and operate open-loop
+without real-time position feedback, leading to accumulated drift. The
+fundamental challenge is achieving precise, coordinated whole-body
+teleoperation over extended durations while maintaining accurate global
+positioning. Here we show that an MoE-based teleoperation system, CLONE, with
+closed-loop error correction enables unprecedented whole-body teleoperation
+fidelity, maintaining minimal positional drift over long-range trajectories
+using only head and hand tracking from an MR headset. Unlike previous methods
+that either sacrifice coordination for stability or suffer from unbounded
+drift, CLONE learns diverse motion skills while preventing tracking error
+accumulation through real-time feedback, enabling complex coordinated movements
+such as ``picking up objects from the ground.'' These results establish a new
+milestone for whole-body humanoid teleoperation for long-horizon humanoid-scene
+interaction tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2506.08931
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_17-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Real-Time Execution of Action Chunking Flow Policies
+
+- **Authors**: Kevin Black, Manuel Y. Galliker, Sergey Levine
+
+#### Abstract
+
+Modern AI systems, especially those interacting with the physical world,
+increasingly require real-time performance. However, the high latency of
+state-of-the-art generalist models, including recent vision-language action
+models (VLAs), poses a significant challenge. While action chunking has enabled
+temporal consistency in high-frequency control tasks, it does not fully address
+the latency problem, leading to pauses or out-of-distribution jerky movements
+at chunk boundaries. This paper presents a novel inference-time algorithm that
+enables smooth asynchronous execution of action chunking policies. Our method,
+real-time chunking (RTC), is applicable to any diffusion- or flow-based VLA out
+of the box with no re-training. It generates the next action chunk while
+executing the current one, "freezing" actions guaranteed to execute and
+"inpainting" the rest. To test RTC, we introduce a new benchmark of 12 highly
+dynamic tasks in the Kinetix simulator, as well as evaluate 6 challenging
+real-world bimanual manipulation tasks. Results demonstrate that RTC is fast,
+performant, and uniquely robust to inference delay, significantly improving
+task throughput and enabling high success rates in precise tasks
+$\unicode{x2013}$ such as lighting a match $\unicode{x2013}$ even in the
+presence of significant latency. See
+https://pi.website/research/real_time_chunking for videos.
+
+[Website Link](https://pi.website/research/real_time_chunking)
+
+[Paper Link](
+https://arxiv.org/abs/2506.07339
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_16-39.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Versatile Loco-Manipulation through Flexible Interlimb Coordination
+
+- **Authors**: Xinghao Zhu, Yuxin Chen, Lingfeng Sun, Farzad Niroui, Simon Le Cleac'h, Jiuguang Wang, Kuan Fang
+
+#### Abstract
+
+The ability to flexibly leverage limbs for loco-manipulation is essential for
+enabling autonomous robots to operate in unstructured environments. Yet, prior
+work on loco-manipulation is often constrained to specific tasks or
+predetermined limb configurations. In this work, we present Reinforcement
+Learning for Interlimb Coordination (ReLIC), an approach that enables versatile
+loco-manipulation through flexible interlimb coordination. The key to our
+approach is an adaptive controller that seamlessly bridges the execution of
+manipulation motions and the generation of stable gaits based on task demands.
+Through the interplay between two controller modules, ReLIC dynamically assigns
+each limb for manipulation or locomotion and robustly coordinates them to
+achieve the task success. Using efficient reinforcement learning in simulation,
+ReLIC learns to perform stable gaits in accordance with the manipulation goals
+in the real world. To solve diverse and complex tasks, we further propose to
+interface the learned controller with different types of task specifications,
+including target trajectories, contact points, and natural language
+instructions. Evaluated on 12 real-world tasks that require diverse and complex
+coordination patterns, ReLIC demonstrates its versatility and robustness by
+achieving a success rate of 78.9% on average. Videos and code can be found at
+https://relic-locoman.rai-inst.com.
+
+[Website Link](https://relic-locoman.rai-inst.com.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.07876
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_16-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Improving Long-Range Navigation with Spatially-Enhanced Recurrent Memory via End-to-End Reinforcement Learning
+
+- **Authors**: Fan Yang, Per Frivik, David Hoeller, Chen Wang, Cesar Cadena, Marco Hutter
+
+#### Abstract
+
+Recent advancements in robot navigation, especially with end-to-end learning
+approaches like reinforcement learning (RL), have shown remarkable efficiency
+and effectiveness. Yet, successful navigation still relies on two key
+capabilities: mapping and planning, whether explicit or implicit. Classical
+approaches use explicit mapping pipelines to register ego-centric observations
+into a coherent map frame for the planner. In contrast, end-to-end learning
+achieves this implicitly, often through recurrent neural networks (RNNs) that
+fuse current and past observations into a latent space for planning. While
+architectures such as LSTM and GRU capture temporal dependencies, our findings
+reveal a key limitation: their inability to perform effective spatial
+memorization. This skill is essential for transforming and integrating
+sequential observations from varying perspectives to build spatial
+representations that support downstream planning. To address this, we propose
+Spatially-Enhanced Recurrent Units (SRUs), a simple yet effective modification
+to existing RNNs, designed to enhance spatial memorization capabilities. We
+introduce an attention-based architecture with SRUs, enabling long-range
+navigation using a single forward-facing stereo camera. Regularization
+techniques are employed to ensure robust end-to-end recurrent training via RL.
+Experimental results show our approach improves long-range navigation by 23.5%
+compared to existing RNNs. Furthermore, with SRU memory, our method outperforms
+the RL baseline with explicit mapping and memory modules, achieving a 29.6%
+improvement in diverse environments requiring long-horizon mapping and
+memorization. Finally, we address the sim-to-real gap by leveraging large-scale
+pretraining on synthetic depth data, enabling zero-shot transfer to diverse and
+complex real-world environments.
+
+[Paper Link](
+https://arxiv.org/abs/2506.05997
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_13-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### 3DFlowAction: Learning Cross-Embodiment Manipulation from 3D Flow World Model
+
+- **Authors**: Hongyan Zhi, Peihao Chen, Siyuan Zhou, Yubo Dong, Quanxi Wu, Lei Han, Mingkui Tan
+
+#### Abstract
+
+Manipulation has long been a challenging task for robots, while humans can
+effortlessly perform complex interactions with objects, such as hanging a cup
+on the mug rack. A key reason is the lack of a large and uniform dataset for
+teaching robots manipulation skills. Current robot datasets often record robot
+action in different action spaces within a simple scene. This hinders the robot
+to learn a unified and robust action representation for different robots within
+diverse scenes. Observing how humans understand a manipulation task, we find
+that understanding how the objects should move in the 3D space is a critical
+clue for guiding actions. This clue is embodiment-agnostic and suitable for
+both humans and different robots. Motivated by this, we aim to learn a 3D flow
+world model from both human and robot manipulation data. This model predicts
+the future movement of the interacting objects in 3D space, guiding action
+planning for manipulation. Specifically, we synthesize a large-scale 3D optical
+flow dataset, named ManiFlow-110k, through a moving object auto-detect
+pipeline. A video diffusion-based world model then learns manipulation physics
+from these data, generating 3D optical flow trajectories conditioned on
+language instructions. With the generated 3D object optical flow, we propose a
+flow-guided rendering mechanism, which renders the predicted final state and
+leverages GPT-4o to assess whether the predicted flow aligns with the task
+description. This equips the robot with a closed-loop planning ability.
+Finally, we consider the predicted 3D optical flow as constraints for an
+optimization policy to determine a chunk of robot actions for manipulation.
+Extensive experiments demonstrate strong generalization across diverse robotic
+manipulation tasks and reliable cross-embodiment adaptation without
+hardware-specific training.
+
+[Paper Link](
+https://arxiv.org/abs/2506.06199
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_13-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### BiAssemble: Learning Collaborative Affordance for Bimanual Geometric Assembly
+
+- **Authors**: Yan Shen, Ruihai Wu, Yubin Ke, Xinyuan Song, Zeyi Li, Xiaoqi Li, Hongwei Fan, Haoran Lu, Hao dong
+
+#### Abstract
+
+Shape assembly, the process of combining parts into a complete whole, is a
+crucial robotic skill with broad real-world applications. Among various
+assembly tasks, geometric assembly--where broken parts are reassembled into
+their original form (e.g., reconstructing a shattered bowl)--is particularly
+challenging. This requires the robot to recognize geometric cues for grasping,
+assembly, and subsequent bimanual collaborative manipulation on varied
+fragments. In this paper, we exploit the geometric generalization of
+point-level affordance, learning affordance aware of bimanual collaboration in
+geometric assembly with long-horizon action sequences. To address the
+evaluation ambiguity caused by geometry diversity of broken parts, we introduce
+a real-world benchmark featuring geometric variety and global reproducibility.
+Extensive experiments demonstrate the superiority of our approach over both
+previous affordance-based and imitation-based methods. Project page:
+https://sites.google.com/view/biassembly/.
+
+[Website Link](https://sites.google.com/view/biassembly/.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.06221
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_12-59.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DemoSpeedup: Accelerating Visuomotor Policies via Entropy-Guided Demonstration Acceleration
+
+- **Authors**: Lingxiao Guo, Zhengrong Xue, Zijing Xu, Huazhe Xu
+
+#### Abstract
+
+Imitation learning has shown great promise in robotic manipulation, but the
+policy's execution is often unsatisfactorily slow due to commonly tardy
+demonstrations collected by human operators. In this work, we present
+DemoSpeedup, a self-supervised method to accelerate visuomotor policy execution
+via entropy-guided demonstration acceleration. DemoSpeedup starts from training
+an arbitrary generative policy (e.g., ACT or Diffusion Policy) on normal-speed
+demonstrations, which serves as a per-frame action entropy estimator. The key
+insight is that frames with lower action entropy estimates call for more
+consistent policy behaviors, which often indicate the demands for
+higher-precision operations. In contrast, frames with higher entropy estimates
+correspond to more casual sections, and therefore can be more safely
+accelerated. Thus, we segment the original demonstrations according to the
+estimated entropy, and accelerate them by down-sampling at rates that increase
+with the entropy values. Trained with the speedup demonstrations, the resulting
+policies execute up to 3 times faster while maintaining the task completion
+performance. Interestingly, these policies could even achieve higher success
+rates than those trained with normal-speed demonstrations, due to the benefits
+of reduced decision-making horizons. Project Page:
+https://demospeedup.github.io/
+
+[Website Link](https://demospeedup.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2506.05064
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_12-42.pngg" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Fabrica: Dual-Arm Assembly of General Multi-Part Objects via Integrated Planning and Learning
+
+- **Authors**: Yunsheng Tian, Joshua Jacob, Yijiang Huang, Jialiang Zhao, Edward Gu, Pingchuan Ma, Annan Zhang, Farhad Javid, Branden Romero, Sachin Chitta, Shinjiro Sueda, Hui Li, Wojciech Matusik
+
+#### Abstract
+
+Multi-part assembly poses significant challenges for robots to execute
+long-horizon, contact-rich manipulation with generalization across complex
+geometries. We present Fabrica, a dual-arm robotic system capable of end-to-end
+planning and control for autonomous assembly of general multi-part objects. For
+planning over long horizons, we develop hierarchies of precedence, sequence,
+grasp, and motion planning with automated fixture generation, enabling general
+multi-step assembly on any dual-arm robots. The planner is made efficient
+through a parallelizable design and is optimized for downstream control
+stability. For contact-rich assembly steps, we propose a lightweight
+reinforcement learning framework that trains generalist policies across object
+geometries, assembly directions, and grasp poses, guided by equivariance and
+residual actions obtained from the plan. These policies transfer zero-shot to
+the real world and achieve 80% successful steps. For systematic evaluation, we
+propose a benchmark suite of multi-part assemblies resembling industrial and
+daily objects across diverse categories and geometries. By integrating
+efficient global planning and robust local control, we showcase the first
+system to achieve complete and generalizable real-world multi-part assembly
+without domain knowledge or human demonstrations. Project website:
+http://fabrica.csail.mit.edu/
+
+[Website Link](http://fabrica.csail.mit.edu/)
+
+[Paper Link](
+https://arxiv.org/abs/2506.05168
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_12-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### OWMM-Agent: Open World Mobile Manipulation With Multi-modal Agentic Data Synthesis
+
+- **Authors**: Junting Chen, Haotian Liang, Lingxiao Du, Weiyun Wang, Mengkang Hu, Yao Mu, Wenhai Wang, Jifeng Dai, Ping Luo, Wenqi Shao, Lin Shao
+
+#### Abstract
+
+The rapid progress of navigation, manipulation, and vision models has made
+mobile manipulators capable in many specialized tasks. However, the open-world
+mobile manipulation (OWMM) task remains a challenge due to the need for
+generalization to open-ended instructions and environments, as well as the
+systematic complexity to integrate high-level decision making with low-level
+robot control based on both global scene understanding and current agent state.
+To address this complexity, we propose a novel multi-modal agent architecture
+that maintains multi-view scene frames and agent states for decision-making and
+controls the robot by function calling. A second challenge is the hallucination
+from domain shift. To enhance the agent performance, we further introduce an
+agentic data synthesis pipeline for the OWMM task to adapt the VLM model to our
+task domain with instruction fine-tuning. We highlight our fine-tuned OWMM-VLM
+as the first dedicated foundation model for mobile manipulators with global
+scene understanding, robot state tracking, and multi-modal action generation in
+a unified model. Through experiments, we demonstrate that our model achieves
+SOTA performance compared to other foundation models including GPT-4o and
+strong zero-shot generalization in real world. The project page is at
+https://github.com/HHYHRHY/OWMM-Agent
+
+[Website Link](https://github.com/HHYHRHY/OWMM-Agent)
+
+[Paper Link](
+https://arxiv.org/abs/2506.04217
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_12-32.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Object-centric 3D Motion Field for Robot Learning from Human Videos
+
+- **Authors**: Zhao-Heng Yin, Sherry Yang, Pieter Abbeel
+
+#### Abstract
+
+Learning robot control policies from human videos is a promising direction
+for scaling up robot learning. However, how to extract action knowledge (or
+action representations) from videos for policy learning remains a key
+challenge. Existing action representations such as video frames, pixelflow, and
+pointcloud flow have inherent limitations such as modeling complexity or loss
+of information. In this paper, we propose to use object-centric 3D motion field
+to represent actions for robot learning from human videos, and present a novel
+framework for extracting this representation from videos for zero-shot control.
+We introduce two novel components in its implementation. First, a novel
+training pipeline for training a ''denoising'' 3D motion field estimator to
+extract fine object 3D motions from human videos with noisy depth robustly.
+Second, a dense object-centric 3D motion field prediction architecture that
+favors both cross-embodiment transfer and policy generalization to background.
+We evaluate the system in real world setups. Experiments show that our method
+reduces 3D motion estimation error by over 50% compared to the latest method,
+achieve 55% average success rate in diverse tasks where prior approaches
+fail~($\lesssim 10$\%), and can even acquire fine-grained manipulation skills
+like insertion.
+
+[Paper Link](
+https://arxiv.org/abs/2506.04227
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_12-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Rodrigues Network for Learning Robot Actions
+
+- **Authors**: Jialiang Zhang, Haoran Geng, Yang You, Congyue Deng, Pieter Abbeel, Jitendra Malik, Leonidas Guibas
+
+#### Abstract
+
+Understanding and predicting articulated actions is important in robot
+learning. However, common architectures such as MLPs and Transformers lack
+inductive biases that reflect the underlying kinematic structure of articulated
+systems. To this end, we propose the Neural Rodrigues Operator, a learnable
+generalization of the classical forward kinematics operation, designed to
+inject kinematics-aware inductive bias into neural computation. Building on
+this operator, we design the Rodrigues Network (RodriNet), a novel neural
+architecture specialized for processing actions. We evaluate the expressivity
+of our network on two synthetic tasks on kinematic and motion prediction,
+showing significant improvements compared to standard backbones. We further
+demonstrate its effectiveness in two realistic applications: (i) imitation
+learning on robotic benchmarks with the Diffusion Policy, and (ii) single-image
+3D hand reconstruction. Our results suggest that integrating structured
+kinematic priors into the network architecture improves action learning in
+various domains.
+
+[Paper Link](
+https://arxiv.org/abs/2506.02618
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-14_12-20.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-06-03
 
 
