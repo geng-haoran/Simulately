@@ -1,3 +1,367 @@
+## 2025-06-18
+
+
+### ClutterDexGrasp: A Sim-to-Real System for General Dexterous Grasping in Cluttered Scenes
+
+- **Authors**: Zeyuan Chen, Qiyang Yan, Yuanpei Chen, Tianhao Wu, Jiyao Zhang, Zihan Ding, Jinzhou Li, Yaodong Yang, Hao Dong
+
+#### Abstract
+
+Dexterous grasping in cluttered scenes presents significant challenges due to
+diverse object geometries, occlusions, and potential collisions. Existing
+methods primarily focus on single-object grasping or grasp-pose prediction
+without interaction, which are insufficient for complex, cluttered scenes.
+Recent vision-language-action models offer a potential solution but require
+extensive real-world demonstrations, making them costly and difficult to scale.
+To address these limitations, we revisit the sim-to-real transfer pipeline and
+develop key techniques that enable zero-shot deployment in reality while
+maintaining robust generalization. We propose ClutterDexGrasp, a two-stage
+teacher-student framework for closed-loop target-oriented dexterous grasping in
+cluttered scenes. The framework features a teacher policy trained in simulation
+using clutter density curriculum learning, incorporating both a novel geometry
+and spatially-embedded scene representation and a comprehensive safety
+curriculum, enabling general, dynamic, and safe grasping behaviors. Through
+imitation learning, we distill the teacher's knowledge into a student 3D
+diffusion policy (DP3) that operates on partial point cloud observations. To
+the best of our knowledge, this represents the first zero-shot sim-to-real
+closed-loop system for target-oriented dexterous grasping in cluttered scenes,
+demonstrating robust performance across diverse objects and layouts. More
+details and videos are available at https://clutterdexgrasp.github.io/.
+
+[Website Link](https://clutterdexgrasp.github.io/.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.14317
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_16-23.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Tactile Beyond Pixels: Multisensory Touch Representations for Robot Manipulation
+
+- **Authors**: Carolina Higuera, Akash Sharma, Taosha Fan, Chaithanya Krishna Bodduluri, Byron Boots, Michael Kaess, Mike Lambeta, Tingfan Wu, Zixi Liu, Francois Robert Hogan, Mustafa Mukadam
+
+#### Abstract
+
+We present Sparsh-X, the first multisensory touch representations across four
+tactile modalities: image, audio, motion, and pressure. Trained on ~1M
+contact-rich interactions collected with the Digit 360 sensor, Sparsh-X
+captures complementary touch signals at diverse temporal and spatial scales. By
+leveraging self-supervised learning, Sparsh-X fuses these modalities into a
+unified representation that captures physical properties useful for robot
+manipulation tasks. We study how to effectively integrate real-world touch
+representations for both imitation learning and tactile adaptation of
+sim-trained policies, showing that Sparsh-X boosts policy success rates by 63%
+over an end-to-end model using tactile images and improves robustness by 90% in
+recovering object states from touch. Finally, we benchmark Sparsh-X ability to
+make inferences about physical properties, such as object-action
+identification, material-quantity estimation, and force estimation. Sparsh-X
+improves accuracy in characterizing physical properties by 48% compared to
+end-to-end approaches, demonstrating the advantages of multisensory pretraining
+for capturing features essential for dexterous manipulation.
+
+[Paper Link](
+https://arxiv.org/abs/2506.14754
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_16-05.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### GMT: General Motion Tracking for Humanoid Whole-Body Control
+
+- **Authors**: Zixuan Chen, Mazeyu Ji, Xuxin Cheng, Xuanbin Peng, Xue Bin Peng, Xiaolong Wang
+
+#### Abstract
+
+The ability to track general whole-body motions in the real world is a useful
+way to build general-purpose humanoid robots. However, achieving this can be
+challenging due to the temporal and kinematic diversity of the motions, the
+policy's capability, and the difficulty of coordination of the upper and lower
+bodies. To address these issues, we propose GMT, a general and scalable
+motion-tracking framework that trains a single unified policy to enable
+humanoid robots to track diverse motions in the real world. GMT is built upon
+two core components: an Adaptive Sampling strategy and a Motion
+Mixture-of-Experts (MoE) architecture. The Adaptive Sampling automatically
+balances easy and difficult motions during training. The MoE ensures better
+specialization of different regions of the motion manifold. We show through
+extensive experiments in both simulation and the real world the effectiveness
+of GMT, achieving state-of-the-art performance across a broad spectrum of
+motions using a unified general policy. Videos and additional information can
+be found at https://gmt-humanoid.github.io.
+
+[Website Link](https://gmt-humanoid.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.14770
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_13-01.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RL from Physical Feedback: Aligning Large Motion Models with Humanoid Control
+
+- **Authors**: Junpeng Yue, Zepeng Wang, Yuxuan Wang, Weishuai Zeng, Jiangxing Wang, Xinrun Xu, Yu Zhang, Sipeng Zheng, Ziluo Ding, Zongqing Lu
+
+#### Abstract
+
+This paper focuses on a critical challenge in robotics: translating
+text-driven human motions into executable actions for humanoid robots, enabling
+efficient and cost-effective learning of new behaviors. While existing
+text-to-motion generation methods achieve semantic alignment between language
+and motion, they often produce kinematically or physically infeasible motions
+unsuitable for real-world deployment. To bridge this sim-to-real gap, we
+propose Reinforcement Learning from Physical Feedback (RLPF), a novel framework
+that integrates physics-aware motion evaluation with text-conditioned motion
+generation. RLPF employs a motion tracking policy to assess feasibility in a
+physics simulator, generating rewards for fine-tuning the motion generator.
+Furthermore, RLPF introduces an alignment verification module to preserve
+semantic fidelity to text instructions. This joint optimization ensures both
+physical plausibility and instruction alignment. Extensive experiments show
+that RLPF greatly outperforms baseline methods in generating physically
+feasible motions while maintaining semantic correspondence with text
+instruction, enabling successful deployment on real humanoid robots.
+
+[Paper Link](
+https://arxiv.org/abs/2506.12769
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_11-19.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots
+
+- **Authors**: Yuxuan Wang, Ming Yang, Weishuai Zeng, Yu Zhang, Xinrun Xu, Haobin Jiang, Ziluo Ding, Zongqing Lu
+
+#### Abstract
+
+Achieving general agile whole-body control on humanoid robots remains a major
+challenge due to diverse motion demands and data conflicts. While existing
+frameworks excel in training single motion-specific policies, they struggle to
+generalize across highly varied behaviors due to conflicting control
+requirements and mismatched data distributions. In this work, we propose
+BumbleBee (BB), an expert-generalist learning framework that combines motion
+clustering and sim-to-real adaptation to overcome these challenges. BB first
+leverages an autoencoder-based clustering method to group behaviorally similar
+motions using motion features and motion descriptions. Expert policies are then
+trained within each cluster and refined with real-world data through iterative
+delta action modeling to bridge the sim-to-real gap. Finally, these experts are
+distilled into a unified generalist controller that preserves agility and
+robustness across all motion types. Experiments on two simulations and a real
+humanoid robot demonstrate that BB achieves state-of-the-art general whole-body
+control, setting a new benchmark for agile, robust, and generalizable humanoid
+performance in the real world.
+
+[Paper Link](
+https://arxiv.org/abs/2506.12779
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_11-18.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### KungfuBot: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills
+
+- **Authors**: Weiji Xie, Jinrui Han, Jiakun Zheng, Huanyu Li, Xinzhe Liu, Jiyuan Shi, Weinan Zhang, Chenjia Bai, Xuelong Li
+
+#### Abstract
+
+Humanoid robots are promising to acquire various skills by imitating human
+behaviors. However, existing algorithms are only capable of tracking smooth,
+low-speed human motions, even with delicate reward and curriculum design. This
+paper presents a physics-based humanoid control framework, aiming to master
+highly-dynamic human behaviors such as Kungfu and dancing through multi-steps
+motion processing and adaptive motion tracking. For motion processing, we
+design a pipeline to extract, filter out, correct, and retarget motions, while
+ensuring compliance with physical constraints to the maximum extent. For motion
+imitation, we formulate a bi-level optimization problem to dynamically adjust
+the tracking accuracy tolerance based on the current tracking error, creating
+an adaptive curriculum mechanism. We further construct an asymmetric
+actor-critic framework for policy training. In experiments, we train whole-body
+control policies to imitate a set of highly-dynamic motions. Our method
+achieves significantly lower tracking errors than existing approaches and is
+successfully deployed on the Unitree G1 robot, demonstrating stable and
+expressive behaviors. The project page is https://kungfu-bot.github.io.
+
+[Website Link](https://kungfu-bot.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.12851
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_11-12.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction
+
+- **Authors**: Haoru Xue, Xiaoyu Huang, Dantong Niu, Qiayuan Liao, Thomas Kragerud, Jan Tommy Gravdahl, Xue Bin Peng, Guanya Shi, Trevor Darrell, Koushil Screenath, Shankar Sastry
+
+#### Abstract
+
+Vision-language-action (VLA) models have demonstrated strong semantic
+understanding and zero-shot generalization, yet most existing systems assume an
+accurate low-level controller with hand-crafted action "vocabulary" such as
+end-effector pose or root velocity. This assumption confines prior work to
+quasi-static tasks and precludes the agile, whole-body behaviors required by
+humanoid whole-body control (WBC) tasks. To capture this gap in the literature,
+we start by introducing the first sim-to-real-ready, vision-language,
+closed-loop benchmark for humanoid WBC, comprising over 150 tasks from 10
+categories. We then propose LeVERB: Latent Vision-Language-Encoded Robot
+Behavior, a hierarchical latent instruction-following framework for humanoid
+vision-language WBC, the first of its kind. At the top level, a vision-language
+policy learns a latent action vocabulary from synthetically rendered kinematic
+demonstrations; at the low level, a reinforcement-learned WBC policy consumes
+these latent verbs to generate dynamics-level commands. In our benchmark,
+LeVERB can zero-shot attain a 80% success rate on simple visual navigation
+tasks, and 58.5% success rate overall, outperforming naive hierarchical
+whole-body VLA implementation by 7.8 times.
+
+[Paper Link](
+https://arxiv.org/abs/2506.13751
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_11-00.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Prompting with the Future: Open-World Model Predictive Control with Interactive Digital Twins
+
+- **Authors**: Chuanruo Ning, Kuan Fang, Wei-Chiu Ma
+
+#### Abstract
+
+Recent advancements in open-world robot manipulation have been largely driven
+by vision-language models (VLMs). While these models exhibit strong
+generalization ability in high-level planning, they struggle to predict
+low-level robot controls due to limited physical-world understanding. To
+address this issue, we propose a model predictive control framework for
+open-world manipulation that combines the semantic reasoning capabilities of
+VLMs with physically-grounded, interactive digital twins of the real-world
+environments. By constructing and simulating the digital twins, our approach
+generates feasible motion trajectories, simulates corresponding outcomes, and
+prompts the VLM with future observations to evaluate and select the most
+suitable outcome based on language instructions of the task. To further enhance
+the capability of pre-trained VLMs in understanding complex scenes for robotic
+control, we leverage the flexible rendering capabilities of the digital twin to
+synthesize the scene at various novel, unoccluded viewpoints. We validate our
+approach on a diverse set of complex manipulation tasks, demonstrating superior
+performance compared to baseline methods for language-conditioned robotic
+control using VLMs.
+
+[Paper Link](
+https://arxiv.org/abs/2506.13761
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_10-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Touch begins where vision ends: Generalizable policies for contact-rich manipulation
+
+- **Authors**: Zifan Zhao, Siddhant Haldar, Jinda Cui, Lerrel Pinto, Raunaq Bhirangi
+
+#### Abstract
+
+Data-driven approaches struggle with precise manipulation; imitation learning
+requires many hard-to-obtain demonstrations, while reinforcement learning
+yields brittle, non-generalizable policies. We introduce VisuoTactile Local
+(ViTaL) policy learning, a framework that solves fine-grained manipulation
+tasks by decomposing them into two phases: a reaching phase, where a
+vision-language model (VLM) enables scene-level reasoning to localize the
+object of interest, and a local interaction phase, where a reusable,
+scene-agnostic ViTaL policy performs contact-rich manipulation using egocentric
+vision and tactile sensing. This approach is motivated by the observation that
+while scene context varies, the low-level interaction remains consistent across
+task instances. By training local policies once in a canonical setting, they
+can generalize via a localize-then-execute strategy. ViTaL achieves around 90%
+success on contact-rich tasks in unseen environments and is robust to
+distractors. ViTaL's effectiveness stems from three key insights: (1)
+foundation models for segmentation enable training robust visual encoders via
+behavior cloning; (2) these encoders improve the generalizability of policies
+learned using residual RL; and (3) tactile sensing significantly boosts
+performance in contact-rich tasks. Ablation studies validate each of these
+insights, and we demonstrate that ViTaL integrates well with high-level VLMs,
+enabling robust, reusable low-level skills. Results and videos are available at
+https://vitalprecise.github.io.
+
+[Website Link](https://vitalprecise.github.io.)
+
+[Paper Link](
+https://arxiv.org/abs/2506.13762
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_10-50.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Construction of a Multiple-DOF Under-actuated Gripper with Force-Sensing via Deep Learning
+
+- **Authors**: Jihao Li, Keqi Zhu, Guodong Lu, I-Ming Chen, Huixu Dong
+
+#### Abstract
+
+We present a novel under-actuated gripper with two 3-joint fingers, which
+realizes force feedback control by the deep learning technique- Long Short-Term
+Memory (LSTM) model, without any force sensor. First, a five-linkage mechanism
+stacked by double four-linkages is designed as a finger to automatically
+achieve the transformation between parallel and enveloping grasping modes. This
+enables the creation of a low-cost under-actuated gripper comprising a single
+actuator and two 3-phalange fingers. Second, we devise theoretical models of
+kinematics and power transmission based on the proposed gripper, accurately
+obtaining fingertip positions and contact forces. Through coupling and
+decoupling of five-linkage mechanisms, the proposed gripper offers the expected
+capabilities of grasping payload/force/stability and objects with large
+dimension ranges. Third, to realize the force control, an LSTM model is
+proposed to determine the grasping mode for synthesizing force-feedback control
+policies that exploit contact sensing after outlining the uncertainty of
+currents using a statistical method. Finally, a series of experiments are
+implemented to measure quantitative indicators, such as the payload, grasping
+force, force sensing, grasping stability and the dimension ranges of objects to
+be grasped. Additionally, the grasping performance of the proposed gripper is
+verified experimentally to guarantee the high versatility and robustness of the
+proposed gripper.
+
+[Paper Link](
+https://arxiv.org/abs/2506.11570
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-18_10-45.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-06-13
 
 
