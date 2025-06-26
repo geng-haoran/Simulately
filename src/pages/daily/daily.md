@@ -1,3 +1,262 @@
+## 2025-06-26
+
+
+### DemoDiffusion: One-Shot Human Imitation using pre-trained Diffusion Policy
+
+- **Authors**: Sungjae Park, Homanga Bharadhwaj, Shubham Tulsiani
+
+#### Abstract
+
+We propose DemoDiffusion, a simple and scalable method for enabling robots to
+perform manipulation tasks in natural environments by imitating a single human
+demonstration. Our approach is based on two key insights. First, the hand
+motion in a human demonstration provides a useful prior for the robot's
+end-effector trajectory, which we can convert into a rough open-loop robot
+motion trajectory via kinematic retargeting. Second, while this retargeted
+motion captures the overall structure of the task, it may not align well with
+plausible robot actions in-context. To address this, we leverage a pre-trained
+generalist diffusion policy to modify the trajectory, ensuring it both follows
+the human motion and remains within the distribution of plausible robot
+actions. Our approach avoids the need for online reinforcement learning or
+paired human-robot data, enabling robust adaptation to new tasks and scenes
+with minimal manual effort. Experiments in both simulation and real-world
+settings show that DemoDiffusion outperforms both the base policy and the
+retargeted trajectory, enabling the robot to succeed even on tasks where the
+pre-trained generalist policy fails entirely. Project page:
+https://demodiffusion.github.io/
+
+[Website Link](https://demodiffusion.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2506.20668
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-26_17-39.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### FORTE: Tactile Force and Slip Sensing on Compliant Fingers for Delicate Manipulation
+
+- **Authors**: Siqi Shang, Mingyo Seo, Yuke Zhu, Lillian Chin
+
+#### Abstract
+
+Handling delicate and fragile objects remains a major challenge for robotic
+manipulation, especially for rigid parallel grippers. While the simplicity and
+versatility of parallel grippers have led to widespread adoption, these
+grippers are limited by their heavy reliance on visual feedback. Tactile
+sensing and soft robotics can add responsiveness and compliance. However,
+existing methods typically involve high integration complexity or suffer from
+slow response times. In this work, we introduce FORTE, a tactile sensing system
+embedded in compliant gripper fingers. FORTE uses 3D-printed fin-ray grippers
+with internal air channels to provide low-latency force and slip feedback.
+FORTE applies just enough force to grasp objects without damaging them, while
+remaining easy to fabricate and integrate. We find that FORTE can accurately
+estimate grasping forces from 0-8 N with an average error of 0.2 N, and detect
+slip events within 100 ms of occurring. We demonstrate FORTE's ability to grasp
+a wide range of slippery, fragile, and deformable objects. In particular, FORTE
+grasps fragile objects like raspberries and potato chips with a 98.6% success
+rate, and achieves 93% accuracy in detecting slip events. These results
+highlight FORTE's potential as a robust and practical solution for enabling
+delicate robotic manipulation. Project page: https://merge-lab.github.io/FORTE
+
+[Website Link](https://merge-lab.github.io/FORTE)
+
+[Paper Link](
+https://arxiv.org/abs/2506.18960
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-26_17-38.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation
+
+- **Authors**: Tianxing Chen, Zanxin Chen, Baijun Chen, Zijian Cai, Yibin Liu, Qiwei Liang, Zixuan Li, Xianliang Lin, Yiheng Ge, Zhenyu Gu, Weiliang Deng, Yubin Guo, Tian Nian, Xuanbing Xie, Qiangyu Chen, Kailun Su, Tianling Xu, Guodong Liu, Mengkang Hu, Huan-ang Gao, Kaixuan Wang, Zhixuan Liang, Yusen Qin, Xiaokang Yang, Ping Luo, Yao Mu
+
+#### Abstract
+
+Simulation-based data synthesis has emerged as a powerful paradigm for
+enhancing real-world robotic manipulation. However, existing synthetic datasets
+remain insufficient for robust bimanual manipulation due to two challenges: (1)
+the lack of an efficient, scalable data generation method for novel tasks, and
+(2) oversimplified simulation environments that fail to capture real-world
+complexity. We present RoboTwin 2.0, a scalable simulation framework that
+enables automated, large-scale generation of diverse and realistic data, along
+with unified evaluation protocols for dual-arm manipulation. We first construct
+RoboTwin-OD, a large-scale object library comprising 731 instances across 147
+categories, each annotated with semantic and manipulation-relevant labels.
+Building on this foundation, we develop an expert data synthesis pipeline that
+combines multimodal large language models (MLLMs) with simulation-in-the-loop
+refinement to generate task-level execution code automatically. To improve
+sim-to-real transfer, RoboTwin 2.0 incorporates structured domain randomization
+along five axes: clutter, lighting, background, tabletop height and language
+instructions, thereby enhancing data diversity and policy robustness. We
+instantiate this framework across 50 dual-arm tasks spanning five robot
+embodiments, and pre-collect over 100,000 domain-randomized expert
+trajectories. Empirical results show a 10.9% gain in code generation success
+and improved generalization to novel real-world scenarios. A VLA model
+fine-tuned on our dataset achieves a 367% relative improvement (42.0% vs. 9.0%)
+on unseen scene real-world tasks, while zero-shot models trained solely on our
+synthetic data achieve a 228% relative gain, highlighting strong generalization
+without real-world supervision. We release the data generator, benchmark,
+dataset, and code to support scalable research in robust bimanual manipulation.
+
+[Paper Link](
+https://arxiv.org/abs/2506.18088
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-26_17-33_1.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboArena: Distributed Real-World Evaluation of Generalist Robot Policies
+
+- **Authors**: Pranav Atreya, Karl Pertsch, Tony Lee, Moo Jin Kim, Arhan Jain, Artur Kuramshin, Clemens Eppner, Cyrus Neary, Edward Hu, Fabio Ramos, Jonathan Tremblay, Kanav Arora, Kirsty Ellis, Luca Macesanu, Matthew Leonard, Meedeum Cho, Ozgur Aslan, Shivin Dass, Jie Wang, Xingfang Yuan, Xuning Yang, Abhishek Gupta, Dinesh Jayaraman, Glen Berseth, Kostas Daniilidis, Roberto Martin-Martin, Youngwoon Lee, Percy Liang, Chelsea Finn, Sergey Levine
+
+#### Abstract
+
+Comprehensive, unbiased, and comparable evaluation of modern generalist
+policies is uniquely challenging: existing approaches for robot benchmarking
+typically rely on heavy standardization, either by specifying fixed evaluation
+tasks and environments, or by hosting centralized ''robot challenges'', and do
+not readily scale to evaluating generalist policies across a broad range of
+tasks and environments. In this work, we propose RoboArena, a new approach for
+scalable evaluation of generalist robot policies in the real world. Instead of
+standardizing evaluations around fixed tasks, environments, or locations, we
+propose to crowd-source evaluations across a distributed network of evaluators.
+Importantly, evaluators can freely choose the tasks and environments they
+evaluate on, enabling easy scaling of diversity, but they are required to
+perform double-blind evaluations over pairs of policies. Then, by aggregating
+preference feedback from pairwise comparisons across diverse tasks and
+environments, we can derive a ranking of policies. We instantiate our approach
+across a network of evaluators at seven academic institutions using the DROID
+robot platform. Through more than 600 pairwise real-robot evaluation episodes
+across seven generalist policies, we demonstrate that our crowd-sourced
+approach can more accurately rank the performance of existing generalist
+policies than conventional, centralized evaluation approaches, while being more
+scalable, resilient, and trustworthy. We open our evaluation network to the
+community and hope that it can enable more accessible comparisons of generalist
+robot policies.
+
+[Paper Link](
+https://arxiv.org/abs/2506.18123
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-26_17-33.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Learning Accurate Whole-body Throwing with High-frequency Residual Policy and Pullback Tube Acceleration
+
+- **Authors**: Yuntao Ma, Yang Liu, Kaixian Qu, Marco Hutter
+
+#### Abstract
+
+Throwing is a fundamental skill that enables robots to manipulate objects in
+ways that extend beyond the reach of their arms. We present a control framework
+that combines learning and model-based control for prehensile whole-body
+throwing with legged mobile manipulators. Our framework consists of three
+components: a nominal tracking policy for the end-effector, a high-frequency
+residual policy to enhance tracking accuracy, and an optimization-based module
+to improve end-effector acceleration control. The proposed controller achieved
+the average of 0.28 m landing error when throwing at targets located 6 m away.
+Furthermore, in a comparative study with university students, the system
+achieved a velocity tracking error of 0.398 m/s and a success rate of 56.8%,
+hitting small targets randomly placed at distances of 3-5 m while throwing at a
+specified speed of 6 m/s. In contrast, humans have a success rate of only
+15.2%. This work provides an early demonstration of prehensile throwing with
+quantified accuracy on hardware, contributing to progress in dynamic whole-body
+manipulation.
+
+[Paper Link](
+https://arxiv.org/abs/2506.16986
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-26_17-04.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Dex1B: Learning with 1B Demonstrations for Dexterous Manipulation
+
+- **Authors**: Jianglong Ye, Keyi Wang, Chengjing Yuan, Ruihan Yang, Yiquan Li, Jiyue Zhu, Yuzhe Qin, Xueyan Zou, Xiaolong Wang
+
+#### Abstract
+
+Generating large-scale demonstrations for dexterous hand manipulation remains
+challenging, and several approaches have been proposed in recent years to
+address this. Among them, generative models have emerged as a promising
+paradigm, enabling the efficient creation of diverse and physically plausible
+demonstrations. In this paper, we introduce Dex1B, a large-scale, diverse, and
+high-quality demonstration dataset produced with generative models. The dataset
+contains one billion demonstrations for two fundamental tasks: grasping and
+articulation. To construct it, we propose a generative model that integrates
+geometric constraints to improve feasibility and applies additional conditions
+to enhance diversity. We validate the model on both established and newly
+introduced simulation benchmarks, where it significantly outperforms prior
+state-of-the-art methods. Furthermore, we demonstrate its effectiveness and
+robustness through real-world robot experiments. Our project page is at
+https://jianglongye.com/dex1b
+
+[Website Link](https://jianglongye.com/dex1b)
+
+[Paper Link](
+https://arxiv.org/abs/2506.17198
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-26_17-03.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Vision in Action: Learning Active Perception from Human Demonstrations
+
+- **Authors**: Haoyu Xiong, Xiaomeng Xu, Jimmy Wu, Yifan Hou, Jeannette Bohg, Shuran Song
+
+#### Abstract
+
+We present Vision in Action (ViA), an active perception system for bimanual
+robot manipulation. ViA learns task-relevant active perceptual strategies
+(e.g., searching, tracking, and focusing) directly from human demonstrations.
+On the hardware side, ViA employs a simple yet effective 6-DoF robotic neck to
+enable flexible, human-like head movements. To capture human active perception
+strategies, we design a VR-based teleoperation interface that creates a shared
+observation space between the robot and the human operator. To mitigate VR
+motion sickness caused by latency in the robot's physical movements, the
+interface uses an intermediate 3D scene representation, enabling real-time view
+rendering on the operator side while asynchronously updating the scene with the
+robot's latest observations. Together, these design elements enable the
+learning of robust visuomotor policies for three complex, multi-stage bimanual
+manipulation tasks involving visual occlusions, significantly outperforming
+baseline systems.
+
+[Paper Link](
+https://arxiv.org/abs/2506.15666
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-06-26_15-58.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-06-18
 
 
