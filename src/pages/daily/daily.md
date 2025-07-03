@@ -1,3 +1,192 @@
+## 2025-07-03
+
+
+### AC-DiT: Adaptive Coordination Diffusion Transformer for Mobile Manipulation
+
+- **Authors**: Sixiang Chen, Jiaming Liu, Siyuan Qian, Han Jiang, Lily Li, Renrui Zhang, Zhuoyang Liu, Chenyang Gu, Chengkai Hou, Pengwei Wang, Zhongyuan Wang, Shanghang Zhang
+
+#### Abstract
+
+Recently, mobile manipulation has attracted increasing attention for enabling
+language-conditioned robotic control in household tasks. However, existing
+methods still face challenges in coordinating mobile base and manipulator,
+primarily due to two limitations. On the one hand, they fail to explicitly
+model the influence of the mobile base on manipulator control, which easily
+leads to error accumulation under high degrees of freedom. On the other hand,
+they treat the entire mobile manipulation process with the same visual
+observation modality (e.g., either all 2D or all 3D), overlooking the distinct
+multimodal perception requirements at different stages during mobile
+manipulation. To address this, we propose the Adaptive Coordination Diffusion
+Transformer (AC-DiT), which enhances mobile base and manipulator coordination
+for end-to-end mobile manipulation. First, since the motion of the mobile base
+directly influences the manipulator's actions, we introduce a mobility-to-body
+conditioning mechanism that guides the model to first extract base motion
+representations, which are then used as context prior for predicting whole-body
+actions. This enables whole-body control that accounts for the potential impact
+of the mobile base's motion. Second, to meet the perception requirements at
+different stages of mobile manipulation, we design a perception-aware
+multimodal conditioning strategy that dynamically adjusts the fusion weights
+between various 2D visual images and 3D point clouds, yielding visual features
+tailored to the current perceptual needs. This allows the model to, for
+example, adaptively rely more on 2D inputs when semantic information is crucial
+for action prediction, while placing greater emphasis on 3D geometric
+information when precise spatial understanding is required. We validate AC-DiT
+through extensive experiments on both simulated and real-world mobile
+manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2507.01961
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-03_21-04.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RoboEval: Where Robotic Manipulation Meets Structured and Scalable Evaluation
+
+- **Authors**: Yi Ru Wang, Carter Ung, Grant Tannert, Jiafei Duan, Josephine Li, Amy Le, Rishabh Oswal, Markus Grotz, Wilbert Pumacay, Yuquan Deng, Ranjay Krishna, Dieter Fox, Siddhartha Srinivasa
+
+#### Abstract
+
+We present RoboEval, a simulation benchmark and structured evaluation
+framework designed to reveal the limitations of current bimanual manipulation
+policies. While prior benchmarks report only binary task success, we show that
+such metrics often conceal critical weaknesses in policy behavior -- such as
+poor coordination, slipping during grasping, or asymmetric arm usage. RoboEval
+introduces a suite of tiered, semantically grounded tasks decomposed into
+skill-specific stages, with variations that systematically challenge spatial,
+physical, and coordination capabilities. Tasks are paired with fine-grained
+diagnostic metrics and 3000+ human demonstrations to support imitation
+learning. Our experiments reveal that policies with similar success rates
+diverge in how tasks are executed -- some struggle with alignment, others with
+temporally consistent bimanual control. We find that behavioral metrics
+correlate with success in over half of task-metric pairs, and remain
+informative even when binary success saturates. By pinpointing when and how
+policies fail, RoboEval enables a deeper, more actionable understanding of
+robotic manipulation -- and highlights the need for evaluation tools that go
+beyond success alone.
+
+[Paper Link](
+https://arxiv.org/abs/2507.00435
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-03_20-56.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Robotic Manipulation by Imitating Generated Videos Without Physical Demonstrations
+
+- **Authors**: Shivansh Patel, Shraddhaa Mohan, Hanlin Mai, Unnat Jain, Svetlana Lazebnik, Yunzhu Li
+
+#### Abstract
+
+This work introduces Robots Imitating Generated Videos (RIGVid), a system
+that enables robots to perform complex manipulation tasks--such as pouring,
+wiping, and mixing--purely by imitating AI-generated videos, without requiring
+any physical demonstrations or robot-specific training. Given a language
+command and an initial scene image, a video diffusion model generates potential
+demonstration videos, and a vision-language model (VLM) automatically filters
+out results that do not follow the command. A 6D pose tracker then extracts
+object trajectories from the video, and the trajectories are retargeted to the
+robot in an embodiment-agnostic fashion. Through extensive real-world
+evaluations, we show that filtered generated videos are as effective as real
+demonstrations, and that performance improves with generation quality. We also
+show that relying on generated videos outperforms more compact alternatives
+such as keypoint prediction using VLMs, and that strong 6D pose tracking
+outperforms other ways to extract trajectories, such as dense feature point
+tracking. These findings suggest that videos produced by a state-of-the-art
+off-the-shelf model can offer an effective source of supervision for robotic
+manipulation.
+
+[Paper Link](
+https://arxiv.org/abs/2507.00990
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-03_20-29.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexH2R: A Benchmark for Dynamic Dexterous Grasping in Human-to-Robot Handover
+
+- **Authors**: Youzhuo Wang, Jiayi Ye, Chuyang Xiao, Yiming Zhong, Heng Tao, Hang Yu, Yumeng Liu, Jingyi Yu, Yuexin Ma
+
+#### Abstract
+
+Handover between a human and a dexterous robotic hand is a fundamental yet
+challenging task in human-robot collaboration. It requires handling dynamic
+environments and a wide variety of objects and demands robust and adaptive
+grasping strategies. However, progress in developing effective dynamic
+dexterous grasping methods is limited by the absence of high-quality,
+real-world human-to-robot handover datasets. Existing datasets primarily focus
+on grasping static objects or rely on synthesized handover motions, which
+differ significantly from real-world robot motion patterns, creating a
+substantial gap in applicability. In this paper, we introduce DexH2R, a
+comprehensive real-world dataset for human-to-robot handovers, built on a
+dexterous robotic hand. Our dataset captures a diverse range of interactive
+objects, dynamic motion patterns, rich visual sensor data, and detailed
+annotations. Additionally, to ensure natural and human-like dexterous motions,
+we utilize teleoperation for data collection, enabling the robot's movements to
+align with human behaviors and habits, which is a crucial characteristic for
+intelligent humanoid robots. Furthermore, we propose an effective solution,
+DynamicGrasp, for human-to-robot handover and evaluate various state-of-the-art
+approaches, including auto-regressive models and diffusion policy methods,
+providing a thorough comparison and analysis. We believe our benchmark will
+drive advancements in human-to-robot handover research by offering a
+high-quality dataset, effective solutions, and comprehensive evaluation
+metrics.
+
+[Paper Link](
+https://arxiv.org/abs/2506.23152
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-03_14-28.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SAM4D: Segment Anything in Camera and LiDAR Streams
+
+- **Authors**: Jianyun Xu, Song Wang, Ziqian Ni, Chunyong Hu, Sheng Yang, Jianke Zhu, Qiang Li
+
+#### Abstract
+
+We present SAM4D, a multi-modal and temporal foundation model designed for
+promptable segmentation across camera and LiDAR streams. Unified Multi-modal
+Positional Encoding (UMPE) is introduced to align camera and LiDAR features in
+a shared 3D space, enabling seamless cross-modal prompting and interaction.
+Additionally, we propose Motion-aware Cross-modal Memory Attention (MCMA),
+which leverages ego-motion compensation to enhance temporal consistency and
+long-horizon feature retrieval, ensuring robust segmentation across dynamically
+changing autonomous driving scenes. To avoid annotation bottlenecks, we develop
+a multi-modal automated data engine that synergizes VFM-driven video masklets,
+spatiotemporal 4D reconstruction, and cross-modal masklet fusion. This
+framework generates camera-LiDAR aligned pseudo-labels at a speed orders of
+magnitude faster than human annotation while preserving VFM-derived semantic
+fidelity in point cloud representations. We conduct extensive experiments on
+the constructed Waymo-4DSeg, which demonstrate the powerful cross-modal
+segmentation ability and great potential in data annotation of proposed SAM4D.
+
+[Paper Link](
+https://arxiv.org/abs/2506.21547
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-03_11-30.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-06-26
 
 
