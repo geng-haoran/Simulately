@@ -1,3 +1,231 @@
+## 2025-07-15
+
+
+### Tactile-VLA: Unlocking Vision-Language-Action Model's Physical Knowledge for Tactile Generalization
+
+- **Authors**: Jialei Huang, Shuo Wang, Fanqi Lin, Yihang Hu, Chuan Wen, Yang Gao
+
+#### Abstract
+
+Vision-Language-Action (VLA) models have shown remarkable achievements,
+driven by the rich implicit knowledge of their vision-language components.
+However, achieving generalist robotic agents demands precise grounding into
+physical interactions, especially in contact-rich scenarios where fine-grained
+force control is essential. We advance VLAs' implicit knowledge beyond
+identifying what to do, towards guiding how to physically interact with real
+world. This paper introduces Tactile-VLA, a novel framework that deeply fuses
+vision, language, action, and tactile sensing. This framework incorporates a
+hybrid position-force controller to translate the model's intentions into
+precise physical actions and a reasoning module that allows the robot to adapt
+its strategy based on tactile feedback. Experiments demonstrate Tactile-VLA's
+effectiveness and generalizability in three key aspects: (1) enabling
+tactile-aware instruction following, (2) utilizing tactile-relevant
+commonsense, and (3) facilitating adaptive tactile-involved reasoning. A key
+finding is that the VLM's prior knowledge already contains semantic
+understanding of physical interaction; by connecting it to the robot's tactile
+sensors with only a few demonstrations, we can activate this prior knowledge to
+achieve zero-shot generalization in contact-rich tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2507.09160
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-15_21-02.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Multi-critic Learning for Whole-body End-effector Twist Tracking
+
+- **Authors**: Aravind Elanjimattathil Vijayan, Andrei Cramariuc, Mattia Risiglione, Christian Gehring, Marco Hutter
+
+#### Abstract
+
+Learning whole-body control for locomotion and arm motions in a single policy
+has challenges, as the two tasks have conflicting goals. For instance,
+efficient locomotion typically favors a horizontal base orientation, while
+end-effector tracking may benefit from base tilting to extend reachability.
+Additionally, current Reinforcement Learning (RL) approaches using a pose-based
+task specification lack the ability to directly control the end-effector
+velocity, making smoothly executing trajectories very challenging. To address
+these limitations, we propose an RL-based framework that allows for dynamic,
+velocity-aware whole-body end-effector control. Our method introduces a
+multi-critic actor architecture that decouples the reward signals for
+locomotion and manipulation, simplifying reward tuning and allowing the policy
+to resolve task conflicts more effectively. Furthermore, we design a
+twist-based end-effector task formulation that can track both discrete poses
+and motion trajectories. We validate our approach through a set of simulation
+and hardware experiments using a quadruped robot equipped with a robotic arm.
+The resulting controller can simultaneously walk and move its end-effector and
+shows emergent whole-body behaviors, where the base assists the arm in
+extending the workspace, despite a lack of explicit formulations.
+
+[Paper Link](
+https://arxiv.org/abs/2507.08656
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-15_20-57.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### Reinforcement Learning with Action Chunking
+
+- **Authors**: Qiyang Li, Zhiyuan Zhou, Sergey Levine
+
+#### Abstract
+
+We present Q-chunking, a simple yet effective recipe for improving
+reinforcement learning (RL) algorithms for long-horizon, sparse-reward tasks.
+Our recipe is designed for the offline-to-online RL setting, where the goal is
+to leverage an offline prior dataset to maximize the sample-efficiency of
+online learning. Effective exploration and sample-efficient learning remain
+central challenges in this setting, as it is not obvious how the offline data
+should be utilized to acquire a good exploratory policy. Our key insight is
+that action chunking, a technique popularized in imitation learning where
+sequences of future actions are predicted rather than a single action at each
+timestep, can be applied to temporal difference (TD)-based RL methods to
+mitigate the exploration challenge. Q-chunking adopts action chunking by
+directly running RL in a 'chunked' action space, enabling the agent to (1)
+leverage temporally consistent behaviors from offline data for more effective
+online exploration and (2) use unbiased $n$-step backups for more stable and
+efficient TD learning. Our experimental results demonstrate that Q-chunking
+exhibits strong offline performance and online sample efficiency, outperforming
+prior best offline-to-online methods on a range of long-horizon, sparse-reward
+manipulation tasks.
+
+[Paper Link](
+https://arxiv.org/abs/2507.07969
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-15_20-55.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### RwoR: Generating Robot Demonstrations from Human Hand Collection for Policy Learning without Robot
+
+- **Authors**: Liang Heng, Xiaoqi Li, Shangqing Mao, Jiaming Liu, Ruolin Liu, Jingli Wei, Yu-Kai Wang, Yueru Jia, Chenyang Gu, Rui Zhao, Shanghang Zhang, Hao Dong
+
+#### Abstract
+
+Recent advancements in imitation learning have shown promising results in
+robotic manipulation, driven by the availability of high-quality training data.
+To improve data collection efficiency, some approaches focus on developing
+specialized teleoperation devices for robot control, while others directly use
+human hand demonstrations to obtain training data. However, the former requires
+both a robotic system and a skilled operator, limiting scalability, while the
+latter faces challenges in aligning the visual gap between human hand
+demonstrations and the deployed robot observations. To address this, we propose
+a human hand data collection system combined with our hand-to-gripper
+generative model, which translates human hand demonstrations into robot gripper
+demonstrations, effectively bridging the observation gap. Specifically, a GoPro
+fisheye camera is mounted on the human wrist to capture human hand
+demonstrations. We then train a generative model on a self-collected dataset of
+paired human hand and UMI gripper demonstrations, which have been processed
+using a tailored data pre-processing strategy to ensure alignment in both
+timestamps and observations. Therefore, given only human hand demonstrations,
+we are able to automatically extract the corresponding SE(3) actions and
+integrate them with high-quality generated robot demonstrations through our
+generation pipeline for training robotic policy model. In experiments, the
+robust manipulation performance demonstrates not only the quality of the
+generated robot demonstrations but also the efficiency and practicality of our
+data collection method. More demonstrations can be found at:
+https://rwor.github.io/
+
+[Website Link](https://rwor.github.io/)
+
+[Paper Link](
+https://arxiv.org/abs/2507.03930
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-15_20-44.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### SimLauncher: Launching Sample-Efficient Real-world Robotic Reinforcement Learning via Simulation Pre-training
+
+- **Authors**: Mingdong Wu, Lehong Wu, Yizhuo Wu, Weiyao Huang, Hongwei Fan, Zheyuan Hu, Haoran Geng, Jinzhou Li, Jiahe Ying, Long Yang, Yuanpei Chen, Hao Dong
+
+#### Abstract
+
+Autonomous learning of dexterous, long-horizon robotic skills has been a
+longstanding pursuit of embodied AI. Recent advances in robotic reinforcement
+learning (RL) have demonstrated remarkable performance and robustness in
+real-world visuomotor control tasks. However, applying RL in the real world
+faces challenges such as low sample efficiency, slow exploration, and
+significant reliance on human intervention. In contrast, simulators offer a
+safe and efficient environment for extensive exploration and data collection,
+while the visual sim-to-real gap, often a limiting factor, can be mitigated
+using real-to-sim techniques. Building on these, we propose SimLauncher, a
+novel framework that combines the strengths of real-world RL and
+real-to-sim-to-real approaches to overcome these challenges. Specifically, we
+first pre-train a visuomotor policy in the digital twin simulation environment,
+which then benefits real-world RL in two ways: (1) bootstrapping target values
+using extensive simulated demonstrations and real-world demonstrations derived
+from pre-trained policy rollouts, and (2) Incorporating action proposals from
+the pre-trained policy for better exploration. We conduct comprehensive
+experiments across multi-stage, contact-rich, and dexterous hand manipulation
+tasks. Compared to prior real-world RL approaches, SimLauncher significantly
+improves sample efficiency and achieves near-perfect success rates. We hope
+this work serves as a proof of concept and inspires further research on
+leveraging large-scale simulation pre-training to benefit real-world robotic
+RL.
+
+[Paper Link](
+https://arxiv.org/abs/2507.04452
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-15_20-40.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
+
+### DexVLG: Dexterous Vision-Language-Grasp Model at Scale
+
+- **Authors**: Jiawei He, Danshi Li, Xinqiang Yu, Zekun Qi, Wenyao Zhang, Jiayi Chen, Zhaoxiang Zhang, Zhizheng Zhang, Li Yi, He Wang
+
+#### Abstract
+
+As large models gain traction, vision-language-action (VLA) systems are
+enabling robots to tackle increasingly complex tasks. However, limited by the
+difficulty of data collection, progress has mainly focused on controlling
+simple gripper end-effectors. There is little research on functional grasping
+with large models for human-like dexterous hands. In this paper, we introduce
+DexVLG, a large Vision-Language-Grasp model for Dexterous grasp pose prediction
+aligned with language instructions using single-view RGBD input. To accomplish
+this, we generate a dataset of 170 million dexterous grasp poses mapped to
+semantic parts across 174,000 objects in simulation, paired with detailed
+part-level captions. This large-scale dataset, named DexGraspNet 3.0, is used
+to train a VLM and flow-matching-based pose head capable of producing
+instruction-aligned grasp poses for tabletop objects. To assess DexVLG's
+performance, we create benchmarks in physics-based simulations and conduct
+real-world experiments. Extensive testing demonstrates DexVLG's strong
+zero-shot generalization capabilities-achieving over 76% zero-shot execution
+success rate and state-of-the-art part-grasp accuracy in simulation-and
+successful part-aligned grasps on physical objects in real-world scenarios.
+
+[Paper Link](
+https://arxiv.org/abs/2507.02747
+)
+
+<div style={{ textAlign: "center", marginRight: "10px" }}>
+    <img src="/img/daily/2025-07-15_20-33.png" alt="img" style={{ width: "auto", maxHeight: "400px" }} />
+    </div>
+<br/>
+
+---
 ## 2025-07-03
 
 
